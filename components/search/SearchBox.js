@@ -48,8 +48,6 @@ export default class SearchBox extends Component {
       return schema.name === mouseSelectedSchema
     })
 
-    console.log(selectedSchemaIndex)
-
     this.setState({
       selectedSchemaIndex
     })
