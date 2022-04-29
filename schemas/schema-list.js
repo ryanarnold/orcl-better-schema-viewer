@@ -1,13 +1,12 @@
-
 const schemaList = [
   {
     name: 'Cm-Something',
-    type: 'Business Service'
+    type: 'Business Service',
   },
   {
     name: 'Cm-SomethingElse',
-    type: 'Business Service'
+    type: 'Business Service',
   },
-]
+];
 
-export default schemaList
+export default schemaList;
