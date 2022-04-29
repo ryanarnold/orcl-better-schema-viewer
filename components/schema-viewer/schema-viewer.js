@@ -15,7 +15,7 @@ export class SchemaViewer extends Component {
         <h1 className="fw-lighter mt-3">{schema.name}</h1>
         <h6 className="text-secondary fw-lighter">{schema.type}</h6>
         <div className="border rounded p-2 mt-3 overflow-scroll code-div">
-            <SchemaDefinition xml={schema.xml}/>
+            <SchemaDefinition xml={schema.xml} xmlData={this.props.xmlData}/>
         </div>
         <XpathViewer />
       </div>
