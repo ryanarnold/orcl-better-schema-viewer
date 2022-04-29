@@ -2,24 +2,24 @@ import React, { Component } from 'react';
 import Layout from '../../components/layout';
 import SearchBox from '../../components/search/SearchBox';
 import { SchemaViewer } from '../../components/schema-viewer/schema-viewer';
+import { getAllSchemaNames } from '../../schemas/schema-functions';
 
 export async function getStaticPaths() {
-  // retrieve paths
+  const paths = getAllSchemaNames().map((name) => ({
+    params: { name },
+  }));
+
+  console.log(paths);
+
   return {
-    paths: [
-      {
-        params: {
-          name: 'Cm-Something',
-        },
-      },
-    ],
+    paths,
     fallback: false,
   };
 }
 
 export async function getStaticProps({ params }) {
   const schema = {
-    name: 'Cm-Something',
+    name: params.name,
     type: 'Business Service',
     xml: '<hello></hello>',
   };
