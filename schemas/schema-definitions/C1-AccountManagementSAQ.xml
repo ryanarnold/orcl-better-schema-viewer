@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <accountId mdField="ACCT_ID" fkRef="ACCT"/>
+  <cisDivision mdField="CIS_DIVISION"/>
+  <saType mdField="SA_TYPE_CD"/>
+  <serviceType mdField="SVC_TYPE_CD"/>
+  <premiseId mdField="PREM_ID" fkRef="PREM"/>
+  <charSAGroup type="group">
+    <characteristicType fkRef="CHAR_TYP" mapField="CHAR_TYPE_CD"/>
+    <searchCharValue mdField="SRCH_CHAR_VAL"/>
+    <isCharValueSearchAllowed mdField="SEARCH_FLG" dataType="lookup" lookup="SEARCH_FLG"/>
+    <charEntityValue dataType="lookup" mapField="CHAR_ENTITY_FLG" lookup="CHAR_ENTITY_FLG"/>
+    <characteristicValue mapField="CHAR_VAL"/>
+    <adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+    <characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
+    <characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+    <characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+    <characteristicValueFK4 mapField="CHAR_VAL_FK4"/>
+    <characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+    <typeOfCharacteristic dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+    <charValInfo mapField="CHAR_VAL_FK_INFO"/>
+  </charSAGroup>
+  <charSADefault type="group">
+    <charTypeInfo type="group">
+      <input type="group">
+        <characteristicType mapField="CHAR_TYPE_CD"/>
+        <characteristicValue mapField="CHAR_VAL"/>
+        <adhocCharValue mapField="ADHOC_CHAR_VAL"/>
+        <fkValue1 mapField="CHAR_VAL_FK1"/>
+        <fkValue2 mapField="CHAR_VAL_FK2"/>
+        <fkValue3 mapField="CHAR_VAL_FK3"/>
+        <fkValue4 mapField="CHAR_VAL_FK4"/>
+        <fkValue5 mapField="CHAR_VAL_FK5"/>
+      </input>
+      <output type="group">
+        <charTypeFlg dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+        <charValInfo mapField="CHAR_VAL_FK_INFO"/>
+        <searchZone mapField="ZONE_CD"/>
+        <navOption mapField="NAV_OPT_CD"/>
+        <pkFieldsList type="list" mapList="PK_FIELD_LIST">
+          <pkField mapField="PK_VAL"/>
+        </pkFieldsList>
+      </output>
+    </charTypeInfo>
+  </charSADefault>
+  <saTypeList type="group">
+    <zone private="true" default="C1-SAT-SRCH" mapField="ZONE_CD"/>
+    <cisDivision mapField="F1_VALUE"/>
+    <saType mapField="F2_VALUE"/>
+    <rowCount dataType="number" mapField="ROW_CNT"/>
+    <results type="list" mapList="DE">
+      <saTypeDescription mapField="COL_VALUE">
+        <row mapList="DE_VAL">
+          <SEQNO is="1"/>
+        </row>
+      </saTypeDescription>
+      <saType mapField="COL_VALUE">
+        <row mapList="DE_VAL">
+          <SEQNO is="2"/>
+        </row>
+      </saType>
+    </results>
+  </saTypeList>
+  <charTypeSASearchList type="group">
+    <zone private="true" default="C1-CHARTYPQ2" mapField="ZONE_CD"/>
+    <charType mapField="F1_VALUE"/>
+    <description mapField="F2_VALUE"/>
+    <charEntity mapField="H1_VALUE"/>
+    <typeOfCharSearch mapField="H2_VALUE"/>
+    <isSearchAllowed mapField="H3_VALUE"/>
+    <rowCount dataType="number" mapField="ROW_CNT"/>
+    <results type="list" mapList="DE">
+      <charType mapField="COL_VALUE">
+        <row mapList="DE_VAL">
+          <SEQNO is="1"/>
+        </row>
+      </charType>
+      <charTypeDescr mapField="COL_VALUE">
+        <row mapList="DE_VAL">
+          <SEQNO is="2"/>
+        </row>
+      </charTypeDescr>
+      <typeOfCharDescr mapField="COL_VALUE">
+        <row mapList="DE_VAL">
+          <SEQNO is="3"/>
+        </row>
+      </typeOfCharDescr>
+    </results>
+  </charTypeSASearchList>
+</schema>

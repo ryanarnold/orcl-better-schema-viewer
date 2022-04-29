@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<schema name="schema" fwRel="2">
+	<serviceTaskId mdField="C1_SS_SERVICE_TASK_INFO_LBL" isPrimeKey="true" fkRef="F1-STASK" mapField="F1_SVC_TASK_ID"/>
+	<serviceTaskType fkRef="F1-STKTY" mapField="F1_STASK_TYPE_CD"/>
+	<bo suppress="true" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<boStatus mapField="BO_STATUS_CD"/>
+	<statusReason suppress="blank" fkRef="F1-STRSN" mapField="BO_STATUS_REASON_CD"/>
+	<createDateTime suppress="true" dataType="dateTime" default="%CurrentDateTime" mapField="CRE_DTTM"/>
+	<statusDateTime suppress="true" dataType="dateTime" mapField="STATUS_UPD_DTTM"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<webUserId mdField="WX_SS_USER_ID" mapField="ADHOC_CHAR_VAL">
+		<row mapChild="F1_SVC_TASK_CHAR">
+			<CHAR_TYPE_CD is="C1-WBUSR"/>
+		</row>
+	</webUserId>
+	<cssUser mdField="WX_SS_CSSUSER" mapField="ADHOC_CHAR_VAL">
+		<row mapChild="F1_SVC_TASK_CHAR">
+			<CHAR_TYPE_CD is="C1-SSUSR"/>
+		</row>
+	</cssUser>
+	<emailAddress mdField="EMAILID" mapField="ADHOC_CHAR_VAL">
+		<row mapChild="F1_SVC_TASK_CHAR">
+			<CHAR_TYPE_CD is="C1-EMLID"/>
+		</row>
+	</emailAddress>
+	<ipAddress mdField="IPADDRESS" mapField="ADHOC_CHAR_VAL">
+		<row mapChild="F1_SVC_TASK_CHAR">
+			<CHAR_TYPE_CD is="C1-IPADD"/>
+		</row>
+	</ipAddress>
+	<accountId mdField="ACCOUNT_TLBL" fkRef="ACCT" mapField="PK_VALUE1">
+		<row mapChild="F1_SVC_TASK_REL_OBJ">
+			<MAINT_OBJ_CD is="ACCOUNT"/>
+		</row>
+	</accountId>
+	<personId mdField="PERSON_TLBL" fkRef="PER" mapField="PK_VALUE1">
+		<row mapChild="F1_SVC_TASK_REL_OBJ">
+			<MAINT_OBJ_CD is="PERSON"/>
+		</row>
+	</personId>
+	<paymentInfo type="group" mapXML="BO_DATA_AREA">
+		<cssPaymentOptionId mdField="PER_PAY_OPT_ID" fkRef="C1-SPYOP"/>
+		<paymentAmount mdField="PAYMENT_AMT"/>
+		<paymentDate mdField="PAYMENT_DT" dataType="date" default="%ProcessDate"/>
+		<paymentType mdField="EXT_TYPE_FLG" dataType="lookup" lookup="EXT_TYPE_FLG"/>
+		<creditCardInfo type="group">
+			<cardholderFirstName/>
+			<cardholderLastName/>
+			<creditCardType dataType="lookup" lookup="CARD_TYPE_FLG"/>
+			<creditCardNumber/>
+			<encrCreditCardNumber/>
+			<creditCardExpirationMonth/>
+			<creditCardExpirationYear/>
+			<creditCardVerificationNumber/>
+			<country/>
+			<addressLine1/>
+			<addressLine2/>
+			<addressLine3/>
+			<addressLine4/>
+			<houseType dataType="lookup" lookup="HOUSE_TYPE"/>
+			<number1/>
+			<number2/>
+			<inCityLimit dataType="boolean"/>
+			<city/>
+			<geographic/>
+			<county/>
+			<state/>
+			<postal/>
+			<phone/>
+			<email/>
+		</creditCardInfo>
+		<bankAccountInfo type="group">
+			<routingNumber mdField="EXT_SOURCE_ID"/>
+			<accountNumber mdField="EXT_ACCT_ID"/>
+			<encrAccountNumber mdField="ENCR_EXT_ACCT_ID"/>
+		</bankAccountInfo>
+		<otPayTrigger mdField="OTPAY_TRIGGER_FLG" dataType="lookup" lookup="OTPAY_TRIGGER_FLG"/>
+	</paymentInfo>
+	<paymentEventId mdField="PAY_EVENT_ID" fkRef="C1-PEVT" mapField="PK_VALUE1">
+		<row mapChild="F1_SVC_TASK_REL_OBJ">
+			<MAINT_OBJ_CD is="PAY EVENT"/>
+		</row>
+	</paymentEventId>
+</schema>

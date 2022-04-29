@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<input type="group">
+		<meterConfigurationId mdField="MTR_CONFIG_ID" required="true"/>
+		<registerId mdField="REG_ID" required="true"/>
+	</input>
+	<output type="group">
+		<registerInfo mdField="REG_INFO"/>
+	</output>
+</schema>

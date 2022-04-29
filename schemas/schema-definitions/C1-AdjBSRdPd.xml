@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <input type="group">
+    <bsegId mapField="BSEG_ID"/>
+    <saId mapField="SA_ID"/>
+    <startDate dataType="date" mapField="START_DT"/>
+    <endDate dataType="date" mapField="END_DT"/>
+    <reads type="group">
+      <readList type="list">
+        <spId isPrimeKey="true" fkRef="SP" mapField="SP_ID"/>
+        <readSeq dataType="number" isPrimeKey="true" mapField="SEQNO"/>
+        <startReadDateTime dataType="dateTime" mapField="START_READ_DTTM"/>
+        <endReadDateTime dataType="dateTime" mapField="END_READ_DTTM"/>
+        <uom fkRef="C1-UOM" mapField="UOM_CD"/>
+        <tou fkRef="C1-TOU" mapField="TOU_CD"/>
+        <sqi fkRef="C1-SQI" mapField="SQI_CD"/>
+        <startReading dataType="number" mapField="START_REG_READING"/>
+        <endReading dataType="number" mapField="END_REG_READING"/>
+        <measuredQty dataType="number" mapField="MSR_QTY"/>
+        <finalQty dataType="number" mapField="FINAL_REG_QTY"/>
+        <finalUom fkRef="C1-UOM" mapField="FINAL_UOM_CD"/>
+        <finalTou fkRef="C1-TOU" mapField="FINAL_TOU_CD"/>
+        <finalSqi fkRef="C1-SQI" mapField="FINAL_SQI_CD"/>
+        <sphowToUse dataType="lookup" mapField="USAGE_FLG" lookup="USAGE_FLG"/>
+        <reghowToUse dataType="lookup" mapField="HOW_TO_USE_FLG" lookup="HOW_TO_USE_FLG"/>
+        <constant dataType="number" mapField="REG_CONST"/>
+        <measuresPeakQuantity dataType="boolean" mapField="MSR_PEAK_QTY_SW"/>
+        <usePercent dataType="number" mapField="USE_PCT"/>
+      </readList>
+    </reads>
+  </input>
+  <output type="group">
+    <reads type="group">
+      <readList type="list" mapChild="CI_BSEG_READ">
+        <spId isPrimeKey="true" fkRef="SP" mapField="SP_ID"/>
+        <readSeq dataType="number" isPrimeKey="true" mapField="SEQNO"/>
+        <startReadDateTime dataType="dateTime" mapField="START_READ_DTTM"/>
+        <endReadDateTime dataType="dateTime" mapField="END_READ_DTTM"/>
+        <uom fkRef="C1-UOM" mapField="UOM_CD"/>
+        <tou fkRef="C1-TOU" mapField="TOU_CD"/>
+        <sqi fkRef="C1-SQI" mapField="SQI_CD"/>
+        <startReading dataType="number" mapField="START_REG_READING"/>
+        <endReading dataType="number" mapField="END_REG_READING"/>
+        <measuredQty dataType="number" mapField="MSR_QTY"/>
+        <finalQty dataType="number" mapField="FINAL_REG_QTY"/>
+        <finalUom fkRef="C1-UOM" mapField="FINAL_UOM_CD"/>
+        <finalTou fkRef="C1-TOU" mapField="FINAL_TOU_CD"/>
+        <finalSqi fkRef="C1-SQI" mapField="FINAL_SQI_CD"/>
+        <sphowToUse dataType="lookup" mapField="USAGE_FLG" lookup="USAGE_FLG"/>
+        <reghowToUse dataType="lookup" mapField="HOW_TO_USE_FLG" lookup="HOW_TO_USE_FLG"/>
+        <constant dataType="number" mapField="REG_CONST"/>
+        <measuresPeakQuantity dataType="boolean" mapField="MSR_PEAK_QTY_SW"/>
+        <usePercent dataType="number" mapField="USE_PCT"/>
+        <newStartReadDateTime mdField="START_READ_DTTM" dataType="dateTime"/>
+        <newEndReadDateTime mdField="END_READ_DTTM" dataType="dateTime"/>
+      </readList>
+    </reads>
+  </output>
+</schema>

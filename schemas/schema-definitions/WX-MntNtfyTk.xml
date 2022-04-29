@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<action/>
+	<webUserId mdField="WX_SS_USER_ID" mapField="ADHOC_CHAR_VAL">
+		<row mapChild="F1_SVC_TASK_CHAR">
+			<CHAR_TYPE_CD is="C1-WBUSR"/>
+		</row>
+	</webUserId>
+	<cssUser mdField="WX_SS_CSSUSER" mapField="ADHOC_CHAR_VAL">
+		<row mapChild="F1_SVC_TASK_CHAR">
+			<CHAR_TYPE_CD is="C1-SSUSR"/>
+		</row>
+	</cssUser>
+	<emailAddress mdField="EMAILID" mapField="ADHOC_CHAR_VAL">
+		<row mapChild="F1_SVC_TASK_CHAR">
+			<CHAR_TYPE_CD is="C1-EMLID"/>
+		</row>
+	</emailAddress>
+	<ipAddress mdField="IPADDRESS" mapField="ADHOC_CHAR_VAL">
+		<row mapChild="F1_SVC_TASK_CHAR">
+			<CHAR_TYPE_CD is="C1-IPADD"/>
+		</row>
+	</ipAddress>
+	<accountId mdField="ACCOUNT_TLBL" fkRef="ACCT" mapField="PK_VALUE1">
+		<row mapChild="F1_SVC_TASK_REL_OBJ">
+			<MAINT_OBJ_CD is="ACCOUNT"/>
+		</row>
+	</accountId>
+	<personId mdField="PERSON_TLBL" fkRef="PER" mapField="PK_VALUE1">
+		<row mapChild="F1_SVC_TASK_REL_OBJ">
+			<MAINT_OBJ_CD is="PERSON"/>
+		</row>
+	</personId>
+	<bo/>
+	<serviceTaskType/>
+	<serviceTaskId/>
+	<notificationOptions type="list">
+		<transactionalBOXpath/>
+		<value/>
+	</notificationOptions>
+	<deliveryTypes type="list">
+		<deliveryType/>
+	</deliveryTypes>
+</schema>

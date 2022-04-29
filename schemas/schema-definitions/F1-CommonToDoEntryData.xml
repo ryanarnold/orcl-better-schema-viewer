@@ -1,0 +1,117 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<toDoEntryId mapField="TD_ENTRY_ID"/>
+	<toDoType mapField="TD_TYPE_CD"/>
+	<toDoRole mapField="ROLE_ID"/>
+	<assignedTo mapField="ASSIGNED_TO"/>
+	<sendTo dataType="lookup" mapField="TD_SEND_TO_FLG" lookup="TD_SEND_TO_FLG"/>
+	<entryStatus dataType="lookup" mapField="ENTRY_STATUS_FLG" lookup="ENTRY_STATUS_FLG"/>
+	<createDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+	<assignedDateTime dataType="dateTime" mapField="ASSIGNED_DTTM"/>
+	<assignedUser mapField="ASSIGNED_USER_ID"/>
+	<completeDateTime dataType="dateTime" mapField="COMPLETE_DTTM"/>
+	<completeUser mapField="COMPLETE_USER_ID"/>
+	<completeSW dataType="boolean" default="false" mapField="COMPLETE_SW"/>
+	<comments mapField="COMMENTS"/>
+	<priority dataType="lookup" mapField="TD_PRIORITY_FLG" lookup="TD_PRIORITY_FLG"/>
+	<batch mapField="BATCH_CD"/>
+	<batchNumber dataType="number" mapField="BATCH_NBR"/>
+	<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+	<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+	<isNewCase dataType="boolean" private="true" default="true" mapField="NEW_CASE_SW"/>
+	<drillKey1 mapField="KEY_VALUE">
+		<row mapList="TD_ENTRY_DRLKY">
+			<SEQ_NUM is="%1"/>
+		</row>
+	</drillKey1>
+	<drillKey2 mapField="KEY_VALUE">
+		<row mapList="TD_ENTRY_DRLKY">
+			<SEQ_NUM is="%2"/>
+		</row>
+	</drillKey2>
+	<drillKey3 mapField="KEY_VALUE">
+		<row mapList="TD_ENTRY_DRLKY">
+			<SEQ_NUM is="%3"/>
+		</row>
+	</drillKey3>
+	<drillKey4 mapField="KEY_VALUE">
+		<row mapList="TD_ENTRY_DRLKY">
+			<SEQ_NUM is="%4"/>
+		</row>
+	</drillKey4>
+	<drillKey5 mapField="KEY_VALUE">
+		<row mapList="TD_ENTRY_DRLKY">
+			<SEQ_NUM is="%5"/>
+		</row>
+	</drillKey5>
+	<sortKey1 mapField="KEY_VALUE">
+		<row mapList="TD_ENTRY_SRTKY">
+			<SEQ_NUM is="%1"/>
+		</row>
+	</sortKey1>
+	<sortKey2 mapField="KEY_VALUE">
+		<row mapList="TD_ENTRY_SRTKY">
+			<SEQ_NUM is="%2"/>
+		</row>
+	</sortKey2>
+	<sortKey3 mapField="KEY_VALUE">
+		<row mapList="TD_ENTRY_SRTKY">
+			<SEQ_NUM is="%3"/>
+		</row>
+	</sortKey3>
+	<sortKey4 mapField="KEY_VALUE">
+		<row mapList="TD_ENTRY_SRTKY">
+			<SEQ_NUM is="%4"/>
+		</row>
+	</sortKey4>
+	<sortKey5 mapField="KEY_VALUE">
+		<row mapList="TD_ENTRY_SRTKY">
+			<SEQ_NUM is="%5"/>
+		</row>
+	</sortKey5>
+	<messageParm1 mapField="MSG_PARM_VAL">
+		<row mapList="TD_ENTRY_MSG_PARM">
+			<SEQ_NUM is="1"/>
+		</row>
+	</messageParm1>
+	<messageParm2 mapField="MSG_PARM_VAL">
+		<row mapList="TD_ENTRY_MSG_PARM">
+			<SEQ_NUM is="2"/>
+		</row>
+	</messageParm2>
+	<messageParm3 mapField="MSG_PARM_VAL">
+		<row mapList="TD_ENTRY_MSG_PARM">
+			<SEQ_NUM is="3"/>
+		</row>
+	</messageParm3>
+	<messageParm4 mapField="MSG_PARM_VAL">
+		<row mapList="TD_ENTRY_MSG_PARM">
+			<SEQ_NUM is="4"/>
+		</row>
+	</messageParm4>
+	<messageParm5 mapField="MSG_PARM_VAL">
+		<row mapList="TD_ENTRY_MSG_PARM">
+			<SEQ_NUM is="5"/>
+		</row>
+	</messageParm5>
+	<messageParm6 mapField="MSG_PARM_VAL">
+		<row mapList="TD_ENTRY_MSG_PARM">
+			<SEQ_NUM is="6"/>
+		</row>
+	</messageParm6>
+	<messageParm7 mapField="MSG_PARM_VAL">
+		<row mapList="TD_ENTRY_MSG_PARM">
+			<SEQ_NUM is="7"/>
+		</row>
+	</messageParm7>
+	<messageParm8 mapField="MSG_PARM_VAL">
+		<row mapList="TD_ENTRY_MSG_PARM">
+			<SEQ_NUM is="8"/>
+		</row>
+	</messageParm8>
+	<messageParm9 mapField="MSG_PARM_VAL">
+		<row mapList="TD_ENTRY_MSG_PARM">
+			<SEQ_NUM is="9"/>
+		</row>
+	</messageParm9>
+</schema>

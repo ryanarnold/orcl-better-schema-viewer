@@ -1,0 +1,120 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<SalesInvoices type="group" mapXML="MST_CONFIG_DATA">
+		<NumberOfEntries dataType="number"/>
+		<TotalDebit dataType="number"/>
+		<TotalCredit dataType="number"/>
+		<Invoice type="list">
+			<InvoiceNo isPrimeKey="true"/>
+			<ATCUD/>
+			<DocumentStatus type="group">
+				<InvoiceStatus/>
+				<InvoiceStatusDate/>
+				<SourceID/>
+				<SourceBilling/>
+			</DocumentStatus>
+			<Hash/>
+			<HashControl/>
+			<Period dataType="number"/>
+			<InvoiceDate dataType="date"/>
+			<InvoiceType/>
+			<SpecialRegimes type="group">
+				<SelfBillingIndicator/>
+				<CashVATSchemeIndicator/>
+				<ThirdPartiesBillingIndicator/>
+			</SpecialRegimes>
+			<SourceID/>
+			<SystemEntryDate/>
+			<CustomerID/>
+			<Line type="list">
+				<LineNumber isPrimeKey="true"/>
+				<ProductCode/>
+				<ProductDescription/>
+				<Quantity dataType="number"/>
+				<UnitOfMeasure/>
+				<UnitPrice dataType="number"/>
+				<TaxPointDate dataType="date"/>
+				<References type="group">
+					<Reference isPrimeKey="true"/>
+					<Reason/>
+				</References>
+				<Description/>
+				<DebitAmount dataType="number"/>
+				<CreditAmount dataType="number"/>
+				<Tax type="list">
+					<TaxType/>
+					<TaxCountryRegion/>
+					<TaxCode isPrimeKey="true"/>
+					<TaxPercentage dataType="number"/>
+				</Tax>
+				<TaxExemptionReason/>
+				<TaxExemptionCode/>
+				<SettlementAmount dataType="number"/>
+			</Line>
+			<DocumentTotals type="group">
+				<TaxPayable dataType="number"/>
+				<NetTotal dataType="number"/>
+				<GrossTotal dataType="number"/>
+				<Settlement type="group">
+					<PaymentTerms dataType="date"/>
+				</Settlement>
+				<Payment type="list">
+					<PaymentMechanism isPrimeKey="true"/>
+					<PaymentAmount dataType="number"/>
+					<PaymentDate dataType="date"/>
+				</Payment>
+			</DocumentTotals>
+		</Invoice>
+	</SalesInvoices>
+	<Payments type="group" mapXML="MST_CONFIG_DATA">
+		<NumberOfEntries dataType="number"/>
+		<TotalDebit dataType="number"/>
+		<TotalCredit dataType="number"/>
+		<Payment type="list">
+			<PaymentRefNo isPrimeKey="true"/>
+			<ATCUD/>
+			<Period dataType="number"/>
+			<TransactionDate dataType="date"/>
+			<PaymentType/>
+			<Description/>
+			<SystemID/>
+			<DocumentStatus type="list">
+				<PaymentStatus isPrimeKey="true"/>
+				<PaymentStatusDate/>
+				<Reason/>
+				<SourceID/>
+				<SourcePayment/>
+			</DocumentStatus>
+			<PaymentMethod type="list">
+				<PaymentMechanism isPrimeKey="true"/>
+				<PaymentAmount dataType="number"/>
+				<PaymentDate dataType="date"/>
+			</PaymentMethod>
+			<SourceID/>
+			<SystemEntryDate/>
+			<CustomerID/>
+			<Line type="list">
+				<LineNumber isPrimeKey="true"/>
+				<SourceDocumentID type="list">
+					<OriginatingON isPrimeKey="true"/>
+					<InvoiceDate dataType="date"/>
+				</SourceDocumentID>
+				<DebitAmount dataType="number"/>
+				<CreditAmount dataType="number"/>
+				<Tax type="list">
+					<TaxType/>
+					<TaxCountryRegion/>
+					<TaxCode isPrimeKey="true"/>
+					<TaxPercentage dataType="number"/>
+				</Tax>
+				<TaxExemptionReason/>
+				<TaxExemptionCode/>
+			</Line>
+			<DocumentTotals type="group">
+				<TaxPayable dataType="number"/>
+				<NetTotal dataType="number"/>
+				<GrossTotal dataType="number"/>
+			</DocumentTotals>
+		</Payment>
+	</Payments>
+</schema>

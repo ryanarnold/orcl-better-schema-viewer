@@ -1,0 +1,102 @@
+<?xml version="1.0" ?>
+<schema name="schema" fwRel="2">
+	<rebateClaimId fkRef="C1-RBCLM" mapField="REBATE_CLAIM_ID"/>
+	<conservationProgram fkRef="C1-CPROG" mapField="CONSV_PROG_CD"/>
+	<bo mapField="BUS_OBJ_CD"/>
+	<boStatus mapField="BO_STATUS_CD"/>
+	<claimDate dataType="date" mapField="CLAIM_DT"/>
+	<totalRebateAmount dataType="money" mapField="TOT_REBATE_AMT"/>
+	<personId fkRef="PER" mapField="PER_ID"/>
+	<accountId fkRef="ACCT" mapField="ACCT_ID"/>
+	<premiseId fkRef="PREM" mapField="PREM_ID"/>
+	<mailingAddress type="group" mapXML="BO_DATA_AREA">
+		<country/>
+		<addressLine1/>
+		<addressLine2/>
+		<addressLine3/>
+		<addressLine4/>
+		<houseType dataType="lookup" lookup="HOUSE_TYPE"/>
+		<number1/>
+		<number2/>
+		<inCityLimit dataType="boolean"/>
+		<city/>
+		<geographic/>
+		<county/>
+		<state/>
+		<postal/>
+	</mailingAddress>
+	<contactInfo type="group" mapXML="BO_DATA_AREA">
+		<name mdField="ENTITY_NAME"/>
+		<phone mdField="PHONE"/>
+		<fax mdField="C1_FAX_NBR"/>
+		<email mdField="EMAILID"/>
+	</contactInfo>
+	<paymentReleaseInfo type="group" mapXML="BO_DATA_AREA">
+		<authorizedByName mdField="C1_AUTH_BY_NAME"/>
+		<authorizationDate mdField="C1_AUTH_DT" dataType="date"/>
+		<payeeName mdField="C1_PAYEE_NAME"/>
+		<phone mdField="PHONE"/>
+		<claimantMailingAddress type="group">
+			<country/>
+			<addressLine1/>
+			<addressLine2/>
+			<addressLine3/>
+			<addressLine4/>
+			<houseType dataType="lookup" lookup="HOUSE_TYPE"/>
+			<number1/>
+			<number2/>
+			<inCityLimit dataType="boolean"/>
+			<city/>
+			<geographic/>
+			<county/>
+			<state/>
+			<postal/>
+		</claimantMailingAddress>
+	</paymentReleaseInfo>
+	<issuesInfo type="group" mapXML="BO_DATA_AREA">
+		<manualIssueExplanation mdField="COMMENTS"/>
+		<issueList type="list">
+			<errorSequence mdField="SEQ_NUM_WRK" isPrimeKey="true"/>
+			<messageCategory mdField="MESSAGE_CAT_NBR" dataType="number"/>
+			<messageNumber mdField="MESSAGE_NBR" dataType="number"/>
+			<messageParmCollCount mdField="MESSAGE_PARM_CNT" dataType="number"/>
+			<messageParms type="group">
+				<messageParm1 mdField="MSG_PARM_VAL"/>
+				<messageParm2 mdField="MSG_PARM_VAL"/>
+				<messageParm3 mdField="MSG_PARM_VAL"/>
+				<messageParm4 mdField="MSG_PARM_VAL"/>
+				<messageParm5 mdField="MSG_PARM_VAL"/>
+				<messageParm6 mdField="MSG_PARM_VAL"/>
+				<messageParm7 mdField="MSG_PARM_VAL"/>
+				<messageParm8 mdField="MSG_PARM_VAL"/>
+				<messageParm9 mdField="MSG_PARM_VAL"/>
+			</messageParms>
+			<messageParmTypes type="group">
+				<messageParmType1 mdField="MSG_PARM_TYP_FLG" dataType="lookup" lookup="MSG_PARM_TYP_FLG"/>
+				<messageParmType2 mdField="MSG_PARM_TYP_FLG" dataType="lookup" lookup="MSG_PARM_TYP_FLG"/>
+				<messageParmType3 mdField="MSG_PARM_TYP_FLG" dataType="lookup" lookup="MSG_PARM_TYP_FLG"/>
+				<messageParmType4 mdField="MSG_PARM_TYP_FLG" dataType="lookup" lookup="MSG_PARM_TYP_FLG"/>
+				<messageParmType5 mdField="MSG_PARM_TYP_FLG" dataType="lookup" lookup="MSG_PARM_TYP_FLG"/>
+				<messageParmType6 mdField="MSG_PARM_TYP_FLG" dataType="lookup" lookup="MSG_PARM_TYP_FLG"/>
+				<messageParmType7 mdField="MSG_PARM_TYP_FLG" dataType="lookup" lookup="MSG_PARM_TYP_FLG"/>
+				<messageParmType8 mdField="MSG_PARM_TYP_FLG" dataType="lookup" lookup="MSG_PARM_TYP_FLG"/>
+				<messageParmType9 mdField="MSG_PARM_TYP_FLG" dataType="lookup" lookup="MSG_PARM_TYP_FLG"/>
+			</messageParmTypes>
+		</issueList>
+	</issuesInfo>
+	<approvalInfo type="group" mapXML="BO_DATA_AREA">
+		<currentApprovalToDoEntryId mdField="TD_ENTRY_ID" fkRef="C1-TODO"/>
+		<waitRetryCount mdField="C1_WAIT_RETRY_CNT" dataType="number"/>
+		<waitForApprovalStartDateTime mdField="C1_WAIT_START_DTTM" dataType="dateTime"/>
+		<approvalList type="list">
+			<toDoRole mdField="ROLE_ID" isPrimeKey="true" fkRef="F1-ROLE"/>
+		</approvalList>
+	</approvalInfo>
+	<rejectInfo type="group" mapXML="BO_DATA_AREA">
+		<rejectReason mdField="C1_REB_CLM_REJ_RSN_FLG" dataType="lookup" lookup="C1_REB_CLM_REJ_RSN_FLG"/>
+	</rejectInfo>
+	<cancelInfo type="group" mapXML="BO_DATA_AREA">
+		<cancelReason mdField="C1_REB_CLM_CAN_RSN_FLG" dataType="lookup" lookup="C1_REB_CLM_CAN_RSN_FLG"/>
+	</cancelInfo>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+</schema>

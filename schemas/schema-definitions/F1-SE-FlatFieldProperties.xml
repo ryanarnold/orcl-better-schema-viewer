@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<type suppress="true" mdField="F1_SE_TYPE_LBL" default="flatField"/>
+	<nodeName mdField="F1_SE_NODE_NAME"/>
+	<description suppress="blank" mdField="F1_SE_DESCR_LBL"/>
+	<label suppress="blank" mdField="F1_SE_LABEL_LBL"/>
+	<mdField suppress="blank" mdField="F1_SE_MDFLD_LBL" fkRef="F1-FLD"/>
+	<uiHinttextArea suppress="blank" mdField="F1_SE_TEXTAREA_LBL" dataType="lookupBO" lookupBO="F1-SchemaBooleanValues"/>
+	<required suppress="blank" mdField="F1_SE_REQD_LBL" dataType="lookupBO" lookupBO="F1-SchemaBoolTrue"/>
+	<dataType suppress="blank" mdField="F1_SE_DATA_TYPE" dataType="lookupBO" lookupBO="F1-SchemaDataTypes"/>
+	<uiHintalphaFormat/>
+	<uiHintalphaFormatGroup type="group">
+		<uiHintalphaFormatVal suppress="blank" mdField="F1_SE_ALPHAFORMAT_LBL" dataType="lookupBO" lookupBO="F1-SchemaBooleanValues"/>
+	</uiHintalphaFormatGroup>
+	<currencyRef mdField="F1_SE_CURR_REF_LBL"/>
+	<lookup mdField="F1_SE_LOOKUP_LBL" fkRef="F1-LKUPF"/>
+	<lookupBO mdField="F1_SE_LKP_BO_LBL" search="F1-EXLKPSRCH" searchField="BUS_OBJ_CD:lookupBO;"/>
+	<stdTime mdField="F1_SE_STDTIME_LBL" dataType="lookupBO" lookupBO="F1-SchemaBoolTrue"/>
+	<stdTimeRef mdField="F1_SE_STDTIME_REF_LBL"/>
+	<displayRef mdField="F1_SE_DISPLAY_REF"/>
+	<fkRef suppress="blank" mdField="F1_SE_FKREF_LBL" fkRef="F1-FKSRC"/>
+	<uiHintfkRef mdField="F1_SE_UIHINT_FKREF"/>
+	<uiHintfkRefGroup mdField="F1_SE_UIHINT_FKREF" type="group">
+		<info suppress="blank" mdField="F1_SE_UIHINT_FKREF_INFO" dataType="lookupBO" lookupBO="F1-SchemaBooleanValues"/>
+		<context suppress="blank" mdField="F1_SE_UIHINT_FKREF_CONTEXT" dataType="lookupBO" lookupBO="F1-SchemaBooleanValues"/>
+		<navigation suppress="blank" mdField="F1_SE_UIHINT_FKREF_NAVIGATION" dataType="lookupBO" lookupBO="F1-SchemaBooleanValues"/>
+		<search suppress="blank" mdField="F1_SE_UIHINT_FKREF_SEARCH" dataType="lookupBO" lookupBO="F1-SchemaBooleanValues"/>
+	</uiHintfkRefGroup>
+	<mapField suppress="blank" mdField="F1_SE_MAPFLD_LBL" fkRef="F1-MOFLD"/>
+	<rowGroup type="group">
+		<mapKey suppress="true" mdField="F1_SE_FLATROW_TYPE" dataType="lookupBO" lookupBO="F1-SchemaFlatRowType"/>
+		<mapChild suppress="true" mdField="F1_SE_MAPCHILD_LBL" fkRef="F1-MOTBL"/>
+		<mapList suppress="true" mdField="F1_SE_MAPLIST_LBL"/>
+		<fieldValueList suppress="true" type="list">
+			<fieldName suppress="true" mdField="F1_SE_FLAT_FIELDNAME" fkRef="F1-MOFLD"/>
+			<fieldValueKey suppress="true" mdField="F1_SE_FLATFLD_ROW_VAL" dataType="lookupBO" lookupBO="F1-SchemaFlatFieldRowValues"/>
+			<defValue suppress="true"/>
+			<defSysVar suppress="true" dataType="lookupBO" lookupBO="F1-SchemaDefaultSysVariables"/>
+			<defConstant suppress="true"/>
+			<defContext suppress="true"/>
+			<isValue suppress="true"/>
+			<isEffectDate suppress="true"/>
+			<isEffectDateTime suppress="true"/>
+			<isConstant suppress="true"/>
+			<isContext suppress="true"/>
+			<isNumber suppress="true" dataType="number"/>
+			<fieldValue suppress="true" mdField="F1_SE_FLAT_FIELDVALUE"/>
+		</fieldValueList>
+	</rowGroup>
+	<default mdField="F1_SE_DEFAULT_LBL"/>
+	<defaultGroup type="group">
+		<key suppress="blank" mdField="F1_SE_DEFAULT_LBL" dataType="lookupBO" lookupBO="F1-SchemaDefaultTypes"/>
+		<defaultValue mdField="F1_SE_DEFAULT_VAL"/>
+		<defaultSysVariable mdField="F1_SE_DEFAULT_SYSVAR" dataType="lookupBO" lookupBO="F1-SchemaDefaultSysVariables"/>
+		<defaultConstant mdField="F1_SE_DEFAULT_CONSTANT"/>
+		<defaultContext mdField="F1_SE_DEFAULT_CONTEXT"/>
+	</defaultGroup>
+	<defaultRef suppress="blank" mdField="F1_SE_DEFLTREF_LBL"/>
+	<suppress suppress="blank" mdField="F1_SE_SUPPRESS" dataType="lookupBO" lookupBO="F1-SchemaElementSuppress"/>
+	<uiHintvisibleOn suppress="blank" mdField="F1_SE_VISIBLEON" dataType="lookupBO" lookupBO="F1-SchemaElementVisibleOn"/>
+	<uiHintdisplayNone mdField="F1_SE_UIHINT_DISPLAYNONE"/>
+	<uiHintdisplayNoneGroup suppress="blank" mdField="F1_SE_UIHINT_DISPLAYNONE" type="group">
+		<key suppress="blank" mdField="F1_SE_UIHINT_DISPLAYNONE_TYPE" dataType="lookupBO" lookupBO="F1-SchemaDispNoneKey"/>
+		<xpath mdField="F1_SE_UIHINT_DISPLAYNONE_XPATH"/>
+		<function mdField="F1_SE_UIHINT_DISPLAYNONE_FUNC"/>
+		<operator mdField="F1_SE_UIHINT_DISPLAYNONE_OPR" dataType="lookupBO" lookupBO="F1-SchemaDispNoneOperator"/>
+		<xpathValue mdField="F1_SE_UIHINT_DISPLAYNONE_VALUE"/>
+		<functionValue mdField="F1_SE_UIHINT_DISPLAYNONE_VALUE" dataType="lookupBO" lookupBO="F1-SchemaBooleanValues"/>
+	</uiHintdisplayNoneGroup>
+	<uiHintprotect mdField="F1_SE_UIHINT_PROTECT"/>
+	<uiHintprotectGroup suppress="blank" mdField="F1_SE_UIHINT_PROTECT" type="group">
+		<key suppress="blank" mdField="F1_SE_UIHINT_PROTECT_TYPE" dataType="lookupBO" lookupBO="F1-SchemaProtectKey"/>
+		<xpath mdField="F1_SE_UIHINT_PROTECT_XPATH"/>
+		<function mdField="F1_SE_UIHINT_PROTECT_FUNC"/>
+		<operator mdField="F1_SE_UIHINT_DISPLAYNONE_OPR" dataType="lookupBO" lookupBO="F1-SchemaDispNoneOperator"/>
+		<xpathValue mdField="F1_SE_UIHINT_DISPLAYNONE_VALUE"/>
+		<functionValue mdField="F1_SE_UIHINT_DISPLAYNONE_VALUE" dataType="lookupBO" lookupBO="F1-SchemaBooleanValues"/>
+		<actionValue mdField="F1_SE_UIHINT_DISPLAYNONE_VALUE" dataType="lookupBO" lookupBO="F1-SchemaActionValues"/>
+	</uiHintprotectGroup>
+	<uiHintselect mdField="F1_SE_SELECT_LBL"/>
+	<uiHintselectGroup mdField="F1_SE_SELECT_LBL" type="group">
+		<key suppress="blank" mdField="F1_SE_SELECT_KEY" dataType="lookupBO" lookupBO="F1-SchemaSelectKey"/>
+		<ss mdField="F1_SE_SELECT_SS_NAME" fkRef="F1-SSCSR"/>
+		<bs mdField="F1_SE_SELECT_BS_NAME" fkRef="F1-BUSSV"/>
+		<table mdField="F1_SE_SELECT_TBL_NAME" fkRef="F1-TBSRC"/>
+	</uiHintselectGroup>
+	<uiHintselectIn mdField="F1_SE_SELECTIN_LBL"/>
+	<uiHintselectInList mdField="F1_SE_SELECTIN_LBL" type="list">
+		<key mdField="F1_SE_SELECTIN_KEY"/>
+		<value mdField="F1_SE_SELECTIN_VALUE"/>
+	</uiHintselectInList>
+	<uiHintselectOut mdField="F1_SE_SELECTOUT_LBL"/>
+	<uiHintselectOutGroup mdField="F1_SE_SELECTOUT_LBL" type="group">
+		<valuePath mdField="F1_SE_UIHINT_SELECTOUT_VALPATH"/>
+		<descPath mdField="F1_SE_UIHINT_SELECTOUT_DESPATH"/>
+	</uiHintselectOutGroup>
+	<uiHintdependents mdField="F1_SE_DEPENDS_LBL"/>
+	<uiHintdependentsList mdField="F1_SE_DEPENDS_LBL" type="list">
+		<key mdField="F1_SE_DEPENDENTS_KEY"/>
+	</uiHintdependentsList>
+	<search suppress="blank" mdField="F1_SE_SEARCH_LBL" fkRef="F1-ZONE"/>
+	<searchField mdField="F1_SE_SEARCHFLD_LBL"/>
+	<searchFieldList type="list">
+		<key mdField="F1_SE_SEARCHFLD_KEY" fkRef="F1-MOFLD"/>
+		<value mdField="F1_SE_SEARCHFLD_VALUE"/>
+	</searchFieldList>
+	<searchOut mdField="F1_SE_SEARCHOUT_LBL"/>
+	<searchOutList type="list">
+		<key mdField="F1_SE_SEARCHOUT_LBL" fkRef="F1-MOFLD"/>
+		<value mdField="F1_SE_SEARCHFLDOUT_VALUE"/>
+	</searchOutList>
+	<private suppress="blank" mdField="F1_SE_PRIVATE_LBL" dataType="lookupBO" lookupBO="F1-SchemaBoolTrue"/>
+	<noAudit suppress="blank" mdField="F1_SE_NOAUDIT_LBL" dataType="lookupBO" lookupBO="F1-SchemaBoolTrue"/>
+</schema>

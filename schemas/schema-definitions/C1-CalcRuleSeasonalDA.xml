@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <seasonalDetails type="group" mapXML="BO_DATA_AREA">
+    <isSeasonal mdField="SEASONAL_FLG" required="true" dataType="lookup" default="C1NO" lookup="SEASONAL_FLG"/>
+    <startMonthDay mdField="SEASON_START_MMDD" isPrimeKey="true"/>
+    <endMonthDay mdField="SEASON_END_MMDD" isPrimeKey="true"/>
+    <prorationMethod mdField="SEASON_PROR_MTHD_FLG" dataType="lookup" lookup="SEASON_PROR_MTHD_FLG"/>
+  </seasonalDetails>
+</schema>

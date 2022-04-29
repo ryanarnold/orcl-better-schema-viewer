@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<toDoEntryId mapField="TD_ENTRY_ID"/>
+	<activityId mapField="ADHOC_CHAR_VAL">
+		<row mapChild="CI_TD_ENTRY_CHA">
+			<CHAR_TYPE_CD is="C1-EXTFA"/>
+		</row>
+	</activityId>
+	<serviceTaskId mapField="CHAR_VAL_FK1">
+		<row mapChild="CI_TD_ENTRY_CHA">
+			<CHAR_TYPE_CD is="C1-SSTSK"/>
+		</row>
+	</serviceTaskId>
+	<custRelReqId mapField="CHAR_VAL_FK1">
+		<row mapChild="CI_TD_ENTRY_CHA">
+			<CHAR_TYPE_CD is="C1-CSTRR"/>
+			<SEQ_NUM is="1"/>
+		</row>
+	</custRelReqId>
+	<srmPostLink mapField="ADHOC_CHAR_VAL">
+		<row mapChild="CI_TD_ENTRY_CHA">
+			<CHAR_TYPE_CD is="C1-SRMPL"/>
+			<SEQ_NUM is="1"/>
+		</row>
+	</srmPostLink>
+</schema>

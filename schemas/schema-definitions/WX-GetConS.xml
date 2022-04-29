@@ -1,0 +1,110 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<head type="group">
+		<action/>
+		<key1 type="group">
+			<name default="ACCT_ID"/>
+			<value/>
+		</key1>
+		<key2 type="group">
+			<name default="PER_ID"/>
+			<value/>
+		</key2>
+		<key3 type="group">
+			<name/>
+			<value/>
+		</key3>
+		<key4 type="group">
+			<name/>
+			<value/>
+		</key4>
+		<key5 type="group">
+			<name/>
+			<value/>
+		</key5>
+		<emailAddress/>
+		<webUserId/>
+		<ipAddress/>
+		<cssUser/>
+		<saId mdField="SA_ID"/>
+	</head>
+	<mainData type="group">
+		<saList type="list">
+			<saInfo mdField="SA_INFO"/>
+			<saId mdField="SA_ID"/>
+			<saType mdField="SA_TYPE_CD"/>
+			<saTypeDescription mdField="SA_TYPE_DESCR"/>
+			<division mdField="CIS_DIVISION"/>
+			<divisionDescription mdField="DESCR"/>
+			<serviceType mdField="SVC_TYPE_CD"/>
+			<serviceTypeDescription mdField="SVC_TYPE_DESCR"/>
+			<history type="group">
+				<sq type="list">
+					<uom mdField="UOM_CD"/>
+					<tou mdField="TOU_CD"/>
+					<sqi mdField="SQI_CD"/>
+					<date mdField="END_DATE" dataType="date"/>
+					<quantity/>
+				</sq>
+			</history>
+			<latestSQ type="group">
+				<uom mdField="UOM_CD"/>
+				<tou mdField="TOU_CD"/>
+				<sqi mdField="SQI_CD"/>
+				<quantity mdField="BILL_SQ" dataType="number"/>
+			</latestSQ>
+			<uomDescription mdField="UOM_CD_DESCR"/>
+		</saList>
+		<billId mdField="BILL_ID"/>
+	</mainData>
+	<custom type="group">
+		<field1 type="group">
+			<name/>
+			<value/>
+		</field1>
+		<field2 type="group">
+			<name/>
+			<value/>
+		</field2>
+		<field3 type="group">
+			<name/>
+			<value/>
+		</field3>
+		<field4 type="group">
+			<name/>
+			<value/>
+		</field4>
+		<field5 type="group">
+			<name/>
+			<value/>
+		</field5>
+		<field6 type="group">
+			<name/>
+			<value/>
+		</field6>
+		<field7 type="group">
+			<name/>
+			<value/>
+		</field7>
+		<field8 type="group">
+			<name/>
+			<value/>
+		</field8>
+		<field9 type="group">
+			<name/>
+			<value/>
+		</field9>
+		<field10 type="group">
+			<name/>
+			<value/>
+		</field10>
+	</custom>
+	<errorInformation type="group">
+		<isInError mdField="IN_ERROR_SW" dataType="boolean" default="false"/>
+		<errorReference type="group">
+			<category mdField="MESSAGE_CAT_NBR" dataType="number"/>
+			<number mdField="MESSAGE_NBR" dataType="number"/>
+		</errorReference>
+		<errorMessage mdField="MESSAGE_TEXT"/>
+	</errorInformation>
+</schema>

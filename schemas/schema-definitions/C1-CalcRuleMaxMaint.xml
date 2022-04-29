@@ -1,0 +1,136 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <action suppress="true"/>
+  <boGroup type="group">
+    <calcGroup suppress="input" required="true" isPrimeKey="true" fkRef="C1-CALGR" mapField="CALC_GRP_CD"/>
+    <calcRule required="true" isPrimeKey="true" mapField="CALC_RULE_CD"/>
+    <executionSequence required="true" dataType="number" mapField="CR_EXEC_SEQ"/>
+    <bo suppress="input" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+    <description required="true" mapField="DESCR100"/>
+    <longDescription mapField="DESCRLONG"/>
+    <version suppress="true" dataType="number" mapField="VERSION"/>
+    <stepAlgorithm suppress="true" fkRef="ALG" mapField="CALC_RULE_STEP_ALG_CD"/>
+    <valueAlgorithm suppress="true" fkRef="ALG" mapField="CALC_RULE_VAL_ALG_CD"/>
+    <itemType suppress="true" fkRef="C1-ITMTY" mapField="ITEM_TYPE_CD"/>
+    <billFactor suppress="true" fkRef="C1-BFACT" mapField="BF_CD"/>
+    <descriptionOnBillDetails type="group">
+      <descriptionOnBill mapField="DESCR_TMPLT"/>
+      <shouldPrintLine mdField="PRT_FLG" required="true" dataType="lookup" default="C1YE" mapXML="BO_DATA_AREA" lookup="PRT_FLG"/>
+      <shouldPrintLineIfZero mdField="PRT_IF_ZERO_FLG" required="true" dataType="lookup" default="C1NO" mapXML="BO_DATA_AREA" lookup="PRT_IF_ZERO_FLG"/>
+    </descriptionOnBillDetails>
+    <roundingDetails type="group">
+      <roundingMethod mdField="RND_TYPE_FLG" required="true" dataType="lookup" default="RDNR" mapXML="BO_DATA_AREA" lookup="RND_TYPE_FLG"/>
+      <precision mdField="RND_PRECISION_LVL" required="true" dataType="number" default=".01" mapXML="BO_DATA_AREA"/>
+    </roundingDetails>
+    <distributionCodeDetails type="group">
+      <distributionCode fkRef="C1-DSTCD" mapField="DST_ID"/>
+      <distributionCodeSource mdField="DST_CD_SRC_FLG" required="true" dataType="lookup" default="C1SD" mapXML="BO_DATA_AREA" lookup="DST_CD_SRC_FLG"/>
+      <revenueClassDistributionCode type="group" mapXML="BO_DATA_AREA">
+        <revenueClassDistributionList type="list">
+          <revenueClass mdField="REV_CL_CD" required="true" isPrimeKey="true" fkRef="C1-REVCL"/>
+          <distributionCode mdField="DST_ID" required="true" fkRef="C1-DSTCD"/>
+        </revenueClassDistributionList>
+      </revenueClassDistributionCode>
+    </distributionCodeDetails>
+    <fcpoDetails type="group">
+      <isFcpo mdField="CALC_ONLY_FLG" required="true" dataType="lookup" default="C1NO" mapXML="BO_DATA_AREA" lookup="CALC_ONLY_FLG"/>
+      <shouldCreateBillLine mdField="CRE_BILL_LN_FLG" required="true" dataType="lookup" default="C1NO" mapXML="BO_DATA_AREA" lookup="CRE_BILL_LN_FLG"/>
+      <fcpoRetentionRule mdField="FCPO_RETN_RULE_FLG" dataType="lookup" default="C1RT" mapXML="BO_DATA_AREA" lookup="FCPO_RETN_RULE_FLG"/>
+    </fcpoDetails>
+    <memberCategory type="group">
+      <memberCategoryList type="list" mapChild="C1_CALC_RULE_MBR_CAT">
+        <calcLineCategoryType fkRef="C1-CLCAT" mapField="CL_CAT_TYPE_CD"/>
+        <calcLineCategoryValue mapField="CL_CAT_VAL"/>
+      </memberCategoryList>
+    </memberCategory>
+    <characteristics suppress="true" type="group">
+      <characteristicsList type="list" mapChild="C1_CALC_RULE_CHAR">
+        <characteristicType fkRef="CHAR_TYP" mapField="CHAR_TYPE_CD"/>
+        <characteristicValue mapField="CHAR_VAL"/>
+        <adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+      </characteristicsList>
+    </characteristics>
+    <shouldExecuteOverrideProration mdField="EXEC_OVR_PROR_FLG" required="true" dataType="lookup" default="C1NO" mapXML="BO_DATA_AREA" lookup="EXEC_OVR_PROR_FLG"/>
+    <seasonalDetails type="group" mapXML="BO_DATA_AREA">
+      <isSeasonal mdField="SEASONAL_FLG" required="true" dataType="lookup" default="C1NO" lookup="SEASONAL_FLG"/>
+      <startMonthDay mdField="SEASON_START_MMDD" isPrimeKey="true"/>
+      <endMonthDay mdField="SEASON_END_MMDD" isPrimeKey="true"/>
+      <prorationMethod mdField="SEASON_PROR_MTHD_FLG" dataType="lookup" lookup="SEASON_PROR_MTHD_FLG"/>
+    </seasonalDetails>
+    <maximumDetails type="group" mapXML="BO_DATA_AREA">
+      <errorIfNoTargetValue mdField="ERR_IF_NO_T_VAL_FLG" required="true" dataType="lookup" default="C1NO" lookup="ERR_IF_NO_T_VAL_FLG"/>
+      <valueType mdField="VAL_TYPE_FLG" required="true" dataType="lookup" default="U" lookup="VAL_TYPE_FLG"/>
+      <valueSource mdField="VAL_SOURCE_FLG" required="true" dataType="lookup" default="C1VL" lookup="VAL_SOURCE_FLG"/>
+      <billFactor mdField="BF_CD" fkRef="C1-BFACT"/>
+      <valueAlgorithm mdField="CALC_RULE_VAL_ALG_CD" fkRef="ALG"/>
+      <value mdField="VAL" dataType="number"/>
+    </maximumDetails>
+    <targetCategory type="group">
+      <targetCategoryList type="list" mapChild="C1_CALC_RULE_TRGT_CAT">
+        <calcLineCategoryType fkRef="C1-CLCAT" mapField="CL_CAT_TYPE_CD"/>
+        <calcLineCategoryValue mapField="CL_CAT_VAL"/>
+      </targetCategoryList>
+    </targetCategory>
+  </boGroup>
+  <billFactorSearch type="group">
+    <valueType/>
+    <billFactorType/>
+    <calledFromSearch mdField="CALLED_FROM_SEARCH_SW" dataType="boolean"/>
+  </billFactorSearch>
+  <valueAlgorithms type="group">
+    <algorithm mapField="ALG_CD"/>
+    <algorithmEntity dataType="lookup" mapField="ALG_ENTITY_FLG" lookup="ALG_ENTITY_FLG"/>
+    <results type="list">
+      <algorithm mapField="ALG_CD"/>
+      <algorithmType mapField="ALG_TYPE_CD"/>
+      <description mapField="DESCR50"/>
+    </results>
+  </valueAlgorithms>
+  <calcLineValues type="group">
+    <zone private="true" default="C1-RETCALCVA" mapField="ZONE_CD"/>
+    <calcLineCategoryType mapField="F1_VALUE"/>
+    <rowCount dataType="number" mapField="ROW_CNT"/>
+    <results type="list" mapList="DE">
+      <calcLineCategoryType mapField="COL_VALUE">
+        <row mapList="DE_VAL">
+          <SEQNO is="1"/>
+        </row>
+      </calcLineCategoryType>
+      <calcLineCategoryValue mapField="COL_VALUE">
+        <row mapList="DE_VAL">
+          <SEQNO is="2"/>
+        </row>
+      </calcLineCategoryValue>
+      <description mapField="COL_VALUE">
+        <row mapList="DE_VAL">
+          <SEQNO is="3"/>
+        </row>
+      </description>
+    </results>
+  </calcLineValues>
+  <input type="group">
+    <typeOfCharSearch dataType="lookup" mapField="TYPE_OF_CHAR_SRCH_OPT" lookup="TYPE_OF_CHAR_SRCH_OPT"/>
+    <charEntityValue dataType="lookup" mapField="CHAR_ENTITY_FLG" lookup="CHAR_ENTITY_FLG"/>
+    <charTypeInfo type="group">
+      <input type="group">
+        <characteristicType mapField="CHAR_TYPE_CD"/>
+        <characteristicValue mapField="CHAR_VAL"/>
+        <adhocCharValue mapField="ADHOC_CHAR_VAL"/>
+        <fkValue1 mapField="CHAR_VAL_FK1"/>
+        <fkValue2 mapField="CHAR_VAL_FK2"/>
+        <fkValue3 mapField="CHAR_VAL_FK3"/>
+        <fkValue4 mapField="CHAR_VAL_FK4"/>
+        <fkValue5 mapField="CHAR_VAL_FK5"/>
+      </input>
+      <output type="group">
+        <charTypeFlg dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+        <charValInfo mapField="CHAR_VAL_FK_INFO"/>
+        <searchZone mapField="ZONE_CD"/>
+        <navOption mapField="NAV_OPT_CD"/>
+        <pkFieldsList type="list" mapList="PK_FIELD_LIST">
+          <pkField mapField="PK_VAL"/>
+        </pkFieldsList>
+      </output>
+    </charTypeInfo>
+  </input>
+</schema>

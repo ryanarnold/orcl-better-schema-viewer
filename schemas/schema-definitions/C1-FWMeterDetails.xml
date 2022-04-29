@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <meterDataDetails type="group">
+    <meterId mapField="MTR_ID"/>
+    <deviceManufacturer mapField="MFG_CD"/>
+    <deviceModel mapField="MODEL_CD"/>
+    <badgeNumber mapField="BADGE_NBR"/>
+  </meterDataDetails>
+  <version suppress="true" dataType="number" mapField="VERSION"/>
+</schema>

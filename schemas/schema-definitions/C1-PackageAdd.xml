@@ -1,0 +1,127 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<salesPackageId mapField="PACKAGE_ID"/>
+	<copyToPackageId mapField="COPY_TO_PACKAGE_ID"/>
+	<copyToCampaignCd mapField="COPY_TO_CAMPAIGN_CD"/>
+	<shouldIncludeSAsToCreate dataType="boolean" mapField="COPY_TO_INC_SAT_SW"/>
+	<shouldIncludeEligibilityRules dataType="boolean" mapField="COPY_TO_INC_ELG_SW"/>
+	<canIncludeFieldOverrides dataType="boolean" mapField="COPY_TO_INC_FLD_SW"/>
+	<shouldIncludeInstruction dataType="boolean" mapField="COPY_TO_INC_INS_SW"/>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<copyFromCampSw mapField="COPY_FROM_CAMP_SW"/>
+	<packageInfo mapField="PACKAGE_INFO"/>
+	<campaignInfo mapField="CAMPAIGN_INFO"/>
+	<campaignDescription mapField="CAMPAIGN_DESCR"/>
+	<currency mapField="CURRENCY_CD"/>
+	<effectiveDate dataType="date" mapField="EFFDT"/>
+	<algorithmEntity dataType="lookup" mapField="ALG_ENTITY_FLG" lookup="ALG_ENTITY_FLG"/>
+	<algEntityPkel mapField="ALG_ENTITY_PKEL"/>
+	<algEntityPkcc mapField="ALG_ENTITY_PKCC"/>
+	<algEntityStrm mapField="ALG_ENTITY_STRM"/>
+	<hasIncludeSasToCreate dataType="boolean" mapField="INC_SAT_SW"/>
+	<hasIncludeEligibilityRules dataType="boolean" mapField="INC_ELG_SW"/>
+	<shouldIncludeFieldOverrides dataType="boolean" mapField="INC_FLD_SW"/>
+	<isIncludeInstructions dataType="boolean" mapField="INC_INS_SW"/>
+	<campaign mapField="CAMPAIGN_CD"/>
+	<packageStatus dataType="lookup" mapField="PKG_STATUS_FLG" lookup="PKG_STATUS_FLG"/>
+	<version dataType="number" mapField="VERSION"/>
+	<language mapField="LANGUAGE_CD"/>
+	<description mapField="DESCR"/>
+	<longDescription mapField="DESCRLONG"/>
+	<pks type="list" mapList="PKS">
+		<salesPackageId2 mapField="PACKAGE_ID"/>
+		<sequence dataType="number" mapField="SEQ_NUM"/>
+		<division mapField="CIS_DIVISION"/>
+		<saType mapField="SA_TYPE_CD"/>
+		<spType mapField="SP_TYPE_CD"/>
+		<startOption mapField="START_OPT_CD"/>
+		<startMethodAlgorithm mapField="START_METH_ALG_CD"/>
+		<version2 dataType="number" mapField="VERSION"/>
+		<isProposalServiceAgreement dataType="boolean" mapField="CRE_PROP_SA_SW"/>
+		<isStartOptionRequired dataType="boolean" mapField="START_OPT_REQ_SW"/>
+		<isServicePointRequired dataType="boolean" mapField="ALLOW_SP_SW"/>
+		<serviceType mapField="SVC_TYPE_CD"/>
+		<serviceTypeDescription mapField="SVC_TYPE_DESCR"/>
+		<saTypeDescription mapField="SA_TYPE_DESCR"/>
+		<startOptionDescription mapField="START_OPT_DESCR"/>
+		<spTypeDescr mapField="SP_TYPE_DESCR"/>
+		<startMethDescr mapField="START_METH_DESCR"/>
+		<saToCreateInfo mapField="SA_TO_CREATE_INFO"/>
+	</pks>
+	<pkf type="list" mapList="PKF">
+		<salesPackageId3 mapField="PACKAGE_ID"/>
+		<sequence2 dataType="number" mapField="SEQ_NUM"/>
+		<packageFieldOverrideUsage dataType="lookup" mapField="PKG_FLD_USG_FLG" lookup="PKG_FLD_USG_FLG"/>
+		<characteristicValue mapField="CHAR_VAL"/>
+		<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+		<foreignKeyCharValue mapField="VAL_FK1"/>
+		<foreignKeyValue2 mapField="VAL_FK2"/>
+		<foreignKeyValue3 mapField="VAL_FK3"/>
+		<foreignKeyValue4 mapField="VAL_FK4"/>
+		<foreignKeyValue5 mapField="VAL_FK5"/>
+		<columnReferenceValue mapField="COL_REF_VAL"/>
+		<version3 dataType="number" mapField="VERSION"/>
+		<language2 mapField="LANGUAGE_CD"/>
+		<campaignFieldPrompt mapField="CAMP_FLD_PROMPT"/>
+		<isOverride dataType="boolean" mapField="OVERRIDE_SW"/>
+		<typeOfResponse dataType="lookup" mapField="CAMP_FLD_TYPE_FLG" lookup="CAMP_FLD_TYPE_FLG"/>
+		<campaignFieldtypeUsage dataType="lookup" mapField="CAMP_FLDTY_USG_FLG" lookup="CAMP_FLDTY_USG_FLG"/>
+		<characteristicType mapField="CHAR_TYPE_CD"/>
+		<columnReference mapField="COL_REF_CD"/>
+		<searchNavigationKey mapField="SRCH_NAV_KEY"/>
+		<navigationOption mapField="NAV_OPT_CD"/>
+		<table mapField="TBL_NAME"/>
+		<infoProgram mapField="INFO_PRG"/>
+		<characteristicType2 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+		<characteristicValueDescription mapField="CHAR_VAL_DESCR"/>
+		<foreignKeyCharacteristicValue mapField="VAL_FK_STR"/>
+		<foreignKeyInformation mapField="VAL_FK_INFO"/>
+		<isCompoundPrimaryKey dataType="boolean" mapField="COMP_PK_SW"/>
+		<charateristicValue mapField="COMP_PK_STR"/>
+		<isColumnReferenceForeignKey dataType="boolean" mapField="COL_REF_FK_SW"/>
+		<colRefDescr mapField="COL_REF_DESCR"/>
+	</pkf>
+	<pkc type="list" mapList="PKC">
+		<salesPackageId4 mapField="PACKAGE_ID"/>
+		<criteriaGroupNumber dataType="number" mapField="PKG_CRT_GRP_NBR"/>
+		<groupTrueInstruction dataType="lookup" mapField="GRP_TRUE_INSTR_FLG" lookup="GRP_TRUE_INSTR_FLG"/>
+		<groupFalseInstruction dataType="lookup" mapField="GRP_FALS_INSTR_FLG" lookup="GRP_FALS_INSTR_FLG"/>
+		<sortSequence dataType="number" mapField="SORT_SEQ5"/>
+		<version4 dataType="number" mapField="VERSION"/>
+		<language3 mapField="LANGUAGE_CD"/>
+		<description2 mapField="DESCR"/>
+		<longDescription2 mapField="DESCRLONG"/>
+		<pke type="list" mapList="PKE">
+			<criteriaComparisonAlgorithm mapField="CRT_COMP_ALG_CD"/>
+			<salesPackageId5 mapField="PACKAGE_ID"/>
+			<criteriaGroupNumber2 dataType="number" mapField="PKG_CRT_GRP_NBR"/>
+			<sequence3 dataType="number" mapField="SEQ_NUM"/>
+			<criteriaFieldType dataType="lookup" mapField="CRT_FLD_TYPE_FLG" lookup="CRT_FLD_TYPE_FLG"/>
+			<fieldSequenceNumber dataType="number" mapField="FLD_SEQ_NBR"/>
+			<criteriaFieldAlgorithm mapField="CRT_FLD_ALG_CD"/>
+			<criteriaOperator dataType="lookup" mapField="CRT_OPR_FLG" lookup="CRT_OPR_FLG"/>
+			<criteriaComparisonValue mapField="CRT_COMP_VAL"/>
+			<criteriaIfTrue dataType="lookup" mapField="CRT_TRUE_INSTR_FLG" lookup="CRT_TRUE_INSTR_FLG"/>
+			<criteriaIfFalse dataType="lookup" mapField="CRT_FALS_INSTR_FLG" lookup="CRT_FALS_INSTR_FLG"/>
+			<criteriaInsufficientData dataType="lookup" mapField="CRT_INSF_INSTR_FLG" lookup="CRT_INSF_INSTR_FLG"/>
+			<sortSequence2 dataType="number" mapField="SORT_SEQ5"/>
+			<version5 dataType="number" mapField="VERSION"/>
+			<campaignFieldDescription mapField="CAMP_FLD_DESCR"/>
+			<characteristicValueDescription2 mapField="CHAR_VAL_DESCR"/>
+			<pkelAlgDescr mapField="PKEL_ALG_DESCR"/>
+			<pkccAlgDescr mapField="PKCC_ALG_DESCR"/>
+		</pke>
+	</pkc>
+	<pki type="list" mapList="PKI">
+		<salesPackageId6 mapField="PACKAGE_ID"/>
+		<sequence4 dataType="number" mapField="SEQ_NUM"/>
+		<displayIcon mapField="DISP_ICON_CD"/>
+		<sortSequence3 dataType="number" mapField="SORT_SEQ5"/>
+		<version6 dataType="number" mapField="VERSION"/>
+		<language4 mapField="LANGUAGE_CD"/>
+		<longDescription3 mapField="DESCRLONG"/>
+		<iconType dataType="lookup" mapField="ICON_TYPE_FLG" lookup="ICON_TYPE_FLG"/>
+		<url mapField="URL"/>
+	</pki>
+</schema>

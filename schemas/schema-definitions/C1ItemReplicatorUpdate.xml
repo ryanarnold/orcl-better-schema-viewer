@@ -1,0 +1,117 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<item mapField="ITEM_ID"/>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<numberItems dataType="number" mapField="NUMBER_ITEMS"/>
+	<hasNoCommit dataType="boolean" mapField="NO_COMMIT_SW"/>
+	<isReviewed dataType="boolean" mapField="REVIEWED_SW"/>
+	<badgePrefix mapField="BADGE_PREFIX"/>
+	<badgeStart dataType="number" mapField="BADGE_START"/>
+	<badgeInc dataType="number" mapField="BADGE_INC"/>
+	<serialPrefix mapField="SERIAL_PREFIX"/>
+	<serialStart dataType="number" mapField="SERIAL_START"/>
+	<serialInc dataType="number" mapField="SERIAL_INC"/>
+	<stockLocation mapField="STK_LOC_CD"/>
+	<slcDescr mapField="SLC_DESCR"/>
+	<displayStkLocSw mapField="DISPLAY_STK_LOC_SW"/>
+	<startBadgeNbr mapField="START_BADGE_NBR"/>
+	<endBadgeNbr mapField="END_BADGE_NBR"/>
+	<startSerialNbr mapField="START_SERIAL_NBR"/>
+	<endSerialNbr mapField="END_SERIAL_NBR"/>
+	<itemInformation mapField="ITEM_INFO"/>
+	<trackLocation dataType="lookup" mapField="TRACK_LOC_FLG" lookup="TRACK_LOC_FLG"/>
+	<installationDateTime dataType="dateTime" mapField="INSTALL_DTTM"/>
+	<removalDateTime dataType="dateTime" mapField="REMOVAL_DTTM"/>
+	<busDt dataType="date" mapField="BUS_DT"/>
+	<busDttm dataType="dateTime" mapField="BUS_DTTM"/>
+	<spInformation mapField="SP_INFO"/>
+	<servicePointId mapField="SP_ID"/>
+	<premiseId mapField="PREM_ID"/>
+	<badgeNumber mapField="BADGE_NBR"/>
+	<itemType mapField="ITEM_TYPE_CD"/>
+	<itemStatus dataType="lookup" mapField="ITEM_STATUS_FLG" lookup="ITEM_STATUS_FLG"/>
+	<manufacturer mapField="MFG_CD"/>
+	<model mapField="MODEL_CD"/>
+	<serialNumber mapField="SERIAL_NBR"/>
+	<receivedDate dataType="date" mapField="RECEIVE_DT"/>
+	<retiredDate dataType="date" mapField="RETIRE_DT"/>
+	<longDescription mapField="DESCRLONG"/>
+	<version dataType="number" mapField="VERSION"/>
+	<retireReason mapField="RETIRE_RSN_CD"/>
+	<serviceType mapField="SVC_TYPE_CD"/>
+	<modelCdDescr mapField="MODEL_CD_DESCR"/>
+	<itemCharacteristics type="list" mapList="ITC">
+		<item2 mapField="ITEM_ID"/>
+		<characteristicType mapField="CHAR_TYPE_CD"/>
+		<effectiveDate dataType="date" mapField="EFFDT"/>
+		<characteristicValue mapField="CHAR_VAL"/>
+		<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+		<version2 dataType="number" mapField="VERSION"/>
+		<characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
+		<characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+		<characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+		<characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
+		<characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+		<searchCharacteristicValue mapField="SRCH_CHAR_VAL"/>
+		<sortSequence dataType="number" mapField="SORT_SEQ"/>
+		<searchNavigationKey mapField="SRCH_NAV_KEY"/>
+		<navigationOption mapField="NAV_OPT_CD"/>
+		<table mapField="TBL_NAME"/>
+		<infoProgram mapField="INFO_PRG"/>
+		<characteristicType2 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+		<characteristicValueDescription mapField="CHAR_VAL_DESCR"/>
+		<characteristicValueForeignKeys mapField="CHAR_VAL_FK_STR"/>
+		<characteristicValueForeignKeyInformation mapField="CHAR_VAL_FK_INFO"/>
+		<isCompoundPrimaryKey dataType="boolean" mapField="COMP_PK_SW"/>
+		<charateristicValue mapField="COMP_PK_STR"/>
+		<characteristicType3 mapField="CHAR_TYPE_DESCR"/>
+	</itemCharacteristics>
+	<iih type="list" mapList="IIH">
+		<item3 mapField="ITEM_ID"/>
+		<installationDateTime2 dataType="dateTime" mapField="INSTALL_DTTM"/>
+		<removalDateTime2 dataType="dateTime" mapField="REMOVAL_DTTM"/>
+		<spItemHistoryId mapField="SP_ITEM_HIST_ID"/>
+		<servicePointId2 mapField="SP_ID"/>
+		<spInformation2 mapField="SP_INFO"/>
+	</iih>
+	<itmEq type="list" mapList="ITM_EQ">
+		<item4 mapField="ITEM_ID"/>
+		<equipmentId mapField="ITEM_ID_EQ"/>
+		<installationDate dataType="date" mapField="INSTALL_DT"/>
+		<removalDate dataType="date" mapField="REMOVAL_DT"/>
+		<equipmentCount dataType="number" mapField="EQ_CNT"/>
+		<comment mapField="COMMENTSMED"/>
+		<version3 dataType="number" mapField="VERSION"/>
+		<badgeNumber2 mapField="BADGE_NBR"/>
+		<itemTypeDescr mapField="ITEM_TYPE_DESCR"/>
+	</itmEq>
+	<itemLocHist type="list" mapList="ITEM_LOC_HIST">
+		<itemLocationHistoryId mapField="ITEM_LOC_HIST_ID"/>
+		<item5 mapField="ITEM_ID"/>
+		<locationDateTime dataType="dateTime" mapField="LOC_DTTM"/>
+		<locationHistoryType dataType="lookup" mapField="LOC_HIST_TYP_FLG" lookup="LOC_HIST_TYP_FLG"/>
+		<spItemHistoryId2 mapField="SP_ITEM_HIST_ID"/>
+		<stockLocation2 mapField="STK_LOC_CD"/>
+		<version4 dataType="number" mapField="VERSION"/>
+		<workFieldForStructuredQueryLanguageBindVariable mapField="SLO_DESCR"/>
+		<servicePointId3 mapField="SP_ID"/>
+		<spInformation3 mapField="SP_INFO"/>
+	</itemLocHist>
+	<itemTypDescr mapField="ITEM_TYP_DESCR"/>
+	<mfgDescr mapField="MFG_DESCR"/>
+	<firstGrp type="list" mapList="FIRST_GRP">
+		<badgeNumber3 mapField="BADGE_NBR"/>
+		<serialNumber2 mapField="SERIAL_NBR"/>
+		<itemType2 mapField="ITEM_TYPE_CD"/>
+		<itemStatus2 dataType="lookup" mapField="ITEM_STATUS_FLG" lookup="ITEM_STATUS_FLG"/>
+		<receivedDate2 dataType="date" mapField="RECEIVE_DT"/>
+	</firstGrp>
+	<secondGrp type="list" mapList="SECOND_GRP">
+		<badgeNumber4 mapField="BADGE_NBR"/>
+		<serialNumber3 mapField="SERIAL_NBR"/>
+		<itemType3 mapField="ITEM_TYPE_CD"/>
+		<itemStatus3 dataType="lookup" mapField="ITEM_STATUS_FLG" lookup="ITEM_STATUS_FLG"/>
+		<receivedDate3 dataType="date" mapField="RECEIVE_DT"/>
+	</secondGrp>
+</schema>

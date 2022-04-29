@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<syncRequestId mapField="F1_SYNC_REQ_ID"/>
+	<exceptionInfo type="list" mapList="EXCEPTION_INFO">
+		<sequence dataType="number" mapField="SEQ_NUM"/>
+		<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+		<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+		<comments mapField="COMMENTS"/>
+		<messageParameters type="list" mapList="MESSAGE_PARAMETERS">
+			<parameterSequence dataType="number" isPrimeKey="true" mapField="SEQ_NUM"/>
+			<messageParameterValue mapField="MSG_PARM_VAL"/>
+		</messageParameters>
+	</exceptionInfo>
+	<externalIds type="group" mapXML="BO_DATA_AREA">
+		<entityIdList type="list">
+			<entity mdField="F1_ENTITY_LBL" isPrimeKey="true"/>
+			<externalPk1 mdField="PK_VAL1_LBL"/>
+			<externalPk2 mdField="PK_VAL2_LBL"/>
+			<externalPk3 mdField="PK_VAL3_LBL"/>
+			<externalPk4 mdField="PK_VAL4_LBL"/>
+			<externalPk5 mdField="PK_VAL5_LBL"/>
+		</entityIdList>
+	</externalIds>
+	<hasError dataType="boolean" mapField="HAS_ERROR"/>
+</schema>

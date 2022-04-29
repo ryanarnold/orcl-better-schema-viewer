@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<description suppress="blank" mdField="F1_SE_DESCR_LBL"/>
+	<label suppress="blank" mdField="F1_SE_LABEL_LBL"/>
+	<mdField suppress="blank" mdField="F1_SE_MDFLD_LBL" fkRef="F1-FLD"/>
+	<uiHinttextArea suppress="blank" mdField="F1_SE_TEXTAREA_LBL" dataType="lookupBO" lookupBO="F1-SchemaBooleanValues"/>
+</schema>

@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<accountId mapField="ACCT_ID"/>
+	<entityName mapField="ENTITY_NAME"/>
+	<canCreate dataType="boolean" mapField="CREATE_SW"/>
+	<currency mapField="CURRENCY_CD"/>
+	<candSa type="list" mapList="CAND_SA">
+		<serviceAgreement mapField="SA_ID"/>
+		<saInformation mapField="SA_INFO"/>
+		<debtClassInformation mapField="DEBT_CL_INFO"/>
+		<premiseInfo mapField="PREMISE_INFO"/>
+		<debtCurrentBalance dataType="money" mapField="DEBT_CUR_AMT"/>
+		<debtTotalBalance dataType="money" mapField="DEBT_TOT_AMT"/>
+		<writeOffAmount dataType="money" mapField="WO_AMOUNT"/>
+		<isWriteOff dataType="boolean" mapField="WRITE_OFF_SW"/>
+		<saArrears type="list" mapList="SA_ARREARS">
+			<serviceAgreement2 mapField="SA_ID"/>
+			<daysAge mapField="DAYS_AGE"/>
+			<daysAgeN dataType="number" mapField="DAYS_AGE_N"/>
+			<arrearsAmount dataType="money" mapField="ARS_AMT"/>
+			<isToBeTransferred dataType="boolean" mapField="CHECKED_FOR_PA_SW"/>
+		</saArrears>
+	</candSa>
+	<wrtOffSa type="list" mapList="WRT_OFF_SA">
+		<serviceAgreement3 mapField="SA_ID"/>
+		<saInformation2 mapField="SA_INFO"/>
+		<currentAmount dataType="money" mapField="CUR_AMT"/>
+		<payoffAmount dataType="money" mapField="TOT_AMT"/>
+	</wrtOffSa>
+</schema>

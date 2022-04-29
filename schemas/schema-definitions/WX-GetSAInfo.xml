@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<input type="group">
+		<saId/>
+	</input>
+	<output type="group">
+		<saInfo/>
+		<cisDivision/>
+		<cisDivisionInfo/>
+		<saType/>
+		<saTypeInfo/>
+		<serviceType/>
+		<serviceTypeInfo/>
+		<graphUOM/>
+		<graphUOMInfo/>
+	</output>
+</schema>

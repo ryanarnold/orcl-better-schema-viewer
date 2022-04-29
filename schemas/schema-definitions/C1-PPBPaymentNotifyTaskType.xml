@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<serviceTaskType required="true" isPrimeKey="true" mapField="F1_STASK_TYPE_CD"/>
+	<description required="true" mapField="DESCR"/>
+	<bo suppress="input" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<transactionalBo mdField="C1_RELATED_TRANS_OBJ_LBL" required="true" fkRef="F1-BUSOB" mapField="TRANS_BUS_OBJ_CD"/>
+	<serviceTaskTypeStatus required="true" dataType="lookup" default="F1AC" mapField="F1_STASK_TYPE_STATUS_FLG" lookup="F1_STASK_TYPE_STATUS_FLG"/>
+	<serviceTaskClass required="true" dataType="lookup" default="WXSS" mapField="F1_SVC_TASK_CL_FLG" lookup="F1_SVC_TASK_CL_FLG"/>
+	<longDescription mapField="DESCRLONG"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<notificationPreferences type="group" mapXML="BO_DATA_AREA">
+		<overrideDoNotDisturbScript mdField="C1_OVRD_DONOT_DISTURB" fkRef="F1-SCRCD"/>
+		<customerContactClass mdField="CC_CL_CD" fkRef="CUSCNTCL"/>
+		<customerContactType mdField="CC_TYPE_CD"/>
+	</notificationPreferences>
+	<notifications type="group" mapXML="BO_DATA_AREA">
+		<notificationElements type="list">
+			<sequence mdField="SEQ_NUM" dataType="number" isPrimeKey="true"/>
+			<required mdField="REQUIRED_SW" dataType="lookup" default="N" lookup="REQUIRED_SW"/>
+			<field mdField="FLD_NAME" fkRef="F1-FLD"/>
+			<characteristicType mdField="CHAR_TYPE_CD" fkRef="CHARTYPE"/>
+			<extendableLookupBO mdField="BUS_OBJ_CD" fkRef="F1-EXLKP"/>
+			<transactionalBOXpath mdField="XPATH"/>
+		</notificationElements>
+		<notificationsAutopay suppress="true" type="list">
+			<deliveryType mdField="C1_SS_DELIVERY_TYPE" required="true" dataType="lookup" isPrimeKey="true" lookup="C1_SS_DELIVERY_TYPE"/>
+			<messageCategory mdField="MESSAGE_CAT_NBR" dataType="number" fkRef="MSGCAT"/>
+			<subjectMessageNumber mdField="C1_SUBJ_MSG_NBR" dataType="number"/>
+			<subjectMessageParametersScript mdField="C1_SUBJ_MSG_PARMS_SCR" fkRef="F1-SCRCD"/>
+			<notificationText mdField="C1_NOTIF_TEXT_LBL" type="list">
+				<sequence mdField="SEQ_NUM" dataType="number" isPrimeKey="true"/>
+				<messageNumber mdField="MESSAGE_NBR" dataType="number"/>
+				<messageParametersScript mdField="C1_MSG_PARMS_SCR" fkRef="F1-SCRCD"/>
+			</notificationText>
+		</notificationsAutopay>
+		<notificationsOther suppress="true" type="list">
+			<deliveryType mdField="C1_SS_DELIVERY_TYPE" required="true" dataType="lookup" isPrimeKey="true" lookup="C1_SS_DELIVERY_TYPE"/>
+			<messageCategory mdField="MESSAGE_CAT_NBR" dataType="number" fkRef="MSGCAT"/>
+			<subjectMessageNumber mdField="C1_SUBJ_MSG_NBR" dataType="number"/>
+			<subjectMessageParametersScript mdField="C1_SUBJ_MSG_PARMS_SCR" fkRef="F1-SCRCD"/>
+			<notificationText mdField="C1_NOTIF_TEXT_LBL" type="list">
+				<sequence mdField="SEQ_NUM" dataType="number" isPrimeKey="true"/>
+				<messageNumber mdField="MESSAGE_NBR" dataType="number"/>
+				<messageParametersScript mdField="C1_MSG_PARMS_SCR" fkRef="F1-SCRCD"/>
+			</notificationText>
+		</notificationsOther>
+	</notifications>
+	<selfServiceCategory suppress="true" mdField="C1_CSS_CATEGORY" private="true" default="C1NM" mapField="ADHOC_CHAR_VAL">
+		<row mapChild="F1_SVC_TASK_TYPE_CHAR">
+			<CHAR_TYPE_CD is="C1-SSCAT"/>
+		</row>
+	</selfServiceCategory>
+</schema>

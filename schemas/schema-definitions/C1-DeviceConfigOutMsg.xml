@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<outboundMsgId mapField="OUTMSG_ID"/>
+	<externalSystem fkRef="F1-ESTMP" mapField="NT_XID_CD"/>
+	<outboundMessageType fkRef="F1-OMTYP" mapField="OUTMSG_TYPE_CD"/>
+	<processingMethod dataType="lookup" mapField="OUTMSG_PROC_METH_FLG" lookup="OUTMSG_PROC_METH_FLG"/>
+	<outboundMessageStatus dataType="lookup" mapField="OUTMSG_STATUS_FLG" lookup="OUTMSG_STATUS_FLG"/>
+	<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+	<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+	<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+	<errorDetail mapField="ERROR_DTL"/>
+	<input type="group" mapXML="XML_SOURCE">
+		<externalIds type="group">
+			<externalIdsList type="list">
+				<externalId mdField="SP_ID" isPrimeKey="true"/>
+			</externalIdsList>
+		</externalIds>
+		<language mdField="LANGUAGE_CD"/>
+		<userId mdField="USER_ID"/>
+		<sourceSystem mdField="COMP_XID"/>
+	</input>
+	<output type="group" mapXML="XML_RESPONSE">
+		<externalIds type="group">
+			<externalIdsList type="list">
+				<externalId isPrimeKey="true"/>
+				<spInfoDescription/>
+				<errorInformation/>
+				<deviceConfigurationInfoDescription/>
+				<nextScheduledReadDateTime dataType="dateTime"/>
+				<msrmtCycInfoDescription/>
+				<msrmtCycRouteInfoDescription/>
+				<measuringComponentDetails type="group">
+					<measuringComponentList type="list">
+						<seqNo dataType="number" isPrimeKey="true"/>
+						<measurementInfoDescription/>
+						<measurementDateTime dataType="dateTime"/>
+						<measuringComponentId/>
+					</measuringComponentList>
+				</measuringComponentDetails>
+			</externalIdsList>
+		</externalIds>
+	</output>
+</schema>

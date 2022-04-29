@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<personOrBusiness mdField="PER_OR_BUS_FLG" required="true" dataType="lookup" default="P" lookup="PER_OR_BUS_FLG"/>
+	<primaryName mdField="ENTITY_NAME"/>
+	<mainPhone mdField="PHONE"/>
+	<fax mdField="PHONE"/>
+	<overrideMailingName1 mdField="OVRD_MAIL_NAME1"/>
+	<overrideMailingName2 mdField="OVRD_MAIL_NAME2"/>
+	<overrideMailingName3 mdField="OVRD_MAIL_NAME3"/>
+	<address type="group">
+		<country mdField="COUNTRY"/>
+		<addressLine1 mdField="ADDRESS1"/>
+		<addressLine2 mdField="ADDRESS2"/>
+		<addressLine3 mdField="ADDRESS3"/>
+		<addressLine4 mdField="ADDRESS4"/>
+		<houseType mdField="HOUSE_TYPE" dataType="lookup" lookup="HOUSE_TYPE"/>
+		<number1 mdField="NUM1"/>
+		<number2 mdField="NUM2"/>
+		<inCityLimit mdField="IN_CITY_LIMIT" dataType="boolean"/>
+		<city mdField="CITY"/>
+		<geographic mdField="GEO_CODE"/>
+		<county mdField="COUNTY"/>
+		<state mdField="STATE"/>
+		<postal mdField="POSTAL"/>
+	</address>
+	<lifeSupport mdField="LS_SL_FLG" required="true" dataType="lookup" default="N" lookup="LS_SL_FLG"/>
+	<lifeSupportDescription mdField="LS_SL_DESCR"/>
+	<seasonalAddress type="group">
+		<seasonalAddresses type="list">
+			<sequence mdField="SEQ_NUM" dataType="number" isPrimeKey="true"/>
+			<country mdField="COUNTRY"/>
+			<addressLine1 mdField="ADDRESS1"/>
+			<addressLine2 mdField="ADDRESS2"/>
+			<addressLine3 mdField="ADDRESS3"/>
+			<addressLine4 mdField="ADDRESS4"/>
+			<houseType mdField="HOUSE_TYPE" dataType="lookup" lookup="HOUSE_TYPE"/>
+			<number1 mdField="NUM1"/>
+			<number2 mdField="NUM2"/>
+			<inCityLimit mdField="IN_CITY_LIMIT" dataType="boolean"/>
+			<city mdField="CITY"/>
+			<geographic mdField="GEO_CODE"/>
+			<county mdField="COUNTY"/>
+			<state mdField="STATE"/>
+			<postal mdField="POSTAL"/>
+			<startMonthDay mdField="SEASON_START_MMDD"/>
+			<endMonthDay mdField="SEASON_END_MMDD"/>
+			<effectiveStatus mdField="EFF_STATUS" required="true" dataType="lookup" default="A" lookup="EFF_STATUS"/>
+		</seasonalAddresses>
+	</seasonalAddress>
+	<email mdField="EMAILID"/>
+	<language mdField="LANGUAGE_CD"/>
+	<billAddressSource mdField="BILL_ADDR_SRCE_FLG" required="true" dataType="lookup" default="ACOV" lookup="BILL_ADDR_SRCE_FLG"/>
+</schema>

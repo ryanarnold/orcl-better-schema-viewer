@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<input type="group">
+		<activityType/>
+		<address1 mdField="ADDRESS1"/>
+		<city mdField="CITY"/>
+		<postal mdField="POSTAL"/>
+		<customerName mdField="ENTITY_NAME"/>
+		<badgeNumber mdField="BADGE_NBR"/>
+		<geocodeLatitude mdField="C1_GEO_LAT" dataType="number"/>
+		<geocodeLongitude mdField="C1_GEO_LONG" dataType="number"/>
+		<lastServicePointId mdField="SP_ID" fkRef="SP"/>
+		<includeAbolish mdField="INCLUDE_ABOLISHED_SP_FLG" dataType="lookup" default="C1YS" lookup="INCLUDE_ABOLISHED_SP_FLG"/>
+		<maxRowsToReturn dataType="number" default="10"/>
+	</input>
+	<output type="group">
+		<servicePointData type="group">
+			<servicePoints type="list">
+				<servicePointQueryData type="group">
+					<customerInformation type="group">
+						<customerName mdField="ENTITY_NAME"/>
+					</customerInformation>
+					<location type="group">
+						<siteAddress type="group">
+							<address1 mdField="ADDRESS1"/>
+							<address2 mdField="ADDRESS2"/>
+							<address3 mdField="ADDRESS3"/>
+							<address4 mdField="ADDRESS4"/>
+							<city mdField="CITY"/>
+							<suburb mdField="C1_SUBURB"/>
+							<crossStreet mdField="C1_CROSS_STREET"/>
+							<state mdField="STATE"/>
+							<county mdField="COUNTY"/>
+							<country mdField="COUNTRY"/>
+							<postal mdField="POSTAL"/>
+						</siteAddress>
+						<serviceArea/>
+						<timeZone mdField="TIME_ZONE_CD" fkRef="F1-TZONE"/>
+					</location>
+					<servicePointDetails type="group">
+						<servicePointId mdField="SP_ID"/>
+					</servicePointDetails>
+					<meterDataDetails type="group">
+						<badgeNumber mdField="BADGE_NBR"/>
+						<meterConfigurationType mdField="MTR_CONFIG_TY_CD"/>
+					</meterDataDetails>
+					<itemDataDetails type="group">
+						<badgeNumber mdField="BADGE_NBR"/>
+					</itemDataDetails>
+					<servicePointType mdField="SP_TYPE_CD" fkRef="C1-SPTYP"/>
+					<servicePointTypeDescription mdField="DESCR"/>
+					<servicePointStatus mdField="SP_STATUS_FLG" dataType="lookup" lookup="SP_STATUS_FLG"/>
+					<servicePointStatusDescription mdField="DESCR"/>
+					<servicePointSourceStatus mdField="SP_SRC_STATUS_FLG" dataType="lookup" lookup="SP_SRC_STATUS_FLG"/>
+					<servicePointSourceStatusDescription mdField="DESCR"/>
+				</servicePointQueryData>
+			</servicePoints>
+		</servicePointData>
+		<moreRowsAvailable mdField="MORE_ROWS_IND" dataType="boolean"/>
+		<errorCode/>
+		<errorText mdField="EXP_MSG"/>
+	</output>
+</schema>

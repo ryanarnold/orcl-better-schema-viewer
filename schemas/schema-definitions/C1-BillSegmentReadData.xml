@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <billSegmentReadDto type="group">
+    <id type="group">
+      <billSegmentId mapField="BSEG_ID"/>
+      <servicePointIdString mapField="SP_ID"/>
+      <sequence dataType="number" mapField="SEQNO"/>
+    </id>
+    <startReadDateTime dataType="dateTime" mapField="START_READ_DTTM"/>
+    <endReadDateTime dataType="dateTime" mapField="END_READ_DTTM"/>
+    <unitOfMeasureId mapField="UOM_CD"/>
+    <timeOfUseId mapField="TOU_CD"/>
+    <serviceQuantityIdentifierId mapField="SQI_CD"/>
+    <startRegisterReading dataType="number" mapField="START_REG_READING"/>
+    <endRegisterReading dataType="number" mapField="END_REG_READING"/>
+    <startRegisterReadId mapField="START_REG_READ_ID"/>
+    <endRegisterReadingId mapField="END_REG_READ_ID"/>
+    <measuredQuantity dataType="number" mapField="MSR_QTY"/>
+    <registerQuantity dataType="number" mapField="FINAL_REG_QTY"/>
+    <finalUnitOfMeasureId mapField="FINAL_UOM_CD"/>
+    <finalTimeOfUseId mapField="FINAL_TOU_CD"/>
+    <finalServiceQuantityId mapField="FINAL_SQI_CD"/>
+    <howToUseRead dataType="lookup" mapField="USAGE_FLG" lookup="USAGE_FLG"/>
+    <howToUse dataType="lookup" mapField="HOW_TO_USE_FLG" lookup="HOW_TO_USE_FLG"/>
+    <registerConstant dataType="number" mapField="REG_CONST"/>
+    <measuresPeakQuantity dataType="boolean" mapField="MSR_PEAK_QTY_SW"/>
+    <usePercent dataType="number" mapField="USE_PCT"/>
+  </billSegmentReadDto>
+  <usage dataType="lookup" mapField="BSEG_USAGE_FLG" lookup="BSEG_USAGE_FLG"/>
+</schema>

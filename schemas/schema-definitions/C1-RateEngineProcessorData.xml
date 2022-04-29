@@ -1,0 +1,311 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<rateApplicationProcessorData type="group">
+		<applyRateData type="group">
+			<serviceAgreement type="group">
+				<id mapField="SA_ID"/>
+			</serviceAgreement>
+			<masterServiceAgreement type="group">
+				<id mdField="SA_ID" mapField="MASTER_SA_ID"/>
+			</masterServiceAgreement>
+			<masterBillSegment type="group">
+				<id mapField="MASTER_BSEG_ID"/>
+			</masterBillSegment>
+			<bill type="group">
+				<id mapField="BILL_ID"/>
+			</bill>
+			<adjustment type="group">
+				<id mapField="ADJ_ID"/>
+			</adjustment>
+			<billSegmentCreationDateTime mdField="CRE_DTTM" dataType="dateTime" mapField="BSEG_CRE_DTTM"/>
+			<billSegmentPeriodStart mdField="START_DT" dataType="date" mapField="BSEG_START_DT"/>
+			<billSegmentPeriodEnd mdField="END_DT" dataType="date" mapField="BSEG_END_DT"/>
+			<consumptionPeriodStart mdField="START_DT" dataType="date" mapField="CONS_START_DT"/>
+			<consumptionPeriodEnd mdField="END_DT" dataType="date" mapField="CONS_END_DT"/>
+			<characteristicPremise type="group">
+				<id mdField="PREM_ID" mapField="CHAR_PREM_ID"/>
+			</characteristicPremise>
+			<characteristicServicePoint type="group">
+				<id mdField="SP_ID" mapField="CHAR_SP_ID"/>
+			</characteristicServicePoint>
+			<accountingDate dataType="date" mapField="ACCOUNTING_DT"/>
+			<shouldRetainReadCollection dataType="boolean" mapField="RTN_READ_COLL_SW"/>
+			<shouldRetainItemCollection dataType="boolean" mapField="RTN_ITEM_COLL_SW"/>
+			<shouldRetainSqCollection dataType="boolean" mapField="RTN_SQ_COLL_SW"/>
+			<shouldRetainSqRules dataType="boolean" mapField="RTN_SQ_RULE_COLL_SW"/>
+			<thirdParty mapField="THIRD_PARTY_SW"/>
+			<language type="group">
+				<id mapField="LANGUAGE_CD"/>
+			</language>
+			<usageConsumptionPeriodStart mdField="START_DT" dataType="date" mapField="USG_CONS_START_DT"/>
+			<usageConsumptionPeriodEnd mdField="END_DT" dataType="date" mapField="USG_CONS_END_DT"/>
+			<serviceAgreementType type="group">
+				<id type="group">
+					<divisionId mapField="CIS_DIVISION"/>
+					<saType mapField="SA_TYPE_CD"/>
+				</id>
+			</serviceAgreementType>
+			<revenueClass type="group">
+				<id mapField="REV_CL_CD"/>
+			</revenueClass>
+			<rateSchedule type="group">
+				<id mapField="RS_CD"/>
+			</rateSchedule>
+			<saPeriodStartDate mdField="START_DT" dataType="date" mapField="SA_PERIOD_START_DT"/>
+			<saPeriodEndDate mdField="END_DT" dataType="date" mapField="SA_PERIOD_END_DT"/>
+			<startDayOption dataType="lookup" mapField="IB_BASE_TM_DAY_FLG" lookup="IB_BASE_TM_DAY_FLG"/>
+			<intervalBillingSaCutoffTime mapField="IB_SA_CUTOFF_DTTM_TM"/>
+			<usageId mapField="USAGE_ID"/>
+			<usagePeriodStartDateTime dataType="dateTime" mapField="USAGE_START_DTTM"/>
+			<usagePeriodEndDateTime dataType="dateTime" mapField="USAGE_END_DTTM"/>
+			<billSegmentAmount dataType="money" mapField="BSEG_AMT"/>
+			<glDetailsDataArea mapField="GL_DATA_AREA"/>
+		</applyRateData>
+		<readDataList type="group">
+			<BillSegmentReadData type="list" mapList="READ_LIST">
+				<billSegmentReadDto type="group">
+					<id type="group">
+						<billSegmentId mapField="BSEG_ID"/>
+						<servicePointIdString mapField="SP_ID"/>
+						<sequence dataType="number" mapField="SEQNO"/>
+					</id>
+					<startReadDateTime dataType="dateTime" mapField="START_READ_DTTM"/>
+					<endReadDateTime dataType="dateTime" mapField="END_READ_DTTM"/>
+					<unitOfMeasureId mapField="UOM_CD"/>
+					<timeOfUseId mapField="TOU_CD"/>
+					<serviceQuantityIdentifierId mapField="SQI_CD"/>
+					<startRegisterReading dataType="number" mapField="START_REG_READING"/>
+					<endRegisterReading dataType="number" mapField="END_REG_READING"/>
+					<startRegisterReadId mapField="START_REG_READ_ID"/>
+					<endRegisterReadingId mapField="END_REG_READ_ID"/>
+					<measuredQuantity dataType="number" mapField="MSR_QTY"/>
+					<registerQuantity dataType="number" mapField="FINAL_REG_QTY"/>
+					<finalUnitOfMeasureId mapField="FINAL_UOM_CD"/>
+					<finalTimeOfUseId mapField="FINAL_TOU_CD"/>
+					<finalServiceQuantityId mapField="FINAL_SQI_CD"/>
+					<howToUseRead dataType="lookup" mapField="USAGE_FLG" lookup="USAGE_FLG"/>
+					<howToUse dataType="lookup" mapField="HOW_TO_USE_FLG" lookup="HOW_TO_USE_FLG"/>
+					<registerConstant dataType="number" mapField="REG_CONST"/>
+					<measuresPeakQuantity dataType="boolean" mapField="MSR_PEAK_QTY_SW"/>
+					<usePercent dataType="number" mapField="USE_PCT"/>
+				</billSegmentReadDto>
+				<usage dataType="lookup" mapField="BSEG_USAGE_FLG" lookup="BSEG_USAGE_FLG"/>
+			</BillSegmentReadData>
+		</readDataList>
+		<itemDataList type="group">
+			<BillSegmentItemData type="list" mapList="ITEM_LIST">
+				<billSegmentItemDto type="group">
+					<id type="group">
+						<billSegmentId mapField="BSEG_ID"/>
+						<sequence dataType="number" mapField="SEQNO"/>
+					</id>
+					<itemId mapField="ITEM_ID"/>
+					<itemType mapField="ITEM_TYPE_CD"/>
+					<itemCount dataType="number" mapField="ITEM_CNT"/>
+					<startDate dataType="date" mapField="START_DT"/>
+					<endDate dataType="date" mapField="END_DT"/>
+					<unitOfMeasureId mapField="UOM_CD"/>
+					<dailyServiceQuantity dataType="number" mapField="SVC_QTY"/>
+				</billSegmentItemDto>
+			</BillSegmentItemData>
+		</itemDataList>
+		<serviceQuantityDataList type="group">
+			<BillSegmentServiceQuantityData type="list" mapList="SQ_LIST">
+				<billSegmentServiceQuantityDto type="group">
+					<id type="group">
+						<billSegmentId mapField="BSEG_ID"/>
+						<unitOfMeasure mapField="UOM_CD"/>
+						<timeOfUse mapField="TOU_CD"/>
+						<serviceQuantityIdentifier mapField="SQI_CD"/>
+					</id>
+					<initialServiceQuantity dataType="number" mapField="INIT_SQ"/>
+					<billableServiceQuantity dataType="number" mapField="BILL_SQ"/>
+				</billSegmentServiceQuantityDto>
+				<retainServiceQuantityEntry mdField="F1_VALID_SW" dataType="boolean" mapField="RETAIN_SQ_SW"/>
+			</BillSegmentServiceQuantityData>
+		</serviceQuantityDataList>
+		<calculationHeaderDataList type="group">
+			<BillSegmentCalculationHeaderData type="list" mapList="CALC_HDR_LIST">
+				<billSegmentCalculationHeaderDto type="group">
+					<id type="group">
+						<billSegmentId mapField="BSEG_ID"/>
+						<headerSequence dataType="number" mapField="HEADER_SEQ"/>
+					</id>
+					<startDate dataType="date" mapField="START_DT"/>
+					<endDate dataType="date" mapField="END_DT"/>
+					<calculatedAmount dataType="money" mapField="CALC_AMT"/>
+					<descriptionOnBill mapField="DESCR_ON_BILL"/>
+					<currencyId mapField="CURRENCY_CD"/>
+					<rateVersionId type="group">
+						<rateScheduleId mapField="RS_CD"/>
+						<effectiveDate dataType="date" mapField="EFFDT"/>
+					</rateVersionId>
+					<billableChargeId mapField="BILLABLE_CHG_ID"/>
+				</billSegmentCalculationHeaderDto>
+				<billCalculationLineData type="group">
+					<BillCalculationLineData type="list" mapList="CALC_LINE_LIST">
+						<headerSequence dataType="number" mapField="HEADER_SEQ"/>
+						<sequence dataType="number" mapField="SEQNO"/>
+						<rcSequence dataType="number" mapField="RC_SEQ"/>
+						<shouldPrint dataType="boolean" mapField="PRT_SW"/>
+						<shouldAppearInSummary dataType="boolean" mapField="APP_IN_SUMM_SW"/>
+						<calculatedAmount dataType="money" mapField="CALC_AMT"/>
+						<auditCalculatedAmount dataType="number" mapField="AUDIT_CALC_AMT"/>
+						<exemptAmount dataType="money" mapField="EXEMPT_AMT"/>
+						<baseAmount dataType="money" mapField="BASE_AMT"/>
+						<currencyId mapField="CURRENCY_CD"/>
+						<distributionCodeId mapField="DST_ID"/>
+						<characteristicTypeId mapField="CHAR_TYPE_CD"/>
+						<characteristicValue mapField="CHAR_VAL"/>
+						<unitOfMeasureId mapField="UOM_CD"/>
+						<timeOfUseId mapField="TOU_CD"/>
+						<serviceQuantityIdentifierId mapField="SQI_CD"/>
+						<billableServiceQuantity dataType="number" mapField="BILL_SQ"/>
+						<measuresPeakQuantity dataType="boolean" mapField="MSR_PEAK_QTY_SW"/>
+						<descriptionOnBill mapField="DESCR_ON_BILL"/>
+						<calculationRuleId type="group">
+							<calculationGroupId mapField="CALC_GRP_CD"/>
+							<calculationRule mapField="CALC_RULE_CD"/>
+						</calculationRuleId>
+						<stepHighValue dataType="number" mapField="STEP_HIGH_VAL"/>
+						<stepLowValue dataType="number" mapField="STEP_LOW_VAL"/>
+						<maxServiceQuantity dataType="number" mapField="MAX_SQ"/>
+						<includeCalcLine mdField="F1_VALID_SW" dataType="boolean" mapField="INCLUDE_CALC_LN_SW"/>
+						<shouldCalculateOnly dataType="boolean" mapField="CALC_ONLY_SW"/>
+						<isStatistical dataType="boolean" mapField="STATISTICAL_SW"/>
+						<statisticalServiceQuantity mdField="BILL_SQ" dataType="number" mapField="STATISTICAL_SQ"/>
+						<shouldCreateBillLine dataType="boolean" mapField="CRE_BILL_LN_SW"/>
+						<isSummary mdField="F1_VALID_SW" dataType="boolean" mapField="IS_SUMMARY"/>
+						<fcpoRetentionRule dataType="lookup" mapField="FCPO_RULE_FLG" lookup="FCPO_RULE_FLG"/>
+						<isTaxExemptionApplied mdField="F1_VALID_SW" dataType="boolean" mapField="IS_TAX_EXEMPT_APPLIED"/>
+						<rateComponentCrossReferenceSq dataType="number" mapField="RC_XREF_SQ"/>
+						<rateComponentCrossReferenceAmt dataType="money" mapField="RC_XREF_AMT"/>
+						<initialValue dataType="number" mapField="INIT_RT_VAL"/>
+						<rateComponentValue dataType="number" mapField="RC_RT_VAL"/>
+						<billCalculationLineCharacteristicData type="group">
+							<BillCalculationLineCharacteristicData type="list" mapList="CALC_LINE_CHAR_LIST">
+								<billCalculationLineCharDto type="group">
+									<id type="group">
+										<billCalculationLineId type="group">
+											<billSegmentCalculationHeaderId type="group">
+												<billSegmentId mapField="BSEG_ID"/>
+												<headerSequence dataType="number" mapField="HEADER_SEQ"/>
+											</billSegmentCalculationHeaderId>
+											<sequence dataType="number" mapField="SEQNO"/>
+										</billCalculationLineId>
+										<characteristicTypeId mapField="CHAR_TYPE_CD"/>
+									</id>
+									<characteristicValue mapField="CHAR_VAL"/>
+									<characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
+									<characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+									<characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+									<characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
+									<characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+									<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+								</billCalculationLineCharDto>
+							</BillCalculationLineCharacteristicData>
+						</billCalculationLineCharacteristicData>
+					</BillCalculationLineData>
+				</billCalculationLineData>
+			</BillSegmentCalculationHeaderData>
+		</calculationHeaderDataList>
+		<characteristicDataList type="group">
+			<CharacteristicData type="list" mapList="CHAR_LIST">
+				<characteristicType type="group">
+					<id mapField="CHAR_TYPE"/>
+				</characteristicType>
+				<characteristicValue mapField="CHAR_VAL"/>
+				<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+			</CharacteristicData>
+		</characteristicDataList>
+	</rateApplicationProcessorData>
+	<consumptionDays dataType="number" mapField="CONSUMPTION_DAYS"/>
+	<normalDays dataType="number" mapField="NORMAL_BILLING_DAYS"/>
+	<baseDays dataType="number" mapField="BASE_DAYS"/>
+	<isWithinNonProrationWindow mdField="F1_VALID_SW" dataType="boolean" mapField="NON_PROR_WINDOW_SW"/>
+	<rateVersionEffectiveDate mdField="EFFDT" dataType="date" mapField="RV_EFFDT"/>
+	<rateVersionDescriptionOnBill mdField="DESCR_TMPLT" mapField="RV_DESCR_TMPLT"/>
+	<rateVersionStartDate mdField="START_DT" dataType="date" mapField="RV_START_DT"/>
+	<rateVersionEndDate mdField="END_DT" dataType="date" mapField="RV_END_DT"/>
+	<rateVersionDays mdField="F1_DAYS" dataType="number" mapField="RV_DAYS"/>
+	<rateAppProcessingSourceLookup dataType="lookup" mapField="RATE_APP_PROC_SRC_FLG" lookup="RATE_APP_PROC_SRC_FLG"/>
+	<usagePeriodData type="group">
+		<sequence mdField="SEQNO" dataType="number" mapField="URUP_SEQNO"/>
+		<startDateTime mdField="START_DTTM" dataType="dateTime" mapField="URUP_START_DTTM"/>
+		<endDateTime mdField="END_DTTM" dataType="dateTime" mapField="URUP_END_DTTM"/>
+		<standardStartDateTime dataType="dateTime" mapField="STANDARD_START_DTTM"/>
+		<standardEndDateTime dataType="dateTime" mapField="STANDARD_END_DTTM"/>
+		<usageType dataType="lookup" mapField="C1_USAGE_TYPE_FLG" lookup="C1_USAGE_TYPE_FLG"/>
+		<serviceQuantityDataList type="group">
+			<UsageRequestServiceQuantityData type="list" mapList="USG_SQ_LIST">
+				<sequence dataType="number" mapField="SEQNO"/>
+				<servicePointId mapField="SP_ID"/>
+				<serviceQuantityData type="group">
+					<id type="group">
+						<billableChargeId mapField="BILLABLE_CHG_ID"/>
+						<sequence dataType="number" mapField="SEQ_NUM"/>
+					</id>
+					<unitOfMeasureId mapField="UOM_CD"/>
+					<timeOfUseId mapField="TOU_CD"/>
+					<serviceQuantityIdentifierId mapField="SQI_CD"/>
+					<dailyServiceQuantity dataType="number" mapField="SVC_QTY"/>
+				</serviceQuantityData>
+				<secondsPerInterval dataType="duration" mapField="SPI"/>
+				<estimationIndicator dataType="lookup" mapField="C1_ESTIMATE_INDICATOR" lookup="C1_ESTIMATE_INDICATOR"/>
+				<intervalDataList type="group">
+					<UsageRequestSQIntervalData type="list" mapList="INTV_LIST">
+						<sequence dataType="number" mapField="SEQNO"/>
+						<intervalData dataType="number" mapField="INTV_VAL"/>
+						<condition mdField="F1_EXT_LOOKUP_VALUE" mapField="CONDITION"/>
+						<intervalDateTime dataType="dateTime" mapField="INTV_DATA_DTTM"/>
+					</UsageRequestSQIntervalData>
+				</intervalDataList>
+				<usageRequestSQHighlightList type="group">
+					<UsageRequestSQHighlightData type="list" mapList="USG_SQ_HL_LIST">
+						<sequence dataType="number" mapField="SEQNO"/>
+						<highlightDateTime dataType="dateTime" mapField="C1_HIGHLIGHT_DTTM"/>
+						<highlightType mapField="C1_HIGHLIGHT_TYPE_FLG"/>
+						<estimationIndicator dataType="lookup" mapField="C1_ESTIMATE_INDICATOR" lookup="C1_ESTIMATE_INDICATOR"/>
+					</UsageRequestSQHighlightData>
+				</usageRequestSQHighlightList>
+			</UsageRequestServiceQuantityData>
+		</serviceQuantityDataList>
+	</usagePeriodData>
+	<shouldTrace dataType="lookup" mapField="TRC_ON_FLG" lookup="TRC_ON_FLG"/>
+	<traceList type="group">
+		<CalcRuleTraceData type="list" mapList="TRACE_LIST">
+			<sequence dataType="number" mapField="SEQNO"/>
+			<calculationRule type="group">
+				<id type="group">
+					<calculationGroupId mapField="CALC_GRP_CD"/>
+					<calculationRule mapField="CALC_RULE_CD"/>
+				</id>
+			</calculationRule>
+			<criteriaSequence dataType="number" mapField="CR_CRT_EXEC_SEQ"/>
+			<duration dataType="number" mapField="DURATION"/>
+			<calcRuleMessageData type="group">
+				<messageCategory type="group">
+					<id dataType="number" mapField="MESSAGE_CAT_NBR"/>
+				</messageCategory>
+				<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+				<messageParameterList type="group">
+					<MessageParameterData type="list" mapList="MSG_PARM_LIST">
+						<sequence dataType="number" mapField="SEQNO"/>
+						<parameterType dataType="lookup" mapField="MSG_PARM_TYP_FLG" lookup="MSG_PARM_TYP_FLG"/>
+						<rawValue mapField="MSG_PARM_VAL"/>
+					</MessageParameterData>
+				</messageParameterList>
+			</calcRuleMessageData>
+		</CalcRuleTraceData>
+	</traceList>
+	<isInitialEntry dataType="boolean" mapField="INITIAL_SW"/>
+	<executeCalcGroupRuleCharList type="group">
+		<CharacteristicData type="list" mapList="EXEC_CR_CHAR_LIST">
+			<characteristicType type="group">
+				<id mapField="CHAR_TYPE"/>
+			</characteristicType>
+			<characteristicValue mapField="CHAR_VAL"/>
+			<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+		</CharacteristicData>
+	</executeCalcGroupRuleCharList>
+</schema>

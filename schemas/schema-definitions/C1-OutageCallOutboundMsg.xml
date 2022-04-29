@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<schema name="schema" fwRel="2">
+	<outboundMessageId mapField="OUTMSG_ID"/>
+	<externalSystem required="true" fkRef="F1-ESTMP" mapField="NT_XID_CD"/>
+	<outboundMessageType required="true" fkRef="F1-OMTYP" mapField="OUTMSG_TYPE_CD"/>
+	<processingMethod dataType="lookup" default="F1RT" mapField="OUTMSG_PROC_METH_FLG" lookup="OUTMSG_PROC_METH_FLG"/>
+	<outboundMessageStatus dataType="lookup" mapField="OUTMSG_STATUS_FLG" lookup="OUTMSG_STATUS_FLG"/>
+	<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+	<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+	<extract dataType="lookup" mapField="EXTRACT_FLG" lookup="EXTRACT_FLG"/>
+	<errorDetail mapField="ERROR_DTL"/>
+	<createDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+	<requestMessage type="group" mapXML="XML_SOURCE">
+		<outageCallId mdField="F1_SVC_TASK_ID" required="true" fkRef="F1-STASK"/>
+		<spId mdField="SP_ID" fkRef="SP"/>
+		<premiseId mdField="PREM_ID" fkRef="PREM"/>
+		<accountId mdField="ACCT_ID" fkRef="ACCT"/>
+		<contactName mdField="ENTITY_NAME_UPR"/>
+		<contactNumber mdField="PHONE"/>
+		<callIdentifier mdField="ADHOC_CHAR_VAL"/>
+		<callDateTime mdField="CRE_DTTM" dataType="dateTime" default="%CurrentDateTime"/>
+		<outageCallAction mdField="C1_OUTCALL_ACT_FLG" dataType="lookup" lookup="C1_OUTCALL_ACT_FLG"/>
+		<status mdField="BO_STATUS_CD"/>
+		<comments mdField="COMMENTS"/>
+		<userId mdField="USER_ID"/>
+		<userFirstName mdField="FIRST_NAME"/>
+		<userLastName mdField="LAST_NAME"/>
+		<country/>
+		<addressLine1/>
+		<addressLine2/>
+		<addressLine3/>
+		<addressLine4/>
+		<houseType dataType="lookup" lookup="HOUSE_TYPE"/>
+		<number1/>
+		<number2/>
+		<inCityLimit dataType="boolean"/>
+		<city/>
+		<geographic/>
+		<county/>
+		<state/>
+		<postal/>
+		<locationType mdField="C1_OUTAGE_LOC_TYPE_FLG" dataType="lookup" lookup="C1_OUTAGE_LOC_TYPE_FLG"/>
+		<blockNumber mdField="ADHOC_CHAR_VAL"/>
+		<location1 mdField="ADHOC_CHAR_VAL"/>
+		<location2 mdField="ADHOC_CHAR_VAL"/>
+		<locationCity mdField="ADHOC_CHAR_VAL"/>
+		<locationState mdField="ADHOC_CHAR_VAL"/>
+		<meetDateTime mdField="DATETIME" dataType="dateTime"/>
+		<meetType mdField="C1_MEET_TYPE_FLG" dataType="lookup" lookup="C1_MEET_TYPE_FLG"/>
+		<outageCodes mdField="ADHOC_CHAR_VAL" required="true"/>
+		<transformerId mdField="GEO_VAL"/>
+		<callbackRequested mdField="C1_CALLBACK_REQ_SW" dataType="boolean"/>
+		<callbackDateTime mdField="C1_CALLBACK_DTTM" dataType="dateTime"/>
+		<callbackNumber mdField="C1_CALLBACK_NBR"/>
+		<customElements type="raw"/>
+	</requestMessage>
+</schema>

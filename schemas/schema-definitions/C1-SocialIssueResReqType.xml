@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<custRelReqType required="true" isPrimeKey="true" mapField="CUST_REL_REQ_TYPE_CD"/>
+	<description required="true" mapField="DESCR100"/>
+	<longDescription mapField="DESCRLONG"/>
+	<bo suppress="true" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<transactionalBo required="true" fkRef="F1-BUSOB" mapField="TRANS_BUS_OBJ_CD"/>
+	<boStatus mdField="BO_STATUS_CD" required="true" dataType="lookup" mapField="CRR_TYPE_STATUS_FLG" lookup="CRR_TYPE_STATUS_FLG"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<reviewToDoType mdField="REVIEW_TD_TYPE" fkRef="TD_TYPE" mapXML="BO_XML_DATA_AREA"/>
+	<reviewToDoRole mdField="REVIEW_TD_ROLE" mapXML="BO_XML_DATA_AREA"/>
+	<custContSocialMediaPost mdField="SIRR_POST_CC_CL" fkRef="CUSCNTCL" mapXML="BO_XML_DATA_AREA"/>
+	<custContTypeSocialMediaPost mdField="SIRR_POST_CC_TYPE" mapXML="BO_XML_DATA_AREA"/>
+	<validDetailTypes type="group" mapXML="BO_XML_DATA_AREA">
+		<validDetailType type="list">
+			<requestDetailType mdField="CRR_REQ_DET_TYPE" required="true" dataType="lookupBO" isPrimeKey="true" lookupBO="C1-RequestDetailTypeLookup"/>
+			<externalDetailName mdField="CRR_EXT_DETAIL_NAME" required="true" isPrimeKey="true"/>
+		</validDetailType>
+	</validDetailTypes>
+	<alllowedActions type="group" mapXML="BO_XML_DATA_AREA">
+		<allowedAction type="list">
+			<script mdField="SCR_CD" required="true" isPrimeKey="true" fkRef="F1-SCR"/>
+		</allowedAction>
+	</alllowedActions>
+	<autoCompletionReasons type="group" mapXML="BO_XML_DATA_AREA">
+		<autoCompletionReason type="list">
+			<autoCompletionTrigger mdField="CRR_AUTO_CMPL_TRIG_FLG" required="true" dataType="lookup" isPrimeKey="true" lookup="CRR_AUTO_CMPL_TRIG_FLG"/>
+			<completionReason mdField="SIRR_AUTO_CMPL_RSN_CD" fkRef="F1-STRSN"/>
+		</autoCompletionReason>
+	</autoCompletionReasons>
+	<custContAutoComplete mdField="SIRR_AUTO_COM_CC_CL" fkRef="CUSCNTCL" mapXML="BO_XML_DATA_AREA"/>
+	<custContTypeAutoComplete mdField="SIRR_AUTO_COM_CC_TYPE" mapXML="BO_XML_DATA_AREA"/>
+	<exceptionHandling type="group" mapXML="BO_XML_DATA_AREA">
+		<toDoType mdField="TD_TYPE_CD" fkRef="TD_TYPE"/>
+		<toDoRole mdField="ROLE_ID" fkRef="F1-ROLE"/>
+		<retryFrequencyInMinutes mdField="C1_RETRY_FREQ" dataType="number" default="0"/>
+		<maximumRetries mdField="C1_MAX_RETRIES" dataType="number" default="0"/>
+		<discardReason mdField="SIRR_DISCARD_RSN_CD" fkRef="F1-STRSN"/>
+	</exceptionHandling>
+	<timeoutHandling type="group" mapXML="BO_XML_DATA_AREA">
+		<reviewTimeoutThresholdInMinutes mdField="REVIEW_TIMEOUT_THRES" dataType="number" default="0"/>
+		<reviewMaximumRetryCnt mdField="REVIEW_MAX_RETRIES" dataType="number" default="0"/>
+		<reviewTimeoutToDoRole mdField="REVIEW_TIMEOUT_TD_ROLE" fkRef="F1-ROLE"/>
+		<sendAnotherEmailRvwTimeout mdField="RES_EMAIL_FLG" dataType="lookup" default="C1NO" lookup="RES_EMAIL_FLG"/>
+		<actionTimeoutThresholdInMinutes mdField="ACTN_TIMEOUT_THRES" dataType="number" default="0"/>
+		<actionTimeoutToDoType mdField="ACTN_TIMEOUT_TD_TYPE" fkRef="TD_TYPE"/>
+		<actionTimeoutToDoRole mdField="ACTN_TIMEOUT_TD_ROLE" fkRef="F1-ROLE"/>
+	</timeoutHandling>
+</schema>

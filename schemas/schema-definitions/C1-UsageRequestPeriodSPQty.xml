@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<startDateTime mdField="START_DTTM" dataType="dateTime" isPrimeKey="true"/>
+	<endDateTime mdField="END_DTTM" dataType="dateTime" isPrimeKey="true"/>
+	<serviceQty type="list">
+		<seq mdField="SEQ_NUM" dataType="number" isPrimeKey="true"/>
+		<uom mdField="UOM_CD" fkRef="C1-UOM"/>
+		<tou mdField="TOU_CD" fkRef="C1-TOU"/>
+		<sqi mdField="SQI_CD" fkRef="C1-SQI"/>
+		<qty mdField="SVC_QTY" dataType="number"/>
+		<spId mdField="SP_ID" isPrimeKey="true" fkRef="SP"/>
+	</serviceQty>
+</schema>

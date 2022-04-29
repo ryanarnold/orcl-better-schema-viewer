@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<serviceTaskId mdField="C1_SVC_REQ_TASK_INFO_LBL" isPrimeKey="true" fkRef="F1-STASK" mapField="F1_SVC_TASK_ID"/>
+	<serviceTaskType fkRef="F1-STKTY" mapField="F1_STASK_TYPE_CD"/>
+	<boStatus mapField="BO_STATUS_CD"/>
+	<cancelReason suppress="blank" mdField="C1_SVC_REQ_CAN_RSN_FLG" dataType="lookup" mapXML="BO_DATA_AREA" lookup="C1_SVC_REQ_CAN_RSN_FLG"/>
+	<bo required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<createDateTime dataType="dateTime" default="%CurrentDateTime" mapField="CRE_DTTM"/>
+	<statusDateTime dataType="dateTime" mapField="STATUS_UPD_DTTM"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<faId mdField="FA_ID_WRK" fkRef="FA-ID" mapField="PK_VALUE1">
+		<row mapChild="F1_SVC_TASK_REL_OBJ">
+			<MAINT_OBJ_CD is="FA"/>
+			<SEQ_NUM is="1"/>
+		</row>
+	</faId>
+	<spId mdField="SP_ID2" fkRef="SP" mapField="PK_VALUE1">
+		<row mapChild="F1_SVC_TASK_REL_OBJ">
+			<MAINT_OBJ_CD is="SP"/>
+			<SEQ_NUM is="1"/>
+		</row>
+	</spId>
+	<accountId mdField="ACCT_ID0" fkRef="ACCT" mapField="PK_VALUE1">
+		<row mapChild="F1_SVC_TASK_REL_OBJ">
+			<MAINT_OBJ_CD is="ACCOUNT"/>
+			<SEQ_NUM is="1"/>
+		</row>
+	</accountId>
+	<personId mdField="PER_ID0" fkRef="PER" mapField="PK_VALUE1">
+		<row mapChild="F1_SVC_TASK_REL_OBJ">
+			<MAINT_OBJ_CD is="PERSON"/>
+			<SEQ_NUM is="1"/>
+		</row>
+	</personId>
+	<customerContactDetails type="group" mapXML="BO_DATA_AREA">
+		<customerContactType mdField="CC_TYPE_CD"/>
+		<comments mdField="COMMENTSLONG"/>
+	</customerContactDetails>
+	<activityId mdField="C1_EXT_ACTIVITY_ID" mapField="ADHOC_CHAR_VAL">
+		<row mapChild="F1_SVC_TASK_CHAR">
+			<CHAR_TYPE_CD is="C1-EXTFA"/>
+		</row>
+	</activityId>
+	<fieldWorkSystemAddress type="group" mapXML="BO_DATA_AREA">
+		<address1 mdField="ADDRESS1"/>
+		<address2 mdField="ADDRESS2"/>
+		<address3 mdField="ADDRESS3"/>
+		<address4 mdField="ADDRESS4"/>
+		<crossStreet mdField="C1_CROSS_STREET"/>
+		<suburb mdField="C1_SUBURB"/>
+		<city mdField="CITY"/>
+		<county mdField="COUNTY"/>
+		<postal mdField="POSTAL"/>
+		<country mdField="COUNTRY"/>
+		<state mdField="STATE"/>
+		<geocodeLatitude mdField="C1_GEO_LAT" dataType="number"/>
+		<geocodeLongitude mdField="C1_GEO_LONG" dataType="number"/>
+	</fieldWorkSystemAddress>
+</schema>

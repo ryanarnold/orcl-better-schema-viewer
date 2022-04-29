@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <pkValue1 suppress="input" mdField="C1_FIELD_ACTIVITY_LBL" required="true" fkRef="FA-ID" mapField="PK_VALUE1"/>
+  <bo suppress="input" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+  <syncRequestId isPrimeKey="true" mapField="F1_SYNC_REQ_ID"/>
+  <boStatus suppress="true" mapField="BO_STATUS_CD"/>
+  <statusDateTime suppress="true" dataType="dateTime" mapField="STATUS_UPD_DTTM"/>
+  <createDateTime suppress="true" dataType="dateTime" mapField="CRE_DTTM"/>
+  <mo suppress="true" required="true" default="FA" mapField="MAINT_OBJ_CD"/>
+  <version suppress="true" dataType="number" mapField="VERSION"/>
+  <message type="raw" suppress="true" mapXML="BO_DATA_AREA"/>
+</schema>

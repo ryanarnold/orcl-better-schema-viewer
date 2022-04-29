@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<nodeName suppress="input" mdField="F1_SE_NODE_NAME" default="includeBO"/>
+	<name mdField="F1_SE_INCLUDE_BO_NAME" fkRef="F1-BUSOB"/>
+</schema>

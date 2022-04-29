@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<bo suppress="input" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<emailSetup type="group" mapXML="MST_CONFIG_DATA">
+		<senderEmailAddress mdField="EMAILID"/>
+	</emailSetup>
+	<defaultExternalSystem mdField="DFLT_NT_XID_CD" required="true" fkRef="F1-ESTMP" mapXML="MST_CONFIG_DATA"/>
+	<defaultOutboundMessageType mdField="DEFAULT_OUTMSG_TYPE_CD" required="true" fkRef="F1-OMTYP" mapXML="MST_CONFIG_DATA"/>
+	<outboundCommunication type="group" mapXML="MST_CONFIG_DATA">
+		<communicationTypes type="list">
+			<notificationType mdField="NTF_TYPE_CD" required="true" isPrimeKey="true" fkRef="C1-NTFTY"/>
+			<deliveryType mdField="C1_SS_DELIVERY_TYPE" required="true" dataType="lookup" isPrimeKey="true" lookup="C1_SS_DELIVERY_TYPE"/>
+			<externalSystem mdField="NT_XID_CD" required="true" fkRef="F1-ESTMP"/>
+			<outboundMessageType mdField="OUTMSG_TYPE_CD" required="true" fkRef="F1-OMTYP"/>
+		</communicationTypes>
+	</outboundCommunication>
+	<notificationCenter type="group" mapXML="MST_CONFIG_DATA">
+		<externalSystem mdField="NT_XID_CD" fkRef="F1-ESTMP"/>
+		<outboundMessageType mdField="OUTMSG_TYPE_CD" fkRef="F1-OMTYP"/>
+	</notificationCenter>
+	<optIn type="group" mapXML="MST_CONFIG_DATA">
+		<optInErrorToDoType mdField="OPT_IN_ERR_TD_TYPE_CD" fkRef="TD_TYPE"/>
+		<deliveryTypes suppress="true" type="list">
+			<deliveryType mdField="C1_SS_DELIVERY_TYPE" required="true" dataType="lookup" isPrimeKey="true" lookup="C1_SS_DELIVERY_TYPE"/>
+			<stopMethod mdField="UNSUBSCRIBE_METHOD_LBL" dataType="lookup" lookup="NC_OPT_IN_LEVEL_FLG"/>
+			<optInReplyScript mdField="OPTIN_RPLY_SCR" fkRef="F1-SCR"/>
+		</deliveryTypes>
+		<notificationTypes suppress="true" type="group">
+			<optInNotificationType mdField="OPT_IN_NTF_TYPE_CD" fkRef="C1-NTFTY"/>
+			<alreadyOptedInNotificationType mdField="ALRDY_OPTD_IN_NTF_TYPE_CD" fkRef="C1-NTFTY"/>
+			<confirmResponseNotificationType mdField="CNFRM_RSPNSE_NTF_TYPE_CD" fkRef="C1-NTFTY"/>
+			<unsubscribeNotificationType mdField="UNSUB_NTF_TYPE_CD" fkRef="C1-NTFTY"/>
+			<errorNotificationType mdField="ERR_NTF_TYPE_CD" fkRef="C1-NTFTY"/>
+			<helpNotificationType mdField="HLP_NTF_TYPE_CD" fkRef="C1-NTFTY"/>
+		</notificationTypes>
+		<personContactTypes suppress="true" type="list">
+			<personContactType mdField="COMM_RTE_TYPE_CD" required="true" isPrimeKey="true" fkRef="C1-PCTTY"/>
+			<initiateOptInScript mdField="INIT_OPT_IN_SCR" fkRef="F1-SCR"/>
+			<serviceTaskType mdField="F1_STASK_TYPE_CD" fkRef="F1-STKTY"/>
+			<deliveryType mdField="C1_SS_DELIVERY_TYPE" dataType="lookup" lookup="C1_SS_DELIVERY_TYPE"/>
+			<enableIfPersonAccountFlag mdField="ENBL_IF_PER_HAS_ACCT_FLG" dataType="lookup" lookup="ENBL_IF_PER_HAS_ACCT_FLG"/>
+			<personContactButtonLabelFieldName mdField="PER_CONT_BTN_LBL" fkRef="F1-FLD"/>
+		</personContactTypes>
+	</optIn>
+	<edgeApplicationNotifications type="group" mapXML="MST_CONFIG_DATA">
+		<createNotificationScript mdField="CRTE_NTF_SCR" fkRef="F1-SCR"/>
+		<notificationTypes suppress="true" type="list">
+			<edgeAppNotificationType mdField="NTF_TYPE_CD" required="true" isPrimeKey="true" fkRef="C1-NTFTY"/>
+			<edgeApplicationIdentifier mdField="EDGE_APP_ID_FLG" required="true" dataType="lookup" isPrimeKey="true" lookup="EDGE_APP_ID_FLG"/>
+			<externalSystem mdField="NT_XID_CD" required="true" fkRef="F1-ESTMP"/>
+			<outboundMessageType mdField="OUTMSG_TYPE_CD" required="true" fkRef="F1-OMTYP"/>
+		</notificationTypes>
+	</edgeApplicationNotifications>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+</schema>

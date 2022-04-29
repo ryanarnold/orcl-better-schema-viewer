@@ -1,0 +1,180 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<premiseId mapField="PREM_ID"/>
+	<numberPremises dataType="number" mapField="NUMBER_PREMS"/>
+	<hasNoCommit dataType="boolean" mapField="NO_COMMIT_SW"/>
+	<isReviewed dataType="boolean" mapField="REVIEWED_SW"/>
+	<premiseReplicatorType dataType="lookup" mapField="PREM_REP_TYPE_FLG" lookup="PREM_REP_TYPE_FLG"/>
+	<startNumber dataType="number" mapField="ST_NBR_START"/>
+	<increment dataType="number" mapField="ST_NBR_INC"/>
+	<address1 mapField="ADDRESS1"/>
+	<address2 mapField="ADDRESS2"/>
+	<address3 mapField="ADDRESS3"/>
+	<address4 mapField="ADDRESS4"/>
+	<city mapField="CITY"/>
+	<county mapField="COUNTY"/>
+	<state mapField="STATE"/>
+	<country mapField="COUNTRY"/>
+	<postal mapField="POSTAL"/>
+	<timeZone mapField="TIME_ZONE_CD"/>
+	<streetNumber1 mapField="NUM1"/>
+	<streetNumber2 mapField="NUM2"/>
+	<housetype mapField="HOUSETYPE"/>
+	<startStAddress mapField="START_ST_ADDRESS"/>
+	<endStAddress mapField="END_ST_ADDRESS"/>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<hasPostalChanged dataType="boolean" mapField="POSTAL_CD_CHG_SW"/>
+	<allowAddressValidation dataType="boolean" mapField="C1_ALLOW_VAL_SW"/>
+	<addressValidationScript mapField="C1_VAL_SCR_CD"/>
+	<premiseType mapField="PREM_TYPE_CD"/>
+	<division mapField="CIS_DIVISION"/>
+	<landLord mapField="LL_ID"/>
+	<isKey dataType="boolean" mapField="KEY_SW"/>
+	<key mapField="KEY_ID"/>
+	<isOKToEnter dataType="boolean" mapField="OK_TO_ENTER_SW"/>
+	<meterReadInstruction mapField="MR_INSTR_CD"/>
+	<meterReadInstructionDetails mapField="MR_INSTR_DETAILS"/>
+	<meterReadWarning mapField="MR_WARN_CD"/>
+	<trendArea mapField="TREND_AREA_CD"/>
+	<address12 mapField="ADDRESS12"/>
+	<address22 mapField="ADDRESS22"/>
+	<address32 mapField="ADDRESS32"/>
+	<address42 mapField="ADDRESS42"/>
+	<isMailingAddress dataType="boolean" mapField="MAIL_ADDR_SW"/>
+	<city2 mapField="CITY2"/>
+	<num12 mapField="NUM12"/>
+	<num22 mapField="NUM22"/>
+	<county2 mapField="COUNTY2"/>
+	<postal2 mapField="POSTAL2"/>
+	<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+	<taxVendorGeographicalCode mapField="GEO_CODE"/>
+	<isInCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+	<state2 mapField="STATE2"/>
+	<country2 mapField="COUNTRY2"/>
+	<version dataType="number" mapField="VERSION"/>
+	<premiseDataArea mapField="PREM_DATA_AREA"/>
+	<timeZoneCd2 mapField="TIME_ZONE_CD2"/>
+	<lifeSupportSensitiveLoad dataType="lookup" mapField="LS_SL_FLG" lookup="LS_SL_FLG"/>
+	<lifeSupportSensitiveLoadDescription mapField="LS_SL_DESCR"/>
+	<parentPremiseId mapField="PRNT_PREM_ID"/>
+	<addressUppercase mapField="ADDRESS1_UPR"/>
+	<cityUppercase mapField="CITY_UPR"/>
+	<premiseInfo mapField="PREM_INFO"/>
+	<landlordDescription mapField="LANDLORD_DESCR"/>
+	<stateDescription mapField="STATE_DESCR"/>
+	<statePostal mapField="STATE_POSTAL"/>
+	<timeZoneDescr mapField="TIME_ZONE_DESCR"/>
+	<parentPremiseInformation mapField="PRNT_PREM_INFO"/>
+	<premiseCharacteristics type="list" mapList="PREM_CHAR">
+		<premiseId2 mapField="PREM_ID"/>
+		<characteristicType mapField="CHAR_TYPE_CD"/>
+		<characteristicValue mapField="CHAR_VAL"/>
+		<effectiveDate dataType="date" mapField="EFFDT"/>
+		<version2 dataType="number" mapField="VERSION"/>
+		<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+		<characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
+		<characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+		<characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+		<characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
+		<characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+		<searchCharacteristicValue mapField="SRCH_CHAR_VAL"/>
+		<searchNavigationKey mapField="SRCH_NAV_KEY"/>
+		<navigationOption mapField="NAV_OPT_CD"/>
+		<table mapField="TBL_NAME"/>
+		<infoProgram mapField="INFO_PRG"/>
+		<characteristicType2 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+		<characteristicValueDescription mapField="CHAR_VAL_DESCR"/>
+		<characteristicValueForeignKeys mapField="CHAR_VAL_FK_STR"/>
+		<characteristicValueForeignKeyInformation mapField="CHAR_VAL_FK_INFO"/>
+		<isCompoundPrimaryKey dataType="boolean" mapField="COMP_PK_SW"/>
+		<charateristicValue mapField="COMP_PK_STR"/>
+	</premiseCharacteristics>
+	<premiseGeographicTypes type="list" mapList="PREM_GEO">
+		<premiseId3 mapField="PREM_ID"/>
+		<geographicType mapField="GEO_TYPE_CD"/>
+		<geographicValue mapField="GEO_VAL"/>
+		<version3 dataType="number" mapField="VERSION"/>
+		<geographicValueFormat mapField="GEO_VAL_FMT"/>
+	</premiseGeographicTypes>
+	<country3 mapField="COUNTRY3"/>
+	<address1Available dataType="boolean" mapField="ADDR1_AVAIL"/>
+	<address2Available dataType="boolean" mapField="ADDR2_AVAIL"/>
+	<address3Available dataType="boolean" mapField="ADDR3_AVAIL"/>
+	<address4Available dataType="boolean" mapField="ADDR4_AVAIL"/>
+	<cityAvailable dataType="boolean" mapField="CITY_AVAIL"/>
+	<version2 dataType="number" mapField="VERSION2"/>
+	<number1Available dataType="boolean" mapField="NUM1_AVAIL"/>
+	<number2Available dataType="boolean" mapField="NUM2_AVAIL"/>
+	<houseTypeAvailable dataType="boolean" mapField="HOUSE_TYPE_AVAIL"/>
+	<countyAvailable dataType="boolean" mapField="COUNTY_AVAIL"/>
+	<stateAvailable dataType="boolean" mapField="STATE_AVAIL"/>
+	<postalAvailable dataType="boolean" mapField="POSTAL_AVAIL"/>
+	<inCityLimitAvailable dataType="boolean" mapField="IN_CITY_LIM_AVAIL"/>
+	<geoCodeAvailable dataType="boolean" mapField="GEO_CODE_AVAIL"/>
+	<language mapField="LANGUAGE_CD"/>
+	<description mapField="DESCR"/>
+	<alternateAddress type="list" mapList="PREM_ALT">
+		<premiseAlternateAddressId mapField="PRM_ALT_ADDR_ID"/>
+		<premiseId4 mapField="PREM_ID"/>
+		<country2 mapField="COUNTRY"/>
+		<state3 mapField="STATE"/>
+		<houseType3 dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+		<streetNumber12 mapField="NUM1"/>
+		<streetNumber22 mapField="NUM2"/>
+		<isInCityLimit2 dataType="boolean" mapField="IN_CITY_LIMIT"/>
+		<postal3 mapField="POSTAL"/>
+		<taxVendorGeographicalCode2 mapField="GEO_CODE"/>
+		<version4 dataType="number" mapField="VERSION"/>
+		<address13 mapField="ADDRESS1"/>
+		<addressUppercase2 mapField="ADDRESS1_UPR"/>
+		<address23 mapField="ADDRESS2"/>
+		<address33 mapField="ADDRESS3"/>
+		<address43 mapField="ADDRESS4"/>
+		<city3 mapField="CITY"/>
+		<cityUppercase2 mapField="CITY_UPR"/>
+		<county3 mapField="COUNTY"/>
+	</alternateAddress>
+	<altStateDescr mapField="ALT_STATE_DESCR"/>
+	<altStatePostal mapField="ALT_STATE_POSTAL"/>
+	<processDate dataType="date" mapField="PROCESS_DT"/>
+	<premTypeChgSw dataType="boolean" mapField="PREM_TYPE_CHG_SW"/>
+	<premRepSps type="list" mapList="PREM_REP_SPS">
+		<servicePointId mapField="SP_ID"/>
+		<spType mapField="SP_TYPE_CD"/>
+		<premiseId5 mapField="PREM_ID"/>
+		<servicePointStatus dataType="lookup" mapField="SP_STATUS_FLG" lookup="SP_STATUS_FLG"/>
+		<installationDate dataType="date" mapField="INSTALL_DT"/>
+		<abolishedDate dataType="date" mapField="ABOLISH_DT"/>
+		<servicePointSourceStatus dataType="lookup" mapField="SP_SRC_STATUS_FLG" lookup="SP_SRC_STATUS_FLG"/>
+		<disconnectLocation mapField="DISCON_LOC_CD"/>
+		<meterReadCycle mapField="MR_CYC_CD"/>
+		<meterReadRoute mapField="MR_RTE_CD"/>
+		<meterReadCycleRouteSequence dataType="number" mapField="MR_CYC_RTE_SEQ"/>
+		<meterLocation mapField="MTR_LOC_CD"/>
+		<meterLocationDetails mapField="MTR_LOC_DETAILS"/>
+		<facilityLevel1 mapField="FAC_LVL_1_CD"/>
+		<version5 dataType="number" mapField="VERSION"/>
+		<facilityLevel2 mapField="FAC_LVL_2_CD"/>
+		<facilityLevel3 mapField="FAC_LVL_3_CD"/>
+		<longDescription mapField="DESCRLONG"/>
+		<overridePremFieldInfo dataType="lookup" mapField="OVRD_PREM_FLD_INFO_FLG" lookup="OVRD_PREM_FLD_INFO_FLG"/>
+		<meterReadInstruction2 mapField="MR_INSTR_CD"/>
+		<meterReadWarning2 mapField="MR_WARN_CD"/>
+		<isKey2 dataType="boolean" mapField="KEY_SW"/>
+		<key2 mapField="KEY_ID"/>
+		<isOKToEnter2 dataType="boolean" mapField="OK_TO_ENTER_SW"/>
+		<meterReadInstructionDetails2 mapField="MR_INSTR_DETAILS"/>
+		<spDataArea mapField="SP_DATA_AREA"/>
+		<spTypeDesc mapField="SP_TYPE_DESC"/>
+		<mtrLocDescr mapField="MTR_LOC_DESCR"/>
+		<mrCycDescr mapField="MR_CYC_DESCR"/>
+		<disconLocDescr mapField="DISCON_LOC_DESCR"/>
+	</premRepSps>
+	<firstGrp type="list" mapList="FIRST_GRP">
+		<stAddress mapField="ST_ADDRESS"/>
+	</firstGrp>
+	<secondGrp type="list" mapList="SECOND_GRP">
+		<stAddress2 mapField="ST_ADDRESS"/>
+	</secondGrp>
+</schema>

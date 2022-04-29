@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<lookupValue mdField="TARGET_TBL" required="true" isPrimeKey="true" mapField="F1_EXT_LOOKUP_VALUE"/>
+	<bo suppress="true" isPrimeKey="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<description required="true" mapField="DESCR"/>
+	<overrideDescription mapField="DESCR_OVRD"/>
+	<longDescription mapField="DESCRLONG"/>
+	<lookupUsage required="true" dataType="lookup" default="F1AC" mapField="F1_EXT_LOOKUP_USAGE_FLG" lookup="F1_EXT_LOOKUP_USAGE_FLG"/>
+	<owner suppress="input" dataType="lookup" mapField="OWNER_FLG" lookup="OWNER_FLG"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<allowedTargetColumn suppress="true" type="list" mapChild="F1_EXT_LOOKUP_VAL_CHAR">
+		<rowFilter>
+			<CHAR_TYPE_CD is="F1-TGUDF"/>
+		</rowFilter>
+		<sequence dataType="number" isPrimeKey="true" mapField="SEQ_NUM"/>
+		<owner suppress="true" dataType="lookup" mapField="OWNER_FLG" lookup="OWNER_FLG"/>
+		<charValue mdField="TARGET_COL" mapField="CHAR_VAL"/>
+	</allowedTargetColumn>
+	<allowedCharEntity type="list" mapChild="F1_EXT_LOOKUP_VAL_CHAR">
+		<rowFilter>
+			<CHAR_TYPE_CD is="F1-TGCET"/>
+		</rowFilter>
+		<sequence dataType="number" isPrimeKey="true" mapField="SEQ_NUM"/>
+		<owner suppress="true" dataType="lookup" mapField="OWNER_FLG" lookup="OWNER_FLG"/>
+		<charValue mdField="CHAR_ENTITY_FLG" dataType="lookup" mapField="ADHOC_CHAR_VAL" lookup="CHAR_ENTITY_FLG"/>
+	</allowedCharEntity>
+</schema>

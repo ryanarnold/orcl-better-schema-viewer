@@ -1,0 +1,431 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <printerKey default="1300"/>
+  <sortKey type="group">
+    <billPrintIntercept mapField="USER_ID"/>
+    <billId mapField="BILL_ID"/>
+    <sequence mdField="BILL_PRT_SEQ_NO" dataType="number"/>
+    <copyNbr mdField="NBR_BILL_COPIES" dataType="number"/>
+    <billRecGrpSeq/>
+    <recTypeNbr/>
+    <premiseSeq type="group">
+      <state mapField="STATE"/>
+      <city mapField="CITY"/>
+      <address1 mapField="ADDRESS1"/>
+      <premiseId mapField="PREM_ID"/>
+    </premiseSeq>
+    <nonPremSaSeq type="group">
+      <saPrtPriority dataType="lookup" mapField="BILL_PRT_PRIO_FLG" lookup="BILL_PRT_PRIO_FLG"/>
+      <saId mapField="SA_ID"/>
+      <saRecGrpSeq/>
+      <bsegAdjDetails type="group">
+        <bsegAdjDate mdField="ADJ_DT" dataType="date"/>
+        <bsegAdjId mdField="ADJ_ID"/>
+        <bsegRecGrpSeq/>
+        <calcHdrLineDetails type="group">
+          <hdrSeqBsegMsgsNbr/>
+          <calcHdrRecGrpSeq/>
+          <calcLineSeq/>
+        </calcHdrLineDetails>
+      </bsegAdjDetails>
+    </nonPremSaSeq>
+    <premiseRecordGroup type="group">
+      <premRecGrpSeq/>
+      <saDetails type="group">
+        <saPrtPriority dataType="lookup" mapField="BILL_PRT_PRIO_FLG" lookup="BILL_PRT_PRIO_FLG"/>
+        <saId mdField="SA_ID"/>
+        <saRecGrpSeq/>
+        <bsegAdjDetails type="group">
+          <bsegAdjDateHistNbr/>
+          <bsegAdjId/>
+          <bsegRecGrpSeq/>
+          <calcHdrLineDetails type="group">
+            <hdrSeqBsegNbr/>
+            <calcHdrRecGrpSeq/>
+            <calcLineSeq/>
+          </calcHdrLineDetails>
+        </bsegAdjDetails>
+      </saDetails>
+    </premiseRecordGroup>
+  </sortKey>
+  <mailingKey mapField="POSTAL"/>
+  <startDate dataType="date" mapField="START_DT"/>
+  <endDate dataType="date" mapField="END_DT"/>
+  <closingBseg dataType="boolean" mapField="CLOSING_BSEG_SW"/>
+  <estimated dataType="boolean" mapField="EST_SW"/>
+  <billCycle mapField="BILL_CYCLE_CD"/>
+  <sqOverride dataType="boolean" mapField="SQ_OVERRIDE_SW"/>
+  <itemOverride dataType="boolean" mapField="ITEM_OVERRIDE_SW"/>
+  <bsegStatus dataType="lookup" mapField="BSEG_STAT_FLG" lookup="BSEG_STAT_FLG"/>
+  <cancelRsn mapField="CAN_RSN_CD"/>
+  <cancelRsnDescr mapField="DESCR"/>
+  <currAmt dataType="money" mapField="CUR_AMT"/>
+  <totAmt dataType="money" mapField="TOT_AMT"/>
+  <billCalcHdr type="group">
+    <billCalcHdrList type="list">
+      <printerKey default="1500"/>
+      <sortKey type="group">
+        <billPrintIntercept mapField="USER_ID"/>
+        <billId mapField="BILL_ID"/>
+        <sequence mdField="BILL_PRT_SEQ_NO" dataType="number"/>
+        <copyNbr mdField="NBR_BILL_COPIES" dataType="number"/>
+        <billRecGrpSeq/>
+        <recTypeNbr/>
+        <premiseSeq type="group">
+          <state mapField="STATE"/>
+          <city mapField="CITY"/>
+          <address1 mapField="ADDRESS1"/>
+          <premiseId mapField="PREM_ID"/>
+        </premiseSeq>
+        <nonPremSaSeq type="group">
+          <saPrtPriority dataType="lookup" mapField="BILL_PRT_PRIO_FLG" lookup="BILL_PRT_PRIO_FLG"/>
+          <saId mapField="SA_ID"/>
+          <saRecGrpSeq/>
+          <bsegAdjDetails type="group">
+            <bsegAdjDate mdField="ADJ_DT" dataType="date"/>
+            <bsegAdjId mdField="ADJ_ID"/>
+            <bsegRecGrpSeq/>
+            <calcHdrLineDetails type="group">
+              <hdrSeqBsegMsgsNbr/>
+              <calcHdrRecGrpSeq/>
+              <calcLineSeq/>
+            </calcHdrLineDetails>
+          </bsegAdjDetails>
+        </nonPremSaSeq>
+        <premiseRecordGroup type="group">
+          <premRecGrpSeq/>
+          <saDetails type="group">
+            <saPrtPriority dataType="lookup" mapField="BILL_PRT_PRIO_FLG" lookup="BILL_PRT_PRIO_FLG"/>
+            <saId mdField="SA_ID"/>
+            <saRecGrpSeq/>
+            <bsegAdjDetails type="group">
+              <bsegAdjDateHistNbr/>
+              <bsegAdjId/>
+              <bsegRecGrpSeq/>
+              <calcHdrLineDetails type="group">
+                <hdrSeqBsegNbr/>
+                <calcHdrRecGrpSeq/>
+                <calcLineSeq/>
+              </calcHdrLineDetails>
+            </bsegAdjDetails>
+          </saDetails>
+        </premiseRecordGroup>
+      </sortKey>
+      <mailingKey mapField="POSTAL"/>
+      <startDate dataType="date" mapField="START_DT"/>
+      <endDate dataType="date" mapField="END_DT"/>
+      <setId/>
+      <rateSched mapField="RS_CD"/>
+      <calcAmt dataType="money" mapField="CALC_AMT"/>
+      <descrOnBill mapField="DESCR_ON_BILL"/>
+      <billCalcLine type="group">
+        <billCalcLineList type="list">
+          <printerKey default="1700"/>
+          <sortKey type="group">
+            <billPrintIntercept mapField="USER_ID"/>
+            <billId mapField="BILL_ID"/>
+            <sequence mdField="BILL_PRT_SEQ_NO" dataType="number"/>
+            <copyNbr mdField="NBR_BILL_COPIES" dataType="number"/>
+            <billRecGrpSeq/>
+            <recTypeNbr/>
+            <premiseSeq type="group">
+              <state mapField="STATE"/>
+              <city mapField="CITY"/>
+              <address1 mapField="ADDRESS1"/>
+              <premiseId mapField="PREM_ID"/>
+            </premiseSeq>
+            <nonPremSaSeq type="group">
+              <saPrtPriority dataType="lookup" mapField="BILL_PRT_PRIO_FLG" lookup="BILL_PRT_PRIO_FLG"/>
+              <saId mapField="SA_ID"/>
+              <saRecGrpSeq/>
+              <bsegAdjDetails type="group">
+                <bsegAdjDate mdField="ADJ_DT" dataType="date"/>
+                <bsegAdjId mdField="ADJ_ID"/>
+                <bsegRecGrpSeq/>
+                <calcHdrLineDetails type="group">
+                  <hdrSeqBsegMsgsNbr/>
+                  <calcHdrRecGrpSeq/>
+                  <calcLineSeq/>
+                </calcHdrLineDetails>
+              </bsegAdjDetails>
+            </nonPremSaSeq>
+            <premiseRecordGroup type="group">
+              <premRecGrpSeq/>
+              <saDetails type="group">
+                <saPrtPriority dataType="lookup" mapField="BILL_PRT_PRIO_FLG" lookup="BILL_PRT_PRIO_FLG"/>
+                <saId mdField="SA_ID"/>
+                <saRecGrpSeq/>
+                <bsegAdjDetails type="group">
+                  <bsegAdjDateHistNbr/>
+                  <bsegAdjId/>
+                  <bsegRecGrpSeq/>
+                  <calcHdrLineDetails type="group">
+                    <hdrSeqBsegNbr/>
+                    <calcHdrRecGrpSeq/>
+                    <calcLineSeq/>
+                  </calcHdrLineDetails>
+                </bsegAdjDetails>
+              </saDetails>
+            </premiseRecordGroup>
+          </sortKey>
+          <mailingKey mapField="POSTAL"/>
+          <appInSumm dataType="boolean" mapField="APP_IN_SUMM_SW"/>
+          <calcAmt dataType="money" mapField="CALC_AMT"/>
+          <exemptAmt dataType="money" mapField="EXEMPT_AMT"/>
+          <uom mapField="UOM_CD"/>
+          <tou mapField="TOU_CD"/>
+          <sqi mapField="SQI_CD"/>
+          <billSq dataType="number" mapField="BILL_SQ"/>
+          <descrOnBill mapField="DESCR_ON_BILL"/>
+        </billCalcLineList>
+      </billCalcLine>
+    </billCalcHdrList>
+  </billCalcHdr>
+  <bsegRead type="group">
+    <bsegReadList type="list">
+      <printerKey default="2100"/>
+      <sortKey type="group">
+        <billPrintIntercept mapField="USER_ID"/>
+        <billId mapField="BILL_ID"/>
+        <sequence mdField="BILL_PRT_SEQ_NO" dataType="number"/>
+        <copyNbr mdField="NBR_BILL_COPIES" dataType="number"/>
+        <billRecGrpSeq/>
+        <recTypeNbr/>
+        <premiseSeq type="group">
+          <state mapField="STATE"/>
+          <city mapField="CITY"/>
+          <address1 mapField="ADDRESS1"/>
+          <premiseId mapField="PREM_ID"/>
+        </premiseSeq>
+        <nonPremSaSeq type="group">
+          <saPrtPriority dataType="lookup" mapField="BILL_PRT_PRIO_FLG" lookup="BILL_PRT_PRIO_FLG"/>
+          <saId mapField="SA_ID"/>
+          <saRecGrpSeq/>
+          <bsegAdjDetails type="group">
+            <bsegAdjDate mdField="ADJ_DT" dataType="date"/>
+            <bsegAdjId mdField="ADJ_ID"/>
+            <bsegRecGrpSeq/>
+            <calcHdrLineDetails type="group">
+              <hdrSeqBsegMsgsNbr/>
+              <calcHdrRecGrpSeq/>
+              <calcLineSeq/>
+            </calcHdrLineDetails>
+          </bsegAdjDetails>
+        </nonPremSaSeq>
+        <premiseRecordGroup type="group">
+          <premRecGrpSeq/>
+          <saDetails type="group">
+            <saPrtPriority dataType="lookup" mapField="BILL_PRT_PRIO_FLG" lookup="BILL_PRT_PRIO_FLG"/>
+            <saId mdField="SA_ID"/>
+            <saRecGrpSeq/>
+            <bsegAdjDetails type="group">
+              <bsegAdjDateHistNbr/>
+              <bsegAdjId/>
+              <bsegRecGrpSeq/>
+              <calcHdrLineDetails type="group">
+                <hdrSeqBsegNbr/>
+                <calcHdrRecGrpSeq/>
+                <calcLineSeq/>
+              </calcHdrLineDetails>
+            </bsegAdjDetails>
+          </saDetails>
+        </premiseRecordGroup>
+      </sortKey>
+      <mailingKey mapField="POSTAL"/>
+      <spId mapField="SP_ID"/>
+      <badge mapField="BADGE_NBR"/>
+      <uom mapField="UOM_CD"/>
+      <tou mapField="TOU_CD"/>
+      <rdgDecPos/>
+      <startRegRdg dataType="number" mapField="START_REG_READING"/>
+      <startReadDttm/>
+      <startEstimate/>
+      <endRegRdg dataType="number" mapField="END_REG_READING"/>
+      <endReadDttm/>
+      <endEstimate/>
+      <msrQty dataType="number" mapField="MSR_QTY"/>
+      <usage dataType="lookup" mapField="USAGE_FLG" lookup="USAGE_FLG"/>
+      <usagePct dataType="number" mapField="USE_PCT"/>
+      <howToUse dataType="lookup" mapField="HOW_TO_USE_FLG" lookup="HOW_TO_USE_FLG"/>
+      <consumpSub mapField=" CONSUM_SUB_FLG"/>
+      <msrPeakQty dataType="boolean" mapField="MSR_PEAK_QTY_SW"/>
+      <regConst dataType="number" mapField="REG_CONST"/>
+      <qtyDecPos/>
+      <finalUom mapField="FINAL_UOM_CD"/>
+      <finalTou mapField="FINAL_TOU_CD"/>
+      <finalRegQty dataType="number" mapField="FINAL_REG_QTY"/>
+      <sqi mapField="SQI_CD"/>
+      <finalSqi mapField="FINAL_SQI_CD"/>
+    </bsegReadList>
+  </bsegRead>
+  <bsegSQ type="group">
+    <bsegSQList type="list">
+      <printerKey default="2400"/>
+      <sortKey type="group">
+        <billPrintIntercept mapField="USER_ID"/>
+        <billId mapField="BILL_ID"/>
+        <sequence mdField="BILL_PRT_SEQ_NO" dataType="number"/>
+        <copyNbr mdField="NBR_BILL_COPIES" dataType="number"/>
+        <billRecGrpSeq/>
+        <recTypeNbr/>
+        <premiseSeq type="group">
+          <state mapField="STATE"/>
+          <city mapField="CITY"/>
+          <address1 mapField="ADDRESS1"/>
+          <premiseId mapField="PREM_ID"/>
+        </premiseSeq>
+        <nonPremSaSeq type="group">
+          <saPrtPriority dataType="lookup" mapField="BILL_PRT_PRIO_FLG" lookup="BILL_PRT_PRIO_FLG"/>
+          <saId mapField="SA_ID"/>
+          <saRecGrpSeq/>
+          <bsegAdjDetails type="group">
+            <bsegAdjDate mdField="ADJ_DT" dataType="date"/>
+            <bsegAdjId mdField="ADJ_ID"/>
+            <bsegRecGrpSeq/>
+            <calcHdrLineDetails type="group">
+              <hdrSeqBsegMsgsNbr/>
+              <calcHdrRecGrpSeq/>
+              <calcLineSeq/>
+            </calcHdrLineDetails>
+          </bsegAdjDetails>
+        </nonPremSaSeq>
+        <premiseRecordGroup type="group">
+          <premRecGrpSeq/>
+          <saDetails type="group">
+            <saPrtPriority dataType="lookup" mapField="BILL_PRT_PRIO_FLG" lookup="BILL_PRT_PRIO_FLG"/>
+            <saId mdField="SA_ID"/>
+            <saRecGrpSeq/>
+            <bsegAdjDetails type="group">
+              <bsegAdjDateHistNbr/>
+              <bsegAdjId/>
+              <bsegRecGrpSeq/>
+              <calcHdrLineDetails type="group">
+                <hdrSeqBsegNbr/>
+                <calcHdrRecGrpSeq/>
+                <calcLineSeq/>
+              </calcHdrLineDetails>
+            </bsegAdjDetails>
+          </saDetails>
+        </premiseRecordGroup>
+      </sortKey>
+      <mailingKey mapField="POSTAL"/>
+      <uom mapField="UOM_CD"/>
+      <tou mapField="TOU_CD"/>
+      <sqi mapField="SQI_CD"/>
+      <sqDecPos/>
+      <billSq dataType="number" mapField="BILL_SQ"/>
+    </bsegSQList>
+  </bsegSQ>
+  <bsegItem type="group">
+    <bsegItemList type="list">
+      <printerKey default="2700"/>
+      <sortKey type="group">
+        <billPrintIntercept mapField="USER_ID"/>
+        <billId mapField="BILL_ID"/>
+        <sequence mdField="BILL_PRT_SEQ_NO" dataType="number"/>
+        <copyNbr mdField="NBR_BILL_COPIES" dataType="number"/>
+        <billRecGrpSeq/>
+        <recTypeNbr/>
+        <premiseSeq type="group">
+          <state mapField="STATE"/>
+          <city mapField="CITY"/>
+          <address1 mapField="ADDRESS1"/>
+          <premiseId mapField="PREM_ID"/>
+        </premiseSeq>
+        <nonPremSaSeq type="group">
+          <saPrtPriority dataType="lookup" mapField="BILL_PRT_PRIO_FLG" lookup="BILL_PRT_PRIO_FLG"/>
+          <saId mapField="SA_ID"/>
+          <saRecGrpSeq/>
+          <bsegAdjDetails type="group">
+            <bsegAdjDate mdField="ADJ_DT" dataType="date"/>
+            <bsegAdjId mdField="ADJ_ID"/>
+            <bsegRecGrpSeq/>
+            <calcHdrLineDetails type="group">
+              <hdrSeqBsegMsgsNbr/>
+              <calcHdrRecGrpSeq/>
+              <calcLineSeq/>
+            </calcHdrLineDetails>
+          </bsegAdjDetails>
+        </nonPremSaSeq>
+        <premiseRecordGroup type="group">
+          <premRecGrpSeq/>
+          <saDetails type="group">
+            <saPrtPriority dataType="lookup" mapField="BILL_PRT_PRIO_FLG" lookup="BILL_PRT_PRIO_FLG"/>
+            <saId mdField="SA_ID"/>
+            <saRecGrpSeq/>
+            <bsegAdjDetails type="group">
+              <bsegAdjDateHistNbr/>
+              <bsegAdjId/>
+              <bsegRecGrpSeq/>
+              <calcHdrLineDetails type="group">
+                <hdrSeqBsegNbr/>
+                <calcHdrRecGrpSeq/>
+                <calcLineSeq/>
+              </calcHdrLineDetails>
+            </bsegAdjDetails>
+          </saDetails>
+        </premiseRecordGroup>
+      </sortKey>
+      <mailingKey mapField="POSTAL"/>
+      <startDate dataType="date" mapField="START_DT"/>
+      <endDate dataType="date" mapField="END_DT"/>
+      <itemCnt dataType="number" mapField="ITEM_CNT"/>
+      <itemDescr mapField="DESCR"/>
+    </bsegItemList>
+  </bsegItem>
+  <bsegMsg type="group">
+    <bsegMsgList type="list">
+      <printerKey default="2840"/>
+      <sortKey type="group">
+        <billPrintIntercept mapField="USER_ID"/>
+        <billId mapField="BILL_ID"/>
+        <sequence mdField="BILL_PRT_SEQ_NO" dataType="number"/>
+        <copyNbr mdField="NBR_BILL_COPIES" dataType="number"/>
+        <billRecGrpSeq/>
+        <recTypeNbr/>
+        <premiseSeq type="group">
+          <state mapField="STATE"/>
+          <city mapField="CITY"/>
+          <address1 mapField="ADDRESS1"/>
+          <premiseId mapField="PREM_ID"/>
+        </premiseSeq>
+        <nonPremSaSeq type="group">
+          <saPrtPriority dataType="lookup" mapField="BILL_PRT_PRIO_FLG" lookup="BILL_PRT_PRIO_FLG"/>
+          <saId mapField="SA_ID"/>
+          <saRecGrpSeq/>
+          <bsegAdjDetails type="group">
+            <bsegAdjDate mdField="ADJ_DT" dataType="date"/>
+            <bsegAdjId mdField="ADJ_ID"/>
+            <bsegRecGrpSeq/>
+            <calcHdrLineDetails type="group">
+              <hdrSeqBsegMsgsNbr/>
+              <calcHdrRecGrpSeq/>
+              <calcLineSeq/>
+            </calcHdrLineDetails>
+          </bsegAdjDetails>
+        </nonPremSaSeq>
+        <premiseRecordGroup type="group">
+          <premRecGrpSeq/>
+          <saDetails type="group">
+            <saPrtPriority dataType="lookup" mapField="BILL_PRT_PRIO_FLG" lookup="BILL_PRT_PRIO_FLG"/>
+            <saId mdField="SA_ID"/>
+            <saRecGrpSeq/>
+            <bsegAdjDetails type="group">
+              <bsegAdjDateHistNbr/>
+              <bsegAdjId/>
+              <bsegRecGrpSeq/>
+              <calcHdrLineDetails type="group">
+                <hdrSeqBsegNbr/>
+                <calcHdrRecGrpSeq/>
+                <calcLineSeq/>
+              </calcHdrLineDetails>
+            </bsegAdjDetails>
+          </saDetails>
+        </premiseRecordGroup>
+      </sortKey>
+      <mailingKey mapField="POSTAL"/>
+      <billMsg mapField="BILL_MSG_CD"/>
+      <msgOnBill mapField="MSG_ON_BILL"/>
+    </bsegMsgList>
+  </bsegMsg>
+</schema>

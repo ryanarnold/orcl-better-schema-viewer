@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<rateSchedule isPrimeKey="true" mapField="RS_CD"/>
+	<rateScheduleVersion suppress="true" dataType="lookup" default="C1V2" mapField="RS_VERSION_FLG" lookup="RS_VERSION_FLG"/>
+	<rateScheduleDescription mapField="DESCR"/>
+	<serviceType fkRef="SVCTYPE" mapField="SVC_TYPE_CD"/>
+	<frequency fkRef="C1-FREQ" mapField="FREQ_CD"/>
+	<currency suppress="true" fkRef="F1-CURCY" mapField="CURRENCY_CD"/>
+	<allowEstimates suppress="true" dataType="boolean" mapField="ALLOW_EST_SW"/>
+	<allowRVProration suppress="true" dataType="boolean" mapField="ALLOW_PRO_SW"/>
+	<rateSelectionDateOption suppress="true" dataType="lookup" mapField="NO_PRO_REF_FLG" lookup="NO_PRO_REF_FLG"/>
+	<rateScheduleType suppress="true" dataType="lookup" default="C1PR" mapField="RS_TYPE_FLG" lookup="RS_TYPE_FLG"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<ratePreProcessing type="group">
+		<ratePreProcessingRules type="list" mapChild="C1_RS_PRE_PROC">
+			<sequence mdField="SEQ_NUM" dataType="number" mapField="RS_PROC_SEQ"/>
+			<description mapField="DESCR100"/>
+			<calculationGroup fkRef="C1-CALGR" mapField="CALC_GRP_CD"/>
+		</ratePreProcessingRules>
+	</ratePreProcessing>
+	<rateVersion2 type="group">
+		<rateVersion2List type="list" mapChild="C1_RS_RV2">
+			<effectiveDate dataType="date" mapField="EFFDT"/>
+			<rateVersionDescription mapField="DESCR_TMPLT"/>
+			<calculationGroup fkRef="C1-CALGR" mapField="CALC_GRP_CD"/>
+			<version suppress="true" dataType="number" mapField="VERSION"/>
+		</rateVersion2List>
+	</rateVersion2>
+	<ratePostProcessing type="group">
+		<ratePostProcessingRules type="list" mapChild="C1_RS_POST_PROC">
+			<sequence mdField="SEQ_NUM" dataType="number" mapField="RS_PROC_SEQ"/>
+			<description mapField="DESCR100"/>
+			<calculationGroup fkRef="C1-CALGR" mapField="CALC_GRP_CD"/>
+		</ratePostProcessingRules>
+	</ratePostProcessing>
+	<meterConfigurationType type="group">
+		<meterConfigurationTypes type="list" mapChild="CI_RS_MTR_CFGTY">
+			<meterConfigurationType fkRef="C1-MCFGT" mapField="MTR_CONFIG_TY_CD"/>
+		</meterConfigurationTypes>
+	</meterConfigurationType>
+	<rateScheduleBillMsg type="group">
+		<rateScheduleBillMsgs type="list" mapChild="CI_RS_BMSG">
+			<billMessage fkRef="C1BILMSG" mapField="BILL_MSG_CD"/>
+			<startDate dataType="date" mapField="START_DT"/>
+			<endDate dataType="date" mapField="END_DT"/>
+		</rateScheduleBillMsgs>
+	</rateScheduleBillMsg>
+</schema>

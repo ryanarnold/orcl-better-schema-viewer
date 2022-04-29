@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <spId mdField="SP_ID" fkRef="SP"/>
+  <premiseId mdField="PREM_ID" fkRef="PREM"/>
+  <addressLine1 mdField="ADDRESS1"/>
+  <city mdField="CITY"/>
+  <state mdField="STATE"/>
+  <postal mdField="POSTAL"/>
+  <county mdField="COUNTY"/>
+  <country mdField="COUNTRY" fkRef="F1-CNTRY"/>
+  <premiseType mdField="PREM_TYPE_CD"/>
+  <premiseTypeDescription mdField="DESCR"/>
+  <cisDivision mdField="CIS_DIVISION" fkRef="C1-CISDV"/>
+  <cisDivisionDescription mdField="DESCR"/>
+  <lifeSupportSensitiveLoad mdField="LS_SL_FLG" dataType="lookup" lookup="LS_SL_FLG"/>
+  <lifeSupportSensitiveLoadDescription mdField="LS_SL_DESCR"/>
+  <trendArea mdField="TREND_AREA_CD"/>
+  <trendAreaDescription mdField="DESCR"/>
+  <inCityLimit mdField="IN_CITY_LIMIT" dataType="boolean"/>
+  <addressLine2 mdField="ADDRESS2"/>
+  <addressLine3 mdField="ADDRESS3"/>
+  <number1 mdField="NUM1"/>
+  <number2 mdField="NUM2"/>
+  <landlord mdField="LL_ID"/>
+  <landlordDescription mdField="DESCR"/>
+  <spStatus mdField="SP_STATUS_FLG" dataType="lookup" lookup="SP_STATUS_FLG"/>
+  <spStatusDescription mdField="DESCR"/>
+  <serviceCycle mdField="MR_CYC_CD"/>
+  <serviceCycleDescription mdField="DESCR"/>
+  <serviceRoute mdField="MR_RTE_CD"/>
+  <serviceRouteDescription mdField="DESCR"/>
+  <serviceRouteSequence mdField="MR_CYC_RTE_SEQ" dataType="number"/>
+  <location mdField="MTR_LOC_CD"/>
+  <locationDescription mdField="DESCR"/>
+  <latitude mdField="C1_LATITUDE" dataType="number"/>
+  <longitude mdField="C1_LONGITUDE" dataType="number"/>
+  <facilityLevel1 mdField="FAC_LVL_1_CD"/>
+  <facilityLevel2 mdField="FAC_LVL_2_CD"/>
+  <facilityLevel3 mdField="FAC_LVL_3_CD"/>
+  <disconnectLocation mdField="DISCON_LOC_CD"/>
+  <disconnectLocationDescription mdField="DESCR"/>
+  <spSourceStatus mdField="SP_SRC_STATUS_FLG" dataType="lookup" lookup="SP_SRC_STATUS_FLG"/>
+  <spSourceStatusDescription mdField="DESCR"/>
+</schema>

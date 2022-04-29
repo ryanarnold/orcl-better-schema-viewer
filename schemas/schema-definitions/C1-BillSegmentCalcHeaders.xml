@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <bsegId required="true" mapField="BSEG_ID"/>
+  <saId mapField="SA_ID"/>
+  <billId mapField="BILL_ID"/>
+  <startDate dataType="date" mapField="START_DT"/>
+  <endDate dataType="date" mapField="END_DT"/>
+  <mdmStartDateTime dataType="dateTime" mapField="MDM_START_DTTM"/>
+  <mdmEndDateTime dataType="dateTime" mapField="MDM_END_DTTM"/>
+  <billSegmentStatus dataType="lookup" mapField="BSEG_STAT_FLG" lookup="BSEG_STAT_FLG"/>
+  <calcHeaders type="list" mapChild="CI_BSEG_CALC">
+    <headerSequence dataType="number" mapField="HEADER_SEQ"/>
+    <startDate dataType="date" mapField="START_DT"/>
+    <currency mapField="CURRENCY_CD"/>
+    <endDate dataType="date" mapField="END_DT"/>
+    <rateSchedule fkRef="C1-RSINF" mapField="RS_CD"/>
+    <effectiveDate dataType="date" mapField="EFFDT"/>
+    <billableChargeId mapField="BILLABLE_CHG_ID"/>
+    <calculatedAmount dataType="money" mapField="CALC_AMT"/>
+    <descriptionOnBill mapField="DESCR_ON_BILL"/>
+  </calcHeaders>
+</schema>

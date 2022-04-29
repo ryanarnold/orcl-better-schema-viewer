@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<premiseId mapField="PREM_ID"/>
+	<premiseType mapField="PREM_TYPE_CD"/>
+	<cityUpper mapField="CITY_UPR"/>
+	<address1Upper mapField="ADDRESS1_UPR"/>
+	<cisDivision mapField="CIS_DIVISION"/>
+	<country mapField="COUNTRY"/>
+	<addressLine1 mapField="ADDRESS1"/>
+	<addressLine2 mapField="ADDRESS2"/>
+	<addressLine3 mapField="ADDRESS3"/>
+	<addressLine4 mapField="ADDRESS4"/>
+	<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+	<number1 mapField="NUM1"/>
+	<number2 mapField="NUM2"/>
+	<inCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+	<city mapField="CITY"/>
+	<geographic mapField="GEO_CODE"/>
+	<county mapField="COUNTY"/>
+	<state mapField="STATE"/>
+	<postal mapField="POSTAL"/>
+	<landlord mapField="LL_ID"/>
+	<trendArea mapField="TREND_AREA_CD"/>
+	<lifeSupportSensitiveLoad dataType="lookup" mapField="LS_SL_FLG" lookup="LS_SL_FLG"/>
+	<lifeSupportSensitiveLoadDescription mapField="LS_SL_DESCR"/>
+	<version dataType="number" mapField="VERSION"/>
+</schema>

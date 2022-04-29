@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<deviceTestId mapField="DV_TEST_ID"/>
+	<testStartDateTime dataType="dateTime" mapField="TEST_START_DTTM"/>
+	<testStopDateTime dataType="dateTime" mapField="TEST_STOP_DTTM"/>
+	<deviceTestStatus dataType="lookup" mapField="DV_TEST_STAT_FLG" lookup="DV_TEST_STAT_FLG"/>
+	<deviceTestType mapField="DV_TEST_TYPE_CD"/>
+	<meter mapField="MTR_ID"/>
+	<item mapField="ITEM_ID"/>
+	<user mapField="USER_ID"/>
+	<serviceProvider mapField="SPR_CD"/>
+	<comments mapField="COMMENTS"/>
+	<version dataType="number" mapField="VERSION"/>
+	<deviceTestCharacteristics type="list" mapList="DV_TEST_CHAR">
+		<deviceTestId2 mapField="DV_TEST_ID"/>
+		<characteristicType mapField="CHAR_TYPE_CD"/>
+		<characteristicValue mapField="CHAR_VAL"/>
+		<sequence dataType="number" mapField="SEQ_NUM"/>
+		<adhocCharacteristicValue mapField="CHAR_ADHOC_VAL"/>
+		<version2 dataType="number" mapField="VERSION"/>
+		<characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
+		<characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+		<characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+		<characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
+		<characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+		<searchNavigationKey mapField="SRCH_NAV_KEY"/>
+		<navigationOption mapField="NAV_OPT_CD"/>
+		<table mapField="TBL_NAME"/>
+		<infoProgram mapField="INFO_PRG"/>
+		<characteristicType2 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+		<characteristicValueDescription mapField="CHAR_VAL_DESCR"/>
+		<characteristicValueForeignKeys mapField="CHAR_VAL_FK_STR"/>
+		<characteristicValueForeignKeyInformation mapField="CHAR_VAL_FK_INFO"/>
+		<isCompoundPrimaryKey dataType="boolean" mapField="COMP_PK_SW"/>
+		<charateristicValue mapField="COMP_PK_STR"/>
+		<characteristicType3 mapField="CHAR_TYPE_DESCR"/>
+	</deviceTestCharacteristics>
+	<deviceTestComponents type="list" mapList="DV_TEST_COMP">
+		<deviceTestId3 mapField="DV_TEST_ID"/>
+		<sequence2 dataType="number" mapField="SEQNO"/>
+		<tstCompTypeCd mapField="TST_COMP_TYP_CD"/>
+		<registerId mapField="REG_ID"/>
+		<version3 dataType="number" mapField="VERSION"/>
+		<tstCompTypeDescription mapField="TST_COMP_TYPE_DESCR"/>
+		<registerInformation mapField="REG_INFO"/>
+		<isRegisterRequired dataType="boolean" mapField="REG_REQD_SW"/>
+		<testComponentType mapField="DB_TST_COMP_TYPE"/>
+		<isDeviceTestResultsDeleted dataType="boolean" mapField="DVRES_COLL_DELETED"/>
+		<defaultNumberOfResults dataType="number" mapField="DFLT_RES_COLL_CNT"/>
+		<deviceTestResult type="list" mapList="DV_TEST_RES">
+			<deviceTestId4 mapField="DV_TEST_ID"/>
+			<sequence3 dataType="number" mapField="SEQNO"/>
+			<tstCompTypeCd2 mapField="TST_COMP_TYP_CD"/>
+			<deviceTestResultSequenceNumber dataType="number" mapField="RES_SEQNO"/>
+			<registerReadingId mapField="REG_READ_ID"/>
+			<result mapField="RESULT"/>
+			<version4 dataType="number" mapField="VERSION"/>
+			<resultTypeDescription mapField="RESULT_TYPE_DESCR"/>
+			<shouldPromptForRead dataType="boolean" mapField="REG_READ_REQD_SW"/>
+			<registryReadInformation mapField="REG_READ_INFO"/>
+		</deviceTestResult>
+	</deviceTestComponents>
+	<messageInformation mapField="MESSAGE_INFO"/>
+	<meterInformation mapField="MTR_INFO"/>
+	<itemInformation mapField="ITEM_INFO"/>
+	<deviceTestInformation mapField="DV_TEST_INFO"/>
+	<isValidationRequired dataType="boolean" mapField="DV_TEST_VAL_REQ_SW"/>
+	<validationAlgorithm mapField="DV_TEST_VAL_ALG_CD"/>
+	<isMeterTest dataType="boolean" mapField="MTR_TEST_SW"/>
+	<version2 dataType="number" mapField="VERSION2"/>
+	<language mapField="LANGUAGE_CD"/>
+	<description mapField="DESCR"/>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<lastSequnceNumber dataType="number" mapField="LAST_COMP_SEQNO"/>
+	<user2 mapField="USER_INFO"/>
+	<serviceProviderInformation mapField="SPR_INFO"/>
+	<canValidateDeviceTest dataType="boolean" mapField="ACTION_VALIDATE_SW"/>
+	<hasFailDeviceTest dataType="boolean" mapField="ACTION_FAIL_SW"/>
+	<canCancelDeviceTest dataType="boolean" mapField="ACTION_CANCEL_SW"/>
+</schema>

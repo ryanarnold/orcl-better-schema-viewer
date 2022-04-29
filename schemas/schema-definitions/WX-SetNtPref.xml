@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<head type="group">
+		<action/>
+		<key1 type="group">
+			<name default="ACCT_ID"/>
+			<value/>
+		</key1>
+		<key2 type="group">
+			<name default="PER_ID"/>
+			<value/>
+		</key2>
+		<key3 type="group">
+			<name/>
+			<value/>
+		</key3>
+		<key4 type="group">
+			<name/>
+			<value/>
+		</key4>
+		<key5 type="group">
+			<name/>
+			<value/>
+		</key5>
+		<emailAddress/>
+		<webUserId/>
+		<ipAddress/>
+		<cssUser/>
+	</head>
+	<mainData type="group">
+		<referenceId/>
+		<notificationTypes type="list">
+			<notificationType mdField="C1_NF_SSTASK_TYPE_FLG" dataType="lookup" lookup="C1_NF_SSTASK_TYPE_FLG"/>
+			<notificationTypeDescription mdField="C1_SS_NOTIF_TYPE_DESCR"/>
+			<shouldNotify mdField="WX_NOTIFY_SW" dataType="boolean"/>
+			<serviceTaskId mdField="F1_SVC_TASK_ID"/>
+			<notificationOption type="list">
+				<sequence mdField="SEQ_NUM" dataType="number"/>
+				<label mdField="LABEL"/>
+				<dataType mdField="DATA_TYPE"/>
+				<required mdField="REQUIRED_SW" dataType="boolean"/>
+				<precision mdField="PRECISION" dataType="number"/>
+				<scale mdField="SCALE" dataType="number"/>
+				<sign mdField="SIGNED_SW" dataType="boolean"/>
+				<value mdField="WX_VALUE"/>
+				<validValue type="list">
+					<value mdField="WX_VALUE"/>
+					<label mdField="WX_LABEL"/>
+				</validValue>
+			</notificationOption>
+			<availableDeliveryTypes type="list">
+				<deliveryType mdField="C1_SS_DELIVERY_TYPE" dataType="lookup" lookup="C1_SS_DELIVERY_TYPE"/>
+			</availableDeliveryTypes>
+			<notifications type="list">
+				<deliveryType mdField="C1_SS_DELIVERY_TYPE" dataType="lookup" lookup="C1_SS_DELIVERY_TYPE"/>
+			</notifications>
+		</notificationTypes>
+	</mainData>
+	<errorInformation type="group">
+		<isInError mdField="IN_ERROR_SW" dataType="boolean" default="false"/>
+		<errorReference type="group">
+			<category mdField="MESSAGE_CAT_NBR" dataType="number"/>
+			<number mdField="MESSAGE_NBR" dataType="number"/>
+		</errorReference>
+		<errorMessage mdField="MESSAGE_TEXT"/>
+	</errorInformation>
+</schema>

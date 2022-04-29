@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<head type="group">
+		<action/>
+		<key1 type="group">
+			<name default="ACCT_ID"/>
+			<value/>
+		</key1>
+		<key2 type="group">
+			<name default="PER_ID"/>
+			<value/>
+		</key2>
+		<key3 type="group">
+			<name/>
+			<value/>
+		</key3>
+		<key4 type="group">
+			<name/>
+			<value/>
+		</key4>
+		<key5 type="group">
+			<name/>
+			<value/>
+		</key5>
+		<emailAddress/>
+		<webUserId/>
+		<ipAddress/>
+		<cssUser/>
+	</head>
+	<mainData type="group">
+		<sas type="list">
+			<saId/>
+			<description/>
+			<serviceType/>
+			<serviceTypeDescription/>
+			<currentRateSchedule/>
+			<currentRateScheduleDescription/>
+			<rates type="list">
+				<rateSchedule/>
+				<rateScheduleDescription/>
+				<usageAdjustments type="list">
+					<usageAdjustmentFactor mdField="WX_VALUE" isPrimeKey="true"/>
+					<description mdField="WX_VALUE"/>
+					<detailedDescription mdField="DESCR4000"/>
+					<externalReferenceId mdField="WX_VALUE"/>
+					<valuesList type="group">
+						<value type="list">
+							<value mdField="WX_VALUE" isPrimeKey="true"/>
+							<valueDescription mdField="WX_VALUE"/>
+							<externalReferenceId mdField="WX_VALUE"/>
+						</value>
+					</valuesList>
+				</usageAdjustments>
+				<isSkipped mdField="SKIPPED_SW" dataType="boolean"/>
+				<skipReasonDescription mdField="SKIP_REASON"/>
+			</rates>
+		</sas>
+	</mainData>
+	<errorInformation type="group">
+		<isInError mdField="IN_ERROR_SW" dataType="boolean" default="false"/>
+		<errorReference type="group">
+			<category mdField="MESSAGE_CAT_NBR" dataType="number"/>
+			<number mdField="MESSAGE_NBR" dataType="number"/>
+		</errorReference>
+		<errorMessage mdField="MESSAGE_TEXT"/>
+	</errorInformation>
+</schema>

@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<bo suppress="input" mdField="F1MSTCFG_BO_LBL" required="true" isPrimeKey="true" default="C1-SAFPTAuditExtractMstCfg" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<docSetting type="group" mapXML="MST_CONFIG_DATA">
+		<docEncode mdField="C1_SFT_DOC_ENCODING" required="true"/>
+	</docSetting>
+	<headerSection type="group" mapXML="MST_CONFIG_DATA">
+		<companyDetails type="list">
+			<cisDivision mdField="CIS_DIVISION" required="true" isPrimeKey="true" fkRef="C1-CISDV"/>
+			<headerDetails type="group">
+				<Header type="group">
+					<AuditFileNamespace mdField="C1_SFT_NAMESPACE" required="true"/>
+					<AuditFileVersion mdField="C1_SFT_AUD_VER" required="true"/>
+					<CompanyID mdField="C1_SFT_COMPANY" required="true"/>
+					<TaxRegistrationNumber mdField="C1_SFT_TXREG" required="true" dataType="number"/>
+					<TaxAccountingBasis mdField="C1_SAFT_PT_TAXACT_FLG" required="true" dataType="lookup" lookup="C1_SAFT_PT_TAXACT_FLG"/>
+					<CompanyName mdField="C1_SFT_COMPANY_NAME" required="true"/>
+					<CompanyAddress type="group">
+						<AddressDetail mdField="C1_SFT_COMP_ADDDTL" required="true"/>
+						<City mdField="CITY" required="true"/>
+						<PostalCode mdField="POSTAL" required="true"/>
+						<Country mdField="COUNTRY" required="true" fkRef="F1-CNTRY"/>
+					</CompanyAddress>
+					<CurrencyCode mdField="CURRENCY_CD" required="true" fkRef="F1-CURCY"/>
+					<TaxEntity mdField="C1_SFT_TXENTITY" required="true" fkRef="C1GLDIV"/>
+					<ProductCompanyTaxID mdField="C1_SFT_PRDCMPID" required="true"/>
+					<SoftwareCertificateNumber mdField="C1_SFT_SWCERTNUMB" required="true"/>
+					<ProductID mdField="C1_SFT_PRDID" required="true"/>
+					<ProductVersion mdField="C1_SFT_PRDVER" required="true"/>
+				</Header>
+			</headerDetails>
+		</companyDetails>
+	</headerSection>
+	<preDefinedCharTypes type="group" mapXML="MST_CONFIG_DATA">
+		<productTypeCharType mdField="C1_SFT_PRDTXCHRTYP" required="true" fkRef="CHAR_TYP"/>
+		<productCodeCharType mdField="C1_SFT_PRDCDTXCHTYP" required="true" fkRef="CHAR_TYP"/>
+		<unitOfMeasureCharType mdField="C1_SFT_UOMCHARTYPE" required="true" fkRef="CHAR_TYP"/>
+		<discountTargetCategoryTypeCharType mdField="C1_SFT_DISCTGTCATTYPE" required="true" fkRef="CHAR_TYP"/>
+		<discountTargetCategoryValueCharType mdField="C1_SFT_DISCTGTCATVALUE" required="true" fkRef="CHAR_TYP"/>
+		<taxExemptionReasonCharType mdField="C1_SFT_TAXECHARTYPE" required="true" fkRef="CHAR_TYP"/>
+		<referenceCharType mdField="C1_SFT_REFCHARTYPE" required="true" fkRef="CHAR_TYP"/>
+		<reasonCharType mdField="C1_SFT_RSNCHARTYPE" required="true" fkRef="CHAR_TYP"/>
+		<billPeriodStartDateCharType mdField="C1_SFT_CLSTDTCHTYP" required="true" fkRef="CHAR_TYP"/>
+		<billPeriodEndDateCharType mdField="C1_SFT_CLEDDTCHTYP" required="true" fkRef="CHAR_TYP"/>
+		<paymentEventCharType mdField="C1_SFT_PEVTCHTYP" required="true" fkRef="CHAR_TYP"/>
+		<lineNumberingCharType mdField="C1_SFT_LNUMCHTYP" required="true" fkRef="CHAR_TYP"/>
+		<billFactorList type="list">
+			<billFactor mdField="BF_CD" required="true" isPrimeKey="true" fkRef="C1-BFACT"/>
+		</billFactorList>
+		<personIdList type="list">
+			<personTaxIdType mdField="C1_SFT_PERCHARTYPE" required="true" isPrimeKey="true" fkRef="ID TYPE"/>
+		</personIdList>
+	</preDefinedCharTypes>
+	<paymentMechanismList type="list" mapXML="MST_CONFIG_DATA">
+		<tenderType mdField="TENDER_TYPE_CD" required="true" isPrimeKey="true" fkRef="C1-TNDTY"/>
+		<paymentMechanism mdField="C1_SFT_PAYMCHNSM_FLG" required="true" dataType="lookup" lookup="C1_SFT_PAYMCHNSM_FLG"/>
+	</paymentMechanismList>
+	<paymentTaxGroup type="group" mapXML="MST_CONFIG_DATA">
+		<taxType mdField="C1_SFT_PTAXTYPE"/>
+		<taxCountryRegion mdField="C1_SFT_PTAXCTRYREG"/>
+		<taxCode mdField="C1_SFT_PTAXCODE"/>
+		<taxPercentage mdField="C1_SFT_PTAXPERCENTAGE" dataType="number"/>
+		<taxExemptionReason mdField="C1_SFT_PTAXEXMPTRSN"/>
+		<taxExemptionCode mdField="C1_SFT_PTAXEXMPTCODE"/>
+	</paymentTaxGroup>
+</schema>

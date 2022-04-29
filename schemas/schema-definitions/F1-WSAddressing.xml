@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<F1-WSAddressing type="group">
+		<To/>
+		<From type="group">
+			<Address/>
+			<ReferenceProperties type="raw" mapXML="XML_REQUEST"/>
+			<ReferenceParameters type="raw" mapXML="XML_REQUEST"/>
+			<PortType/>
+			<ServiceName/>
+		</From>
+		<ReplyTo type="group">
+			<Address/>
+			<ReferenceProperties type="raw" mapXML="XML_REQUEST"/>
+			<ReferenceParameters type="raw" mapXML="XML_REQUEST"/>
+			<PortType/>
+			<ServiceName/>
+		</ReplyTo>
+		<FaultTo type="group">
+			<Address/>
+			<ReferenceProperties type="raw" mapXML="XML_REQUEST"/>
+			<ReferenceParameters type="raw" mapXML="XML_REQUEST"/>
+			<PortType/>
+			<ServiceName/>
+		</FaultTo>
+		<Action required="true"/>
+		<MessageID/>
+		<RelatesTo/>
+		<ReferenceParameters type="raw" mapXML="XML_REQUEST"/>
+	</F1-WSAddressing>
+</schema>

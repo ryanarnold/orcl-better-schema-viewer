@@ -1,0 +1,265 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<accountId mapField="ACCT_ID"/>
+	<serviceAgreement mapField="SA_ID"/>
+	<adjustmentId mapField="ADJ_ID"/>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<adjustmentInfo mapField="ADJ_INFO"/>
+	<accountInfo mapField="ACCT_INFO"/>
+	<premiseId mapField="CHAR_PREM_ID"/>
+	<premiseInfo mapField="PREM_INFO"/>
+	<adjSaInfo mapField="ADJ_SA_INFO"/>
+	<adjTypeInfo mapField="ADJ_TYPE_INFO"/>
+	<adjBehalfSaInfo mapField="ADJ_BEHALF_SA_INFO"/>
+	<adjFrzPopUpMsg mapField="ADJ_FRZ_POP_UP_MSG"/>
+	<canShowAccountingDate dataType="boolean" mapField="SHOW_ACCTNG_DT_SW"/>
+	<accountingDate dataType="date" default="%CurrentDate" mapField="ACCOUNTING_DT"/>
+	<processDate dataType="date" mapField="PROCESS_DT"/>
+	<calculationDate dataType="date" mapField="GEN_REF_DT"/>
+	<baseAmount dataType="money" mapField="BASE_AMT_WRK"/>
+	<calculatedAmount dataType="money" mapField="CALC_AMT_WRK"/>
+	<auditCalcAmtWrk dataType="number" mapField="AUDIT_CALC_AMT_WRK"/>
+	<billIsWoSw mapField="BILL_IS_WO_SW"/>
+	<arNoapprovalSw mapField="AR_NOAPPROVAL_SW"/>
+	<allowAddressValidation dataType="boolean" mapField="C1_ALLOW_VAL_SW"/>
+	<addressValidationScript mapField="C1_VAL_SCR_CD"/>
+	<canDelete dataType="boolean" mapField="DELETE_SW"/>
+	<isFrozen dataType="boolean" mapField="FREEZE_SW"/>
+	<isCancel dataType="boolean" mapField="CANCEL_SW"/>
+	<canGenerate dataType="boolean" mapField="GENERATE_SW"/>
+	<isSubmit dataType="boolean" mapField="SUBMIT_APPR_SW"/>
+	<onBehalfSAId mapField="BEHALF_SA_ID"/>
+	<adjustmentType mapField="ADJ_TYPE_CD"/>
+	<adjustmentStatus dataType="lookup" mapField="ADJ_STATUS_FLG" lookup="ADJ_STATUS_FLG"/>
+	<creDt dataType="date" mapField="CRE_DT"/>
+	<cancelReason mapField="CAN_RSN_CD"/>
+	<currentAmount dataType="money" mapField="ADJ_AMT"/>
+	<transferAdjustmentId mapField="XFER_ADJ_ID"/>
+	<currency mapField="CURRENCY_CD"/>
+	<comments mapField="COMMENTS"/>
+	<genRefDt2 dataType="date" mapField="GEN_REF_DT2"/>
+	<baseAmount2 dataType="money" mapField="BASE_AMT"/>
+	<adjustmentDataArea mapField="ADJ_DATA_AREA"/>
+	<approvalRequestId mapField="APPR_REQ_ID"/>
+	<ilmDate dataType="date" mapField="ILM_DT"/>
+	<isEligibleForArchiving dataType="boolean" mapField="ILM_ARCH_SW"/>
+	<version dataType="number" mapField="VERSION"/>
+	<adjustmentFreezeOption dataType="lookup" mapField="AD_FRZ_OPT_FLG" lookup="AD_FRZ_OPT_FLG"/>
+	<adjustmentAmountType dataType="lookup" mapField="ADJ_AMT_TYPE_FLG" lookup="ADJ_AMT_TYPE_FLG"/>
+	<approvalProfile mapField="APPR_PROF_CD"/>
+	<ft type="list" mapList="FT">
+		<financialTransactionId mapField="FT_ID"/>
+		<serviceAgreement2 mapField="SA_ID"/>
+		<siblingId mapField="SIBLING_ID"/>
+		<financialTransactionType dataType="lookup" mapField="FT_TYPE_FLG" lookup="FT_TYPE_FLG"/>
+		<currentAmount2 dataType="money" mapField="CUR_AMT"/>
+		<glDivision mapField="GL_DIVISION"/>
+		<division mapField="CIS_DIVISION"/>
+		<payoffAmount dataType="money" mapField="TOT_AMT"/>
+		<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+		<isFrozen2 dataType="boolean" mapField="FREEZE_SW"/>
+		<freezeDateTime dataType="dateTime" mapField="FREEZE_DTTM"/>
+		<arrearsDate dataType="date" mapField="ARS_DT"/>
+		<frozenByUser mapField="FREEZE_USER_ID"/>
+		<isCorrection dataType="boolean" mapField="CORRECTION_SW"/>
+		<isRedundant dataType="boolean" mapField="REDUNDANT_SW"/>
+		<isNewCharge dataType="boolean" mapField="NEW_DEBIT_SW"/>
+		<shouldShowOnBill dataType="boolean" mapField="SHOW_ON_BILL_SW"/>
+		<isNotInArrears dataType="boolean" mapField="NOT_IN_ARS_SW"/>
+		<parentId mapField="PARENT_ID"/>
+		<billId mapField="BILL_ID"/>
+		<accountingDate2 dataType="date" mapField="ACCOUNTING_DT"/>
+		<scheduledDistributionDate dataType="date" mapField="SCHED_DISTRIB_DT"/>
+		<version2 dataType="number" mapField="VERSION"/>
+		<currency2 mapField="CURRENCY_CD"/>
+		<hasTransferredOut dataType="boolean" mapField="XFERRED_OUT_SW"/>
+		<transferToGLDate dataType="date" mapField="XFER_TO_GL_DT"/>
+		<glDistributionStatus dataType="lookup" mapField="GL_DISTRIB_STATUS" lookup="GL_DISTRIB_STATUS"/>
+		<balanceControlGroupId dataType="number" mapField="BAL_CTL_GRP_ID"/>
+		<matchEventId mapField="MATCH_EVT_ID"/>
+	</ft>
+	<isCalculationLinesExist dataType="boolean" mapField="CALC_LN_EXIST_SW"/>
+	<hasAdjustmentCalculationLinesCharacteristicExist dataType="boolean" mapField="CHAR_CL_EXIST_SW"/>
+	<adjRv type="list" mapList="ADJ_RV">
+		<rateSchedule mapField="RS_CD"/>
+		<effectiveDate dataType="date" mapField="EFFDT"/>
+		<rateScheduleDescription mapField="RS_DESCR"/>
+		<rateScheduleVersion dataType="lookup" mapField="RS_VERSION_FLG" lookup="RS_VERSION_FLG"/>
+		<adjCalcLine type="list" mapList="ADJ_CALC_LINE">
+			<adjustmentId2 mapField="ADJ_ID"/>
+			<sequence dataType="number" mapField="SEQNO"/>
+			<timeOfUse mapField="TOU_CD"/>
+			<unitOfMeasure mapField="UOM_CD"/>
+			<serviceQuantityIdentifier mapField="SQI_CD"/>
+			<rateSchedule2 mapField="RS_CD"/>
+			<effectiveDate2 dataType="date" mapField="EFFDT"/>
+			<rcSequence dataType="number" mapField="RC_SEQ"/>
+			<distributionCode mapField="DST_ID"/>
+			<currency3 mapField="CURRENCY_CD"/>
+			<characteristicType mapField="CHAR_TYPE_CD"/>
+			<characteristicValue mapField="CHAR_VAL"/>
+			<shouldPrint dataType="boolean" mapField="PRT_SW"/>
+			<shouldAppearInSummary dataType="boolean" mapField="APP_IN_SUMM_SW"/>
+			<calculatedAmount2 dataType="money" mapField="CALC_AMT"/>
+			<exemptAmount dataType="money" mapField="EXEMPT_AMT"/>
+			<baseAmount3 dataType="money" mapField="BASE_AMT"/>
+			<measuresPeakQuantity dataType="boolean" mapField="MSR_PEAK_QTY_SW"/>
+			<version3 dataType="number" mapField="VERSION"/>
+			<descriptionOnBill mapField="DESCR_ON_BILL"/>
+			<billableServiceQuantity dataType="number" mapField="BILL_SQ"/>
+			<auditCalculatedAmount dataType="number" mapField="AUDIT_CALC_AMT"/>
+			<calculationGroup mapField="CALC_GRP_CD"/>
+			<calculationRule mapField="CALC_RULE_CD"/>
+			<distributionDescription mapField="DST_DESCR"/>
+			<unitOfMeasure2 mapField="UOM_DESCR"/>
+			<serviceQuantityIdentifier2 mapField="SQI_DESCR"/>
+			<timeOfUse2 mapField="TOU_DESCR"/>
+			<description mapField="DESCR100"/>
+			<isCharacteristicExist dataType="boolean" mapField="CHAR_EXIST_SW"/>
+		</adjCalcLine>
+	</adjRv>
+	<adjInfo2 mapField="ADJ_INFO2"/>
+	<accountId2 mapField="ACCT_ID2"/>
+	<acctInfo2 mapField="ACCT_INFO2"/>
+	<xadjSaInfo mapField="XADJ_SA_INFO"/>
+	<xadjTypeInfo mapField="XADJ_TYPE_INFO"/>
+	<xadjCharPremId mapField="XADJ_CHAR_PREM_ID"/>
+	<xadjPremInfo mapField="XADJ_PREM_INFO"/>
+	<behalfSaId2 mapField="BEHALF_SA_ID2"/>
+	<adjId2 mapField="ADJ_ID2"/>
+	<serviceAgreementId2 mapField="SA_ID2"/>
+	<adjTypeCd2 mapField="ADJ_TYPE_CD2"/>
+	<adjStatusFlg2 mapField="ADJ_STATUS_FLG2"/>
+	<creDt2 dataType="date" mapField="CRE_DT2"/>
+	<cancelReason2 mapField="CAN_RSN_CD2"/>
+	<adjAmt2 dataType="money" mapField="ADJ_AMT2"/>
+	<xferAdjId2 mapField="XFER_ADJ_ID2"/>
+	<currency2 mapField="CURRENCY_CD2"/>
+	<comments2 mapField="COMMENTS2"/>
+	<genRefDt3 dataType="date" mapField="GEN_REF_DT3"/>
+	<baseAmt2 dataType="money" mapField="BASE_AMT2"/>
+	<adjDataArea2 mapField="ADJ_DATA_AREA2"/>
+	<apprReqId2 mapField="APPR_REQ_ID2"/>
+	<ilmDt2 dataType="date" mapField="ILM_DT2"/>
+	<ilmArchSw2 dataType="boolean" mapField="ILM_ARCH_SW2"/>
+	<version2 dataType="number" mapField="VERSION2"/>
+	<ft2 type="list" mapList="FT2">
+		<financialTransactionId2 mapField="FT_ID"/>
+		<serviceAgreement3 mapField="SA_ID"/>
+		<siblingId2 mapField="SIBLING_ID"/>
+		<financialTransactionType2 dataType="lookup" mapField="FT_TYPE_FLG" lookup="FT_TYPE_FLG"/>
+		<currentAmount3 dataType="money" mapField="CUR_AMT"/>
+		<glDivision2 mapField="GL_DIVISION"/>
+		<division2 mapField="CIS_DIVISION"/>
+		<payoffAmount2 dataType="money" mapField="TOT_AMT"/>
+		<creationDateTime2 dataType="dateTime" mapField="CRE_DTTM"/>
+		<isFrozen3 dataType="boolean" mapField="FREEZE_SW"/>
+		<freezeDateTime2 dataType="dateTime" mapField="FREEZE_DTTM"/>
+		<arrearsDate2 dataType="date" mapField="ARS_DT"/>
+		<frozenByUser2 mapField="FREEZE_USER_ID"/>
+		<isCorrection2 dataType="boolean" mapField="CORRECTION_SW"/>
+		<isRedundant2 dataType="boolean" mapField="REDUNDANT_SW"/>
+		<isNewCharge2 dataType="boolean" mapField="NEW_DEBIT_SW"/>
+		<shouldShowOnBill2 dataType="boolean" mapField="SHOW_ON_BILL_SW"/>
+		<isNotInArrears2 dataType="boolean" mapField="NOT_IN_ARS_SW"/>
+		<parentId2 mapField="PARENT_ID"/>
+		<billId2 mapField="BILL_ID"/>
+		<accountingDate3 dataType="date" mapField="ACCOUNTING_DT"/>
+		<scheduledDistributionDate2 dataType="date" mapField="SCHED_DISTRIB_DT"/>
+		<version4 dataType="number" mapField="VERSION"/>
+		<currency4 mapField="CURRENCY_CD"/>
+		<hasTransferredOut2 dataType="boolean" mapField="XFERRED_OUT_SW"/>
+		<transferToGLDate2 dataType="date" mapField="XFER_TO_GL_DT"/>
+		<glDistributionStatus2 dataType="lookup" mapField="GL_DISTRIB_STATUS" lookup="GL_DISTRIB_STATUS"/>
+		<balanceControlGroupId2 dataType="number" mapField="BAL_CTL_GRP_ID"/>
+		<matchEventId2 mapField="MATCH_EVT_ID"/>
+	</ft2>
+	<autopayRequestId mapField="AP_REQ_ID"/>
+	<adjId3 mapField="ADJ_ID3"/>
+	<country mapField="COUNTRY"/>
+	<address2 mapField="ADDRESS2"/>
+	<address3 mapField="ADDRESS3"/>
+	<address4 mapField="ADDRESS4"/>
+	<city mapField="CITY"/>
+	<streetNumber1 mapField="NUM1"/>
+	<streetNumber2 mapField="NUM2"/>
+	<county mapField="COUNTY"/>
+	<state mapField="STATE"/>
+	<address1 mapField="ADDRESS1"/>
+	<postal mapField="POSTAL"/>
+	<taxVendorGeographicalCode mapField="GEO_CODE"/>
+	<isInCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+	<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+	<paidAmount dataType="money" mapField="PAID_AMT"/>
+	<paymentCurrency mapField="CURRENCY_PYMNT"/>
+	<scheduledToPayDate dataType="date" mapField="SCHEDULED_PAY_DT"/>
+	<paymentDate dataType="date" mapField="PYMNT_DT"/>
+	<entityName mapField="ENTITY_NAME"/>
+	<adviceId mapField="PAY_DOC_ID"/>
+	<adviceDate dataType="date" mapField="PAY_DOC_DT"/>
+	<paymentNumber mapField="PYMNT_ID"/>
+	<paymentMethod dataType="lookup" mapField="PYMNT_METHOD_FLG" lookup="PYMNT_METHOD_FLG"/>
+	<paymentSelectionStatus dataType="lookup" mapField="PYMNT_SEL_STAT_FLG" lookup="PYMNT_SEL_STAT_FLG"/>
+	<batchControl mapField="BATCH_CD"/>
+	<batchNumber dataType="number" mapField="BATCH_NBR"/>
+	<version3 dataType="number" mapField="VERSION3"/>
+	<stateDescription mapField="STATE_DESCR"/>
+	<statePostal mapField="STATE_POSTAL"/>
+	<country2 mapField="COUNTRY2"/>
+	<address1Available dataType="boolean" mapField="ADDR1_AVAIL"/>
+	<address2Available dataType="boolean" mapField="ADDR2_AVAIL"/>
+	<address3Available dataType="boolean" mapField="ADDR3_AVAIL"/>
+	<address4Available dataType="boolean" mapField="ADDR4_AVAIL"/>
+	<cityAvailable dataType="boolean" mapField="CITY_AVAIL"/>
+	<version4 dataType="number" mapField="VERSION4"/>
+	<number1Available dataType="boolean" mapField="NUM1_AVAIL"/>
+	<number2Available dataType="boolean" mapField="NUM2_AVAIL"/>
+	<houseTypeAvailable dataType="boolean" mapField="HOUSE_TYPE_AVAIL"/>
+	<countyAvailable dataType="boolean" mapField="COUNTY_AVAIL"/>
+	<stateAvailable dataType="boolean" mapField="STATE_AVAIL"/>
+	<postalAvailable dataType="boolean" mapField="POSTAL_AVAIL"/>
+	<inCityLimitAvailable dataType="boolean" mapField="IN_CITY_LIM_AVAIL"/>
+	<geoCodeAvailable dataType="boolean" mapField="GEO_CODE_AVAIL"/>
+	<language mapField="LANGUAGE_CD"/>
+	<description2 mapField="DESCR"/>
+	<address12 mapField="ADDR1_LBL"/>
+	<address22 mapField="ADDR2_LBL"/>
+	<address32 mapField="ADDR3_LBL"/>
+	<address42 mapField="ADDR4_LBL"/>
+	<city2 mapField="CITY_LBL"/>
+	<number1 mapField="NUM1_LBL"/>
+	<number2 mapField="NUM2_LBL"/>
+	<houseType2 mapField="HOUSE_TYPE_LBL"/>
+	<county2 mapField="COUNTY_LBL"/>
+	<state2 mapField="STATE_LBL"/>
+	<postal2 mapField="POSTAL_LBL"/>
+	<inCityLimit mapField="IN_CITY_LIM_LBL"/>
+	<geographicCode mapField="GEO_CODE_LBL"/>
+	<adjChar type="list" mapList="ADJ_CHAR">
+		<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+		<adjustmentId3 mapField="ADJ_ID"/>
+		<characteristicType2 mapField="CHAR_TYPE_CD"/>
+		<characteristicValue2 mapField="CHAR_VAL"/>
+		<characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
+		<characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+		<characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+		<characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
+		<characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+		<sequence2 dataType="number" mapField="SEQ_NUM"/>
+		<searchCharacteristicValue mapField="SRCH_CHAR_VAL"/>
+		<version5 dataType="number" mapField="VERSION"/>
+		<searchNavigationKey mapField="SRCH_NAV_KEY"/>
+		<navigationOption mapField="NAV_OPT_CD"/>
+		<table mapField="TBL_NAME"/>
+		<infoProgram mapField="INFO_PRG"/>
+		<characteristicType3 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+		<characteristicValueDescription mapField="CHAR_VAL_DESCR"/>
+		<characteristicValueForeignKeys mapField="CHAR_VAL_FK_STR"/>
+		<characteristicValueForeignKeyInformation mapField="CHAR_VAL_FK_INFO"/>
+		<isCompoundPrimaryKey dataType="boolean" mapField="COMP_PK_SW"/>
+		<charateristicValue mapField="COMP_PK_STR"/>
+		<characteristicType4 mapField="CHAR_TYPE_DESCR"/>
+	</adjChar>
+	<canDeleteAllRows dataType="boolean" mapField="DEL_ALL_ROW_SW"/>
+</schema>

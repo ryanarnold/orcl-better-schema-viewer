@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<schema emitEmptyElements="true" name="schema" fwRel="2">
+	<externalPremiseId mapField="PREM_ID"/>
+	<timeZone mapField="TIME_ZONE_CD"/>
+	<lifeSupportSensitiveLoad dataType="lookup" mapField="LS_SL_FLG" lookup="LS_SL_FLG"/>
+	<lifeSupportSensitiveLoadDetail mapField="LS_SL_DESCR"/>
+	<location type="group">
+		<country mapField="COUNTRY"/>
+		<postal mapField="POSTAL"/>
+		<address1 mapField="ADDRESS1"/>
+		<address2 mapField="ADDRESS2"/>
+		<address3 mapField="ADDRESS3"/>
+		<address4 mapField="ADDRESS4"/>
+		<city mapField="CITY"/>
+		<number1 mapField="NUM1"/>
+		<number2 mapField="NUM2"/>
+		<county mapField="COUNTY"/>
+		<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+		<geographic mapField="GEO_CODE"/>
+		<inCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+		<state mapField="STATE"/>
+	</location>
+	<spInstruction mapField="MR_INSTR_CD"/>
+	<spInstructionDetail mapField="MR_INSTR_DETAILS"/>
+	<spWarning mapField="MR_WARN_CD"/>
+	<key dataType="boolean" mapField="KEY_SW"/>
+	<keyId mapField="KEY_ID"/>
+	<okToEnter dataType="boolean" mapField="OK_TO_ENTER_SW"/>
+</schema>

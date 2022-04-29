@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<required suppress="blank" mdField="F1_SE_REQD_LBL" dataType="lookupBO" lookupBO="F1-SchemaBoolTrue"/>
+	<dataType suppress="blank" mdField="F1_SE_DATA_TYPE" dataType="lookupBO" lookupBO="F1-SchemaDataTypes"/>
+	<uiHintalphaFormat/>
+	<uiHintalphaFormatGroup type="group">
+		<uiHintalphaFormatVal suppress="blank" mdField="F1_SE_ALPHAFORMAT_LBL" dataType="lookupBO" lookupBO="F1-SchemaBooleanValues"/>
+	</uiHintalphaFormatGroup>
+	<currencyRef mdField="F1_SE_CURR_REF_LBL"/>
+	<lookup mdField="F1_SE_LOOKUP_LBL" fkRef="F1-LKUPF"/>
+	<lookupBO mdField="F1_SE_LKP_BO_LBL" search="F1-EXLKPSRCH" searchField="BUS_OBJ_CD:lookupBO;"/>
+	<stdTime mdField="F1_SE_STDTIME_LBL" dataType="lookupBO" lookupBO="F1-SchemaBoolTrue"/>
+	<stdTimeRef mdField="F1_SE_STDTIME_REF_LBL"/>
+	<displayRef mdField="F1_SE_DISPLAY_REF"/>
+	<fkRef suppress="blank" mdField="F1_SE_FKREF_LBL" fkRef="F1-FKSRC"/>
+	<uiHintfkRef mdField="F1_SE_UIHINT_FKREF"/>
+	<uiHintfkRefGroup mdField="F1_SE_UIHINT_FKREF" type="group">
+		<info suppress="blank" mdField="F1_SE_UIHINT_FKREF_INFO" dataType="lookupBO" lookupBO="F1-SchemaBooleanValues"/>
+		<context suppress="blank" mdField="F1_SE_UIHINT_FKREF_CONTEXT" dataType="lookupBO" lookupBO="F1-SchemaBooleanValues"/>
+		<navigation suppress="blank" mdField="F1_SE_UIHINT_FKREF_NAVIGATION" dataType="lookupBO" lookupBO="F1-SchemaBooleanValues"/>
+		<search suppress="blank" mdField="F1_SE_UIHINT_FKREF_SEARCH" dataType="lookupBO" lookupBO="F1-SchemaBooleanValues"/>
+	</uiHintfkRefGroup>
+</schema>

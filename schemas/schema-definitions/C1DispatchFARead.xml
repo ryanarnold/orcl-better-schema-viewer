@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<dispatchGroup mapField="DISP_GRP_CD"/>
+	<operationsArea mapField="OP_AREA_CD"/>
+	<scheduleDateTimeStart dataType="dateTime" mapField="SCHED_DTTM"/>
+	<representative mapField="REP_CD"/>
+	<dispSchedDttm mapField="DISP_SCHED_DTTM"/>
+	<dispatchGroupDescription mapField="DISP_GRP_DESC"/>
+	<opAreaDesc mapField="OP_AREA_DESC"/>
+	<repDesc mapField="REP_DESC"/>
+	<fieldActivityFilter dataType="lookup" mapField="FA_FILTER_FLG" lookup="FA_FILTER_FLG"/>
+	<geographicType mapField="GEO_TYPE_CD"/>
+	<geographicValue mapField="GEO_VAL"/>
+	<retrievedDispGrpCd mapField="RETRIEVED_DISP_GRP_CD"/>
+	<retrievedOpAreaCd mapField="RETRIEVED_OP_AREA_CD"/>
+	<retrievedSchedDttm mapField="RETRIEVED_SCHED_DTTM"/>
+	<dfa type="list" mapList="DFA">
+		<fieldActivityId mapField="FA_ID"/>
+		<fieldActivityType mapField="FA_TYPE_CD"/>
+		<servicePointId mapField="SP_ID"/>
+		<fieldActivityPriority dataType="lookup" mapField="FA_PRIORITY_FLG" lookup="FA_PRIORITY_FLG"/>
+		<createdBy dataType="lookup" mapField="FA_CREATED_BY_FLG" lookup="FA_CREATED_BY_FLG"/>
+		<scheduleDateTimeStart2 dataType="dateTime" mapField="SCHED_DTTM"/>
+		<fieldActivityStatus dataType="lookup" mapField="FA_STATUS_FLG" lookup="FA_STATUS_FLG"/>
+		<isEligibleForDispatch dataType="boolean" mapField="ELIG_DISPATCH_SW"/>
+		<dispatchGroup2 mapField="DISP_GRP_CD"/>
+		<fieldOrder mapField="FO_ID"/>
+		<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+		<testSelectionId mapField="TEST_SEL_ID"/>
+		<user mapField="USER_ID"/>
+		<instructions mapField="INSTRUCTIONS"/>
+		<longDescription mapField="DESCRLONG"/>
+		<cancelReason mapField="FA_CAN_RSN_CD"/>
+		<appointmentScheduleId mapField="APP_SCHED_ID"/>
+		<isEligibleForArchiving dataType="boolean" mapField="ILM_ARCH_SW"/>
+		<ilmDate dataType="date" mapField="ILM_DT"/>
+		<version dataType="number" mapField="VERSION"/>
+		<externalId mapField="FA_EXT_ID"/>
+		<intermediateStatus mapField="FA_INT_STATUS_FLG"/>
+		<fieldActivityDataArea mapField="FA_DATA_AREA"/>
+		<fieldworkRescheduleReason mapField="FA_RESCHED_RSN_CD"/>
+		<isFieldActivityTypeChanged dataType="boolean" mapField="FA_TYPE_CHANGE_SW"/>
+		<chgAlgCalledT dataType="boolean" mapField="C1_T_CHG_ALG_CALLED_SW"/>
+		<isDispatch dataType="boolean" mapField="DISPATCH_SW"/>
+		<premiseInfo mapField="PREM_INFO"/>
+		<premiseId mapField="PREM_ID"/>
+		<operationsArea2 mapField="OP_AREA_CD"/>
+		<geographicType2 mapField="GEO_TYPE_CD"/>
+		<geographicValue2 mapField="GEO_VAL"/>
+		<spType mapField="SP_TYPE_CD"/>
+		<meterReadCycle mapField="MR_CYC_CD"/>
+		<descrFap mapField="DESCR_FAP"/>
+		<descrMrcyc mapField="DESCR_MRCYC"/>
+		<descrFat mapField="DESCR_FAT"/>
+		<servicePointType mapField="DESCR_SPT"/>
+	</dfa>
+</schema>

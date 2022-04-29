@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<type suppress="input" mdField="F1_SE_TYPE_LBL" default="schema"/>
+	<nspList type="list">
+		<nsp mdField="F1_SE_XML_NAME_SPACE" dataType="lookupBO" fkRef="F1-BUSOB" lookupBO="F1-SchemaXMLNameSpaces"/>
+	</nspList>
+	<appSecurity suppress="blank" mdField="F1_SE_APPSECURITY" dataType="lookupBO" lookupBO="F1-SchemaBooleanValues"/>
+	<pageAction suppress="blank" mdField="F1_SE_PAGEACT" dataType="lookupBO" lookupBO="F1-SchemaPageActions"/>
+	<searchBy suppress="blank" mdField="F1_SE_SEARCHBY" dataType="lookupBO" lookupBO="F1-SchemaSearchBy"/>
+</schema>

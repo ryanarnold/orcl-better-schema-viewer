@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<suppress suppress="blank" mdField="F1_SE_SUPPRESS" dataType="lookupBO" lookupBO="F1-SchemaElementSuppress"/>
+	<uiHintvisibleOn suppress="blank" mdField="F1_SE_VISIBLEON" dataType="lookupBO" lookupBO="F1-SchemaElementVisibleOn"/>
+	<uiHintdisplayNone mdField="F1_SE_UIHINT_DISPLAYNONE"/>
+	<uiHintdisplayNoneGroup suppress="blank" mdField="F1_SE_UIHINT_DISPLAYNONE" type="group">
+		<key suppress="blank" mdField="F1_SE_UIHINT_DISPLAYNONE_TYPE" dataType="lookupBO" lookupBO="F1-SchemaDispNoneKey"/>
+		<xpath mdField="F1_SE_UIHINT_DISPLAYNONE_XPATH"/>
+		<function mdField="F1_SE_UIHINT_DISPLAYNONE_FUNC"/>
+		<operator mdField="F1_SE_UIHINT_DISPLAYNONE_OPR" dataType="lookupBO" lookupBO="F1-SchemaDispNoneOperator"/>
+		<xpathValue mdField="F1_SE_UIHINT_DISPLAYNONE_VALUE"/>
+		<functionValue mdField="F1_SE_UIHINT_DISPLAYNONE_VALUE" dataType="lookupBO" lookupBO="F1-SchemaBooleanValues"/>
+	</uiHintdisplayNoneGroup>
+	<uiHintprotect mdField="F1_SE_UIHINT_PROTECT"/>
+	<uiHintprotectGroup suppress="blank" mdField="F1_SE_UIHINT_PROTECT" type="group">
+		<key suppress="blank" mdField="F1_SE_UIHINT_PROTECT_TYPE" dataType="lookupBO" lookupBO="F1-SchemaProtectKey"/>
+		<xpath mdField="F1_SE_UIHINT_PROTECT_XPATH"/>
+		<function mdField="F1_SE_UIHINT_PROTECT_FUNC"/>
+		<operator mdField="F1_SE_UIHINT_DISPLAYNONE_OPR" dataType="lookupBO" lookupBO="F1-SchemaDispNoneOperator"/>
+		<xpathValue mdField="F1_SE_UIHINT_DISPLAYNONE_VALUE"/>
+		<functionValue mdField="F1_SE_UIHINT_DISPLAYNONE_VALUE" dataType="lookupBO" lookupBO="F1-SchemaBooleanValues"/>
+		<actionValue mdField="F1_SE_UIHINT_DISPLAYNONE_VALUE" dataType="lookupBO" lookupBO="F1-SchemaActionValues"/>
+	</uiHintprotectGroup>
+</schema>

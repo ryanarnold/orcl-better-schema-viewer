@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<nodeName suppress="input" mdField="F1_SE_NODE_NAME" default="uiHint:includeMap"/>
+	<map mdField="F1_SE_MAP_LBL" fkRef="F1-UISRC"/>
+	<visibleOn suppress="blank" mdField="F1_SE_VISIBLEON" dataType="lookupBO" lookupBO="F1-SchemaElementVisibleOn"/>
+	<prefixPath mdField="F1_SE_INCLUDE_MP_PREFIX_PATH"/>
+</schema>

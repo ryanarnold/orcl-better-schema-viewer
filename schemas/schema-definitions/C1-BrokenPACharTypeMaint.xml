@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<brokenPAInput suppress="true" type="group">
+		<charTypeInfo type="group">
+			<input type="group">
+				<characteristicType mapField="CHAR_TYPE_CD"/>
+				<characteristicValue mapField="CHAR_VAL"/>
+				<adhocCharValue mapField="ADHOC_CHAR_VAL"/>
+				<fkValue1 mapField="CHAR_VAL_FK1"/>
+				<fkValue2 mapField="CHAR_VAL_FK2"/>
+				<fkValue3 mapField="CHAR_VAL_FK3"/>
+				<fkValue4 mapField="CHAR_VAL_FK4"/>
+				<fkValue5 mapField="CHAR_VAL_FK5"/>
+			</input>
+			<output type="group">
+				<charTypeFlg dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+				<charValInfo mapField="CHAR_VAL_FK_INFO"/>
+				<searchZone mapField="ZONE_CD"/>
+				<navOption mapField="NAV_OPT_CD"/>
+				<pkFieldsList type="list" mapList="PK_FIELD_LIST">
+					<pkField mapField="PK_VAL"/>
+				</pkFieldsList>
+			</output>
+		</charTypeInfo>
+		<typeOfCharSearch dataType="lookup" mapField="TYPE_OF_CHAR_SRCH_OPT" lookup="TYPE_OF_CHAR_SRCH_OPT"/>
+		<charEntityValue dataType="lookup" mapField="CHAR_ENTITY_FLG" lookup="CHAR_ENTITY_FLG"/>
+	</brokenPAInput>
+	<charValInfo suppress="true" type="group">
+		<characteristicType mapField="CHAR_TYPE_CD"/>
+		<results type="list">
+			<characteristicValue mapField="CHAR_VAL"/>
+			<description mapField="DESCR"/>
+		</results>
+	</charValInfo>
+	<charTypeValueInfo suppress="true" type="group">
+		<zone private="true" default="C1-RETCTVDTL" mapField="ZONE_CD"/>
+		<characteristicType mapField="F1_VALUE"/>
+		<characteristicValue mapField="F2_VALUE"/>
+		<rowCount dataType="number" mapField="ROW_CNT"/>
+		<results type="list" mapList="DE">
+			<characteristicTypeFlag mapField="COL_VALUE">
+				<row mapList="DE_VAL">
+					<SEQNO is="1"/>
+				</row>
+			</characteristicTypeFlag>
+			<fkReference mapField="COL_VALUE">
+				<row mapList="DE_VAL">
+					<SEQNO is="2"/>
+				</row>
+			</fkReference>
+			<searchZone mapField="COL_VALUE">
+				<row mapList="DE_VAL">
+					<SEQNO is="3"/>
+				</row>
+			</searchZone>
+			<primaryKeyField mapField="COL_VALUE">
+				<row mapList="DE_VAL">
+					<SEQNO is="4"/>
+				</row>
+			</primaryKeyField>
+			<description mapField="COL_VALUE">
+				<row mapList="DE_VAL">
+					<SEQNO is="5"/>
+				</row>
+			</description>
+		</results>
+	</charTypeValueInfo>
+</schema>

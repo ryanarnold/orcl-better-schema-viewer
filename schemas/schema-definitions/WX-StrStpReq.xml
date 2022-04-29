@@ -1,0 +1,313 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<head type="group">
+		<action/>
+		<key1 type="group">
+			<name default="ACCT_ID"/>
+			<value/>
+		</key1>
+		<key2 type="group">
+			<name default="PER_ID"/>
+			<value/>
+		</key2>
+		<key3 type="group">
+			<name/>
+			<value/>
+		</key3>
+		<key4 type="group">
+			<name/>
+			<value/>
+		</key4>
+		<key5 type="group">
+			<name/>
+			<value/>
+		</key5>
+		<emailAddress/>
+		<webUserId/>
+		<ipAddress/>
+		<cssUser/>
+		<custom type="group">
+			<field1 type="group">
+				<name/>
+				<value/>
+			</field1>
+			<field2 type="group">
+				<name/>
+				<value/>
+			</field2>
+			<field3 type="group">
+				<name/>
+				<value/>
+			</field3>
+			<field4 type="group">
+				<name/>
+				<value/>
+			</field4>
+			<field5 type="group">
+				<name/>
+				<value/>
+			</field5>
+			<field6 type="group">
+				<name/>
+				<value/>
+			</field6>
+			<field7 type="group">
+				<name/>
+				<value/>
+			</field7>
+			<field8 type="group">
+				<name/>
+				<value/>
+			</field8>
+			<field9 type="group">
+				<name/>
+				<value/>
+			</field9>
+			<field10 type="group">
+				<name/>
+				<value/>
+			</field10>
+		</custom>
+	</head>
+	<mainData type="group">
+		<referenceId/>
+		<requestMode dataType="lookup" lookup="C1_REQUEST_MODE_FLG"/>
+		<customerInfo type="group">
+			<newCustomer/>
+			<lifeSupportSensitiveLoad mdField="LS_SL_FLG" dataType="lookup" lookup="LS_SL_FLG"/>
+			<personBusiness mdField="PER_OR_BUS_FLG" dataType="lookup" lookup="PER_OR_BUS_FLG"/>
+			<customerClass mdField="CUST_CL_CD"/>
+			<firstName mdField="FIRST_NAME"/>
+			<lastName mdField="LAST_NAME"/>
+			<entityName mdField="ENTITY_NAME"/>
+			<email mdField="EMAILID"/>
+			<contactInfo type="group">
+				<country mapField="COUNTRY"/>
+				<addressLine1 mapField="ADDRESS1"/>
+				<addressLine2 mapField="ADDRESS2"/>
+				<addressLine3 mapField="ADDRESS3"/>
+				<addressLine4 mapField="ADDRESS4"/>
+				<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+				<number1 mapField="NUM1"/>
+				<number2 mapField="NUM2"/>
+				<inCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+				<city mapField="CITY"/>
+				<geographic mapField="GEO_CODE"/>
+				<county mapField="COUNTY"/>
+				<state mapField="STATE"/>
+				<postal mapField="POSTAL"/>
+				<phoneList type="list">
+					<sequence mdField="SEQ_NUM" dataType="number"/>
+					<phoneType mdField="PHONE_TYPE_CD"/>
+					<phoneTypeDescr mdField="DESCR"/>
+					<phoneNumber mdField="PHONE"/>
+					<extension mdField="EXTENSION"/>
+				</phoneList>
+			</contactInfo>
+			<premiseInfo mdField="PREM_INFO"/>
+			<saCount/>
+			<identifiersList type="list">
+				<idType mdField="ID_TYPE_CD"/>
+				<idTypeDescr mdField="DESCR"/>
+				<formatDescr/>
+				<idValue mdField="PER_ID_NBR"/>
+			</identifiersList>
+			<custom type="group">
+				<field1 type="group">
+					<name/>
+					<value/>
+				</field1>
+				<field2 type="group">
+					<name/>
+					<value/>
+				</field2>
+				<field3 type="group">
+					<name/>
+					<value/>
+				</field3>
+				<field4 type="group">
+					<name/>
+					<value/>
+				</field4>
+				<field5 type="group">
+					<name/>
+					<value/>
+				</field5>
+				<field6 type="group">
+					<name/>
+					<value/>
+				</field6>
+				<field7 type="group">
+					<name/>
+					<value/>
+				</field7>
+				<field8 type="group">
+					<name/>
+					<value/>
+				</field8>
+				<field9 type="group">
+					<name/>
+					<value/>
+				</field9>
+				<field10 type="group">
+					<name/>
+					<value/>
+				</field10>
+			</custom>
+		</customerInfo>
+		<stopInfo type="group">
+			<stopDate mdField="STOP_DT" dataType="date"/>
+			<custom type="group">
+				<field1 type="group">
+					<name/>
+					<value/>
+				</field1>
+				<field2 type="group">
+					<name/>
+					<value/>
+				</field2>
+				<field3 type="group">
+					<name/>
+					<value/>
+				</field3>
+				<field4 type="group">
+					<name/>
+					<value/>
+				</field4>
+				<field5 type="group">
+					<name/>
+					<value/>
+				</field5>
+				<field6 type="group">
+					<name/>
+					<value/>
+				</field6>
+				<field7 type="group">
+					<name/>
+					<value/>
+				</field7>
+				<field8 type="group">
+					<name/>
+					<value/>
+				</field8>
+				<field9 type="group">
+					<name/>
+					<value/>
+				</field9>
+				<field10 type="group">
+					<name/>
+					<value/>
+				</field10>
+			</custom>
+		</stopInfo>
+		<startInfo type="group">
+			<startDate mdField="START_DT" dataType="date"/>
+			<startPremise mdField="PREM_ID"/>
+			<custom type="group">
+				<field1 type="group">
+					<name/>
+					<value/>
+				</field1>
+				<field2 type="group">
+					<name/>
+					<value/>
+				</field2>
+				<field3 type="group">
+					<name/>
+					<value/>
+				</field3>
+				<field4 type="group">
+					<name/>
+					<value/>
+				</field4>
+				<field5 type="group">
+					<name/>
+					<value/>
+				</field5>
+				<field6 type="group">
+					<name/>
+					<value/>
+				</field6>
+				<field7 type="group">
+					<name/>
+					<value/>
+				</field7>
+				<field8 type="group">
+					<name/>
+					<value/>
+				</field8>
+				<field9 type="group">
+					<name/>
+					<value/>
+				</field9>
+				<field10 type="group">
+					<name/>
+					<value/>
+				</field10>
+			</custom>
+		</startInfo>
+		<campaignMiscFieldsList type="list">
+			<sequence mdField="SEQ_NUM" dataType="number"/>
+			<sortSequence mdField="SORT_SEQ5" dataType="number"/>
+			<defaultValue/>
+			<validValuesList type="list">
+				<value/>
+				<valueDescr/>
+			</validValuesList>
+			<campaignFieldPrompt mdField="CAMP_FLD_PROMPT"/>
+			<description mdField="DESCR"/>
+			<fieldTypeUsage mdField="CAMP_FLDTY_USG_FLG" dataType="lookup" lookup="CAMP_FLDTY_USG_FLG"/>
+			<responseValue/>
+		</campaignMiscFieldsList>
+		<custom type="group">
+			<field1 type="group">
+				<name/>
+				<value/>
+			</field1>
+			<field2 type="group">
+				<name/>
+				<value/>
+			</field2>
+			<field3 type="group">
+				<name/>
+				<value/>
+			</field3>
+			<field4 type="group">
+				<name/>
+				<value/>
+			</field4>
+			<field5 type="group">
+				<name/>
+				<value/>
+			</field5>
+			<field6 type="group">
+				<name/>
+				<value/>
+			</field6>
+			<field7 type="group">
+				<name/>
+				<value/>
+			</field7>
+			<field8 type="group">
+				<name/>
+				<value/>
+			</field8>
+			<field9 type="group">
+				<name/>
+				<value/>
+			</field9>
+			<field10 type="group">
+				<name/>
+				<value/>
+			</field10>
+		</custom>
+	</mainData>
+	<errorInformation type="group">
+		<isInError mdField="IN_ERROR_SW" dataType="boolean" default="false"/>
+		<errorReference type="group">
+			<category mdField="MESSAGE_CAT_NBR" dataType="number"/>
+			<number mdField="MESSAGE_NBR" dataType="number"/>
+		</errorReference>
+		<errorMessage mdField="MESSAGE_TEXT"/>
+	</errorInformation>
+</schema>

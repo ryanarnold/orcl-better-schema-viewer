@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <rateReferenceDate mdField="EFFDT" dataType="date"/>
+  <saId mdField="SA_ID"/>
+  <accountId mdField="ACCT_ID"/>
+  <personId mdField="PER_ID"/>
+  <billCycle mdField="BILL_CYC_CD"/>
+  <billCycleDescription mdField="DESCR"/>
+  <collectionClass mdField="COLL_CL_CD"/>
+  <collectionClassDescription mdField="DESCR"/>
+  <accountInformation mdField="ACCT_INFO"/>
+  <customerClass mdField="CUST_CL_CD"/>
+  <customerClassDescription mdField="DESCR"/>
+  <landlordIndicator mdField="C1_LANDLORD_IND" dataType="boolean"/>
+  <mailingAddress1 mdField="ADDRESS1"/>
+  <mailingAddress2 mdField="ADDRESS2"/>
+  <mailingAddress3 mdField="ADDRESS3"/>
+  <mailingCity mdField="CITY"/>
+  <mailingState mdField="STATE"/>
+  <mailingPostal mdField="POSTAL"/>
+  <firstName mdField="ENTITY_NAME"/>
+  <lastName mdField="ENTITY_NAME"/>
+  <phone1 mdField="PHONE"/>
+  <phone2 mdField="PHONE"/>
+  <email mdField="EMAILID"/>
+  <specialRole mdField="SPECIAL_ROLE_FLG" dataType="lookup" lookup="SPECIAL_ROLE_FLG"/>
+  <specialRoleDescription mdField="DESCR"/>
+  <serviceType mdField="SVC_TYPE_CD"/>
+  <serviceTypeDescription mdField="DESCR"/>
+  <cisDivision mdField="CIS_DIVISION"/>
+  <cisDivisionDescription mdField="DESCR"/>
+  <saType mdField="SA_TYPE_CD"/>
+  <saTypeDescription mdField="DESCR"/>
+  <revenueClass mdField="REV_CL_CD"/>
+  <revenueClassDescription mdField="DESCR"/>
+  <sic mdField="SIC_CD"/>
+  <sicDescription mdField="DESCR"/>
+  <depositClass mdField="DEP_CL_CD"/>
+  <depositClassDescription mdField="DESCR"/>
+  <campaign mdField="CAMPAIGN_CD"/>
+  <campaignDescription mdField="DESCR"/>
+  <debtClass mdField="DEBT_CL_CD"/>
+  <debtClassDescription mdField="DESCR"/>
+  <startDate mdField="START_DT" dataType="date"/>
+  <endDate mdField="END_DT" dataType="date"/>
+  <saStatus mdField="SA_STATUS_FLG" dataType="lookup" lookup="SA_STATUS_FLG"/>
+  <saStatusDescription mdField="DESCR"/>
+  <rateSchedule mdField="RS_CD"/>
+  <rateScheduleDescription mdField="DESCR"/>
+  <saSPs type="group">
+    <saSPList type="list">
+      <spId mdField="SP_ID" isPrimeKey="true"/>
+      <startDateTime mdField="START_DTTM" dataType="dateTime"/>
+      <stopDateTime mdField="STOP_DTTM" dataType="dateTime"/>
+    </saSPList>
+  </saSPs>
+</schema>

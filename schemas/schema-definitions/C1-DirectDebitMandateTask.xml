@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <serviceTaskId suppress="true" fkRef="F1-STASK" mapField="F1_SVC_TASK_ID"/>
+  <bo suppress="true" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+  <boStatus suppress="true" mapField="BO_STATUS_CD"/>
+  <createDateTime suppress="true" dataType="dateTime" default="%CurrentDateTime" mapField="CRE_DTTM"/>
+  <statusDateTime suppress="true" dataType="dateTime" mapField="STATUS_UPD_DTTM"/>
+  <serviceTaskType suppress="true" fkRef="F1-STKTY" mapField="F1_STASK_TYPE_CD"/>
+  <version suppress="true" dataType="number" mapField="VERSION"/>
+  <accountId suppress="true" mdField="ACCT_ID" required="true" fkRef="ACCT" mapField="PK_VALUE1">
+    <row mapChild="F1_SVC_TASK_REL_OBJ">
+      <MAINT_OBJ_CD is="ACCOUNT"/>
+    </row>
+  </accountId>
+  <extMandateReference suppress="true" mdField="C1_SEPA_EXT_MANDATE_REF" required="true" mapField="ADHOC_CHAR_VAL">
+    <row mapChild="F1_SVC_TASK_CHAR">
+      <CHAR_TYPE_CD is="C1-EXTID"/>
+    </row>
+  </extMandateReference>
+  <statusReason suppress="true" fkRef="F1-STRSN" mapField="BO_STATUS_REASON_CD"/>
+  <directDebitMandateDetails type="group" mapXML="BO_DATA_AREA">
+    <directDebitPaymentType suppress="true" mdField="C1_SEPA_DD_PAY_TYPE_FLG" required="true" dataType="lookup" default="RCUR" lookup="C1_SEPA_DD_PAY_TYPE_FLG"/>
+    <effectiveDate suppress="true" mdField="C1_SEPA_DD_EFF_DT" required="true" dataType="date"/>
+    <debtorDetails type="group">
+      <debtorName mdField="C1_SEPA_DB_NAME" required="true"/>
+      <debtorAddress mdField="C1_SEPA_DB_ADDRESS1" required="true"/>
+      <debtorPostal mdField="C1_SEPA_DB_POSTAL" required="true"/>
+      <debtorCity mdField="C1_SEPA_DB_CITY" required="true"/>
+      <debtorCountry mdField="C1_SEPA_DB_COUNTRY" required="true"/>
+      <debtorAccountNumber mdField="C1_SEPA_DB_ACCT_NUM" required="true"/>
+      <encrDebtorAccountNumber suppress="true" mdField="C1_SEPA_ENRC_DB_ACCT_NUM"/>
+      <debtorBankIdentificationCode mdField="C1_SEPA_DB_BANK_ID" required="true"/>
+    </debtorDetails>
+    <signatureDetails type="group">
+      <signature mdField="C1_SEPA_SIGNATURE"/>
+      <signaturePlace mdField="C1_SEPA_SIGNATURE_PLACE"/>
+    </signatureDetails>
+    <creditorDebtorRelationshipDetails type="group">
+      <debtorIdentification mdField="C1_SEPA_DB_ID"/>
+      <debtorReferencePartyName mdField="C1_SEPA_DB_REF_PARTY_NAME"/>
+      <debtorReferencePartyIdentification mdField="C1_SEPA_DB_REF_PARTY_ID"/>
+      <creditorReferencePartyName mdField="C1_SEPA_CR_REF_PARTY_NAME"/>
+      <creditorReferencePartyIdentification mdField="C1_SEPA_CR_REF_PARTY_ID"/>
+      <contractIdentification mdField="C1_SEPA_CONTRACT_ID"/>
+      <contractDescription mdField="C1_SEPA_CONTRACT_DESC"/>
+    </creditorDebtorRelationshipDetails>
+  </directDebitMandateDetails>
+</schema>

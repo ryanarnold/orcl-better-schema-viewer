@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<schema name="schema" fwRel="2">
+	<serviceTaskId mdField="C1_SS_SERVICE_TASK_INFO_LBL" isPrimeKey="true" fkRef="F1-STASK" mapField="F1_SVC_TASK_ID"/>
+	<serviceTaskType fkRef="F1-STKTY" mapField="F1_STASK_TYPE_CD"/>
+	<bo suppress="true" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<boStatus mapField="BO_STATUS_CD"/>
+	<statusReason suppress="blank" fkRef="F1-STRSN" mapField="BO_STATUS_REASON_CD"/>
+	<createDateTime suppress="true" dataType="dateTime" default="%CurrentDateTime" mapField="CRE_DTTM"/>
+	<statusDateTime suppress="true" dataType="dateTime" mapField="STATUS_UPD_DTTM"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<webUserId mdField="WX_SS_USER_ID" mapField="ADHOC_CHAR_VAL">
+		<row mapChild="F1_SVC_TASK_CHAR">
+			<CHAR_TYPE_CD is="C1-WBUSR"/>
+		</row>
+	</webUserId>
+	<cssUser mdField="WX_SS_CSSUSER" mapField="ADHOC_CHAR_VAL">
+		<row mapChild="F1_SVC_TASK_CHAR">
+			<CHAR_TYPE_CD is="C1-SSUSR"/>
+		</row>
+	</cssUser>
+	<emailAddress mdField="EMAILID" mapField="ADHOC_CHAR_VAL">
+		<row mapChild="F1_SVC_TASK_CHAR">
+			<CHAR_TYPE_CD is="C1-EMLID"/>
+		</row>
+	</emailAddress>
+	<ipAddress mdField="IPADDRESS" mapField="ADHOC_CHAR_VAL">
+		<row mapChild="F1_SVC_TASK_CHAR">
+			<CHAR_TYPE_CD is="C1-IPADD"/>
+		</row>
+	</ipAddress>
+	<accountId mdField="ACCOUNT_TLBL" fkRef="ACCT" mapField="PK_VALUE1">
+		<row mapChild="F1_SVC_TASK_REL_OBJ">
+			<MAINT_OBJ_CD is="ACCOUNT"/>
+		</row>
+	</accountId>
+	<personId mdField="PERSON_TLBL" fkRef="PER" mapField="PK_VALUE1">
+		<row mapChild="F1_SVC_TASK_REL_OBJ">
+			<MAINT_OBJ_CD is="PERSON"/>
+		</row>
+	</personId>
+	<businessLine mdField="WX_BUS_LINE" mapXML="BO_DATA_AREA"/>
+	<accountIdNumber mdField="ACCT_ID" mapXML="BO_DATA_AREA"/>
+	<accountVerification type="group" mapXML="BO_DATA_AREA">
+		<field1 type="group">
+			<value mdField="WX_VALUE1"/>
+			<encrValue mdField="ENCR_WX_VALUE1"/>
+			<hashValue mdField="HASH_WX_VALUE1"/>
+		</field1>
+		<field2 type="group">
+			<value mdField="WX_VALUE2"/>
+			<encrValue mdField="ENCR_WX_VALUE2"/>
+			<hashValue mdField="HASH_WX_VALUE2"/>
+		</field2>
+		<field3 type="group">
+			<value mdField="WX_VALUE3"/>
+			<encrValue mdField="ENCR_WX_VALUE3"/>
+			<hashValue mdField="HASH_WX_VALUE3"/>
+		</field3>
+		<field4 type="group">
+			<value mdField="WX_VALUE4"/>
+			<encrValue mdField="ENCR_WX_VALUE4"/>
+			<hashValue mdField="HASH_WX_VALUE4"/>
+		</field4>
+		<field5 type="group">
+			<value mdField="WX_VALUE5"/>
+			<encrValue mdField="ENCR_WX_VALUE5"/>
+			<hashValue mdField="HASH_WX_VALUE5"/>
+		</field5>
+	</accountVerification>
+</schema>

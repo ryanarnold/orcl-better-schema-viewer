@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <accountId mdField="ACCT_ID"/>
+  <personId mdField="PER_ID"/>
+  <notificationType mdField="C1_NF_SSTASK_TYPE_FLG" dataType="lookup" lookup="C1_NF_SSTASK_TYPE_FLG"/>
+  <isSuppressed dataType="boolean"/>
+  <custom type="group">
+    <field1 type="group">
+      <name/>
+      <value/>
+    </field1>
+    <field2 type="group">
+      <name/>
+      <value/>
+    </field2>
+    <field3 type="group">
+      <name/>
+      <value/>
+    </field3>
+    <field4 type="group">
+      <name/>
+      <value/>
+    </field4>
+    <field5 type="group">
+      <name/>
+      <value/>
+    </field5>
+    <field6 type="group">
+      <name/>
+      <value/>
+    </field6>
+    <field7 type="group">
+      <name/>
+      <value/>
+    </field7>
+    <field8 type="group">
+      <name/>
+      <value/>
+    </field8>
+    <field9 type="group">
+      <name/>
+      <value/>
+    </field9>
+    <field10 type="group">
+      <name/>
+      <value/>
+    </field10>
+  </custom>
+</schema>

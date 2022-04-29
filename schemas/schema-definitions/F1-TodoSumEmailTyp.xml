@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<requestType isPrimeKey="true" mapField="REQ_TYPE_CD"/>
+	<bo suppress="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<description required="true" mapField="DESCR"/>
+	<boStatus suppress="input" mapField="BO_STATUS_CD"/>
+	<detailedDescription mapField="DESCRLONG"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<parameters mdField="F1_TODOSUMEMAIL_PARM_LBL" type="group" mapXML="BO_DATA_AREA">
+		<numberOfDays mdField="F1_NBR_DAYS" required="true" dataType="number"/>
+		<emailSubject mdField="F1_EMAIL_SUBJECT" required="true"/>
+		<emailFrom mdField="EMAILID" required="true"/>
+		<outboundMsgType mdField="OUTMSG_TYPE_CD" required="true" fkRef="F1-OMTYP"/>
+		<externalSystem mdField="NT_XID_CD" required="true" fkRef="F1-ESTMP"/>
+		<frequency mdField="F1_FREQUENCY" dataType="number"/>
+	</parameters>
+</schema>

@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<spItemHistoryId mapField="SP_ITEM_HIST_ID"/>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<spItemHisInfo mapField="SP_ITEM_HIS_INFO"/>
+	<spInformation mapField="SP_INFO"/>
+	<itemInformation mapField="ITEM_INFO"/>
+	<spType mapField="SP_TYPE_CD"/>
+	<displayStkLocSw mapField="DISPLAY_STK_LOC_SW"/>
+	<item mapField="ITEM_ID"/>
+	<servicePointId mapField="SP_ID"/>
+	<removalDateTime dataType="dateTime" mapField="REMOVAL_DTTM"/>
+	<version dataType="number" mapField="VERSION"/>
+	<stockLocation mapField="STK_LOC_CD"/>
+	<slcDescr mapField="SLC_DESCR"/>
+	<spItemHistId2 mapField="SP_ITEM_HIST_ID2"/>
+	<sequence dataType="number" mapField="SEQNO"/>
+	<eventDateTime dataType="dateTime" mapField="EVENT_DTTM"/>
+	<spItemEventType dataType="lookup" mapField="SP_ITEM_EVT_FLG" lookup="SP_ITEM_EVT_FLG"/>
+	<itemOnOffStatus dataType="lookup" mapField="ITEM_ON_OFF_FLG" lookup="ITEM_ON_OFF_FLG"/>
+	<version2 dataType="number" mapField="VERSION2"/>
+	<spItemHistId3 mapField="SP_ITEM_HIST_ID3"/>
+	<seqno2 dataType="number" mapField="SEQNO2"/>
+	<eventDttm2 dataType="dateTime" mapField="EVENT_DTTM2"/>
+	<spItemEvtFlg2 mapField="SP_ITEM_EVT_FLG2"/>
+	<itemOnOffFlg2 mapField="ITEM_ON_OFF_FLG2"/>
+	<version3 dataType="number" mapField="VERSION3"/>
+	<spItemEvt type="list" mapList="SP_ITEM_EVT">
+		<spItemHistoryId2 mapField="SP_ITEM_HIST_ID"/>
+		<sequence2 dataType="number" mapField="SEQNO"/>
+		<eventDateTime2 dataType="dateTime" mapField="EVENT_DTTM"/>
+		<spItemEventType2 dataType="lookup" mapField="SP_ITEM_EVT_FLG" lookup="SP_ITEM_EVT_FLG"/>
+		<itemOnOffStatus2 dataType="lookup" mapField="ITEM_ON_OFF_FLG" lookup="ITEM_ON_OFF_FLG"/>
+		<version2 dataType="number" mapField="VERSION"/>
+	</spItemEvt>
+	<spHist type="list" mapList="SP_HIST">
+		<servicePointId2 mapField="SP_ID"/>
+		<installationDateTime dataType="dateTime" mapField="INSTALL_DTTM"/>
+		<item2 mapField="ITEM_ID"/>
+		<removalDateTime2 dataType="dateTime" mapField="REMOVAL_DTTM"/>
+		<badgeNumber mapField="BADGE_NBR"/>
+		<itemType mapField="ITEM_TYPE_CD"/>
+		<description mapField="DESCR"/>
+	</spHist>
+</schema>

@@ -1,0 +1,287 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+  <accountId mapField="ACCT_ID"/>
+  <defaultFlag mapField="DEFAULT_FOR_FLG"/>
+  <isCancel dataType="boolean" mapField="CANCEL_SW"/>
+  <calculateAndApplyBudgetSwitch dataType="boolean" mapField="CAL_APPLY_BUD_SW"/>
+  <hasRecommendBudget dataType="boolean" mapField="RECOMMEND_BUD_SW"/>
+  <allowAddressValidation dataType="boolean" mapField="C1_ALLOW_VAL_SW"/>
+  <addressValidationScript mapField="C1_VAL_SCR_CD"/>
+  <canQuickAdd dataType="boolean" mapField="QUICK_ADD_SW"/>
+  <billCycle mapField="BILL_CYC_CD"/>
+  <setUpDate dataType="date" mapField="SETUP_DT"/>
+  <currency mapField="CURRENCY_CD"/>
+  <accountManagementGroup mapField="ACCT_MGMT_GRP_CD"/>
+  <alertInformation mapField="ALERT_INFO"/>
+  <billAfter dataType="date" mapField="BILL_AFTER_DT"/>
+  <shouldProtectBillCycle dataType="boolean" mapField="PROTECT_CYC_SW"/>
+  <division mapField="CIS_DIVISION"/>
+  <mailingPremise mapField="MAILING_PREM_ID"/>
+  <shouldProtectMailingPremise dataType="boolean" mapField="PROTECT_PREM_SW"/>
+  <collectionClass mapField="COLL_CL_CD"/>
+  <lastCreditReviewDate dataType="date" mapField="CR_REVIEW_DT"/>
+  <postponeCreditReviewUntil dataType="date" mapField="POSTPONE_CR_RVW_DT"/>
+  <isInternalCreditReview dataType="boolean" mapField="INT_CR_REVIEW_SW"/>
+  <customerClass mapField="CUST_CL_CD"/>
+  <billPrintIntercept mapField="BILL_PRT_INTERCEPT"/>
+  <doNotReviewDeposit dataType="boolean" mapField="NO_DEP_RVW_SW"/>
+  <budgetPlan mapField="BUD_PLAN_CD"/>
+  <version dataType="number" mapField="VERSION"/>
+  <shouldProtectDivision dataType="boolean" mapField="PROTECT_DIV_SW"/>
+  <accessGroup mapField="ACCESS_GRP_CD"/>
+  <accountDataArea mapField="ACCT_DATA_AREA"/>
+  <canQuickAddT dataType="boolean" mapField="C1_T_QUICK_ADD_SW"/>
+  <user mapField="USER_INFO"/>
+  <accountCheckDigit mapField="ACCT_CHECK_DIGIT"/>
+  <payAdviceSupported dataType="boolean" mapField="PAY_ADV_FUNC_SUPP_SW"/>
+  <defaultApayFlag dataType="lookup" mapField="DFLT_APAY_FLG" lookup="DFLT_APAY_FLG"/>
+  <quickAdd2Swicth dataType="boolean" mapField="QUICK_ADD_SW2"/>
+  <customerClass2 mapField="CUST_CL_CD2"/>
+  <billRouteType mapField="BILL_RTE_TYPE_CD"/>
+  <billAddressSource dataType="lookup" mapField="BILL_ADDR_SRCE_FLG" lookup="BILL_ADDR_SRCE_FLG"/>
+  <personId mapField="PER_ID"/>
+  <premiseId mapField="PREM_ID"/>
+  <country mapField="COUNTRY"/>
+  <address1 mapField="ADDRESS1"/>
+  <address2 mapField="ADDRESS2"/>
+  <address3 mapField="ADDRESS3"/>
+  <address4 mapField="ADDRESS4"/>
+  <city mapField="CITY"/>
+  <streetNumber1 mapField="NUM1"/>
+  <streetNumber2 mapField="NUM2"/>
+  <houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+  <county mapField="COUNTY"/>
+  <state mapField="STATE"/>
+  <postal mapField="POSTAL"/>
+  <taxVendorGeographicalCode mapField="GEO_CODE"/>
+  <isInCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+  <accountInfo mapField="ACCT_INFO"/>
+  <managementGroupDescription mapField="MGMT_DESCR"/>
+  <accessDescription mapField="ACCESS_DESCR"/>
+  <entityName mapField="ENTITY_NAME"/>
+  <entityInfo mapField="ENTITY_INFO"/>
+  <premiseInfo mapField="PREM_INFO"/>
+  <currentBalance dataType="money" mapField="CUR_BAL"/>
+  <payoffBalance dataType="money" mapField="TOT_BAL"/>
+  <totalCashOnlyPoints dataType="number" mapField="TOT_CASH_ONLY_PTS"/>
+  <totalCreditRatingPoints dataType="number" mapField="TOT_CR_RATING_PTS"/>
+  <newBudgetDate dataType="date" mapField="NEW_BUD_DT"/>
+  <totalBudgetAmount dataType="money" mapField="TOT_BUD_AMT"/>
+  <totalNewBudget dataType="money" mapField="TOT_NEW_BUD"/>
+  <totalCashDepositOnHand dataType="money" mapField="TOT_CD_ON_HAND_AMT"/>
+  <totalCashDepositRequired dataType="money" mapField="TOT_CD_REQ_AMT"/>
+  <totalNonCashDesposit dataType="money" mapField="TOT_NCD_AMT"/>
+  <totalOnHandAmount dataType="money" mapField="TOT_ON_HAND_AMT"/>
+  <accountPersons type="list" mapList="ACCT_PER">
+    <accountId mapField="ACCT_ID"/>
+    <accountRelationshipType mapField="ACCT_REL_TYPE_CD"/>
+    <billAddressSource2 dataType="lookup" mapField="BILL_ADDR_SRCE_FLG" lookup="BILL_ADDR_SRCE_FLG"/>
+    <personId mapField="PER_ID"/>
+    <isMainCustomer dataType="boolean" mapField="MAIN_CUST_SW"/>
+    <isFinanciallyResponsible dataType="boolean" mapField="FIN_RESP_SW"/>
+    <isThirdPartyGuarantor dataType="boolean" mapField="THRD_PTY_SW"/>
+    <shouldReceiveCopyOfBill dataType="boolean" mapField="RECEIVE_COPY_SW"/>
+    <billRouteType2 mapField="BILL_RTE_TYPE_CD"/>
+    <billFormat dataType="lookup" mapField="BILL_FORMAT_FLG" lookup="BILL_FORMAT_FLG"/>
+    <numberOfBillCopies dataType="number" mapField="NBR_BILL_COPIES"/>
+    <customerPOId mapField="CUST_PO_ID"/>
+    <receivesNotification dataType="boolean" mapField="NOTIFY_SW"/>
+    <prefixSuffixName mapField="NAME_PFX_SFX"/>
+    <prefixOrSuffix dataType="lookup" mapField="PFX_SFX_FLG" lookup="PFX_SFX_FLG"/>
+    <quoteRouteType mapField="QTE_RTE_TYPE_CD"/>
+    <shouldReceiveCopyOfQuote dataType="boolean" mapField="RECV_QTE_SW"/>
+    <webAccess dataType="lookup" mapField="WEB_ACCESS_FLG" lookup="WEB_ACCESS_FLG"/>
+    <allowPreference dataType="lookup" mapField="ALW_PREF_FLG" lookup="ALW_PREF_FLG"/>
+    <cssAccessRole dataType="lookup" mapField="CSS_ACCESS_ROLE_FLG" lookup="CSS_ACCESS_ROLE_FLG"/>
+    <canQuickAddT2 dataType="boolean" mapField="C1_T_QUICK_ADD_SW"/>
+    <accountId2 mapField="ACCT_ID2"/>
+    <personId2 mapField="PER_ID2"/>
+    <address1 mapField="ADDRESS1"/>
+    <address2 mapField="ADDRESS2"/>
+    <address3 mapField="ADDRESS3"/>
+    <address4 mapField="ADDRESS4"/>
+    <city2 mapField="CITY"/>
+    <streetNumber12 mapField="NUM1"/>
+    <streetNumber22 mapField="NUM2"/>
+    <county2 mapField="COUNTY"/>
+    <postal2 mapField="POSTAL"/>
+    <houseType2 dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+    <taxVendorGeographicalCode2 mapField="GEO_CODE"/>
+    <isInCityLimit2 dataType="boolean" mapField="IN_CITY_LIMIT"/>
+    <state2 mapField="STATE"/>
+    <country mapField="COUNTRY"/>
+    <country2 mapField="COUNTRY2"/>
+    <address1Available dataType="boolean" mapField="ADDR1_AVAIL"/>
+    <address2Available dataType="boolean" mapField="ADDR2_AVAIL"/>
+    <address3Available dataType="boolean" mapField="ADDR3_AVAIL"/>
+    <address4Available dataType="boolean" mapField="ADDR4_AVAIL"/>
+    <cityAvailable dataType="boolean" mapField="CITY_AVAIL"/>
+    <number1Available dataType="boolean" mapField="NUM1_AVAIL"/>
+    <number2Available dataType="boolean" mapField="NUM2_AVAIL"/>
+    <houseTypeAvailable dataType="boolean" mapField="HOUSE_TYPE_AVAIL"/>
+    <countyAvailable dataType="boolean" mapField="COUNTY_AVAIL"/>
+    <stateAvailable dataType="boolean" mapField="STATE_AVAIL"/>
+    <postalAvailable dataType="boolean" mapField="POSTAL_AVAIL"/>
+    <inCityLimitAvailable dataType="boolean" mapField="IN_CITY_LIM_AVAIL"/>
+    <geoCodeAvailable dataType="boolean" mapField="GEO_CODE_AVAIL"/>
+    <language mapField="LANGUAGE_CD"/>
+    <description mapField="DESCR"/>
+    <billRoutingMethod dataType="lookup" mapField="BILL_RTG_METH_FLG" lookup="BILL_RTG_METH_FLG"/>
+    <quoteRoutingMethod dataType="lookup" mapField="QTE_RTG_METH_FLG" lookup="QTE_RTG_METH_FLG"/>
+    <entityName mapField="ENTITY_NAME"/>
+    <entityInfo mapField="ENTITY_INFO"/>
+    <billRouteTypeInformation mapField="BILL_RTE_TYPE_INFO"/>
+    <qouteRouteTypeInfo mapField="QTE_RTE_TYPE_INFO"/>
+    <billAddressSourceInfo mapField="BILL_ADDR_SRC_INFO"/>
+    <stateDescription mapField="STATE_DESCR"/>
+    <statePostal mapField="STATE_POSTAL"/>
+    <allowPreference2 dataType="boolean" mapField="ALW_PREF_SW"/>
+    <personAddressOverride type="list" mapList="PER_ADDR_OVR">
+      <accountId mapField="ACCT_ID"/>
+      <personId mapField="PER_ID"/>
+      <address1 mapField="ADDRESS1"/>
+      <address2 mapField="ADDRESS2"/>
+      <address3 mapField="ADDRESS3"/>
+      <address4 mapField="ADDRESS4"/>
+      <city mapField="CITY"/>
+      <streetNumber1 mapField="NUM1"/>
+      <streetNumber2 mapField="NUM2"/>
+      <county mapField="COUNTY"/>
+      <postal mapField="POSTAL"/>
+      <houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+      <taxVendorGeographicalCode3 mapField="GEO_CODE"/>
+      <isInCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+      <state4 mapField="STATE"/>
+      <country mapField="COUNTRY"/>
+      <version dataType="number" mapField="VERSION"/>
+    </personAddressOverride>
+  </accountPersons>
+  <debtClasses type="list" mapList="DEBT_CL">
+    <accountId4 mapField="ACCT_ID"/>
+    <debtClass mapField="DEBT_CL_CD"/>
+    <debtClassDescription mapField="DEBT_CL_DESC"/>
+    <debtCurrentBalance dataType="money" mapField="DEBT_CUR_AMT"/>
+    <debtTotalBalance dataType="money" mapField="DEBT_TOT_AMT"/>
+    <arrears type="list" mapList="ARREARS">
+      <accountId5 mapField="ACCT_ID"/>
+      <debtClass2 mapField="DEBT_CL_CD"/>
+      <daysAge mapField="DAYS_AGE"/>
+      <arrearsAmount dataType="money" mapField="ARS_AMT"/>
+    </arrears>
+  </debtClasses>
+  <creditHistory type="list" mapList="CR_RAT_HIST">
+    <accountId6 mapField="ACCT_ID"/>
+    <creditRatingHistoryId mapField="CR_RATING_HIST_ID"/>
+    <user2 mapField="USER_ID"/>
+    <collectionProcess mapField="COLL_PROC_ID"/>
+    <startDate dataType="date" mapField="START_DT"/>
+    <severanceProcessId mapField="SEV_PROC_ID"/>
+    <endDate dataType="date" mapField="END_DT"/>
+    <affectCreditRatingBy dataType="number" mapField="CR_RATING_PTS"/>
+    <cashOnlyPoints dataType="number" mapField="CASH_ONLY_PTS"/>
+    <creDt dataType="date" mapField="CRE_DT"/>
+    <creditRatingCreatedBy dataType="lookup" mapField="CR_RAT_CRE_BY_FLG" lookup="CR_RAT_CRE_BY_FLG"/>
+    <eventSequence dataType="number" mapField="EVT_SEQ"/>
+    <version4 dataType="number" mapField="VERSION"/>
+    <comments mapField="COMMENTS"/>
+    <payPlanId mapField="PP_ID"/>
+    <writeOffProcess mapField="WO_PROC_ID"/>
+    <createdByInformation mapField="CREATED_BY_INFO"/>
+  </creditHistory>
+  <messages type="list" mapList="ACCT_MSG">
+    <accountId7 mapField="ACCT_ID"/>
+    <billMessage mapField="BILL_MSG_CD"/>
+    <billMessageType dataType="lookup" mapField="BILL_MSG_TYPE_FLG" lookup="BILL_MSG_TYPE_FLG"/>
+    <version5 dataType="number" mapField="VERSION"/>
+    <description2 mapField="DESCR"/>
+    <accountMessageParameter type="list" mapList="ACCT_MSG_PARM">
+      <accountId8 mapField="ACCT_ID"/>
+      <billMessage2 mapField="BILL_MSG_CD"/>
+      <messageParameterValue mapField="MSG_PARM_VAL"/>
+      <sequence dataType="number" mapField="SEQ_NUM"/>
+      <version6 dataType="number" mapField="VERSION"/>
+    </accountMessageParameter>
+  </messages>
+  <saBudgets type="list" mapList="SA_BUDGET">
+    <serviceAgreement mapField="SA_ID"/>
+    <saInformation mapField="SA_INFO"/>
+    <lastChangedDate dataType="date" mapField="LAST_CHANGED_DT"/>
+    <startDate2 dataType="date" mapField="START_DT"/>
+    <endDate2 dataType="date" mapField="END_DT"/>
+    <budgetAmount dataType="money" mapField="BUD_AMT"/>
+    <newBudget dataType="money" mapField="NEW_BUD_AMT"/>
+  </saBudgets>
+  <nonCashDeposits type="list" mapList="ACCT_NCD">
+    <accountId9 mapField="ACCT_ID"/>
+    <sequence2 dataType="number" mapField="SEQNO"/>
+    <nonCashDepositType mapField="NCD_TYPE_CD"/>
+    <depositClass mapField="DEP_CL_CD"/>
+    <startDate3 dataType="date" mapField="START_DT"/>
+    <endDate3 dataType="date" mapField="END_DT"/>
+    <depositAmount dataType="money" mapField="DEP_AMT"/>
+    <documentNuMber mapField="DOC_NBR"/>
+    <thirdPartySa mapField="THRD_PTY_SA_ID"/>
+    <comments2 mapField="COMMENTS"/>
+    <version7 dataType="number" mapField="VERSION"/>
+    <ncdTypeDescription mapField="NCD_TYPE_DESCR"/>
+    <isThirdPartyDeposit dataType="boolean" mapField="THRD_PTY_DEP_SW"/>
+    <depositClassDescription mapField="DEP_CL_DESCR"/>
+    <thirdPartySaInfo mapField="THIRD_PTY_SA_INFO"/>
+  </nonCashDeposits>
+  <autopayment type="list" mapList="ACCT_APAY">
+    <accountAutoPayId mapField="ACCT_APAY_ID"/>
+    <accountId10 mapField="ACCT_ID"/>
+    <startDate4 dataType="date" mapField="START_DT"/>
+    <endDate4 dataType="date" mapField="END_DT"/>
+    <autopaySource mapField="APAY_SRC_CD"/>
+    <externalAccountId mapField="EXT_ACCT_ID"/>
+    <expireDate dataType="date" mapField="EXPIRE_DT"/>
+    <entityName3 mapField="ENTITY_NAME"/>
+    <comments3 mapField="COMMENTS"/>
+    <version8 dataType="number" mapField="VERSION"/>
+    <autopayMaxWithdrawalAmount dataType="money" mapField="APAY_MAX_WDRWL_AMT"/>
+    <autoPayMethod dataType="lookup" mapField="APAY_METHOD_FLG" lookup="APAY_METHOD_FLG"/>
+    <encryptedExternalAccountId mapField="ENCR_EXT_ACCT_ID"/>
+    <expirationMonth mapField="EXP_MONTH"/>
+    <expirationYear mapField="EXP_YEAR"/>
+    <description3 mapField="DESCR"/>
+    <externalSourceId mapField="EXT_SOURCE_ID"/>
+  </autopayment>
+  <characteristics type="list" mapList="ACCT_CHAR">
+    <accountId11 mapField="ACCT_ID"/>
+    <characteristicType mapField="CHAR_TYPE_CD"/>
+    <effectiveDate dataType="date" mapField="EFFDT"/>
+    <characteristicValue mapField="CHAR_VAL"/>
+    <adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+    <version9 dataType="number" mapField="VERSION"/>
+    <characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
+    <characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+    <characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+    <characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
+    <characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+    <searchCharacteristicValue mapField="SRCH_CHAR_VAL"/>
+    <searchNavigationKey mapField="SRCH_NAV_KEY"/>
+    <navigationOption mapField="NAV_OPT_CD"/>
+    <table mapField="TBL_NAME"/>
+    <infoProgram mapField="INFO_PRG"/>
+    <characteristicType2 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+    <characteristicValueDescription mapField="CHAR_VAL_DESCR"/>
+    <characteristicValueForeignKeys mapField="CHAR_VAL_FK_STR"/>
+    <characteristicValueForeignKeyInformation mapField="CHAR_VAL_FK_INFO"/>
+    <isCompoundPrimaryKey dataType="boolean" mapField="COMP_PK_SW"/>
+    <charateristicValue mapField="COMP_PK_STR"/>
+  </characteristics>
+  <alert type="list" mapList="ACCT_ALERT">
+    <accountId12 mapField="ACCT_ID"/>
+    <alertType mapField="ALERT_TYPE_CD"/>
+    <startDate5 dataType="date" mapField="START_DT"/>
+    <endDate5 dataType="date" mapField="END_DT"/>
+    <version10 dataType="number" mapField="VERSION"/>
+  </alert>
+  <rvwSched type="list" mapList="RVW_SCHED">
+    <accountId13 mapField="ACCT_ID"/>
+    <nextCreditReviewDate dataType="date" mapField="NEXT_CR_RVW_DT"/>
+    <version11 dataType="number" mapField="VERSION"/>
+  </rvwSched>
+</schema>

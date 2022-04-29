@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<sa type="group">
+		<sas type="list" mapList="SA_LIST">
+			<saId mapField="SA_ID"/>
+			<shouldRetainReads dataType="boolean" default="false" mapField="RTN_READ_COLL_SW"/>
+			<shouldRetainItems dataType="boolean" default="false" mapField="RTN_ITEM_COLL_SW"/>
+			<shouldRetainSQs dataType="boolean" default="false" mapField="RTN_SQ_COLL_SW"/>
+			<shouldRetainRules dataType="boolean" default="false" mapField="RTN_SQ_RULE_COLL_SW"/>
+			<accountingDate dataType="date" default="%ProcessDate" mapField="ACCOUNTING_DT"/>
+			<rs type="group">
+				<rss type="list" mapList="RS_LIST">
+					<rateSchedule isPrimeKey="true" mapField="RS_CD"/>
+					<rateScheduleSeq required="true" dataType="number" isPrimeKey="true" default="0" mapField="SEQNO"/>
+					<period type="group">
+						<periods type="list" mapList="PERIOD_LIST">
+							<startDateTime dataType="dateTime" isPrimeKey="true" mapField="START_DTTM"/>
+							<endDateTime dataType="dateTime" isPrimeKey="true" mapField="END_DTTM"/>
+							<billCondition dataType="lookup" mapField="C1_BILL_COND_FLG" lookup="C1_BILL_COND_FLG"/>
+							<usageRequestType dataType="lookup" isPrimeKey="true" mapField="C1_USAGE_TYPE_FLG" lookup="C1_USAGE_TYPE_FLG"/>
+							<bsegStartDate dataType="date" mapField="START_DT"/>
+							<bsegEndDate dataType="date" mapField="END_DT"/>
+							<calculatedAmount dataType="money" mapField="CALC_AMT"/>
+							<isInError dataType="boolean" mapField="IN_ERROR_SW"/>
+							<read type="group">
+								<reads type="list" mapList="READ_LIST">
+									<spId isPrimeKey="true" fkRef="SP" mapField="SP_ID"/>
+									<readSeq dataType="number" isPrimeKey="true" mapField="SEQNO"/>
+									<startReadDateTime dataType="dateTime" mapField="START_READ_DTTM"/>
+									<endReadDateTime dataType="dateTime" mapField="END_READ_DTTM"/>
+									<uom fkRef="C1-UOM" mapField="UOM_CD"/>
+									<tou fkRef="C1-TOU" mapField="TOU_CD"/>
+									<sqi fkRef="C1-SQI" mapField="SQI_CD"/>
+									<startReading dataType="number" mapField="START_REG_READING"/>
+									<endReading dataType="number" mapField="END_REG_READING"/>
+									<measuredQty dataType="number" mapField="MSR_QTY"/>
+									<finalQty dataType="number" mapField="FINAL_REG_QTY"/>
+									<finalUom fkRef="C1-UOM" mapField="FINAL_UOM_CD"/>
+									<finalTou fkRef="C1-TOU" mapField="FINAL_TOU_CD"/>
+									<finalSqi fkRef="C1-SQI" mapField="FINAL_SQI_CD"/>
+									<sphowToUse dataType="lookup" mapField="USAGE_FLG" lookup="USAGE_FLG"/>
+									<reghowToUse dataType="lookup" mapField="HOW_TO_USE_FLG" lookup="HOW_TO_USE_FLG"/>
+									<constant dataType="number" mapField="REG_CONST"/>
+									<measuresPeakQuantity dataType="boolean" mapField="MSR_PEAK_QTY_SW"/>
+									<usePercent dataType="number" mapField="USE_PCT"/>
+								</reads>
+							</read>
+							<item type="group">
+								<items type="list" mapList="ITEM_LIST">
+									<sequence dataType="number" mapField="SEQNO"/>
+									<itemType mapField="ITEM_TYPE_CD"/>
+									<itemCount dataType="number" mapField="ITEM_CNT"/>
+									<itemId mapField="ITEM_ID"/>
+									<startDate dataType="date" mapField="START_DT"/>
+									<endDate dataType="date" mapField="END_DT"/>
+									<uom mapField="UOM_CD"/>
+									<svcQty dataType="number" mapField="SVC_QTY"/>
+								</items>
+							</item>
+							<periodSq type="group">
+								<periodSqs type="list" mapList="PERIOD_SQ_LIST">
+									<startDateTime dataType="dateTime" isPrimeKey="true" mapField="START_DTTM"/>
+									<endDateTime dataType="dateTime" isPrimeKey="true" mapField="END_DTTM"/>
+									<standardStartDateTime dataType="dateTime" mapField="STANDARD_START_DTTM"/>
+									<standardEndDateTime dataType="dateTime" mapField="STANDARD_END_DTTM"/>
+									<sq type="group">
+										<sqs type="list" mapList="SQ_LIST">
+											<seq dataType="number" isPrimeKey="true" mapField="SEQ_NUM"/>
+											<uom fkRef="C1-UOM" mapField="UOM_CD"/>
+											<tou fkRef="C1-TOU" mapField="TOU_CD"/>
+											<sqi fkRef="C1-SQI" mapField="SQI_CD"/>
+											<initSq dataType="number" mapField="INIT_SQ"/>
+											<billSq dataType="number" mapField="BILL_SQ"/>
+											<spi dataType="duration" mapField="SPI"/>
+											<intervals type="group">
+												<iL type="list" mapList="INTERVAL_LIST">
+													<s dataType="number" isPrimeKey="true" mapField="SEQ_NUM"/>
+													<q dataType="number" mapField="INTV_DATA"/>
+													<c mdField="F1_EXT_LOOKUP_VALUE" mapField="CONDITION"/>
+												</iL>
+											</intervals>
+										</sqs>
+									</sq>
+								</periodSqs>
+							</periodSq>
+						</periods>
+					</period>
+				</rss>
+			</rs>
+		</sas>
+	</sa>
+</schema>

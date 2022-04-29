@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<headerSequence dataType="number" mapField="HEADER_SEQ"/>
+	<sequence dataType="number" mapField="SEQNO"/>
+	<rcSequence dataType="number" mapField="RC_SEQ"/>
+	<calcGroup mapField="CALC_GRP_CD"/>
+	<calcRule mapField="CALC_RULE_CD"/>
+	<shouldPrint dataType="boolean" mapField="PRT_SW"/>
+	<shouldAppearInSummary dataType="boolean" mapField="APP_IN_SUMM_SW"/>
+	<calculatedAmount dataType="number" mapField="CALC_VAL"/>
+	<exemptAmount dataType="money" mapField="EXEMPT_AMT"/>
+	<baseAmount dataType="money" mapField="BASE_AMT"/>
+	<currency mapField="CURRENCY_CD"/>
+	<distributionCode mapField="DST_ID"/>
+	<characteristicType mapField="CHAR_TYPE_CD"/>
+	<characteristicValue mapField="CHAR_VAL"/>
+	<uom mapField="UOM_CD"/>
+	<tou mapField="TOU_CD"/>
+	<sqi mapField="SQI_CD"/>
+	<billableServiceQuantity dataType="number" mapField="BILL_SQ"/>
+	<measuresPeakQuantity dataType="boolean" mapField="MSR_PEAK_QTY_SW"/>
+	<descriptionOnBill mapField="DESCR_ON_BILL"/>
+	<isFCPO dataType="boolean" mapField="CALC_ONLY_SW"/>
+	<isStatistical dataType="boolean" mapField="STATISTICAL_SW"/>
+	<statisticalQty mapField="STATISTICAL_SQ"/>
+	<shouldCreateBillLine dataType="boolean" mapField="CRE_BILL_LN_SW"/>
+	<FCPORule dataType="lookup" mapField="FCPO_RULE_FLG" lookup="FCPO_RULE_FLG"/>
+	<calcLineChar type="group">
+		<calcLineChars type="list" mapList="CALC_LINE_CHAR_LIST">
+			<headerSequence dataType="number" mapField="HEADER_SEQ"/>
+			<sequence dataType="number" mapField="SEQNO"/>
+			<characteristicType mapField="CHAR_TYPE_CD"/>
+			<characteristicValue mapField="CHAR_VAL"/>
+			<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+			<characteristicValueFK1 mapField="CHAR_VAL_FK1"/>
+			<characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+			<characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+			<characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
+			<characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+		</calcLineChars>
+	</calcLineChar>
+</schema>

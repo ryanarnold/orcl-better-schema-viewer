@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <calcGroup suppress="input" required="true" isPrimeKey="true" fkRef="C1-CALGR" mapField="CALC_GRP_CD"/>
+  <calcRule required="true" isPrimeKey="true" mapField="CALC_RULE_CD"/>
+  <executionSequence required="true" dataType="number" mapField="CR_EXEC_SEQ"/>
+  <bo suppress="input" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+  <description required="true" mapField="DESCR100"/>
+  <longDescription mapField="DESCRLONG"/>
+  <version suppress="true" dataType="number" mapField="VERSION"/>
+  <stepAlgorithm suppress="true" fkRef="ALG" mapField="CALC_RULE_STEP_ALG_CD"/>
+  <valueAlgorithm suppress="true" fkRef="ALG" mapField="CALC_RULE_VAL_ALG_CD"/>
+  <itemType suppress="true" fkRef="C1-ITMTY" mapField="ITEM_TYPE_CD"/>
+  <billFactor suppress="true" fkRef="C1-BFACT" mapField="BF_CD"/>
+  <descriptionOnBillDetails type="group">
+    <descriptionOnBill mapField="DESCR_TMPLT"/>
+    <shouldPrintLine mdField="PRT_FLG" required="true" dataType="lookup" default="C1YE" mapXML="BO_DATA_AREA" lookup="PRT_FLG"/>
+    <shouldPrintLineIfZero mdField="PRT_IF_ZERO_FLG" required="true" dataType="lookup" default="C1NO" mapXML="BO_DATA_AREA" lookup="PRT_IF_ZERO_FLG"/>
+  </descriptionOnBillDetails>
+  <roundingDetails type="group">
+    <roundingMethod mdField="RND_TYPE_FLG" required="true" dataType="lookup" default="RDNR" mapXML="BO_DATA_AREA" lookup="RND_TYPE_FLG"/>
+    <precision mdField="RND_PRECISION_LVL" required="true" dataType="number" default=".01" mapXML="BO_DATA_AREA"/>
+  </roundingDetails>
+  <distributionCodeDetails type="group">
+    <distributionCode fkRef="C1-DSTCD" mapField="DST_ID"/>
+    <distributionCodeSource mdField="DST_CD_SRC_FLG" required="true" dataType="lookup" default="C1SD" mapXML="BO_DATA_AREA" lookup="DST_CD_SRC_FLG"/>
+    <revenueClassDistributionCode type="group" mapXML="BO_DATA_AREA">
+      <revenueClassDistributionList type="list">
+        <revenueClass mdField="REV_CL_CD" required="true" isPrimeKey="true" fkRef="C1-REVCL"/>
+        <distributionCode mdField="DST_ID" required="true" fkRef="C1-DSTCD"/>
+      </revenueClassDistributionList>
+    </revenueClassDistributionCode>
+  </distributionCodeDetails>
+  <fcpoDetails type="group">
+    <isFcpo mdField="CALC_ONLY_FLG" required="true" dataType="lookup" default="C1NO" mapXML="BO_DATA_AREA" lookup="CALC_ONLY_FLG"/>
+    <shouldCreateBillLine mdField="CRE_BILL_LN_FLG" required="true" dataType="lookup" default="C1NO" mapXML="BO_DATA_AREA" lookup="CRE_BILL_LN_FLG"/>
+    <fcpoRetentionRule mdField="FCPO_RETN_RULE_FLG" dataType="lookup" default="C1RT" mapXML="BO_DATA_AREA" lookup="FCPO_RETN_RULE_FLG"/>
+  </fcpoDetails>
+  <memberCategory type="group">
+    <memberCategoryList type="list" mapChild="C1_CALC_RULE_MBR_CAT">
+      <calcLineCategoryType fkRef="C1-CLCAT" mapField="CL_CAT_TYPE_CD"/>
+      <calcLineCategoryValue mapField="CL_CAT_VAL"/>
+    </memberCategoryList>
+  </memberCategory>
+  <characteristics suppress="true" type="group">
+    <characteristicsList type="list" mapChild="C1_CALC_RULE_CHAR">
+      <characteristicType fkRef="CHAR_TYP" mapField="CHAR_TYPE_CD"/>
+      <characteristicValue mapField="CHAR_VAL"/>
+      <adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+    </characteristicsList>
+  </characteristics>
+  <shouldExecuteOverrideProration mdField="EXEC_OVR_PROR_FLG" required="true" dataType="lookup" default="C1NO" mapXML="BO_DATA_AREA" lookup="EXEC_OVR_PROR_FLG"/>
+  <applyToDetails type="group">
+    <uom fkRef="C1-UOM" mapField="UOM_CD"/>
+    <tou fkRef="C1-TOU" mapField="TOU_CD"/>
+    <sqi fkRef="C1-SQI" mapField="SQI_CD"/>
+    <shouldErrorIfNoValue mdField="ERR_IF_NO_VAL_FLG" required="true" dataType="lookup" default="C1NO" mapXML="BO_DATA_AREA" lookup="ERR_IF_NO_VAL_FLG"/>
+    <measuresPeak mdField="MSR_PEAK_FLG" required="true" dataType="lookup" default="C1NO" mapXML="BO_DATA_AREA" lookup="MSR_PEAK_FLG"/>
+  </applyToDetails>
+  <valueDetails type="group" mapXML="BO_DATA_AREA">
+    <valueType mdField="VAL_TYPE_FLG" required="true" dataType="lookup" default="U" lookup="VAL_TYPE_FLG"/>
+    <valueSource mdField="VAL_SOURCE_FLG" required="true" dataType="lookup" default="C1VL" lookup="VAL_SOURCE_FLG"/>
+    <billFactor mdField="BF_CD" fkRef="C1-BFACT"/>
+    <valueAlgorithm mdField="CALC_RULE_VAL_ALG_CD" fkRef="ALG"/>
+    <value mdField="VAL" dataType="number"/>
+  </valueDetails>
+  <targetCategory type="group">
+    <targetCategoryList type="list" mapChild="C1_CALC_RULE_TRGT_CAT">
+      <calcLineCategoryType fkRef="C1-CLCAT" mapField="CL_CAT_TYPE_CD"/>
+      <calcLineCategoryValue mapField="CL_CAT_VAL"/>
+    </targetCategoryList>
+  </targetCategory>
+</schema>

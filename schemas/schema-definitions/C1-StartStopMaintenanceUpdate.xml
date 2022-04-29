@@ -1,0 +1,303 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<accountId mapField="ACCT_ID"/>
+	<fromDate dataType="date" mapField="PSA_FROM_DT"/>
+	<toDate dataType="date" mapField="PSA_TO_DT"/>
+	<premiseFilter dataType="lookup" mapField="PSA_PREM_FILT_FLG" lookup="PSA_PREM_FILT_FLG"/>
+	<premiseId mapField="PSA_PREM_ID"/>
+	<cisDivision mapField="PSA_CIS_DIVISION"/>
+	<saType mapField="PSA_SA_TYPE_CD"/>
+	<geographicType mapField="PSA_GEO_TYPE_CD"/>
+	<geographicValue mapField="PSA_GEO_VAL"/>
+	<accountInfo mapField="ACCT_INFO"/>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<currency mapField="CURRENCY_CD"/>
+	<startDate dataType="date" mapField="STRT_START_DT"/>
+	<startMethod dataType="lookup" mapField="STRT_TYPE_FLG" lookup="STRT_TYPE_FLG"/>
+	<strtPremId mapField="STRT_PREM_ID"/>
+	<strtCisDivision mapField="STRT_CIS_DIVISION"/>
+	<strtSaTypeCd mapField="STRT_SA_TYPE_CD"/>
+	<startRequestBy mapField="STRT_STRT_REQ_BY"/>
+	<strtSpType1Cd mapField="STRT_SP_TYPE_1_CD"/>
+	<strtSpType2Cd mapField="STRT_SP_TYPE_2_CD"/>
+	<address1 mapField="ADDRESS1"/>
+	<city mapField="CITY"/>
+	<saTypeInfo mapField="SA_TYPE_INFO"/>
+	<strtPremInfo mapField="STRT_PREM_INFO"/>
+	<allowAddressValidation dataType="boolean" mapField="C1_ALLOW_VAL_SW"/>
+	<addressValidationScript mapField="C1_VAL_SCR_CD"/>
+	<strtSpTypeInfo mapField="STRT_SP_TYPE_INFO"/>
+	<strtSptyFiltFlg mapField="STRT_SPTY_FILT_FLG"/>
+	<spType mapField="STRT_SP_TYPE_CD"/>
+	<geographicType2 mapField="STRT_GEO_TYPE_CD"/>
+	<geographicValue2 mapField="STRT_GEO_VAL"/>
+	<strtSvcExstFlg mapField="STRT_SVC_EXST_FLG"/>
+	<cdTotToBillAmt dataType="number" mapField="CD_TOT_TO_BILL_AMT"/>
+	<stopEndDate dataType="date" mapField="STOP_END_DT"/>
+	<stopMethod dataType="lookup" mapField="STOP_TYPE_FLG" lookup="STOP_TYPE_FLG"/>
+	<stopPremId mapField="STOP_PREM_ID"/>
+	<stopSaId mapField="STOP_SA_ID"/>
+	<stopRequestedBy mapField="STOP_REQED_BY"/>
+	<premiseInfo mapField="PREM_INFO"/>
+	<saInformation mapField="SA_INFO"/>
+	<canStart dataType="boolean" mapField="ACTION_START_SW"/>
+	<canStop dataType="boolean" mapField="ACTION_STOP_SW"/>
+	<hasStartSA dataType="boolean" mapField="BUILD_START_SA_SW"/>
+	<canStartPremiseSP dataType="boolean" mapField="START_PREM_SP_SW"/>
+	<canSelectSA dataType="boolean" mapField="START_SELECT_SA_SW"/>
+	<canCreateSAOnError dataType="boolean" mapField="ERROR_CREATE_SA_SW"/>
+	<canCreateStartFieldActivity dataType="boolean" mapField="CREATE_START_FA_SW"/>
+	<canCreateStopFieldActivity dataType="boolean" mapField="CREATE_STOP_FA_SW"/>
+	<isStopSelected dataType="boolean" mapField="STOP_SELECTED_SW"/>
+	<canStopSelectedSA dataType="boolean" mapField="STOP_SELECT_SA_SW"/>
+	<canChangeStartStopDate dataType="boolean" mapField="UPDATE_SEL_SW"/>
+	<isRejected dataType="boolean" mapField="CANCEL_SEL_SW"/>
+	<psaPremInfo mapField="PSA_PREM_INFO"/>
+	<psaSaTypeInfo mapField="PSA_SA_TYPE_INFO"/>
+	<pfaPremInfo mapField="PFA_PREM_INFO"/>
+	<pfaSpTypeInfo mapField="PFA_SP_TYPE_INFO"/>
+	<scheduledFromDate dataType="date" mapField="PFA_SCHED_FROM_DT"/>
+	<scheduledToDate dataType="date" mapField="PFA_SCHED_TO_DT"/>
+	<premiseId2 mapField="PFA_PREM_ID"/>
+	<spType2 mapField="PFA_SP_TYPE_CD"/>
+	<geographicType3 mapField="PFA_GEO_TYPE_CD"/>
+	<geographicValue3 mapField="PFA_GEO_VAL"/>
+	<startStopDate dataType="date" mapField="PSA_START_STOP_DT"/>
+	<pendingStartStop type="list" mapList="PEND_SS">
+		<accountId2 mapField="ACCT_ID"/>
+		<serviceAgreement mapField="SA_ID"/>
+		<startStopDate2 dataType="date" mapField="START_STOP_DT"/>
+		<division mapField="CIS_DIVISION"/>
+		<saType2 mapField="SA_TYPE_CD"/>
+		<startOption mapField="START_OPT_CD"/>
+		<status dataType="lookup" mapField="SA_STATUS_FLG" lookup="SA_STATUS_FLG"/>
+		<startReason dataType="lookup" mapField="STRT_RSN_FLG" lookup="STRT_RSN_FLG"/>
+		<stopReason dataType="lookup" mapField="STOP_RSN_FLG" lookup="STOP_RSN_FLG"/>
+		<currency2 mapField="CURRENCY_CD"/>
+		<isCancel dataType="boolean" mapField="CANCEL_SW"/>
+		<saInformation2 mapField="SA_INFO"/>
+		<premiseInfo2 mapField="PREM_INFO"/>
+		<premiseId3 mapField="PREM_ID"/>
+		<spType1Cd mapField="SP_TYPE_1_CD"/>
+		<spType2Cd mapField="SP_TYPE_2_CD"/>
+		<isStartOptionRequired dataType="boolean" mapField="STRT_OPT_REQ_SW"/>
+		<saTypeDesc mapField="SA_TYPE_DESC"/>
+		<startOptDesc mapField="START_OPT_DESC"/>
+		<rsaAcctId mapField="RSA_ACCT_ID"/>
+		<rsaAcctInfo mapField="RSA_ACCT_INFO"/>
+		<rsaSaId mapField="RSA_SA_ID"/>
+		<startStopDate3 dataType="date" mapField="RSA_START_STOP_DT"/>
+		<rsaCisDivision mapField="RSA_CIS_DIVISION"/>
+		<rsaSaTypeCd mapField="RSA_SA_TYPE_CD"/>
+		<rsaStartOptCd mapField="RSA_START_OPT_CD"/>
+		<rsaSaStatusFlg mapField="RSA_SA_STATUS_FLG"/>
+		<startReason2 dataType="lookup" mapField="RSA_STRT_RSN_FLG" lookup="RSA_STRT_RSN_FLG"/>
+		<stopReason2 dataType="lookup" mapField="RSA_STOP_RSN_FLG" lookup="RSA_STOP_RSN_FLG"/>
+		<rsaCurrencyCd mapField="RSA_CURRENCY_CD"/>
+		<isCancel2 dataType="boolean" mapField="RSA_CANCEL_SW"/>
+		<rsaSaInfo mapField="RSA_SA_INFO"/>
+		<rsaPremInfo mapField="RSA_PREM_INFO"/>
+		<rsaPremId mapField="RSA_PREM_ID"/>
+		<rsaSpType1Cd mapField="RSA_SP_TYPE_1_CD"/>
+		<rsaSpType2Cd mapField="RSA_SP_TYPE_2_CD"/>
+		<isStartOptionRequired2 dataType="boolean" mapField="RSA_STRT_OPT_RQ_SW"/>
+		<rsaSaTypeDesc mapField="RSA_SA_TYPE_DESC"/>
+		<rsaStartOptDesc mapField="RSA_START_OPT_DESC"/>
+		<isSelect dataType="boolean" mapField="PROC_SEL_SW"/>
+		<isDirty dataType="boolean" mapField="DIRTY_SW"/>
+	</pendingStartStop>
+	<saToStrt type="list" mapList="SA_TO_STRT">
+		<division2 mapField="CIS_DIVISION"/>
+		<saType3 mapField="SA_TYPE_CD"/>
+		<startOption2 mapField="START_OPT_CD"/>
+		<endDate dataType="date" mapField="END_DT"/>
+		<saInformation3 mapField="SS_INFO"/>
+		<sicCode mapField="SIC_CD"/>
+		<areEstimatesAllowed dataType="boolean" mapField="ALLOW_EST_SW"/>
+		<customerRead dataType="lookup" mapField="CUST_READ_FLG" lookup="CUST_READ_FLG"/>
+		<hasRecommendDepositAmount dataType="boolean" mapField="RECOMMEND_DEP_SW"/>
+		<totalAmountToBill dataType="money" mapField="TOT_TO_BILL_AMT"/>
+		<totalAmountToBillLabel mapField="TOT_AMT_TOBILL_LBL"/>
+		<recurringChargeAmount dataType="money" mapField="RCR_CHG_AMT"/>
+		<numberOfPaymentPeriods dataType="number" mapField="NBR_PYMNT_PERIODS"/>
+		<canCalculate dataType="boolean" mapField="ACTION_CALC_SW"/>
+		<canHideCalculate dataType="boolean" mapField="HIDE_CALC_SW"/>
+		<canProtectCalculate dataType="boolean" mapField="PROTECT_CALC_SW"/>
+		<hasInterestRate dataType="number" mapField="INTEREST_RT"/>
+		<copySaId mapField="COPY_SA_ID"/>
+		<copySaVersion dataType="number" mapField="COPY_SA_VERSION"/>
+		<servicePointId mapField="SP_ID"/>
+		<spType1Cd2 mapField="SP_TYPE_1_CD"/>
+		<spType2Cd2 mapField="SP_TYPE_2_CD"/>
+		<hasStopCopySA dataType="boolean" mapField="STOP_COPY_SA_SW"/>
+		<saTypeInfo2 mapField="SA_TYPE_INFO"/>
+		<startOptInfo mapField="START_OPT_INFO"/>
+		<allowRecurringCharge dataType="lookup" mapField="ALLOW_RCR_CHG_FLG" lookup="ALLOW_RCR_CHG_FLG"/>
+		<recurringChargeAmount2 mapField="RCR_CHG_LBL"/>
+		<totalBillAmount dataType="lookup" mapField="REQ_AMT_BILL_FLG" lookup="REQ_AMT_BILL_FLG"/>
+		<specialRole dataType="lookup" mapField="SPECIAL_ROLE_FLG" lookup="SPECIAL_ROLE_FLG"/>
+		<depositClass mapField="DEP_CL_CD"/>
+		<isCharacteristicPremiseRequired dataType="boolean" mapField="PREM_REQ_SW"/>
+		<isAllowedEstimates dataType="boolean" mapField="SA_ALLOW_EST_SW"/>
+		<isStartOptionRequired3 dataType="boolean" mapField="START_OPT_REQ_SW"/>
+		<sicInfo mapField="SIC_INFO"/>
+		<businessActivityDescription mapField="BUS_ACTIVITY_DESC"/>
+		<canStartThisSa dataType="boolean" mapField="START_SW"/>
+		<geoValInfo mapField="GEO_VAL_INFO"/>
+		<ssSasp type="list" mapList="SS_SASP">
+			<servicePointId2 mapField="SP_ID"/>
+			<geographicType4 mapField="GEO_TYPE_CD"/>
+			<geographicValue4 mapField="GEO_VAL"/>
+			<spInformation mapField="SP_INFO"/>
+			<servicePointIdentifier mapField="SP_IDENTIFIER"/>
+		</ssSasp>
+	</saToStrt>
+	<saToStrtMsg type="list" mapList="SA_TO_STRT_MSG">
+		<messageText mapField="MSG_TEXT"/>
+		<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+		<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+	</saToStrtMsg>
+	<ssSa type="list" mapList="SS_SA">
+		<premiseInfo3 mapField="PREM_INFO"/>
+		<saInformation4 mapField="SA_INFO"/>
+		<geoValInfo2 mapField="GEO_VAL_INFO"/>
+		<isSelect2 dataType="boolean" mapField="SELECT_SW"/>
+		<serviceAgreement2 mapField="SA_ID"/>
+		<premiseId4 mapField="PREM_ID"/>
+		<stopReason3 dataType="lookup" mapField="STOP_RSN_FLG" lookup="STOP_RSN_FLG"/>
+		<createFieldActivity dataType="boolean" mapField="CREATE_FA_SW"/>
+	</ssSa>
+	<accountId2 mapField="ACCT_ID2"/>
+	<address12 mapField="ADDRESS12"/>
+	<address2 mapField="ADDRESS2"/>
+	<address3 mapField="ADDRESS3"/>
+	<address4 mapField="ADDRESS4"/>
+	<billAddressSource dataType="lookup" mapField="BILL_ADDR_SRCE_FLG" lookup="BILL_ADDR_SRCE_FLG"/>
+	<billRouteType mapField="BILL_RTE_TYPE_CD"/>
+	<city2 mapField="CITY2"/>
+	<country mapField="COUNTRY"/>
+	<county mapField="COUNTY"/>
+	<emailAddress mapField="EMAILID"/>
+	<taxVendorGeographicalCode mapField="GEO_CODE"/>
+	<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+	<isInCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+	<streetNumber1 mapField="NUM1"/>
+	<streetNumber2 mapField="NUM2"/>
+	<postal mapField="POSTAL"/>
+	<state mapField="STATE"/>
+	<version dataType="number" mapField="VERSION"/>
+	<mainCustPerId mapField="MAIN_CUST_PER_ID"/>
+	<billAddrSrceFlg2 mapField="BILL_ADDR_SRCE_FLG2"/>
+	<billRoutingMethod dataType="lookup" mapField="BILL_RTG_METH_FLG" lookup="BILL_RTG_METH_FLG"/>
+	<quoteRoutingMethod dataType="lookup" mapField="QTE_RTG_METH_FLG" lookup="QTE_RTG_METH_FLG"/>
+	<mailingPremise mapField="MAILING_PREM_ID"/>
+	<updateAddrFlds mapField="UPDATE_ADDR_FLDS"/>
+	<stateDescription mapField="STATE_DESCR"/>
+	<statePostal mapField="STATE_POSTAL"/>
+	<quoteRteTypeMsg mapField="QUOTE_RTE_TYPE_MSG"/>
+	<messageText2 mapField="MSG_TEXT"/>
+	<messageCategory2 dataType="number" mapField="MESSAGE_CAT_NBR"/>
+	<messageNumber2 dataType="number" mapField="MESSAGE_NBR"/>
+	<msgText2 mapField="MSG_TEXT2"/>
+	<messageCatNbr2 dataType="number" mapField="MESSAGE_CAT_NBR2"/>
+	<messageNbr2 dataType="number" mapField="MESSAGE_NBR2"/>
+	<reloadAddrOvrdSw mapField="RELOAD_ADDR_OVRD_SW"/>
+	<phoneCollFrDflt mapField="PHONE_COLL_FR_DFLT"/>
+	<ovrdPhone type="list" mapList="OVRD_PHONE">
+		<accountId3 mapField="ACCT_ID"/>
+		<sequence dataType="number" mapField="SEQ_NUM"/>
+		<phoneType mapField="PHONE_TYPE_CD"/>
+		<internationalPrefix mapField="COUNTRY_CODE"/>
+		<phone mapField="PHONE"/>
+		<extension mapField="EXTENSION"/>
+		<version2 dataType="number" mapField="VERSION"/>
+		<phoneFormat mapField="PHONE_FORMAT"/>
+	</ovrdPhone>
+	<perconCollFrDflt mapField="PERCON_COLL_FR_DFLT"/>
+	<ovrdPerCont type="list" mapList="OVRD_PER_CONT">
+		<startStopContactDetailId mapField="C1_SS_CONTACT_ID"/>
+		<version3 dataType="number" mapField="VERSION"/>
+		<contactDetailValue mapField="CONTACT_VALUE"/>
+		<contactDetailValueExtension mapField="CONTACT_VALUE_EXT"/>
+		<personContactType mapField="COMM_RTE_TYPE_CD"/>
+		<contactDetailStatus dataType="lookup" mapField="CND_VERIF_STATUS_FLG" lookup="CND_VERIF_STATUS_FLG"/>
+		<dndEnd dataType="time" mapField="DND_END_TM"/>
+		<contactDetailPrimary dataType="lookup" mapField="CND_PRIMARY_FLG" lookup="CND_PRIMARY_FLG"/>
+		<dndStart dataType="time" mapField="DND_START_TM"/>
+		<personId mapField="PER_ID"/>
+		<contactDetailActiveInactive dataType="lookup" mapField="CND_ACTINACT_FLG" lookup="CND_ACTINACT_FLG"/>
+		<accountId4 mapField="ACCT_ID"/>
+		<allowDoNotDisturb dataType="lookup" mapField="ALW_DND_FLG" lookup="ALW_DND_FLG"/>
+		<phoneFormat2 mapField="PHN_FMT_ALG_CD"/>
+		<primaryFlag dataType="boolean" mapField="CND_PRIMARY_SW"/>
+		<communicationRoutingMethod mapField="COMM_RTE_METH_FLG"/>
+		<description mapField="DESCR"/>
+		<allowPersonContactStatus dataType="lookup" mapField="ALW_PCT_STATUS_FLG" lookup="ALW_PCT_STATUS_FLG"/>
+		<statCtlByProcFlg mapField="STAT_CTL_BY_PROC_FLG"/>
+	</ovrdPerCont>
+	<country2 mapField="COUNTRY2"/>
+	<address1Available dataType="boolean" mapField="ADDR1_AVAIL"/>
+	<address2Available dataType="boolean" mapField="ADDR2_AVAIL"/>
+	<address3Available dataType="boolean" mapField="ADDR3_AVAIL"/>
+	<address4Available dataType="boolean" mapField="ADDR4_AVAIL"/>
+	<cityAvailable dataType="boolean" mapField="CITY_AVAIL"/>
+	<version2 dataType="number" mapField="VERSION2"/>
+	<number1Available dataType="boolean" mapField="NUM1_AVAIL"/>
+	<number2Available dataType="boolean" mapField="NUM2_AVAIL"/>
+	<houseTypeAvailable dataType="boolean" mapField="HOUSE_TYPE_AVAIL"/>
+	<countyAvailable dataType="boolean" mapField="COUNTY_AVAIL"/>
+	<stateAvailable dataType="boolean" mapField="STATE_AVAIL"/>
+	<postalAvailable dataType="boolean" mapField="POSTAL_AVAIL"/>
+	<inCityLimitAvailable dataType="boolean" mapField="IN_CITY_LIM_AVAIL"/>
+	<geoCodeAvailable dataType="boolean" mapField="GEO_CODE_AVAIL"/>
+	<language mapField="LANGUAGE_CD"/>
+	<description2 mapField="DESCR"/>
+	<address1Lbl mapField="ADDR1_LBL"/>
+	<address2Lbl mapField="ADDR2_LBL"/>
+	<address3Lbl mapField="ADDR3_LBL"/>
+	<address4Lbl mapField="ADDR4_LBL"/>
+	<cityLbl mapField="CITY_LBL"/>
+	<number1 mapField="NUM1_LBL"/>
+	<number2 mapField="NUM2_LBL"/>
+	<houseType2 mapField="HOUSE_TYPE_LBL"/>
+	<county2 mapField="COUNTY_LBL"/>
+	<state2 mapField="STATE_LBL"/>
+	<postal2 mapField="POSTAL_LBL"/>
+	<inCityLimit mapField="IN_CITY_LIM_LBL"/>
+	<geographicCode mapField="GEO_CODE_LBL"/>
+	<ssFa type="list" mapList="SS_FA">
+		<accountId5 mapField="ACCT_ID"/>
+		<fieldActivityId mapField="FA_ID"/>
+		<fieldActivityInformation mapField="FA_INFO"/>
+		<howToUse mapField="FA_TYPE_FLG_STR"/>
+		<premiseId5 mapField="PREM_ID"/>
+	</ssFa>
+	<collTypeFlg mapField="COLL_TYPE_FLG"/>
+	<pendSsi type="list" mapList="PEND_SSI">
+		<startDate2 dataType="date" mapField="START_DT"/>
+		<premiseId6 mapField="CHAR_PREM_ID"/>
+		<premiseInfo4 mapField="PREM_INFO"/>
+		<premiseId7 mapField="PREM_ID"/>
+		<division3 mapField="CIS_DIVISION"/>
+		<saType4 mapField="SA_TYPE_CD"/>
+		<status2 dataType="lookup" mapField="SA_STATUS_FLG" lookup="SA_STATUS_FLG"/>
+		<saInformation5 mapField="SA_INFO"/>
+		<count dataType="number" mapField="CNT"/>
+	</pendSsi>
+	<startRecCnt dataType="number" mapField="START_REC_CNT"/>
+	<stopRecCnt dataType="number" mapField="STOP_REC_CNT"/>
+	<stopRequestedBy2 mapField="SSA_STOP_REQED_BY"/>
+	<createFieldActivity2 dataType="boolean" mapField="SSA_CREATE_FA_SW"/>
+	<stopDate dataType="date" mapField="SSA_STOP_DT"/>
+	<ssaPremInfo mapField="SSA_PREM_INFO"/>
+	<ssaSaTypeInfo mapField="SSA_SA_TYPE_INFO"/>
+	<premiseId8 mapField="SSA_PREM_ID"/>
+	<cisDivision2 mapField="SSA_CIS_DIVISION"/>
+	<saType5 mapField="SSA_SA_TYPE_CD"/>
+	<geographicType5 mapField="SSA_GEO_TYPE_CD"/>
+	<geographicValue5 mapField="SSA_GEO_VAL"/>
+	<premiseId9 mapField="PREM_ID"/>
+	<customArea mapField="CUSTOM_AREA"/>
+	<enableAddrSrceFlg mapField="ENABLE_ADDR_SRCE_FLG"/>
+</schema>

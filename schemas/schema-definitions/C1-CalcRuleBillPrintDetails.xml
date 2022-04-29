@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<calcGroup mapField="CALC_GRP_CD"/>
+	<calcRule mapField="CALC_RULE_CD"/>
+	<executionSequence dataType="number" mapField="CR_EXEC_SEQ"/>
+	<description mapField="DESCR100"/>
+	<longDescription mapField="DESCRLONG"/>
+	<bo suppress="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<descriptionOnBillDetails type="group">
+		<descriptionOnBill mapField="DESCR_TMPLT"/>
+		<shouldPrintLine mdField="PRT_FLG" required="true" dataType="lookup" default="C1YE" mapXML="BO_DATA_AREA" lookup="PRT_FLG"/>
+		<shouldPrintLineIfZero mdField="PRT_IF_ZERO_FLG" required="true" dataType="lookup" default="C1NO" mapXML="BO_DATA_AREA" lookup="PRT_IF_ZERO_FLG"/>
+	</descriptionOnBillDetails>
+</schema>

@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<outboundMsgId mapField="OUTMSG_ID"/>
+	<externalSystem fkRef="F1-ESTMP" mapField="NT_XID_CD"/>
+	<outboundMessageType fkRef="F1-OMTYP" mapField="OUTMSG_TYPE_CD"/>
+	<processingMethod dataType="lookup" mapField="OUTMSG_PROC_METH_FLG" lookup="OUTMSG_PROC_METH_FLG"/>
+	<outboundMessageStatus dataType="lookup" mapField="OUTMSG_STATUS_FLG" lookup="OUTMSG_STATUS_FLG"/>
+	<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+	<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+	<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+	<errorDetail mapField="ERROR_DTL"/>
+	<sendDetails type="group" mapXML="XML_SOURCE">
+		<accountId mdField="ACCT_ID" required="true" fkRef="ACCT"/>
+		<personId mdField="PER_ID" required="true" fkRef="PER"/>
+		<startDate mdField="START_DT" required="true" dataType="date"/>
+		<endDate mdField="END_DT" required="true" dataType="date"/>
+	</sendDetails>
+	<responseDetails type="group" mapXML="XML_RESPONSE">
+		<excessRowCount mdField="ROW_CNT" dataType="number"/>
+		<notificationHistory type="list">
+			<notificationCreateDateTime mdField="CRE_DTTM" required="true" dataType="dateTime" isPrimeKey="true"/>
+			<accountId mdField="ACCT_ID" required="true" fkRef="ACCT"/>
+			<personId mdField="PER_ID" required="true" fkRef="PER"/>
+			<contactId mdField="CONTACT_ID" required="true" isPrimeKey="true"/>
+			<notificationPrefId mdField="NTF_PREF_ID" required="true" fkRef="C1-NTFPR"/>
+			<notificationText mdField="C1_NOTIF_TEXT_LBL" required="true"/>
+			<doNotDeliver mdField="DO_NOT_DELIVER_SW" dataType="boolean"/>
+			<deliveryType mdField="C1_SS_DELIVERY_TYPE" required="true"/>
+			<deliveryInformation mdField="DESCR" required="true"/>
+		</notificationHistory>
+	</responseDetails>
+</schema>

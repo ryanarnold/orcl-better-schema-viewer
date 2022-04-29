@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <caseId mapField="CASE_ID"/>
+  <characteristicType mapField="CHAR_TYPE_CD"/>
+  <characteristicValue mapField="CHAR_VAL"/>
+  <adhocValue mapField="ADHOC_CHAR_VAL"/>
+  <fkValue1 mapField="CHAR_VAL_FK1"/>
+  <fkValue2 mapField="CHAR_VAL_FK2"/>
+  <fkValue3 mapField="CHAR_VAL_FK3"/>
+  <fkValue4 mapField="CHAR_VAL_FK4"/>
+  <fkValue5 mapField="CHAR_VAL_FK5"/>
+  <messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+  <messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+  <messageParms type="group">
+    <messageParm1 mapField="MESSAGE_PARM_1"/>
+    <messageParm2 mapField="MESSAGE_PARM_2"/>
+    <messageParm3 mapField="MESSAGE_PARM_3"/>
+    <messageParm4 mapField="MESSAGE_PARM_4"/>
+    <messageParm5 mapField="MESSAGE_PARM_5"/>
+    <messageParm6 mapField="MESSAGE_PARM_6"/>
+    <messageParm7 mapField="MESSAGE_PARM_7"/>
+    <messageParm8 mapField="MESSAGE_PARM_8"/>
+    <messageParm9 mapField="MESSAGE_PARM_9"/>
+  </messageParms>
+</schema>

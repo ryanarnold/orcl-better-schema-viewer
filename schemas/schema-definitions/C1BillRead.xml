@@ -1,0 +1,320 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<billId mapField="BILL_ID"/>
+	<accountId mapField="ACCT_ID"/>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<billCycle mapField="BILL_CYC_CD"/>
+	<windowStartDate dataType="date" mapField="WIN_START_DT"/>
+	<billStatus dataType="lookup" mapField="BILL_STAT_FLG" lookup="BILL_STAT_FLG"/>
+	<billDate dataType="date" mapField="BILL_DT"/>
+	<dueDate dataType="date" mapField="DUE_DT"/>
+	<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+	<completedDatetime dataType="dateTime" mapField="COMPLETE_DTTM"/>
+	<isLatePaymentCharge dataType="boolean" mapField="LATE_PAY_CHARGE_SW"/>
+	<latePaymentChargeDate dataType="date" mapField="LATE_PAY_CHARGE_DT"/>
+	<isReopenAllowed dataType="boolean" mapField="ALLOW_REOPEN_SW"/>
+	<nextCreditReviewDate dataType="date" mapField="NEXT_CR_RVW_DT"/>
+	<crNoteFromBillId mapField="CR_NOTE_FR_BILL_ID"/>
+	<seqBillNumber dataType="number" mapField="ALT_BILL_ID"/>
+	<autopayCreationDate dataType="date" mapField="APAY_CRE_DT"/>
+	<autopayAmount dataType="money" mapField="APAY_AMT"/>
+	<autopayStopUserId mapField="APAY_STOP_USER_ID"/>
+	<autopayStopDateTime dataType="dateTime" mapField="APAY_STOP_DTTM"/>
+	<autopayStopAmount dataType="money" mapField="APAY_STOP_AMT"/>
+	<autopayStopCreationDate dataType="date" mapField="APAY_STOP_CRE_DT"/>
+	<isArchived dataType="boolean" mapField="ARCHIVE_SW"/>
+	<documentId mapField="DOC_ID"/>
+	<documentType dataType="lookup" mapField="DOC_TYPE_FLG" lookup="DOC_TYPE_FLG"/>
+	<offCycleBillGeneratorId mapField="OFFCYC_BGEN_ID"/>
+	<billSignature mapField="BILL_SIGN"/>
+	<ilmDate dataType="date" mapField="ILM_DT"/>
+	<isEligibleForArchiving dataType="boolean" mapField="ILM_ARCH_SW"/>
+	<version dataType="number" mapField="VERSION"/>
+	<actionGenerate2Sw dataType="boolean" mapField="ACTION_GENERATE2_SW"/>
+	<actionFreeze2Sw dataType="boolean" mapField="ACTION_FREEZE2_SW"/>
+	<actionComplete2Sw dataType="boolean" mapField="ACTION_COMPLETE2_SW"/>
+	<actionReopen2Sw dataType="boolean" mapField="ACTION_REOPEN2_SW"/>
+	<actionDelete2Sw dataType="boolean" mapField="ACTION_DELETE2_SW"/>
+	<actionDspBl2Sw dataType="boolean" mapField="ACTION_DSP_BL2_SW"/>
+	<saveBillId mapField="SAVE_BILL_ID"/>
+	<onlineBillUniformResourceLocator mapField="ON_LINE_BILL_URL"/>
+	<billPrintPlatform dataType="lookup" mapField="BILPRT_PLATFORM_FLG" lookup="BILPRT_PLATFORM_FLG"/>
+	<report mapField="REPORT_CD"/>
+	<billInformation mapField="BILL_INFO"/>
+	<billStatus2 mapField="BILL_STATUS"/>
+	<accountName mapField="ACCT_NAME"/>
+	<beginningBalance dataType="number" mapField="BEGINNING_BAL"/>
+	<totalPayments dataType="number" mapField="TOTAL_PAYMENTS"/>
+	<totalAdjustments dataType="number" mapField="TOTAL_ADJUSTMENTS"/>
+	<totalCorrections dataType="number" mapField="TOTAL_CORRECTIONS"/>
+	<totalCurrentChanges dataType="number" mapField="TOTAL_CURR_CHGS"/>
+	<endingBalance dataType="number" mapField="ENDING_BAL"/>
+	<totalRebillAfterCompletion dataType="number" mapField="TOTAL_COM_REBILL"/>
+	<totalCancelAfterCompletion dataType="number" mapField="TOTAL_COM_CANCEL"/>
+	<totAftCompletion dataType="number" mapField="TOT_AFT_COMPLETION"/>
+	<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+	<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+	<expandedMessage mapField="EXP_MSG"/>
+	<billSegmentStatus mapField="BSEG_STATUS_INFO"/>
+	<creditNoteMsg mapField="CREDIT_NOTE_MSG"/>
+	<corrNoteMsg1 mapField="CORR_NOTE_MSG_1"/>
+	<corrNoteMsg2 mapField="CORR_NOTE_MSG_2"/>
+	<totalGeneratedCharge dataType="number" mapField="TOT_GEN_CHG"/>
+	<isLatestBill dataType="boolean" mapField="LATEST_BILL_SW"/>
+	<frzCncPopUpMsg mapField="FRZ_CNC_POP_UP_MSG"/>
+	<processDate dataType="date" mapField="PROCESS_DT"/>
+	<autoPayMsg mapField="AUTO_PAY_MSG"/>
+	<archiveMsg mapField="ARCHIVE_MSG"/>
+	<cmWrkFld mapField="CM_WRK_FLD"/>
+	<totalAmount dataType="money" mapField="TOTAL_AMT"/>
+	<saTypeInfo mapField="SA_TYPE_INFO"/>
+	<allowAddressValidation dataType="boolean" mapField="C1_ALLOW_VAL_SW"/>
+	<addressValidationScript mapField="C1_VAL_SCR_CD"/>
+	<canRunRetrieve dataType="boolean" mapField="RETRIEVE_SW"/>
+	<retrieveFilter mapField="RETRIEVE_FILTER"/>
+	<retrievedBillId mapField="RETRIEVED_BILL_ID"/>
+	<saFilter dataType="lookup" mapField="SA_FILTER_FLG" lookup="SA_FILTER_FLG"/>
+	<billSegmentStatusFilter dataType="lookup" mapField="BS_STAT_FILTER_FLG" lookup="BS_STAT_FILTER_FLG"/>
+	<address1 mapField="ADDRESS1"/>
+	<city mapField="CITY"/>
+	<postal mapField="POSTAL"/>
+	<division mapField="CIS_DIVISION"/>
+	<saType mapField="SA_TYPE_CD"/>
+	<geographicType mapField="GEO_TYPE_CD"/>
+	<geographicValue mapField="GEO_VAL"/>
+	<canGenerate dataType="boolean" mapField="ACTION_GENERATE_SW"/>
+	<canFreeze dataType="boolean" mapField="ACTION_FREEZE_SW"/>
+	<canComplete dataType="boolean" mapField="ACTION_COMPLETE_SW"/>
+	<canFreezeComplete dataType="boolean" mapField="ACTION_FRZ_CMPL_SW"/>
+	<hasReopen dataType="boolean" mapField="ACTION_REOPEN_SW"/>
+	<canDelete dataType="boolean" mapField="ACTION_DELETE_SW"/>
+	<canDisplayBill dataType="boolean" mapField="ACTION_DSP_BL_SW"/>
+	<isCreditNote dataType="boolean" mapField="ACTION_CR_NOTE_SW"/>
+	<canCancelFrozen dataType="boolean" mapField="ACTION_CAN_FRZN_SW"/>
+	<canStopAutopay dataType="boolean" mapField="ACTION_STP_APAY_SW"/>
+	<actionWoSw dataType="boolean" mapField="ACTION_WO_SW"/>
+	<actionRevWoSw dataType="boolean" mapField="ACTION_REV_WO_SW"/>
+	<canCancelDeviceTest dataType="boolean" mapField="ACTION_CANCEL_SW"/>
+	<isCorrectionNote dataType="boolean" mapField="ACTION_CORR_NOTE_SW"/>
+	<isUndoCorrectionNote dataType="boolean" mapField="ACTION_UNDO_CORR_SW"/>
+	<canHideFreeze dataType="boolean" mapField="HIDE_FREEZE_SW"/>
+	<canHideComplete dataType="boolean" mapField="HIDE_COMPLETE_SW"/>
+	<canHideFreezeComplete dataType="boolean" mapField="HIDE_FRZ_CMPL_SW"/>
+	<canHideStopAutopay dataType="boolean" mapField="HIDE_STP_APAY_SW"/>
+	<hideWriteOffSw mapField="HIDE_WRITE_OFF_SW"/>
+	<hideRevWoSw mapField="HIDE_REV_WO_SW"/>
+	<hideCancelSw mapField="HIDE_CANCEL_SW"/>
+	<canDisableGenerate dataType="boolean" mapField="PROT_GENERATE_SW"/>
+	<canDisableFreeze dataType="boolean" mapField="PROT_FREEZE_SW"/>
+	<canDisableComplete dataType="boolean" mapField="PROT_COMPLETE_SW"/>
+	<shouldDisableFreezeComplete dataType="boolean" mapField="PROT_FRZ_CMPL_SW"/>
+	<hasDisableReopen dataType="boolean" mapField="PROT_REOPEN_SW"/>
+	<canDisableDelete dataType="boolean" mapField="PROT_DELETE_SW"/>
+	<canDisableCreditNote dataType="boolean" mapField="PROT_CR_NOTE_SW"/>
+	<shouldProtectCancelFrozen dataType="boolean" mapField="PROT_CAN_FRZN_SW"/>
+	<canProtectStopAutopay dataType="boolean" mapField="PROT_STP_APAY_SW"/>
+	<canDisableCorrectionNote dataType="boolean" mapField="PROT_CORR_NOTE_SW"/>
+	<canDisableUndoCorrectionNote dataType="boolean" mapField="PROT_UNDO_CORR_SW"/>
+	<isBillSegmentGenerated dataType="boolean" mapField="ACTION_BS_GEN_SW"/>
+	<hasBillSegmentFreeze dataType="boolean" mapField="ACTION_BS_FRZ_SW"/>
+	<isBillSegmentDeleted dataType="boolean" mapField="ACTION_BS_DEL_SW"/>
+	<isBillSegmentCancelRebillFreeze dataType="boolean" mapField="ACTION_BS_RBLF_SW"/>
+	<isBillSegmentCanceled dataType="boolean" mapField="ACTION_BS_CAN_SW"/>
+	<hasBillSegmentCreditNote dataType="boolean" mapField="ACTION_BS_CRNT_SW"/>
+	<hasError dataType="boolean" mapField="ERROR_SHOWN_SW"/>
+	<billSegmentEndDate dataType="date" mapField="CUTOFF_DT"/>
+	<accountingDate dataType="date" default="%CurrentDate" mapField="ACCOUNTING_DT"/>
+	<areEstimatesAllowed dataType="boolean" mapField="ALLOW_EST_SW"/>
+	<hasBillingOption dataType="boolean" mapField="BILLING_OPT_SW"/>
+	<canUseOldReadsItemsServiceQuantity dataType="boolean" mapField="USE_OLD_INFO_SW"/>
+	<cancelReason mapField="CAN_RSN_CD"/>
+	<canFrznMsg mapField="CAN_FRZN_MSG"/>
+	<creditNoteCnt dataType="number" mapField="CREDIT_NOTE_CNT"/>
+	<canOverrideBillDate dataType="boolean" mapField="OVRD_BILL_DT_SW"/>
+	<billDateOverrideMessage mapField="BILL_DT_OVRD_MSG"/>
+	<billDate2 dataType="date" mapField="OBC_BILL_DT"/>
+	<canShowAccountingDate dataType="boolean" mapField="SHOW_ACCTNG_DT_SW"/>
+	<cmpltnPopUpMsg mapField="CMPLTN_POP_UP_MSG"/>
+	<hasShowResultsSw dataType="boolean" mapField="SHOW_RESULT_SW"/>
+	<bsegInfo1 mapField="BSEG_INFO_1"/>
+	<bsegInfo2 mapField="BSEG_INFO_2"/>
+	<bsegInfo3 mapField="BSEG_INFO_3"/>
+	<currency mapField="CURRENCY_CD"/>
+	<emailLbl mapField="EMAIL_LBL"/>
+	<faxTelephone mapField="FAX_LBL"/>
+	<collectionType mapField="COLL_TYPE"/>
+	<isOpenItemAccounting dataType="boolean" mapField="OPEN_ITEM_SW"/>
+	<numberOfBalancedItems dataType="number" mapField="NBR_BAL_ITEM"/>
+	<balancedAmount dataType="money" mapField="BAL_AMT"/>
+	<numberOfUnbalancedItem dataType="number" mapField="NBR_UBAL_ITEM"/>
+	<unbalancedAmount dataType="money" mapField="UBAL_AMT"/>
+	<numberOfDisputedItems dataType="number" mapField="NBR_DISP_ITEM"/>
+	<disputedAmount dataType="money" mapField="DISP_AMT"/>
+	<numberOfUnmatchedItem dataType="number" mapField="NBR_UMAT_ITEM"/>
+	<unmatchedAmount dataType="money" mapField="UMAT_AMT"/>
+	<totalAdjustments2 dataType="money" mapField="OIA_TOTAL_ADJ"/>
+	<totalCorrections2 dataType="money" mapField="OIA_TOTAL_CORR"/>
+	<currentCharges dataType="money" mapField="OIA_TOTAL_CURR_CHG"/>
+	<fieldNamesForBillTotals mapField="FIELD_NAME1"/>
+	<fieldValueForBillTotals dataType="money" mapField="FIELD_VAL1"/>
+	<fieldNamesForBillTotals2 mapField="FIELD_NAME2"/>
+	<fieldValueForBillTotals2 dataType="money" mapField="FIELD_VAL2"/>
+	<fieldNamesForBillTotals3 mapField="FIELD_NAME3"/>
+	<fieldValueForBillTotals3 dataType="money" mapField="FIELD_VAL3"/>
+	<fieldNamesForBillTotals4 mapField="FIELD_NAME4"/>
+	<fieldValueForBillTotals4 dataType="money" mapField="FIELD_VAL4"/>
+	<fieldNamesForBillTotals5 mapField="FIELD_NAME5"/>
+	<fieldValueForBillTotals5 dataType="money" mapField="FIELD_VAL5"/>
+	<fieldNamesForBillTotals6 mapField="FIELD_NAME6"/>
+	<fieldValueForBillTotals6 dataType="money" mapField="FIELD_VAL6"/>
+	<fieldNamesForBillTotals7 mapField="FIELD_NAME7"/>
+	<fieldValueForBillTotals7 dataType="money" mapField="FIELD_VAL7"/>
+	<fieldNamesForBillTotals8 mapField="FIELD_NAME8"/>
+	<fieldValueForBillTotals8 dataType="money" mapField="FIELD_VAL8"/>
+	<fieldNamesForBillTotals9 mapField="FIELD_NAME9"/>
+	<fieldValueForBillTotals9 dataType="money" mapField="FIELD_VAL9"/>
+	<fieldNamesForBillTotals10 mapField="FIELD_NAME10"/>
+	<fieldValueForBillTotals10 dataType="money" mapField="FIELD_VAL10"/>
+	<billSegments type="list" mapList="BILL_SEG">
+		<billSegmentId mapField="BSEG_ID"/>
+		<serviceAgreement mapField="SA_ID"/>
+		<premiseId mapField="PREM_ID"/>
+		<premiseInfo mapField="PREM_INFO"/>
+		<billSegmentInformation mapField="BSEG_INFO"/>
+		<description mapField="DESCR"/>
+		<rebill mapField="REBILL"/>
+		<currentAmount dataType="money" mapField="CUR_AMT"/>
+		<transferDescription mapField="XFER_DESCR"/>
+		<shouldRebillAfter dataType="boolean" mapField="REBILL_AFTER_SW"/>
+		<isCancelAfter dataType="boolean" mapField="CANCEL_AFTER_SW"/>
+		<shouldProtectProcess dataType="boolean" mapField="PROT_PROCESS_SW"/>
+		<hasProcess dataType="boolean" mapField="PROCESS_SW"/>
+		<startDate dataType="date" mapField="START_DT"/>
+		<endDate dataType="date" mapField="END_DT"/>
+		<messageInformation mapField="MESSAGE_INFO"/>
+		<billSegmentStatus2 dataType="lookup" mapField="BSEG_STAT_FLG" lookup="BSEG_STAT_FLG"/>
+		<billingProcessSequence dataType="number" mapField="BI_PROC_SEQ"/>
+		<bsAccountingDt mapField="BS_ACCOUNTING_DT"/>
+		<isAccount dataType="boolean" mapField="SET_ACCT_DT_BS_SW"/>
+		<unitOfMeasure mapField="UOM_CD"/>
+		<unitOfMeasureDescription mapField="UOM_CD_DESCR"/>
+		<billableServiceQuantity dataType="number" mapField="BILL_SQ"/>
+		<isSATypeRequiresBillDeterminants dataType="boolean" mapField="SATY_REQ_BD_SW"/>
+	</billSegments>
+	<countRowsSelected dataType="number" mapField="ROWS_SELECTED_CNT"/>
+	<msgMoreThanBs mapField="MSG_MORE_THAN_BS"/>
+	<bsSum type="list" mapList="BS_SUM">
+		<billSegmentStatus3 dataType="lookup" mapField="BSEG_STAT_FLG" lookup="BSEG_STAT_FLG"/>
+		<description2 mapField="DESCR"/>
+		<totBsAvgInfo mapField="TOT_BS_AVG_INFO"/>
+		<payoffAmount dataType="money" mapField="TOT_AMT"/>
+	</bsSum>
+	<billRoutings type="list" mapList="BILL_RTG">
+		<billId2 mapField="BILL_ID"/>
+		<sequence dataType="number" mapField="SEQNO"/>
+		<personId mapField="PER_ID"/>
+		<numberOfBillCopies dataType="number" mapField="NBR_BILL_COPIES"/>
+		<batchControl mapField="BATCH_CD"/>
+		<billFormat dataType="lookup" mapField="BILL_FORMAT_FLG" lookup="BILL_FORMAT_FLG"/>
+		<customerPOId mapField="CUST_PO_ID"/>
+		<entityName1 mapField="ENTITY_NAME1"/>
+		<entityName2 mapField="ENTITY_NAME2"/>
+		<entityName3 mapField="ENTITY_NAME3"/>
+		<country mapField="COUNTRY"/>
+		<address12 mapField="ADDRESS1"/>
+		<address2 mapField="ADDRESS2"/>
+		<address3 mapField="ADDRESS3"/>
+		<address4 mapField="ADDRESS4"/>
+		<city2 mapField="CITY"/>
+		<streetNumber1 mapField="NUM1"/>
+		<streetNumber2 mapField="NUM2"/>
+		<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+		<county mapField="COUNTY"/>
+		<state mapField="STATE"/>
+		<postal2 mapField="POSTAL"/>
+		<taxVendorGeographicalCode mapField="GEO_CODE"/>
+		<isInCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+		<batchNumber dataType="number" mapField="BATCH_NBR"/>
+		<extractDateTime dataType="dateTime" mapField="EXTRACT_DTTM"/>
+		<shouldReprint dataType="boolean" mapField="REPRINT_SW"/>
+		<doNotExtract dataType="boolean" mapField="NO_BATCH_PRT_SW"/>
+		<billPrintIntercept mapField="BILL_PRT_INTERCEPT"/>
+		<billRouteType mapField="BILL_RTE_TYPE_CD"/>
+		<billRoutingMethod dataType="lookup" mapField="BILL_RTG_METH_FLG" lookup="BILL_RTG_METH_FLG"/>
+		<countryDescription mapField="COUNTRY_DESCR"/>
+		<stateDescription mapField="STATE_DESCR"/>
+		<statePostal mapField="STATE_POSTAL"/>
+		<entityName mapField="ENTITY_NAME"/>
+		<entityInfo mapField="ENTITY_INFO"/>
+		<country2 mapField="COUNTRY2"/>
+		<address1Available dataType="boolean" mapField="ADDR1_AVAIL"/>
+		<address2Available dataType="boolean" mapField="ADDR2_AVAIL"/>
+		<address3Available dataType="boolean" mapField="ADDR3_AVAIL"/>
+		<address4Available dataType="boolean" mapField="ADDR4_AVAIL"/>
+		<cityAvailable dataType="boolean" mapField="CITY_AVAIL"/>
+		<version2 dataType="number" mapField="VERSION2"/>
+		<number1Available dataType="boolean" mapField="NUM1_AVAIL"/>
+		<number2Available dataType="boolean" mapField="NUM2_AVAIL"/>
+		<houseTypeAvailable dataType="boolean" mapField="HOUSE_TYPE_AVAIL"/>
+		<countyAvailable dataType="boolean" mapField="COUNTY_AVAIL"/>
+		<stateAvailable dataType="boolean" mapField="STATE_AVAIL"/>
+		<postalAvailable dataType="boolean" mapField="POSTAL_AVAIL"/>
+		<inCityLimitAvailable dataType="boolean" mapField="IN_CITY_LIM_AVAIL"/>
+		<geoCodeAvailable dataType="boolean" mapField="GEO_CODE_AVAIL"/>
+		<language mapField="LANGUAGE_CD"/>
+		<description3 mapField="DESCR"/>
+		<address13 mapField="ADDR1_LBL"/>
+		<address22 mapField="ADDR2_LBL"/>
+		<address32 mapField="ADDR3_LBL"/>
+		<address42 mapField="ADDR4_LBL"/>
+		<city3 mapField="CITY_LBL"/>
+		<number1 mapField="NUM1_LBL"/>
+		<number2 mapField="NUM2_LBL"/>
+		<houseType2 mapField="HOUSE_TYPE_LBL"/>
+		<county2 mapField="COUNTY_LBL"/>
+		<state2 mapField="STATE_LBL"/>
+		<postal3 mapField="POSTAL_LBL"/>
+		<inCityLimit mapField="IN_CITY_LIM_LBL"/>
+		<geographicCode mapField="GEO_CODE_LBL"/>
+	</billRoutings>
+	<billMessages type="list" mapList="BILL_MSG">
+		<billId3 mapField="BILL_ID"/>
+		<billMessage mapField="BILL_MSG_CD"/>
+		<version3 dataType="number" mapField="VERSION"/>
+		<insert mapField="INSERT_CD"/>
+		<messagePriority dataType="lookup" mapField="MSG_PRIORITY_FLG" lookup="MSG_PRIORITY_FLG"/>
+		<messageOnBill mapField="MSG_ON_BILL"/>
+		<billMsgPrm type="list" mapList="BILL_MSG_PRM">
+			<billId4 mapField="BILL_ID"/>
+			<billMessage2 mapField="BILL_MSG_CD"/>
+			<sequence2 dataType="number" mapField="SEQ_NUM"/>
+			<messageParameterValue mapField="MSG_PARM_VAL"/>
+			<version4 dataType="number" mapField="VERSION"/>
+		</billMsgPrm>
+	</billMessages>
+	<billChar type="list" mapList="BILL_CHAR">
+		<billId5 mapField="BILL_ID"/>
+		<characteristicType mapField="CHAR_TYPE_CD"/>
+		<sequence3 dataType="number" mapField="SEQ_NUM"/>
+		<searchCharacteristicValue mapField="SRCH_CHAR_VAL"/>
+		<characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+		<characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
+		<characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+		<characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+		<characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
+		<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+		<characteristicValue mapField="CHAR_VAL"/>
+		<version5 dataType="number" mapField="VERSION"/>
+		<searchNavigationKey mapField="SRCH_NAV_KEY"/>
+		<navigationOption mapField="NAV_OPT_CD"/>
+		<table mapField="TBL_NAME"/>
+		<infoProgram mapField="INFO_PRG"/>
+		<characteristicType2 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+		<characteristicValueDescription mapField="CHAR_VAL_DESCR"/>
+		<characteristicValueForeignKeys mapField="CHAR_VAL_FK_STR"/>
+		<characteristicValueForeignKeyInformation mapField="CHAR_VAL_FK_INFO"/>
+		<isCompoundPrimaryKey dataType="boolean" mapField="COMP_PK_SW"/>
+		<charateristicValue mapField="COMP_PK_STR"/>
+		<characteristicType3 mapField="CHAR_TYPE_DESCR"/>
+	</billChar>
+</schema>

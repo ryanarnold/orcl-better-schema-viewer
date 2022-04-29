@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<businessFlagId mdField="BUS_FLG_ID"/>
+	<externalBusinessFlagId suppress="blank" mapField="EXT_BUS_FLG_ID"/>
+	<standardName mdField="BUS_FLG_STD_NAME" mapXML="BO_XML_DATA_AREA"/>
+	<sourceFileId suppress="blank" mapField="SRC_FILE_ID"/>
+	<externalSystemReference suppress="blank" mapField="EXT_SYS_REF"/>
+	<externalSystem suppress="blank" fkRef="F1-ESTMP" mapField="NT_XID_CD"/>
+	<externalId suppress="blank" mapField="EXT_ENTITY_ID"/>
+	<mo suppress="blank" mdField="BUS_FLG_MAINT_OBJ_CD" fkRef="F1-MO" mapField="MAINT_OBJ_CD"/>
+	<pkValue1 suppress="blank" mdField="BUS_FLG_PK_VALUE1" mapField="PK_VALUE1"/>
+	<pkValue2 suppress="blank" mdField="BUS_FLG_PK_VALUE2" mapField="PK_VALUE2"/>
+	<pkValue3 suppress="blank" mdField="BUS_FLG_PK_VALUE3" mapField="PK_VALUE3"/>
+	<pkValue4 suppress="blank" mdField="BUS_FLG_PK_VALUE4" mapField="PK_VALUE4"/>
+	<pkValue5 suppress="blank" mdField="BUS_FLG_PK_VALUE5" mapField="PK_VALUE5"/>
+	<businessFlagDateTime required="true" dataType="dateTime" mapField="BUS_FLG_DTTM"/>
+	<businessFlagEndDateTime suppress="blank" dataType="dateTime" mapField="BUS_FLG_END_DTTM"/>
+	<confidence suppress="blank" dataType="lookup" mapField="BUS_FLG_CONF_FLG" lookup="BUS_FLG_CONF_FLG"/>
+	<finalConfidence suppress="blank" dataType="lookup" mapField="FIN_BUS_FLG_CONF_FLG" lookup="FIN_BUS_FLG_CONF_FLG"/>
+	<priority suppress="blank" dataType="lookup" mapField="BUS_FLG_PRIORITY_FLG" lookup="BUS_FLG_PRIORITY_FLG"/>
+</schema>

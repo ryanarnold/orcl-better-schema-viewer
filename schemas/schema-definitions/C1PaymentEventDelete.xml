@@ -1,0 +1,415 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<paymentEventId mapField="PAY_EVENT_ID"/>
+	<retrievedPayEventId mapField="RETRIEVED_PAY_EVENT_ID"/>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<payorAccountId mapField="PAYOR_ACCT_ID"/>
+	<payorAccountName mapField="PAYOR_ACCT_NAME"/>
+	<matchType mapField="MATCH_TYPE_CD"/>
+	<matchValue mapField="MATCH_VAL"/>
+	<cashBackAmount dataType="money" mapField="CASH_BACK_AMT"/>
+	<amountTendered dataType="money" mapField="AMT_TENDERED"/>
+	<paymentAmount dataType="number" mapField="PAYMENT_AMT"/>
+	<totTenderAmt dataType="number" mapField="TOT_TENDER_AMT"/>
+	<isPayorAccountCashOnly dataType="boolean" mapField="ACCT_CASH_ONLY_SW"/>
+	<hasNoCashLikeTender dataType="boolean" mapField="NO_CASH_LIKE_SW"/>
+	<distributeAction dataType="lookup" mapField="PEVT_SPCL_ACTN_FLG" lookup="PEVT_SPCL_ACTN_FLG"/>
+	<isAddOkPressed dataType="boolean" mapField="ADD_OK_PRESSED_SW"/>
+	<nonCisName mapField="NON_CIS_NAME"/>
+	<referenceNumber mapField="NON_CIS_REF_NBR"/>
+	<nonCisComments mapField="NON_CIS_COMMENT"/>
+	<isNonCisAccount dataType="boolean" mapField="NON_CIS_ACCT_SW"/>
+	<canGoToManualDistribution dataType="boolean" mapField="MANUAL_DISTRIB_SW"/>
+	<paymentDate dataType="date" mapField="PAYMENT_DT"/>
+	<addCisPaySw dataType="boolean" mapField="ADD_CIS_PAY_SW"/>
+	<nonCisSaId mapField="NON_CIS_SA_ID"/>
+	<paymentTemplate mapField="PAY_TMPL_CD"/>
+	<bank mapField="BANK_CD"/>
+	<tndrSrceCd mapField="TNDR_SRCE_CD"/>
+	<tndrSrceMsg mapField="TNDR_SRCE_MSG"/>
+	<shouldPerformAuthorization dataType="boolean" mapField="TENDER_AUTH_SW"/>
+	<shouldOverrideTenderAuthorization dataType="boolean" mapField="TENDER_AUTH_OVRD_SW"/>
+	<tenderAuthorizationCode mapField="TENDER_AUTH_CD"/>
+	<tenderReversalCd mapField="TENDER_REVERSAL_CD"/>
+	<tndrType type="list" mapList="TNDR_TYPE">
+		<tenderedAmount dataType="money" mapField="TENDERED_AMT"/>
+		<tenderType mapField="TENDER_TYPE_CD"/>
+		<checkNumber mapField="CHECK_NBR"/>
+		<micrId mapField="MICR_ID"/>
+		<encryptedMicrId mapField="ENCR_MICR_ID"/>
+		<hashMicrId mapField="HASH_MICR_ID"/>
+		<externalReferenceId mapField="EXT_REFERENCE_ID"/>
+		<comment mapField="CI_CM_WRK_FLD"/>
+		<altCurrencyCd mapField="ALT_CURRENCY_CD"/>
+		<altTenderAmount dataType="number" mapField="ALT_TENDER_AMT"/>
+	</tndrType>
+	<shouldDisplayAlert dataType="boolean" mapField="DISPLAY_ALERT_SW"/>
+	<turnInAlert mapField="PG_TURN_IN_ALERT"/>
+	<paymentEventInformation mapField="PAY_EVENT_INFO"/>
+	<payEventAltCurr mapField="PAY_EVENT_ALT_CURR"/>
+	<hasTransfer dataType="boolean" mapField="PAY_EVT_TRANS_SW"/>
+	<hasDelete dataType="boolean" mapField="PAY_EVT_DEL_SW"/>
+	<hasCalculateCashBack dataType="boolean" mapField="CALC_CASH_BACK_SW"/>
+	<dstDtlTransSw dataType="boolean" mapField="DST_DTL_TRANS_SW"/>
+	<transPopupSw dataType="boolean" mapField="TRANS_POPUP_SW"/>
+	<canDistribute dataType="boolean" mapField="ALL_PAY_DIST_SW"/>
+	<shouldAllPaymentsFreeze dataType="boolean" mapField="ALL_PAY_FREEZE_SW"/>
+	<canProtectTransfer dataType="boolean" mapField="PROT_TRANSFER_SW"/>
+	<shouldProtectDistribute dataType="boolean" mapField="PROT_DISTRIBUTE_SW"/>
+	<canDisableDelete dataType="boolean" mapField="PROT_DELETE_SW"/>
+	<canDisableFreeze dataType="boolean" mapField="PROT_FREEZE_SW"/>
+	<accountId mapField="ACCT_ID"/>
+	<transferAccountName mapField="XFER_ACCT_NAME"/>
+	<isNonCISAccount dataType="boolean" mapField="ACCT_NON_CIS_SW"/>
+	<transferNonCisName mapField="XFER_NON_CIS_NAME"/>
+	<transferNonCisReferenceNbr mapField="XFER_NCIS_REF_NBR"/>
+	<transferNonCISComment mapField="XFER_NCIS_COMMENT"/>
+	<cancelReason mapField="CAN_RSN_CD"/>
+	<canFreezePayment dataType="boolean" mapField="FREEZE_PAY_SW"/>
+	<balTndrCtlExistSw mapField="BAL_TNDR_CTL_EXIST_SW"/>
+	<distributionTotalAmount dataType="money" mapField="DST_TOTAL_AMT"/>
+	<paymentTotalAmount dataType="money" mapField="PAYMENT_TOTAL_AMT"/>
+	<tenderTotalAmount dataType="money" mapField="TENDER_TOTAL_AMT"/>
+	<paymentNumber dataType="number" mapField="PAYMENT_NUMBER"/>
+	<tenderNumber dataType="number" mapField="TENDER_NUMBER"/>
+	<cashBackAmt2 dataType="money" mapField="CASH_BACK_AMT2"/>
+	<currency mapField="CURRENCY_CD"/>
+	<enableDst mapField="ENABLE_DST"/>
+	<pevtDstDtlSw dataType="boolean" mapField="PEVT_DST_DTL_SW"/>
+	<dfltDstCd mapField="DFLT_DST_CD"/>
+	<dfltDstCharCd mapField="DFLT_DST_CHAR_CD"/>
+	<dfltDstCharFlg mapField="DFLT_DST_CHAR_FLG"/>
+	<searchNavigationKey mapField="SRCH_NAV_KEY"/>
+	<navigationOption mapField="NAV_OPT_CD"/>
+	<table mapField="TBL_NAME"/>
+	<infoProgram mapField="INFO_PRG"/>
+	<characteristicValueDescription mapField="CHAR_VAL_DESCR"/>
+	<characteristicValueForeignKeys mapField="CHAR_VAL_FK_STR"/>
+	<characteristicValueForeignKeyInformation mapField="CHAR_VAL_FK_INFO"/>
+	<isCompoundPrimaryKey dataType="boolean" mapField="COMP_PK_SW"/>
+	<charateristicValue mapField="COMP_PK_STR"/>
+	<user mapField="USER_ID"/>
+	<endorseMessage mapField="ENDORSE_MSG"/>
+	<endorsePrompt mapField="ENDORSE_PROMPT"/>
+	<description mapField="DESCR"/>
+	<accountNumber mapField="ACCOUNT_NBR"/>
+	<totalPaymentCaptionShort mapField="TOT_PAY_CAP_SH"/>
+	<totalPaymentCaptionLong mapField="TOT_PAY_CAP_LG"/>
+	<totalTenderCaptionShort mapField="TOT_TNDR_CAP_SH"/>
+	<totalTenderCaptionLong mapField="TOT_TNDR_CAP_LG"/>
+	<amountReceivedCaption mapField="AMT_RECD_CAP"/>
+	<cashReturnedCaption mapField="CASH_RET_CAP"/>
+	<printControl mapField="PRINT_CTL"/>
+	<isReceiptLong dataType="boolean" mapField="RECPT_LONG_SW"/>
+	<isReceiptShort dataType="boolean" mapField="RECPT_SHORT_SW"/>
+	<recptCoName mapField="RECPT_CO_NAME"/>
+	<dupRecptCap mapField="DUP_RECPT_CAP"/>
+	<localOfcMsg mapField="LOCAL_OFC_MSG"/>
+	<hasPrintFocus dataType="boolean" mapField="PRINT_FOCUS_SW"/>
+	<isPrintDateTime dataType="boolean" mapField="PRINT_DTTM_SW"/>
+	<endorseText type="list" mapList="ENDORSE_TEXT">
+		<endorseLine mapField="ENDORSE_LINE"/>
+	</endorseText>
+	<receiptMessageTest type="list" mapList="RCPT_MSG_TEXT">
+		<receiptMessageLine mapField="RCPT_MSG_LINE"/>
+	</receiptMessageTest>
+	<hasFrozenPaymentsExist dataType="boolean" mapField="FRZN_PAYS_EXIST_SW"/>
+	<accountId2 mapField="ACCT_ID2"/>
+	<paymentDate2 dataType="date" mapField="PAY_DT"/>
+	<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+	<documentId mapField="DOC_ID"/>
+	<ilmDate dataType="date" mapField="ILM_DT"/>
+	<isEligibleForArchiving dataType="boolean" mapField="ILM_ARCH_SW"/>
+	<version dataType="number" mapField="VERSION"/>
+	<accountIdT mapField="ACCT_ID_T"/>
+	<payment type="list" mapList="PAY">
+		<paymentId mapField="PAY_ID"/>
+		<paymentEventId2 mapField="PAY_EVENT_ID"/>
+		<cancelReason2 mapField="CAN_RSN_CD"/>
+		<currency2 mapField="CURRENCY_CD"/>
+		<accountId3 mapField="ACCT_ID"/>
+		<paymentStatus dataType="lookup" mapField="PAY_STATUS_FLG" lookup="PAY_STATUS_FLG"/>
+		<paymentAmount2 dataType="money" mapField="PAY_AMT"/>
+		<nonCisName2 mapField="NON_CIS_NAME"/>
+		<referenceNumber2 mapField="NON_CIS_REF_NBR"/>
+		<nonCisComments2 mapField="NON_CIS_COMMENT"/>
+		<matchType2 mapField="MATCH_TYPE_CD"/>
+		<matchValue2 mapField="MATCH_VAL"/>
+		<ilmDate2 dataType="date" mapField="ILM_DT"/>
+		<isEligibleForArchiving2 dataType="boolean" mapField="ILM_ARCH_SW"/>
+		<version2 dataType="number" mapField="VERSION"/>
+		<payStatMsg mapField="PAY_STAT_MSG"/>
+		<accountName mapField="ACCT_NAME"/>
+		<accountCheckDigit mapField="ACCT_CHECK_DIGIT"/>
+		<accountBalance dataType="money" mapField="ACCT_BALANCE"/>
+		<paymentSegmentTotal dataType="money" mapField="PAY_SEG_TOTAL"/>
+		<billTotal dataType="money" mapField="BILL_TOTAL"/>
+		<billDate dataType="date" mapField="BILL_DT"/>
+		<paymentAccountCash mapField="PAY_ACCT_CASH"/>
+		<isNonCisPayment dataType="boolean" mapField="NON_CIS_PAYMENT_SW"/>
+		<isOpenItemAccounting dataType="boolean" mapField="OPEN_ITEM_ACTG_SW"/>
+		<billId mapField="BILL_ID"/>
+		<paymentId2 mapField="PAY_ID2"/>
+		<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+		<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+		<paymentExceptionType dataType="lookup" mapField="PAY_EXCP_FLG" lookup="PAY_EXCP_FLG"/>
+		<expandedMessage mapField="EXP_MSG"/>
+		<messageParameter1 mapField="MESSAGE_PARM1"/>
+		<messageParameter2 mapField="MESSAGE_PARM2"/>
+		<messageParameter3 mapField="MESSAGE_PARM3"/>
+		<messageParameter4 mapField="MESSAGE_PARM4"/>
+		<messageParameter5 mapField="MESSAGE_PARM5"/>
+		<messageParameter6 mapField="MESSAGE_PARM6"/>
+		<messageParameter7 mapField="MESSAGE_PARM7"/>
+		<messageParameter8 mapField="MESSAGE_PARM8"/>
+		<messageParameter9 mapField="MESSAGE_PARM9"/>
+		<callingProgramSequence mapField="CALL_SEQ"/>
+		<user2 mapField="USER_ID"/>
+		<isReviewed dataType="boolean" mapField="REVIEW_COMP"/>
+		<reviewUser mapField="REVIEW_USER_ID"/>
+		<reviewedDate dataType="date" mapField="REVIEW_DT"/>
+		<comments mapField="COMMENTS"/>
+		<creationDateTime2 dataType="dateTime" mapField="CRE_DTTM"/>
+		<pyChar type="list" mapList="PY_CHAR">
+			<paymentId2 mapField="PAY_ID"/>
+			<characteristicType mapField="CHAR_TYPE_CD"/>
+			<sequence dataType="number" mapField="SEQ_NUM"/>
+			<characteristicValue mapField="CHAR_VAL"/>
+			<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+			<version3 dataType="number" mapField="VERSION"/>
+			<characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
+			<characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+			<characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+			<characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
+			<characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+			<searchCharacteristicValue mapField="SRCH_CHAR_VAL"/>
+			<searchNavigationKey2 mapField="SRCH_NAV_KEY"/>
+			<navigationOption2 mapField="NAV_OPT_CD"/>
+			<table2 mapField="TBL_NAME"/>
+			<infoProgram2 mapField="INFO_PRG"/>
+			<characteristicType2 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+			<characteristicValueDescription2 mapField="CHAR_VAL_DESCR"/>
+			<characteristicValueForeignKeys2 mapField="CHAR_VAL_FK_STR"/>
+			<characteristicValueForeignKeyInformation2 mapField="CHAR_VAL_FK_INFO"/>
+			<isCompoundPrimaryKey2 dataType="boolean" mapField="COMP_PK_SW"/>
+			<charateristicValue2 mapField="COMP_PK_STR"/>
+			<characteristicType3 mapField="CHAR_TYPE_DESCR"/>
+			<characteristicEntity dataType="lookup" mapField="CHAR_ENTITY_FLG" lookup="CHAR_ENTITY_FLG"/>
+		</pyChar>
+	</payment>
+	<paymentTender type="list" mapList="PAY_TNDR">
+		<paymentTenderId mapField="PAY_TENDER_ID"/>
+		<currency3 mapField="CURRENCY_CD"/>
+		<payorAccountId2 mapField="PAYOR_ACCT_ID"/>
+		<tenderType2 mapField="TENDER_TYPE_CD"/>
+		<paymentEventId3 mapField="PAY_EVENT_ID"/>
+		<tenderControlId mapField="TNDR_CTL_ID"/>
+		<isIncludedInTenderControlBalance dataType="boolean" mapField="IN_TNDR_CTL_BAL_SW"/>
+		<tenderAmount dataType="money" mapField="TENDER_AMT"/>
+		<checkNumber2 mapField="CHECK_NBR"/>
+		<tenderStatus dataType="lookup" mapField="TNDR_STATUS_FLG" lookup="TNDR_STATUS_FLG"/>
+		<cancelReason3 mapField="CAN_RSN_CD"/>
+		<adjustmentId mapField="ADJ_ID"/>
+		<customerId mapField="CUST_ID"/>
+		<micrId2 mapField="MICR_ID"/>
+		<name mapField="NAME1"/>
+		<externalReferenceId2 mapField="EXT_REFERENCE_ID"/>
+		<version4 dataType="number" mapField="VERSION"/>
+		<altCurrencyCd2 mapField="ALT_CURRENCY_CD"/>
+		<altTenderAmount2 dataType="number" mapField="ALT_TENDER_AMT"/>
+		<encryptedMicrId2 mapField="ENCR_MICR_ID"/>
+		<hashMicrId2 mapField="HASH_MICR_ID"/>
+		<billFactor mapField="BF_CD"/>
+		<characteristicType4 mapField="CHAR_TYPE_CD"/>
+		<characteristicValue2 mapField="CHAR_VAL"/>
+		<touGroup mapField="TOU_GRP_CD"/>
+		<effectiveDate dataType="date" mapField="EFFDT"/>
+		<value dataType="number" mapField="VAL"/>
+		<version22 dataType="number" mapField="VERSION2"/>
+		<altTenderAmtFmt mapField="ALT_TENDER_AMT_FMT"/>
+		<tenderControl mapField="TNDR_CTL_INFO"/>
+		<tenderAccountInformation mapField="TNDR_ACCT_INFO"/>
+		<depositControlInformation mapField="DEP_CTL_INFO"/>
+		<tenderAccountCash mapField="TNDR_ACCT_CASH"/>
+		<hasCashTendered dataType="boolean" mapField="CASH_TNDR_SW"/>
+		<cashBackAllowedSw mapField="CASH_BACK_ALLOWED_SW"/>
+		<cashBackTenderSw mapField="CASH_BACK_TENDER_SW"/>
+		<accountCheckDigit2 mapField="ACCT_CHECK_DIGIT"/>
+		<bank2 mapField="BANK_CD"/>
+		<bankDescription mapField="DESCR_BKL"/>
+		<bankAccount mapField="BANK_ACCT_KEY"/>
+		<descriptionBalance mapField="DESCR_BAL"/>
+		<accountNumber2 mapField="ACCOUNT_NBR"/>
+		<encryptedBankAccountNumber mapField="ENCR_ACCOUNT_NBR"/>
+		<distributionCode mapField="DST_ID"/>
+		<isTenderTypeAuthorized dataType="boolean" mapField="TNDR_TYPE_AUTH_SW"/>
+		<tndrTypeNonCredit mapField="TNDR_TYPE_NON_CREDIT"/>
+		<tndrTypeCredit mapField="TNDR_TYPE_CREDIT"/>
+		<billInformation mapField="BILL_INFO"/>
+		<autopaySourceName mapField="APAY_SRC_NAME"/>
+		<externalSourceId mapField="EXT_SOURCE_ID"/>
+		<workCalendar mapField="EXT_CAL_CD"/>
+		<apayTenderTypeCd mapField="APAY_TENDER_TYPE_CD"/>
+		<isAutopay dataType="boolean" mapField="APAY_SW"/>
+		<canGenerateAutopay dataType="boolean" mapField="GENERATE_APAY_SW"/>
+		<expirationMonth mapField="EXP_MONTH"/>
+		<expirationYear mapField="EXP_YEAR"/>
+		<hasCancelTender dataType="boolean" mapField="TNDR_CANCEL_SW"/>
+		<cancelReason2 mapField="CAN_RSN_CD2"/>
+		<autopayClearingId mapField="APAY_CLR_ID"/>
+		<accountAutoPayId mapField="ACCT_APAY_ID"/>
+		<billId2 mapField="BILL_ID"/>
+		<paymentTenderId2 mapField="PAY_TENDER_ID2"/>
+		<scheduleExtractDate dataType="date" mapField="SCHED_EXTRACT_DT"/>
+		<batchControl mapField="BATCH_CD"/>
+		<batchNumber dataType="number" mapField="BATCH_NBR"/>
+		<autopaySource mapField="APAY_SRC_CD"/>
+		<externalAccountId mapField="EXT_ACCT_ID"/>
+		<expireDate dataType="date" mapField="EXPIRE_DT"/>
+		<entityName mapField="ENTITY_NAME"/>
+		<autopayDistributeAndFreezeDate dataType="date" mapField="APAY_DIST_FRZ_DT"/>
+		<version3 dataType="number" mapField="VERSION3"/>
+		<encryptedExternalAccountId mapField="ENCR_EXT_ACCT_ID"/>
+		<comment2 mapField="CI_CM_WRK_FLD"/>
+		<payorAccountIdT mapField="C1_T_PAYOR_ACCT_ID"/>
+		<pyTndrChar type="list" mapList="PY_TNDR_CHAR">
+			<paymentTenderId2 mapField="PAY_TENDER_ID"/>
+			<characteristicType5 mapField="CHAR_TYPE_CD"/>
+			<sequence2 dataType="number" mapField="SEQ_NUM"/>
+			<characteristicValue3 mapField="CHAR_VAL"/>
+			<adhocCharacteristicValue2 mapField="ADHOC_CHAR_VAL"/>
+			<version5 dataType="number" mapField="VERSION"/>
+			<characteristicValueForeignKey12 mapField="CHAR_VAL_FK1"/>
+			<characteristicValueFK22 mapField="CHAR_VAL_FK2"/>
+			<characteristicValueFK32 mapField="CHAR_VAL_FK3"/>
+			<characteristicValueFk42 mapField="CHAR_VAL_FK4"/>
+			<characteristicValueFK52 mapField="CHAR_VAL_FK5"/>
+			<searchCharacteristicValue2 mapField="SRCH_CHAR_VAL"/>
+			<searchNavigationKey3 mapField="SRCH_NAV_KEY"/>
+			<navigationOption3 mapField="NAV_OPT_CD"/>
+			<table3 mapField="TBL_NAME"/>
+			<infoProgram3 mapField="INFO_PRG"/>
+			<characteristicType6 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+			<characteristicValueDescription3 mapField="CHAR_VAL_DESCR"/>
+			<characteristicValueForeignKeys3 mapField="CHAR_VAL_FK_STR"/>
+			<characteristicValueForeignKeyInformation3 mapField="CHAR_VAL_FK_INFO"/>
+			<isCompoundPrimaryKey3 dataType="boolean" mapField="COMP_PK_SW"/>
+			<charateristicValue3 mapField="COMP_PK_STR"/>
+			<characteristicType7 mapField="CHAR_TYPE_DESCR"/>
+		</pyTndrChar>
+	</paymentTender>
+	<paymentEventId2 mapField="PAY_EVENT_ID2"/>
+	<messageCategory2 dataType="number" mapField="MESSAGE_CAT_NBR"/>
+	<messageNumber2 dataType="number" mapField="MESSAGE_NBR"/>
+	<userId2 mapField="USER_ID2"/>
+	<paymentEventExceptionType dataType="lookup" mapField="PAY_EVT_EXCP_FLG" lookup="PAY_EVT_EXCP_FLG"/>
+	<expandedMessage2 mapField="EXP_MSG"/>
+	<messageParameter12 mapField="MESSAGE_PARM1"/>
+	<messageParameter22 mapField="MESSAGE_PARM2"/>
+	<messageParameter32 mapField="MESSAGE_PARM3"/>
+	<messageParameter42 mapField="MESSAGE_PARM4"/>
+	<messageParameter52 mapField="MESSAGE_PARM5"/>
+	<messageParameter62 mapField="MESSAGE_PARM6"/>
+	<messageParameter72 mapField="MESSAGE_PARM7"/>
+	<messageParameter82 mapField="MESSAGE_PARM8"/>
+	<messageParameter92 mapField="MESSAGE_PARM9"/>
+	<callingProgramSequence2 mapField="CALL_SEQ"/>
+	<creationDateTime2 dataType="dateTime" mapField="CRE_DTTM2"/>
+	<isReviewed2 dataType="boolean" mapField="REVIEW_COMP"/>
+	<reviewUser2 mapField="REVIEW_USER_ID"/>
+	<reviewedDate2 dataType="date" mapField="REVIEW_DT"/>
+	<comments2 mapField="COMMENTS"/>
+	<version23 dataType="number" mapField="VERSION2"/>
+	<dr type="list" mapList="DR">
+		<paymentEventId4 mapField="PAY_EVENT_ID"/>
+		<characteristicType8 mapField="CHAR_TYPE_CD"/>
+		<sequence3 dataType="number" mapField="SEQ_NUM"/>
+		<distributionRule mapField="DST_RULE_CD"/>
+		<amount dataType="money" mapField="AMOUNT"/>
+		<characteristicValue4 mapField="CHAR_VAL"/>
+		<adhocCharacteristicValue3 mapField="ADHOC_CHAR_VAL"/>
+		<characteristicValueForeignKey13 mapField="CHAR_VAL_FK1"/>
+		<characteristicValueFK23 mapField="CHAR_VAL_FK2"/>
+		<characteristicValueFK33 mapField="CHAR_VAL_FK3"/>
+		<characteristicValueFk43 mapField="CHAR_VAL_FK4"/>
+		<characteristicValueFK53 mapField="CHAR_VAL_FK5"/>
+		<searchCharacteristicValue3 mapField="SRCH_CHAR_VAL"/>
+		<version6 dataType="number" mapField="VERSION"/>
+		<searchNavigationKey4 mapField="SRCH_NAV_KEY"/>
+		<navigationOption4 mapField="NAV_OPT_CD"/>
+		<table4 mapField="TBL_NAME"/>
+		<infoProgram4 mapField="INFO_PRG"/>
+		<characteristicType9 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+		<characteristicValueDescription4 mapField="CHAR_VAL_DESCR"/>
+		<characteristicValueForeignKeys4 mapField="CHAR_VAL_FK_STR"/>
+		<characteristicValueForeignKeyInformation4 mapField="CHAR_VAL_FK_INFO"/>
+		<isCompoundPrimaryKey4 dataType="boolean" mapField="COMP_PK_SW"/>
+		<charateristicValue4 mapField="COMP_PK_STR"/>
+		<characteristicType10 mapField="CHAR_TYPE_DESCR"/>
+		<characteristicEntity2 dataType="lookup" mapField="CHAR_ENTITY_FLG" lookup="CHAR_ENTITY_FLG"/>
+		<distributionRuleLabel mapField="DST_RULE_LABEL"/>
+	</dr>
+	<xd type="list" mapList="XD">
+		<paymentEventId5 mapField="PAY_EVENT_ID"/>
+		<characteristicType11 mapField="CHAR_TYPE_CD"/>
+		<sequence4 dataType="number" mapField="SEQ_NUM"/>
+		<distributionRule2 mapField="DST_RULE_CD"/>
+		<amount2 dataType="money" mapField="AMOUNT"/>
+		<characteristicValue5 mapField="CHAR_VAL"/>
+		<adhocCharacteristicValue4 mapField="ADHOC_CHAR_VAL"/>
+		<characteristicValueForeignKey14 mapField="CHAR_VAL_FK1"/>
+		<characteristicValueFK24 mapField="CHAR_VAL_FK2"/>
+		<characteristicValueFK34 mapField="CHAR_VAL_FK3"/>
+		<characteristicValueFk44 mapField="CHAR_VAL_FK4"/>
+		<characteristicValueFK54 mapField="CHAR_VAL_FK5"/>
+		<searchCharacteristicValue4 mapField="SRCH_CHAR_VAL"/>
+		<version7 dataType="number" mapField="VERSION"/>
+		<searchNavigationKey5 mapField="SRCH_NAV_KEY"/>
+		<navigationOption5 mapField="NAV_OPT_CD"/>
+		<table5 mapField="TBL_NAME"/>
+		<infoProgram5 mapField="INFO_PRG"/>
+		<characteristicType12 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+		<characteristicValueDescription5 mapField="CHAR_VAL_DESCR"/>
+		<characteristicValueForeignKeys5 mapField="CHAR_VAL_FK_STR"/>
+		<characteristicValueForeignKeyInformation5 mapField="CHAR_VAL_FK_INFO"/>
+		<isCompoundPrimaryKey5 dataType="boolean" mapField="COMP_PK_SW"/>
+		<charateristicValue5 mapField="COMP_PK_STR"/>
+		<characteristicType13 mapField="CHAR_TYPE_DESCR"/>
+		<characteristicEntity3 dataType="lookup" mapField="CHAR_ENTITY_FLG" lookup="CHAR_ENTITY_FLG"/>
+		<distributionRuleLabel2 mapField="DST_RULE_LABEL"/>
+	</xd>
+	<accountFilter dataType="lookup" mapField="ACCT_FILTER_FLG" lookup="ACCT_FILTER_FLG"/>
+	<entityName2 mapField="ENTITY_NAME"/>
+	<acctId3 mapField="ACCT_ID3"/>
+	<retrievedFilter mapField="RETRIEVED_FILTER"/>
+	<tenderInputDataArea mapField="TENDER_INPUT_DATA_AREA_CD"/>
+	<tenderInputDataArea2 mapField="TENDER_INPUT_DATA_AREA"/>
+	<pyeChar type="list" mapList="PYE_CHAR">
+		<paymentEventId6 mapField="PAY_EVENT_ID"/>
+		<characteristicType14 mapField="CHAR_TYPE_CD"/>
+		<sequence5 dataType="number" mapField="SEQ_NUM"/>
+		<characteristicValue6 mapField="CHAR_VAL"/>
+		<adhocCharacteristicValue5 mapField="ADHOC_CHAR_VAL"/>
+		<version8 dataType="number" mapField="VERSION"/>
+		<characteristicValueForeignKey15 mapField="CHAR_VAL_FK1"/>
+		<characteristicValueFK25 mapField="CHAR_VAL_FK2"/>
+		<characteristicValueFK35 mapField="CHAR_VAL_FK3"/>
+		<characteristicValueFk45 mapField="CHAR_VAL_FK4"/>
+		<characteristicValueFK55 mapField="CHAR_VAL_FK5"/>
+		<searchCharacteristicValue5 mapField="SRCH_CHAR_VAL"/>
+		<searchNavigationKey6 mapField="SRCH_NAV_KEY"/>
+		<navigationOption6 mapField="NAV_OPT_CD"/>
+		<table6 mapField="TBL_NAME"/>
+		<infoProgram6 mapField="INFO_PRG"/>
+		<characteristicType15 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+		<characteristicValueDescription6 mapField="CHAR_VAL_DESCR"/>
+		<characteristicValueForeignKeys6 mapField="CHAR_VAL_FK_STR"/>
+		<characteristicValueForeignKeyInformation6 mapField="CHAR_VAL_FK_INFO"/>
+		<isCompoundPrimaryKey6 dataType="boolean" mapField="COMP_PK_SW"/>
+		<charateristicValue6 mapField="COMP_PK_STR"/>
+		<characteristicType16 mapField="CHAR_TYPE_DESCR"/>
+		<characteristicEntity4 dataType="lookup" mapField="CHAR_ENTITY_FLG" lookup="CHAR_ENTITY_FLG"/>
+	</pyeChar>
+	<c1CallerProcessFlg dataType="lookup" mapField="C1_CALLER_PROCESS_FLG" lookup="C1_CALLER_PROCESS_FLG"/>
+</schema>

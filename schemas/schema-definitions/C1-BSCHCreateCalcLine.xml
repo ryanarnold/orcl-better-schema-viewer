@@ -1,0 +1,274 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<input type="group">
+		<option dataType="lookup" private="true" default="C1CL" mapField="BSEG_CRE_HELPER_OPT_FLG" lookup="BSEG_CRE_HELPER_OPT_FLG"/>
+		<descriptionBuilderData type="group">
+			<descriptionTemplate mapField="DESCR_TMPLT"/>
+			<shouldPrint mdField="PRT_SW" dataType="boolean" mapField="DBD_PRT_SW"/>
+			<currency type="group">
+				<id mdField="CURRENCY_CD" mapField="DBD_CURRENCY_CD"/>
+			</currency>
+			<currencySymbol mapField="CUR_SYMBOL"/>
+			<currencyDecimalPosition mdField="DECIMAL_POSITIONS" dataType="number" mapField="CURR_DEC_POS"/>
+			<uomDecimalPosition mdField="DECIMAL_POSITIONS" dataType="number" mapField="UOM_DEC_POS"/>
+			<rateComponentType dataType="lookup" mapField="RC_TYPE_FLG" lookup="RC_TYPE_FLG"/>
+			<valueType dataType="lookup" mapField="VAL_TYPE_FLG" lookup="VAL_TYPE_FLG"/>
+			<itemCount dataType="number" mapField="ITEM_CNT"/>
+			<rateComponentServiceQuantity dataType="number" mapField="RC_SQ"/>
+			<initialRateValue mdField="INIT_RT_VAL" dataType="number" mapField="DBD_INIT_RT_VAL"/>
+			<calculatedAmount mdField="CALC_AMT" dataType="money" mapField="DBD_CALC_AMT"/>
+			<calculatedAmountRaw dataType="number" mapField="CALC_VAL"/>
+			<rateComponentDecimalPosition mapField="RC_DECIMAL_POS"/>
+			<rateComponentRateValue mdField="RC_RT_VAL" dataType="number" mapField="DBD_RC_RT_VAL"/>
+			<crossReferenceAmount mdField="RC_XREF_AMT" dataType="money" mapField="DBD_RC_XREF_AMT"/>
+			<crossReferenceServiceQuantity mdField="RC_XREF_SQ" dataType="number" mapField="DBD_RC_XREF_SQ"/>
+			<isProrated dataType="boolean" mapField="PRORATED_SW"/>
+			<relativeDays dataType="number" mapField="RELATIVE_DAYS"/>
+			<baseDays dataType="number" mapField="BASE_DAYS"/>
+			<adjustedFinalProrationFactor dataType="number" mapField="AFF"/>
+			<percentExempt dataType="number" mapField="PCT_EXEMPT"/>
+			<shouldCalculateOnly mdField="CALC_ONLY_SW" dataType="boolean" mapField="DBD_CALC_ONLY_SW"/>
+			<timeOfUse type="group">
+				<id mdField="TOU_CD" mapField="DBD_TOU_CD"/>
+			</timeOfUse>
+			<beginDate dataType="date" mapField="BEGIN_DT"/>
+			<endDate dataType="date" mapField="END_DT"/>
+			<itemType type="group">
+				<id mapField="ITEM_TYPE_CD"/>
+			</itemType>
+			<stepLowValue mdField="STEP_LOW_VAL" dataType="number" mapField="DBD_STEP_LOW_VAL"/>
+			<stepHighValue mdField="STEP_HIGH_VAL" dataType="number" mapField="DBD_STEP_HIGH_VAL"/>
+			<precisionLevel dataType="number" mapField="RND_PRECISION_LVL"/>
+			<language type="group">
+				<id mapField="LANGUAGE_CD"/>
+			</language>
+			<characteristicDataList type="group">
+				<CharacteristicData type="list" mapList="CHAR_LIST">
+					<characteristicType type="group">
+						<id mapField="CHAR_TYPE"/>
+					</characteristicType>
+					<characteristicValue mapField="CHAR_VAL"/>
+					<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+				</CharacteristicData>
+			</characteristicDataList>
+			<applyRateData type="group">
+				<serviceAgreement type="group">
+					<id mapField="SA_ID"/>
+				</serviceAgreement>
+				<masterServiceAgreement type="group">
+					<id mdField="SA_ID" mapField="MASTER_SA_ID"/>
+				</masterServiceAgreement>
+				<masterBillSegment type="group">
+					<id mapField="MASTER_BSEG_ID"/>
+				</masterBillSegment>
+				<bill type="group">
+					<id mapField="BILL_ID"/>
+				</bill>
+				<adjustment type="group">
+					<id mapField="ADJ_ID"/>
+				</adjustment>
+				<billSegmentCreationDateTime mdField="CRE_DTTM" dataType="dateTime" mapField="BSEG_CRE_DTTM"/>
+				<billSegmentPeriodStart mdField="START_DT" dataType="date" mapField="BSEG_START_DT"/>
+				<billSegmentPeriodEnd mdField="END_DT" dataType="date" mapField="BSEG_END_DT"/>
+				<consumptionPeriodStart mdField="START_DT" dataType="date" mapField="CONS_START_DT"/>
+				<consumptionPeriodEnd mdField="END_DT" dataType="date" mapField="CONS_END_DT"/>
+				<characteristicPremise type="group">
+					<id mdField="PREM_ID" mapField="CHAR_PREM_ID"/>
+				</characteristicPremise>
+				<characteristicServicePoint type="group">
+					<id mdField="SP_ID" mapField="CHAR_SP_ID"/>
+				</characteristicServicePoint>
+				<accountingDate dataType="date" mapField="ACCOUNTING_DT"/>
+				<shouldRetainReadCollection dataType="boolean" mapField="RTN_READ_COLL_SW"/>
+				<shouldRetainItemCollection dataType="boolean" mapField="RTN_ITEM_COLL_SW"/>
+				<shouldRetainSqCollection dataType="boolean" mapField="RTN_SQ_COLL_SW"/>
+				<shouldRetainSqRules dataType="boolean" mapField="RTN_SQ_RULE_COLL_SW"/>
+				<thirdParty mapField="THIRD_PARTY_SW"/>
+				<language type="group">
+					<id mapField="LANGUAGE_CD"/>
+				</language>
+				<usageConsumptionPeriodStart mdField="START_DT" dataType="date" mapField="USG_CONS_START_DT"/>
+				<usageConsumptionPeriodEnd mdField="END_DT" dataType="date" mapField="USG_CONS_END_DT"/>
+				<serviceAgreementType type="group">
+					<id type="group">
+						<divisionId mapField="CIS_DIVISION"/>
+						<saType mapField="SA_TYPE_CD"/>
+					</id>
+				</serviceAgreementType>
+				<revenueClass type="group">
+					<id mapField="REV_CL_CD"/>
+				</revenueClass>
+				<rateSchedule type="group">
+					<id mapField="RS_CD"/>
+				</rateSchedule>
+				<saPeriodStartDate mdField="START_DT" dataType="date" mapField="SA_PERIOD_START_DT"/>
+				<saPeriodEndDate mdField="END_DT" dataType="date" mapField="SA_PERIOD_END_DT"/>
+				<startDayOption dataType="lookup" mapField="IB_BASE_TM_DAY_FLG" lookup="IB_BASE_TM_DAY_FLG"/>
+				<intervalBillingSaCutoffTime mapField="IB_SA_CUTOFF_DTTM_TM"/>
+				<usageId mapField="USAGE_ID"/>
+				<usagePeriodStartDateTime dataType="dateTime" mapField="USAGE_START_DTTM"/>
+				<usagePeriodEndDateTime dataType="dateTime" mapField="USAGE_END_DTTM"/>
+				<billSegmentAmount dataType="money" mapField="BSEG_AMT"/>
+				<glDetailsDataArea mapField="GL_DATA_AREA"/>
+			</applyRateData>
+			<scalarVariables type="list" mapList="SCALAR_VAR_LIST">
+				<value dataType="number" mapField="MIN_VALUE"/>
+				<seq dataType="number" mapField="SEQNO"/>
+			</scalarVariables>
+			<calculationRule mapField="DBD_CALC_RULE_CD"/>
+			<calculationGroup mapField="DBD_CALC_GRP_CD"/>
+			<expandedDescription mdField="DESCR" mapField="EXP_DESCR"/>
+		</descriptionBuilderData>
+		<addToHeader mapField="ADD_TO_HDR_SW"/>
+	</input>
+	<inputOutput type="group">
+		<billCalculationLineData type="group">
+			<headerSequence dataType="number" mapField="HEADER_SEQ"/>
+			<sequence dataType="number" mapField="SEQNO"/>
+			<rcSequence dataType="number" mapField="RC_SEQ"/>
+			<shouldPrint dataType="boolean" mapField="PRT_SW"/>
+			<shouldAppearInSummary dataType="boolean" mapField="APP_IN_SUMM_SW"/>
+			<calculatedAmount dataType="money" mapField="CALC_AMT"/>
+			<auditCalculatedAmount dataType="number" mapField="AUDIT_CALC_AMT"/>
+			<exemptAmount dataType="money" mapField="EXEMPT_AMT"/>
+			<baseAmount dataType="money" mapField="BASE_AMT"/>
+			<currencyId mapField="CURRENCY_CD"/>
+			<distributionCodeId mapField="DST_ID"/>
+			<characteristicTypeId mapField="CHAR_TYPE_CD"/>
+			<characteristicValue mapField="CHAR_VAL"/>
+			<unitOfMeasureId mapField="UOM_CD"/>
+			<timeOfUseId mapField="TOU_CD"/>
+			<serviceQuantityIdentifierId mapField="SQI_CD"/>
+			<billableServiceQuantity dataType="number" mapField="BILL_SQ"/>
+			<measuresPeakQuantity dataType="boolean" mapField="MSR_PEAK_QTY_SW"/>
+			<descriptionOnBill mapField="DESCR_ON_BILL"/>
+			<calculationRuleId type="group">
+				<calculationGroupId mapField="CALC_GRP_CD"/>
+				<calculationRule mapField="CALC_RULE_CD"/>
+			</calculationRuleId>
+			<stepHighValue dataType="number" mapField="STEP_HIGH_VAL"/>
+			<stepLowValue dataType="number" mapField="STEP_LOW_VAL"/>
+			<maxServiceQuantity dataType="number" mapField="MAX_SQ"/>
+			<includeCalcLine mdField="F1_VALID_SW" dataType="boolean" mapField="INCLUDE_CALC_LN_SW"/>
+			<shouldCalculateOnly dataType="boolean" mapField="CALC_ONLY_SW"/>
+			<isStatistical dataType="boolean" mapField="STATISTICAL_SW"/>
+			<statisticalServiceQuantity mdField="BILL_SQ" dataType="number" mapField="STATISTICAL_SQ"/>
+			<shouldCreateBillLine dataType="boolean" mapField="CRE_BILL_LN_SW"/>
+			<isSummary mdField="F1_VALID_SW" dataType="boolean" mapField="IS_SUMMARY"/>
+			<fcpoRetentionRule dataType="lookup" mapField="FCPO_RULE_FLG" lookup="FCPO_RULE_FLG"/>
+			<isTaxExemptionApplied mdField="F1_VALID_SW" dataType="boolean" mapField="IS_TAX_EXEMPT_APPLIED"/>
+			<rateComponentCrossReferenceSq dataType="number" mapField="RC_XREF_SQ"/>
+			<rateComponentCrossReferenceAmt dataType="money" mapField="RC_XREF_AMT"/>
+			<initialValue dataType="number" mapField="INIT_RT_VAL"/>
+			<rateComponentValue dataType="number" mapField="RC_RT_VAL"/>
+			<billCalculationLineCharacteristicData type="group">
+				<BillCalculationLineCharacteristicData type="list" mapList="CALC_LINE_CHAR_LIST">
+					<billCalculationLineCharDto type="group">
+						<id type="group">
+							<billCalculationLineId type="group">
+								<billSegmentCalculationHeaderId type="group">
+									<billSegmentId mapField="BSEG_ID"/>
+									<headerSequence dataType="number" mapField="HEADER_SEQ"/>
+								</billSegmentCalculationHeaderId>
+								<sequence dataType="number" mapField="SEQNO"/>
+							</billCalculationLineId>
+							<characteristicTypeId mapField="CHAR_TYPE_CD"/>
+						</id>
+						<characteristicValue mapField="CHAR_VAL"/>
+						<characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
+						<characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+						<characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+						<characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
+						<characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+						<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+					</billCalculationLineCharDto>
+				</BillCalculationLineCharacteristicData>
+			</billCalculationLineCharacteristicData>
+		</billCalculationLineData>
+		<calculationHeaderDataList type="group">
+			<BillSegmentCalculationHeaderData type="list" mapList="CALC_HDR_LIST">
+				<billSegmentCalculationHeaderDto type="group">
+					<id type="group">
+						<billSegmentId mapField="BSEG_ID"/>
+						<headerSequence dataType="number" mapField="HEADER_SEQ"/>
+					</id>
+					<startDate dataType="date" mapField="START_DT"/>
+					<endDate dataType="date" mapField="END_DT"/>
+					<calculatedAmount dataType="money" mapField="CALC_AMT"/>
+					<descriptionOnBill mapField="DESCR_ON_BILL"/>
+					<currencyId mapField="CURRENCY_CD"/>
+					<rateVersionId type="group">
+						<rateScheduleId mapField="RS_CD"/>
+						<effectiveDate dataType="date" mapField="EFFDT"/>
+					</rateVersionId>
+					<billableChargeId mapField="BILLABLE_CHG_ID"/>
+				</billSegmentCalculationHeaderDto>
+				<billCalculationLineData type="group">
+					<BillCalculationLineData type="list" mapList="CALC_LINE_LIST">
+						<headerSequence dataType="number" mapField="HEADER_SEQ"/>
+						<sequence dataType="number" mapField="SEQNO"/>
+						<rcSequence dataType="number" mapField="RC_SEQ"/>
+						<shouldPrint dataType="boolean" mapField="PRT_SW"/>
+						<shouldAppearInSummary dataType="boolean" mapField="APP_IN_SUMM_SW"/>
+						<calculatedAmount dataType="money" mapField="CALC_AMT"/>
+						<auditCalculatedAmount dataType="number" mapField="AUDIT_CALC_AMT"/>
+						<exemptAmount dataType="money" mapField="EXEMPT_AMT"/>
+						<baseAmount dataType="money" mapField="BASE_AMT"/>
+						<currencyId mapField="CURRENCY_CD"/>
+						<distributionCodeId mapField="DST_ID"/>
+						<characteristicTypeId mapField="CHAR_TYPE_CD"/>
+						<characteristicValue mapField="CHAR_VAL"/>
+						<unitOfMeasureId mapField="UOM_CD"/>
+						<timeOfUseId mapField="TOU_CD"/>
+						<serviceQuantityIdentifierId mapField="SQI_CD"/>
+						<billableServiceQuantity dataType="number" mapField="BILL_SQ"/>
+						<measuresPeakQuantity dataType="boolean" mapField="MSR_PEAK_QTY_SW"/>
+						<descriptionOnBill mapField="DESCR_ON_BILL"/>
+						<calculationRuleId type="group">
+							<calculationGroupId mapField="CALC_GRP_CD"/>
+							<calculationRule mapField="CALC_RULE_CD"/>
+						</calculationRuleId>
+						<stepHighValue dataType="number" mapField="STEP_HIGH_VAL"/>
+						<stepLowValue dataType="number" mapField="STEP_LOW_VAL"/>
+						<maxServiceQuantity dataType="number" mapField="MAX_SQ"/>
+						<includeCalcLine mdField="F1_VALID_SW" dataType="boolean" mapField="INCLUDE_CALC_LN_SW"/>
+						<shouldCalculateOnly dataType="boolean" mapField="CALC_ONLY_SW"/>
+						<isStatistical dataType="boolean" mapField="STATISTICAL_SW"/>
+						<statisticalServiceQuantity mdField="BILL_SQ" dataType="number" mapField="STATISTICAL_SQ"/>
+						<shouldCreateBillLine dataType="boolean" mapField="CRE_BILL_LN_SW"/>
+						<isSummary mdField="F1_VALID_SW" dataType="boolean" mapField="IS_SUMMARY"/>
+						<fcpoRetentionRule dataType="lookup" mapField="FCPO_RULE_FLG" lookup="FCPO_RULE_FLG"/>
+						<isTaxExemptionApplied mdField="F1_VALID_SW" dataType="boolean" mapField="IS_TAX_EXEMPT_APPLIED"/>
+						<rateComponentCrossReferenceSq dataType="number" mapField="RC_XREF_SQ"/>
+						<rateComponentCrossReferenceAmt dataType="money" mapField="RC_XREF_AMT"/>
+						<initialValue dataType="number" mapField="INIT_RT_VAL"/>
+						<rateComponentValue dataType="number" mapField="RC_RT_VAL"/>
+						<billCalculationLineCharacteristicData type="group">
+							<BillCalculationLineCharacteristicData type="list" mapList="CALC_LINE_CHAR_LIST">
+								<billCalculationLineCharDto type="group">
+									<id type="group">
+										<billCalculationLineId type="group">
+											<billSegmentCalculationHeaderId type="group">
+												<billSegmentId mapField="BSEG_ID"/>
+												<headerSequence dataType="number" mapField="HEADER_SEQ"/>
+											</billSegmentCalculationHeaderId>
+											<sequence dataType="number" mapField="SEQNO"/>
+										</billCalculationLineId>
+										<characteristicTypeId mapField="CHAR_TYPE_CD"/>
+									</id>
+									<characteristicValue mapField="CHAR_VAL"/>
+									<characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
+									<characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+									<characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+									<characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
+									<characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+									<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+								</billCalculationLineCharDto>
+							</BillCalculationLineCharacteristicData>
+						</billCalculationLineCharacteristicData>
+					</BillCalculationLineData>
+				</billCalculationLineData>
+			</BillSegmentCalculationHeaderData>
+		</calculationHeaderDataList>
+	</inputOutput>
+</schema>

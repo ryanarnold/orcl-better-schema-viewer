@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<input type="group">
+		<spId mdField="SP_ID" required="true"/>
+		<meterConfigurationId mdField="MTR_CONFIG_ID" required="true"/>
+	</input>
+	<output type="group">
+		<spMeterInfo/>
+	</output>
+</schema>

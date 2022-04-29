@@ -1,0 +1,93 @@
+<?xml version="1.0" ?>
+<schema name="schema" fwRel="2">
+	<outboundMsgId mapField="OUTMSG_ID"/>
+	<externalSystem fkRef="F1-ESTMP" mapField="NT_XID_CD"/>
+	<outboundMessageType fkRef="F1-OMTYP" mapField="OUTMSG_TYPE_CD"/>
+	<processingMethod dataType="lookup" mapField="OUTMSG_PROC_METH_FLG" lookup="OUTMSG_PROC_METH_FLG"/>
+	<outboundMessageStatus dataType="lookup" mapField="OUTMSG_STATUS_FLG" lookup="OUTMSG_STATUS_FLG"/>
+	<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+	<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+	<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+	<errorDetail mapField="ERROR_DTL"/>
+	<sendDetails type="group" mapXML="XML_SOURCE">
+		<head type="group">
+			<action/>
+			<key1 type="group">
+				<name default="ACCT_ID"/>
+				<value/>
+			</key1>
+			<key2 type="group">
+				<name default="PER_ID"/>
+				<value/>
+			</key2>
+			<key3 type="group">
+				<name/>
+				<value/>
+			</key3>
+			<key4 type="group">
+				<name/>
+				<value/>
+			</key4>
+			<key5 type="group">
+				<name/>
+				<value/>
+			</key5>
+			<emailAddress/>
+			<webUserId/>
+			<ipAddress/>
+			<cssUser/>
+			<custom type="group">
+				<field1 type="group">
+					<name/>
+					<value/>
+				</field1>
+				<field2 type="group">
+					<name/>
+					<value/>
+				</field2>
+				<field3 type="group">
+					<name/>
+					<value/>
+				</field3>
+				<field4 type="group">
+					<name/>
+					<value/>
+				</field4>
+				<field5 type="group">
+					<name/>
+					<value/>
+				</field5>
+				<field6 type="group">
+					<name/>
+					<value/>
+				</field6>
+				<field7 type="group">
+					<name/>
+					<value/>
+				</field7>
+				<field8 type="group">
+					<name/>
+					<value/>
+				</field8>
+				<field9 type="group">
+					<name/>
+					<value/>
+				</field9>
+				<field10 type="group">
+					<name/>
+					<value/>
+				</field10>
+			</custom>
+		</head>
+		<notificationType mdField="C1_NF_SSTASK_TYPE_FLG" dataType="lookup" lookup="C1_NF_SSTASK_TYPE_FLG"/>
+		<notificationTypeDescription mdField="C1_SS_NOTIF_TYPE_DESCR"/>
+		<overrideDoNotDisturb mdField="C1_OVRD_DONOT_DISTURB" fkRef="F1-SCRCD"/>
+		<notificationsList type="list">
+			<deliveryType mdField="C1_SS_DELIVERY_TYPE" dataType="lookup" isPrimeKey="true" lookup="C1_SS_DELIVERY_TYPE"/>
+			<notificationText mdField="MESSAGE_TEXT" required="true"/>
+			<notificationSubject mdField="MESSAGE_TEXT"/>
+			<from mdField="C1_FROM_LBL"/>
+			<replyTo mdField="C1_REPLYTO_LBL"/>
+		</notificationsList>
+	</sendDetails>
+</schema>

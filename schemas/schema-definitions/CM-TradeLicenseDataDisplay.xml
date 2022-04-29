@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<personId fkRef="PER"/>
+	<tradeLicenseId/>
+	<tradeLicenseApplicationNumber/>
+	<freezoneId/>
+	<premiseId fkRef="PREM"/>
+	<TradeLicenseDataCenter type="group">
+		<TransactionStatus type="group">
+			<LicenseNo/>
+			<ApplicationNo/>
+			<TradeNameAR/>
+			<TradeNameEN/>
+			<LicenseType_Serial/>
+			<LegalForm_Serial/>
+			<LicenseStatus_Serial/>
+			<StartDate/>
+			<EndDate/>
+			<POBoxNo/>
+			<TelNo/>
+			<EmailAddress/>
+			<MobileNumber/>
+		</TransactionStatus>
+		<Activity_List_Info type="group">
+			<ActivityListInfo type="list">
+				<tempSequence/>
+				<NameAR isPrimeKey="true"/>
+				<NameEN isPrimeKey="true"/>
+				<Serial isPrimeKey="true"/>
+			</ActivityListInfo>
+		</Activity_List_Info>
+		<Owners_List_Info type="group">
+			<OwnersListInfo type="list">
+				<tempSequence/>
+				<NameAR isPrimeKey="true"/>
+				<NameEN isPrimeKey="true"/>
+				<OwnerType_Serial isPrimeKey="true"/>
+				<Nationality_Serial/>
+				<Gender_Serial/>
+				<IdentityNumber/>
+				<PassportNumber/>
+				<PhoneNumber/>
+				<MobileNumber/>
+			</OwnersListInfo>
+		</Owners_List_Info>
+	</TradeLicenseDataCenter>
+	<FreezoneDataCenter type="group">
+		<Status/>
+		<accountDetails type="group">
+			<FZ_Authorized_Manager_Arabic__c/>
+			<FZ_Authorized_Manager__c/>
+			<FZ_Authorized_Manager__r type="group">
+				<Id isPrimeKey="true"/>
+				<Name/>
+			</FZ_Authorized_Manager__r>
+			<FZ_Company_Name_Arabic__c/>
+			<FZ_Company_Status__c/>
+			<FZ_Current_License__c/>
+			<FZ_Current_License__r type="group">
+				<FZ_Expiry_Date__c/>
+				<FZ_State_Date__c/>
+				<Id/>
+				<Name/>
+			</FZ_Current_License__r>
+			<FZ_Email__c/>
+			<FZ_Legal_Form_Abbreviation_Arabic__c/>
+			<FZ_Legal_Form_Abbreviation__c/>
+			<FZ_Legal_Form_Arabic__c/>
+			<FZ_Legal_Form__c/>
+			<FZ_License_Expiry_Date__c/>
+			<FZ_License_State_Date__c/>
+			<FZ_Mobile__c/>
+			<Id/>
+			<Name/>
+		</accountDetails>
+		<activeActivities type="group">
+			<ActiveActivity type="list">
+				<FZ_Activity_Arabic_Name__c/>
+				<FZ_Activity_English_Name__c/>
+				<Id isPrimeKey="true"/>
+			</ActiveActivity>
+		</activeActivities>
+		<activeTenancyContract type="group">
+			<ActiveTenancyContract type="list">
+				<FZ_Location_Name__c/>
+				<Id isPrimeKey="true"/>
+			</ActiveTenancyContract>
+		</activeTenancyContract>
+		<shareholders type="group">
+			<Shareholder type="list">
+				<relEmail/>
+				<relName isPrimeKey="true"/>
+				<relNameArabic/>
+				<relPhone/>
+			</Shareholder>
+		</shareholders>
+	</FreezoneDataCenter>
+	<PersonDetails type="group">
+		<PersonNumber/>
+		<TradeLicenseNumber/>
+		<TradeLicenseApplicationNumber/>
+		<FreezoneId/>
+		<OrderPrimaryName/>
+		<AlternativeName/>
+		<TradeLicenseType/>
+		<TradeLicenseStartDate/>
+		<TradeLicenseEndDate/>
+		<FreezoneStartDate/>
+		<FreezoneEndDate/>
+		<POBox/>
+		<EmailAddress/>
+		<MobileNumberGroup type="group">
+			<MobileNumbersList type="list">
+				<phoneNumber/>
+			</MobileNumbersList>
+		</MobileNumberGroup>
+		<TelephoneNumberGroup type="group">
+			<TelephoneNumberList type="list">
+				<phoneNumber/>
+			</TelephoneNumberList>
+		</TelephoneNumberGroup>
+	</PersonDetails>
+	<OrderDetails type="group">
+		<OrderNumber/>
+		<PersonNumber/>
+		<TradeLicenseNumber/>
+		<FreezoneId/>
+		<OrderPrimaryName/>
+		<AlternativeName/>
+		<TradeLicenseType/>
+		<TradeLicenseStartDate/>
+		<TradeLicenseEndDate/>
+		<FreezoneStartDate/>
+		<FreezoneEndDate/>
+		<POBox/>
+		<EmailAddress/>
+		<MobileNumberGroup type="group">
+			<MobileNumbersList type="list">
+				<phoneNumber/>
+			</MobileNumbersList>
+		</MobileNumberGroup>
+		<TelephoneNumberGroup type="group">
+			<TelephoneNumberList type="list">
+				<phoneNumber/>
+			</TelephoneNumberList>
+		</TelephoneNumberGroup>
+	</OrderDetails>
+	<Checkbox type="group">
+		<TradeLicenseNo/>
+		<TradeLicenseAppNo/>
+		<TradeNameEN/>
+		<TradeNameAR/>
+		<TradeLicenseType/>
+		<TradeLicenseStartDate/>
+		<TradeLicenseEndDate/>
+		<POBox/>
+		<EmailAddress/>
+		<MobileNumber/>
+		<TelephoneNumber/>
+		<FreezoneId/>
+		<FreezoneStartDate/>
+		<FreezoneEndDate/>
+		<LegalForm/>
+	</Checkbox>
+</schema>

@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<accountBo mdField="C1_ACCT_BO_LBL" required="true" fkRef="F1-BUSOB"/>
+	<autopayDetails type="group">
+		<startDate mdField="START_DT" dataType="date"/>
+		<cancelAutopay mdField="C1_CANCEL_APAY_SW" required="true" dataType="boolean" default="false"/>
+		<autopayMethod mdField="APAY_METHOD_FLG" dataType="lookup" lookup="APAY_METHOD_FLG"/>
+		<paymentType mdField="EXT_TYPE_FLG" dataType="lookup" lookup="EXT_TYPE_FLG"/>
+		<externalSourceId mdField="EXT_SOURCE_ID"/>
+		<cardType mdField="CARD_TYPE_FLG" dataType="lookup" lookup="CARD_TYPE_FLG"/>
+		<externalAccountId mdField="EXT_ACCT_ID"/>
+		<encrExternalAccountId mdField="ENCR_EXT_ACCT_ID"/>
+		<name mdField="ENTITY_NAME"/>
+		<autopayMaxWithdrawalAmount mdField="APAY_MAX_WDRWL_AMT" dataType="money"/>
+		<expMonth mdField="EXP_MONTH"/>
+		<expYear mdField="EXP_YEAR"/>
+		<autopaySource mdField="APAY_SRC_CD"/>
+	</autopayDetails>
+	<accountBoData type="raw"/>
+</schema>

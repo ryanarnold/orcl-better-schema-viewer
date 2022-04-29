@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<billId mapField="BILL_ID"/>
+	<billCycle mapField="BILL_CYC_CD"/>
+	<accountId mapField="ACCT_ID"/>
+	<billStatus dataType="lookup" mapField="BILL_STAT_FLG" lookup="BILL_STAT_FLG"/>
+	<billDate dataType="date" mapField="BILL_DT"/>
+	<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+	<completionDateTime dataType="dateTime" mapField="COMPLETE_DTTM"/>
+	<dueDate dataType="date" mapField="DUE_DT"/>
+	<balanceAmount dataType="money" mapField="BAL_AMT"/>
+	<totalAmount dataType="money" mapField="TOTAL_AMT"/>
+	<beginningBalance mapField="BEGINNING_BAL"/>
+	<totalPayments mapField="TOTAL_PAYMENTS"/>
+	<totalAdjustments mapField="TOTAL_ADJUSTMENTS"/>
+	<totalCorrections mapField="TOTAL_CORRECTIONS"/>
+	<totalCurrentCharges mapField="TOTAL_CURR_CHGS"/>
+	<endingBalance mapField="ENDING_BAL"/>
+	<currency mapField="CURRENCY_CD"/>
+	<billRouting type="list" mapList="BILL_RTG">
+		<personId mapField="PER_ID"/>
+		<billFormat dataType="lookup" mapField="BILL_FORMAT_FLG" lookup="BILL_FORMAT_FLG"/>
+		<name mapField="ENTITY_NAME"/>
+		<entityInfo mapField="ENTITY_INFO"/>
+		<name1 mapField="ENTITY_NAME1"/>
+		<country mapField="COUNTRY"/>
+		<addressLine1 mapField="ADDRESS1"/>
+		<addressLine2 mapField="ADDRESS2"/>
+		<addressLine3 mapField="ADDRESS3"/>
+		<addressLine4 mapField="ADDRESS4"/>
+		<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+		<number1 mapField="NUM1"/>
+		<number2 mapField="NUM2"/>
+		<inCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+		<city mapField="CITY"/>
+		<geographic mapField="GEO_CODE"/>
+		<county mapField="COUNTY"/>
+		<state mapField="STATE"/>
+		<postal mapField="POSTAL"/>
+		<billRouteType mapField="BILL_RTE_TYPE_CD"/>
+		<billRoutingMethod dataType="lookup" mapField="BILL_RTG_METH_FLG" lookup="BILL_RTG_METH_FLG"/>
+	</billRouting>
+	<billSegments type="list" mapList="BILL_SEG">
+		<billSegmentId mapField="BSEG_ID"/>
+		<saId mapField="SA_ID"/>
+		<serviceAddress mapField="PREM_INFO"/>
+		<bsegInfo mapField="BSEG_INFO"/>
+		<description mapField="DESCR"/>
+		<billSegmentStatus dataType="lookup" mapField="BSEG_STAT_FLG" lookup="BSEG_STAT_FLG"/>
+		<messageInfo mapField="MESSAGE_INFO"/>
+		<currentAmount dataType="money" mapField="CUR_AMT"/>
+		<startDate dataType="date" mapField="START_DT"/>
+		<endDate dataType="date" mapField="END_DT"/>
+	</billSegments>
+	<billMessages type="list" mapList="BILL_MSG">
+		<messagePriority dataType="lookup" mapField="MSG_PRIORITY_FLG" lookup="MSG_PRIORITY_FLG"/>
+		<messageOnBill mapField="MSG_ON_BILL"/>
+	</billMessages>
+</schema>

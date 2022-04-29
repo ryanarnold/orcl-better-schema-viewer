@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<stockLocation mapField="STK_LOC_CD"/>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<parentStockLocation mapField="PARENT_STK_LOC_CD"/>
+	<holdInventory dataType="lookup" mapField="HOLD_INVENTORY_FLG" lookup="HOLD_INVENTORY_FLG"/>
+	<version dataType="number" mapField="VERSION"/>
+	<language mapField="LANGUAGE_CD"/>
+	<description mapField="DESCR"/>
+	<longDescription mapField="DESCRLONG"/>
+	<stockLocationDescription mapField="STK_LOC_DESCR"/>
+	<canTransferStockLocationSwitchItems dataType="boolean" mapField="XFER_ITEM_SW"/>
+	<stockLocation2 mapField="IXFER_STK_LOC_CD"/>
+	<ixferStkLocDescr mapField="IXFER_STK_LOC_DESCR"/>
+	<locationDateTime dataType="dateTime" mapField="IXFER_LOC_DTTM"/>
+	<canTransferStockLocationMeters dataType="boolean" mapField="XFER_MTR_SW"/>
+	<stockLocation3 mapField="MXFER_STK_LOC_CD"/>
+	<mxferStkLocDescr mapField="MXFER_STK_LOC_DESCR"/>
+	<locationDateTime2 dataType="dateTime" mapField="MXFER_LOC_DTTM"/>
+	<isrchStkLocCd mapField="ISRCH_STK_LOC_CD"/>
+	<isrchStkLocDescr mapField="ISRCH_STK_LOC_DESCR"/>
+	<isrchItemTypeCd mapField="ISRCH_ITEM_TYPE_CD"/>
+	<locationDateTime3 dataType="dateTime" mapField="ISRCH_LOC_DTTM"/>
+	<isrchBadgeNbr mapField="ISRCH_BADGE_NBR"/>
+	<iscrhItmTypeDesc mapField="ISCRH_ITM_TYPE_DESC"/>
+	<msrchStkLocCd mapField="MSRCH_STK_LOC_CD"/>
+	<msrchStkLocDescr mapField="MSRCH_STK_LOC_DESCR"/>
+	<msrchMtrTypeCd mapField="MSRCH_MTR_TYPE_CD"/>
+	<locationDateTime4 dataType="dateTime" mapField="MSRCH_LOC_DTTM"/>
+	<msrchBadgeNbr mapField="MSRCH_BADGE_NBR"/>
+	<msrchMtrTypeDesc mapField="MSRCH_MTR_TYPE_DESC"/>
+	<invItem type="list" mapList="INV_ITEM">
+		<item mapField="ITEM_ID"/>
+		<itemType mapField="ITEM_TYPE_CD"/>
+		<itemTypeDescr mapField="ITEM_TYPE_DESCR"/>
+		<badgeNumber mapField="BADGE_NBR"/>
+		<serialNumber mapField="SERIAL_NBR"/>
+		<mnfrModelDescr mapField="MNFR_MODEL_DESCR"/>
+		<locationDateTime5 dataType="dateTime" mapField="LOC_DTTM"/>
+		<subsqntLoc mapField="SUBSQNT_LOC"/>
+		<shouldProtectTransferInventory dataType="boolean" mapField="PROT_XFER_INV_SW"/>
+		<canTransferInventory dataType="boolean" mapField="XFER_INV_SW"/>
+		<stockLocation4 mapField="STK_LOC_CD"/>
+		<spItemHistoryId mapField="SP_ITEM_HIST_ID"/>
+	</invItem>
+	<invMtr type="list" mapList="INV_MTR">
+		<meter mapField="MTR_ID"/>
+		<meterType mapField="MTR_TYPE_CD"/>
+		<deviceType mapField="MTR_TYPE_DESCR"/>
+		<badgeNumber2 mapField="BADGE_NBR"/>
+		<serialNumber2 mapField="SERIAL_NBR"/>
+		<mnfrModelDescr2 mapField="MNFR_MODEL_DESCR"/>
+		<locationDateTime6 dataType="dateTime" mapField="LOC_DTTM"/>
+		<subsqntLoc2 mapField="SUBSQNT_LOC"/>
+		<shouldProtectTransferInventory2 dataType="boolean" mapField="PROT_XFER_INV_SW"/>
+		<canTransferInventory2 dataType="boolean" mapField="XFER_INV_SW"/>
+		<stockLocation5 mapField="STK_LOC_CD"/>
+		<spMeterHistoryId mapField="SP_MTR_HIST_ID"/>
+	</invMtr>
+</schema>

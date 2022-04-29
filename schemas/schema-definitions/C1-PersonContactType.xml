@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<personContactType required="true" isPrimeKey="true" mapField="COMM_RTE_TYPE_CD"/>
+	<description required="true" mapField="DESCR100"/>
+	<detailedDescription mapField="DESCRLONG"/>
+	<communicationRoutingMethod required="true" dataType="lookupBO" mapField="COMM_RTE_METH_FLG" lookupBO="C1-CommRoutingMethodLookup"/>
+	<formatAlgorithm required="true" fkRef="F1-ALG" search="F1-ALGSQ1" searchField="ALG_ENTITY_FLG:'C1FM';" searchOut="ALG_CD;" mapField="FMT_ALG_CD"/>
+	<allowDoNotDisturb required="true" dataType="lookup" mapField="ALW_DND_FLG" lookup="ALW_DND_FLG"/>
+	<allowPersonContactStatus required="true" dataType="lookup" mapField="ALW_PCT_STATUS_FLG" lookup="ALW_PCT_STATUS_FLG"/>
+	<initialContactDetailStatus mdField="CND_VERIF_STATUS_LBL" dataType="lookup" mapField="CND_VERIF_STATUS_FLG" lookup="CND_VERIF_STATUS_FLG"/>
+	<bo suppress="true" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<deliveryTypes type="list" mapChild="C1_COMM_RTE_TYPE_DVTYP">
+		<deliveryType dataType="lookup" isPrimeKey="true" mapField="C1_SS_DELIVERY_TYPE" lookup="C1_SS_DELIVERY_TYPE"/>
+	</deliveryTypes>
+	<phoneTypes type="list" mapChild="C1_COMM_RTE_TYPE_CHAR">
+		<characteristicType suppress="true" required="true" default="C1-PHTYP" mapField="CHAR_TYPE_CD"/>
+		<sequence suppress="true" dataType="number" mapField="SEQ_NUM"/>
+		<phoneType mdField="PHONE_TYPE" fkRef="F1-PHONE" mapField="CHAR_VAL_FK1"/>
+	</phoneTypes>
+</schema>

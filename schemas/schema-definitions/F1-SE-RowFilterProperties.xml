@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<rowFilterGroup type="group">
+		<fieldValueList suppress="true" type="list">
+			<fieldName suppress="true" mdField="F1_SE_FLAT_FIELDNAME" fkRef="F1-MOFLD"/>
+			<fieldValueKey suppress="true" mdField="F1_SE_FLATFLD_ROW_VAL" dataType="lookupBO" lookupBO="F1-SchemaFlatFieldRowValues"/>
+			<defValue suppress="true"/>
+			<defSysVar suppress="true" dataType="lookupBO" lookupBO="F1-SchemaDefaultSysVariables"/>
+			<defConstant suppress="true"/>
+			<defContext suppress="true"/>
+			<isValue suppress="true"/>
+			<isEffectDate suppress="true"/>
+			<isEffectDateTime suppress="true"/>
+			<isConstant suppress="true"/>
+			<isContext suppress="true"/>
+			<isNumber suppress="true" dataType="number"/>
+			<fieldValue suppress="true" mdField="F1_SE_FLAT_FIELDVALUE"/>
+		</fieldValueList>
+	</rowFilterGroup>
+</schema>

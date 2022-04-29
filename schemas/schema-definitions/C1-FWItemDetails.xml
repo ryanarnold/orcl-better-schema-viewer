@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <itemDataDetails type="group">
+    <itemId mapField="ITEM_ID"/>
+    <badgeNumber mapField="BADGE_NBR"/>
+    <deviceManufacturer mapField="MFG_CD"/>
+    <deviceModel mapField="MODEL_CD"/>
+  </itemDataDetails>
+  <version suppress="true" dataType="number" mapField="VERSION"/>
+</schema>

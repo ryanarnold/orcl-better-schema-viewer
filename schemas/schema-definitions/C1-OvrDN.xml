@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<accountId/>
+	<personId/>
+	<serviceTaskId/>
+	<notificationType/>
+	<overrideDoNotDisturb dataType="boolean"/>
+</schema>

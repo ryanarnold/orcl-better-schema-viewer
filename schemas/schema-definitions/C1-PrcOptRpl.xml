@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<action required="true"/>
+	<optInMessage type="group">
+		<messageRequest type="group">
+			<accountId mdField="ACCT_ID"/>
+			<personId mdField="PER_ID"/>
+			<personContactValue mdField="CONTACT_VALUE"/>
+			<deliveryType mdField="C1_SS_DELIVERY_TYPE" required="true" dataType="lookup" lookup="C1_SS_DELIVERY_TYPE"/>
+			<notificationType mdField="NTF_TYPE_CD"/>
+			<customElements type="raw"/>
+		</messageRequest>
+		<messageResponse type="group">
+			<messageSubject mdField="SUBJECT_TEXT"/>
+			<message mdField="MSG_BODY_TEXT"/>
+			<customElements type="raw"/>
+		</messageResponse>
+	</optInMessage>
+</schema>

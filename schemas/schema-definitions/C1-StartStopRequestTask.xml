@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<serviceTaskId mdField="C1_SS_SERVICE_TASK_INFO_LBL" isPrimeKey="true" fkRef="F1-STASK" mapField="F1_SVC_TASK_ID"/>
+	<serviceTaskType fkRef="F1-STKTY" mapField="F1_STASK_TYPE_CD"/>
+	<bo suppress="true" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<boStatus mapField="BO_STATUS_CD"/>
+	<statusReason suppress="blank" fkRef="F1-STRSN" mapField="BO_STATUS_REASON_CD"/>
+	<createDateTime suppress="true" dataType="dateTime" default="%CurrentDateTime" mapField="CRE_DTTM"/>
+	<statusDateTime suppress="true" dataType="dateTime" mapField="STATUS_UPD_DTTM"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<webUserId mdField="WX_SS_USER_ID" mapField="ADHOC_CHAR_VAL">
+		<row mapChild="F1_SVC_TASK_CHAR">
+			<CHAR_TYPE_CD is="C1-WBUSR"/>
+		</row>
+	</webUserId>
+	<cssUser mdField="WX_SS_CSSUSER" mapField="ADHOC_CHAR_VAL">
+		<row mapChild="F1_SVC_TASK_CHAR">
+			<CHAR_TYPE_CD is="C1-SSUSR"/>
+		</row>
+	</cssUser>
+	<emailAddress mdField="EMAILID" mapField="ADHOC_CHAR_VAL">
+		<row mapChild="F1_SVC_TASK_CHAR">
+			<CHAR_TYPE_CD is="C1-EMLID"/>
+		</row>
+	</emailAddress>
+	<ipAddress mdField="IPADDRESS" mapField="ADHOC_CHAR_VAL">
+		<row mapChild="F1_SVC_TASK_CHAR">
+			<CHAR_TYPE_CD is="C1-IPADD"/>
+		</row>
+	</ipAddress>
+	<accountId mdField="ACCOUNT_TLBL" fkRef="ACCT" mapField="PK_VALUE1">
+		<row mapChild="F1_SVC_TASK_REL_OBJ">
+			<MAINT_OBJ_CD is="ACCOUNT"/>
+		</row>
+	</accountId>
+	<personId mdField="PERSON_TLBL" fkRef="PER" mapField="PK_VALUE1">
+		<row mapChild="F1_SVC_TASK_REL_OBJ">
+			<MAINT_OBJ_CD is="PERSON"/>
+		</row>
+	</personId>
+	<discardReason mdField="C1_CUSTREQ_DISCARD_RSN_FLG" dataType="lookup" mapXML="BO_DATA_AREA" lookup="C1_CUSTREQ_DISCARD_RSN_FLG"/>
+	<customerRequestDetails type="group" mapXML="BO_DATA_AREA">
+		<requestMode mdField="C1_REQUEST_MODE_FLG" dataType="lookup" lookup="C1_REQUEST_MODE_FLG"/>
+		<newCustomer mdField="C1_NEW_CUST_INDC"/>
+		<personBusiness mdField="PER_OR_BUS_FLG" dataType="lookup" lookup="PER_OR_BUS_FLG"/>
+		<lifeSupportSensitiveLoad mdField="LS_SL_FLG" dataType="lookup" lookup="LS_SL_FLG"/>
+		<customerClass mdField="CUST_CL_CD" fkRef="C1-CUSTC"/>
+		<firstName mdField="FIRST_NAME"/>
+		<lastName mdField="LAST_NAME"/>
+		<entityName mdField="ENTITY_NAME"/>
+		<email mdField="EMAILID"/>
+		<country mdField="COUNTRY"/>
+		<addressLine1 mdField="ADDRESS1"/>
+		<addressLine2 mdField="ADDRESS2"/>
+		<addressLine3 mdField="ADDRESS3"/>
+		<addressLine4 mdField="ADDRESS4"/>
+		<houseType mdField="HOUSE_TYPE" dataType="lookup" lookup="HOUSE_TYPE"/>
+		<number1 mdField="NUM1"/>
+		<number2 mdField="NUM2"/>
+		<inCityLimit mdField="IN_CITY_LIMIT" dataType="boolean"/>
+		<city mdField="CITY"/>
+		<geographic mdField="GEO_CODE"/>
+		<county mdField="COUNTY"/>
+		<state mdField="STATE"/>
+		<postal mdField="POSTAL"/>
+		<phoneList type="list">
+			<sequence mdField="SEQ_NUM" dataType="number" isPrimeKey="true"/>
+			<phoneType mdField="PHONE_TYPE_CD" fkRef="C1-PHTYP"/>
+			<phoneNumber mdField="PHONE"/>
+			<extension mdField="EXTENSION"/>
+		</phoneList>
+		<identifiersList type="list">
+			<idType mdField="ID_TYPE_CD" isPrimeKey="true" fkRef="ID TYPE"/>
+			<idValue mdField="PER_ID_NBR"/>
+			<encrIdValue mdField="ENCR_PER_ID_NBR"/>
+			<hashIdValue mdField="HASH_PER_ID_NBR"/>
+		</identifiersList>
+		<stopDate mdField="STOP_DT" dataType="date"/>
+		<startDate mdField="START_DT" dataType="date"/>
+		<startPremise mdField="PREM_ID" fkRef="PREM"/>
+		<campaignMiscFieldsList type="list">
+			<sequence mdField="SEQ_NUM" dataType="number" isPrimeKey="true"/>
+			<responseValue mdField="C1_RESP_VAL"/>
+		</campaignMiscFieldsList>
+		<orderId mdField="ENRL_ID" fkRef="ENRL"/>
+	</customerRequestDetails>
+</schema>

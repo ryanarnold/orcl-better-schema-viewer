@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <messageDetails type="group">
+    <externalSpId mdField="SP_ID" required="true"/>
+    <externalBillCycle mdField="BILL_CYC_CD"/>
+  </messageDetails>
+</schema>

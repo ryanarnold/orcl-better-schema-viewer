@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<nodeName suppress="input" mdField="F1_SE_NODE_NAME" default="uiHint:title"/>
+	<mdField mdField="F1_SE_MDFLD_LBL" fkRef="F1-FLD"/>
+	<label mdField="F1_SE_LABEL_LBL"/>
+</schema>

@@ -1,0 +1,123 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<input type="group">
+		<descriptionTemplate mapField="DESCR_TMPLT"/>
+		<shouldPrint dataType="boolean" mapField="PRT_SW"/>
+		<currency type="group">
+			<id mapField="CURRENCY_CD"/>
+		</currency>
+		<currencySymbol mapField="CUR_SYMBOL"/>
+		<currencyDecimalPosition mapField="CUR_DECIMAL_POSITIONS"/>
+		<uomDecimalPosition mapField="UOM_DECIMAL_POSITIONS"/>
+		<rateComponentType dataType="lookup" mapField="RC_TYPE_FLG" lookup="RC_TYPE_FLG"/>
+		<valueType dataType="lookup" mapField="VAL_TYPE_FLG" lookup="VAL_TYPE_FLG"/>
+		<itemCount dataType="number" mapField="ITEM_CNT"/>
+		<rateComponentServiceQuantity dataType="number" mapField="RC_SQ"/>
+		<totalServiceQuantity mapField="TOTAL_SQ"/>
+		<initialRateValue dataType="number" mapField="INIT_RT_VAL"/>
+		<calculatedAmount dataType="money" mapField="CALC_AMT"/>
+		<calculatedAmountRaw dataType="number" mapField="CALC_VAL"/>
+		<rateComponentDecimalPosition mapField="RC_DECIMAL_POS"/>
+		<rateComponentRateValue dataType="number" mapField="RC_RT_VAL"/>
+		<crossReferenceAmount dataType="money" mapField="RC_XREF_AMT"/>
+		<crossReferenceServiceQuantity dataType="number" mapField="RC_XREF_SQ"/>
+		<isProrated dataType="boolean" mapField="PRORATED_SW"/>
+		<relativeDays dataType="number" mapField="RELATIVE_DAYS"/>
+		<baseDays dataType="number" mapField="BASE_DAYS"/>
+		<adjustedFinalProrationFactor dataType="number" mapField="AFF"/>
+		<percentExempt dataType="number" mapField="PCT_EXEMPT"/>
+		<shouldCalculateOnly dataType="boolean" mapField="CALC_ONLY_SW"/>
+		<timeOfUse type="group">
+			<id mapField="TOU_CD"/>
+		</timeOfUse>
+		<beginDate dataType="date" mapField="BEGIN_DT"/>
+		<endDate dataType="date" mapField="END_DT"/>
+		<itemType type="group">
+			<id mapField="ITEM_TYPE_CD"/>
+		</itemType>
+		<stepLowValue dataType="number" mapField="C1_STEP_LOW_VAL"/>
+		<stepHighValue dataType="number" mapField="C1_STEP_HIGH_VAL"/>
+		<precisionLevel dataType="number" mapField="RND_PRECISION_LVL"/>
+		<language type="group">
+			<id mapField="LANGUAGE_CD"/>
+		</language>
+		<characteristicDataList type="group">
+			<CharacteristicData type="list" mapList="CHAR_LIST">
+				<characteristicType type="group">
+					<id mapField="CHAR_TYPE"/>
+				</characteristicType>
+				<characteristicValue mapField="CHAR_VAL"/>
+				<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+			</CharacteristicData>
+		</characteristicDataList>
+		<applyRateData type="group">
+			<serviceAgreement type="group">
+				<id mapField="SA_ID"/>
+			</serviceAgreement>
+			<masterServiceAgreement type="group">
+				<id mdField="SA_ID" mapField="MASTER_SA_ID"/>
+			</masterServiceAgreement>
+			<masterBillSegment type="group">
+				<id mapField="MASTER_BSEG_ID"/>
+			</masterBillSegment>
+			<bill type="group">
+				<id mapField="BILL_ID"/>
+			</bill>
+			<adjustment type="group">
+				<id mapField="ADJ_ID"/>
+			</adjustment>
+			<billSegmentCreationDateTime mdField="CRE_DTTM" dataType="dateTime" mapField="BSEG_CRE_DTTM"/>
+			<billSegmentPeriodStart mdField="START_DT" dataType="date" mapField="BSEG_START_DT"/>
+			<billSegmentPeriodEnd mdField="END_DT" dataType="date" mapField="BSEG_END_DT"/>
+			<consumptionPeriodStart mdField="START_DT" dataType="date" mapField="CONS_START_DT"/>
+			<consumptionPeriodEnd mdField="END_DT" dataType="date" mapField="CONS_END_DT"/>
+			<characteristicPremise type="group">
+				<id mdField="PREM_ID" mapField="CHAR_PREM_ID"/>
+			</characteristicPremise>
+			<characteristicServicePoint type="group">
+				<id mdField="SP_ID" mapField="CHAR_SP_ID"/>
+			</characteristicServicePoint>
+			<accountingDate dataType="date" mapField="ACCOUNTING_DT"/>
+			<shouldRetainReadCollection dataType="boolean" mapField="RTN_READ_COLL_SW"/>
+			<shouldRetainItemCollection dataType="boolean" mapField="RTN_ITEM_COLL_SW"/>
+			<shouldRetainSqCollection dataType="boolean" mapField="RTN_SQ_COLL_SW"/>
+			<shouldRetainSqRules dataType="boolean" mapField="RTN_SQ_RULE_COLL_SW"/>
+			<thirdParty mapField="THIRD_PARTY_SW"/>
+			<language type="group">
+				<id mapField="LANGUAGE_CD"/>
+			</language>
+			<usageConsumptionPeriodStart mdField="START_DT" dataType="date" mapField="USG_CONS_START_DT"/>
+			<usageConsumptionPeriodEnd mdField="END_DT" dataType="date" mapField="USG_CONS_END_DT"/>
+			<serviceAgreementType type="group">
+				<id type="group">
+					<divisionId mapField="CIS_DIVISION"/>
+					<saType mapField="SA_TYPE_CD"/>
+				</id>
+			</serviceAgreementType>
+			<revenueClass type="group">
+				<id mapField="REV_CL_CD"/>
+			</revenueClass>
+			<rateSchedule type="group">
+				<id mapField="RS_CD"/>
+			</rateSchedule>
+			<saPeriodStartDate mdField="START_DT" dataType="date" mapField="SA_PERIOD_START_DT"/>
+			<saPeriodEndDate mdField="END_DT" dataType="date" mapField="SA_PERIOD_END_DT"/>
+			<startDayOption dataType="lookup" mapField="IB_BASE_TM_DAY_FLG" lookup="IB_BASE_TM_DAY_FLG"/>
+			<intervalBillingSaCutoffTime mapField="IB_SA_CUTOFF_DTTM_TM"/>
+			<usageId mapField="USAGE_ID"/>
+			<usagePeriodStartDateTime dataType="dateTime" mapField="USAGE_START_DTTM"/>
+			<usagePeriodEndDateTime dataType="dateTime" mapField="USAGE_END_DTTM"/>
+			<billSegmentAmount dataType="money" mapField="BSEG_AMT"/>
+			<glDetailsDataArea mapField="GL_DATA_AREA"/>
+		</applyRateData>
+		<scalarVariables type="list" mapList="SCALAR_VAR_LIST">
+			<value dataType="number" mapField="MIN_VALUE"/>
+			<seq dataType="number" mapField="SEQNO"/>
+		</scalarVariables>
+		<calculationRule mapField="CALC_RULE_CD"/>
+		<calculationGroup mapField="CALC_GRP_CD"/>
+	</input>
+	<output type="group">
+		<expandedDescription mapField="EXP_DESCR"/>
+	</output>
+</schema>

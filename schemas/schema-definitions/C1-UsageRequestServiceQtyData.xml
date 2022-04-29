@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<sequence dataType="number" mapField="SEQNO"/>
+	<servicePointId mapField="SP_ID"/>
+	<serviceQuantityData type="group">
+		<id type="group">
+			<billableChargeId mapField="BILLABLE_CHG_ID"/>
+			<sequence dataType="number" mapField="SEQ_NUM"/>
+		</id>
+		<unitOfMeasureId mapField="UOM_CD"/>
+		<timeOfUseId mapField="TOU_CD"/>
+		<serviceQuantityIdentifierId mapField="SQI_CD"/>
+		<dailyServiceQuantity dataType="number" mapField="SVC_QTY"/>
+	</serviceQuantityData>
+	<secondsPerInterval dataType="duration" mapField="SPI"/>
+	<estimationIndicator dataType="lookup" mapField="C1_ESTIMATE_INDICATOR" lookup="C1_ESTIMATE_INDICATOR"/>
+	<intervalDataList type="group">
+		<UsageRequestSQIntervalData type="list" mapList="INTV_LIST">
+			<sequence dataType="number" mapField="SEQNO"/>
+			<intervalData dataType="number" mapField="INTV_VAL"/>
+			<condition mdField="F1_EXT_LOOKUP_VALUE" mapField="CONDITION"/>
+			<intervalDateTime dataType="dateTime" mapField="INTV_DATA_DTTM"/>
+		</UsageRequestSQIntervalData>
+	</intervalDataList>
+	<usageRequestSQHighlightList type="group">
+		<UsageRequestSQHighlightData type="list" mapList="USG_SQ_HL_LIST">
+			<sequence dataType="number" mapField="SEQNO"/>
+			<highlightDateTime dataType="dateTime" mapField="C1_HIGHLIGHT_DTTM"/>
+			<highlightType mapField="C1_HIGHLIGHT_TYPE_FLG"/>
+			<estimationIndicator dataType="lookup" mapField="C1_ESTIMATE_INDICATOR" lookup="C1_ESTIMATE_INDICATOR"/>
+		</UsageRequestSQHighlightData>
+	</usageRequestSQHighlightList>
+</schema>

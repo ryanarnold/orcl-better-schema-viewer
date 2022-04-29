@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<head type="group">
+		<action/>
+		<key1 type="group">
+			<name default="ACCT_ID"/>
+			<value/>
+		</key1>
+		<key2 type="group">
+			<name default="PER_ID"/>
+			<value/>
+		</key2>
+		<key3 type="group">
+			<name/>
+			<value/>
+		</key3>
+		<key4 type="group">
+			<name/>
+			<value/>
+		</key4>
+		<key5 type="group">
+			<name/>
+			<value/>
+		</key5>
+		<emailAddress/>
+		<webUserId/>
+		<ipAddress/>
+		<cssUser/>
+		<saId mdField="SA_ID" fkRef="SA"/>
+		<displayMode mdField="WX_DISPLAY_MODE"/>
+		<previousNext mdField="WX_PREV_NEXT"/>
+		<overlayMode mdField="WX_OVERLAY_MODE"/>
+		<referenceDateTime default="%ProcessDateTime"/>
+	</head>
+	<mainData type="group">
+		<results type="list">
+			<saId mdField="SA_ID" fkRef="SA"/>
+			<saInfo mdField="SA_INFO"/>
+			<cisDivision mdField="CIS_DIVISION"/>
+			<cisDivisionDescription mdField="DESCR"/>
+			<saType mdField="SA_TYPE_CD"/>
+			<saTypeDescription mdField="SA_TYPE_DESCR"/>
+			<serviceType mdField="SVC_TYPE_CD"/>
+			<serviceTypeDescription mdField="SVC_TYPE_DESCR"/>
+			<isSkipped mdField="SKIPPED_SW" dataType="boolean"/>
+			<skipReasonDescription mdField="SKIP_REASON"/>
+			<usageUom mdField="UOM_CD"/>
+			<usageUomDescription mdField="UOM_DESCR"/>
+			<usageSqi mdField="SQI_CD"/>
+			<usageDescription mdField="SQI_DESCR"/>
+			<overlayUom mdField="UOM_CD"/>
+			<overlayUomDescription mdField="UOM_DESCR"/>
+			<latestMeasurementDateTime mdField="LTST_MSRMT_DTTM" dataType="dateTime"/>
+			<periods type="list">
+				<dateTime mdField="DATETIME" dataType="dateTime"/>
+				<touQuantities type="list">
+					<tou mdField="TOU_CD"/>
+					<touDescription mdField="TOU_DESCR"/>
+					<quantity mdField="SVC_QTY" dataType="number"/>
+				</touQuantities>
+				<overlayQuantities type="list">
+					<quantity mdField="SVC_QTY" dataType="number"/>
+				</overlayQuantities>
+			</periods>
+		</results>
+	</mainData>
+	<errorInformation type="group">
+		<isInError mdField="IN_ERROR_SW" dataType="boolean" default="false"/>
+		<errorReference type="group">
+			<category mdField="MESSAGE_CAT_NBR" dataType="number"/>
+			<number mdField="MESSAGE_NBR" dataType="number"/>
+		</errorReference>
+		<errorMessage mdField="MESSAGE_TEXT"/>
+	</errorInformation>
+</schema>

@@ -1,0 +1,127 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<head type="group">
+		<action/>
+		<keys type="list">
+			<key1 type="group">
+				<name default="ACCT_ID"/>
+				<value/>
+			</key1>
+			<key2 type="group">
+				<name default="PER_ID"/>
+				<value/>
+			</key2>
+			<key3 type="group">
+				<name/>
+				<value/>
+			</key3>
+			<key4 type="group">
+				<name/>
+				<value/>
+			</key4>
+			<key5 type="group">
+				<name/>
+				<value/>
+			</key5>
+		</keys>
+		<emailAddress/>
+		<webUserId/>
+		<ipAddress/>
+		<cssUser/>
+	</head>
+	<mainData type="group">
+		<notificationOwner/>
+		<accounts type="list">
+			<key1 mdField="ACCT_ID" required="true"/>
+			<accessRole required="true" dataType="lookup" lookup="CSS_ACCESS_ROLE_FLG"/>
+			<shouldAllowCommPref mdField="ALW_PREF_SW" dataType="boolean"/>
+			<shouldRetainPreference/>
+		</accounts>
+		<firstName mdField="FIRST_NAME" required="true"/>
+		<lastName mdField="LAST_NAME" required="true"/>
+		<removeCSSInfo/>
+		<updateEmail/>
+		<oldEmail/>
+		<verifyAccountData type="group">
+			<businessLine/>
+			<accountVerification type="group">
+				<field1 type="group">
+					<value mdField="WX_VALUE1"/>
+					<description/>
+					<format/>
+				</field1>
+				<field2 type="group">
+					<value mdField="WX_VALUE2"/>
+					<description/>
+					<format/>
+				</field2>
+				<field3 type="group">
+					<value mdField="WX_VALUE3"/>
+					<description/>
+					<format/>
+				</field3>
+				<field4 type="group">
+					<value mdField="WX_VALUE4"/>
+					<description/>
+					<format/>
+				</field4>
+				<field5 type="group">
+					<value mdField="WX_VALUE5"/>
+					<description/>
+					<format/>
+				</field5>
+			</accountVerification>
+			<isVerified/>
+		</verifyAccountData>
+	</mainData>
+	<custom type="group">
+		<field1 type="group">
+			<name/>
+			<value/>
+		</field1>
+		<field2 type="group">
+			<name/>
+			<value/>
+		</field2>
+		<field3 type="group">
+			<name/>
+			<value/>
+		</field3>
+		<field4 type="group">
+			<name/>
+			<value/>
+		</field4>
+		<field5 type="group">
+			<name/>
+			<value/>
+		</field5>
+		<field6 type="group">
+			<name/>
+			<value/>
+		</field6>
+		<field7 type="group">
+			<name/>
+			<value/>
+		</field7>
+		<field8 type="group">
+			<name/>
+			<value/>
+		</field8>
+		<field9 type="group">
+			<name/>
+			<value/>
+		</field9>
+		<field10 type="group">
+			<name/>
+			<value/>
+		</field10>
+	</custom>
+	<errorInformation type="group">
+		<isInError mdField="IN_ERROR_SW" dataType="boolean" default="false"/>
+		<errorReference type="group">
+			<category mdField="MESSAGE_CAT_NBR" dataType="number"/>
+			<number mdField="MESSAGE_NBR" dataType="number"/>
+		</errorReference>
+		<errorMessage mdField="MESSAGE_TEXT"/>
+	</errorInformation>
+</schema>

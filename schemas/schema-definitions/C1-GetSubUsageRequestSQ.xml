@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<calcGroup suppress="input" required="true" isPrimeKey="true" fkRef="C1-CALGR" mapField="CALC_GRP_CD"/>
+	<calcRule required="true" isPrimeKey="true" mapField="CALC_RULE_CD"/>
+	<executionSequence required="true" dataType="number" mapField="CR_EXEC_SEQ"/>
+	<bo suppress="input" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<description required="true" mapField="DESCR100"/>
+	<longDescription mapField="DESCRLONG"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<stepAlgorithm suppress="true" fkRef="ALG" mapField="CALC_RULE_STEP_ALG_CD"/>
+	<valueAlgorithm suppress="true" fkRef="ALG" mapField="CALC_RULE_VAL_ALG_CD"/>
+	<itemType suppress="true" fkRef="C1-ITMTY" mapField="ITEM_TYPE_CD"/>
+	<billFactor suppress="true" fkRef="C1-BFACT" mapField="BF_CD"/>
+	<characteristics suppress="true" type="group">
+		<characteristicsList type="list" mapChild="C1_CALC_RULE_CHAR">
+			<characteristicType fkRef="CHAR_TYP" mapField="CHAR_TYPE_CD"/>
+			<characteristicValue mapField="CHAR_VAL"/>
+			<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+		</characteristicsList>
+	</characteristics>
+</schema>

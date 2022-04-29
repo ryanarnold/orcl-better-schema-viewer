@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<businessFlagId suppress="input" mdField="F1_BUS_FLG_INFO_LBL" isPrimeKey="true" fkRef="F1-BUSFL" mapField="BUS_FLG_ID"/>
+	<bo suppress="true" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<boStatus suppress="input" mapField="BO_STATUS_CD"/>
+	<statusReason suppress="input" fkRef="F1-STRSN" mapField="BO_STATUS_REASON_CD"/>
+	<businessFlagType suppress="input" required="true" fkRef="F1-BFLTY" mapField="BUS_FLG_TYPE_CD"/>
+	<externalBusinessFlagId suppress="blank" mapField="EXT_BUS_FLG_ID"/>
+	<sourceFileId suppress="blank" mapField="SRC_FILE_ID"/>
+	<externalSystemReference suppress="blank" mapField="EXT_SYS_REF"/>
+	<externalSystem suppress="blank" fkRef="F1-ESTMP" mapField="NT_XID_CD"/>
+	<externalId suppress="blank" mdField="EXT_SP_ID" mapField="EXT_ENTITY_ID"/>
+	<mo suppress="true" mdField="BUS_FLG_MAINT_OBJ_CD" default="SP" fkRef="F1-MO" mapField="MAINT_OBJ_CD"/>
+	<pkValue1 suppress="true" mdField="SP_ID2" mapField="PK_VALUE1"/>
+	<businessFlagDateTime required="true" dataType="dateTime" mapField="BUS_FLG_DTTM" stdTime="true"/>
+	<businessFlagEndDateTime suppress="blank" dataType="dateTime" mapField="BUS_FLG_END_DTTM" stdTime="true"/>
+	<confidence suppress="blank" dataType="lookup" mapField="BUS_FLG_CONF_FLG" lookup="BUS_FLG_CONF_FLG"/>
+	<finalConfidence suppress="blank" dataType="lookup" mapField="FIN_BUS_FLG_CONF_FLG" lookup="FIN_BUS_FLG_CONF_FLG"/>
+	<priority suppress="blank" dataType="lookup" mapField="BUS_FLG_PRIORITY_FLG" lookup="BUS_FLG_PRIORITY_FLG"/>
+	<fa suppress="input" mdField="C1_FIELD_ACTIVITY_LBL" fkRef="FA-ID" mapField="PK_VALUE1">
+		<row mapChild="F1_BUS_FLG_REL_OBJ">
+			<BUS_FLG_REL_OBJ_TYPE_FLG is="C1FA"/>
+			<SEQ_NUM is="1"/>
+			<MAINT_OBJ_CD is="FA"/>
+		</row>
+	</fa>
+	<case suppress="input" mdField="CASE_LBL" fkRef="CASE" mapField="PK_VALUE1">
+		<row mapChild="F1_BUS_FLG_REL_OBJ">
+			<BUS_FLG_REL_OBJ_TYPE_FLG is="C1CS"/>
+			<SEQ_NUM is="1"/>
+			<MAINT_OBJ_CD is="CASE"/>
+		</row>
+	</case>
+	<todo suppress="input" mdField="TD_LBL" fkRef="F1-TODO" mapField="PK_VALUE1">
+		<row mapChild="F1_BUS_FLG_REL_OBJ">
+			<BUS_FLG_REL_OBJ_TYPE_FLG is="C1TD"/>
+			<SEQ_NUM is="1"/>
+			<MAINT_OBJ_CD is="TO DO ENTRY"/>
+		</row>
+	</todo>
+	<customerContact suppress="input" mdField="CUSTOMER_CON_LBL" fkRef="CC ID" mapField="PK_VALUE1">
+		<row mapChild="F1_BUS_FLG_REL_OBJ">
+			<BUS_FLG_REL_OBJ_TYPE_FLG is="C1CC"/>
+			<SEQ_NUM is="1"/>
+			<MAINT_OBJ_CD is="CUST CONTACT"/>
+		</row>
+	</customerContact>
+	<toDoRetry suppress="true" type="group" mapXML="BO_XML_DATA_AREA">
+		<retryDateTime dataType="dateTime"/>
+		<numberOfRetries dataType="number"/>
+		<currentErrorState/>
+	</toDoRetry>
+	<createDateTime suppress="true" dataType="dateTime" mapField="CRE_DTTM" stdTime="true"/>
+	<statusDateTime suppress="true" dataType="dateTime" mapField="STATUS_UPD_DTTM" stdTime="true"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+</schema>

@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <spMeterHistoryId mdField="SP_MTR_HIST_ID" required="true"/>
+  <spId mdField="SP_ID"/>
+  <meterType mdField="MTR_TYPE_CD"/>
+  <meterTypeDescription mdField="DESCR"/>
+  <meterStatus mdField="MTR_STATUS_FLG" dataType="lookup" lookup="MTR_STATUS_FLG"/>
+  <meterStatusDescription mdField="DESCR"/>
+  <registerMultiplier mdField="REG_CONST" dataType="number"/>
+  <installationMultiplier mdField="INSTALL_CONST" dataType="number"/>
+  <numberOfDials mdField="C1_NBR_OF_DIALS" dataType="number"/>
+  <manufacturer mdField="MFG_CD"/>
+  <manufacturerDescription mdField="DESCR"/>
+  <model mdField="MODEL_CD"/>
+  <modelDescription mdField="DESCR"/>
+  <badgeNumber mdField="BADGE_NBR"/>
+  <serialNumber mdField="SERIAL_NBR"/>
+  <meterId mdField="MTR_ID"/>
+  <installDateTime mdField="INSTALL_DTTM" dataType="dateTime"/>
+  <removalDateTime mdField="REMOVAL_DTTM" dataType="dateTime"/>
+  <meterOnOffStatus mdField="MTR_ON_OFF_FLG" dataType="lookup" lookup="MTR_ON_OFF_FLG"/>
+</schema>

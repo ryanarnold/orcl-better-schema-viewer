@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<outboundMsgId mapField="OUTMSG_ID"/>
+	<externalSystem fkRef="F1-ESTMP" mapField="NT_XID_CD"/>
+	<outboundMessageType fkRef="F1-OMTYP" mapField="OUTMSG_TYPE_CD"/>
+	<processingMethod dataType="lookup" mapField="OUTMSG_PROC_METH_FLG" lookup="OUTMSG_PROC_METH_FLG"/>
+	<outboundMessageStatus dataType="lookup" mapField="OUTMSG_STATUS_FLG" lookup="OUTMSG_STATUS_FLG"/>
+	<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+	<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+	<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+	<errorDetail mapField="ERROR_DTL"/>
+	<sendDetails type="group" mapXML="XML_SOURCE">
+		<syncRequestId mdField="SYNC_REQ_INFORMATION" isPrimeKey="true" fkRef="F1-SYNRQ"/>
+		<bo suppress="true" required="true" fkRef="F1-BUSOB"/>
+		<boStatus/>
+		<statusReason suppress="input" fkRef="F1-STRSN"/>
+		<createDateTime suppress="true" dataType="dateTime"/>
+		<statusDateTime suppress="true" dataType="dateTime"/>
+		<syncRequired suppress="true" mdField="F1_SYNC_REQUIRED_FLG" dataType="lookup" default="F1NQ" lookup="F1_SYNC_REQUIRED_FLG"/>
+		<forceSync suppress="true" mdField="F1_FORCE_SYNC_FLG" dataType="lookup" lookup="F1_FORCE_SYNC_FLG"/>
+		<initialLoad suppress="true" mdField="F1_INITIAL_LOAD_SYNC_FLG" dataType="lookup" default="F1IC" lookup="F1_INITIAL_LOAD_SYNC_FLG"/>
+		<mo suppress="true" required="true" fkRef="F1-MO"/>
+		<pkValue1 suppress="true" required="true"/>
+		<pkValue2 suppress="true"/>
+		<pkValue3 suppress="true"/>
+		<pkValue4 suppress="true"/>
+		<pkValue5 suppress="true"/>
+		<snapshotDA suppress="true" mdField="DATA_AREA_CD" fkRef="F1-DATAR"/>
+		<postScript suppress="true" mdField="SCR_CD" fkRef="F1-SCR"/>
+		<cancelReason suppress="blank" mdField="F1_SYNC_REQ_CANCEL_RSN_FLG" dataType="lookup" lookup="F1_SYNC_REQ_CANCEL_RSN_FLG"/>
+		<discardReason suppress="blank" mdField="F1_SYNC_REQ_DISCARD_RSN_FLG" dataType="lookup" lookup="F1_SYNC_REQ_DISCARD_RSN_FLG"/>
+		<sourceSystem suppress="true" mdField="F1_SOURCE_SYSTEM"/>
+		<version suppress="true" dataType="number"/>
+		<externalSystem suppress="true"/>
+		<externalIds suppress="true" type="group">
+			<entityIdList type="list">
+				<entity mdField="F1_ENTITY_LBL" isPrimeKey="true"/>
+				<externalPk1 mdField="PK_VAL1_LBL"/>
+				<externalPk2 mdField="PK_VAL2_LBL"/>
+				<externalPk3 mdField="PK_VAL3_LBL"/>
+				<externalPk4 mdField="PK_VAL4_LBL"/>
+				<externalPk5 mdField="PK_VAL5_LBL"/>
+			</entityIdList>
+		</externalIds>
+		<exceptionInfo suppress="true" type="list">
+			<sequence mdField="SEQ_NUM" dataType="number" isPrimeKey="true"/>
+			<messageCategory mdField="MESSAGE_CAT_NBR" dataType="number"/>
+			<messageNumber mdField="MESSAGE_NBR" dataType="number"/>
+			<comments mdField="COMMENTS"/>
+			<messageParameters type="list">
+				<parameterSequence mdField="PARM_SEQ" dataType="number" isPrimeKey="true"/>
+				<messageParameterValue mdField="MSG_PARM_VAL"/>
+			</messageParameters>
+		</exceptionInfo>
+		<meterReadBO suppress="true" mdField="BUS_OBJ_CD" fkRef="F1-BUSOB"/>
+		<syncRequestDetails suppress="true" type="group">
+			<initialSnapshot type="group">
+				<meterReadInfo type="group">
+					<meterReadId mdField="MR_ID"/>
+					<deviceConfigurationExternalId mdField="MTR_CONFIG_ID"/>
+					<readDateTime mdField="READ_DTTM" dataType="dateTime"/>
+					<useOnBill mdField="USE_ON_BILL_SW" dataType="boolean"/>
+					<customElements type="raw"/>
+					<formattedElements type="raw"/>
+				</meterReadInfo>
+				<registerReadInfo type="group">
+					<registerReadList type="list">
+						<registerReadId mdField="REG_READ_ID" isPrimeKey="true"/>
+						<measuringComponentExternalId mdField="REG_ID"/>
+						<reading mdField="REG_READING" dataType="number"/>
+						<readType mdField="READ_TYPE_FLG" dataType="lookup" lookup="READ_TYPE_FLG"/>
+						<customElements type="raw"/>
+						<formattedElements type="raw"/>
+					</registerReadList>
+				</registerReadInfo>
+			</initialSnapshot>
+			<finalSnapshot type="group">
+				<meterReadInfo type="group">
+					<meterReadId mdField="MR_ID"/>
+					<deviceConfigurationExternalId mdField="MTR_CONFIG_ID"/>
+					<readDateTime mdField="READ_DTTM" dataType="dateTime"/>
+					<useOnBill mdField="USE_ON_BILL_SW" dataType="boolean"/>
+					<customElements type="raw"/>
+					<formattedElements type="raw"/>
+				</meterReadInfo>
+				<registerReadInfo type="group">
+					<registerReadList type="list">
+						<registerReadId mdField="REG_READ_ID" isPrimeKey="true"/>
+						<measuringComponentExternalId mdField="REG_ID"/>
+						<reading mdField="REG_READING" dataType="number"/>
+						<readType mdField="READ_TYPE_FLG" dataType="lookup" lookup="READ_TYPE_FLG"/>
+						<customElements type="raw"/>
+						<formattedElements type="raw"/>
+					</registerReadList>
+				</registerReadInfo>
+			</finalSnapshot>
+		</syncRequestDetails>
+	</sendDetails>
+</schema>

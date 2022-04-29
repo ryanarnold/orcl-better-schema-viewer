@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <input suppress="true" type="group">
+    <typeOfCharSearch dataType="lookup" mapField="TYPE_OF_CHAR_SRCH_OPT" lookup="TYPE_OF_CHAR_SRCH_OPT"/>
+    <charEntityValue dataType="lookup" mapField="CHAR_ENTITY_FLG" lookup="CHAR_ENTITY_FLG"/>
+    <charTypeInfo type="group">
+      <input type="group">
+        <characteristicType mapField="CHAR_TYPE_CD"/>
+        <characteristicValue mapField="CHAR_VAL"/>
+        <adhocCharValue mapField="ADHOC_CHAR_VAL"/>
+        <fkValue1 mapField="CHAR_VAL_FK1"/>
+        <fkValue2 mapField="CHAR_VAL_FK2"/>
+        <fkValue3 mapField="CHAR_VAL_FK3"/>
+        <fkValue4 mapField="CHAR_VAL_FK4"/>
+        <fkValue5 mapField="CHAR_VAL_FK5"/>
+      </input>
+      <output type="group">
+        <charTypeFlg dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+        <charValInfo mapField="CHAR_VAL_FK_INFO"/>
+        <searchZone mapField="ZONE_CD"/>
+        <navOption mapField="NAV_OPT_CD"/>
+        <pkFieldsList type="list" mapList="PK_FIELD_LIST">
+          <pkField mapField="PK_VAL"/>
+        </pkFieldsList>
+      </output>
+    </charTypeInfo>
+  </input>
+</schema>

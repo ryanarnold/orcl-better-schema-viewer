@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<bucketConfiguration required="true" isPrimeKey="true" mapField="BKT_CONFIG_CD"/>
+	<description required="true" mapField="DESCR"/>
+	<bo suppress="true" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<windowClosureStatus mdField="WINDOW_CLOSURE_STAT_FLG" required="true" dataType="lookup" mapField="BKT_TYPE_CD" lookup="WINDOW_CLOSURE_STAT_FLG"/>
+	<bucketValueRanges type="group">
+		<bucketValueRangesList type="list" mapChild="F1_BKT_CONFIG_VAL">
+			<sequence required="true" dataType="number" mapField="SEQ_NUM"/>
+			<startRange dataType="number" mapField="BKT_START_RANGE"/>
+			<endRange dataType="number" mapField="BKT_END_RANGE"/>
+			<description required="true" mapField="DESCR"/>
+		</bucketValueRangesList>
+	</bucketValueRanges>
+</schema>

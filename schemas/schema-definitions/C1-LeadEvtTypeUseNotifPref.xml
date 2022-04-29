@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<leadEventType required="true" isPrimeKey="true" mapField="C1_LEAD_EVT_TYPE_CD"/>
+	<description required="true" mapField="DESCR100"/>
+	<longDescription mapField="DESCRLONG"/>
+	<bo suppress="input" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<transactionalBo required="true" fkRef="F1-BUSOB" mapField="TRANS_BUS_OBJ_CD"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<leadEventTypeForEmail mdField="C1_LEAD_EVENT_TYPE_EMAIL_CD" required="true" fkRef="C1-LEVTY" mapXML="BO_DATA_AREA"/>
+	<leadEventTypeForCustomerContact mdField="C1_LEAD_EVENT_TYPE_CC_CD" required="true" fkRef="C1-LEVTY" mapXML="BO_DATA_AREA"/>
+	<leadEventTypeForNotifPref mdField="LEAD_EVENT_TYPE_NTF_CD" fkRef="C1-LEVTY" mapXML="BO_DATA_AREA"/>
+	<ifNoPreferences mdField="C1_IF_NO_PREF_FLG" required="true" dataType="lookup" mapXML="BO_DATA_AREA" lookup="C1_IF_NO_PREF_FLG"/>
+	<leadDiscardReasonIfNoCustomerIsInformed mdField="C1_LEAD_DISCARD_RSN_NC_CD" required="true" mapXML="BO_DATA_AREA"/>
+</schema>

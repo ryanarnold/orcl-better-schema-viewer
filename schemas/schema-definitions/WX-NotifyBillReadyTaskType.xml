@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<serviceTaskType required="true" isPrimeKey="true" mapField="F1_STASK_TYPE_CD"/>
+	<description required="true" mapField="DESCR"/>
+	<bo suppress="input" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<transactionalBo mdField="C1_RELATED_TRANS_OBJ_LBL" required="true" fkRef="F1-BUSOB" mapField="TRANS_BUS_OBJ_CD"/>
+	<serviceTaskTypeStatus required="true" dataType="lookup" default="F1AC" mapField="F1_STASK_TYPE_STATUS_FLG" lookup="F1_STASK_TYPE_STATUS_FLG"/>
+	<serviceTaskClass required="true" dataType="lookup" default="WXSS" mapField="F1_SVC_TASK_CL_FLG" lookup="F1_SVC_TASK_CL_FLG"/>
+	<longDescription mapField="DESCRLONG"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<outboundMessage type="group" mapXML="BO_DATA_AREA">
+		<outboundMessageType mdField="OUTMSG_TYPE_CD" required="true" fkRef="F1-OMTYP"/>
+		<externalSystem mdField="NT_XID_CD" required="true" fkRef="F1-ESTMP"/>
+	</outboundMessage>
+	<selfServiceCategory suppress="true" mdField="C1_CSS_CATEGORY" private="true" default="C1NM" mapField="ADHOC_CHAR_VAL">
+		<row mapChild="F1_SVC_TASK_TYPE_CHAR">
+			<CHAR_TYPE_CD is="C1-SSCAT"/>
+		</row>
+	</selfServiceCategory>
+</schema>

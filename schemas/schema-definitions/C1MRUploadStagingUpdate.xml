@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<meterReadUploadStagingId dataType="number" mapField="MR_STAGE_UP_ID"/>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<badgeNumber mapField="BADGE_NBR"/>
+	<readDateTime dataType="dateTime" mapField="READ_DTTM"/>
+	<meterReadUploadStatus dataType="lookup" mapField="MR_UP_STATUS_FLG" lookup="MR_UP_STATUS_FLG"/>
+	<meterReadSource mapField="MR_SOURCE_CD"/>
+	<meterConfigurationId mapField="MTR_CONFIG_ID"/>
+	<meterReadId mapField="MR_ID"/>
+	<version dataType="number" mapField="VERSION"/>
+	<geographicType mapField="GEO_TYPE_CD"/>
+	<geographicValue mapField="GEO_VAL"/>
+	<meterIdType mapField="MTR_ID_TYPE_CD"/>
+	<meterIdNumber mapField="MTR_ID_NBR"/>
+	<canUseOnBill dataType="boolean" mapField="USE_ON_BILL_SW"/>
+	<meterReaderId mapField="MTR_READER_ID"/>
+	<mrStageUpId2 dataType="number" mapField="MR_STAGE_UP_ID2"/>
+	<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+	<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+	<expandedMessage mapField="EXP_MSG"/>
+	<messageParameter1 mapField="MESSAGE_PARM1"/>
+	<messageParameter2 mapField="MESSAGE_PARM2"/>
+	<messageParameter3 mapField="MESSAGE_PARM3"/>
+	<messageParameter4 mapField="MESSAGE_PARM4"/>
+	<messageParameter5 mapField="MESSAGE_PARM5"/>
+	<messageParameter6 mapField="MESSAGE_PARM6"/>
+	<messageParameter7 mapField="MESSAGE_PARM7"/>
+	<messageParameter8 mapField="MESSAGE_PARM8"/>
+	<messageParameter9 mapField="MESSAGE_PARM9"/>
+	<callingProgramSequence mapField="CALL_SEQ"/>
+	<user mapField="USER_ID"/>
+	<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+	<isReviewed dataType="boolean" mapField="REVIEW_COMP"/>
+	<reviewUser mapField="REVIEW_USER_ID"/>
+	<reviewedDate dataType="date" mapField="REVIEW_DT"/>
+	<comments mapField="COMMENTS"/>
+	<version2 dataType="number" mapField="VERSION2"/>
+	<stu type="list" mapList="STU">
+		<meterReadUploadStagingId2 dataType="number" mapField="MR_STAGE_UP_ID"/>
+		<seq dataType="number" mapField="READ_SEQ"/>
+		<readType dataType="lookup" mapField="READ_TYPE_FLG" lookup="READ_TYPE_FLG"/>
+		<unitOfMeasure mapField="UOM_CD"/>
+		<timeOfUse mapField="TOU_CD"/>
+		<registerReading dataType="number" mapField="REG_READING"/>
+		<isHighLowReviewed dataType="boolean" mapField="REVIEW_HILO_SW"/>
+		<version2 dataType="number" mapField="VERSION"/>
+	</stu>
+	<msp type="list" mapList="MSP">
+		<meterReadUploadStagingId3 dataType="number" mapField="MR_STAGE_UP_ID"/>
+		<meterReaderRemark mapField="READER_REM_CD"/>
+		<version3 dataType="number" mapField="VERSION"/>
+	</msp>
+	<mrStgupChar type="list" mapList="MR_STGUP_CHAR">
+		<meterReadUploadStagingId4 dataType="number" mapField="MR_STAGE_UP_ID"/>
+		<characteristicType mapField="CHAR_TYPE_CD"/>
+		<sequence dataType="number" mapField="SEQ_NUM"/>
+		<characteristicValue mapField="CHAR_VAL"/>
+		<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+		<version4 dataType="number" mapField="VERSION"/>
+		<characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
+		<characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+		<characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+		<characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
+		<characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+		<searchCharacteristicValue mapField="SRCH_CHAR_VAL"/>
+		<searchNavigationKey mapField="SRCH_NAV_KEY"/>
+		<navigationOption mapField="NAV_OPT_CD"/>
+		<table mapField="TBL_NAME"/>
+		<infoProgram mapField="INFO_PRG"/>
+		<characteristicType2 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+		<characteristicValueDescription mapField="CHAR_VAL_DESCR"/>
+		<characteristicValueForeignKeys mapField="CHAR_VAL_FK_STR"/>
+		<characteristicValueForeignKeyInformation mapField="CHAR_VAL_FK_INFO"/>
+		<isCompoundPrimaryKey dataType="boolean" mapField="COMP_PK_SW"/>
+		<charateristicValue mapField="COMP_PK_STR"/>
+		<characteristicType3 mapField="CHAR_TYPE_DESCR"/>
+		<characteristicEntity dataType="lookup" mapField="CHAR_ENTITY_FLG" lookup="CHAR_ENTITY_FLG"/>
+	</mrStgupChar>
+</schema>

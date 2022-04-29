@@ -1,0 +1,131 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<landlordFilter dataType="lookup" mapField="LANDLORD_FLTR_FLG" lookup="LANDLORD_FLTR_FLG"/>
+	<landLord mapField="LL_ID"/>
+	<landlordDescription mapField="LANDLORD_DESCR"/>
+	<premiseFilter dataType="lookup" mapField="PREM_FLTR_FLG" lookup="PREM_FLTR_FLG"/>
+	<address1 mapField="ADDRESS1"/>
+	<city mapField="CITY"/>
+	<postal mapField="POSTAL"/>
+	<geographicType mapField="GEO_TYPE_CD"/>
+	<geographicValue mapField="GEO_VAL"/>
+	<premiseId mapField="PREM_ID"/>
+	<premiseInfo mapField="PREM_INFO"/>
+	<stateDescription mapField="STATE_DESCR"/>
+	<accountFilter dataType="lookup" mapField="ACCOUNT_FLTR_FLG" lookup="ACCOUNT_FLTR_FLG"/>
+	<accountId mapField="ACCT_ID"/>
+	<accountInfo mapField="ACCT_INFO"/>
+	<parentPremiseFilter dataType="lookup" mapField="PRNT_PREM_FLTR_FLG" lookup="PRNT_PREM_FLTR_FLG"/>
+	<parentPremiseId mapField="PRNT_PREM_ID"/>
+	<parentPremiseInformation mapField="PRNT_PREM_INFO"/>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<hasIncludeChildPremises dataType="boolean" mapField="INCLUDE_CHLD_SW"/>
+	<premMgmt type="list" mapList="PREM_MGMT">
+		<premiseId2 mapField="PREM_ID"/>
+		<addressUppercase mapField="ADDRESS1_UPR"/>
+		<cityUppercase mapField="CITY_UPR"/>
+		<premInfoPm mapField="PREM_INFO_PM"/>
+		<acctPremInfo mapField="ACCT_PREM_INFO"/>
+		<parentPremiseId2 mapField="PRNT_PREM_ID"/>
+		<parentPremiseInformation2 mapField="PRNT_PREM_INFO"/>
+		<landLord2 mapField="LL_ID"/>
+		<description mapField="DESCR"/>
+		<isSelect dataType="boolean" mapField="SELECT_SW"/>
+	</premMgmt>
+	<newLlId mapField="NEW_LL_ID"/>
+	<newLandlordDescr mapField="NEW_LANDLORD_DESCR"/>
+	<newPrntPremId mapField="NEW_PRNT_PREM_ID"/>
+	<newPrntPremInfo mapField="NEW_PRNT_PREM_INFO"/>
+	<startDate dataType="date" mapField="STRT_START_DT"/>
+	<startMethod dataType="lookup" mapField="STRT_TYPE_FLG" lookup="STRT_TYPE_FLG"/>
+	<strtAcctId mapField="STRT_ACCT_ID"/>
+	<startRequestBy mapField="STRT_STRT_REQ_BY"/>
+	<stopEndDate dataType="date" mapField="STOP_END_DT"/>
+	<stopMethod dataType="lookup" mapField="STOP_TYPE_FLG" lookup="STOP_TYPE_FLG"/>
+	<stopAcctId mapField="STOP_ACCT_ID"/>
+	<stopRequestedBy mapField="STOP_REQED_BY"/>
+	<acctInfo2 mapField="ACCT_INFO2"/>
+	<currency mapField="CURRENCY_CD"/>
+	<saToStopG type="list" mapList="SA_TO_STOP_G">
+		<saSpGroupInfo mapField="SA_SP_GROUP_INFO"/>
+		<saGroupCount dataType="number" mapField="SA_GROUP_COUNT"/>
+		<spGroupCount dataType="number" mapField="SP_GROUP_COUNT"/>
+		<saType mapField="SA_TYPE_CD"/>
+		<saTypeDescription mapField="SA_TYPE_DESCR"/>
+		<spTypeDescr mapField="SP_TYPE_DESCR"/>
+		<division mapField="CIS_DIVISION"/>
+		<isStop dataType="boolean" mapField="STOP_SW"/>
+	</saToStopG>
+	<saToStrtG type="list" mapList="SA_TO_STRT_G">
+		<saSpGroupInfo2 mapField="SA_SP_GROUP_INFO"/>
+		<saGroupCount2 dataType="number" mapField="SA_GROUP_COUNT"/>
+		<cisDivisionOld mapField="CIS_DIVISION_OLD"/>
+		<saTypeCdOld mapField="SA_TYPE_CD_OLD"/>
+		<division2 mapField="CIS_DIVISION"/>
+		<saType2 mapField="SA_TYPE_CD"/>
+		<startOption mapField="START_OPT_CD"/>
+		<endDate dataType="date" mapField="END_DT"/>
+		<sicCode mapField="SIC_CD"/>
+		<areEstimatesAllowed dataType="boolean" mapField="ALLOW_EST_SW"/>
+		<customerRead dataType="lookup" mapField="CUST_READ_FLG" lookup="CUST_READ_FLG"/>
+		<hasRecommendDepositAmount dataType="boolean" mapField="RECOMMEND_DEP_SW"/>
+		<totalAmountToBill dataType="money" mapField="TOT_TO_BILL_AMT"/>
+		<totalAmountToBillLabel mapField="TOT_AMT_TOBILL_LBL"/>
+		<recurringChargeAmount dataType="money" mapField="RCR_CHG_AMT"/>
+		<numberOfPaymentPeriods dataType="number" mapField="NBR_PYMNT_PERIODS"/>
+		<canCalculate dataType="boolean" mapField="ACTION_CALC_SW"/>
+		<canHideCalculate dataType="boolean" mapField="HIDE_CALC_SW"/>
+		<canProtectCalculate dataType="boolean" mapField="PROTECT_CALC_SW"/>
+		<hasInterestRate dataType="number" mapField="INTEREST_RT"/>
+		<copySaId mapField="COPY_SA_ID"/>
+		<copySaVersion dataType="number" mapField="COPY_SA_VERSION"/>
+		<servicePointId mapField="SP_ID"/>
+		<spType1Cd mapField="SP_TYPE_1_CD"/>
+		<spType2Cd mapField="SP_TYPE_2_CD"/>
+		<spTypeInfo mapField="SP_TYPE_INFO"/>
+		<hasStopCopySA dataType="boolean" mapField="STOP_COPY_SA_SW"/>
+		<saTypeInfo mapField="SA_TYPE_INFO"/>
+		<startOptInfo mapField="START_OPT_INFO"/>
+		<allowRecurringCharge dataType="lookup" mapField="ALLOW_RCR_CHG_FLG" lookup="ALLOW_RCR_CHG_FLG"/>
+		<recurringChargeAmount2 mapField="RCR_CHG_LBL"/>
+		<totalBillAmount dataType="lookup" mapField="REQ_AMT_BILL_FLG" lookup="REQ_AMT_BILL_FLG"/>
+		<specialRole dataType="lookup" mapField="SPECIAL_ROLE_FLG" lookup="SPECIAL_ROLE_FLG"/>
+		<depositClass mapField="DEP_CL_CD"/>
+		<isCharacteristicPremiseRequired dataType="boolean" mapField="PREM_REQ_SW"/>
+		<isAllowedEstimates dataType="boolean" mapField="SA_ALLOW_EST_SW"/>
+		<isStartOptionRequired dataType="boolean" mapField="START_OPT_REQ_SW"/>
+		<sicInfo mapField="SIC_INFO"/>
+		<businessActivityDescription mapField="BUS_ACTIVITY_DESC"/>
+		<canStartThisSa dataType="boolean" mapField="START_SW"/>
+		<geoValInfo mapField="GEO_VAL_INFO"/>
+	</saToStrtG>
+	<spGrp type="list" mapList="SP_GRP">
+		<spType mapField="SP_TYPE_CD"/>
+		<description2 mapField="DESCR"/>
+		<spGrpCnt dataType="number" mapField="SP_GRP_CNT"/>
+		<isSelect2 dataType="boolean" mapField="SELECT_SW"/>
+	</spGrp>
+	<altStateDescr mapField="ALT_STATE_DESCR"/>
+	<altStatePostal mapField="ALT_STATE_POSTAL"/>
+	<premisesToProcess mapField="PREMISES_TO_PROCESS"/>
+	<spTypesToProcess mapField="SP_TYPES_TO_PROCESS"/>
+	<saNoSpGroupInfo mapField="SA_NO_SP_GROUP_INFO"/>
+	<canStart dataType="boolean" mapField="ACTION_START_SW"/>
+	<canStop dataType="boolean" mapField="ACTION_STOP_SW"/>
+	<hasStartSA dataType="boolean" mapField="BUILD_START_SA_SW"/>
+	<canStartPremiseSP dataType="boolean" mapField="START_PREM_SP_SW"/>
+	<canSelectSA dataType="boolean" mapField="START_SELECT_SA_SW"/>
+	<canCreateStartFieldActivity dataType="boolean" mapField="CREATE_START_FA_SW"/>
+	<canCreateStopFieldActivity dataType="boolean" mapField="CREATE_STOP_FA_SW"/>
+	<isStopSelected dataType="boolean" mapField="STOP_SELECTED_SW"/>
+	<canStopSelectedSA dataType="boolean" mapField="STOP_SELECT_SA_SW"/>
+	<canChangeStartStopDate dataType="boolean" mapField="UPDATE_SEL_SW"/>
+	<isRejected dataType="boolean" mapField="CANCEL_SEL_SW"/>
+	<isSelectAll dataType="boolean" mapField="SELECT_ALL_SW"/>
+	<canClearAll dataType="boolean" mapField="UNSELECT_ALL_SW"/>
+	<canAssignParentPremise dataType="boolean" mapField="PARENT_ASSIGN_SW"/>
+	<canRemoveParentPremise dataType="boolean" mapField="PARENT_REMOVE_SW"/>
+	<canAssignLandlord dataType="boolean" mapField="LANDLORD_ASSIGN_SW"/>
+	<canRemoveLandlord dataType="boolean" mapField="LANDLORD_REMOVE_SW"/>
+</schema>

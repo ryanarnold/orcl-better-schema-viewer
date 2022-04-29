@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<bo suppress="input" mdField="F1MSTCFG_BO_LBL" required="true" isPrimeKey="true" default="F1-BIGeneralMasterConfig" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<generalMasterConfiguration mdField="MASTER_CONFIG_PARAMS_BI_LBL" type="group" mapXML="MST_CONFIG_DATA">
+		<filePath mdField="F1_FILE_PATH" required="true"/>
+		<characterEncoding mdField="F1_CHAR_ENCODING"/>
+	</generalMasterConfiguration>
+</schema>

@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<accountId mapField="ACCT_ID"/>
+	<billCycle mapField="BILL_CYC_CD"/>
+	<accountManagementGroup mapField="ACCT_MGMT_GRP_CD"/>
+	<cisDivision mapField="CIS_DIVISION"/>
+	<collectionClass mapField="COLL_CL_CD"/>
+	<customerClass mapField="CUST_CL_CD"/>
+	<mainCustomer mapField="PER_ID">
+		<row mapChild="CI_ACCT_PER">
+			<MAIN_CUST_SW is="true"/>
+			<ALW_PREF_FLG is="C1YS"/>
+		</row>
+	</mainCustomer>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<setupDate dataType="date" mapField="SETUP_DT"/>
+</schema>

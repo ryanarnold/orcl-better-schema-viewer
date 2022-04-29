@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <calcGroup suppress="input" required="true" isPrimeKey="true" fkRef="C1-CALGR" mapField="CALC_GRP_CD"/>
+  <calcRule required="true" isPrimeKey="true" mapField="CALC_RULE_CD"/>
+  <executionSequence required="true" dataType="number" mapField="CR_EXEC_SEQ"/>
+  <bo suppress="input" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+  <description required="true" mapField="DESCR100"/>
+  <longDescription mapField="DESCRLONG"/>
+  <version suppress="true" dataType="number" mapField="VERSION"/>
+  <stepAlgorithm suppress="true" fkRef="ALG" mapField="CALC_RULE_STEP_ALG_CD"/>
+  <valueAlgorithm suppress="true" fkRef="ALG" mapField="CALC_RULE_VAL_ALG_CD"/>
+  <itemType suppress="true" fkRef="C1-ITMTY" mapField="ITEM_TYPE_CD"/>
+  <billFactor suppress="true" fkRef="C1-BFACT" mapField="BF_CD"/>
+  <descriptionOnBill mapField="DESCR_TMPLT"/>
+  <referredCalcGroup fkRef="C1-CALGR" mapField="REF_CALC_GRP_CD"/>
+  <uom fkRef="C1-UOM" mapField="UOM_CD"/>
+  <tou fkRef="C1-TOU" mapField="TOU_CD"/>
+  <sqi fkRef="C1-SQI" mapField="SQI_CD"/>
+  <distributionCode fkRef="C1-DSTCD" mapField="DST_ID"/>
+  <businessObjectDataArea mapField="BO_DATA_AREA"/>
+  <memberCategory type="list" mapChild="C1_CALC_RULE_MBR_CAT">
+    <calculationGroup fkRef="C1-CALGR" mapField="CALC_GRP_CD"/>
+    <calculationRule mapField="CALC_RULE_CD"/>
+    <calcLineCategoryType mapField="CL_CAT_TYPE_CD"/>
+    <calcLineCategoryValue mapField="CL_CAT_VAL"/>
+    <version dataType="number" mapField="VERSION"/>
+  </memberCategory>
+  <targetCategory type="list" mapChild="C1_CALC_RULE_TRGT_CAT">
+    <calculationGroup fkRef="C1-CALGR" mapField="CALC_GRP_CD"/>
+    <calculationRule mapField="CALC_RULE_CD"/>
+    <calcLineCategoryType mapField="CL_CAT_TYPE_CD"/>
+    <calcLineCategoryValue mapField="CL_CAT_VAL"/>
+    <version dataType="number" mapField="VERSION"/>
+  </targetCategory>
+  <calculationRuleCharacteristic type="list" mapChild="C1_CALC_RULE_CHAR">
+    <calcGroup mapField="CALC_GRP_CD"/>
+    <calcRule mapField="CALC_RULE_CD"/>
+    <characteristicType mapField="CHAR_TYPE_CD"/>
+    <characteristicValue mapField="CHAR_VAL"/>
+    <adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+    <fkCharValue1 mapField="CHAR_VAL_FK1"/>
+    <fkCharValue2 mapField="CHAR_VAL_FK2"/>
+    <fkCharValue3 mapField="CHAR_VAL_FK3"/>
+    <fkCharValue4 mapField="CHAR_VAL_FK4"/>
+    <fkCharValue5 mapField="CHAR_VAL_FK5"/>
+    <searchCharValue mapField="SRCH_CHAR_VAL"/>
+    <version dataType="number" mapField="VERSION"/>
+  </calculationRuleCharacteristic>
+</schema>

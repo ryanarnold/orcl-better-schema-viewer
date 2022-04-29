@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<orderId mapField="ENRL_ID"/>
+	<campaign mapField="CAMPAIGN_CD"/>
+	<packageId mapField="PACKAGE_ID"/>
+	<startDate dataType="date" mapField="START_DT"/>
+	<status dataType="lookup" mapField="ENRL_STATUS_FLG" lookup="ENRL_STATUS_FLG"/>
+	<callBackReason mapField="ENRL_CALLBK_RSN_CD"/>
+	<callBackDateTime dataType="dateTime" mapField="ENRL_CALLBK_DTTM"/>
+	<callBackRole mapField="ENRL_CBK_ROLE_ID"/>
+	<callBackUser mapField="ENRL_CBK_USER_ID"/>
+	<orderCancelReason mapField="ENRL_CAN_RSN_CD"/>
+	<personId mapField="PER_ID"/>
+	<personVersion dataType="number" mapField="PER_VERSION"/>
+	<personOrBusiness dataType="lookup" mapField="PER_OR_BUS_FLG" lookup="PER_OR_BUS_FLG"/>
+	<email mapField="EMAILID"/>
+	<lifeSupport dataType="lookup" mapField="LS_SL_FLG" lookup="LS_SL_FLG"/>
+	<lifeSupportDescription mapField="LS_SL_DESCR"/>
+	<accountId mapField="ACCT_ID"/>
+	<accountVersion dataType="number" mapField="ACCT_VERSION"/>
+	<customerClass mapField="CUST_CL_CD"/>
+	<accountMgmtGroup mapField="ACCT_MGMT_GRP_CD"/>
+	<billRouteType mapField="BILL_RTE_TYPE_CD"/>
+	<billAddressSource dataType="lookup" mapField="BILL_ADDR_SRCE_FLG" lookup="BILL_ADDR_SRCE_FLG"/>
+	<premiseId mapField="PREM_ID"/>
+	<premiseVersion dataType="number" mapField="PREM_VERSION"/>
+	<cisDivision mapField="CIS_DIVISION"/>
+	<premiseType mapField="PREM_TYPE_CD"/>
+	<geoType mapField="GEO_TYPE_CD"/>
+	<geoValue mapField="GEO_VAL"/>
+	<version dataType="number" mapField="VERSION"/>
+	<language mapField="LANGUAGE_CD"/>
+	<personInformation dataType="lookup" mapField="ENRL_PER_INFO_FLG" lookup="ENRL_PER_INFO_FLG"/>
+	<accountInformation dataType="lookup" mapField="ENRL_ACCT_INFO_FLG" lookup="ENRL_ACCT_INFO_FLG"/>
+	<premiseInformation dataType="lookup" mapField="ENRL_PREM_INFO_FLG" lookup="ENRL_PREM_INFO_FLG"/>
+	<spId mapField="SP_ID"/>
+	<orderFields type="list" mapList="FIELD_LIST">
+		<sequence dataType="number" mapField="SEQ_NUM"/>
+		<sortSequence dataType="number" mapField="SORT_SEQ5"/>
+		<fieldType dataType="lookup" mapField="CAMP_FLD_TYPE_FLG" lookup="CAMP_FLD_TYPE_FLG"/>
+		<charType mapField="CHAR_TYPE_CD"/>
+		<charValue mapField="CHAR_VAL"/>
+		<adhocValue mapField="ADHOC_CHAR_VAL"/>
+		<fkValue1 mapField="VAL_FK1"/>
+		<fkValue2 mapField="VAL_FK2"/>
+		<fkValue3 mapField="VAL_FK3"/>
+		<fkValue4 mapField="VAL_FK4"/>
+		<fkValue5 mapField="VAL_FK5"/>
+		<columnReference mapField="COL_REF_CD"/>
+		<fkRef mapField="FK_REF_CD"/>
+		<colRefValue mapField="COL_REF_VAL"/>
+		<encrColRefValue mapField="ENCR_COL_REF_VAL"/>
+		<hashColRefValue mapField="HASH_COL_REF_VAL"/>
+		<fieldPrompt mapField="CAMP_FLD_PROMPT"/>
+		<fieldTypeUsage dataType="lookup" mapField="CAMP_FLDTY_USG_FLG" lookup="CAMP_FLDTY_USG_FLG"/>
+		<fieldDependency dataType="lookup" mapField="CAMP_FLDTY_DPN_FLG" lookup="CAMP_FLDTY_DPN_FLG"/>
+		<charEntity dataType="lookup" mapField="CAMP_CHAR_ENT_FLG" lookup="CAMP_CHAR_ENT_FLG"/>
+		<packageFieldUsage dataType="lookup" mapField="PKG_FLD_USG_FLG" lookup="PKG_FLD_USG_FLG"/>
+	</orderFields>
+	<personIdDetails type="group">
+		<personIds type="list" mapList="PER_ID_LIST">
+			<idType mapField="ID_TYPE_CD"/>
+			<personId mapField="PER_ID_NBR"/>
+			<encrPersonId mapField="ENCR_PER_ID_NBR"/>
+			<hashPersonId mapField="HASH_PER_ID_NBR"/>
+			<isPrimary dataType="boolean" mapField="PRIM_SW"/>
+		</personIds>
+	</personIdDetails>
+	<personNameDetails type="group">
+		<personNames type="list" mapList="PER_NAME_LIST">
+			<sequence dataType="number" mapField="SEQ_NUM"/>
+			<nameType dataType="lookup" mapField="NAME_TYPE_FLG" lookup="NAME_TYPE_FLG"/>
+			<entityName mapField="ENTITY_NAME"/>
+			<entityNameUpper mapField="ENTITY_NAME_UPR"/>
+			<isPrimaryName dataType="boolean" mapField="PRIM_NAME_SW"/>
+		</personNames>
+	</personNameDetails>
+	<personPhoneDetails type="group">
+		<personPhones type="list" mapList="PER_PHONE_LIST">
+			<sequence dataType="number" mapField="SEQ_NUM"/>
+			<phoneType mapField="PHONE_TYPE_CD"/>
+			<phone mapField="PHONE"/>
+			<extension mapField="EXTENSION"/>
+		</personPhones>
+	</personPhoneDetails>
+	<addressDetails type="group">
+		<addresses type="list" mapList="ADDR_LIST">
+			<country mapField="COUNTRY"/>
+			<addressLine1 mapField="ADDRESS1"/>
+			<addressLine2 mapField="ADDRESS2"/>
+			<addressLine3 mapField="ADDRESS3"/>
+			<addressLine4 mapField="ADDRESS4"/>
+			<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+			<number1 mapField="NUM1"/>
+			<number2 mapField="NUM2"/>
+			<inCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+			<city mapField="CITY"/>
+			<geographic mapField="GEO_CODE"/>
+			<county mapField="COUNTY"/>
+			<state mapField="STATE"/>
+			<postal mapField="POSTAL"/>
+			<orderEntity dataType="lookup" mapField="ENRL_ADDR_ENT_FLG" lookup="ENRL_ADDR_ENT_FLG"/>
+			<addressUpper mapField="ADDRESS1_UPR"/>
+			<cityUpper mapField="CITY_UPR"/>
+			<trendArea mapField="TREND_AREA_CD"/>
+		</addresses>
+	</addressDetails>
+</schema>

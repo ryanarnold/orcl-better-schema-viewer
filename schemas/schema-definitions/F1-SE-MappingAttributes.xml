@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<mapField suppress="blank" mdField="F1_SE_MAPFLD_LBL" fkRef="F1-MOFLD"/>
+	<mapXML suppress="blank" mdField="F1_SE_MAPXML_LBL" fkRef="F1-MOCFL"/>
+	<mapXMLDropdown type="group">
+		<mapXMLForBO mdField="F1_SE_MAPXML_LBL"/>
+		<moCode mapField="MAINT_OBJ_CD"/>
+	</mapXMLDropdown>
+	<isPrimeKey suppress="blank" mdField="F1_SE_ISPRIMEKEY_LBL" dataType="lookupBO" lookupBO="F1-SchemaBoolTrue"/>
+	<uiHintcapitalize/>
+	<uiHintcapitalizeGroup type="group">
+		<uiHintcapitalizeVal suppress="blank" mdField="F1_SE_CAPITALIZE_LBL" dataType="lookupBO" lookupBO="F1-SchemaBooleanValues"/>
+	</uiHintcapitalizeGroup>
+	<rowRef suppress="blank" mdField="F1_SE_ROWREF"/>
+</schema>

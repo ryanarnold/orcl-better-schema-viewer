@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <printerKey default="2100"/>
+  <sortKey type="group">
+    <billPrintIntercept mapField="USER_ID"/>
+    <billId mapField="BILL_ID"/>
+    <sequence mdField="BILL_PRT_SEQ_NO" dataType="number"/>
+    <copyNbr mdField="NBR_BILL_COPIES" dataType="number"/>
+    <billRecGrpSeq/>
+    <recTypeNbr/>
+    <premiseSeq type="group">
+      <state mapField="STATE"/>
+      <city mapField="CITY"/>
+      <address1 mapField="ADDRESS1"/>
+      <premiseId mapField="PREM_ID"/>
+    </premiseSeq>
+    <nonPremSaSeq type="group">
+      <saPrtPriority dataType="lookup" mapField="BILL_PRT_PRIO_FLG" lookup="BILL_PRT_PRIO_FLG"/>
+      <saId mapField="SA_ID"/>
+      <saRecGrpSeq/>
+      <bsegAdjDetails type="group">
+        <bsegAdjDate mdField="ADJ_DT" dataType="date"/>
+        <bsegAdjId mdField="ADJ_ID"/>
+        <bsegRecGrpSeq/>
+        <calcHdrLineDetails type="group">
+          <hdrSeqBsegMsgsNbr/>
+          <calcHdrRecGrpSeq/>
+          <calcLineSeq/>
+        </calcHdrLineDetails>
+      </bsegAdjDetails>
+    </nonPremSaSeq>
+    <premiseRecordGroup type="group">
+      <premRecGrpSeq/>
+      <saDetails type="group">
+        <saPrtPriority dataType="lookup" mapField="BILL_PRT_PRIO_FLG" lookup="BILL_PRT_PRIO_FLG"/>
+        <saId mdField="SA_ID"/>
+        <saRecGrpSeq/>
+        <bsegAdjDetails type="group">
+          <bsegAdjDateHistNbr/>
+          <bsegAdjId/>
+          <bsegRecGrpSeq/>
+          <calcHdrLineDetails type="group">
+            <hdrSeqBsegNbr/>
+            <calcHdrRecGrpSeq/>
+            <calcLineSeq/>
+          </calcHdrLineDetails>
+        </bsegAdjDetails>
+      </saDetails>
+    </premiseRecordGroup>
+  </sortKey>
+  <mailingKey mapField="POSTAL"/>
+  <spId mapField="SP_ID"/>
+  <badge mapField="BADGE_NBR"/>
+  <uom mapField="UOM_CD"/>
+  <tou mapField="TOU_CD"/>
+  <rdgDecPos/>
+  <startRegRdg dataType="number" mapField="START_REG_READING"/>
+  <startReadDttm/>
+  <startEstimate/>
+  <endRegRdg dataType="number" mapField="END_REG_READING"/>
+  <endReadDttm/>
+  <endEstimate/>
+  <msrQty dataType="number" mapField="MSR_QTY"/>
+  <usage dataType="lookup" mapField="USAGE_FLG" lookup="USAGE_FLG"/>
+  <usagePct dataType="number" mapField="USE_PCT"/>
+  <howToUse dataType="lookup" mapField="HOW_TO_USE_FLG" lookup="HOW_TO_USE_FLG"/>
+  <consumpSub mapField=" CONSUM_SUB_FLG"/>
+  <msrPeakQty dataType="boolean" mapField="MSR_PEAK_QTY_SW"/>
+  <regConst dataType="number" mapField="REG_CONST"/>
+  <qtyDecPos/>
+  <finalUom mapField="FINAL_UOM_CD"/>
+  <finalTou mapField="FINAL_TOU_CD"/>
+  <finalRegQty dataType="number" mapField="FINAL_REG_QTY"/>
+  <sqi mapField="SQI_CD"/>
+  <finalSqi mapField="FINAL_SQI_CD"/>
+</schema>

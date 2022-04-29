@@ -1,0 +1,216 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<action/>
+	<bo/>
+	<paymentTemplate fkRef="C1-PAYTM" mapField="PAY_TMPL_CD"/>
+	<currency/>
+	<paymentEvent type="group">
+		<payEventId mapField="PAY_EVENT_ID"/>
+		<payorAccountId mapField="PAYOR_ACCT_ID"/>
+		<payorAccountInfo mapField="PAYOR_ACCT_NAME"/>
+		<paymentAmount mdField="PAY_AMT" dataType="money" mapField="PAYMENT_AMT"/>
+		<matchType mapField="MATCH_TYPE_CD"/>
+		<matchValue mapField="MATCH_VAL"/>
+		<paymentDate dataType="date" default="%CurrentDate" mapField="PAYMENT_DT"/>
+		<payEventAction dataType="lookup" default="DSFZ" mapField="PEVT_SPCL_ACTN_FLG" lookup="PEVT_SPCL_ACTN_FLG"/>
+		<shouldDoManualOverrideAuth dataType="boolean" mapField="TENDER_AUTH_OVRD_SW"/>
+		<tenderAuthorizationCode mapField="TENDER_AUTH_CD"/>
+		<shouldPerformAuthorization dataType="boolean" mapField="TENDER_AUTH_SW"/>
+		<tenderAuthorizationDataArea type="raw" mapXML="TENDER_INPUT_DATA_AREA"/>
+		<tenderAuthorizationDataAreaName fkRef="F1-DATAR" mapField="TENDER_INPUT_DATA_AREA_CD"/>
+		<tendersUI type="list" mapList="TNDR_TYPE">
+			<tenderType mapField="TENDER_TYPE_CD"/>
+			<tenderedAmount dataType="money" mapField="TENDERED_AMT"/>
+			<alternateAmount dataType="number" mapField="ALT_TENDER_AMT"/>
+			<alternateCurrency mapField="ALT_CURRENCY_CD"/>
+			<checkNumber mapField="CHECK_NBR"/>
+		</tendersUI>
+		<payDate dataType="date" mapField="PAY_DT"/>
+		<ilmDate dataType="date" mapField="ILM_DT"/>
+		<isEligibleForArchiving dataType="boolean" mapField="ILM_ARCH_SW"/>
+		<tenders type="group">
+			<tender type="list" mapList="PAY_TNDR">
+				<tenderId mapField="PAY_TENDER_ID"/>
+				<payorAccountId mapField="PAYOR_ACCT_ID"/>
+				<tenderStatus dataType="lookup" mapField="TNDR_STATUS_FLG" lookup="TNDR_STATUS_FLG"/>
+				<tenderAmount dataType="money" mapField="TENDER_AMT"/>
+				<tenderType mapField="TENDER_TYPE_CD"/>
+				<tenderControlId mapField="TNDR_CTL_ID"/>
+				<checkNumber mapField="CHECK_NBR"/>
+				<currency default="USD" mapField="CURRENCY_CD"/>
+				<alternateAmount dataType="number" mapField="ALT_TENDER_AMT"/>
+				<alternateCurrency mapField="ALT_CURRENCY_CD"/>
+				<tenderCancel dataType="boolean" mapField="TNDR_CANCEL_SW"/>
+				<cancelReason mapField="CAN_RSN_CD"/>
+				<bank mapField="BANK_CD"/>
+				<bankAccount mapField="BANK_ACCT_KEY"/>
+				<payorInformation mapField="TNDR_ACCT_INFO"/>
+				<tenderCancelInformation type="group">
+					<inputCancelReason mapField="CAN_RSN_CD2"/>
+					<tenderCancel dataType="boolean" mapField="TNDR_CANCEL_SW"/>
+				</tenderCancelInformation>
+				<template mapField="CHAR_VAL_FK1">
+					<row mapList="PY_TNDR_CHAR">
+						<CHAR_TYPE_CD is="C1-TMPL"/>
+					</row>
+				</template>
+				<authorization mapField="ADHOC_CHAR_VAL">
+					<row mapList="PY_TNDR_CHAR">
+						<CHAR_TYPE_CD is="C1-TAUTH"/>
+					</row>
+				</authorization>
+				<reversal mapField="ADHOC_CHAR_VAL">
+					<row mapList="PY_TNDR_CHAR">
+						<CHAR_TYPE_CD is="C1-TRVSE"/>
+					</row>
+				</reversal>
+			</tender>
+		</tenders>
+		<payments type="group">
+			<payment type="list" mapList="PAY">
+				<paymentId mapField="PAY_ID"/>
+				<paymentEventId mapField="PAY_EVENT_ID"/>
+				<accountId mapField="ACCT_ID"/>
+				<paymentAmount dataType="money" mapField="PAY_AMT"/>
+				<customerName mapField="NON_CIS_NAME"/>
+				<agreementNumber mapField="NON_CIS_REF_NBR"/>
+				<comments mapField="NON_CIS_COMMENT"/>
+				<nonCisAccount dataType="boolean" mapField="NON_CIS_PAYMENT_SW"/>
+				<distributionCode mapField="CHAR_VAL_FK1">
+					<row mapList="PY_CHAR">
+						<CHAR_TYPE_CD is="C1-DSTCD"/>
+					</row>
+				</distributionCode>
+				<glAccount mapField="ADHOC_CHAR_VAL">
+					<row mapList="PY_CHAR">
+						<CHAR_TYPE_CD is="C1-GLACC"/>
+					</row>
+				</glAccount>
+				<referenceNumber mapField="ADHOC_CHAR_VAL">
+					<row mapList="PY_CHAR">
+						<CHAR_TYPE_CD is="C1-REFNM"/>
+					</row>
+				</referenceNumber>
+				<paymentStatus dataType="lookup" mapField="PAY_STATUS_FLG" lookup="PAY_STATUS_FLG"/>
+				<ilmDate dataType="date" mapField="ILM_DT"/>
+				<isEligibleForArchiving dataType="boolean" mapField="ILM_ARCH_SW"/>
+			</payment>
+		</payments>
+		<paymentEventCharacteristic type="group">
+			<paymentEventCharacteristics type="list" mapList="PYE_CHAR">
+				<characteristicType mapField="CHAR_TYPE_CD"/>
+				<characteristicValue mapField="CHAR_VAL"/>
+				<sequence dataType="number" mapField="SEQ_NUM"/>
+				<fkCharValue1 mapField="CHAR_VAL_FK1"/>
+				<fkCharValue2 mapField="CHAR_VAL_FK2"/>
+				<fkCharValue3 mapField="CHAR_VAL_FK3"/>
+				<fkCharValue4 mapField="CHAR_VAL_FK4"/>
+				<fkCharValue5 mapField="CHAR_VAL_FK5"/>
+				<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+				<searchCharacteristicValue mapField="SRCH_CHAR_VAL"/>
+			</paymentEventCharacteristics>
+		</paymentEventCharacteristic>
+		<miscellaneous type="group">
+			<nonCisSaId mapField="NON_CIS_SA_ID"/>
+			<template mapField="PAY_TMPL_CD"/>
+			<bank mapField="BANK_CD"/>
+			<tenderSource mapField="TNDR_SRCE_CD"/>
+			<tenderSourceMessage mapField="TNDR_SRCE_MSG"/>
+			<addCisPay dataType="boolean" default="false" mapField="ADD_CIS_PAY_SW"/>
+			<customerName mapField="NON_CIS_NAME"/>
+			<agreement mapField="NON_CIS_REF_NBR"/>
+			<comments mapField="NON_CIS_COMMENT"/>
+			<callerProcess dataType="lookup" mapField="C1_CALLER_PROCESS_FLG" lookup="C1_CALLER_PROCESS_FLG"/>
+		</miscellaneous>
+		<template/>
+		<tenderSource mapField="TNDR_SOURCE_CD"/>
+		<tenderSourceMessage/>
+		<cashOnlyMessage/>
+		<description/>
+		<customerName mapField="NCIS_CUST_NAME_LBL"/>
+		<agreement mapField="AGREEMENT_NBR_LBL"/>
+		<comments mapField="NON_CIS_COMMENT"/>
+		<templateLines type="list">
+			<distributionCode mapField="DST_ID"/>
+			<description/>
+			<glAccount mapField="GL_ACCT"/>
+			<amount dataType="money" mapField="AMOUNT_LBL"/>
+			<reference mapField="NON_CIS_REF_NBR"/>
+		</templateLines>
+	</paymentEvent>
+	<tenderSourceList type="group">
+		<bank mapField="BANK_CD"/>
+		<tenderSources type="list" mapList="PARAMETERS">
+			<tenderSource mapField="TNDR_SOURCE_CD"/>
+			<description mapField="DESCR"/>
+		</tenderSources>
+	</tenderSourceList>
+	<distributionList type="group">
+		<results type="group">
+			<selectList type="list" mapList="NCIS">
+				<distributionCode mapField="DST_ID"/>
+				<description mapField="DESCR"/>
+				<glAccount mapField="GL_ACCT"/>
+			</selectList>
+		</results>
+	</distributionList>
+	<templateFields type="group">
+		<bank/>
+		<saId/>
+		<accountId/>
+	</templateFields>
+	<shouldAllowOverride/>
+	<tenderTypes type="group">
+		<tenderTypes type="list">
+			<type/>
+			<description/>
+			<bo/>
+			<authorization/>
+			<tenderDataSet/>
+		</tenderTypes>
+	</tenderTypes>
+	<expYear type="group">
+		<expYears type="list">
+			<code/>
+			<description/>
+		</expYears>
+	</expYear>
+	<state type="group">
+		<states type="list">
+			<code/>
+			<description/>
+		</states>
+	</state>
+	<authorization type="group">
+		<cardholderFirstName mapField="C1_CARDHOLDER_FNAME"/>
+		<cardholderLastName mapField="C1_CARDHOLDER_LNAME"/>
+		<creditCardType dataType="lookup" mapField="CARD_TYPE_FLG" lookup="CARD_TYPE_FLG"/>
+		<creditCardNumber mapField="CREDIT_CARD_NBR"/>
+		<encrCreditCardNumber mapField="ENCR_CREDIT_CARD_NBR"/>
+		<creditCardExpirationMonth mapField="EXP_MONTH"/>
+		<creditCardExpirationYear mapField="EXP_YEAR"/>
+		<creditCardVerificationNumber mapField="C1_CARD_VAL_CODE"/>
+		<country mapField="COUNTRY"/>
+		<addressLine1 mapField="ADDRESS1"/>
+		<addressLine2 mapField="ADDRESS2"/>
+		<addressLine3 mapField="ADDRESS3"/>
+		<addressLine4 mapField="ADDRESS4"/>
+		<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+		<number1 mapField="NUM1"/>
+		<number2 mapField="NUM2"/>
+		<inCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+		<city mapField="CITY"/>
+		<geographic mapField="GEO_CODE"/>
+		<county mapField="COUNTY"/>
+		<state mapField="STATE"/>
+		<postal mapField="POSTAL"/>
+		<phone mapField="PHONE"/>
+		<email mapField="EMAILID"/>
+	</authorization>
+	<selectedTenderType type="group">
+		<tenderType/>
+		<bo/>
+		<authorization/>
+		<tenderDataSet/>
+	</selectedTenderType>
+</schema>

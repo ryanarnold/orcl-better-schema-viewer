@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<personId mdField="PER_ID"/>
+	<accountId mdField="ACCT_ID"/>
+	<spId mdField="SP_ID"/>
+	<faId mdField="FA_ID"/>
+	<srUpdateEvent mdField="C1_SVC_REQ_UPD_FLG" required="true" dataType="lookup" lookup="C1_SVC_REQ_UPD_FLG"/>
+	<appointmentRequestType mdField="C1_APPT_REQ_TYPE_FLG" dataType="lookup" lookup="C1_APPT_REQ_TYPE_FLG"/>
+	<customerContactType mdField="CC_TYPE_CD"/>
+	<comments mdField="DESCRLONG"/>
+	<appointmentStartDateTime mdField="SCHED_DTTM" dataType="dateTime"/>
+	<appointmentEndDateTime mdField="SCHED_DTTM" dataType="dateTime"/>
+	<arrivalDateTime mdField="ARRIVAL_DTTM" dataType="dateTime"/>
+	<missedApptStatusReason/>
+	<faRemarkType mdField="FA_REM_CD"/>
+	<activityId mdField="C1_EXT_ACTIVITY_ID"/>
+	<fieldWorkSystemAddress type="group">
+		<address1 mdField="ADDRESS1"/>
+		<address2 mdField="ADDRESS2"/>
+		<address3 mdField="ADDRESS3"/>
+		<address4 mdField="ADDRESS4"/>
+		<crossStreet mdField="C1_CROSS_STREET"/>
+		<suburb mdField="C1_SUBURB"/>
+		<city mdField="CITY"/>
+		<county mdField="COUNTY"/>
+		<postal mdField="POSTAL"/>
+		<country mdField="COUNTRY"/>
+		<state mdField="STATE"/>
+		<geocodeLatitude mdField="C1_GEO_LAT" dataType="number"/>
+		<geocodeLongitude mdField="C1_GEO_LONG" dataType="number"/>
+	</fieldWorkSystemAddress>
+</schema>

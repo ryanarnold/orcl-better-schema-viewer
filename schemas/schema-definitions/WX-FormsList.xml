@@ -1,0 +1,130 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<head type="group">
+		<action/>
+		<key1 type="group">
+			<name default="ACCT_ID"/>
+			<value/>
+		</key1>
+		<key2 type="group">
+			<name default="PER_ID"/>
+			<value/>
+		</key2>
+		<key3 type="group">
+			<name/>
+			<value/>
+		</key3>
+		<key4 type="group">
+			<name/>
+			<value/>
+		</key4>
+		<key5 type="group">
+			<name/>
+			<value/>
+		</key5>
+		<emailAddress/>
+		<webUserId/>
+		<ipAddress/>
+		<cssUser/>
+		<custom type="group">
+			<field1 type="group">
+				<name/>
+				<value/>
+			</field1>
+			<field2 type="group">
+				<name/>
+				<value/>
+			</field2>
+			<field3 type="group">
+				<name/>
+				<value/>
+			</field3>
+			<field4 type="group">
+				<name/>
+				<value/>
+			</field4>
+			<field5 type="group">
+				<name/>
+				<value/>
+			</field5>
+			<field6 type="group">
+				<name/>
+				<value/>
+			</field6>
+			<field7 type="group">
+				<name/>
+				<value/>
+			</field7>
+			<field8 type="group">
+				<name/>
+				<value/>
+			</field8>
+			<field9 type="group">
+				<name/>
+				<value/>
+			</field9>
+			<field10 type="group">
+				<name/>
+				<value/>
+			</field10>
+		</custom>
+	</head>
+	<mainData type="group">
+		<pageSize/>
+		<applyFilters mdField="F1_YESNO_FLG" dataType="lookup" lookup="F1_YESNO_FLG"/>
+		<getFilterValues mdField="F1_YESNO_FLG" dataType="lookup" lookup="F1_YESNO_FLG"/>
+		<startingDateTime/>
+		<startingServiceTaskId/>
+		<criteria type="group">
+			<formType type="group">
+				<requestedValue/>
+				<validValues type="list">
+					<description/>
+					<value/>
+				</validValues>
+			</formType>
+			<form type="group">
+				<requestedValue/>
+				<validValues type="list">
+					<description/>
+					<value/>
+				</validValues>
+			</form>
+			<status type="group">
+				<requestedValue/>
+				<validValues type="list">
+					<description/>
+					<value/>
+				</validValues>
+			</status>
+			<updatedDate type="group">
+				<startDateValue dataType="dateTime"/>
+				<endDateValue/>
+			</updatedDate>
+		</criteria>
+		<forms type="list">
+			<formType/>
+			<referenceId/>
+			<form/>
+			<status/>
+			<lastUpdated/>
+			<dateCreated/>
+			<updateable/>
+			<closed/>
+			<statusReason/>
+			<commentHistory type="list">
+				<dateTime dataType="dateTime"/>
+				<user/>
+				<comment/>
+			</commentHistory>
+		</forms>
+	</mainData>
+	<errorInformation type="group">
+		<isInError mdField="IN_ERROR_SW" dataType="boolean" default="false"/>
+		<errorReference type="group">
+			<category mdField="MESSAGE_CAT_NBR" dataType="number"/>
+			<number mdField="MESSAGE_NBR" dataType="number"/>
+		</errorReference>
+		<errorMessage mdField="MESSAGE_TEXT"/>
+	</errorInformation>
+</schema>

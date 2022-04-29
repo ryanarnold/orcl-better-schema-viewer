@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<accountId mapField="ACCT_ID"/>
+	<debtClass mapField="DEBT_CL_CD"/>
+	<debtClassSAs type="list" mapList="DEBT_CL_SA">
+		<saId mapField="SA_ID"/>
+		<currentAmount dataType="money" mapField="DEBT_CUR_AMT"/>
+		<totalAmount dataType="money" mapField="DEBT_TOT_AMT"/>
+		<division mapField="CIS_DIVISION"/>
+		<premId mapField="PREM_ID"/>
+		<saArrears type="list" mapList="SA_ARREARS">
+			<saId mapField="SA_ID"/>
+			<daysAgeNumeric mapField="DAYS_AGE_N"/>
+			<arrearsAmount dataType="money" mapField="ARS_AMT"/>
+			<checkedForPA dataType="boolean" mapField="CHECKED_FOR_PA_SW"/>
+		</saArrears>
+	</debtClassSAs>
+</schema>

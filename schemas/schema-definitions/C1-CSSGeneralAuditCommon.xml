@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<auditId suppress="true" isPrimeKey="true" mapField="AUDIT_ID"/>
+	<webUserId required="true" fkRef="CI_USER" mapField="USER_ID"/>
+	<creationDateTime suppress="true" dataType="dateTime" mapField="CRE_DTTM"/>
+	<systemIPAddress mapField="SYSTEM_IP_ADDRESS"/>
+	<headerIPAddress mapField="HEADER_IP_ADDRESS"/>
+	<auditSource required="true" dataType="lookup" mapField="AUDIT_SRC_FLG" lookup="AUDIT_SRC_FLG"/>
+	<auditAction required="true" dataType="lookup" mapField="AUDIT_ACT_FLG" lookup="AUDIT_ACT_FLG"/>
+	<auditBusinessObject suppress="true" required="true" fkRef="F1-BUSOB" mapField="AUDIT_BUS_OBJ_CD"/>
+	<auditDataArea type="raw" suppress="true" mapXML="AUDIT_DATA_AREA"/>
+	<ilmDate suppress="true" dataType="date" mapField="ILM_DT"/>
+	<isEligibleForArchiving suppress="true" dataType="boolean" mapField="ILM_ARCH_SW"/>
+	<script suppress="input" mdField="SS_SCR_CD" required="true" fkRef="F1-SCR" mapField="SCR_CD"/>
+	<cssUser suppress="input" mdField="CSS_USER" mapField="ADHOC_CHAR_VAL">
+		<row mapChild="F1_GNRL_AUDIT_CHAR">
+			<CHAR_TYPE_CD is="C1-SSUSR"/>
+			<SEQ_NUM is="1"/>
+		</row>
+	</cssUser>
+	<emailAddress suppress="input" mdField="EMAILID" mapField="ADHOC_CHAR_VAL">
+		<row mapChild="F1_GNRL_AUDIT_CHAR">
+			<CHAR_TYPE_CD is="C1-EMLID"/>
+			<SEQ_NUM is="1"/>
+		</row>
+	</emailAddress>
+	<accountId suppress="input" mdField="ACCOUNT_LBL" fkRef="ACCT" mapField="CHAR_VAL_FK1">
+		<row mapChild="F1_GNRL_AUDIT_CHAR">
+			<CHAR_TYPE_CD is="C1-ACCT"/>
+			<SEQ_NUM is="1"/>
+		</row>
+	</accountId>
+	<personId suppress="input" mdField="PERSON_LBL" fkRef="PER" mapField="CHAR_VAL_FK1">
+		<row mapChild="F1_GNRL_AUDIT_CHAR">
+			<CHAR_TYPE_CD is="C1-PER"/>
+			<SEQ_NUM is="1"/>
+		</row>
+	</personId>
+</schema>

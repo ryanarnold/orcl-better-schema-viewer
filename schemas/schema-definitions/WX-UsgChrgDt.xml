@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<head type="group">
+		<action/>
+		<key1 type="group">
+			<name default="ACCT_ID"/>
+			<value/>
+		</key1>
+		<key2 type="group">
+			<name default="PER_ID"/>
+			<value/>
+		</key2>
+		<key3 type="group">
+			<name/>
+			<value/>
+		</key3>
+		<key4 type="group">
+			<name/>
+			<value/>
+		</key4>
+		<key5 type="group">
+			<name/>
+			<value/>
+		</key5>
+		<emailAddress/>
+		<webUserId/>
+		<ipAddress/>
+		<cssUser/>
+		<saId mdField="SA_ID" fkRef="SA"/>
+		<referenceDateTime mdField="WX_REFERENCE_DATE_TIME" dataType="dateTime" default="%ProcessDateTime"/>
+		<usageCalculationCallType mdField="C1_USG_CALC_CALL_TYPE_FLG" dataType="lookup" default="C1SC" lookup="C1_USG_CALC_CALL_TYPE_FLG"/>
+		<mode mdField="WX_USAGE_CALC_MODE_FLG" dataType="lookup" lookup="WX_USAGE_CALC_MODE_FLG"/>
+		<prevBsegCount mdField="WX_BSEG_COUNT" dataType="number" default="6"/>
+	</head>
+	<mainData type="group">
+		<saAmounts type="list">
+			<saId mdField="SA_ID" fkRef="SA"/>
+			<amount mdField="WX_PROJECTED_AMT" dataType="number"/>
+			<cisDivision mdField="CIS_DIVISION"/>
+			<cisDivisionDescription mdField="DESCR"/>
+			<saType mdField="SA_TYPE_CD"/>
+			<saTypeDescription mdField="SA_TYPE_DESCR"/>
+			<serviceType mdField="SVC_TYPE_CD"/>
+			<serviceTypeDescription mdField="SVC_TYPE_DESCR"/>
+			<saInfo mdField="SA_INFO"/>
+			<currencySymbol mdField="CUR_SYMBOL"/>
+			<isInError mdField="IN_ERROR_SW" dataType="boolean"/>
+			<isSkipped mdField="SKIPPED_SW" dataType="boolean"/>
+			<skipReasonDescription mdField="SKIP_REASON"/>
+			<priorBilledAmounts type="list">
+				<bsegEndDate mdField="END_DT" dataType="date"/>
+				<bsegAmount mdField="CALC_AMT" dataType="money"/>
+			</priorBilledAmounts>
+		</saAmounts>
+		<billId mdField="BILL_ID" fkRef="BILL"/>
+		<isInError mdField="IN_ERROR_SW" dataType="boolean"/>
+	</mainData>
+</schema>

@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<input type="group">
+		<option dataType="lookup" private="true" default="C1PQ" mapField="RE_HELPER_OPT_FLG" lookup="RE_HELPER_OPT_FLG"/>
+		<period type="group">
+			<startDate dataType="date" mapField="START_DT"/>
+			<endDate dataType="date" mapField="END_DT"/>
+		</period>
+		<dateQtyList type="group">
+			<DateQuantityData type="list" mapList="DATE_QTY_LIST">
+				<date dataType="date" mapField="F1_DATE"/>
+				<quantity dataType="number" mapField="CONT_QTY"/>
+			</DateQuantityData>
+		</dateQtyList>
+	</input>
+	<output type="group">
+		<totalProratedQty mdField="CONT_QTY" dataType="number" mapField="TOT_PROR_QTY"/>
+	</output>
+</schema>

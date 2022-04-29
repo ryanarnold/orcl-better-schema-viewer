@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<boGroup type="group">
+		<action suppress="input"/>
+		<bucketValueRanges type="group">
+			<bucketValueRangesList type="list" mapChild="F1_BKT_CONFIG_VAL">
+				<sequence required="true" dataType="number" mapField="SEQ_NUM"/>
+				<startRange dataType="number" mapField="BKT_START_RANGE"/>
+				<endRange dataType="number" mapField="BKT_END_RANGE"/>
+				<description required="true" mapField="DESCR"/>
+			</bucketValueRangesList>
+		</bucketValueRanges>
+	</boGroup>
+</schema>

@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<leadEvent isPrimeKey="true" fkRef="C1-LDEVT" mapField="C1_LEAD_EVT_ID"/>
+	<leadEventType suppress="input" required="true" fkRef="C1-LEVTY" mapField="C1_LEAD_EVT_TYPE_CD"/>
+	<bo suppress="true" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<boStatus suppress="input" mapField="BO_STATUS_CD"/>
+	<statusReason suppress="blank" fkRef="F1-STRSN" mapField="BO_STATUS_REASON_CD"/>
+	<lead suppress="input" mdField="C1_LEAD_INFO_LBL" required="true" fkRef="C1-LEAD" mapField="C1_LEAD_ID"/>
+	<relatedLeadEvent mdField="C1_REL_LEAD_EVT_ID" fkRef="C1-LDEVT" mapField="CHAR_VAL_FK1">
+		<row mapChild="C1_LEAD_EVT_CHAR">
+			<CHAR_TYPE_CD is="C1-LDEVT"/>
+		</row>
+	</relatedLeadEvent>
+	<triggerDate required="true" dataType="date" mapField="TRIGGER_DT"/>
+	<communicationChannel suppress="blank" mdField="LEAD_EVT_COMM_CHANNEL_LBL" dataType="lookup" mapField="C1_PRIM_COM_CH_FLG" lookup="C1_PRIM_COM_CH_FLG"/>
+	<externalCancellation suppress="true" mdField="LEAD_EVT_EXTRNL_CANC_FLG" dataType="lookup" mapXML="BO_DATA_AREA" lookup="LEAD_EVT_EXTRNL_CANC_FLG"/>
+	<createDateTime suppress="true" required="true" dataType="dateTime" default="%CurrentDateTime" mapField="CRE_DTTM"/>
+	<statusDateTime suppress="true" dataType="dateTime" mapField="STATUS_UPD_DTTM"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+</schema>

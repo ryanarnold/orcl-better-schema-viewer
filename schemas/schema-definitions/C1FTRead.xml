@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<financialTransactionId mapField="FT_ID"/>
+	<serviceAgreement mapField="SA_ID"/>
+	<siblingId mapField="SIBLING_ID"/>
+	<financialTransactionType dataType="lookup" mapField="FT_TYPE_FLG" lookup="FT_TYPE_FLG"/>
+	<currentAmount dataType="money" mapField="CUR_AMT"/>
+	<glDivision mapField="GL_DIVISION"/>
+	<division mapField="CIS_DIVISION"/>
+	<payoffAmount dataType="money" mapField="TOT_AMT"/>
+	<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+	<isFrozen dataType="boolean" mapField="FREEZE_SW"/>
+	<freezeDateTime dataType="dateTime" mapField="FREEZE_DTTM"/>
+	<arrearsDate dataType="date" mapField="ARS_DT"/>
+	<frozenByUser mapField="FREEZE_USER_ID"/>
+	<isCorrection dataType="boolean" mapField="CORRECTION_SW"/>
+	<isRedundant dataType="boolean" mapField="REDUNDANT_SW"/>
+	<isNewCharge dataType="boolean" mapField="NEW_DEBIT_SW"/>
+	<shouldShowOnBill dataType="boolean" mapField="SHOW_ON_BILL_SW"/>
+	<isNotInArrears dataType="boolean" mapField="NOT_IN_ARS_SW"/>
+	<parentId mapField="PARENT_ID"/>
+	<billId mapField="BILL_ID"/>
+	<accountingDate dataType="date" mapField="ACCOUNTING_DT"/>
+	<scheduledDistributionDate dataType="date" mapField="SCHED_DISTRIB_DT"/>
+	<version dataType="number" mapField="VERSION"/>
+	<currency mapField="CURRENCY_CD"/>
+	<hasTransferredOut dataType="boolean" mapField="XFERRED_OUT_SW"/>
+	<transferToGLDate dataType="date" mapField="XFER_TO_GL_DT"/>
+	<glDistributionStatus dataType="lookup" mapField="GL_DISTRIB_STATUS" lookup="GL_DISTRIB_STATUS"/>
+	<balanceControlGroupId dataType="number" mapField="BAL_CTL_GRP_ID"/>
+	<matchEventId mapField="MATCH_EVT_ID"/>
+	<financialTransactionGeneralLedger type="list" mapList="FT_GL_CNT">
+		<financialTransactionId mapField="FT_ID"/>
+		<glSequence dataType="number" mapField="GL_SEQ_NBR"/>
+		<distributionCode mapField="DST_ID"/>
+		<characteristicType mapField="CHAR_TYPE_CD"/>
+		<amount dataType="money" mapField="AMOUNT"/>
+		<characteristicValue mapField="CHAR_VAL"/>
+		<isTotalAmount dataType="boolean" mapField="TOT_AMT_SW"/>
+		<version dataType="number" mapField="VERSION"/>
+		<statisticAmount dataType="number" mapField="STATISTIC_AMOUNT"/>
+		<glAccount mapField="GL_ACCT"/>
+		<fund mapField="FUND_CD"/>
+	</financialTransactionGeneralLedger>
+	<financialTransactionProcess type="list" mapList="SEQ_NUM">
+		<financialTransactionId mapField="FT_ID"/>
+		<batchControl mapField="BATCH_CD"/>
+		<batchNumber dataType="number" mapField="BATCH_NBR"/>
+		<serviceProvider mapField="SPR_CD"/>
+		<adjustmentId mapField="ADJ_ID"/>
+		<version dataType="number" mapField="VERSION"/>
+		<sequence dataType="number" mapField="SEQ_NUM"/>
+	</financialTransactionProcess>
+</schema>

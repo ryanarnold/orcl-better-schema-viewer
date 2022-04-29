@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<personId/>
+	<FirstName label="First Name"/>
+	<LastName label="Last Name"/>
+	<FirstNameUpper label="First Name"/>
+	<LastNameUpper label="Last Name"/>
+	<IdExpiryDate label="Expiry Date"/>
+	<MaritalStatus label="Marital Status"/>
+	<SponsorName label="Sponsor Name"/>
+	<ResidencyNumber label="Residency Number"/>
+	<ResidencyExpiryDate label="Residency Expiry Date"/>
+	<ResidencyIssueDate label="Residency Issue Date"/>
+	<ArabicFullName label="Arabic Full Name"/>
+	<Sex label="Sex"/>
+	<Nationality label="Nationality"/>
+	<DateOfBirth label="Date of Birth"/>
+	<IdNumber label="Id Number"/>
+	<CardNumber label="Card Number"/>
+	<PlaceOfBirth label="Place of Birth"/>
+	<CompanyName label="Company Name"/>
+	<CompanyName_ar label="Company Name(Arabic)"/>
+	<PassportNumber label="Passport Number"/>
+	<PassportIssueDate label="Passport Issue Date"/>
+	<PassportExpiryDate label="Passport Expiry Date"/>
+	<HomeAddressEmirateDesc label="Emirate"/>
+	<HomeAddressCityDesc label="City"/>
+	<HomeAddressPOBox label="PO Box"/>
+	<HomeAddressAreaDesc label="Area"/>
+	<HomeAddressMobilePhoneNo label="Mobile No"/>
+	<isIdExpired/>
+	<alertMessage/>
+	<matchingPersons type="list">
+		<personId mdField="PER_ID" mapField="PER_ID"/>
+		<primName label="Primary Name"/>
+		<altName label="Alternate Name"/>
+		<eid label="Emirates ID"/>
+		<passport label="Passport"/>
+		<homeNo label="Home No"/>
+		<mobileNo label="Mobile No"/>
+		<dob label="Date of Birth"/>
+		<nation label="Nationality"/>
+	</matchingPersons>
+</schema>

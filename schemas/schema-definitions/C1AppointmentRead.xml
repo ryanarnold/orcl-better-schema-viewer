@@ -1,0 +1,159 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<premiseId mapField="PREM_ID"/>
+	<canRunRetrieve dataType="boolean" mapField="RETRIEVE_SW"/>
+	<dispatchGroup mapField="DISP_GRP_CD"/>
+	<onAroundDate dataType="date" mapField="APPT_ON_AROUND_DT"/>
+	<fromDate dataType="date" mapField="AVL_APPT_FROM_DT"/>
+	<toDate dataType="date" mapField="AVL_APPT_TO_DT"/>
+	<timeOfDay dataType="lookup" mapField="C1_TIME_OF_DAY" lookup="C1_TIME_OF_DAY"/>
+	<dtRangeNbrDays dataType="number" mapField="DT_RANGE_NBR_DAYS"/>
+	<appointmentScheduleRetrieval dataType="lookup" mapField="APPT_RETRIEVE_FLG" lookup="APPT_RETRIEVE_FLG"/>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<premiseInfo mapField="PREM_INFO"/>
+	<dispatchGroup2 mapField="DISP_GRP_DESCR"/>
+	<canShowAppointments dataType="boolean" mapField="ACTION_SHOW_APP_SW"/>
+	<hasShowNext dataType="boolean" mapField="ACTION_SHOW_NXT_SW"/>
+	<canShowPrevious dataType="boolean" mapField="ACTION_SHOW_PRV_SW"/>
+	<canDispatchGroupAssociatedWithWorkforceManagementystem dataType="boolean" mapField="WFM_AVAIL_SW"/>
+	<hasWorkforceManagementCommunicationIndicator dataType="boolean" mapField="WFM_COMMUNICAT_SW"/>
+	<isForced dataType="boolean" mapField="FORCED_SW"/>
+	<serviceProvider mapField="SPR_CD"/>
+	<fabaWfmNtDwnType mapField="FABA_WFM_NT_DWN_TYPE"/>
+	<faxaWfmNtDwnType mapField="FAXA_WFM_NT_DWN_TYPE"/>
+	<fabnWfmNtDwnType mapField="FABN_WFM_NT_DWN_TYPE"/>
+	<faxnWfmNtDwnType mapField="FAXN_WFM_NT_DWN_TYPE"/>
+	<fagaWfmNtDwnType mapField="FAGA_WFM_NT_DWN_TYPE"/>
+	<timeAvailSw mapField="TIME_AVAIL_SW"/>
+	<wfmOpt type="list" mapList="WFM_OPT">
+		<workforceManagementSystem mapField="WFM_NAME"/>
+		<optionType mapField="EXT_OPT_TYPE"/>
+		<sequence dataType="number" mapField="SEQ_NUM"/>
+		<value mapField="WFM_OPT_VAL"/>
+		<version dataType="number" mapField="VERSION"/>
+		<description mapField="DESCR"/>
+		<longDescription mapField="DESCRLONG"/>
+	</wfmOpt>
+	<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+	<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+	<messageText mapField="MSG_TEXT"/>
+	<faWithApp type="list" mapList="FA_WITH_APP">
+		<fieldActivityId mapField="FA_ID"/>
+		<appointmentScheduleId mapField="APP_SCHED_ID"/>
+		<appDispGrpCd mapField="APP_DISP_GRP_CD"/>
+		<appDgrpDescr mapField="APP_DGRP_DESCR"/>
+		<startDateTime dataType="dateTime" mapField="START_DTTM"/>
+		<endDateTime dataType="dateTime" mapField="END_DTTM"/>
+		<dateTimeRange mapField="DTTM_RANGE"/>
+		<fieldActivityInformation mapField="FA_INFO"/>
+		<canCancelDeviceTest dataType="boolean" mapField="ACTION_CANCEL_SW"/>
+		<canProtectCancel dataType="boolean" mapField="PROT_CANCEL_SW"/>
+		<workforceManagementSystem2 mapField="WFM_NAME"/>
+	</faWithApp>
+	<fa type="list" mapList="FA">
+		<fieldActivityId2 mapField="FA_ID"/>
+		<dispatchGroup3 mapField="DISP_GRP_CD"/>
+		<workforceManagementSystem3 mapField="WFM_NAME"/>
+		<faDgrpDescr mapField="FA_DGRP_DESCR"/>
+		<alternateDispatchGroup mapField="ALT_DISP_GRP_CD"/>
+		<scheduleDateTimeStart dataType="dateTime" mapField="SCHED_DTTM"/>
+		<longDescription2 mapField="DESCRLONG"/>
+		<fieldOrder mapField="FO_ID"/>
+		<foDispGrpCd mapField="FO_DISP_GRP_CD"/>
+		<foDgrpDescr mapField="FO_DGRP_DESCR"/>
+		<foAltDispGrpCd mapField="FO_ALT_DISP_GRP_CD"/>
+		<fieldOrderInformation mapField="FO_INFO"/>
+		<fieldActivityInformation2 mapField="FA_INFO"/>
+		<isSelect dataType="boolean" mapField="SELECT_SW"/>
+	</fa>
+	<availAppt type="list" mapList="AVAIL_APPT">
+		<appointmentScheduleId2 mapField="APP_SCHED_ID"/>
+		<dispatchGroup4 mapField="DISP_GRP_CD"/>
+		<startDateTime2 dataType="dateTime" mapField="START_DTTM"/>
+		<endDateTime2 dataType="dateTime" mapField="END_DTTM"/>
+		<maximumAppointments dataType="number" mapField="MAX_APP"/>
+		<version2 dataType="number" mapField="VERSION"/>
+		<appointmentPeriodDate dataType="date" mapField="APP_PERIOD_DT"/>
+		<startTime dataType="time" mapField="START_TM"/>
+		<endTime dataType="time" mapField="END_TM"/>
+		<dayOfWkDescr mapField="DAY_OF_WK_DESCR"/>
+		<availableAppointment dataType="number" mapField="AVAIL_APP_CNT"/>
+		<canMakeAppointment dataType="boolean" mapField="ACTION_MAKE_APP_SW"/>
+		<udfVal type="list" mapList="UDF_VAL">
+			<sequence2 dataType="number" mapField="SEQ_NUM"/>
+			<udfValue mapField="UDF_VALUE"/>
+		</udfVal>
+	</availAppt>
+	<workforceManagementSystem4 mapField="WFM_NAME"/>
+	<udfCriteria type="list" mapList="UDF_CRITERIA">
+		<sequence3 dataType="number" mapField="SEQ_NUM"/>
+		<field mapField="FLD_NAME"/>
+		<baseField mapField="BASE_FLD_NAME"/>
+		<dataType dataType="lookup" mapField="DATA_TYPE_FLG" lookup="DATA_TYPE_FLG"/>
+		<extendedDataType dataType="lookup" mapField="EXT_DATA_TYPE_FLG" lookup="EXT_DATA_TYPE_FLG"/>
+		<isSigned dataType="boolean" mapField="SIGNED_SW"/>
+		<fieldPrecision dataType="number" mapField="FLD_PRECISION"/>
+		<fieldScale dataType="number" mapField="FLD_SCALE"/>
+		<version3 dataType="number" mapField="VERSION"/>
+		<fieldValueCopybook mapField="FLD_VAL_CB"/>
+		<isWorkField dataType="boolean" mapField="WORK_FLD_SW"/>
+		<customizationOwner dataType="lookup" mapField="OWNER_FLG" lookup="OWNER_FLG"/>
+		<objectPropertyName mapField="OBJ_PROPERTY_NAME"/>
+		<f1TranslationContext mapField="F1_TRANSLATION_CONTEXT"/>
+		<f1Translatable dataType="lookup" mapField="F1_TRANSLATABLE_FLG" lookup="F1_TRANSLATABLE_FLG"/>
+		<language mapField="LANGUAGE_CD"/>
+		<longLabel mapField="LABEL_LONG"/>
+		<longDescription3 mapField="DESCRLONG"/>
+		<overrideLabel mapField="OVRD_LABEL"/>
+		<longDescriptionOverride mapField="DESCRLONG_OVRD"/>
+		<udfValue2 mapField="UDF_VALUE"/>
+	</udfCriteria>
+	<udfResult type="list" mapList="UDF_RESULT">
+		<sequence4 dataType="number" mapField="SEQ_NUM"/>
+		<field2 mapField="FLD_NAME"/>
+		<baseField2 mapField="BASE_FLD_NAME"/>
+		<dataType2 dataType="lookup" mapField="DATA_TYPE_FLG" lookup="DATA_TYPE_FLG"/>
+		<extendedDataType2 dataType="lookup" mapField="EXT_DATA_TYPE_FLG" lookup="EXT_DATA_TYPE_FLG"/>
+		<isSigned2 dataType="boolean" mapField="SIGNED_SW"/>
+		<fieldPrecision2 dataType="number" mapField="FLD_PRECISION"/>
+		<fieldScale2 dataType="number" mapField="FLD_SCALE"/>
+		<version4 dataType="number" mapField="VERSION"/>
+		<fieldValueCopybook2 mapField="FLD_VAL_CB"/>
+		<isWorkField2 dataType="boolean" mapField="WORK_FLD_SW"/>
+		<customizationOwner2 dataType="lookup" mapField="OWNER_FLG" lookup="OWNER_FLG"/>
+		<objectPropertyName2 mapField="OBJ_PROPERTY_NAME"/>
+		<f1TranslationContext2 mapField="F1_TRANSLATION_CONTEXT"/>
+		<f1Translatable2 dataType="lookup" mapField="F1_TRANSLATABLE_FLG" lookup="F1_TRANSLATABLE_FLG"/>
+		<language2 mapField="LANGUAGE_CD"/>
+		<longLabel2 mapField="LABEL_LONG"/>
+		<longDescription4 mapField="DESCRLONG"/>
+		<overrideLabel2 mapField="OVRD_LABEL"/>
+		<longDescriptionOverride2 mapField="DESCRLONG_OVRD"/>
+	</udfResult>
+	<fieldActivityCharacteristics type="list" mapList="FA_CHAR">
+		<fieldActivityId3 mapField="FA_ID"/>
+		<characteristicType mapField="CHAR_TYPE_CD"/>
+		<sequence5 dataType="number" mapField="SEQ_NUM"/>
+		<searchCharacteristicValue mapField="SRCH_CHAR_VAL"/>
+		<characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+		<characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
+		<characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+		<characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+		<characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
+		<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+		<characteristicValue mapField="CHAR_VAL"/>
+		<version5 dataType="number" mapField="VERSION"/>
+		<searchNavigationKey mapField="SRCH_NAV_KEY"/>
+		<navigationOption mapField="NAV_OPT_CD"/>
+		<table mapField="TBL_NAME"/>
+		<infoProgram mapField="INFO_PRG"/>
+		<characteristicType2 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+		<characteristicValueDescription mapField="CHAR_VAL_DESCR"/>
+		<characteristicValueForeignKeys mapField="CHAR_VAL_FK_STR"/>
+		<characteristicValueForeignKeyInformation mapField="CHAR_VAL_FK_INFO"/>
+		<isCompoundPrimaryKey dataType="boolean" mapField="COMP_PK_SW"/>
+		<charateristicValue mapField="COMP_PK_STR"/>
+		<characteristicType3 mapField="CHAR_TYPE_DESCR"/>
+	</fieldActivityCharacteristics>
+</schema>

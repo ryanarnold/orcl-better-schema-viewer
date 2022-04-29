@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<outboundMsgId mapField="OUTMSG_ID"/>
+	<externalSystem fkRef="F1-ESTMP" mapField="NT_XID_CD"/>
+	<outboundMessageType fkRef="F1-OMTYP" mapField="OUTMSG_TYPE_CD"/>
+	<processingMethod dataType="lookup" mapField="OUTMSG_PROC_METH_FLG" lookup="OUTMSG_PROC_METH_FLG"/>
+	<outboundMessageStatus dataType="lookup" mapField="OUTMSG_STATUS_FLG" lookup="OUTMSG_STATUS_FLG"/>
+	<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+	<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+	<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+	<errorDetail mapField="ERROR_DTL"/>
+	<requestDetails type="group" mapXML="XML_SOURCE">
+		<language mdField="LANGUAGE_CD"/>
+		<referenceDateTime mdField="WX_REFERENCE_DATE_TIME" dataType="dateTime" default="%CurrentDateTime"/>
+		<serviceAgreements type="list">
+			<saId mdField="SA_ID" isPrimeKey="true" fkRef="SA"/>
+			<rates type="list">
+				<rateSchedule mdField="RS_CD" isPrimeKey="true" fkRef="C1-RTSCH"/>
+			</rates>
+		</serviceAgreements>
+	</requestDetails>
+	<responseDetails type="group" mapXML="XML_RESPONSE">
+		<results type="list">
+			<saId mdField="SA_ID" isPrimeKey="true" fkRef="SA"/>
+			<rates type="list">
+				<rateSchedule mdField="RS_CD" isPrimeKey="true" fkRef="C1-RTSCH"/>
+				<usageAdjustments type="list">
+					<usageAdjustmentFactor mdField="WX_VALUE" isPrimeKey="true"/>
+					<description mdField="WX_VALUE"/>
+					<detailedDescription mdField="DESCR4000"/>
+					<externalReferenceId mdField="WX_VALUE"/>
+					<valuesList type="group">
+						<value type="list">
+							<value mdField="WX_VALUE" isPrimeKey="true"/>
+							<valueDescription mdField="WX_VALUE"/>
+							<externalReferenceId mdField="WX_VALUE"/>
+						</value>
+					</valuesList>
+				</usageAdjustments>
+				<isSkipped mdField="SKIPPED_SW" dataType="boolean"/>
+				<skipReasonDescription mdField="SKIP_REASON"/>
+			</rates>
+		</results>
+		<errorInformation type="group">
+			<isInError mdField="IN_ERROR_SW" dataType="boolean" default="false"/>
+			<errorReference type="group">
+				<category mdField="MESSAGE_CAT_NBR" dataType="number"/>
+				<number mdField="MESSAGE_NBR" dataType="number"/>
+			</errorReference>
+			<errorMessage mdField="MESSAGE_TEXT"/>
+		</errorInformation>
+	</responseDetails>
+</schema>

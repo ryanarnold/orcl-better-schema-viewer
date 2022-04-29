@@ -1,0 +1,339 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<billSegmentId mapField="BSEG_ID"/>
+	<billSegmentInformation mapField="BSEG_INFO"/>
+	<accountInfo mapField="ACCT_INFO"/>
+	<billInformation mapField="BILL_INFO"/>
+	<saInformation mapField="SA_INFO"/>
+	<currentAmount dataType="money" mapField="CURRENT_AMT"/>
+	<payoffAmt dataType="number" mapField="PAYOFF_AMT"/>
+	<accountId mapField="ACCT_ID"/>
+	<saRelationshipId mapField="SA_REL_ID"/>
+	<premiseInfo mapField="PREM_INFO"/>
+	<billSegmentPeriod mapField="BSEG_PERIOD"/>
+	<bsegStatDesc mapField="BSEG_STAT_DESC"/>
+	<bsegBcycInfo mapField="BSEG_BCYC_INFO"/>
+	<canRsnDesc mapField="CAN_RSN_DESC"/>
+	<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+	<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+	<expandedMessage mapField="EXP_MSG"/>
+	<qteDtlInfo mapField="QTE_DTL_INFO"/>
+	<quoteId mapField="QUOTE_ID"/>
+	<usagePeriod mapField="USAGE_PERIOD"/>
+	<canCancel dataType="boolean" mapField="ACTION_CANCEL_SW"/>
+	<canDelete dataType="boolean" mapField="ACTION_DELETE_SW"/>
+	<canFreeze dataType="boolean" mapField="ACTION_FREEZE_SW"/>
+	<canGenerate dataType="boolean" mapField="ACTION_GENERATE_SW"/>
+	<canInitialize dataType="boolean" mapField="ACTION_INIT_SW"/>
+	<shouldRebill dataType="boolean" mapField="ACTION_REBILL_SW"/>
+	<canActionRegenerate dataType="boolean" mapField="ACTION_REGEN_SW"/>
+	<canUndo dataType="boolean" mapField="ACTION_UNDO_SW"/>
+	<isCreditNote dataType="boolean" mapField="ACTION_CR_NOTE_SW"/>
+	<isCorrectionNote dataType="boolean" mapField="ACTION_CORR_NOTE_SW"/>
+	<canHideFreeze dataType="boolean" mapField="HIDE_FREEZE_SW"/>
+	<canProtectCancel dataType="boolean" mapField="PROT_CANCEL_SW"/>
+	<canDisableDelete dataType="boolean" mapField="PROT_DELETE_SW"/>
+	<canDisableFreeze dataType="boolean" mapField="PROT_FREEZE_SW"/>
+	<canDisableGenerate dataType="boolean" mapField="PROT_GENERATE_SW"/>
+	<canProtectInitialCancel dataType="boolean" mapField="PROT_INIT_SW"/>
+	<canProtectRebill dataType="boolean" mapField="PROT_REBILL_SW"/>
+	<canProtectUndoCancel dataType="boolean" mapField="PROT_UNDO_SW"/>
+	<canDisableCreditNote dataType="boolean" mapField="PROT_CR_NOTE_SW"/>
+	<canDisableCorrectionNote dataType="boolean" mapField="PROT_CORR_NOTE_SW"/>
+	<calcDtlsVisibleSw mapField="CALC_DTLS_VISIBLE_SW"/>
+	<calcDtlsAllowedSw mapField="CALC_DTLS_ALLOWED_SW"/>
+	<usageDttmAllowedSw mapField="USAGE_DTTM_ALLOWED_SW"/>
+	<usageDtlsVisibleSw mapField="USAGE_DTLS_VISIBLE_SW"/>
+	<billSegmentEndDate dataType="date" mapField="CUTOFF_DT"/>
+	<accountingDate dataType="date" default="%CurrentDate" mapField="ACCOUNTING_DT"/>
+	<cancelReason mapField="CAN_RSN_CD"/>
+	<areEstimatesAllowed dataType="boolean" mapField="ALLOW_EST_SW"/>
+	<hasBillingOption dataType="boolean" mapField="BILLING_OPT_SW"/>
+	<canUseOldReadsItemsServiceQuantity dataType="boolean" mapField="USE_OLD_INFO_SW"/>
+	<billDate2 dataType="date" mapField="OBC_BILL_DT"/>
+	<creditNote mapField="CREDIT_NOTE"/>
+	<correctionNote mapField="CORRECTION_NOTE"/>
+	<billStatus dataType="lookup" mapField="BILL_STAT_FLG" lookup="BILL_STAT_FLG"/>
+	<canShowAccountingDate dataType="boolean" mapField="SHOW_ACCTNG_DT_SW"/>
+	<frzCncPopUpMsg mapField="FRZ_CNC_POP_UP_MSG"/>
+	<processDate dataType="date" mapField="PROCESS_DT"/>
+	<specialUsage dataType="lookup" mapField="SPECIAL_USAGE_FLG" lookup="SPECIAL_USAGE_FLG"/>
+	<isSATypeRequiresBillDeterminants dataType="boolean" mapField="SATY_REQ_BD_SW"/>
+	<fundAccounting dataType="lookup" mapField="FUND_ACTG_FLG" lookup="FUND_ACTG_FLG"/>
+	<currency mapField="CURRENCY_CD"/>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<chgBsegStatFlg mapField="CHG_BSEG_STAT_FLG"/>
+	<canChangeServiceQuantityOverride dataType="boolean" mapField="CHG_SQ_OVERRIDE_SW"/>
+	<chgItemOverrideSwitch dataType="boolean" mapField="CHG_ITEM_OVERRIDE_SW"/>
+	<billCycle mapField="BILL_CYC_CD"/>
+	<windowStartDate dataType="date" mapField="WIN_START_DT"/>
+	<cancelReason2 mapField="CAN_RSN_CD2"/>
+	<cancelBillSegmentId mapField="CAN_BSEG_ID"/>
+	<serviceAgreement mapField="SA_ID"/>
+	<billId mapField="BILL_ID"/>
+	<startDate dataType="date" mapField="START_DT"/>
+	<endDate dataType="date" mapField="END_DT"/>
+	<isEstimate dataType="boolean" mapField="EST_SW"/>
+	<isClosingBillSegment dataType="boolean" mapField="CLOSING_BSEG_SW"/>
+	<hasServiceQuantityOverride dataType="boolean" mapField="SQ_OVERRIDE_SW"/>
+	<isItemOverride dataType="boolean" mapField="ITEM_OVERRIDE_SW"/>
+	<premiseId mapField="PREM_ID"/>
+	<billSegmentStatus dataType="lookup" mapField="BSEG_STAT_FLG" lookup="BSEG_STAT_FLG"/>
+	<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+	<statusChangeDateTime dataType="dateTime" mapField="STAT_CHG_DTTM"/>
+	<readSequence mapField="REBILL_SEG_ID"/>
+	<masterBillSegmentId mapField="MASTER_BSEG_ID"/>
+	<quoteDetailId mapField="QUOTE_DTL_ID"/>
+	<billSegmentDataArea mapField="BSEG_DATA_AREA"/>
+	<usageStartDateTime dataType="dateTime" mapField="MDM_START_DTTM"/>
+	<usageEndDateTime dataType="dateTime" mapField="MDM_END_DTTM"/>
+	<billScenarioId mapField="BILL_SCNR_ID"/>
+	<ilmDate dataType="date" mapField="ILM_DT"/>
+	<isEligibleForArchiving dataType="boolean" mapField="ILM_ARCH_SW"/>
+	<version dataType="number" mapField="VERSION"/>
+	<chgBsegStatFlgT mapField="C1_T_CHG_BSEG_STAT_FLG"/>
+	<canChangeServiceQuantityOverrideT dataType="boolean" mapField="C1_T_CHG_SQ_OVERRIDE_SW"/>
+	<chgItemOverrideSwitchT dataType="boolean" mapField="C1_T_CHG_ITEM_OVERRIDE_SW"/>
+	<bsegRead type="list" mapList="BSEG_READ">
+		<billSegmentId2 mapField="BSEG_ID"/>
+		<servicePointId mapField="SP_ID"/>
+		<registerConstant dataType="number" mapField="REG_CONST"/>
+		<sequence dataType="number" mapField="SEQNO"/>
+		<howToUseRead dataType="lookup" mapField="USAGE_FLG" lookup="USAGE_FLG"/>
+		<usePercent dataType="number" mapField="USE_PCT"/>
+		<howToUse dataType="lookup" mapField="HOW_TO_USE_FLG" lookup="HOW_TO_USE_FLG"/>
+		<measuresPeakQuantity dataType="boolean" mapField="MSR_PEAK_QTY_SW"/>
+		<unitOfMeasure mapField="UOM_CD"/>
+		<timeOfUse mapField="TOU_CD"/>
+		<startRegisterReadId mapField="START_REG_READ_ID"/>
+		<startReadDateTime dataType="dateTime" mapField="START_READ_DTTM"/>
+		<startRegisterReading dataType="number" mapField="START_REG_READING"/>
+		<endRegisterReadingId mapField="END_REG_READ_ID"/>
+		<endReadDateTime dataType="dateTime" mapField="END_READ_DTTM"/>
+		<endRegisterReading dataType="number" mapField="END_REG_READING"/>
+		<measuredQuantity dataType="number" mapField="MSR_QTY"/>
+		<finalUnitOfMeasure mapField="FINAL_UOM_CD"/>
+		<finalTimeOfUse mapField="FINAL_TOU_CD"/>
+		<registerQuantity dataType="number" mapField="FINAL_REG_QTY"/>
+		<version2 dataType="number" mapField="VERSION"/>
+		<serviceQuantityIdentifier mapField="SQI_CD"/>
+		<finalServiceQuantityId mapField="FINAL_SQI_CD"/>
+		<multiplier dataType="number" mapField="GC_MULTIPLIER"/>
+		<stRegRdTypDesc mapField="ST_REG_RD_TYP_DESC"/>
+		<endRegRdTypDesc mapField="END_REG_RD_TYP_DESC"/>
+		<consumptionType dataType="lookup" mapField="CONSUM_SUB_FLG" lookup="CONSUM_SUB_FLG"/>
+		<naConsumDesc mapField="NA_CONSUM_DESC"/>
+		<startMeterRead mapField="START_MR_ID"/>
+		<endMeterRead mapField="END_MR_ID"/>
+		<meterReadId mapField="MR_ID"/>
+		<unitOfMeasure2 mapField="UOM_DESCR"/>
+		<serviceQuantityIdentifier2 mapField="SQI_DESCR"/>
+		<timeOfUse2 mapField="TOU_DESCR"/>
+		<finUomDescr mapField="FIN_UOM_DESCR"/>
+		<finSqiDescr mapField="FIN_SQI_DESCR"/>
+		<finTouDescr mapField="FIN_TOU_DESCR"/>
+		<meterConfigurationId mapField="MTR_CONFIG_ID"/>
+	</bsegRead>
+	<bsegReadCalc type="list" mapList="BSEG_READ_CALC">
+		<billSegmentId3 mapField="BSEG_ID"/>
+		<servicePointId2 mapField="SP_ID"/>
+		<registerConstant2 dataType="number" mapField="REG_CONST"/>
+		<sequence2 dataType="number" mapField="SEQNO"/>
+		<howToUseRead2 dataType="lookup" mapField="USAGE_FLG" lookup="USAGE_FLG"/>
+		<usePercent2 dataType="number" mapField="USE_PCT"/>
+		<howToUse2 dataType="lookup" mapField="HOW_TO_USE_FLG" lookup="HOW_TO_USE_FLG"/>
+		<measuresPeakQuantity2 dataType="boolean" mapField="MSR_PEAK_QTY_SW"/>
+		<unitOfMeasure3 mapField="UOM_CD"/>
+		<timeOfUse3 mapField="TOU_CD"/>
+		<startRegisterReadId2 mapField="START_REG_READ_ID"/>
+		<startReadDateTime2 dataType="dateTime" mapField="START_READ_DTTM"/>
+		<startRegisterReading2 dataType="number" mapField="START_REG_READING"/>
+		<endRegisterReadingId2 mapField="END_REG_READ_ID"/>
+		<endReadDateTime2 dataType="dateTime" mapField="END_READ_DTTM"/>
+		<endRegisterReading2 dataType="number" mapField="END_REG_READING"/>
+		<measuredQuantity2 dataType="number" mapField="MSR_QTY"/>
+		<finalUnitOfMeasure2 mapField="FINAL_UOM_CD"/>
+		<finalTimeOfUse2 mapField="FINAL_TOU_CD"/>
+		<registerQuantity2 dataType="number" mapField="FINAL_REG_QTY"/>
+		<version3 dataType="number" mapField="VERSION"/>
+		<serviceQuantityIdentifier3 mapField="SQI_CD"/>
+		<finalServiceQuantityId2 mapField="FINAL_SQI_CD"/>
+		<multiplier2 dataType="number" mapField="GC_MULTIPLIER"/>
+		<stRegRdTypDesc2 mapField="ST_REG_RD_TYP_DESC"/>
+		<endRegRdTypDesc2 mapField="END_REG_RD_TYP_DESC"/>
+		<consumptionType2 dataType="lookup" mapField="CONSUM_SUB_FLG" lookup="CONSUM_SUB_FLG"/>
+		<naConsumDesc2 mapField="NA_CONSUM_DESC"/>
+		<startMeterRead2 mapField="START_MR_ID"/>
+		<endMeterRead2 mapField="END_MR_ID"/>
+		<meterReadId2 mapField="MR_ID"/>
+		<unitOfMeasure4 mapField="UOM_DESCR"/>
+		<serviceQuantityIdentifier4 mapField="SQI_DESCR"/>
+		<timeOfUse4 mapField="TOU_DESCR"/>
+		<finUomDescr2 mapField="FIN_UOM_DESCR"/>
+		<finSqiDescr2 mapField="FIN_SQI_DESCR"/>
+		<finTouDescr2 mapField="FIN_TOU_DESCR"/>
+		<meterConfigurationId2 mapField="MTR_CONFIG_ID"/>
+		<spInformation mapField="SP_INFO"/>
+		<calcItmExstInd mapField="CALC_ITM_EXST_IND"/>
+	</bsegReadCalc>
+	<bsegReadSrvQty type="list" mapList="BSEG_READ_SRV_QTY">
+		<billSegmentId4 mapField="BSEG_ID"/>
+		<servicePointId3 mapField="SP_ID"/>
+		<registerConstant3 dataType="number" mapField="REG_CONST"/>
+		<sequence3 dataType="number" mapField="SEQNO"/>
+		<howToUseRead3 dataType="lookup" mapField="USAGE_FLG" lookup="USAGE_FLG"/>
+		<usePercent3 dataType="number" mapField="USE_PCT"/>
+		<howToUse3 dataType="lookup" mapField="HOW_TO_USE_FLG" lookup="HOW_TO_USE_FLG"/>
+		<measuresPeakQuantity3 dataType="boolean" mapField="MSR_PEAK_QTY_SW"/>
+		<unitOfMeasure5 mapField="UOM_CD"/>
+		<timeOfUse5 mapField="TOU_CD"/>
+		<startRegisterReadId3 mapField="START_REG_READ_ID"/>
+		<startReadDateTime3 dataType="dateTime" mapField="START_READ_DTTM"/>
+		<startRegisterReading3 dataType="number" mapField="START_REG_READING"/>
+		<endRegisterReadingId3 mapField="END_REG_READ_ID"/>
+		<endReadDateTime3 dataType="dateTime" mapField="END_READ_DTTM"/>
+		<endRegisterReading3 dataType="number" mapField="END_REG_READING"/>
+		<measuredQuantity3 dataType="number" mapField="MSR_QTY"/>
+		<finalUnitOfMeasure3 mapField="FINAL_UOM_CD"/>
+		<finalTimeOfUse3 mapField="FINAL_TOU_CD"/>
+		<registerQuantity3 dataType="number" mapField="FINAL_REG_QTY"/>
+		<version4 dataType="number" mapField="VERSION"/>
+		<serviceQuantityIdentifier5 mapField="SQI_CD"/>
+		<finalServiceQuantityId3 mapField="FINAL_SQI_CD"/>
+		<multiplier3 dataType="number" mapField="GC_MULTIPLIER"/>
+		<stRegRdTypDesc3 mapField="ST_REG_RD_TYP_DESC"/>
+		<endRegRdTypDesc3 mapField="END_REG_RD_TYP_DESC"/>
+		<consumptionType3 dataType="lookup" mapField="CONSUM_SUB_FLG" lookup="CONSUM_SUB_FLG"/>
+		<naConsumDesc3 mapField="NA_CONSUM_DESC"/>
+		<startMeterRead3 mapField="START_MR_ID"/>
+		<endMeterRead3 mapField="END_MR_ID"/>
+		<meterReadId3 mapField="MR_ID"/>
+		<unitOfMeasure6 mapField="UOM_DESCR"/>
+		<serviceQuantityIdentifier6 mapField="SQI_DESCR"/>
+		<timeOfUse6 mapField="TOU_DESCR"/>
+		<finUomDescr3 mapField="FIN_UOM_DESCR"/>
+		<finSqiDescr3 mapField="FIN_SQI_DESCR"/>
+		<finTouDescr3 mapField="FIN_TOU_DESCR"/>
+		<meterConfigurationId3 mapField="MTR_CONFIG_ID"/>
+		<spInformation2 mapField="SP_INFO"/>
+	</bsegReadSrvQty>
+	<bsegItem type="list" mapList="BSEG_ITEM">
+		<billSegmentId5 mapField="BSEG_ID"/>
+		<sequence4 dataType="number" mapField="SEQNO"/>
+		<itemType mapField="ITEM_TYPE_CD"/>
+		<item mapField="ITEM_ID"/>
+		<startDate2 dataType="date" mapField="START_DT"/>
+		<endDate2 dataType="date" mapField="END_DT"/>
+		<itemCount dataType="number" mapField="ITEM_CNT"/>
+		<unitOfMeasure7 mapField="UOM_CD"/>
+		<dailyServiceQuantity dataType="number" mapField="SVC_QTY"/>
+		<version5 dataType="number" mapField="VERSION"/>
+		<itmExstInd mapField="ITM_EXST_IND"/>
+	</bsegItem>
+	<bsegSq type="list" mapList="BSEG_SQ">
+		<billSegmentId6 mapField="BSEG_ID"/>
+		<unitOfMeasure8 mapField="UOM_CD"/>
+		<timeOfUse7 mapField="TOU_CD"/>
+		<serviceQuantityIdentifier7 mapField="SQI_CD"/>
+		<initialServiceQuantity dataType="number" mapField="INIT_SQ"/>
+		<billableServiceQuantity dataType="number" mapField="BILL_SQ"/>
+		<version6 dataType="number" mapField="VERSION"/>
+		<itmExstInd2 mapField="ITM_EXST_IND"/>
+		<uomDesc mapField="UOM_DESC"/>
+		<touDesc mapField="TOU_DESC"/>
+		<sqiDesc mapField="SQI_DESC"/>
+	</bsegSq>
+	<bsegCalcHdr type="list" mapList="BSEG_CALC_HDR">
+		<billSegmentId7 mapField="BSEG_ID"/>
+		<headerSequence dataType="number" mapField="HEADER_SEQ"/>
+		<startDate3 dataType="date" mapField="START_DT"/>
+		<currency2 mapField="CURRENCY_CD"/>
+		<endDate3 dataType="date" mapField="END_DT"/>
+		<rateSchedule mapField="RS_CD"/>
+		<effectiveDate dataType="date" mapField="EFFDT"/>
+		<billableChargeId mapField="BILLABLE_CHG_ID"/>
+		<calculatedAmount dataType="money" mapField="CALC_AMT"/>
+		<descriptionOnBill mapField="DESCR_ON_BILL"/>
+		<version7 dataType="number" mapField="VERSION"/>
+		<rateScheduleDescription mapField="RS_DESCR"/>
+		<rateScheduleVersion dataType="lookup" mapField="RS_VERSION_FLG" lookup="RS_VERSION_FLG"/>
+		<calculationLines type="list" mapList="BSEG_CALC_LINE">
+			<billSegmentId8 mapField="BSEG_ID"/>
+			<headerSequence2 dataType="number" mapField="HEADER_SEQ"/>
+			<sequence5 dataType="number" mapField="SEQNO"/>
+			<characteristicType mapField="CHAR_TYPE_CD"/>
+			<currency3 mapField="CURRENCY_CD"/>
+			<characteristicValue mapField="CHAR_VAL"/>
+			<distributionCode mapField="DST_ID"/>
+			<unitOfMeasure9 mapField="UOM_CD"/>
+			<timeOfUse8 mapField="TOU_CD"/>
+			<rcSequence dataType="number" mapField="RC_SEQ"/>
+			<shouldPrint dataType="boolean" mapField="PRT_SW"/>
+			<shouldAppearInSummary dataType="boolean" mapField="APP_IN_SUMM_SW"/>
+			<calculatedAmount2 dataType="money" mapField="CALC_AMT"/>
+			<exemptAmount dataType="money" mapField="EXEMPT_AMT"/>
+			<baseAmount dataType="money" mapField="BASE_AMT"/>
+			<serviceQuantityIdentifier8 mapField="SQI_CD"/>
+			<billableServiceQuantity2 dataType="number" mapField="BILL_SQ"/>
+			<measuresPeakQuantity4 dataType="boolean" mapField="MSR_PEAK_QTY_SW"/>
+			<descriptionOnBill2 mapField="DESCR_ON_BILL"/>
+			<version8 dataType="number" mapField="VERSION"/>
+			<auditCalculatedAmount dataType="number" mapField="AUDIT_CALC_AMT"/>
+			<calculationGroup mapField="CALC_GRP_CD"/>
+			<calculationRule mapField="CALC_RULE_CD"/>
+			<distributionDescription mapField="DST_DESCR"/>
+			<unitOfMeasure10 mapField="UOM_DESCR"/>
+			<serviceQuantityIdentifier9 mapField="SQI_DESCR"/>
+			<timeOfUse9 mapField="TOU_DESCR"/>
+			<description mapField="DESCR100"/>
+			<isCharacteristicExist dataType="boolean" mapField="CHAR_EXIST_SW"/>
+			<auditAlgProg mapField="AUDIT_ALG_PROG"/>
+			<auditPageTypeFlg mapField="AUDIT_PAGE_TYPE_FLG"/>
+		</calculationLines>
+	</bsegCalcHdr>
+	<bsFt type="list" mapList="BS_FT">
+		<financialTransactionType dataType="lookup" mapField="FT_TYPE_FLG" lookup="FT_TYPE_FLG"/>
+		<ftTypeDesc mapField="FT_TYPE_DESC"/>
+		<currentAmount2 dataType="money" mapField="CUR_AMT"/>
+		<payoffAmount dataType="money" mapField="TOT_AMT"/>
+		<arrearsDate dataType="date" mapField="ARS_DT"/>
+		<financialTransactionId mapField="FT_ID"/>
+		<shouldShowOnBill dataType="boolean" mapField="SHOW_ON_BILL_SW"/>
+		<accountingDate2 dataType="date" default="%CurrentDate" mapField="ACCOUNTING_DT"/>
+		<ftInfo1 mapField="FT_INFO_1"/>
+		<ftInfo2 mapField="FT_INFO_2"/>
+		<frozenByUser mapField="FREEZE_USER_ID"/>
+		<billId2 mapField="BILL_ID"/>
+		<bsFtGl type="list" mapList="BS_FT_GL">
+			<financialTransactionId2 mapField="FT_ID"/>
+			<glSequence dataType="number" mapField="GL_SEQ_NBR"/>
+			<distributionCode2 mapField="DST_ID"/>
+			<characteristicType2 mapField="CHAR_TYPE_CD"/>
+			<amount dataType="money" mapField="AMOUNT"/>
+			<characteristicValue2 mapField="CHAR_VAL"/>
+			<isTotalAmount dataType="boolean" mapField="TOT_AMT_SW"/>
+			<version9 dataType="number" mapField="VERSION"/>
+			<statisticAmount dataType="number" mapField="STATISTIC_AMOUNT"/>
+			<glAccount mapField="GL_ACCT"/>
+			<statistics mapField="STATISTICS_CD"/>
+			<distributionDescription2 mapField="DST_DESCR"/>
+			<fundDescription mapField="FUND_DESCR"/>
+			<fund mapField="FUND_CD"/>
+		</bsFtGl>
+	</bsFt>
+	<billSegments type="list" mapList="BILL_SEG">
+		<subBsegInfo mapField="SUB_BSEG_INFO"/>
+		<currentAmount3 dataType="money" mapField="CUR_AMT"/>
+		<billSegmentStatus2 dataType="lookup" mapField="BSEG_STAT_FLG" lookup="BSEG_STAT_FLG"/>
+		<billSegmentId9 mapField="BSEG_ID"/>
+	</billSegments>
+	<bsegMsgs type="list" mapList="BSEG_MSGS">
+		<billSegmentId10 mapField="BSEG_ID"/>
+		<billMessage mapField="BILL_MSG_CD"/>
+		<version10 dataType="number" mapField="VERSION"/>
+		<messageOnBill mapField="MSG_ON_BILL"/>
+		<messagePriority dataType="lookup" mapField="MSG_PRIORITY_FLG" lookup="MSG_PRIORITY_FLG"/>
+		<insert mapField="INSERT_CD"/>
+	</bsegMsgs>
+</schema>

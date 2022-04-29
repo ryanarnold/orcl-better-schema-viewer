@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<shouldAllowOverride/>
+	<tenderTypes type="group">
+		<tenderTypes type="list">
+			<type/>
+			<description/>
+			<bo/>
+			<authorization/>
+			<tenderDataSet/>
+		</tenderTypes>
+	</tenderTypes>
+	<expYear type="group">
+		<expYears type="list">
+			<code/>
+			<description/>
+		</expYears>
+	</expYear>
+	<state type="group">
+		<states type="list">
+			<code/>
+			<description/>
+		</states>
+	</state>
+	<authorization type="group">
+		<cardholderFirstName mapField="C1_CARDHOLDER_FNAME"/>
+		<cardholderLastName mapField="C1_CARDHOLDER_LNAME"/>
+		<creditCardType dataType="lookup" mapField="CARD_TYPE_FLG" lookup="CARD_TYPE_FLG"/>
+		<creditCardNumber mapField="CREDIT_CARD_NBR"/>
+		<encrCreditCardNumber mapField="ENCR_CREDIT_CARD_NBR"/>
+		<creditCardExpirationMonth mapField="EXP_MONTH"/>
+		<creditCardExpirationYear mapField="EXP_YEAR"/>
+		<creditCardVerificationNumber mapField="C1_CARD_VAL_CODE"/>
+		<country mapField="COUNTRY"/>
+		<addressLine1 mapField="ADDRESS1"/>
+		<addressLine2 mapField="ADDRESS2"/>
+		<addressLine3 mapField="ADDRESS3"/>
+		<addressLine4 mapField="ADDRESS4"/>
+		<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+		<number1 mapField="NUM1"/>
+		<number2 mapField="NUM2"/>
+		<inCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+		<city mapField="CITY"/>
+		<geographic mapField="GEO_CODE"/>
+		<county mapField="COUNTY"/>
+		<state mapField="STATE"/>
+		<postal mapField="POSTAL"/>
+		<phone mapField="PHONE"/>
+		<email mapField="EMAILID"/>
+	</authorization>
+	<selectedTenderType type="group">
+		<tenderType/>
+		<bo/>
+		<authorization/>
+		<tenderDataSet/>
+	</selectedTenderType>
+</schema>

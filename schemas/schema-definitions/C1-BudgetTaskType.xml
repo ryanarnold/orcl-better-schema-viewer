@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<serviceTaskType required="true" isPrimeKey="true" mapField="F1_STASK_TYPE_CD"/>
+	<description required="true" mapField="DESCR"/>
+	<bo suppress="input" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<transactionalBo mdField="C1_RELATED_TRANS_OBJ_LBL" required="true" fkRef="F1-BUSOB" mapField="TRANS_BUS_OBJ_CD"/>
+	<serviceTaskTypeStatus required="true" dataType="lookup" default="F1AC" mapField="F1_STASK_TYPE_STATUS_FLG" lookup="F1_STASK_TYPE_STATUS_FLG"/>
+	<serviceTaskClass required="true" dataType="lookup" default="WXSS" mapField="F1_SVC_TASK_CL_FLG" lookup="F1_SVC_TASK_CL_FLG"/>
+	<longDescription mapField="DESCRLONG"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<alertDetails suppress="true" type="group">
+		<alertRequired mdField="C1_ALERT_REQ_LBL" dataType="lookup" default="N" mapField="CHAR_VAL" lookup="REQUIRED_SW">
+			<row mapChild="F1_SVC_TASK_TYPE_CHAR">
+				<CHAR_TYPE_CD is="C1-ALERT"/>
+				<SEQ_NUM is="1"/>
+			</row>
+		</alertRequired>
+		<messageInfo type="group" mapXML="BO_DATA_AREA">
+			<alertMessageCategory mdField="C1_ALERT_MSG_CAT" required="true" dataType="number" fkRef="MSGCAT"/>
+			<alertHeaderMessageNumber mdField="C1_ALERT_HEADER_MSG_NBR" required="true" dataType="number"/>
+			<alertDescriptionMessageNumber mdField="C1_ALERT_DESCR_MSG_NBR" required="true" dataType="number"/>
+		</messageInfo>
+	</alertDetails>
+</schema>

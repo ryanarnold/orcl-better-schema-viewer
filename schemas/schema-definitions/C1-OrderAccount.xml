@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<schema name="schema" fwRel="2">
+	<accountId mapField="ACCT_ID"/>
+	<accountMgmtGroup mapField="ACCT_MGMT_GRP_CD"/>
+	<customerClass mapField="CUST_CL_CD"/>
+	<mailingPremise mapField="MAILING_PREM_ID"/>
+	<accountVersion dataType="number" mapField="VERSION"/>
+	<accountPersons type="list" mapChild="CI_ACCT_PER">
+		<personId mapField="PER_ID"/>
+		<isMainCustomer dataType="boolean" mapField="MAIN_CUST_SW"/>
+		<billAddressSource dataType="lookup" mapField="BILL_ADDR_SRCE_FLG" lookup="BILL_ADDR_SRCE_FLG"/>
+		<billRouteType mapField="BILL_RTE_TYPE_CD"/>
+		<personAddressOverride type="list" mapChild="CI_PER_ADDR_OVRD">
+			<addressDetails type="group">
+				<country mapField="COUNTRY"/>
+				<addressLine1 mapField="ADDRESS1"/>
+				<addressLine2 mapField="ADDRESS2"/>
+				<addressLine3 mapField="ADDRESS3"/>
+				<addressLine4 mapField="ADDRESS4"/>
+				<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+				<number1 mapField="NUM1"/>
+				<number2 mapField="NUM2"/>
+				<inCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+				<city mapField="CITY"/>
+				<geographic mapField="GEO_CODE"/>
+				<county mapField="COUNTY"/>
+				<state mapField="STATE"/>
+				<postal mapField="POSTAL"/>
+			</addressDetails>
+		</personAddressOverride>
+	</accountPersons>
+</schema>

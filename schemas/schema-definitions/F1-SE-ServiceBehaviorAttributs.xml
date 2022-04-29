@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<private suppress="blank" mdField="F1_SE_PRIVATE_LBL" dataType="lookupBO" lookupBO="F1-SchemaBoolTrue"/>
+	<noAudit suppress="blank" mdField="F1_SE_NOAUDIT_LBL" dataType="lookupBO" lookupBO="F1-SchemaBoolTrue"/>
+</schema>

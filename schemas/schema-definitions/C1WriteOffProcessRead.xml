@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<writeOffProcess mapField="WO_PROC_ID"/>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<hasWriteOffProcess dataType="boolean" mapField="TMPL_WOL_CHG_SW"/>
+	<writeOffProcessTemplate mapField="WO_PROC_TMPL_CD"/>
+	<writeOffStatus dataType="lookup" mapField="WO_STATUS_FLG" lookup="WO_STATUS_FLG"/>
+	<writeOffControl mapField="WO_CNTL_CD"/>
+	<writeOffStatusReason dataType="lookup" mapField="WO_STAT_RSN_FLG" lookup="WO_STAT_RSN_FLG"/>
+	<accountId mapField="ACCT_ID"/>
+	<priority dataType="lookup" mapField="CRIT_PRIO_FLG" lookup="CRIT_PRIO_FLG"/>
+	<creationDateTime dataType="dateTime" default="%CurrentDateTime" mapField="CRE_DTTM"/>
+	<triggerBusinessProcess dataType="boolean" mapField="TRIGGER_BP_SW"/>
+	<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+	<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+	<comments mapField="COMMENTS"/>
+	<version dataType="number" mapField="VERSION"/>
+	<hasWriteOffProcessT dataType="boolean" mapField="C1_T_TMPL_WOL_CHG_SW"/>
+	<sa type="list" mapList="SA">
+		<writeOffProcess2 mapField="WO_PROC_ID"/>
+		<serviceAgreement mapField="SA_ID"/>
+		<writeOffSAStatus dataType="lookup" mapField="WO_SA_STAT_FLG" lookup="WO_SA_STAT_FLG"/>
+		<arrearsAmount dataType="money" mapField="ARS_AMT"/>
+		<currency mapField="CURRENCY_CD"/>
+		<version2 dataType="number" mapField="VERSION"/>
+		<saInformation mapField="SA_INFO"/>
+		<premiseInfo mapField="PREM_INFO"/>
+		<currentBalance dataType="money" mapField="CURRENT_BAL"/>
+		<totalBal dataType="number" mapField="TOTAL_BAL"/>
+		<saArrears type="list" mapList="SA_ARREARS">
+			<serviceAgreement2 mapField="SA_ID"/>
+			<daysAge mapField="DAYS_AGE"/>
+			<daysAgeN dataType="number" mapField="DAYS_AGE_N"/>
+			<arrearsAmount2 dataType="money" mapField="ARS_AMT"/>
+			<isToBeTransferred dataType="boolean" mapField="CHECKED_FOR_PA_SW"/>
+		</saArrears>
+	</sa>
+	<evt type="list" mapList="EVT">
+		<writeOffProcess3 mapField="WO_PROC_ID"/>
+		<eventSequence dataType="number" mapField="EVT_SEQ"/>
+		<writeOffEventStatus dataType="lookup" mapField="WO_EVT_STAT_FLG" lookup="WO_EVT_STAT_FLG"/>
+		<writeOffEventTypeCode mapField="WO_EVT_TYP_CD"/>
+		<triggerDate dataType="date" mapField="TRIGGER_DT"/>
+		<completionDate dataType="date" mapField="COMPLETION_DT"/>
+		<triggerBusinessProcess2 dataType="boolean" mapField="TRIGGER_BP_SW"/>
+		<version3 dataType="number" mapField="VERSION"/>
+		<writeoffEventInfo mapField="WO_EVT_INFO"/>
+		<evtCc type="list" mapList="EVT_CC">
+			<writeOffProcess4 mapField="WO_PROC_ID"/>
+			<eventSequence2 dataType="number" mapField="EVT_SEQ"/>
+			<customerContactId mapField="CC_ID"/>
+			<version4 dataType="number" mapField="VERSION"/>
+			<ccInfo mapField="CC_INFO"/>
+		</evtCc>
+	</evt>
+	<writeOffProcess5 mapField="WO_PROC_INFO"/>
+	<entityName mapField="ENTITY_NAME"/>
+	<writeOffDebtClass mapField="WO_DEBT_CL_CD"/>
+	<isCancel dataType="boolean" mapField="CANCEL_SW"/>
+</schema>

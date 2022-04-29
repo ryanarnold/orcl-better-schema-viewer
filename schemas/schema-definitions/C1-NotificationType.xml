@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<notificationType required="true" isPrimeKey="true" mapField="NTF_TYPE_CD"/>
+	<description required="true" mapField="DESCR100"/>
+	<bo suppress="input" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<longDescription mapField="DESCRLONG"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<notificationPushSub suppress="true" required="true" dataType="lookup" mapField="NTF_SUBPUSH_FLG" lookup="NTF_SUBPUSH_FLG"/>
+	<parentNotificationType suppress="true" fkRef="C1-NTFTY" mapField="PARENT_NTF_TYPE_CD"/>
+	<allowOptOut suppress="true" dataType="lookup" mapField="NTF_ALW_OPTOUT_FLG" lookup="NTF_ALW_OPTOUT_FLG"/>
+	<notificationRecipient suppress="true" dataType="lookup" mapField="NTF_RCP_FLG" lookup="NTF_RCP_FLG"/>
+	<selfServiceNotificationType suppress="true" dataType="lookup" mapField="C1_NF_SSTASK_TYPE_FLG" lookup="C1_NF_SSTASK_TYPE_FLG"/>
+	<notificationControl suppress="true" required="true" dataType="lookup" mapField="NTF_CTRL_FLG" lookup="NTF_CTRL_FLG"/>
+	<billRouteType suppress="true" fkRef="C1-BILRT" mapField="BILL_RTE_TYPE_CD"/>
+	<quoteRouteType suppress="true" fkRef="C1QTERTY" mapField="QTE_RTE_TYPE_CD"/>
+	<selfServiceTaskType suppress="true" fkRef="F1-STKTY" mapField="F1_STASK_TYPE_CD"/>
+	<customerContactClass suppress="true" mapField="CC_CL_CD"/>
+	<customerContactType suppress="true" mapField="CC_TYPE_CD"/>
+	<personContactTypes type="group">
+		<personContactType type="list" mapChild="C1_NTF_TYPE_COMM_RTE_TYPE">
+			<personContactType required="true" isPrimeKey="true" fkRef="C1-PCTTY" mapField="COMM_RTE_TYPE_CD"/>
+		</personContactType>
+	</personContactTypes>
+	<notificationTypeAlgorithms type="group">
+		<notificationTypeAlgorithm type="list" mapChild="C1_NTF_TYPE_ALG">
+			<systemEvent required="true" dataType="lookup" isPrimeKey="true" mapField="NTF_ALG_ENTITY_FLG" lookup="NTF_ALG_ENTITY_FLG"/>
+			<sequence required="true" dataType="number" isPrimeKey="true" mapField="SEQ_NUM"/>
+			<algorithm required="true" fkRef="F1-ALG" mapField="ALG_CD"/>
+		</notificationTypeAlgorithm>
+	</notificationTypeAlgorithms>
+	<notificationTypeDeliveryTypes suppress="true" type="group">
+		<notificationTypeDeliveryType type="list" mapChild="C1_NTF_TYPE_DVTYP">
+			<deliveryType required="true" dataType="lookup" isPrimeKey="true" mapField="C1_SS_DELIVERY_TYPE" lookup="C1_SS_DELIVERY_TYPE"/>
+			<preferredDeliverySequence mdField="PREF_DELIVERY_SEQ_NUM" dataType="number" mapField="SEQ_NUM"/>
+			<messageCategory mdField="MESSAGE_CAT_NBR" dataType="number" fkRef="MSGCAT" mapXML="BO_DATA_AREA"/>
+			<subjectMessageNumber mdField="SUBJECT_MSG_NBR" dataType="number" mapXML="BO_DATA_AREA"/>
+			<subjectMessageParmScript mdField="SUBJECT_MSG_PARM_SCR" fkRef="F1-SCRCD" mapXML="BO_DATA_AREA"/>
+			<notificationTexts type="group" mapXML="BO_DATA_AREA">
+				<notificationText mdField="NOTIF_TEXT_LBL" type="list">
+					<sequence mdField="SEQ_NUM" required="true" dataType="number" isPrimeKey="true"/>
+					<messageNumber mdField="MESSAGE_NBR" required="true" dataType="number"/>
+					<messageParmScript mdField="MSG_PARM_SCR" fkRef="F1-SCRCD"/>
+				</notificationText>
+			</notificationTexts>
+		</notificationTypeDeliveryType>
+	</notificationTypeDeliveryTypes>
+</schema>

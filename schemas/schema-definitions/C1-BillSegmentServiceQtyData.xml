@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<billSegmentServiceQuantityDto type="group">
+		<id type="group">
+			<billSegmentId mapField="BSEG_ID"/>
+			<unitOfMeasure mapField="UOM_CD"/>
+			<timeOfUse mapField="TOU_CD"/>
+			<serviceQuantityIdentifier mapField="SQI_CD"/>
+		</id>
+		<initialServiceQuantity dataType="number" mapField="INIT_SQ"/>
+		<billableServiceQuantity dataType="number" mapField="BILL_SQ"/>
+	</billSegmentServiceQuantityDto>
+	<retainServiceQuantityEntry mdField="F1_VALID_SW" dataType="boolean" mapField="RETAIN_SQ_SW"/>
+</schema>

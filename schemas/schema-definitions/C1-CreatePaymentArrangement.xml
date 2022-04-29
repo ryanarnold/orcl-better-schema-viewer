@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<paSaId mapField="PA_SA_ID"/>
+	<accountId mapField="ACCT_ID"/>
+	<cisDivision mapField="CIS_DIVISION"/>
+	<saType mapField="SA_TYPE_CD"/>
+	<currency mapField="CURRENCY_CD"/>
+	<recurringChargeAmount dataType="money" mapField="RCR_CHG_AMT"/>
+	<installment dataType="number" mapField="INSTALLMENT"/>
+	<create dataType="boolean" mapField="CREATE_SW"/>
+	<PASACollection type="list" mapList="PA_SA">
+		<saId mapField="CAND_SA_ID"/>
+		<currentAmount dataType="money" mapField="CUR_BAL"/>
+		<totalAmount dataType="money" mapField="TOT_BAL"/>
+		<saArrears type="list" mapList="SA_ARREARS">
+			<saId mapField="SA_ID"/>
+			<daysAgeNumeric mapField="DAYS_AGE_N"/>
+			<arrearsAmount dataType="money" mapField="ARS_AMT"/>
+			<checkedForPA dataType="boolean" mapField="CHECKED_FOR_PA_SW"/>
+		</saArrears>
+	</PASACollection>
+</schema>
