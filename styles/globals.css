@@ -29,3 +29,8 @@ a {
   outline: inherit;
   display: block;
 }
+
+pre:hover {
+  cursor: pointer;
+  background-color: beige;
+}

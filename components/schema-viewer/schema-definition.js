@@ -17,7 +17,7 @@ function SchemaDefinition({ xml, xmlData, updateXpath }) {
     updateXpath(xpath);
   };
 
-  return <div>{xmlLines.map((line) => <pre xpath={findXpath(line, xmlData)} onClick={handleClick}>{line}</pre>)}</div>;
+  return <div>{xmlLines.map((line) => <pre className="m-0" xpath={findXpath(line, xmlData)} onClick={handleClick}>{line}</pre>)}</div>;
 }
 
 export default SchemaDefinition;
