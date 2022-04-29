@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { SearchResults } from './SearchResults';
-import schemaList from '../../schemas/schema-list';
 
 const KEY_ARROW_UP = 38;
 const KEY_ARROW_DOWN = 40;
@@ -22,6 +21,7 @@ export default class SearchBox extends Component {
   }
 
   handleSearchQueryChange(event) {
+    const { schemaList } = this.props;
     const searchQuery = event.target.value.toLowerCase();
 
     this.setState({
