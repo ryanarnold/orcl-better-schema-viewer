@@ -1,30 +1,32 @@
-import React, { Component } from 'react'
-import styles from '../../styles/SearchResults.module.css'
+import React, { Component } from 'react';
+import styles from '../../styles/SearchResults.module.css';
 
 export class SearchResults extends Component {
-
   constructor(props) {
-    super(props)
-    
+    super(props);
+
     this.handleMouseEnter = this.handleMouseEnter.bind(this)
   }
 
   handleMouseEnter(event) {
-    this.props.handleMouseSelect(event.target.getAttribute('schemaname'))
+    const { handleMouseSelect } = this.props;
+    handleMouseSelect(event.target.getAttribute('schemaname'));
   }
 
   render() {
+    const { schemaList, selectedSchema, handleMouseClick } = this.props;
+
     return (
       <div className={styles.resultsBox}>
-        {this.props.schemaList.map(schema => 
-          <p key={schema.name} schemaname={schema.name} className={schema.name === this.props.selectedSchema ? styles.selected : ''} onMouseEnter={this.handleMouseEnter} onClick={this.props.handleMouseClick}>
+        {schemaList.map((schema) => (
+          <button type="button" key={schema.name} schemaname={schema.name} className={schema.name === selectedSchema ? styles.selected : ''} onMouseEnter={this.handleMouseEnter} onClick={handleMouseClick}>
             {schema.name}
             <span className={styles.schemaType}>{schema.type}</span>
-          </p>
-        )}
+          </button>
+        ))}
       </div>
-    )
+    );
   }
 }
 
-export default SearchResults
+export default SearchResults;
