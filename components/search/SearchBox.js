@@ -21,9 +21,11 @@ export default class SearchBox extends Component {
   }
 
   handleSearchQueryChange(event) {
+    const searchQuery = event.target.value.toLowerCase()
+
     this.setState({
-      filteredSchemaList: schemaList.filter(schema => {
-        return schema.name.toLowerCase().includes(event.target.value.toLowerCase())
+      filteredSchemaList: searchQuery.trim() === '' ? [] : schemaList.filter(schema => {
+        return schema.name.toLowerCase().includes(searchQuery)
       }),
       selectedSchemaIndex: 0
     })
