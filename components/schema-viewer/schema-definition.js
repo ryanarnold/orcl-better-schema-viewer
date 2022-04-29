@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 function findXpath(line, xmlData) {
   const xml = xmlData.find((x) => x.line === line.trim());
