@@ -19,8 +19,8 @@ export class SearchResults extends Component {
     return (
       <div className={styles.resultsBox}>
         {schemaList.map((schema) => (
-          <div key={schema.name} className={schema.name === selectedSchema ? styles.selected : ''} onMouseEnter={this.handleMouseEnter}>
-            <button type="button" schemaname={schema.name} className={styles.unbutton} onClick={handleMouseClick}>
+          <div key={schema.name} className={schema.name === selectedSchema ? styles.selected : ''}>
+            <button type="button" className={styles.unbutton} onClick={handleMouseClick} schemaname={schema.name} onMouseEnter={this.handleMouseEnter}>
               {schema.name}
               <span className={styles.schemaType}>{schema.type}</span>
             </button>
