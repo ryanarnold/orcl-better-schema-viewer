@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Layout from '../../components/layout';
 import SearchBox from '../../components/search/SearchBox';
-import { SchemaViewer } from '../../components/schema-viewer/schema-viewer';
+import SchemaViewer from '../../components/schema-viewer/schema-viewer';
 import getSchemaData, { getAllSchemaNames } from '../../schemas/schema-functions';
 
 export async function getStaticPaths() {
