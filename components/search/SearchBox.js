@@ -17,6 +17,7 @@ export default class SearchBox extends Component {
 
     this.handleSearchQueryChange = this.handleSearchQueryChange.bind(this);
     this.handleChangeSelectedSchema = this.handleChangeSelectedSchema.bind(this);
+    this.handleMouseSelect = this.handleMouseSelect.bind(this);
   }
 
   handleSearchQueryChange(event) {
@@ -40,13 +41,25 @@ export default class SearchBox extends Component {
     }
   }
 
+  handleMouseSelect(mouseSelectedSchema) {
+    const selectedSchemaIndex = this.state.filteredSchemaList.findIndex(schema => {
+      return schema.name === mouseSelectedSchema
+    })
+
+    console.log(selectedSchemaIndex)
+
+    this.setState({
+      selectedSchemaIndex
+    })
+  }
+
   render() {
     const selectedSchema = this.state.filteredSchemaList.length > 0 ? this.state.filteredSchemaList[this.state.selectedSchemaIndex].name : []
 
     return (
       <>
         <input type="text" className="form-control" id="searchBox" placeholder="Search for a schema" onChange={this.handleSearchQueryChange} onKeyDown={this.handleChangeSelectedSchema} />
-        {this.state.filteredSchemaList.length > 0 ? <SearchResults schemaList={this.state.filteredSchemaList} selectedSchema={selectedSchema} /> : null}
+        {this.state.filteredSchemaList.length > 0 ? <SearchResults schemaList={this.state.filteredSchemaList} selectedSchema={selectedSchema} handleMouseSelect={this.handleMouseSelect}/> : null}
       </>
     )
   }
