@@ -66,7 +66,12 @@ export default class SearchBox extends Component {
   }
 
   render() {
-    const { filteredSchemaList, selectedSchemaIndex } = this.state;
+    const { filteredSchemaList } = this.state;
+    let { selectedSchemaIndex } = this.state;
+
+    if (selectedSchemaIndex < 0) {
+      selectedSchemaIndex = 0;
+    }
 
     const selectedSchema = filteredSchemaList.length > 0
       ? filteredSchemaList[selectedSchemaIndex].name : [];

@@ -13,7 +13,7 @@ export class SchemaViewer extends Component {
       <div>
         <h1 className="fw-lighter mt-3">{schema.name}</h1>
         <h6 className="text-secondary fw-lighter">{schema.type}</h6>
-        <div className="border rounded p-2 mt-3">
+        <div className="border rounded p-2 mt-3 overflow-scroll code-div">
           <pre>
             {schema.xml}
           </pre>

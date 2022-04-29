@@ -9,8 +9,6 @@ export async function getStaticPaths() {
     params: { name },
   }));
 
-  console.log(paths);
-
   return {
     paths,
     fallback: false,
@@ -24,21 +22,24 @@ export async function getStaticProps({ params }) {
     xml: getSchemaData(params.name),
   };
 
+  const schemaList = getAllSchemaNames().map((s) => ({ name: s, type: 'Business Service' }));
+
   return {
     props: {
       schema,
+      schemaList,
     },
   };
 }
 
-function SchemaPage({ schema }) {
+function SchemaPage({ schema, schemaList }) {
   return (
     <Layout>
       <div className="container mt-5">
         <div className="row mt-5">
           <div className="col" />
           <div className="col-8">
-            <SearchBox />
+            <SearchBox schemaList={schemaList} />
             <SchemaViewer schema={schema} />
           </div>
           <div className="col" />
