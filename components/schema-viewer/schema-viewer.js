@@ -11,9 +11,9 @@ export class SchemaViewer extends Component {
 
     return (
       <div>
-        <h1>{schema.name}</h1>
-        <h6>{schema.type}</h6>
-        <div>{schema.xml}</div>
+        <h1 className="fw-lighter mt-3">{schema.name}</h1>
+        <h6 className="text-secondary fw-lighter">{schema.type}</h6>
+        <div className="border rounded p-2 mt-3">{schema.xml}</div>
         <XpathViewer />
       </div>
     );
