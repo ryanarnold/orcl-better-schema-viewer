@@ -1,0 +1,21 @@
+.resultsBox {
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  margin-top: 10px;
+}
+
+.resultsBox p {
+  padding: 10px;
+  margin-bottom: 0;
+}
+
+.schemaType {
+  color: #4e4e4e;
+  margin-left: 10px;
+  font-style: italic;
+  /* text-align: right; */
+}
+
+.selected {
+  background-color: #dfdfdf;
+}
