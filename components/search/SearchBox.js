@@ -22,12 +22,14 @@ export default class SearchBox extends Component {
   }
 
   render() {
-    const filteredSchemaList = schemaList;
+    const filteredSchemaList = this.state.searchQuery.trim() === '' ? [] : schemaList.filter(schema => {
+      return schema.name.toLowerCase().includes(this.state.searchQuery.toLowerCase())
+    })
 
     return (
       <>
         <input type="text" className="form-control" id="searchBox" placeholder="Search for a schema" onChange={this.handleSearchQueryChange} />
-        {this.state.searchQuery.trim() != '' ? <SearchResults schemaList={filteredSchemaList} selectedSchema={this.state.selectedSchema}/> : null}
+        {filteredSchemaList.length > 0 ? <SearchResults schemaList={filteredSchemaList} selectedSchema={this.state.selectedSchema} /> : null}
       </>
     )
   }
