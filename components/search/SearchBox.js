@@ -26,10 +26,12 @@ export default class SearchBox extends Component {
       return schema.name.toLowerCase().includes(this.state.searchQuery.toLowerCase())
     })
 
+    const selectedSchema = filteredSchemaList.length > 0 ? filteredSchemaList[0].name : ''
+
     return (
       <>
         <input type="text" className="form-control" id="searchBox" placeholder="Search for a schema" onChange={this.handleSearchQueryChange} />
-        {filteredSchemaList.length > 0 ? <SearchResults schemaList={filteredSchemaList} selectedSchema={this.state.selectedSchema} /> : null}
+        {filteredSchemaList.length > 0 ? <SearchResults schemaList={filteredSchemaList} selectedSchema={selectedSchema} /> : null}
       </>
     )
   }
