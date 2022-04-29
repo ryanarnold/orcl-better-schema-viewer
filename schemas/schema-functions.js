@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import matter from 'gray-matter';
 
 const schemaDefinitionsDirectory = path.join(process.cwd(), 'schemas/schema-definitions');
 
