@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../../components/layout';
 import SearchBox from '../../components/search/SearchBox';
 import { SchemaViewer } from '../../components/schema-viewer/schema-viewer';
-import { getAllSchemaNames } from '../../schemas/schema-functions';
+import getSchemaData, { getAllSchemaNames } from '../../schemas/schema-functions';
 
 export async function getStaticPaths() {
   const paths = getAllSchemaNames().map((name) => ({
@@ -21,7 +21,7 @@ export async function getStaticProps({ params }) {
   const schema = {
     name: params.name,
     type: 'Business Service',
-    xml: '<hello></hello>',
+    xml: getSchemaData(params.name),
   };
 
   return {
