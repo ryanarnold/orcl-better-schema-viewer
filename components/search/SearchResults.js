@@ -5,7 +5,7 @@ export class SearchResults extends Component {
   constructor(props) {
     super(props);
 
-    this.handleMouseEnter = this.handleMouseEnter.bind(this)
+    this.handleMouseEnter = this.handleMouseEnter.bind(this);
   }
 
   handleMouseEnter(event) {
