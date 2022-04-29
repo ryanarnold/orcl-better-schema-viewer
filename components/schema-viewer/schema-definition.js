@@ -9,10 +9,15 @@ function findXpath(line, xmlData) {
   return '';
 }
 
-function SchemaDefinition({ xml, xmlData }) {
+function SchemaDefinition({ xml, xmlData, updateXpath }) {
   const xmlLines = xml.split('\n');
 
-  return <div>{xmlLines.map((line) => <pre xpath={findXpath(line, xmlData)}>{line}</pre>)}</div>;
+  const handleClick = (event) => {
+    const xpath = event.target.getAttribute('xpath');
+    updateXpath(xpath);
+  };
+
+  return <div>{xmlLines.map((line) => <pre xpath={findXpath(line, xmlData)} onClick={handleClick}>{line}</pre>)}</div>;
 }
 
 export default SchemaDefinition;
