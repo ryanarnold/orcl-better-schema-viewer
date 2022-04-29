@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Layout from '../../components/layout';
 import SearchBox from '../../components/search/SearchBox';
 import { SchemaViewer } from '../../components/schema-viewer/schema-viewer';
