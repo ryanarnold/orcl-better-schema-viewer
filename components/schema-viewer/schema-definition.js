@@ -4,7 +4,6 @@ function findXpath(line, xmlData) {
   const xml = xmlData.find((x) => x.line === line.trim());
 
   if (xml) {
-    console.log(xml.xpath);
     return xml.xpath;
   }
   return '';
