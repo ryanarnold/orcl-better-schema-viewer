@@ -6,7 +6,9 @@ function SchemaViewer({ schema, xmlData }) {
   const [xpath, setXpath] = useState('');
 
   const updateXpath = (chosenXpath) => {
-    setXpath(schema.name + chosenXpath);
+    const newXpath = chosenXpath.trim() === '' ? '' : schema.name + chosenXpath;
+    navigator.clipboard.writeText(newXpath);
+    setXpath(newXpath);
   };
 
   return (
