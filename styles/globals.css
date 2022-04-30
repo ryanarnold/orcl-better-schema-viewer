@@ -32,5 +32,5 @@ a {
 
 pre:hover {
   cursor: pointer;
-  background-color: beige;
+  background-color: rgb(235, 235, 235) !important;
 }
