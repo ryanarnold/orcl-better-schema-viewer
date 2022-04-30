@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<steps type="group">
+		<step type="list" mapChild="C1_LEAD_EVT_STEP">
+			<leadEventStepId suppress="true" isPrimeKey="true" mapField="LEAD_EVT_STEP_ID"/>
+			<leadEvent suppress="true" mapField="C1_LEAD_EVT_ID"/>
+			<leadEventType suppress="true" mapField="C1_LEAD_EVT_TYPE_CD"/>
+			<stepTypeSeq suppress="input" dataType="number" mapField="LEAD_EVT_STEP_SEQ"/>
+			<stepType suppress="input" mapField="LEAD_EVT_STEP_TYPE_CD"/>
+			<intendedWorkDttm dataType="dateTime" mapField="LEAD_EVT_STEP_WORK_DTTM"/>
+			<completeDttm dataType="dateTime" mapField="LEAD_EVT_STEP_COMPLETE_DTTM"/>
+			<comments mdField="COMMENTSLONG" mapField="DESCRLONG"/>
+			<stepVisibility suppress="input" dataType="lookup" mapField="LEAD_EVT_STEP_VSBLTY_FLG" lookup="LEAD_EVT_STEP_VSBLTY_FLG"/>
+		</step>
+	</steps>
+</schema>

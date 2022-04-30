@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<depositControlId mapField="DEP_CTL_ID"/>
+	<tenderSourceType dataType="lookup" mapField="TNDR_SRCE_TYPE_FLG" lookup="TNDR_SRCE_TYPE_FLG"/>
+	<depositControlStatus dataType="lookup" mapField="DEP_CTL_STATUS_FLG" lookup="DEP_CTL_STATUS_FLG"/>
+	<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+	<user mapField="USER_ID"/>
+	<currency mapField="CURRENCY_CD"/>
+	<balancedUserId mapField="BALANCED_USER_ID"/>
+	<balancedDateTime dataType="dateTime" mapField="BALANCED_DTTM"/>
+	<endingBalance dataType="money" mapField="END_BALANCE"/>
+	<comments mapField="COMMENTS"/>
+	<version dataType="number" mapField="VERSION"/>
+	<depositControlCharacteristic type="list" mapList="DEP_CTL_CHAR">
+		<depositControlId mapField="DEP_CTL_ID"/>
+		<characteristicType mapField="CHAR_TYPE_CD"/>
+		<sequence dataType="number" mapField="SEQ_NUM"/>
+		<characteristicValue mapField="CHAR_VAL"/>
+		<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+		<version dataType="number" mapField="VERSION"/>
+		<characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
+		<characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+		<characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+		<characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
+		<characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+		<searchCharacteristicValue mapField="SRCH_CHAR_VAL"/>
+	</depositControlCharacteristic>
+	<tenderControl type="list" mapList="TNDR_CTL">
+		<tenderControlId mapField="TNDR_CTL_ID"/>
+		<currency mapField="CURRENCY_CD"/>
+		<tenderSource mapField="TNDR_SOURCE_CD"/>
+		<tenderControlStagingStatus dataType="lookup" mapField="TNDR_CTL_ST_FLG" lookup="TNDR_CTL_ST_FLG"/>
+		<user mapField="USER_ID"/>
+		<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+		<depositControlId mapField="DEP_CTL_ID"/>
+		<balancedUserId mapField="BALANCED_USER_ID"/>
+		<balancedDateTime dataType="dateTime" mapField="BALANCED_DTTM"/>
+		<startingBalance dataType="money" mapField="START_BALANCE"/>
+		<endingBalance dataType="money" mapField="END_BALANCE"/>
+		<isAllUsers dataType="boolean" mapField="ALL_OPERATORS_SW"/>
+		<comments mapField="COMMENTS"/>
+		<version dataType="number" mapField="VERSION"/>
+		<isArchived dataType="boolean" mapField="ARCHIVE_SW"/>
+		<batchControl mapField="BATCH_CD"/>
+		<batchNumber dataType="number" mapField="BATCH_NBR"/>
+		<externalTransmissionId mapField="EXT_TRANSMIT_ID"/>
+	</tenderControl>
+	<turnIn type="list" mapList="TURN_IN">
+		<turnInId mapField="TURN_IN_ID"/>
+		<tenderType mapField="TENDER_TYPE_CD"/>
+		<tenderControlId mapField="TNDR_CTL_ID"/>
+		<turnInStatus dataType="lookup" mapField="TURN_IN_STATUS_FLG" lookup="TURN_IN_STATUS_FLG"/>
+		<turnInAmount dataType="money" mapField="TURN_IN_AMT"/>
+		<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+		<receiptNumber mapField="RECEIPT_NUM"/>
+		<version dataType="number" mapField="VERSION"/>
+	</turnIn>
+	<tenderDeposit type="list" mapList="TNDR_DEP">
+		<tenderDepositId mapField="TNDR_DEP_ID"/>
+		<currency mapField="CURRENCY_CD"/>
+		<bankAccount mapField="BANK_ACCT_KEY"/>
+		<bank mapField="BANK_CD"/>
+		<depositControlId mapField="DEP_CTL_ID"/>
+		<depositAmount dataType="money" mapField="DEPOSIT_AMT"/>
+		<referenceId mapField="REFERENCE_ID"/>
+		<version dataType="number" mapField="VERSION"/>
+	</tenderDeposit>
+</schema>

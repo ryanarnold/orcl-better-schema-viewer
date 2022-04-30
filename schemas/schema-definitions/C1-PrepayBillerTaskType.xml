@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<serviceTaskType required="true" isPrimeKey="true" mapField="F1_STASK_TYPE_CD"/>
+	<description required="true" mapField="DESCR"/>
+	<bo suppress="input" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<transactionalBo required="true" fkRef="F1-BUSOB" mapField="TRANS_BUS_OBJ_CD"/>
+	<serviceTaskTypeStatus dataType="lookup" default="F1AC" mapField="F1_STASK_TYPE_STATUS_FLG" lookup="F1_STASK_TYPE_STATUS_FLG"/>
+	<longDescription mapField="DESCRLONG"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<serviceTaskClass suppress="true" dataType="lookup" default="C1MI" mapField="F1_SVC_TASK_CL_FLG" lookup="F1_SVC_TASK_CL_FLG"/>
+	<prepayBillerDetails type="group" mapXML="BO_DATA_AREA">
+		<topUpPeriod mdField="C1_TOP_UP_PERIOD" required="true" dataType="number" default="0"/>
+		<minimumBalancePeriod mdField="C1_MIN_BAL_PERIOD" required="true" dataType="number" default="0"/>
+		<fundRequestAdjustmentType mdField="C1_PPB_FUND_REQ_ADJ_TYPE" required="true" fkRef="C1-ADJTY"/>
+		<billingFrequency mdField="C1_BILLING_FREQ" required="true" dataType="number" default="0"/>
+		<graceDays mdField="C1_PPB_RVW_FREQ" required="true" dataType="number" default="0"/>
+		<defaultMinimumBalanceReplenishment mdField="C1_PPB_DFLT_MIN_BAL_NTF_FLG" required="true" dataType="lookup" lookup="C1_PPB_MIN_BAL_REP_NTF_FLG"/>
+		<defaultPaymentMethod mdField="C1_PPB_DFLT_PAY_METHOD_FLG" required="true" dataType="lookup" lookup="C1_PPB_PAYMENT_METHOD_FLG"/>
+	</prepayBillerDetails>
+</schema>

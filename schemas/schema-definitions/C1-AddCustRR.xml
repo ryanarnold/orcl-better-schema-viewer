@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <input type="group">
+    <externalSystemReference mapField="EXT_SYS_REF"/>
+    <externalSystem fkRef="F1-ESTMP" mapField="NT_XID_CD"/>
+    <srmPostInfo type="group">
+      <srmPostId mdField="SRM_POST_ID"/>
+      <srmPostLink mdField="SRM_POST_LINK"/>
+      <srmUser mdField="SRM_USER"/>
+      <srmTopic mdField="SRM_TOPIC"/>
+    </srmPostInfo>
+    <socialCommunityPostInfo type="group">
+      <community mdField="CRR_COMMUNITY"/>
+      <authorId mdField="CRR_AUTHOR_ID"/>
+      <authorName mdField="CRR_AUTHOR_NAME"/>
+      <communityPostId mdField="CRR_POST_ID"/>
+      <communityPostLink mdField="CRR_POST_LINK"/>
+      <communityParentPostLink mdField="CRR_PARENT_POST_LINK"/>
+    </socialCommunityPostInfo>
+    <requestDetails type="group">
+      <requestDetail type="list">
+        <externalDetailName mdField="CRR_EXT_DETAIL_NAME" isPrimeKey="true"/>
+        <externalDetailValue mdField="CRR_EXT_DETAIL_VALUE"/>
+      </requestDetail>
+    </requestDetails>
+  </input>
+  <output type="group">
+    <custRelReqId mdField="CUST_REL_REQ_ID"/>
+    <errorDetails type="group">
+      <hadError dataType="boolean" mapField="F1_HAD_ERROR_SW"/>
+      <messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+      <messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+      <messageParameters type="group">
+        <parameters type="list" mapList="MSG_PARMS">
+          <parameterType dataType="lookup" mapField="MSG_PARM_TYP_FLG" lookup="MSG_PARM_TYP_FLG"/>
+          <parameterValue mapField="MSG_PARM_VAL"/>
+        </parameters>
+      </messageParameters>
+    </errorDetails>
+  </output>
+</schema>

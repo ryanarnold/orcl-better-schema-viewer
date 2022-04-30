@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <notificationType/>
+  <accountId/>
+  <notificationPreferenceId/>
+  <serviceTaskId/>
+  <expandMessage default="Y"/>
+  <callBuildScript default="Y"/>
+  <language/>
+  <notificationTypeDeliveryTypes type="group">
+    <notificationTypeDeliveryType type="list">
+      <deliveryType/>
+      <preferredDeliverySequence/>
+      <messageCategory/>
+      <subjectMessageNumber/>
+      <subjectMessageParmScript/>
+      <messageParmCollCount mdField="MESSAGE_PARM_CNT" dataType="number" mapField="MESSAGE_PARM_COLL_CNT"/>
+      <messageParms type="group">
+        <messageParm1 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_1"/>
+        <messageParm2 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_2"/>
+        <messageParm3 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_3"/>
+        <messageParm4 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_4"/>
+        <messageParm5 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_5"/>
+        <messageParm6 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_6"/>
+        <messageParm7 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_7"/>
+        <messageParm8 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_8"/>
+        <messageParm9 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_9"/>
+      </messageParms>
+      <messageParmTypes type="group">
+        <messageParmType1 mapField="MSG_PARM_TYP_FLG_1"/>
+        <messageParmType2 mapField="MSG_PARM_TYP_FLG_2"/>
+        <messageParmType3 mapField="MSG_PARM_TYP_FLG_3"/>
+        <messageParmType4 mapField="MSG_PARM_TYP_FLG_4"/>
+        <messageParmType5 mapField="MSG_PARM_TYP_FLG_5"/>
+        <messageParmType6 mapField="MSG_PARM_TYP_FLG_6"/>
+        <messageParmType7 mapField="MSG_PARM_TYP_FLG_7"/>
+        <messageParmType8 mapField="MSG_PARM_TYP_FLG_8"/>
+        <messageParmType9 mapField="MSG_PARM_TYP_FLG_9"/>
+      </messageParmTypes>
+      <notificationTexts type="group">
+        <notificationText type="list">
+          <sequence/>
+          <messageNumber/>
+          <messageParmScript/>
+          <messageParmCollCount mdField="MESSAGE_PARM_CNT" dataType="number" mapField="MESSAGE_PARM_COLL_CNT"/>
+          <messageParms type="group">
+            <messageParm1 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_1"/>
+            <messageParm2 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_2"/>
+            <messageParm3 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_3"/>
+            <messageParm4 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_4"/>
+            <messageParm5 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_5"/>
+            <messageParm6 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_6"/>
+            <messageParm7 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_7"/>
+            <messageParm8 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_8"/>
+            <messageParm9 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_9"/>
+          </messageParms>
+          <messageParmTypes type="group">
+            <messageParmType1 mapField="MSG_PARM_TYP_FLG_1"/>
+            <messageParmType2 mapField="MSG_PARM_TYP_FLG_2"/>
+            <messageParmType3 mapField="MSG_PARM_TYP_FLG_3"/>
+            <messageParmType4 mapField="MSG_PARM_TYP_FLG_4"/>
+            <messageParmType5 mapField="MSG_PARM_TYP_FLG_5"/>
+            <messageParmType6 mapField="MSG_PARM_TYP_FLG_6"/>
+            <messageParmType7 mapField="MSG_PARM_TYP_FLG_7"/>
+            <messageParmType8 mapField="MSG_PARM_TYP_FLG_8"/>
+            <messageParmType9 mapField="MSG_PARM_TYP_FLG_9"/>
+          </messageParmTypes>
+        </notificationText>
+      </notificationTexts>
+    </notificationTypeDeliveryType>
+  </notificationTypeDeliveryTypes>
+  <notifications type="group">
+    <notificationsMessageList type="list">
+      <deliveryType/>
+      <subjectText/>
+      <messageBodyText/>
+    </notificationsMessageList>
+  </notifications>
+  <custom type="group">
+    <field1 type="group">
+      <name/>
+      <value/>
+    </field1>
+    <field2 type="group">
+      <name/>
+      <value/>
+    </field2>
+    <field3 type="group">
+      <name/>
+      <value/>
+    </field3>
+    <field4 type="group">
+      <name/>
+      <value/>
+    </field4>
+    <field5 type="group">
+      <name/>
+      <value/>
+    </field5>
+    <field6 type="group">
+      <name/>
+      <value/>
+    </field6>
+    <field7 type="group">
+      <name/>
+      <value/>
+    </field7>
+    <field8 type="group">
+      <name/>
+      <value/>
+    </field8>
+    <field9 type="group">
+      <name/>
+      <value/>
+    </field9>
+    <field10 type="group">
+      <name/>
+      <value/>
+    </field10>
+  </custom>
+</schema>

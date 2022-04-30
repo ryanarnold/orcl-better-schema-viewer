@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<outboundMsgId mapField="OUTMSG_ID"/>
+	<externalSystem fkRef="F1-ESTMP" mapField="NT_XID_CD"/>
+	<outboundMessageType fkRef="F1-OMTYP" mapField="OUTMSG_TYPE_CD"/>
+	<processingMethod dataType="lookup" mapField="OUTMSG_PROC_METH_FLG" lookup="OUTMSG_PROC_METH_FLG"/>
+	<outboundMessageStatus dataType="lookup" mapField="OUTMSG_STATUS_FLG" lookup="OUTMSG_STATUS_FLG"/>
+	<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+	<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+	<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+	<errorDetail mapField="ERROR_DTL"/>
+	<sendDetails type="group" mapXML="XML_SOURCE">
+		<accountId mdField="ACCT_ID" required="true" fkRef="ACCT"/>
+		<notificationType mdField="NTF_TYPE_CD" required="true" fkRef="C1-NTFTY"/>
+		<notificationEdgeApp mdField="EDGE_APP_ID_FLG" required="true"/>
+		<activeInactive mdField="CND_ACTINACT_FLG" required="true"/>
+	</sendDetails>
+</schema>

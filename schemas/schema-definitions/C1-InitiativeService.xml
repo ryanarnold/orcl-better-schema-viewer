@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<initiative required="true" isPrimeKey="true" mapField="C1_INITIATIVE_CD"/>
+	<bo suppress="true" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<description required="true" mapField="DESCR100"/>
+	<longDescription mapField="DESCRLONG"/>
+	<boStatus suppress="input" mapField="BO_STATUS_CD"/>
+	<statusReason suppress="blank" fkRef="F1-STRSN" mapField="BO_STATUS_REASON_CD"/>
+	<startDate mdField="C1_INITV_START_DT" required="true" dataType="date" mapXML="BO_DATA_AREA"/>
+	<endDate mdField="C1_INITV_END_DT" dataType="date" mapXML="BO_DATA_AREA"/>
+	<masterOrSubsidiary required="true" dataType="lookup" default="C1MI" mapField="C1_INTIATIVE_MST_SUB_FLG" lookup="C1_INTIATIVE_MST_SUB_FLG"/>
+	<parentInitiative fkRef="C1-INITV" mapField="C1_PARENT_INITIATIVE_CD"/>
+	<participationAnalysis dataType="lookup" default="C1DP" mapField="C1_CONT_OPT_PTCP_ANLYS_FLG" lookup="C1_CONT_OPT_PTCP_ANLYS_FLG"/>
+	<hasLeads required="true" dataType="lookup" default="C1YS" mapField="C1_CAN_HAVE_LEADS_FLG" lookup="C1_CAN_HAVE_LEADS_FLG"/>
+	<canLeadsHaveRep dataType="lookup" mapField="C1_CAN_LEAD_HAVE_REP_FLG" lookup="C1_CAN_LEAD_HAVE_REP_FLG"/>
+	<representative fkRef="C1-SLSRP" mapField="C1_REPRESENTATIVE_CD"/>
+	<primaryCommunicationChannel dataType="lookup" mapField="C1_PRIM_COM_CH_FLG" lookup="C1_PRIM_COM_CH_FLG"/>
+	<relatedObjLeadCreation mdField="REL_OBJ_LEAD_CRE_FLG" dataType="lookup" default="C1SI" mapXML="BO_DATA_AREA" lookup="REL_OBJ_LEAD_CRE_FLG"/>
+	<ifNoObjectReturned mdField="NO_OBJ_RET_FLG" dataType="lookup" default="C1SK" mapXML="BO_DATA_AREA" lookup="NO_OBJ_RET_FLG"/>
+	<advancedAnalyticsSystemUsage suppress="blank" mdField="ADV_ANALYSIS_USG_FLG" dataType="lookup" mapXML="BO_DATA_AREA" lookup="ADV_ANALYSIS_USG_FLG"/>
+	<defaultResponseChannel suppress="blank" mdField="DEFAULT_RESPONSE_CH_LBL" dataType="lookup" mapXML="BO_DATA_AREA" lookup="LEAD_RESPONSE_CH_FLG"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<statusDateTime suppress="true" dataType="dateTime" mapField="STATUS_UPD_DTTM"/>
+	<createDateTime suppress="true" dataType="dateTime" default="%CurrentDateTime" mapField="CRE_DTTM"/>
+	<campaign mdField="CAMPAIGN_CD" fkRef="C1-CAMPG" mapField="PK_VALUE1">
+		<row mapChild="C1_INITIATIVE_REL_OBJ">
+			<MAINT_OBJ_CD is="CAMPAIGN"/>
+			<C1_INTV_REL_OBJ_TYPE_FLG is="C1CM"/>
+		</row>
+	</campaign>
+	<thirdPartyNotification mdField="INTV_THIRD_PTY_NOTIF_LBL" type="group" mapXML="BO_DATA_AREA">
+		<thirdPartyLeadEventType mdField="THIRD_PTY_LEVT_TYPE_CD" fkRef="C1-LEVTY"/>
+	</thirdPartyNotification>
+	<leadReassignmentNotification mdField="C1_INITIATIVE_LEAD_REASGN_LBL" type="group" mapXML="BO_DATA_AREA">
+		<notificationMethod mdField="C1_INTV_NOTIFY_METH_FLG" dataType="lookup" lookup="C1_INTV_NOTIFY_METH_FLG"/>
+		<repReassignmentLeadEventType mdField="C1_REP_REASGN_LEVT_TYPE" fkRef="C1-LEVTY"/>
+	</leadReassignmentNotification>
+	<statisticsInfo type="group" mapXML="BO_DATA_AREA">
+		<hoursBetweenStatisticsUpdate mdField="C1_HOURS_STATUPD" required="true" dataType="number"/>
+		<updateDateTime suppress="blank" mdField="C1_INTV_STAT_DTTM" dataType="dateTime"/>
+		<manualUpdateRequested suppress="true" mdField="C1_STAT_UPD_SW" dataType="boolean"/>
+		<manualUpdateRequestUser suppress="blank" mdField="C1_INITV_STAT_UPD_USER" fkRef="CI_USER"/>
+		<manualUpdateRequestDateTime suppress="blank" mdField="C1_INITV_STAT_UPDR_DTTM" dataType="dateTime"/>
+		<currentLeadStatusHistogram suppress="true" type="list">
+			<leadStatus mdField="C1_LEAD_STATUS" isPrimeKey="true"/>
+			<leadCount mdField="C1_LEAD_CNT" dataType="number"/>
+		</currentLeadStatusHistogram>
+		<monthlyLeadStatistics suppress="true" type="list">
+			<monthStartDate mdField="C1_MON_START_DT" dataType="date" isPrimeKey="true"/>
+			<createdLeadCount mdField="C1_LEAD_CREATED_CNT" dataType="number"/>
+			<completedLeadCount mdField="C1_LEAD_COMPLETE_CNT" dataType="number"/>
+			<discardedLeadCount mdField="C1_LEAD_DISCARDED_CNT" dataType="number"/>
+		</monthlyLeadStatistics>
+		<monthlyDiscardStatistics suppress="true" type="list">
+			<monthStartDate mdField="C1_MON_START_DT" dataType="date" isPrimeKey="true"/>
+			<discardReason1 mdField="BO_STATUS_REASON_CD"/>
+			<discardReason1Count mdField="C1_LEAD_DISCARD_REASON_CNT" dataType="number"/>
+			<discardReason2 mdField="BO_STATUS_REASON_CD"/>
+			<discardReason2Count mdField="C1_LEAD_DISCARD_REASON_CNT" dataType="number"/>
+			<discardReason3 mdField="BO_STATUS_REASON_CD"/>
+			<discardReason3Count mdField="C1_LEAD_DISCARD_REASON_CNT" dataType="number"/>
+			<discardReason4 mdField="BO_STATUS_REASON_CD"/>
+			<discardReason4Count mdField="C1_LEAD_DISCARD_REASON_CNT" dataType="number"/>
+			<discardReason5 mdField="BO_STATUS_REASON_CD"/>
+			<discardReason5Count mdField="C1_LEAD_DISCARD_REASON_CNT" dataType="number"/>
+		</monthlyDiscardStatistics>
+		<monthlyLeadOutcome suppress="true" type="list">
+			<monthStartDate mdField="C1_MON_START_DT" dataType="date" isPrimeKey="true"/>
+			<successLeadCount mdField="C1_LEAD_SUCCESS_CNT" dataType="number"/>
+			<discardedLeadCount mdField="C1_LEAD_DISCARDED_CNT" dataType="number"/>
+		</monthlyLeadOutcome>
+		<activeLeadsPerRep suppress="true" type="list" orderBy="leadCount desc">
+			<leadCount mdField="C1_LEAD_CNT" dataType="number"/>
+			<individualSalesRep mdField="C1_REPRESENTATIVE_CD" isPrimeKey="true"/>
+		</activeLeadsPerRep>
+	</statisticsInfo>
+	<leadEventProfile mdField="C1_INITIATIVE_LEVT_DEFN_LBL" type="group">
+		<leadEventTypeList type="list" mapChild="C1_INITIATIVE_LEAD_DEFN">
+			<sequence required="true" dataType="number" mapField="EVT_SEQ"/>
+			<leadEventType required="true" fkRef="C1-LEVTY" mapField="C1_LEAD_EVT_TYPE_CD"/>
+			<daysAfterLeadCreation dataType="number" mapField="C1_DAYS_AFT_LEAD_CRE"/>
+		</leadEventTypeList>
+	</leadEventProfile>
+</schema>

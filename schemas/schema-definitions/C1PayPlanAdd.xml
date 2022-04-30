@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<payPlanId mapField="PP_ID"/>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<ppInfo mapField="PP_INFO"/>
+	<accountInfo mapField="ACCT_INFO"/>
+	<payorAccounInformation mapField="PAYOR_ACCT_INFO"/>
+	<isCancel dataType="boolean" mapField="CANCEL_SW"/>
+	<ppTypeDescr mapField="PP_TYPE_DESCR"/>
+	<debtClassDescription mapField="DEBT_CL_DESC"/>
+	<debtCurrentBalance dataType="money" mapField="DEBT_CUR_AMT"/>
+	<debtDelinquentAmount dataType="money" mapField="DEBT_DEL_AMT"/>
+	<thrdPtyPayorDescr mapField="THRD_PTY_PAYOR_DESCR"/>
+	<payPlanCancelReasonDescription mapField="PP_CAN_RSN_DESCR"/>
+	<totalAmount dataType="money" mapField="PP_TOT_SCHED_AMT"/>
+	<autoPayMethSw dataType="boolean" mapField="AUTO_PAY_METH_SW"/>
+	<currency mapField="CURRENCY_CD"/>
+	<accountId mapField="ACCT_ID"/>
+	<comments mapField="COMMENTS"/>
+	<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+	<lastStatusDateTime dataType="dateTime" mapField="LAST_STAT_DTTM"/>
+	<lastUpdatedBy mapField="LAST_STAT_USER_ID"/>
+	<payorAccountId mapField="PAYOR_ACCT_ID"/>
+	<paymentMethod mapField="PAY_METH_CD"/>
+	<cancelReasonFlag dataType="lookup" mapField="PP_CAN_RSN_FLG" lookup="PP_CAN_RSN_FLG"/>
+	<paymentPlanStatus dataType="lookup" mapField="PP_STAT_FLG" lookup="PP_STAT_FLG"/>
+	<paymentPlanType mapField="PP_TYPE_CD"/>
+	<startDate dataType="date" mapField="START_DT"/>
+	<thirdPartyPayor mapField="THRD_PTY_PAYOR_CD"/>
+	<isThirdPartyGuarantor dataType="boolean" mapField="THRD_PTY_SW"/>
+	<user mapField="USER_ID"/>
+	<version dataType="number" mapField="VERSION"/>
+	<pps type="list" mapList="PPS">
+		<payPlanId2 mapField="PP_ID"/>
+		<scheduledDate dataType="date" mapField="PP_SCHED_DT"/>
+		<scheduledAmount dataType="money" mapField="PP_SCHED_AMT"/>
+		<currency2 mapField="CURRENCY_CD"/>
+		<autopayClearingId mapField="APAY_CLR_ID"/>
+		<version2 dataType="number" mapField="VERSION"/>
+	</pps>
+</schema>

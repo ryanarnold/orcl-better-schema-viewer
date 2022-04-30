@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<tenderControlId mapField="TNDR_CTL_ID"/>
+	<tenderControl mapField="TNDR_CTL_INFO"/>
+	<tenderSourceType dataType="lookup" mapField="TNDR_SRCE_TYPE_FLG" lookup="TNDR_SRCE_TYPE_FLG"/>
+	<currency mapField="CURRENCY_CD"/>
+	<paymentDate dataType="date" mapField="PAY_DT"/>
+	<paymentEventMode dataType="lookup" mapField="PEVT_MODE_FLG" lookup="PEVT_MODE_FLG"/>
+	<pevtActionSw dataType="boolean" mapField="PEVT_ACTION_SW"/>
+	<maxQuickAddPays dataType="number" mapField="MAX_QUICK_ADD_PAYS"/>
+	<paymentEventId mapField="PAY_EVENT_ID"/>
+	<paymentEventInformation mapField="PAY_EVENT_INFO"/>
+	<hasGoToClicked dataType="boolean" mapField="GOTO_CLICKED_SW"/>
+	<ctxtPayorAcctId mapField="CTXT_PAYOR_ACCT_ID"/>
+	<ovrdHdr mapField="OVRD_HDR"/>
+	<mainDstRuleCd mapField="MAIN_DST_RULE_CD"/>
+	<user mapField="USER_ID"/>
+	<endorseMessage mapField="ENDORSE_MSG"/>
+	<endorsePrompt mapField="ENDORSE_PROMPT"/>
+	<description mapField="DESCR"/>
+	<accountNumber mapField="ACCOUNT_NBR"/>
+	<encryptedBankAccountNumber mapField="ENCR_ACCOUNT_NBR"/>
+	<isPrintControl dataType="boolean" mapField="PRINT_CTL_SW"/>
+	<recptCoName mapField="RECPT_CO_NAME"/>
+	<localOfcMsg mapField="LOCAL_OFC_MSG"/>
+	<doneSw dataType="boolean" mapField="DONE_SW"/>
+	<endorseText type="list" mapList="ENDORSE_TEXT">
+		<endorseLine mapField="ENDORSE_LINE"/>
+	</endorseText>
+	<receiptMessageTest type="list" mapList="RCPT_MSG_TEXT">
+		<receiptMessageLine mapField="RCPT_MSG_LINE"/>
+	</receiptMessageTest>
+	<print type="list" mapList="PRINT">
+		<paymentEventId2 mapField="PAY_EVENT_ID"/>
+		<accountId mapField="ACCT_ID"/>
+		<accountCheckDigit mapField="ACCT_CHECK_DIGIT"/>
+		<accountName mapField="ACCT_NAME"/>
+		<paymentAmount dataType="money" mapField="PAY_AMT"/>
+		<tenderType mapField="TENDER_TYPE_CD"/>
+		<checkNumber mapField="CHECK_NBR"/>
+		<currency2 mapField="CURRENCY_CD"/>
+	</print>
+	<canCreate dataType="boolean" mapField="CREATE_SW"/>
+	<quickAddTndr type="list" mapList="QUICK_ADD_TNDR">
+		<paymentEventId3 mapField="PAY_EVENT_ID"/>
+		<payorAccountId mapField="PAYOR_ACCT_ID"/>
+		<accountCheckDigit2 mapField="ACCT_CHECK_DIGIT"/>
+		<tenderAccountInformation mapField="TNDR_ACCT_INFO"/>
+		<tenderAccountCash mapField="TNDR_ACCT_CASH"/>
+		<isPayorAccountCashOnly dataType="boolean" mapField="ACCT_CASH_ONLY_SW"/>
+		<hasCashTendered dataType="boolean" mapField="CASH_TNDR_SW"/>
+		<isCashBackAllowed dataType="boolean" mapField="ALLOW_CASH_BACK_SW"/>
+		<isIncludedInTenderControlBalance dataType="boolean" mapField="IN_TNDR_CTL_BAL_SW"/>
+		<currency3 mapField="CURRENCY_CD"/>
+		<tenderAmount dataType="money" mapField="TENDER_AMT"/>
+		<tenderType2 mapField="TENDER_TYPE_CD"/>
+		<checkNumber2 mapField="CHECK_NBR"/>
+		<customerId mapField="CUST_ID"/>
+		<micrId mapField="MICR_ID"/>
+		<encryptedMicrId mapField="ENCR_MICR_ID"/>
+		<hashMicrId mapField="HASH_MICR_ID"/>
+		<name mapField="NAME1"/>
+		<externalReferenceId mapField="EXT_REFERENCE_ID"/>
+		<autopaySource mapField="APAY_SRC_CD"/>
+		<autopaySourceName mapField="APAY_SRC_NAME"/>
+		<externalAccountId mapField="EXT_ACCT_ID"/>
+		<expirationMonth mapField="EXP_MONTH"/>
+		<expirationYear mapField="EXP_YEAR"/>
+		<entityName mapField="ENTITY_NAME"/>
+		<encryptedExternalAccountId mapField="ENCR_EXT_ACCT_ID"/>
+		<isAutopay dataType="boolean" mapField="APAY_SW"/>
+		<canGenerateAutopay dataType="boolean" mapField="GENERATE_APAY_SW"/>
+	</quickAddTndr>
+	<quickAddPay type="list" mapList="QUICK_ADD_PAY">
+		<statusExpMsg mapField="STATUS_EXP_MSG"/>
+		<paymentStatus dataType="lookup" mapField="PAY_STATUS_FLG" lookup="PAY_STATUS_FLG"/>
+		<paymentEventId4 mapField="PAY_EVENT_ID"/>
+		<distributionRule mapField="DST_RULE_CD"/>
+		<characteristicType mapField="CHAR_TYPE_CD"/>
+		<characteristicValue mapField="CHAR_VAL"/>
+		<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+		<characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
+		<characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+		<characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+		<characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
+		<characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+		<ruleValueInfo mapField="RULE_VALUE_INFO"/>
+		<paymentAmount2 dataType="money" mapField="PAY_AMT"/>
+		<tenderType3 mapField="TENDER_TYPE_CD"/>
+		<checkNumber3 mapField="CHECK_NBR"/>
+		<customerId2 mapField="CUST_ID"/>
+		<micrId2 mapField="MICR_ID"/>
+		<encryptedMicrId2 mapField="ENCR_MICR_ID"/>
+		<hashMicrId2 mapField="HASH_MICR_ID"/>
+		<name2 mapField="NAME1"/>
+		<externalReferenceId2 mapField="EXT_REFERENCE_ID"/>
+		<accountId2 mapField="ACCT_ID"/>
+		<isPayorAccountCashOnly2 dataType="boolean" mapField="ACCT_CASH_ONLY_SW"/>
+		<hasCashTendered2 dataType="boolean" mapField="CASH_TNDR_SW"/>
+		<hasGoToClicked2 dataType="boolean" mapField="GOTO_CLICKED_SW"/>
+		<commentSw dataType="boolean" mapField="COMMENT_SW"/>
+		<searchNavigationKey mapField="SRCH_NAV_KEY"/>
+		<navigationOption mapField="NAV_OPT_CD"/>
+		<table mapField="TBL_NAME"/>
+		<infoProgram mapField="INFO_PRG"/>
+		<characteristicType2 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+		<characteristicValueDescription mapField="CHAR_VAL_DESCR"/>
+		<characteristicValueForeignKeys mapField="CHAR_VAL_FK_STR"/>
+		<characteristicValueForeignKeyInformation mapField="CHAR_VAL_FK_INFO"/>
+		<isCompoundPrimaryKey dataType="boolean" mapField="COMP_PK_SW"/>
+		<charateristicValue mapField="COMP_PK_STR"/>
+		<characteristicType3 mapField="CHAR_TYPE_DESCR"/>
+	</quickAddPay>
+</schema>

@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<input type="group">
+		<option dataType="lookup" private="true" default="C1NP" mapField="RE_HELPER_OPT_FLG" lookup="RE_HELPER_OPT_FLG"/>
+		<rateSchedule type="group">
+			<id required="true" mapField="RS_CD"/>
+		</rateSchedule>
+		<consumptionDays required="true" dataType="number" mapField="CONSUMPTION_DAYS"/>
+	</input>
+	<output type="group">
+		<rateEngineHelperData type="group">
+			<decimalPositions dataType="number" mapField="DECIMAL_POSITIONS"/>
+			<measuresPeak dataType="boolean" mapField="MSR_PEAK_QTY_SW"/>
+			<noneFound mdField="F1_VALID_SW" dataType="boolean" mapField="NONE_FOUND_SW"/>
+			<hasSameTargetUomTouSqi mdField="F1_VALID_SW" dataType="boolean" mapField="HAS_SAME_TGT_UOM_TOU_SQI"/>
+			<sqAccumulated mdField="F1_VALID_SW" dataType="boolean" mapField="SQ_ACCUMULATED_SW"/>
+			<sqValue mdField="BILL_SQ" dataType="number" mapField="SQ_VALUE"/>
+			<amount dataType="number" mapField="CALC_VAL"/>
+			<auditAmount mdField="AUDIT_CALC_AMT" dataType="number" mapField="AUDIT_AMT"/>
+			<uom type="group">
+				<id mapField="UOM_CD"/>
+			</uom>
+			<tou type="group">
+				<id mapField="TOU_CD"/>
+			</tou>
+			<sqi type="group">
+				<id mapField="SQI_CD"/>
+			</sqi>
+			<frequency type="group">
+				<id mapField="FREQ_CD"/>
+			</frequency>
+			<minOffSetDays dataType="number" mapField="MIN_DAYS_OFFSET"/>
+			<maxOffSetDays dataType="number" mapField="MAX_DAYS_OFFSET"/>
+			<numberOfPeriodsInAYear dataType="number" mapField="PERIODS_PER_YEAR"/>
+			<normalBillDays mdField="F1_DAYS" dataType="number" mapField="NORM_BILL_DAYS"/>
+			<minBillDays mdField="F1_DAYS" dataType="number" mapField="MIN_BILL_DAYS"/>
+			<maxBillDays mdField="F1_DAYS" dataType="number" mapField="MAX_BILL_DAYS"/>
+			<isWithinNonProrationWindow mdField="F1_VALID_SW" dataType="boolean" mapField="IN_NON_PROR_WINDOW_SW"/>
+		</rateEngineHelperData>
+	</output>
+</schema>

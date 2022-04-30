@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<webSvcName required="true" isPrimeKey="true" mapField="WEB_SVC_NAME"/>
+	<description required="true" mapField="DESCR"/>
+	<longDescription mapField="DESCRLONG"/>
+	<bo suppress="input" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<boStatus suppress="input" default="PENDING" mapField="BO_STATUS_CD"/>
+	<statusDateTime suppress="true" dataType="dateTime" mapField="STATUS_UPD_DTTM"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<wsdlUrl mapField="WSDL_URL"/>
+	<wsdlServiceName mapField="WSDL_SVC_NAME"/>
+	<wsdlSource type="raw" mdField="WSDL_SOURCE" mapXML="WSDL_SOURCE"/>
+	<wsdlPort mapField="WSDL_PORT"/>
+	<url mapField="URL"/>
+	<security dataType="lookup" mapField="WEB_SVC_SECURITY_TYPE_FLG" lookup="WEB_SVC_SECURITY_TYPE_FLG"/>
+	<operations suppress="true" type="list" mapChild="F1_WEB_SVC_OPERATIONS">
+		<active dataType="lookup" default="F1IA" mapField="OPERATION_ACTIVE_FLG" lookup="OPERATION_ACTIVE_FLG"/>
+		<name mapField="OPERATION_NAME"/>
+		<operation mapField="WSDL_OPERATION_NAME"/>
+		<requestElement mapField="REQUEST_ELEMENT"/>
+		<responseElement mapField="RESPONSE_ELEMENT"/>
+		<requestDA fkRef="F1-DASRC" mapField="REQUEST_DATA_AREA_CD"/>
+		<responseDA fkRef="F1-DASRC" mapField="RESPONSE_DATA_AREA_CD"/>
+	</operations>
+</schema>

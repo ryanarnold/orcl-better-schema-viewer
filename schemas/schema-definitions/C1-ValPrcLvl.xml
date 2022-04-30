@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<precisionLevel mdField="RND_PRECISION_LVL" dataType="number"/>
+	<fcpoDetails type="group">
+		<isFcpo mdField="CALC_ONLY_FLG" required="true" dataType="lookup" default="C1NO" mapXML="BO_DATA_AREA" lookup="CALC_ONLY_FLG"/>
+		<shouldCreateBillLine mdField="CRE_BILL_LN_FLG" required="true" dataType="lookup" default="C1NO" mapXML="BO_DATA_AREA" lookup="CRE_BILL_LN_FLG"/>
+		<fcpoRetentionRule mdField="FCPO_RETN_RULE_FLG" dataType="lookup" default="C1RT" mapXML="BO_DATA_AREA" lookup="FCPO_RETN_RULE_FLG"/>
+	</fcpoDetails>
+</schema>

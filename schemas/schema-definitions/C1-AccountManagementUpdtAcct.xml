@@ -1,0 +1,288 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <msgStr/>
+  <templateAccountId mdField="ACCT_ID" fkRef="ACCT"/>
+  <useAddressSourceACOV mdField="F1_YESNO_FLG"/>
+  <useTemplatePremise mdField="F1_YESNO_FLG"/>
+  <templatePremiseId mdField="PREM_ID" fkRef="PREM"/>
+  <template type="group">
+    <msgStr/>
+    <firstRow dataType="number"/>
+    <lastRow dataType="number"/>
+    <useTemplateAccount mdField="F1_YESNO_FLG"/>
+    <premiseId mdField="PREM_ID" fkRef="PREM"/>
+    <billAddressSource mdField="BILL_ADDR_SRCE_FLG" dataType="lookup" lookup="BILL_ADDR_SRCE_FLG"/>
+    <cancelAutopay mdField="C1_CANCEL_APAY_SW" dataType="boolean"/>
+    <accountId fkRef="ACCT" mapField="ACCT_ID"/>
+    <setupDate dataType="date" mapField="SETUP_DT"/>
+    <billCycle mapField="BILL_CYC_CD"/>
+    <accountManagementGroup mapField="ACCT_MGMT_GRP_CD"/>
+    <shouldProtectBillCycle dataType="boolean" mapField="PROTECT_CYC_SW"/>
+    <mailingPremise fkRef="PREM" mapField="MAILING_PREM_ID"/>
+    <shouldProtectMailingPremise dataType="boolean" mapField="PROTECT_PREM_SW"/>
+    <customerClass mapField="CUST_CL_CD"/>
+    <version dataType="number" mapField="VERSION"/>
+    <autopay type="group">
+      <accountAutopay type="list" mapList="ACCT_APAY">
+        <accountAutoPayId mapField="ACCT_APAY_ID"/>
+        <accountId mapField="ACCT_ID"/>
+        <startDate dataType="date" mapField="START_DT"/>
+        <endDate dataType="date" mapField="END_DT"/>
+        <autopaySource fkRef="APAY SRC" mapField="APAY_SRC_CD"/>
+        <externalAccountId mapField="EXT_ACCT_ID"/>
+        <encrExternalAccountId mapField="ENCR_EXT_ACCT_ID"/>
+        <expireDate dataType="date" mapField="EXPIRE_DT"/>
+        <expireMonth mapField="EXP_MONTH"/>
+        <expireYear mapField="EXP_YEAR"/>
+        <entityName mapField="ENTITY_NAME"/>
+        <comments mapField="COMMENTS"/>
+        <version dataType="number" mapField="VERSION"/>
+        <autopayMaxWithdrawalAmount dataType="money" mapField="APAY_MAX_WDRWL_AMT"/>
+        <autoPayMethod dataType="lookup" mapField="APAY_METHOD_FLG" lookup="APAY_METHOD_FLG"/>
+      </accountAutopay>
+    </autopay>
+    <characteristic type="group">
+      <accountCharacteristic type="list" mapList="ACCT_CHAR">
+        <accountId mapField="ACCT_ID"/>
+        <characteristicType fkRef="CHAR_TYP" mapField="CHAR_TYPE_CD"/>
+        <effectiveDate dataType="date" mapField="EFFDT"/>
+        <characteristicValue mapField="CHAR_VAL"/>
+        <adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+        <version dataType="number" mapField="VERSION"/>
+        <characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
+        <characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+        <characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+        <characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
+        <characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+        <searchCharacteristicValue mapField="SRCH_CHAR_VAL"/>
+      </accountCharacteristic>
+    </characteristic>
+    <person type="group">
+      <accountPerson type="list" mapList="ACCT_PER">
+        <accountId mapField="ACCT_ID"/>
+        <billAddressSource dataType="lookup" mapField="BILL_ADDR_SRCE_FLG" lookup="BILL_ADDR_SRCE_FLG"/>
+        <personId mapField="PER_ID"/>
+        <isMainCustomer dataType="boolean" mapField="MAIN_CUST_SW"/>
+        <version dataType="number" mapField="VERSION"/>
+        <address type="group">
+          <personAddressOverride type="list" mapList="PER_ADDR_OVR">
+            <accountId mapField="ACCT_ID"/>
+            <personId mapField="PER_ID"/>
+            <address1 mapField="ADDRESS1"/>
+            <address2 mapField="ADDRESS2"/>
+            <address3 mapField="ADDRESS3"/>
+            <address4 mapField="ADDRESS4"/>
+            <city mapField="CITY"/>
+            <streetNumber1 mapField="NUM1"/>
+            <streetNumber2 mapField="NUM2"/>
+            <county mapField="COUNTY"/>
+            <postal mapField="POSTAL"/>
+            <houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+            <taxVendorGeographicalCode mapField="GEO_CODE"/>
+            <isInCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+            <state mapField="STATE"/>
+            <country mapField="COUNTRY"/>
+            <version dataType="number" mapField="VERSION"/>
+          </personAddressOverride>
+        </address>
+      </accountPerson>
+    </person>
+    <addressGroup type="group">
+      <country mdField="COUNTRY"/>
+      <address1 mdField="ADDRESS1"/>
+      <address2 mdField="ADDRESS2"/>
+      <address3 mdField="ADDRESS3"/>
+      <address4 mdField="ADDRESS4"/>
+      <houseType mdField="HOUSE_TYPE" dataType="lookup" lookup="HOUSE_TYPE"/>
+      <city mdField="CITY"/>
+      <county mdField="COUNTY"/>
+      <state mdField="STATE"/>
+      <postal mdField="POSTAL"/>
+      <num1 mdField="NUM1"/>
+      <num2 mdField="NUM2"/>
+      <geoCode mdField="GEO_CODE"/>
+      <inCityLimit mdField="IN_CITY_LIMIT" dataType="boolean"/>
+      <countryDefault type="group">
+        <country mapField="COUNTRY"/>
+        <address1Available dataType="boolean" mapField="ADDR1_AVAIL"/>
+        <address2Available dataType="boolean" mapField="ADDR2_AVAIL"/>
+        <address3Available dataType="boolean" mapField="ADDR3_AVAIL"/>
+        <address4Available dataType="boolean" mapField="ADDR4_AVAIL"/>
+        <cityAvailable dataType="boolean" mapField="CITY_AVAIL"/>
+        <version dataType="number" mapField="VERSION"/>
+        <number1Available dataType="boolean" mapField="NUM1_AVAIL"/>
+        <number2Available dataType="boolean" mapField="NUM2_AVAIL"/>
+        <houseTypeAvailable dataType="boolean" mapField="HOUSE_TYPE_AVAIL"/>
+        <countyAvailable dataType="boolean" mapField="COUNTY_AVAIL"/>
+        <stateAvailable dataType="boolean" mapField="STATE_AVAIL"/>
+        <postalAvailable dataType="boolean" mapField="POSTAL_AVAIL"/>
+        <inCityLimitAvailable dataType="boolean" mapField="IN_CITY_LIM_AVAIL"/>
+        <geoCodeAvailable dataType="boolean" mapField="GEO_CODE_AVAIL"/>
+        <description mapField="DESCR"/>
+        <address1Label mapField="ADDR1_LBL"/>
+        <address2Label mapField="ADDR2_LBL"/>
+        <address3Label mapField="ADDR3_LBL"/>
+        <address4Label mapField="ADDR4_LBL"/>
+        <cityLabel mapField="CITY_LBL"/>
+        <number1Label mapField="NUM1_LBL"/>
+        <number2Label mapField="NUM2_LBL"/>
+        <houseTypeLabel mapField="HOUSE_TYPE_LBL"/>
+        <countyLabel mapField="COUNTY_LBL"/>
+        <stateLabel mapField="STATE_LBL"/>
+        <postalLabel mapField="POSTAL_LBL"/>
+        <inCityLimitLabel mapField="IN_CITY_LIM_LBL"/>
+        <geographicCodeLabel mapField="GEO_CODE_LBL"/>
+        <states type="group">
+          <statesList type="list" mapChild="CI_STATE">
+            <state mapField="STATE"/>
+            <description mapField="DESCR"/>
+          </statesList>
+        </states>
+      </countryDefault>
+    </addressGroup>
+    <postalDefault type="group">
+      <zone private="true" default="C1-RETPOSTAL" mapField="ZONE_CD"/>
+      <country mdField="COUNTRY" required="true" mapField="F1_VALUE"/>
+      <postal mdField="POSTAL" required="true" mapField="F2_VALUE"/>
+      <rowCount dataType="number" mapField="ROW_CNT"/>
+      <results type="list" mapList="DE">
+        <country mdField="COUNTRY" mapField="COL_VALUE">
+          <row mapList="DE_VAL">
+            <SEQNO is="1"/>
+          </row>
+        </country>
+        <postal mdField="POSTAL_CD_FROM" mapField="COL_VALUE">
+          <row mapList="DE_VAL">
+            <SEQNO is="2"/>
+          </row>
+        </postal>
+        <city mdField="CITY" mapField="COL_VALUE">
+          <row mapList="DE_VAL">
+            <SEQNO is="3"/>
+          </row>
+        </city>
+        <county mdField="COUNTY" mapField="COL_VALUE">
+          <row mapList="DE_VAL">
+            <SEQNO is="4"/>
+          </row>
+        </county>
+        <state mdField="STATE" mapField="COL_VALUE">
+          <row mapList="DE_VAL">
+            <SEQNO is="5"/>
+          </row>
+        </state>
+        <trendArea mdField="TREND_AREA_CD" mapField="COL_VALUE">
+          <row mapList="DE_VAL">
+            <SEQNO is="6"/>
+          </row>
+        </trendArea>
+        <cisDivision mdField="CIS_DIVISION" mapField="COL_VALUE">
+          <row mapList="DE_VAL">
+            <SEQNO is="7"/>
+          </row>
+        </cisDivision>
+        <timeZone mdField="TIME_ZONE_CD" mapField="COL_VALUE">
+          <row mapList="DE_VAL">
+            <SEQNO is="8"/>
+          </row>
+        </timeZone>
+      </results>
+    </postalDefault>
+  </template>
+  <workGroup type="group">
+    <charEntityValue dataType="lookup" mapField="CHAR_ENTITY_FLG" lookup="CHAR_ENTITY_FLG"/>
+    <typeOfCharSearch dataType="lookup" mapField="TYPE_OF_CHAR_SRCH_OPT" lookup="TYPE_OF_CHAR_SRCH_OPT"/>
+    <characteristics type="group">
+      <characteristicsList type="list">
+        <characteristicType fkRef="CHAR_TYP" mapField="CHAR_TYPE_CD"/>
+        <searchCharValue mdField="SRCH_CHAR_VAL"/>
+        <isCharValueSearchAllowed mdField="SEARCH_FLG" dataType="lookup" lookup="SEARCH_FLG"/>
+        <charEntityValue dataType="lookup" mapField="CHAR_ENTITY_FLG" lookup="CHAR_ENTITY_FLG"/>
+        <characteristicValue mapField="CHAR_VAL"/>
+        <adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+        <characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
+        <characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+        <characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+        <characteristicValueFK4 mapField="CHAR_VAL_FK4"/>
+        <characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+        <typeOfCharacteristic dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+        <charValInfo mapField="CHAR_VAL_FK_INFO"/>
+      </characteristicsList>
+    </characteristics>
+    <charTypeInfo type="group">
+      <input type="group">
+        <characteristicType mapField="CHAR_TYPE_CD"/>
+        <characteristicValue mapField="CHAR_VAL"/>
+        <adhocCharValue mapField="ADHOC_CHAR_VAL"/>
+        <fkValue1 mapField="CHAR_VAL_FK1"/>
+        <fkValue2 mapField="CHAR_VAL_FK2"/>
+        <fkValue3 mapField="CHAR_VAL_FK3"/>
+        <fkValue4 mapField="CHAR_VAL_FK4"/>
+        <fkValue5 mapField="CHAR_VAL_FK5"/>
+      </input>
+      <output type="group">
+        <charTypeFlg dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+        <charValInfo mapField="CHAR_VAL_FK_INFO"/>
+        <searchZone mapField="ZONE_CD"/>
+        <navOption mapField="NAV_OPT_CD"/>
+        <pkFieldsList type="list" mapList="PK_FIELD_LIST">
+          <pkField mapField="PK_VAL"/>
+        </pkFieldsList>
+      </output>
+    </charTypeInfo>
+    <isPaymentAdviceFunctionalitySupported type="group">
+      <featureName mapField="WFM_NAME"/>
+      <featureType dataType="lookup" mapField="EXT_SYS_TYP_FLG" lookup="EXT_SYS_TYP_FLG"/>
+      <optionType mapField="INPUT_OPT_TYPE"/>
+      <options type="list" mapList="FC_OPT">
+        <optionType mapField="EXT_OPT_TYPE"/>
+        <sequence dataType="number" mapField="SEQ_NUM"/>
+        <optionValue mapField="WFM_OPT_VAL"/>
+      </options>
+    </isPaymentAdviceFunctionalitySupported>
+  </workGroup>
+  <returnMessage type="group">
+    <input type="group">
+      <messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+      <messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+      <language mapField="LANGUAGE_CD"/>
+      <messageParmCollCount mdField="MESSAGE_PARM_CNT" dataType="number" mapField="MESSAGE_PARM_COLL_CNT"/>
+      <messageParms type="group">
+        <messageParm1 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_1"/>
+        <messageParm2 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_2"/>
+        <messageParm3 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_3"/>
+        <messageParm4 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_4"/>
+        <messageParm5 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_5"/>
+        <messageParm6 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_6"/>
+        <messageParm7 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_7"/>
+        <messageParm8 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_8"/>
+        <messageParm9 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_9"/>
+      </messageParms>
+      <messageParmTypes type="group">
+        <messageParmType1 mapField="MSG_PARM_TYP_FLG_1"/>
+        <messageParmType2 mapField="MSG_PARM_TYP_FLG_2"/>
+        <messageParmType3 mapField="MSG_PARM_TYP_FLG_3"/>
+        <messageParmType4 mapField="MSG_PARM_TYP_FLG_4"/>
+        <messageParmType5 mapField="MSG_PARM_TYP_FLG_5"/>
+        <messageParmType6 mapField="MSG_PARM_TYP_FLG_6"/>
+        <messageParmType7 mapField="MSG_PARM_TYP_FLG_7"/>
+        <messageParmType8 mapField="MSG_PARM_TYP_FLG_8"/>
+        <messageParmType9 mapField="MSG_PARM_TYP_FLG_9"/>
+      </messageParmTypes>
+    </input>
+    <output type="group">
+      <expandedMessage mapField="EXP_MSG"/>
+      <longDescription mapField="DESCRLONG"/>
+    </output>
+  </returnMessage>
+  <triggerError type="group">
+    <errorMessageCategory/>
+    <errorMessageNumber/>
+    <errorMessageText/>
+    <errorMessageLongText/>
+    <errorMessageCategory2/>
+    <errorMessageNumber2/>
+    <errorMessageText2/>
+    <errorMessageLongText2/>
+  </triggerError>
+</schema>

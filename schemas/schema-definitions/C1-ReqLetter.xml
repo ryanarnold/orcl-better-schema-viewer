@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<input type="group">
+		<personId/>
+		<accountId/>
+		<activityRequestId/>
+		<customerContactClass/>
+		<customerContactType/>
+	</input>
+</schema>

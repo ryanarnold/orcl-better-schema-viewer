@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<saRelationshipId mapField="SA_REL_ID"/>
+	<accountId mapField="ACCT_ID"/>
+	<acctNameInfo mapField="ACCT_NAME_INFO"/>
+	<saInformation mapField="SA_INFO"/>
+	<premiseId mapField="CHAR_PREM_ID"/>
+	<premiseInfo mapField="PREM_INFO"/>
+	<saRelTypeInfo mapField="SA_REL_TYPE_INFO"/>
+	<serviceProviderInformation mapField="SPR_INFO"/>
+	<mrCycInfo mapField="MR_CYC_INFO"/>
+	<billingRelationship dataType="lookup" mapField="BILL_REL_FLG" lookup="BILL_REL_FLG"/>
+	<overridesMRCycle dataType="boolean" mapField="OVRD_MR_CYC_SW"/>
+	<status dataType="lookup" mapField="SA_STATUS_FLG" lookup="SA_STATUS_FLG"/>
+	<numberOfSubSA dataType="number" mapField="SA_CNT"/>
+	<numberOfNonCanceledSubsa dataType="number" mapField="NCAN_SA_CNT"/>
+	<saRelInfo mapField="SA_REL_INFO"/>
+	<saGapsAllwd mapField="SA_GAPS_ALLWD"/>
+	<canActivate dataType="boolean" mapField="ACTIVATE_SW"/>
+	<isCancel dataType="boolean" mapField="CANCEL_SW"/>
+	<canCreateSubSA dataType="boolean" mapField="CREATE_SUB_SA_SW"/>
+	<division mapField="CIS_DIVISION"/>
+	<saType mapField="SA_TYPE_CD"/>
+	<subCISDivision mapField="SUBSA_CIS_DIVISION"/>
+	<subSAType mapField="SUBSA_SA_TYPE_CD"/>
+	<startOption mapField="START_OPT_CD"/>
+	<subSAType2 dataType="lookup" mapField="SUBSA_TYPE_FLG" lookup="SUBSA_TYPE_FLG"/>
+	<creationAllowedWhenSubSasExist dataType="boolean" mapField="EVEN_IF_SUB_SA_EXISTS_SW"/>
+	<isStartOptionRequired dataType="boolean" mapField="START_OPT_REQ_SW"/>
+	<startOptEffdt mapField="START_OPT_EFFDT"/>
+	<subsaDivInfo mapField="SUBSA_DIV_INFO"/>
+	<subsaTypeInfo mapField="SUBSA_TYPE_INFO"/>
+	<startOptInfo mapField="START_OPT_INFO"/>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<meterReadCycle mapField="MR_CYC_CD"/>
+	<serviceProvider mapField="SPR_CD"/>
+	<serviceAgreement mapField="SA_ID"/>
+	<saRelationshipType mapField="SA_REL_TYPE_CD"/>
+	<effectiveDate dataType="date" mapField="EFFDT"/>
+	<saRelationshipStatus dataType="lookup" mapField="SA_REL_STATUS_FLG" lookup="SA_REL_STATUS_FLG"/>
+	<accountNumberInProviderCIS mapField="SA_EXT_REF_ID"/>
+	<version dataType="number" mapField="VERSION"/>
+	<usage dataType="lookup" mapField="SA_REL_USAGE_FLG" lookup="SA_REL_USAGE_FLG"/>
+	<subSa type="list" mapList="SUB_SA">
+		<serviceAgreement2 mapField="SA_ID"/>
+		<subSaInfo mapField="SUB_SA_INFO"/>
+	</subSa>
+</schema>

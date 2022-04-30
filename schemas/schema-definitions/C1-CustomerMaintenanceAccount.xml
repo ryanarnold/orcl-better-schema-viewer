@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<accountId fkRef="ACCT" mapField="ACCT_ID"/>
+	<setupDate dataType="date" default="%CurrentDate" mapField="SETUP_DT"/>
+	<cisDivision mapField="CIS_DIVISION"/>
+	<currency mapField="CURRENCY_CD"/>
+	<customerClass mapField="CUST_CL_CD"/>
+	<externalAccountId mdField="C1_SIEBEL_EXT_ACCT_ID" mapField="ADHOC_CHAR_VAL">
+		<row mapChild="CI_ACCT_CHAR">
+			<CHAR_TYPE_CD is="C1-EXTID"/>
+			<EFFDT default="%CurrentDate"/>
+		</row>
+	</externalAccountId>
+	<externalAccountNumber mdField="C1_EXT_ACCT_NBR" mapField="ADHOC_CHAR_VAL">
+		<row mapChild="CI_ACCT_CHAR">
+			<CHAR_TYPE_CD is="C1-EXACN"/>
+			<EFFDT default="%CurrentDate"/>
+		</row>
+	</externalAccountNumber>
+	<externalMasterAccountId mdField="C1_EXT_MST_ACCT_ID" mapField="ADHOC_CHAR_VAL">
+		<row mapChild="CI_ACCT_CHAR">
+			<CHAR_TYPE_CD is="C1-MACID"/>
+			<EFFDT default="%CurrentDate"/>
+		</row>
+	</externalMasterAccountId>
+	<autopayDetails type="list" mapChild="CI_ACCT_APAY">
+		<accountAutoPayId mapField="ACCT_APAY_ID"/>
+		<startDate dataType="date" mapField="START_DT"/>
+		<endDate dataType="date" mapField="END_DT"/>
+		<expireDate dataType="date" mapField="EXPIRE_DT"/>
+		<autopaySource mapField="APAY_SRC_CD"/>
+		<externalAccountId mapField="EXT_ACCT_ID"/>
+		<encrExternalAccountId mapField="ENCR_EXT_ACCT_ID"/>
+		<autopayMaxWithdrawalAmount dataType="money" mapField="APAY_MAX_WDRWL_AMT"/>
+		<autopayMethod dataType="lookup" mapField="APAY_METHOD_FLG" lookup="APAY_METHOD_FLG"/>
+		<name mapField="ENTITY_NAME"/>
+	</autopayDetails>
+	<contactDetails type="group">
+		<contacts type="list" mapChild="CI_ACCT_PER">
+			<personId mapField="PER_ID"/>
+			<isMainCustomer dataType="boolean" mapField="MAIN_CUST_SW"/>
+			<billAddressSource dataType="lookup" mapField="BILL_ADDR_SRCE_FLG" lookup="BILL_ADDR_SRCE_FLG"/>
+			<accountRelationshipType mapField="ACCT_REL_TYPE_CD"/>
+			<isFinanciallyResponsible dataType="boolean" mapField="FIN_RESP_SW"/>
+			<isThirdPartyGuarantor dataType="boolean" mapField="THRD_PTY_SW"/>
+			<shouldReceiveCopyOfBill dataType="boolean" mapField="RECEIVE_COPY_SW"/>
+			<billRouteType mapField="BILL_RTE_TYPE_CD"/>
+			<billFormat dataType="lookup" mapField="BILL_FORMAT_FLG" lookup="BILL_FORMAT_FLG"/>
+			<numberOfBillCopies dataType="number" mapField="NBR_BILL_COPIES"/>
+			<receivesNotification dataType="boolean" mapField="NOTIFY_SW"/>
+			<personAddressOverride type="list" mapChild="CI_PER_ADDR_OVRD">
+				<personId mapField="PER_ID"/>
+				<country mapField="COUNTRY"/>
+				<addressLine1 mapField="ADDRESS1"/>
+				<addressLine2 mapField="ADDRESS2"/>
+				<addressLine3 mapField="ADDRESS3"/>
+				<addressLine4 mapField="ADDRESS4"/>
+				<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+				<number1 mapField="NUM1"/>
+				<number2 mapField="NUM2"/>
+				<inCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+				<city mapField="CITY"/>
+				<geographic mapField="GEO_CODE"/>
+				<county mapField="COUNTY"/>
+				<state mapField="STATE"/>
+				<postal mapField="POSTAL"/>
+			</personAddressOverride>
+		</contacts>
+	</contactDetails>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+</schema>

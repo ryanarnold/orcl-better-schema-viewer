@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<calcGroup suppress="input" required="true" isPrimeKey="true" fkRef="C1-CALGR" mapField="CALC_GRP_CD"/>
+	<calcRule required="true" isPrimeKey="true" mapField="CALC_RULE_CD"/>
+	<executionSequence required="true" dataType="number" mapField="CR_EXEC_SEQ"/>
+	<bo suppress="input" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<description required="true" mapField="DESCR100"/>
+	<longDescription mapField="DESCRLONG"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<stepAlgorithm suppress="true" fkRef="ALG" mapField="CALC_RULE_STEP_ALG_CD"/>
+	<valueAlgorithm suppress="true" fkRef="ALG" mapField="CALC_RULE_VAL_ALG_CD"/>
+	<itemType suppress="true" fkRef="C1-ITMTY" mapField="ITEM_TYPE_CD"/>
+	<billFactor suppress="true" fkRef="C1-BFACT" mapField="BF_CD"/>
+	<descriptionOnBillDetails type="group">
+		<descriptionOnBill mapField="DESCR_TMPLT"/>
+		<shouldPrintLine mdField="PRT_FLG" required="true" dataType="lookup" default="C1YE" mapXML="BO_DATA_AREA" lookup="PRT_FLG"/>
+		<shouldPrintLineIfZero mdField="PRT_IF_ZERO_FLG" required="true" dataType="lookup" default="C1NO" mapXML="BO_DATA_AREA" lookup="PRT_IF_ZERO_FLG"/>
+	</descriptionOnBillDetails>
+	<roundingDetails type="group">
+		<roundingMethod mdField="RND_TYPE_FLG" required="true" dataType="lookup" default="RDNR" mapXML="BO_DATA_AREA" lookup="RND_TYPE_FLG"/>
+		<precision mdField="RND_PRECISION_LVL" required="true" dataType="number" default=".01" mapXML="BO_DATA_AREA"/>
+	</roundingDetails>
+	<fcpoDetails type="group">
+		<isFcpo mdField="CALC_ONLY_FLG" required="true" dataType="lookup" default="C1NO" mapXML="BO_DATA_AREA" lookup="CALC_ONLY_FLG"/>
+		<shouldCreateBillLine mdField="CRE_BILL_LN_FLG" required="true" dataType="lookup" default="C1NO" mapXML="BO_DATA_AREA" lookup="CRE_BILL_LN_FLG"/>
+		<fcpoRetentionRule mdField="FCPO_RETN_RULE_FLG" dataType="lookup" default="C1RT" mapXML="BO_DATA_AREA" lookup="FCPO_RETN_RULE_FLG"/>
+	</fcpoDetails>
+	<memberCategory type="group">
+		<memberCategoryList type="list" mapChild="C1_CALC_RULE_MBR_CAT">
+			<calcLineCategoryType fkRef="C1-CLCAT" mapField="CL_CAT_TYPE_CD"/>
+			<calcLineCategoryValue mapField="CL_CAT_VAL"/>
+		</memberCategoryList>
+	</memberCategory>
+	<calcRules type="group" mapXML="BO_DATA_AREA">
+		<calcRulesList type="list">
+			<calcGroup mdField="CALC_GRP_CD" required="true" defaultRef="../../calcGroup"/>
+			<calcRule mdField="CALC_RULE_CD" required="true" isPrimeKey="true"/>
+		</calcRulesList>
+	</calcRules>
+	<characteristics suppress="true" type="group">
+		<characteristicsList type="list" mapChild="C1_CALC_RULE_CHAR">
+			<characteristicType fkRef="CHAR_TYP" mapField="CHAR_TYPE_CD"/>
+			<characteristicValue mapField="CHAR_VAL"/>
+			<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+		</characteristicsList>
+	</characteristics>
+</schema>

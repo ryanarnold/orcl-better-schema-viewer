@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <printerKey default="0100"/>
+  <sortKey type="group">
+    <billPrintIntercept mapField="USER_ID"/>
+    <billId mapField="BILL_ID"/>
+    <sequence mdField="BILL_PRT_SEQ_NO" dataType="number"/>
+    <copyNbr mdField="NBR_BILL_COPIES" dataType="number"/>
+    <billRecGrpSeq/>
+    <recTypeNbr/>
+    <premiseSeq type="group">
+      <state mapField="STATE"/>
+      <city mapField="CITY"/>
+      <address1 mapField="ADDRESS1"/>
+      <premiseId mapField="PREM_ID"/>
+    </premiseSeq>
+    <nonPremSaSeq type="group">
+      <saPrtPriority dataType="lookup" mapField="BILL_PRT_PRIO_FLG" lookup="BILL_PRT_PRIO_FLG"/>
+      <saId mapField="SA_ID"/>
+      <saRecGrpSeq/>
+      <bsegAdjDetails type="group">
+        <bsegAdjDate mdField="ADJ_DT" dataType="date"/>
+        <bsegAdjId mdField="ADJ_ID"/>
+        <bsegRecGrpSeq/>
+        <calcHdrLineDetails type="group">
+          <hdrSeqBsegMsgsNbr/>
+          <calcHdrRecGrpSeq/>
+          <calcLineSeq/>
+        </calcHdrLineDetails>
+      </bsegAdjDetails>
+    </nonPremSaSeq>
+    <premiseRecordGroup type="group">
+      <premRecGrpSeq/>
+      <saDetails type="group">
+        <saPrtPriority dataType="lookup" mapField="BILL_PRT_PRIO_FLG" lookup="BILL_PRT_PRIO_FLG"/>
+        <saId mdField="SA_ID"/>
+        <saRecGrpSeq/>
+        <bsegAdjDetails type="group">
+          <bsegAdjDateHistNbr/>
+          <bsegAdjId/>
+          <bsegRecGrpSeq/>
+          <calcHdrLineDetails type="group">
+            <hdrSeqBsegNbr/>
+            <calcHdrRecGrpSeq/>
+            <calcLineSeq/>
+          </calcHdrLineDetails>
+        </bsegAdjDetails>
+      </saDetails>
+    </premiseRecordGroup>
+  </sortKey>
+  <mailingKey mapField="POSTAL"/>
+  <billId mapField="BILL_ID"/>
+  <accountId mapField="ACCT_ID"/>
+  <billDate dataType="date" mapField="BILL_DT"/>
+  <dueDate dataType="date" mapField="DUE_DT"/>
+  <copyNbr dataType="number" mapField="COPIES_CNT"/>
+  <nbrBillCopies dataType="number" mapField="NBR_BILL_COPIES"/>
+  <billPrtIntercept mapField="USER_ID"/>
+  <billFormat dataType="lookup" mapField="BILL_FORMAT_FLG" lookup="BILL_FORMAT_FLG"/>
+  <reprint dataType="boolean" mapField="REPRINT_SW"/>
+  <cashOnly dataType="boolean" mapField="ACCT_CASH_ONLY_SW"/>
+  <currBal mdField="CUR_AMT" dataType="money"/>
+  <currChgAmt mdField="CUR_AMT" dataType="money"/>
+  <currCorrAmt mdField="CUR_AMT" dataType="money"/>
+  <currAdjAmt mdField="CUR_AMT" dataType="money"/>
+  <currPayAmt mdField="CUR_AMT" dataType="money"/>
+  <currPrevBal mdField="CUR_AMT" dataType="money"/>
+  <totBal mdField="TOT_AMT" dataType="money"/>
+  <totChgAmt mdField="TOT_AMT" dataType="money"/>
+  <totCorrAmt mdField="TOT_AMT" dataType="money"/>
+  <totAdjAmt mdField="TOT_AMT" dataType="money"/>
+  <totPayAmt mdField="TOT_AMT" dataType="money"/>
+  <totPrevBal mdField="TOT_AMT" dataType="money"/>
+  <acctCurrency mapField="CURRENCY_CD"/>
+  <delinquentAmt dataType="money" mapField="DELINQUENT_AMT"/>
+  <custPOId mapField="CUST_PO_ID"/>
+  <acctEntityName mapField="ENTITY_NAME"/>
+  <entityName mapField="ENTITY_NAME"/>
+  <addressRec type="group">
+    <country mapField="COUNTRY"/>
+    <addressLine1 mapField="ADDRESS1"/>
+    <addressLine2 mapField="ADDRESS2"/>
+    <addressLine3 mapField="ADDRESS3"/>
+    <addressLine4 mapField="ADDRESS4"/>
+    <houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+    <number1 mapField="NUM1"/>
+    <number2 mapField="NUM2"/>
+    <inCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+    <city mapField="CITY"/>
+    <geographic mapField="GEO_CODE"/>
+    <county mapField="COUNTY"/>
+    <state mapField="STATE"/>
+    <postal mapField="POSTAL"/>
+  </addressRec>
+  <finalBill/>
+  <apayExtractDt dataType="date" mapField="SCHED_EXTRACT_DT"/>
+  <entityName1 mapField="ENTITY_NAME1"/>
+  <entityName2 mapField="ENTITY_NAME2"/>
+  <entityName3 mapField="ENTITY_NAME3"/>
+  <acctCurrencySym mapField="CUR_SYMBOL"/>
+</schema>

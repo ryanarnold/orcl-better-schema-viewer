@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<schema name="schema" fwRel="2">
+	<personId mapField="PER_ID"/>
+	<personOrBusiness dataType="lookup" mapField="PER_OR_BUS_FLG" lookup="PER_OR_BUS_FLG"/>
+	<email mapField="EMAILID"/>
+	<lifeSupport dataType="lookup" mapField="LS_SL_FLG" lookup="LS_SL_FLG"/>
+	<lifeSupportDescription mapField="LS_SL_DESCR"/>
+	<language mapField="LANGUAGE_CD"/>
+	<personVersion dataType="number" mapField="VERSION"/>
+	<personIdDetails type="group">
+		<personIds type="list" mapChild="CI_PER_ID">
+			<idType mapField="ID_TYPE_CD"/>
+			<personId mapField="PER_ID_NBR"/>
+			<isPrimary dataType="boolean" mapField="PRIM_SW"/>
+			<encrPersonId mapField="ENCR_PER_ID_NBR"/>
+			<hashPersonId mapField="HASH_PER_ID_NBR"/>
+			<version dataType="number" mapField="VERSION"/>
+		</personIds>
+	</personIdDetails>
+	<personNameDetails type="group">
+		<personNames type="list" mapChild="CI_PER_NAME">
+			<sequence dataType="number" mapField="SEQ_NUM"/>
+			<nameType dataType="lookup" mapField="NAME_TYPE_FLG" lookup="NAME_TYPE_FLG"/>
+			<entityName mapField="ENTITY_NAME"/>
+			<entityNameUpper mapField="ENTITY_NAME_UPR"/>
+			<isPrimaryName dataType="boolean" mapField="PRIM_NAME_SW"/>
+			<version dataType="number" mapField="VERSION"/>
+		</personNames>
+	</personNameDetails>
+	<personPhoneDetails type="group">
+		<personPhones type="list" mapChild="CI_PER_PHONE">
+			<sequence dataType="number" mapField="SEQ_NUM"/>
+			<phoneType mapField="PHONE_TYPE_CD"/>
+			<phone mapField="PHONE"/>
+			<extension mapField="EXTENSION"/>
+			<version dataType="number" mapField="VERSION"/>
+		</personPhones>
+	</personPhoneDetails>
+	<addressDetails type="group">
+		<country mapField="COUNTRY"/>
+		<addressLine1 mapField="ADDRESS1"/>
+		<addressLine2 mapField="ADDRESS2"/>
+		<addressLine3 mapField="ADDRESS3"/>
+		<addressLine4 mapField="ADDRESS4"/>
+		<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+		<number1 mapField="NUM1"/>
+		<number2 mapField="NUM2"/>
+		<inCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+		<city mapField="CITY"/>
+		<geographic mapField="GEO_CODE"/>
+		<county mapField="COUNTY"/>
+		<state mapField="STATE"/>
+		<postal mapField="POSTAL"/>
+	</addressDetails>
+</schema>

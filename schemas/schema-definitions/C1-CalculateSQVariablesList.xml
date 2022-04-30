@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <variablesList type="list">
+    <sequence mdField="SEQNO" dataType="number" isPrimeKey="true"/>
+    <variableType mdField="CALC_SQ_VAR_TYPE_FLG" dataType="lookup" lookup="CALC_SQ_VAR_TYPE_FLG"/>
+    <missingValueAction mdField="MISSING_VAL_ACTION_FLG" dataType="lookup" lookup="MISSING_VAL_ACTION_FLG"/>
+    <billFactor mdField="BF_CD" fkRef="C1-BFACT"/>
+    <characteristicSource mdField="CALC_SQ_CHAR_SRC_FLG" dataType="lookup" lookup="CALC_SQ_CHAR_SRC_FLG"/>
+    <characteristicType mdField="CHAR_TYPE_CD" fkRef="CHAR_TYP"/>
+    <minimumValue mdField="MIN_VALUE" dataType="number"/>
+    <defaultValue mdField="DFLT_VALUE" required="true" dataType="number" default="0"/>
+    <contractQtyType mdField="CONT_QTY_TYPE_CD" fkRef="C1-CONTQ"/>
+    <contractQtyProrateMethod mdField="CONT_QTY_PRORATE_METHOD_FLG" dataType="lookup" lookup="CONT_QTY_PRORATE_METHOD_FLG"/>
+    <uom mdField="UOM_CD" fkRef="C1-UOM"/>
+    <tou mdField="TOU_CD" fkRef="C1-TOU"/>
+    <sqi mdField="SQI_CD" fkRef="C1-SQI"/>
+    <serviceQuantityToUse mdField="SQ_TO_USE_FLG" dataType="lookup" lookup="SQ_TO_USE_FLG"/>
+    <numberOfHistBillPeriods mdField="NUM_HIST_PERIOD" dataType="number"/>
+    <seasonStart mdField="SEASON_START_MMDD"/>
+    <seasonEnd mdField="SEASON_END_MMDD"/>
+    <aggregateFunction mdField="CALC_SQ_AGG_FUNC_FLG" dataType="lookup" lookup="CALC_SQ_AGG_FUNC_FLG"/>
+    <shouldNormalizeBillPeriods mdField="NORMALIZE_BILL_PERIOD_FLG" dataType="lookup" lookup="NORMALIZE_BILL_PERIOD_FLG"/>
+    <valueAlgorithm mdField="ALG_CD" fkRef="ALG"/>
+    <targetCalcLines type="group">
+      <targetCalcLinesList type="list">
+        <targetCategory mdField="CL_CAT_TYPE_CD" isPrimeKey="true" fkRef="C1-CLCAT"/>
+        <targetValue mdField="CL_CAT_VAL"/>
+      </targetCalcLinesList>
+    </targetCalcLines>
+  </variablesList>
+</schema>

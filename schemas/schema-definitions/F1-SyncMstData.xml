@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<bo mapField="BUS_OBJ_CD"/>
+	<boDetails type="raw" mapXML="BO_DETAILS"/>
+	<productionKey mapField="PROD_KEY"/>
+	<externalSystem mapField="NT_XID_CD"/>
+	<serviceModes type="group">
+		<validateSchema dataType="boolean" mapField="F1_VLD_SCHEMA_SW"/>
+		<conversionMode dataType="boolean" mapField="F1_CONV_MODE_SW"/>
+		<resolveKeys dataType="boolean" mapField="F1_RESV_KEY_SW"/>
+		<executeValidationAlgorithm dataType="boolean" mapField="F1_EXEC_VLD_ALG_SW"/>
+	</serviceModes>
+	<resultErrors type="list" mapList="ERRORS">
+		<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+		<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+		<messageParameters type="group">
+			<parameters type="list" mapList="MSG_PARMS">
+				<parameterType dataType="lookup" mapField="MSG_PARM_TYP_FLG" lookup="MSG_PARM_TYP_FLG"/>
+				<parameterValue mapField="MSG_PARM_VAL"/>
+			</parameters>
+		</messageParameters>
+	</resultErrors>
+</schema>

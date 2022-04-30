@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<paymentArrangementSA mapField="PA_SA_ID"/>
+	<accountId mapField="ACCT_ID"/>
+	<entityName mapField="ENTITY_NAME"/>
+	<acctCurBal dataType="number" mapField="ACCT_CUR_BAL"/>
+	<acctTotBal dataType="number" mapField="ACCT_TOT_BAL"/>
+	<division mapField="CIS_DIVISION"/>
+	<saType mapField="SA_TYPE_CD"/>
+	<currency mapField="CURRENCY_CD"/>
+	<cancelReason mapField="CAN_RSN_CD"/>
+	<status dataType="lookup" mapField="SA_STATUS_FLG" lookup="SA_STATUS_FLG"/>
+	<saInformation mapField="SA_INFO"/>
+	<saTypeInfo mapField="SA_TYPE_INFO"/>
+	<paCurBal dataType="number" mapField="PA_CUR_BAL"/>
+	<paTotBal dataType="number" mapField="PA_TOT_BAL"/>
+	<recurringChargeAmount dataType="money" mapField="RCR_CHG_AMT"/>
+	<installment dataType="number" mapField="INSTALLMENT"/>
+	<paNewTotAmt dataType="number" mapField="PA_NEW_TOT_AMT"/>
+	<saPayoffAmount dataType="money" mapField="SA_TOT_AMT"/>
+	<adjTotAmt dataType="number" mapField="ADJ_TOT_AMT"/>
+	<frzAdjTotAmt dataType="number" mapField="FRZ_ADJ_TOT_AMT"/>
+	<canAdjTotAmt dataType="number" mapField="CAN_ADJ_TOT_AMT"/>
+	<incAdjTotAmt dataType="number" mapField="INC_ADJ_TOT_AMT"/>
+	<newChargesMessage mapField="NEW_CHG_MSG"/>
+	<currRcrChgAmt dataType="money" mapField="CURR_RCR_CHG_AMT"/>
+	<currInstallment dataType="number" mapField="CURR_INSTALLMENT"/>
+	<paSa type="list" mapList="PA_SA">
+		<candSaId mapField="CAND_SA_ID"/>
+		<saInformation2 mapField="SA_INFO"/>
+		<premiseInfo mapField="PREM_INFO"/>
+		<currentBalance dataType="money" mapField="CUR_BAL"/>
+		<payoffBalance dataType="money" mapField="TOT_BAL"/>
+		<incAdjBal dataType="number" mapField="INC_ADJ_BAL"/>
+		<paSaStatFlg mapField="PA_SA_STAT_FLG"/>
+		<saArrears type="list" mapList="SA_ARREARS">
+			<serviceAgreement mapField="SA_ID"/>
+			<daysAge mapField="DAYS_AGE"/>
+			<daysAgeN dataType="number" mapField="DAYS_AGE_N"/>
+			<arrearsAmount dataType="money" mapField="ARS_AMT"/>
+			<isToBeTransferred dataType="boolean" mapField="CHECKED_FOR_PA_SW"/>
+		</saArrears>
+	</paSa>
+	<paAdj type="list" mapList="PA_ADJ">
+		<adjustmentStatus dataType="lookup" mapField="ADJ_STATUS_FLG" lookup="ADJ_STATUS_FLG"/>
+		<creDt dataType="date" mapField="CRE_DT"/>
+		<adjustmentId mapField="ADJ_ID"/>
+		<serviceAgreement2 mapField="SA_ID"/>
+		<saInformation3 mapField="SA_INFO"/>
+		<currentAmount dataType="money" mapField="ADJ_AMT"/>
+	</paAdj>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<canCreate dataType="boolean" mapField="CREATE_SW"/>
+	<isBreakAllowed dataType="boolean" mapField="BREAK_SW"/>
+	<isCancel dataType="boolean" mapField="CANCEL_SW"/>
+</schema>

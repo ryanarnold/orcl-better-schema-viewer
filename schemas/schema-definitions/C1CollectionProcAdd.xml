@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<collectionProcess mapField="COLL_PROC_ID"/>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<hasCollectionProcess dataType="boolean" mapField="TMPL_CCL_CHG_SW"/>
+	<collectionProcessTemplate mapField="COLL_PROC_TMPL_CD"/>
+	<collectionClassControl mapField="COLL_CL_CNTL_CD"/>
+	<accountId mapField="ACCT_ID"/>
+	<currency mapField="CURRENCY_CD"/>
+	<collectionProcessStatus dataType="lookup" mapField="COLL_STATUS_FLG" lookup="COLL_STATUS_FLG"/>
+	<collectionStatusReason dataType="lookup" mapField="COLL_STAT_RSN_FLG" lookup="COLL_STAT_RSN_FLG"/>
+	<collectionConditionPriority dataType="lookup" mapField="COLL_CAT_PRIO_FLG" lookup="COLL_CAT_PRIO_FLG"/>
+	<priority dataType="lookup" mapField="CRIT_PRIO_FLG" lookup="CRIT_PRIO_FLG"/>
+	<creationDateTime dataType="dateTime" default="%CurrentDateTime" mapField="CRE_DTTM"/>
+	<collectionArrearsDate dataType="date" mapField="COLL_ARS_DT"/>
+	<arrearsAmount dataType="money" mapField="ARS_AMT"/>
+	<triggerBusinessProcess dataType="boolean" mapField="TRIGGER_BP_SW"/>
+	<comments mapField="COMMENTS"/>
+	<version dataType="number" mapField="VERSION"/>
+	<hasCollectionProcessT dataType="boolean" mapField="C1_T_TMPL_CCL_CHG_SW"/>
+	<sa type="list" mapList="SA">
+		<collectionProcess2 mapField="COLL_PROC_ID"/>
+		<serviceAgreement mapField="SA_ID"/>
+		<currency2 mapField="CURRENCY_CD"/>
+		<collectionProcessSAstatus dataType="lookup" mapField="COLL_SA_STAT_FLG" lookup="COLL_SA_STAT_FLG"/>
+		<arrearsAmount2 dataType="money" mapField="ARS_AMT"/>
+		<version2 dataType="number" mapField="VERSION"/>
+		<saInformation mapField="SA_INFO"/>
+		<premiseInfo mapField="PREM_INFO"/>
+		<currentBalance dataType="money" mapField="CURRENT_BAL"/>
+		<totalBal dataType="number" mapField="TOTAL_BAL"/>
+		<amountStillOwing dataType="money" mapField="AMT_STILL_OWING"/>
+		<creditAmt dataType="money" mapField="CREDIT_AMT"/>
+		<saArrears type="list" mapList="SA_ARREARS">
+			<serviceAgreement2 mapField="SA_ID"/>
+			<daysAge mapField="DAYS_AGE"/>
+			<daysAgeN dataType="number" mapField="DAYS_AGE_N"/>
+			<arrearsAmount3 dataType="money" mapField="ARS_AMT"/>
+			<isToBeTransferred dataType="boolean" mapField="CHECKED_FOR_PA_SW"/>
+		</saArrears>
+	</sa>
+	<evt type="list" mapList="EVT">
+		<collectionProcess3 mapField="COLL_PROC_ID"/>
+		<eventSequence dataType="number" mapField="EVT_SEQ"/>
+		<collectionEventStatus dataType="lookup" mapField="COLL_EVT_STAT_FLG" lookup="COLL_EVT_STAT_FLG"/>
+		<collectionEventType mapField="COLL_EVT_TYP_CD"/>
+		<triggerDate dataType="date" mapField="TRIGGER_DT"/>
+		<completionDate dataType="date" mapField="COMPLETION_DT"/>
+		<triggerBusinessProcess2 dataType="boolean" mapField="TRIGGER_BP_SW"/>
+		<version3 dataType="number" mapField="VERSION"/>
+		<collectionEventInfo mapField="COLL_EVT_INFO"/>
+		<evtCc type="list" mapList="EVT_CC">
+			<collectionProcess4 mapField="COLL_PROC_ID"/>
+			<eventSequence2 dataType="number" mapField="EVT_SEQ"/>
+			<customerContactId mapField="CC_ID"/>
+			<version4 dataType="number" mapField="VERSION"/>
+			<ccInfo mapField="CC_INFO"/>
+		</evtCc>
+	</evt>
+	<collectionProcess5 mapField="COLL_PROC_INFO"/>
+	<entityName mapField="ENTITY_NAME"/>
+	<collCritInfo mapField="COLL_CRIT_INFO"/>
+	<nbrOfDaysFrom dataType="number" mapField="NBR_OF_DAYS_FROM"/>
+	<debtClass mapField="DEBT_CL_CD"/>
+	<collClDescr mapField="COLL_CL_DESCR"/>
+	<isCancel dataType="boolean" mapField="CANCEL_SW"/>
+	<collProcExtraInfo mapField="COLL_PROC_EXTRA_INFO"/>
+</schema>

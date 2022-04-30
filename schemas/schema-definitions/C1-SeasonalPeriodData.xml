@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<seasonListData type="group">
+		<seasonStart mapField="SEASON_START_MMDD"/>
+		<seasonEnd mapField="SEASON_END_MMDD"/>
+	</seasonListData>
+	<seasonDays mdField="F1_DAYS" dataType="number" mapField="SEAS_DAYS"/>
+	<startDate mdField="START_DT" dataType="date" mapField="SEAS_PER_START_DT"/>
+	<endDate mdField="END_DT" dataType="date" mapField="SEAS_PER_END_DT"/>
+</schema>

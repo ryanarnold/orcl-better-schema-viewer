@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<leadEventId mdField="C1_LEAD_EVT_ID"/>
+	<entityName mdField="ENTITY_NAME"/>
+	<mailingAddress type="group">
+		<country mapField="COUNTRY"/>
+		<addressLine1 mapField="ADDRESS1"/>
+		<addressLine2 mapField="ADDRESS2"/>
+		<addressLine3 mapField="ADDRESS3"/>
+		<addressLine4 mapField="ADDRESS4"/>
+		<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+		<number1 mapField="NUM1"/>
+		<number2 mapField="NUM2"/>
+		<inCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+		<city mapField="CITY"/>
+		<geographic mapField="GEO_CODE"/>
+		<county mapField="COUNTY"/>
+		<state mapField="STATE"/>
+		<postal mapField="POSTAL"/>
+	</mailingAddress>
+	<contactNumber mdField="F1_PHONE_NBR"/>
+	<action mdField="THRD_PTY_NOTF_ACTION_FLG" dataType="lookup" lookup="THRD_PTY_NOTF_ACTION_FLG"/>
+	<step type="group">
+		<steps type="list">
+			<stepId mdField="LEAD_EVT_STEP_ID" isPrimeKey="true"/>
+			<stepSeq mdField="LEAD_EVT_STEP_SEQ"/>
+			<stepType mdField="LEAD_EVT_STEP_TYPE_CD"/>
+			<stepDescr mdField="DESCRLONG"/>
+		</steps>
+	</step>
+</schema>

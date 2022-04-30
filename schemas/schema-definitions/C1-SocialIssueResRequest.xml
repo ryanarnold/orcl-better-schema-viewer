@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<custRelReqId suppress="input" mdField="CRR_INFO_LBL" isPrimeKey="true" fkRef="C1-CSRRQ" mapField="CUST_REL_REQ_ID"/>
+	<custRelReqType suppress="input" required="true" fkRef="C1-CRRTY" mapField="CUST_REL_REQ_TYPE_CD"/>
+	<bo suppress="true" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<boStatus suppress="input" mapField="BO_STATUS_CD"/>
+	<statusReason suppress="input" fkRef="F1-STRSN" mapField="BO_STATUS_REASON_CD"/>
+	<externalSystemReference suppress="blank" mapField="EXT_SYS_REF"/>
+	<externalSystem suppress="blank" fkRef="F1-ESTMP" mapField="NT_XID_CD"/>
+	<accountId suppress="blank" mdField="C1_ACCT_LBL" fkRef="ACCT" mapField="ACCT_ID"/>
+	<personId suppress="blank" mdField="C1_PER_LBL" fkRef="PER" mapField="PER_ID"/>
+	<premiseId suppress="blank" mdField="C1_PREM_LBL" fkRef="PREM" mapField="PREM_ID"/>
+	<createDateTime suppress="true" dataType="dateTime" mapField="CRE_DTTM"/>
+	<statusDateTime suppress="true" dataType="dateTime" mapField="STATUS_UPD_DTTM"/>
+	<srmPostInfo suppress="true" type="group" mapXML="BO_XML_DATA_AREA">
+		<srmPostId mdField="SRM_POST_ID"/>
+		<srmPostLink mdField="SRM_POST_LINK"/>
+		<srmUser mdField="SRM_USER"/>
+		<srmTopic mdField="SRM_TOPIC"/>
+	</srmPostInfo>
+	<socialCommunityPostInfo suppress="true" type="group">
+		<community mdField="CRR_COMMUNITY" required="true" fkRef="C1-PCTTY" mapField="COMM_RTE_TYPE_CD"/>
+		<authorId mdField="CRR_AUTHOR_ID" required="true" mapField="CONTACT_VALUE"/>
+		<authorName mdField="CRR_AUTHOR_NAME" mapField="NAME_ON_REQUEST"/>
+		<communityPostId mdField="CRR_POST_ID" mapXML="BO_XML_DATA_AREA"/>
+		<communityPostLink mdField="CRR_POST_LINK" mapXML="BO_XML_DATA_AREA"/>
+		<communityParentPostLink mdField="CRR_PARENT_POST_LINK" mapXML="BO_XML_DATA_AREA"/>
+	</socialCommunityPostInfo>
+	<requestDetails type="group" mapXML="BO_XML_DATA_AREA">
+		<requestDetail type="list">
+			<requestDetailType mdField="CRR_DET_TYPE" required="true" dataType="lookupBO" isPrimeKey="true" lookupBO="C1-RequestDetailTypeLookup"/>
+			<externalDetailName mdField="CRR_EXT_DETAIL_NAME" required="true" isPrimeKey="true"/>
+			<externalDetailValue mdField="CRR_EXT_DETAIL_VALUE" required="true"/>
+		</requestDetail>
+	</requestDetails>
+	<fa suppress="input" mdField="C1_FIELD_ACTIVITY_LBL" fkRef="FA-ID" mapField="PK_VALUE1">
+		<row mapChild="C1_CUST_REL_REQ_REL_OBJ">
+			<CRR_REL_OBJ_TY_FLG is="C1FA"/>
+			<SEQ_NUM is="1"/>
+			<MAINT_OBJ_CD is="FA"/>
+		</row>
+	</fa>
+	<case suppress="input" mdField="CASE_LBL" fkRef="CASE" mapField="PK_VALUE1">
+		<row mapChild="C1_CUST_REL_REQ_REL_OBJ">
+			<CRR_REL_OBJ_TY_FLG is="C1CS"/>
+			<SEQ_NUM is="1"/>
+			<MAINT_OBJ_CD is="CASE"/>
+		</row>
+	</case>
+	<todo suppress="input" mdField="TD_LBL" fkRef="F1-TODO" mapField="PK_VALUE1">
+		<row mapChild="C1_CUST_REL_REQ_REL_OBJ">
+			<CRR_REL_OBJ_TY_FLG is="C1TD"/>
+			<SEQ_NUM is="1"/>
+			<MAINT_OBJ_CD is="TO DO ENTRY"/>
+		</row>
+	</todo>
+	<customerContact suppress="input" mdField="CUSTOMER_CON_LBL" fkRef="CC ID" mapField="PK_VALUE1">
+		<row mapChild="C1_CUST_REL_REQ_REL_OBJ">
+			<CRR_REL_OBJ_TY_FLG is="C1CC"/>
+			<SEQ_NUM is="1"/>
+			<MAINT_OBJ_CD is="CUST CONTACT"/>
+		</row>
+	</customerContact>
+	<reviewActionWaitDetails type="group" mapXML="BO_XML_DATA_AREA">
+		<waitStartDateTime mdField="WAIT_START_DTTM"/>
+		<waitRetryCount mdField="C1_WAIT_RETRY_CNT"/>
+		<timeoutToDo mdField="TIMEOUT_TD_ENTRY_ID" fkRef="F1-TODO"/>
+	</reviewActionWaitDetails>
+	<toDoRetry suppress="true" type="group" mapXML="BO_XML_DATA_AREA">
+		<retryDateTime dataType="dateTime"/>
+		<numberOfRetries dataType="number"/>
+		<currentErrorState/>
+	</toDoRetry>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+</schema>

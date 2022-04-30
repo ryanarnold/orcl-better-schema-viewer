@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<touMapTemplate required="true" isPrimeKey="true" mapField="C1_TOU_MAP_TMPLT_CD"/>
+	<bo suppress="input" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<description required="true" mapField="DESCR100"/>
+	<touGroup required="true" fkRef="C1-TOUGR" mapField="TOU_GRP_CD"/>
+	<defaultTou mdField="C1_DEFAULT_TOU_LBL" required="true" fkRef="C1-TOU" mapField="TOU_CD"/>
+	<workCalendar fkRef="F1-CAL" mapField="CALENDAR_CD"/>
+	<holidayTou mdField="HOLIDAY_TOU" fkRef="C1-TOU" mapXML="BO_DATA_AREA"/>
+	<holidayTemplate mdField="C1_HOLIDAY_TEMPLATE" fkRef="C1-TOUTM" mapXML="BO_DATA_AREA"/>
+	<secondsPerInterval required="true" dataType="duration" mapField="C1_SEC_PER_INTRVL"/>
+	<touSchedule type="group" mapXML="BO_DATA_AREA">
+		<weekRangeList type="list">
+			<startDate mdField="C1_START_MONTH_DAY" required="true" isPrimeKey="true"/>
+			<endDate mdField="C1_END_MONTH_DAY" required="true" isPrimeKey="true"/>
+			<weekDayRangeList type="list">
+				<startWeekDay mdField="DAYS_OF_WEEK_FLG" required="true" dataType="lookup" isPrimeKey="true" lookup="DAYS_OF_WEEK_FLG"/>
+				<endWeekDay mdField="DAYS_OF_WEEK_FLG" required="true" dataType="lookup" isPrimeKey="true" lookup="DAYS_OF_WEEK_FLG"/>
+				<hourRangeList type="list">
+					<startTime mdField="START_TM" required="true" dataType="time" isPrimeKey="true"/>
+					<endTime mdField="END_TM" required="true" dataType="time" isPrimeKey="true"/>
+					<tou mdField="TOU_CD" required="true" isPrimeKey="true" fkRef="C1-TOU"/>
+				</hourRangeList>
+			</weekDayRangeList>
+		</weekRangeList>
+	</touSchedule>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+</schema>

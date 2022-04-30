@@ -1,0 +1,127 @@
+<?xml version="1.0" ?>
+<schema name="schema" fwRel="2">
+	<outboundMsgId mapField="OUTMSG_ID"/>
+	<externalSystem fkRef="F1-ESTMP" mapField="NT_XID_CD"/>
+	<outboundMessageType fkRef="F1-OMTYP" mapField="OUTMSG_TYPE_CD"/>
+	<processingMethod dataType="lookup" mapField="OUTMSG_PROC_METH_FLG" lookup="OUTMSG_PROC_METH_FLG"/>
+	<outboundMessageStatus dataType="lookup" mapField="OUTMSG_STATUS_FLG" lookup="OUTMSG_STATUS_FLG"/>
+	<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+	<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+	<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+	<errorDetail mapField="ERROR_DTL"/>
+	<requestDetails type="group" mapXML="XML_SOURCE">
+		<usageCalculationCallType mdField="C1_USG_CALC_CALL_TYPE_FLG" required="true" dataType="lookup" default="C1RC" lookup="C1_USG_CALC_CALL_TYPE_FLG"/>
+		<mode mdField="WX_USAGE_CALC_MODE_FLG" dataType="lookup" lookup="WX_USAGE_CALC_MODE_FLG"/>
+		<language mdField="LANGUAGE_CD"/>
+		<request type="list">
+			<saId mdField="SA_ID" isPrimeKey="true" fkRef="SA"/>
+			<rateSchedule mdField="RS_CD" isPrimeKey="true"/>
+			<rateScheduleSeq mdField="SEQNO" required="true" dataType="number" isPrimeKey="true" default="0"/>
+			<intervalProcessing type="group">
+				<startDateTime mdField="START_DTTM" dataType="dateTime" isPrimeKey="true"/>
+				<endDateTimeFrom mdField="C1_END_DTTM_FROM" dataType="dateTime" isPrimeKey="true"/>
+				<endDateTimeTo mdField="C1_END_DTTM_TO" dataType="dateTime" isPrimeKey="true"/>
+			</intervalProcessing>
+			<scalarProcessing type="group">
+				<billingOption mdField="BILLING_OPT_SW" dataType="boolean"/>
+				<startDateTime mdField="START_DTTM" dataType="dateTime"/>
+				<endDateTime mdField="END_DTTM" dataType="dateTime"/>
+				<minDaysOffset mdField="MIN_DAYS_OFFSET" dataType="number"/>
+				<maxDaysOffset mdField="MAX_DAYS_OFFSET" dataType="number"/>
+				<allowEstimate mdField="ALLOW_EST_SW" dataType="boolean"/>
+				<estimateDate mdField="EST_DT" dataType="date"/>
+			</scalarProcessing>
+			<dateBreaks type="list">
+				<breakDateTime mdField="C1_BILL_PRD_DTTM_BREAKS" dataType="dateTime" isPrimeKey="true"/>
+			</dateBreaks>
+			<billCondition mdField="C1_BILL_COND_FLG" dataType="lookup" lookup="C1_BILL_COND_FLG"/>
+			<hypotheticalCalculation type="group">
+				<usageAdjustments type="list">
+					<usageAdjustmentFactor mdField="WX_VALUE" isPrimeKey="true"/>
+					<value mdField="WX_VALUE"/>
+				</usageAdjustments>
+			</hypotheticalCalculation>
+		</request>
+	</requestDetails>
+	<responseDetails type="group" mapXML="XML_RESPONSE">
+		<response type="list">
+			<saId mdField="SA_ID" isPrimeKey="true" fkRef="SA"/>
+			<rateSchedule mdField="RS_CD" isPrimeKey="true"/>
+			<rateScheduleSeq mdField="SEQNO" required="true" dataType="number" isPrimeKey="true" default="0"/>
+			<isSkipped mdField="SKIPPED_SW" dataType="boolean"/>
+			<skipReasonDescription mdField="SKIP_REASON"/>
+			<scalarProcessing type="group">
+				<isEstimate mdField="C1_IS_ESTIMATE_SW" dataType="boolean"/>
+			</scalarProcessing>
+			<usagePeriod type="group">
+				<startDateTime mdField="START_DTTM" dataType="dateTime" isPrimeKey="true"/>
+				<endDateTime mdField="END_DTTM" dataType="dateTime" isPrimeKey="true"/>
+			</usagePeriod>
+			<usagePeriods type="list">
+				<startDateTime mdField="START_DTTM" dataType="dateTime" isPrimeKey="true"/>
+				<endDateTime mdField="END_DTTM" dataType="dateTime" isPrimeKey="true"/>
+				<standardStartDateTime mdField="STANDARD_START_DTTM" dataType="dateTime"/>
+				<standardEndDateTime mdField="STANDARD_END_DTTM" dataType="dateTime"/>
+				<usageRequestType mdField="C1_USAGE_TYPE_FLG" dataType="lookup" isPrimeKey="true" lookup="C1_USAGE_TYPE_FLG"/>
+				<serviceQty type="list">
+					<seq mdField="SEQ_NUM" dataType="number" isPrimeKey="true"/>
+					<uom mdField="UOM_CD" fkRef="C1-UOM"/>
+					<tou mdField="TOU_CD" fkRef="C1-TOU"/>
+					<sqi mdField="SQI_CD" fkRef="C1-SQI"/>
+					<qty mdField="SVC_QTY" dataType="number"/>
+					<spi mdField="SPI" dataType="duration"/>
+					<intervals type="group">
+						<iL type="list">
+							<s mdField="SEQ_NUM" dataType="number" isPrimeKey="true"/>
+							<q mdField="INTV_DATA" dataType="number"/>
+							<c mdField="F1_EXT_LOOKUP_VALUE"/>
+						</iL>
+					</intervals>
+				</serviceQty>
+			</usagePeriods>
+			<spUsagePeriod type="list">
+				<startDateTime mdField="START_DTTM" dataType="dateTime" isPrimeKey="true"/>
+				<endDateTime mdField="END_DTTM" dataType="dateTime" isPrimeKey="true"/>
+				<serviceQty type="list">
+					<seq mdField="SEQ_NUM" dataType="number" isPrimeKey="true"/>
+					<uom mdField="UOM_CD" fkRef="C1-UOM"/>
+					<tou mdField="TOU_CD" fkRef="C1-TOU"/>
+					<sqi mdField="SQI_CD" fkRef="C1-SQI"/>
+					<qty mdField="SVC_QTY" dataType="number"/>
+					<spId mdField="SP_ID" isPrimeKey="true" fkRef="SP"/>
+				</serviceQty>
+			</spUsagePeriod>
+			<reads type="list">
+				<spId mdField="SP_ID" isPrimeKey="true" fkRef="SP"/>
+				<readSeq mdField="READ_SEQ" dataType="number" isPrimeKey="true"/>
+				<startReadDateTime mdField="START_READ_DTTM" dataType="dateTime"/>
+				<endReadDateTime mdField="END_READ_DTTM" dataType="dateTime"/>
+				<uom mdField="UOM_CD" fkRef="C1-UOM"/>
+				<tou mdField="TOU_CD" fkRef="C1-TOU"/>
+				<sqi mdField="SQI_CD" fkRef="C1-SQI"/>
+				<startReading mdField="START_REG_READING" dataType="number"/>
+				<endReading mdField="END_REG_READING" dataType="number"/>
+				<measuredQty mdField="MSR_QTY" dataType="number"/>
+				<finalQty mdField="FINAL_REG_QTY" dataType="number"/>
+				<finalUom mdField="FINAL_UOM_CD" fkRef="C1-UOM"/>
+				<finalTou mdField="FINAL_TOU_CD" fkRef="C1-TOU"/>
+				<finalSqi mdField="FINAL_SQI_CD" fkRef="C1-SQI"/>
+				<sphowToUse mdField="USAGE_FLG" dataType="lookup" lookup="USAGE_FLG"/>
+				<reghowToUse mdField="HOW_TO_USE_FLG" dataType="lookup" lookup="HOW_TO_USE_FLG"/>
+				<constant mdField="REG_CONST" dataType="number"/>
+				<measuresPeakQuantity mdField="MSR_PEAK_QTY_SW" dataType="boolean"/>
+				<usePercent mdField="USE_PCT" dataType="number"/>
+			</reads>
+			<exceptionInfo type="list">
+				<sequence mdField="SEQ_NUM" dataType="number" isPrimeKey="true"/>
+				<messageCategory mdField="MESSAGE_CAT_NBR" dataType="number"/>
+				<messageNumber mdField="MESSAGE_NBR" dataType="number"/>
+				<comments mdField="COMMENTS"/>
+				<messageParameters type="list">
+					<parameterSequence mdField="PARM_SEQ" dataType="number" isPrimeKey="true"/>
+					<messageParameterValue mdField="MSG_PARM_VAL"/>
+				</messageParameters>
+			</exceptionInfo>
+		</response>
+	</responseDetails>
+</schema>

@@ -1,0 +1,124 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<overdueProcessId mapField="OD_PROC_ID"/>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<accountId mapField="ACCT_ID"/>
+	<overdueProcessStatus dataType="lookup" mapField="OD_STATUS_FLG" lookup="OD_STATUS_FLG"/>
+	<overdueProcessStatusReason dataType="lookup" mapField="OD_STAT_RSN_FLG" lookup="OD_STAT_RSN_FLG"/>
+	<overdueProcessTemplate mapField="OD_PROC_TMP_CD"/>
+	<creationDateTime dataType="dateTime" default="%CurrentDateTime" mapField="CRE_DTTM"/>
+	<inactiveDateTime dataType="dateTime" mapField="INACTIVE_DTTM"/>
+	<longComments mapField="COMMENT_LONG"/>
+	<overdueBaseDate dataType="date" mapField="OD_ARS_DT"/>
+	<currency mapField="CURRENCY_CD"/>
+	<version dataType="number" mapField="VERSION"/>
+	<odEvt type="list" mapList="OD_EVT">
+		<overdueProcessId2 mapField="OD_PROC_ID"/>
+		<eventSequence dataType="number" mapField="EVT_SEQ"/>
+		<overdueEventStatus dataType="lookup" mapField="OD_EVT_STAT_FLG" lookup="OD_EVT_STAT_FLG"/>
+		<overdueStatusDateTime dataType="dateTime" mapField="OD_EVT_STAT_DTTM"/>
+		<overdueEventCancelReason mapField="OEVT_CAN_RSN_CD"/>
+		<cancellationComment mapField="CANCEL_COMMENT"/>
+		<overdueEventTypeCode mapField="OD_EVT_TYPE_CD"/>
+		<dependOnOtherEvents dataType="boolean" mapField="DEP_EVT_SW"/>
+		<triggerDate dataType="date" mapField="TRIGGER_DT"/>
+		<daysAfterPreviousResponse dataType="number" mapField="DAYS_AFT_PREV_EVT"/>
+		<version2 dataType="number" mapField="VERSION"/>
+		<odEvtStatInfo mapField="OD_EVT_STAT_INFO"/>
+		<odEvtInfo mapField="OD_EVT_INFO"/>
+		<cancelEvtSw dataType="boolean" mapField="CANCEL_EVT_SW"/>
+		<canlogAlgExstSw dataType="boolean" mapField="CANLOG_ALG_EXST_SW"/>
+		<odEvtDep type="list" mapList="OD_EVT_DEP">
+			<overdueProcessId3 mapField="OD_PROC_ID"/>
+			<eventSequence2 dataType="number" mapField="EVT_SEQ"/>
+			<sequence dataType="number" mapField="SEQ_NUM"/>
+			<dependentOnSequence dataType="number" mapField="DEP_EVT_SEQ"/>
+			<version3 dataType="number" mapField="VERSION"/>
+			<depOnEvtInfo mapField="DEP_ON_EVT_INFO"/>
+		</odEvtDep>
+	</odEvt>
+	<odProcLog type="list" mapList="OD_PROC_LOG">
+		<overdueProcessId4 mapField="OD_PROC_ID"/>
+		<logSequenceNumber dataType="number" mapField="LOG_SEQ"/>
+		<overdueLogType dataType="lookup" mapField="OD_LOG_TYPE_FLG" lookup="OD_LOG_TYPE_FLG"/>
+		<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+		<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+		<logDateTime dataType="dateTime" mapField="LOG_DTTM"/>
+		<user mapField="USER_ID"/>
+		<overdueEventSequence dataType="number" mapField="OD_EVT_SEQ"/>
+		<cutProcessId mapField="CUT_PROC_ID"/>
+		<cutEventSequemce dataType="number" mapField="CUT_EVT_SEQ"/>
+		<characteristicType mapField="CHAR_TYPE_CD"/>
+		<characteristicValue mapField="CHAR_VAL"/>
+		<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+		<characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
+		<characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+		<characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+		<characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
+		<characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+		<longComments2 mapField="COMMENT_LONG"/>
+		<version4 dataType="number" mapField="VERSION"/>
+		<logMsgTxt mapField="LOG_MSG_TXT"/>
+		<logUserInfo mapField="LOG_USER_INFO"/>
+		<charValInfo mapField="CHAR_VAL_INFO"/>
+		<characteristicValueForeignKeyInformation mapField="CHAR_VAL_FK_INFO"/>
+		<navigationOption mapField="NAV_OPT_CD"/>
+		<charateristicValue mapField="COMP_PK_STR"/>
+		<relProcEvtInfo mapField="REL_PROC_EVT_INFO"/>
+		<odProcLogparm type="list" mapList="OD_PROC_LOGPARM">
+			<overdueProcessId5 mapField="OD_PROC_ID"/>
+			<logSequenceNumber2 dataType="number" mapField="LOG_SEQ"/>
+			<messageParameterSequence dataType="number" mapField="PARM_SEQ"/>
+			<messageParameterType dataType="lookup" mapField="MSG_PARM_TYP_FLG" lookup="MSG_PARM_TYP_FLG"/>
+			<messageParameter mapField="MESSAGE_PARM"/>
+			<version5 dataType="number" mapField="VERSION"/>
+		</odProcLogparm>
+	</odProcLog>
+	<odProcObj type="list" mapList="OD_PROC_OBJ">
+		<overdueProcessId6 mapField="OD_PROC_ID"/>
+		<sequence2 dataType="number" mapField="SEQ_NUM"/>
+		<characteristicType2 mapField="CHAR_TYPE_CD"/>
+		<characteristicValueForeignKey12 mapField="CHAR_VAL_FK1"/>
+		<characteristicValueFK22 mapField="CHAR_VAL_FK2"/>
+		<characteristicValueFK32 mapField="CHAR_VAL_FK3"/>
+		<characteristicValueFk42 mapField="CHAR_VAL_FK4"/>
+		<characteristicValueFK52 mapField="CHAR_VAL_FK5"/>
+		<version6 dataType="number" mapField="VERSION"/>
+		<originalAmount dataType="money" mapField="ORIGINAL_AMT"/>
+		<unpaidAmt dataType="money" mapField="UNPAID_AMT"/>
+		<currency2 mapField="CURRENCY_CD"/>
+		<foreignKeyReference mapField="FK_REF_CD"/>
+		<searchNavigationKey mapField="SRCH_NAV_KEY"/>
+		<navigationOption2 mapField="NAV_OPT_CD"/>
+		<table mapField="TBL_NAME"/>
+		<infoProgram mapField="INFO_PRG"/>
+		<characteristicType3 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+		<characteristicValueDescription mapField="CHAR_VAL_DESCR"/>
+		<characteristicValueForeignKeys mapField="CHAR_VAL_FK_STR"/>
+		<characteristicValueForeignKeyInformation2 mapField="CHAR_VAL_FK_INFO"/>
+		<isCompoundPrimaryKey dataType="boolean" mapField="COMP_PK_SW"/>
+		<charateristicValue2 mapField="COMP_PK_STR"/>
+	</odProcObj>
+	<odProcInfo mapField="OD_PROC_INFO"/>
+	<odProcStatInfo mapField="OD_PROC_STAT_INFO"/>
+	<accountInfo mapField="ACCT_INFO"/>
+	<objCharTypeLbl mapField="OBJ_CHAR_TYPE_LBL"/>
+	<objFkRefCd mapField="OBJ_FK_REF_CD"/>
+	<objSrchNavKey mapField="OBJ_SRCH_NAV_KEY"/>
+	<objNavOptCd mapField="OBJ_NAV_OPT_CD"/>
+	<objCompPkSw dataType="boolean" mapField="OBJ_COMP_PK_SW"/>
+	<objCompPkStr mapField="OBJ_COMP_PK_STR"/>
+	<objCntxtMenuNm mapField="OBJ_CNTXT_MENU_NM"/>
+	<objCollMsgTxt mapField="OBJ_COLL_MSG_TXT"/>
+	<isCancel dataType="boolean" mapField="CANCEL_SW"/>
+	<oevtCanRsnCd2 mapField="OEVT_CAN_RSN_CD2"/>
+	<cancelComment2 mapField="CANCEL_COMMENT2"/>
+	<hasTemplateChange dataType="boolean" mapField="TMPL_CHG_SW"/>
+	<calcuoAlgExstSw dataType="boolean" mapField="CALCUO_ALG_EXST_SW"/>
+	<showRelObjSw dataType="boolean" mapField="SHOW_REL_OBJ_SW"/>
+	<showRelPrcevtSw dataType="boolean" mapField="SHOW_REL_PRCEVT_SW"/>
+	<canprcAlgExstSw dataType="boolean" mapField="CANPRC_ALG_EXST_SW"/>
+	<npndEvtExstSw dataType="boolean" mapField="NPND_EVT_EXST_SW"/>
+	<trigEventsSw dataType="boolean" mapField="TRIG_EVENTS_SW"/>
+</schema>

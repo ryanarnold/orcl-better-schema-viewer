@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <servicePointDataDetails type="group">
+    <servicePointId mapField="SP_ID"/>
+    <disconnectLocation mapField="DISCON_LOC_CD"/>
+    <meterLocation mapField="MTR_LOC_CD"/>
+    <serviceInstructions mapField="MR_INSTR_CD"/>
+    <serviceWarnings mapField="MR_WARN_CD"/>
+    <instructionDetails mapField="MR_INSTR_DETAILS"/>
+  </servicePointDataDetails>
+  <version suppress="true" dataType="number" mapField="VERSION"/>
+</schema>

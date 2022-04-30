@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<mo private="true" default="F1-BUNDLE" mapField="MAINT_OBJ_CD"/>
+	<bundleId mapField="PK_VALUE1"/>
+	<sequenceNumber dataType="number" mapField="SEQNO"/>
+	<logEntryType dataType="lookup" mapField="LOG_ENTRY_TYPE_FLG" lookup="LOG_ENTRY_TYPE_FLG"/>
+	<logDateTime dataType="dateTime" mapField="LOG_DTTM"/>
+	<boStatus mapField="BO_STATUS_CD"/>
+	<description mapField="DESCRLONG"/>
+	<characteristicType mapField="CHAR_TYPE_CD"/>
+	<characteristicValue mapField="CHAR_VAL"/>
+	<adhocValue mapField="ADHOC_CHAR_VAL"/>
+	<fkValue1 mapField="CHAR_VAL_FK1"/>
+	<fkValue2 mapField="CHAR_VAL_FK2"/>
+	<fkValue3 mapField="CHAR_VAL_FK3"/>
+	<fkValue4 mapField="CHAR_VAL_FK4"/>
+	<fkValue5 mapField="CHAR_VAL_FK5"/>
+	<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+	<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+	<messageParameters type="group">
+		<parameters type="list" mapList="MSG_PARMS">
+			<parameterType dataType="lookup" mapField="MSG_PARM_TYP_FLG" lookup="MSG_PARM_TYP_FLG"/>
+			<parameterValue mapField="MSG_PARM_VAL"/>
+		</parameters>
+	</messageParameters>
+	<user mapField="USER_ID"/>
+	<logMessage default=" " mapField="LOG_MSG_TXT"/>
+	<characteristicValueInformation default=" " mapField="CHAR_VAL_INFO"/>
+</schema>

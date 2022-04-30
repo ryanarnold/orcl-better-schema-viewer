@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<valueSources dataType="lookup" mapField="VAL_SOURCE_FLG" lookup="VAL_SOURCE_FLG"/>
+	<valueType dataType="lookup" mapField="VAL_TYPE_FLG" lookup="VAL_TYPE_FLG"/>
+	<valueAlgorithm type="group">
+		<id mapField="CALC_RULE_VAL_ALG_CD"/>
+	</valueAlgorithm>
+	<billFactor type="group">
+		<id mapField="BF_CD"/>
+	</billFactor>
+	<value dataType="number" mapField="VAL"/>
+	<billFactorValueData type="group">
+		<BillFactorValueData type="list" mapList="BF_VAL_LIST">
+			<gapExists dataType="boolean" mapField="GAP_SW"/>
+			<charValue mapField="CHAR_VAL"/>
+			<startDate dataType="date" mapField="START_DT"/>
+			<endDate dataType="date" mapField="END_DT"/>
+			<effectiveDate dataType="date" mapField="EFFDT"/>
+			<bfValue dataType="number" mapField="VAL"/>
+			<exempt dataType="number" mapField="PCT_EXEMPT"/>
+			<foundOnContract dataType="boolean" mapField="FOUND_ON_CONT_SW"/>
+		</BillFactorValueData>
+	</billFactorValueData>
+</schema>

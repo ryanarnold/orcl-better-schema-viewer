@@ -4,7 +4,7 @@
   margin-top: 10px;
 }
 
-.resultsBox p {
+.resultsBox button {
   padding: 10px;
   margin-bottom: 0;
 }
@@ -18,4 +18,15 @@
 
 .selected {
   background-color: #dfdfdf;
+}
+
+.unbutton {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  display: block;
 }

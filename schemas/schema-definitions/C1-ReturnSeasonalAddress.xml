@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<input type="group">
+		<personId mapField="PER_ID"/>
+	</input>
+	<output type="group">
+		<isSeasonalAddressFound dataType="boolean" mapField="SEAS_ADDR_FOUND_SW"/>
+		<sequence dataType="number" mapField="SEQ_NUM"/>
+		<startMonthDay mapField="SEASON_START_MMDD"/>
+		<endMonthDay mapField="SEASON_END_MMDD"/>
+		<country mapField="COUNTRY"/>
+		<addressLine1 mapField="ADDRESS1"/>
+		<addressLine2 mapField="ADDRESS2"/>
+		<addressLine3 mapField="ADDRESS3"/>
+		<addressLine4 mapField="ADDRESS4"/>
+		<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+		<number1 mapField="NUM1"/>
+		<number2 mapField="NUM2"/>
+		<inCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+		<city mapField="CITY"/>
+		<geographic mapField="GEO_CODE"/>
+		<county mapField="COUNTY"/>
+		<state mapField="STATE"/>
+		<postal mapField="POSTAL"/>
+	</output>
+</schema>

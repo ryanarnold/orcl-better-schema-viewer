@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<lookupValue mdField="F1_SE_NS_CD" required="true" isPrimeKey="true" mapField="F1_EXT_LOOKUP_VALUE"/>
+	<bo suppress="true" isPrimeKey="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<description required="true" mapField="DESCR"/>
+	<overrideDescription mapField="DESCR_OVRD"/>
+	<longDescription mapField="DESCRLONG"/>
+	<lookupUsage required="true" dataType="lookup" default="F1AC" mapField="F1_EXT_LOOKUP_USAGE_FLG" lookup="F1_EXT_LOOKUP_USAGE_FLG"/>
+	<owner suppress="input" dataType="lookup" mapField="OWNER_FLG" lookup="OWNER_FLG"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+</schema>

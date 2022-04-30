@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <lead suppress="blank" mdField="C1_LEAD_INFO_LBL" isPrimeKey="true" fkRef="C1-LEAD" mapField="C1_LEAD_ID"/>
+  <bo suppress="true" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+  <boStatus suppress="input" mapField="BO_STATUS_CD"/>
+  <statusReason suppress="blank" fkRef="F1-STRSN" mapField="BO_STATUS_REASON_CD"/>
+  <initiative fkRef="C1-INITV" mapField="C1_INITIATIVE_CD"/>
+  <salesRepresentative suppress="blank" fkRef="C1-SLSRP" search="C1-GETREP" searchField="C1_REPRESENTATIVE_TYPE_FLG:'C1IN';F1_STATE_CONDITION_FLG:'F1AC'" searchOut="C1_REPRESENTATIVE_CD;" mapField="C1_REPRESENTATIVE_CD"/>
+  <thirdPartyRepresentative suppress="input" fkRef="C1-THDPT" mapField="THRD_PTY_REP_CD"/>
+  <responseChannel suppress="blank" dataType="lookup" mapField="LEAD_RESPONSE_CH_FLG" lookup="LEAD_RESPONSE_CH_FLG"/>
+  <hasSignedUp suppress="blank" mdField="HAS_SIGNED_UP_FLG" dataType="lookup" mapXML="BO_DATA_AREA" lookup="HAS_SIGNED_UP_FLG"/>
+  <createDateTime suppress="true" dataType="dateTime" default="%CurrentDateTime" mapField="CRE_DTTM"/>
+  <statusDateTime suppress="true" dataType="dateTime" mapField="STATUS_UPD_DTTM"/>
+  <version suppress="true" dataType="number" mapField="VERSION"/>
+  <account mdField="C1_ACCT_LBL" required="true" fkRef="C1-RELAC" mapField="PK_VALUE1">
+    <row mapChild="C1_LEAD_REL_OBJ">
+      <MAINT_OBJ_CD is="ACCOUNT"/>
+      <C1_LEAD_REL_OBJ_TYPE_FLG is="C1AC"/>
+    </row>
+  </account>
+  <premise suppress="blank" mdField="LEAD_PREMISE_LBL" fkRef="PREM" mapField="PK_VALUE1">
+    <row mapChild="C1_LEAD_REL_OBJ">
+      <MAINT_OBJ_CD is="PREMISE"/>
+      <C1_LEAD_REL_OBJ_TYPE_FLG is="C1PR"/>
+    </row>
+  </premise>
+  <externalValidation suppress="blank" dataType="lookup" mapField="EXT_VALIDATION_FLG" lookup="EXT_VALIDATION_FLG"/>
+  <externalActivationPriority suppress="blank" dataType="lookup" mapField="EXT_ACTV_PRIORITY_FLG" lookup="EXT_ACTV_PRIORITY_FLG"/>
+  <retryDetails suppress="true" type="group" mapXML="BO_DATA_AREA">
+    <numberOfRetries mdField="C1_NBR_OF_RETRIES" dataType="number" default="0"/>
+    <retryDateTime mdField="C1_RETRY_DTTM" dataType="dateTime"/>
+    <currentErrorState mdField="BO_STATUS_CD"/>
+  </retryDetails>
+  <leadOutcomeRetryDetails suppress="true" type="group" mapXML="BO_DATA_AREA">
+    <numberOfRetries mdField="LEAD_OUTCOME_NBR_RETRIES" dataType="number" default="0"/>
+    <isLeadOutcomeSent mdField="IS_LEAD_OUTCOME_SENT_SW" dataType="boolean"/>
+  </leadOutcomeRetryDetails>
+</schema>

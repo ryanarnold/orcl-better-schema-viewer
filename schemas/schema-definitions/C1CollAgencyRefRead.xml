@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<collectionReferralId mapField="COLL_AGY_REF_ID"/>
+	<accountId mapField="ACCT_ID"/>
+	<startDate dataType="date" mapField="START_DT"/>
+	<collectionAgency mapField="COLL_AGY_CD"/>
+	<referralStatus dataType="lookup" mapField="REF_STATUS_FLG" lookup="REF_STATUS_FLG"/>
+	<writeOffProcess mapField="WO_PROC_ID"/>
+	<eventSequence dataType="number" mapField="EVT_SEQ"/>
+	<user mapField="USER_ID"/>
+	<comments mapField="COMMENTS"/>
+	<collectionAgencyHistory type="list" mapList="HISTORY">
+		<sequence dataType="number" mapField="SEQ_NUM"/>
+		<creDt dataType="date" mapField="CRE_DT"/>
+		<referralAmount dataType="money" mapField="REF_AMT"/>
+		<referralHistoryReason dataType="lookup" mapField="REF_HIST_RSN_FLG" lookup="REF_HIST_RSN_FLG"/>
+		<isSystemGenerated dataType="boolean" mapField="SYS_GEN_SW"/>
+		<triggerBusinessProcess dataType="boolean" mapField="TRIGGER_BP_SW"/>
+		<batchControl mapField="BATCH_CD"/>
+		<batchNumber dataType="number" mapField="BATCH_NBR"/>
+	</collectionAgencyHistory>
+</schema>

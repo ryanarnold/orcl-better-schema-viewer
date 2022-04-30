@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<head type="group">
+		<action/>
+		<key1 type="group">
+			<name default="ACCT_ID"/>
+			<value/>
+		</key1>
+		<key2 type="group">
+			<name default="PER_ID"/>
+			<value/>
+		</key2>
+		<key3 type="group">
+			<name/>
+			<value/>
+		</key3>
+		<key4 type="group">
+			<name/>
+			<value/>
+		</key4>
+		<key5 type="group">
+			<name/>
+			<value/>
+		</key5>
+		<emailAddress/>
+		<webUserId/>
+		<ipAddress/>
+		<cssUser/>
+	</head>
+	<mainData type="group">
+		<mailingAddressInfo type="group">
+			<country mapField="COUNTRY"/>
+			<addressLine1 mapField="ADDRESS1"/>
+			<addressLine2 mapField="ADDRESS2"/>
+			<addressLine3 mapField="ADDRESS3"/>
+			<addressLine4 mapField="ADDRESS4"/>
+			<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+			<number1 mapField="NUM1"/>
+			<number2 mapField="NUM2"/>
+			<inCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+			<city mapField="CITY"/>
+			<geographic mapField="GEO_CODE"/>
+			<county mapField="COUNTY"/>
+			<state mapField="STATE"/>
+			<postal mapField="POSTAL"/>
+		</mailingAddressInfo>
+		<verifyOnly/>
+	</mainData>
+	<custom type="group">
+		<field1 type="group">
+			<name/>
+			<value/>
+		</field1>
+		<field2 type="group">
+			<name/>
+			<value/>
+		</field2>
+		<field3 type="group">
+			<name/>
+			<value/>
+		</field3>
+		<field4 type="group">
+			<name/>
+			<value/>
+		</field4>
+		<field5 type="group">
+			<name/>
+			<value/>
+		</field5>
+		<field6 type="group">
+			<name/>
+			<value/>
+		</field6>
+		<field7 type="group">
+			<name/>
+			<value/>
+		</field7>
+		<field8 type="group">
+			<name/>
+			<value/>
+		</field8>
+		<field9 type="group">
+			<name/>
+			<value/>
+		</field9>
+		<field10 type="group">
+			<name/>
+			<value/>
+		</field10>
+	</custom>
+	<errorInformation type="group">
+		<isInError mdField="IN_ERROR_SW" dataType="boolean" default="false"/>
+		<errorReference type="group">
+			<category mdField="MESSAGE_CAT_NBR" dataType="number"/>
+			<number mdField="MESSAGE_NBR" dataType="number"/>
+		</errorReference>
+		<errorMessage mdField="MESSAGE_TEXT"/>
+	</errorInformation>
+</schema>

@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<input type="group">
+		<accountId mdField="ACCT_ID" fkRef="ACCT"/>
+		<personId mdField="PER_ID" fkRef="PER"/>
+		<newCustomer mdField="C1_NEW_CUSTOMER_FLG" dataType="lookup" lookup="C1_NEW_CUSTOMER_FLG"/>
+		<customerClass mdField="CUST_CL_CD" fkRef="C1-CUSTC"/>
+		<personBusiness mdField="PER_OR_BUS_FLG" dataType="lookup" lookup="PER_OR_BUS_FLG"/>
+	</input>
+	<output type="group">
+		<identifiersList type="list">
+			<idType mdField="ID_TYPE_CD" fkRef="ID TYPE"/>
+			<idTypeDescr mdField="DESCR"/>
+			<formatDescr/>
+		</identifiersList>
+		<campaignMiscFieldsList type="list">
+			<sequence mdField="SEQ_NUM" dataType="number"/>
+			<sortSequence mdField="SORT_SEQ5" dataType="number"/>
+			<defaultValue mapField="BO_DATA_AREA"/>
+			<validValuesList type="list">
+				<value mapField="BO_DATA_AREA"/>
+				<valueDescr mapField="BO_DATA_AREA"/>
+			</validValuesList>
+			<campaignFieldPrompt mdField="CAMP_FLD_PROMPT"/>
+			<description mdField="DESCR"/>
+			<fieldTypeUsage mdField="CAMP_FLDTY_USG_FLG" dataType="lookup" lookup="CAMP_FLDTY_USG_FLG"/>
+		</campaignMiscFieldsList>
+		<entityName mdField="ENTITY_NAME"/>
+		<country mapField="COUNTRY"/>
+		<addressLine1 mapField="ADDRESS1"/>
+		<addressLine2 mapField="ADDRESS2"/>
+		<addressLine3 mapField="ADDRESS3"/>
+		<addressLine4 mapField="ADDRESS4"/>
+		<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+		<number1 mapField="NUM1"/>
+		<number2 mapField="NUM2"/>
+		<inCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+		<city mapField="CITY"/>
+		<geographic mapField="GEO_CODE"/>
+		<county mapField="COUNTY"/>
+		<state mapField="STATE"/>
+		<postal mapField="POSTAL"/>
+		<phoneList type="list">
+			<sequence mdField="SEQ_NUM" dataType="number"/>
+			<phoneType mdField="PHONE_TYPE_CD" fkRef="C1-PHTYP"/>
+			<phoneTypeDescr mdField="DESCR"/>
+			<phoneNumber mdField="PHONE"/>
+			<extension mdField="EXTENSION"/>
+		</phoneList>
+		<premiseInfo/>
+		<saCount/>
+	</output>
+</schema>

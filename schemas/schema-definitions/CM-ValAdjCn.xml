@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<caseId/>
+	<adjustmentCancelReason/>
+	<totalAmount/>
+	<transactionRefId/>
+	<userId/>
+	<adjustments type="list">
+		<adjustmentDate mdField="CRE_DT" dataType="date"/>
+		<accountId mdField="ACCT_ID"/>
+		<adjustmentId mdField="ADJ_ID" fkRef="ADJ"/>
+		<adjustmentAmount/>
+	</adjustments>
+</schema>

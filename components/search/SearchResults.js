@@ -19,10 +19,12 @@ export class SearchResults extends Component {
     return (
       <div className={styles.resultsBox}>
         {schemaList.map((schema) => (
-          <button type="button" key={schema.name} schemaname={schema.name} className={schema.name === selectedSchema ? styles.selected : ''} onMouseEnter={this.handleMouseEnter} onClick={handleMouseClick}>
-            {schema.name}
-            <span className={styles.schemaType}>{schema.type}</span>
-          </button>
+          <div key={schema.name} className={schema.name === selectedSchema ? styles.selected : ''}>
+            <button type="button" className={styles.unbutton} onClick={handleMouseClick} schemaname={schema.name} onMouseEnter={this.handleMouseEnter}>
+              {schema.name}
+              <span className={styles.schemaType}>{schema.type}</span>
+            </button>
+          </div>
         ))}
       </div>
     );

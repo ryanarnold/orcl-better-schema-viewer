@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<leadEventType required="true" isPrimeKey="true" mapField="C1_LEAD_EVT_TYPE_CD"/>
+	<description required="true" mapField="DESCR100"/>
+	<longDescription mapField="DESCRLONG"/>
+	<bo suppress="input" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<transactionalBo required="true" default="C1-ThirdPartyLeadEvt" fkRef="F1-BUSOB" mapField="TRANS_BUS_OBJ_CD"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<thirdPartyRepresentative mdField="THRD_PTY_REP_CD" required="true" fkRef="C1-THDPT" mapXML="BO_DATA_AREA"/>
+	<notificationOutboundMsgType mdField="NTFY_CRE_THRD_PTY_OMSG_TY_CD" required="true" fkRef="F1-OMTYP" mapXML="BO_DATA_AREA"/>
+	<cancellationOutboundMsgType mdField="NTFY_CAN_THRD_PTY_OMSG_TY_CD" required="true" fkRef="F1-OMTYP" mapXML="BO_DATA_AREA"/>
+	<cancelReasonAccountNotEligible mdField="LEAD_EVT_CAN_RSN_ACCT_NE_CD" required="true" mapXML="BO_DATA_AREA"/>
+	<leadEventCancelReason mdField="LEAD_EVT_CAN_RSN_DEFAULT_CD" required="true" mapXML="BO_DATA_AREA"/>
+	<leadDiscardReason mdField="LEAD_DISC_RSN_THRD_PTY_SYS_CD" required="true" mapXML="BO_DATA_AREA"/>
+	<steps type="group">
+		<step type="list" mapChild="C1_LETY_STEP_TYPE">
+			<stepTypeSeq dataType="number" isPrimeKey="true" mapField="LEAD_EVT_STEP_SEQ"/>
+			<stepType isPrimeKey="true" mapField="LEAD_EVT_STEP_TYPE_CD"/>
+			<stepTypeDescription mapField="DESCR100"/>
+			<stepVisibility dataType="lookup" mapField="LEAD_EVT_STEP_VSBLTY_FLG" lookup="LEAD_EVT_STEP_VSBLTY_FLG"/>
+		</step>
+	</steps>
+</schema>

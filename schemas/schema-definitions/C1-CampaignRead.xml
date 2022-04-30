@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+  <campaign mapField="CAMPAIGN_CD"/>
+  <defaultFlag mapField="DEFAULT_FOR_FLG"/>
+  <description mapField="NAVO_DESCR"/>
+  <includePackages dataType="lookup" mapField="INC_PKG_FLG" lookup="INC_PKG_FLG"/>
+  <orderOpenOption dataType="lookup" mapField="ENRL_OPEN_OPT_FLG" lookup="ENRL_OPEN_OPT_FLG"/>
+  <campaignStatus dataType="lookup" mapField="CAMP_STATUS_FLG" lookup="CAMP_STATUS_FLG"/>
+  <customerClass mapField="CUST_CL_CD"/>
+  <personOrBusiness dataType="lookup" mapField="PER_OR_BUS_FLG" lookup="PER_OR_BUS_FLG"/>
+  <phoneType1 mapField="PHONE_TYPE_CD1"/>
+  <phoneType2 mapField="PHONE_TYPE_CD2"/>
+  <premiseType mapField="PREM_TYPE_CD"/>
+  <geographicType mapField="GEO_TYPE_CD"/>
+  <accountManagementGroup mapField="ACCT_MGMT_GRP_CD"/>
+  <holdToDoRole mapField="CALLBK_ROLE_ID"/>
+  <isOrderCompletionWithoutPackageAllowed dataType="boolean" mapField="ALW_COMPL_NOPKG_SW"/>
+  <accountUsage dataType="lookup" mapField="ACCT_OPT_FLG" lookup="ACCT_OPT_FLG"/>
+  <version dataType="number" mapField="VERSION"/>
+  <premiseUsage dataType="lookup" mapField="PREM_OPT_FLG" lookup="PREM_OPT_FLG"/>
+  <orderCompletionNavigationOption mapField="COMPL_NAV_OPT_CD"/>
+  <language mapField="LANGUAGE_CD"/>
+  <description2 mapField="DESCR"/>
+  <longDescription mapField="DESCRLONG"/>
+  <orderCompletionWithoutPackageLabel mapField="COMPL_NOPKG_LABEL"/>
+  <campFldType type="list" mapList="CAMP_FLD_TYPE">
+    <campaign2 mapField="CAMPAIGN_CD"/>
+    <sequence dataType="number" mapField="SEQ_NUM"/>
+    <sortSequence dataType="number" mapField="SORT_SEQ5"/>
+    <campaignFieldtypeUsage dataType="lookup" mapField="CAMP_FLDTY_USG_FLG" lookup="CAMP_FLDTY_USG_FLG"/>
+    <typeOfResponse dataType="lookup" mapField="CAMP_FLD_TYPE_FLG" lookup="CAMP_FLD_TYPE_FLG"/>
+    <campaignCharacteristicEntity dataType="lookup" mapField="CAMP_CHAR_ENT_FLG" lookup="CAMP_CHAR_ENT_FLG"/>
+    <characteristicType mapField="CHAR_TYPE_CD"/>
+    <characteristicValue mapField="CHAR_VAL"/>
+    <adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+    <foreignKeyCharValue mapField="VAL_FK1"/>
+    <foreignKeyValue2 mapField="VAL_FK2"/>
+    <foreignKeyValue3 mapField="VAL_FK3"/>
+    <foreignKeyValue4 mapField="VAL_FK4"/>
+    <foreignKeyValue5 mapField="VAL_FK5"/>
+    <columnReference mapField="COL_REF_CD"/>
+    <columnReferenceValue mapField="COL_REF_VAL"/>
+    <version2 dataType="number" mapField="VERSION"/>
+    <campaignFieldtypeDependency dataType="lookup" mapField="CAMP_FLDTY_DPN_FLG" lookup="CAMP_FLDTY_DPN_FLG"/>
+    <language2 mapField="LANGUAGE_CD"/>
+    <campaignFieldPrompt mapField="CAMP_FLD_PROMPT"/>
+    <description3 mapField="DESCR"/>
+    <searchNavigationKey mapField="SRCH_NAV_KEY"/>
+    <navigationOption mapField="NAV_OPT_CD"/>
+    <table mapField="TBL_NAME"/>
+    <infoProgram mapField="INFO_PRG"/>
+    <characteristicType2 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+    <characteristicValueDescription mapField="CHAR_VAL_DESCR"/>
+    <foreignKeyCharacteristicValue mapField="VAL_FK_STR"/>
+    <foreignKeyInformation mapField="VAL_FK_INFO"/>
+    <isCompoundPrimaryKey dataType="boolean" mapField="COMP_PK_SW"/>
+    <charateristicValue mapField="COMP_PK_STR"/>
+    <isColumnReferenceForeignKey dataType="boolean" mapField="COL_REF_FK_SW"/>
+    <characteristicType3 mapField="CHAR_TYPE_DESCR"/>
+  </campFldType>
+  <campAlg type="list" mapList="CAMP_ALG">
+    <campaign3 mapField="CAMPAIGN_CD"/>
+    <campaignAlgorithmEntity dataType="lookup" mapField="CAMP_ALG_ENT_FLG" lookup="CAMP_ALG_ENT_FLG"/>
+    <sequence2 dataType="number" mapField="SEQ_NUM"/>
+    <algorithm mapField="ALG_CD"/>
+    <version3 dataType="number" mapField="VERSION"/>
+  </campAlg>
+  <campPkg type="list" mapList="CAMP_PKG">
+    <salesPackageId mapField="PACKAGE_ID"/>
+  </campPkg>
+</schema>

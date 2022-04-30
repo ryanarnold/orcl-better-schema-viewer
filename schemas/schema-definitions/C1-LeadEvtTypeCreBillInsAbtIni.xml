@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<leadEventType required="true" isPrimeKey="true" mapField="C1_LEAD_EVT_TYPE_CD"/>
+	<description required="true" mapField="DESCR100"/>
+	<longDescription mapField="DESCRLONG"/>
+	<bo suppress="input" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<transactionalBo required="true" fkRef="F1-BUSOB" mapField="TRANS_BUS_OBJ_CD"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<billMessage mdField="BILL_MSG_CD" required="true" fkRef="C1BILMSG" mapXML="BO_DATA_AREA"/>
+	<leadDiscardReasonIfNoAccounts mdField="C1_LEAD_DISCARD_RSN_NA_CD" required="true" mapXML="BO_DATA_AREA"/>
+</schema>

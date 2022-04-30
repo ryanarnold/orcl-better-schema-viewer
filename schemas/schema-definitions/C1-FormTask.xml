@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <serviceTaskId mdField="C1_SS_SERVICE_TASK_INFO_LBL" isPrimeKey="true" fkRef="F1-STASK" mapField="F1_SVC_TASK_ID"/>
+  <serviceTaskType fkRef="F1-STKTY" mapField="F1_STASK_TYPE_CD"/>
+  <bo suppress="true" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+  <boStatus mapField="BO_STATUS_CD"/>
+  <statusReason suppress="blank" fkRef="F1-STRSN" mapField="BO_STATUS_REASON_CD"/>
+  <createDateTime suppress="true" dataType="dateTime" default="%CurrentDateTime" mapField="CRE_DTTM"/>
+  <statusDateTime suppress="true" dataType="dateTime" mapField="STATUS_UPD_DTTM"/>
+  <version suppress="true" dataType="number" mapField="VERSION"/>
+  <webUserId mdField="WX_SS_USER_ID" mapField="ADHOC_CHAR_VAL">
+    <row mapChild="F1_SVC_TASK_CHAR">
+      <CHAR_TYPE_CD is="C1-WBUSR"/>
+    </row>
+  </webUserId>
+  <cssUser mdField="WX_SS_CSSUSER" mapField="ADHOC_CHAR_VAL">
+    <row mapChild="F1_SVC_TASK_CHAR">
+      <CHAR_TYPE_CD is="C1-SSUSR"/>
+    </row>
+  </cssUser>
+  <emailAddress mdField="EMAILID" mapField="ADHOC_CHAR_VAL">
+    <row mapChild="F1_SVC_TASK_CHAR">
+      <CHAR_TYPE_CD is="C1-EMLID"/>
+    </row>
+  </emailAddress>
+  <ipAddress mdField="IPADDRESS" mapField="ADHOC_CHAR_VAL">
+    <row mapChild="F1_SVC_TASK_CHAR">
+      <CHAR_TYPE_CD is="C1-IPADD"/>
+    </row>
+  </ipAddress>
+  <accountId mdField="ACCOUNT_TLBL" fkRef="ACCT" mapField="PK_VALUE1">
+    <row mapChild="F1_SVC_TASK_REL_OBJ">
+      <MAINT_OBJ_CD is="ACCOUNT"/>
+    </row>
+  </accountId>
+  <personId mdField="PERSON_TLBL" fkRef="PER" mapField="PK_VALUE1">
+    <row mapChild="F1_SVC_TASK_REL_OBJ">
+      <MAINT_OBJ_CD is="PERSON"/>
+    </row>
+  </personId>
+  <additionalInformation type="list" mapXML="BO_DATA_AREA">
+    <sequence mdField="SEQ_NUM" dataType="number" isPrimeKey="true"/>
+    <campaignFieldPrompt mdField="C1_CAMP_FLD_PROMPT"/>
+    <responseValue mdField="C1_RESP_VAL"/>
+  </additionalInformation>
+  <commentsHistory suppress="true" type="list" mapXML="BO_DATA_AREA">
+    <dateTime mdField="C1_COMMENTS_DTTM" dataType="dateTime" isPrimeKey="true" default="%CurrentDateTime"/>
+    <enteredBy mdField="C1_ENTERED_BY_FLG" required="true" dataType="lookup" default="C1US" lookup="C1_ENTERED_BY_FLG"/>
+    <user suppress="true" mdField="C1_CSS_USER" default="%CurrentUser"/>
+    <webUser mdField="C1_CSS_WEBUSER" default="%CurrentUser"/>
+    <show mdField="C1_SHOW_LBL" dataType="boolean"/>
+    <comment mdField="C1_FORMS_COMMENT" required="true"/>
+  </commentsHistory>
+  <notifyCharType suppress="true" default="C1-NTFY" mapField="CHAR_TYPE_CD">
+    <row mapChild="F1_SVC_TASK_CHAR">
+      <CHAR_TYPE_CD is="C1-NTFY"/>
+    </row>
+  </notifyCharType>
+  <notifyCharVal suppress="true" default="Y" mapField="CHAR_VAL">
+    <row mapChild="F1_SVC_TASK_CHAR">
+      <CHAR_TYPE_CD is="C1-NTFY"/>
+    </row>
+  </notifyCharVal>
+  <attachments suppress="true" type="list" mapChild="F1_SVC_TASK_CHAR">
+    <rowFilter>
+      <CHAR_TYPE_CD is="C1-ATCHM"/>
+    </rowFilter>
+    <sequence dataType="number" mapField="SEQ_NUM"/>
+    <url mdField="URL" mapField="ADHOC_CHAR_VAL"/>
+    <characteristicType suppress="true" mapField="CHAR_TYPE_CD"/>
+  </attachments>
+  <notificationRetry type="group" mapXML="BO_DATA_AREA">
+    <retryDateTime mdField="C1_RETRY_DTTM" dataType="dateTime"/>
+    <numberOfRetries mdField="C1_NBR_OF_RETRIES" dataType="number" default="0"/>
+  </notificationRetry>
+</schema>

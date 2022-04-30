@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<readDateTime mdField="READ_DTTM" dataType="dateTime"/>
+	<meterReadSource mdField="MR_SOURCE_CD"/>
+	<registerCollection type="group">
+		<registers type="list">
+			<readSequence mdField="READ_SEQ" dataType="number" isPrimeKey="true"/>
+			<registerId mdField="REG_ID"/>
+			<reading mdField="REG_READING" dataType="number"/>
+		</registers>
+	</registerCollection>
+</schema>

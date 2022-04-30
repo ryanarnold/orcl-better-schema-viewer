@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <attachmentId mdField="F1-ATTACHIDLBL" fkRef="F1ATTACH" mapField="ATTACHMENT_ID"/>
+  <hostExternalId mapField="ADHOC_CHAR_VAL">
+    <row mapChild="F1_ATTACHMENT_CHAR">
+      <CHAR_TYPE_CD is="C1-HSTEX"/>
+    </row>
+  </hostExternalId>
+</schema>

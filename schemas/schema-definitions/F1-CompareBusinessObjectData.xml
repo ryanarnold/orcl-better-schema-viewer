@@ -1,0 +1,110 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<bo mapField="BUS_OBJ_CD"/>
+	<before type="raw" mapXML="XML_BEFORE"/>
+	<after type="raw" mapXML="XML_AFTER"/>
+	<fieldChange type="list" mapList="FLD_CHNGS1">
+		<name mapField="NAME"/>
+		<schemaPath mapField="SCHEMA_XPATH"/>
+		<label mapField="LABEL_LONG"/>
+		<dataType mapField="DATA_TYPE"/>
+		<foreignKeyReference mapField="FK_REF_CD"/>
+		<lookupField mapField="LOOKUP_FIELD"/>
+		<mdFieldName mapField="FLD_NAME"/>
+		<valueBefore mapField="VAL_BEFORE"/>
+		<valueAfter mapField="VAL_AFTER"/>
+	</fieldChange>
+	<listChange type="list" mapList="LIST_CHNGS1">
+		<listName mapField="NAME"/>
+		<label mapField="LABEL_LONG"/>
+		<schemaPath mapField="SCHEMA_XPATH"/>
+		<elementChange type="list" mapList="LIST_ELEM_CHNGS1">
+			<primeKey type="list" mapList="PK_VALS1">
+				<name mapField="NAME"/>
+				<value mapField="PK_VAL"/>
+			</primeKey>
+			<fieldChange type="list" mapList="FLD_CHNGS2">
+				<name mapField="NAME"/>
+				<schemaPath mapField="SCHEMA_XPATH"/>
+				<label mapField="LABEL_LONG"/>
+				<dataType mapField="DATA_TYPE"/>
+				<foreignKeyReference mapField="FK_REF_CD"/>
+				<lookupField mapField="LOOKUP_FIELD"/>
+				<mdFieldName mapField="FLD_NAME"/>
+				<valueBefore mapField="VAL_BEFORE"/>
+				<valueAfter mapField="VAL_AFTER"/>
+			</fieldChange>
+			<listChange type="list" mapList="LIST_CHNGS2">
+				<listName mapField="NAME"/>
+				<label mapField="LABEL_LONG"/>
+				<schemaPath mapField="SCHEMA_XPATH"/>
+				<elementChange type="list" mapList="LIST_ELEM_CHNGS2">
+					<primeKey type="list" mapList="PK_VALS2">
+						<name mapField="NAME"/>
+						<value mapField="PK_VAL"/>
+					</primeKey>
+					<fieldChange type="list" mapList="FLD_CHNGS3">
+						<name mapField="NAME"/>
+						<schemaPath mapField="SCHEMA_XPATH"/>
+						<label mapField="LABEL_LONG"/>
+						<dataType mapField="DATA_TYPE"/>
+						<foreignKeyReference mapField="FK_REF_CD"/>
+						<lookupField mapField="LOOKUP_FIELD"/>
+						<mdFieldName mapField="FLD_NAME"/>
+						<valueBefore mapField="VAL_BEFORE"/>
+						<valueAfter mapField="VAL_AFTER"/>
+					</fieldChange>
+					<listChange type="list" mapList="LIST_CHNGS3">
+						<listName mapField="NAME"/>
+						<label mapField="LABEL_LONG"/>
+						<schemaPath mapField="SCHEMA_XPATH"/>
+						<elementChange type="list" mapList="LIST_ELEM_CHNGS3">
+							<primeKey type="list" mapList="PK_VALS3">
+								<name mapField="NAME"/>
+								<value mapField="PK_VAL"/>
+							</primeKey>
+							<fieldChange type="list" mapList="FLD_CHNGS4">
+								<name mapField="NAME"/>
+								<schemaPath mapField="SCHEMA_XPATH"/>
+								<label mapField="LABEL_LONG"/>
+								<dataType mapField="DATA_TYPE"/>
+								<foreignKeyReference mapField="FK_REF_CD"/>
+								<lookupField mapField="LOOKUP_FIELD"/>
+								<mdFieldName mapField="FLD_NAME"/>
+								<valueBefore mapField="VAL_BEFORE"/>
+								<valueAfter mapField="VAL_AFTER"/>
+							</fieldChange>
+							<listChange type="list" mapList="LIST_CHNGS4">
+								<listName mapField="NAME"/>
+								<label mapField="LABEL_LONG"/>
+								<schemaPath mapField="SCHEMA_XPATH"/>
+								<elementChange type="list" mapList="LIST_ELEM_CHNGS4">
+									<primeKey type="list" mapList="PK_VALS4">
+										<name mapField="NAME"/>
+										<value mapField="PK_VAL"/>
+									</primeKey>
+									<fieldChange type="list" mapList="FLD_CHNGS5">
+										<name mapField="NAME"/>
+										<schemaPath mapField="SCHEMA_XPATH"/>
+										<label mapField="LABEL_LONG"/>
+										<dataType mapField="DATA_TYPE"/>
+										<foreignKeyReference mapField="FK_REF_CD"/>
+										<lookupField mapField="LOOKUP_FIELD"/>
+										<mdFieldName mapField="FLD_NAME"/>
+										<valueBefore mapField="VAL_BEFORE"/>
+										<valueAfter mapField="VAL_AFTER"/>
+									</fieldChange>
+									<listChange type="list" mapList="LIST_CHNGS5">
+										<listName mapField="NAME"/>
+										<label mapField="LABEL_LONG"/>
+										<schemaPath mapField="SCHEMA_XPATH"/>
+									</listChange>
+								</elementChange>
+							</listChange>
+						</elementChange>
+					</listChange>
+				</elementChange>
+			</listChange>
+		</elementChange>
+	</listChange>
+</schema>

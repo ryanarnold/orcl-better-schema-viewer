@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<billSegmentId required="true" mapField="BSEG_ID"/>
+	<saId mapField="SA_ID"/>
+	<billId mapField="BILL_ID"/>
+	<startDate dataType="date" mapField="START_DT"/>
+	<endDate dataType="date" mapField="END_DT"/>
+	<premiseId mapField="PREM_ID"/>
+	<billSegmentStatus dataType="lookup" mapField="BSEG_STAT_FLG" lookup="BSEG_STAT_FLG"/>
+	<usageStartDateTime dataType="dateTime" mapField="MDM_START_DTTM"/>
+	<usageEndDateTime dataType="dateTime" mapField="MDM_END_DTTM"/>
+	<sq type="group">
+		<sqs type="list" mapChild="CI_BSEG_SQ">
+			<uom fkRef="C1-UOM" mapField="UOM_CD"/>
+			<tou fkRef="C1-TOU" mapField="TOU_CD"/>
+			<sqi fkRef="C1-SQI" mapField="SQI_CD"/>
+			<initSq dataType="number" mapField="INIT_SQ"/>
+			<billSq dataType="number" mapField="BILL_SQ"/>
+		</sqs>
+	</sq>
+</schema>

@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<syncRequestId mdField="SYNC_REQ_INFORMATION" isPrimeKey="true" fkRef="F1-SYNRQ" mapField="F1_SYNC_REQ_ID"/>
+	<bo suppress="true" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<boStatus mapField="BO_STATUS_CD"/>
+	<statusReason suppress="input" fkRef="F1-STRSN" mapField="BO_STATUS_REASON_CD"/>
+	<createDateTime suppress="true" dataType="dateTime" mapField="CRE_DTTM"/>
+	<statusDateTime suppress="true" dataType="dateTime" mapField="STATUS_UPD_DTTM"/>
+	<syncRequired suppress="true" mdField="F1_SYNC_REQUIRED_FLG" dataType="lookup" default="F1NQ" mapXML="BO_DATA_AREA" lookup="F1_SYNC_REQUIRED_FLG"/>
+	<forceSync suppress="true" mdField="F1_FORCE_SYNC_FLG" dataType="lookup" mapXML="BO_DATA_AREA" lookup="F1_FORCE_SYNC_FLG"/>
+	<initialLoad suppress="true" mdField="F1_INITIAL_LOAD_SYNC_FLG" dataType="lookup" default="F1IC" mapXML="BO_DATA_AREA" lookup="F1_INITIAL_LOAD_SYNC_FLG"/>
+	<mo suppress="true" required="true" fkRef="F1-MO" mapField="MAINT_OBJ_CD"/>
+	<pkValue1 suppress="true" required="true" mapField="PK_VALUE1"/>
+	<pkValue2 suppress="true" mapField="PK_VALUE2"/>
+	<pkValue3 suppress="true" mapField="PK_VALUE3"/>
+	<pkValue4 suppress="true" mapField="PK_VALUE4"/>
+	<pkValue5 suppress="true" mapField="PK_VALUE5"/>
+	<snapshotDA suppress="true" mdField="DATA_AREA_CD" fkRef="F1-DATAR" mapXML="BO_DATA_AREA"/>
+	<postScript suppress="true" mdField="SCR_CD" fkRef="F1-SCR" mapXML="BO_DATA_AREA"/>
+	<cancelReason suppress="blank" mdField="F1_SYNC_REQ_CANCEL_RSN_FLG" dataType="lookup" mapXML="BO_DATA_AREA" lookup="F1_SYNC_REQ_CANCEL_RSN_FLG"/>
+	<discardReason suppress="blank" mdField="F1_SYNC_REQ_DISCARD_RSN_FLG" dataType="lookup" mapXML="BO_DATA_AREA" lookup="F1_SYNC_REQ_DISCARD_RSN_FLG"/>
+	<sourceSystem suppress="true" mdField="F1_SOURCE_SYSTEM" mapXML="BO_DATA_AREA"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<externalSystem suppress="true" mapField="CHAR_VAL_FK1">
+		<row mapChild="F1_SYNC_REQ_CHAR">
+			<CHAR_TYPE_CD is="F1-EXSYS"/>
+			<SEQ_NUM is="1"/>
+		</row>
+	</externalSystem>
+	<externalIds suppress="true" type="group" mapXML="BO_DATA_AREA">
+		<entityIdList type="list">
+			<entity mdField="F1_ENTITY_LBL" isPrimeKey="true"/>
+			<externalPk1 mdField="PK_VAL1_LBL"/>
+			<externalPk2 mdField="PK_VAL2_LBL"/>
+			<externalPk3 mdField="PK_VAL3_LBL"/>
+			<externalPk4 mdField="PK_VAL4_LBL"/>
+			<externalPk5 mdField="PK_VAL5_LBL"/>
+		</entityIdList>
+	</externalIds>
+	<exceptionInfo suppress="true" type="list" mapXML="BO_DATA_AREA">
+		<sequence mdField="SEQ_NUM" dataType="number" isPrimeKey="true"/>
+		<messageCategory mdField="MESSAGE_CAT_NBR" dataType="number"/>
+		<messageNumber mdField="MESSAGE_NBR" dataType="number"/>
+		<comments mdField="COMMENTS"/>
+		<messageParameters type="list">
+			<parameterSequence mdField="PARM_SEQ" dataType="number" isPrimeKey="true"/>
+			<messageParameterValue mdField="MSG_PARM_VAL"/>
+		</messageParameters>
+	</exceptionInfo>
+	<premiseBO suppress="true" mdField="BUS_OBJ_CD" fkRef="F1-BUSOB" mapXML="BO_DATA_AREA"/>
+	<spBO suppress="true" mdField="BUS_OBJ_CD" fkRef="F1-BUSOB" mapXML="BO_DATA_AREA"/>
+	<syncRequestDetails suppress="true" type="group" mapXML="BO_DATA_AREA">
+		<initialSnapshot type="group">
+			<spType mdField="SP_TYPE_CD"/>
+			<spStatus mdField="SP_STATUS_FLG" dataType="lookup" lookup="SP_STATUS_FLG"/>
+			<spSourceStatus mdField="SP_SRC_STATUS_FLG" dataType="lookup" lookup="SP_SRC_STATUS_FLG"/>
+			<disconnectLocation mdField="DISCON_LOC_CD"/>
+			<measurementCycle mdField="MR_CYC_CD"/>
+			<measurementCycleRoute mdField="MR_RTE_CD"/>
+			<lifeSupportSensitiveLoad mdField="LS_SL_FLG" dataType="lookup" lookup="LS_SL_FLG"/>
+			<country mdField="COUNTRY"/>
+			<customElements type="raw"/>
+			<formattedElements type="raw"/>
+		</initialSnapshot>
+		<finalSnapshot type="group">
+			<spType mdField="SP_TYPE_CD"/>
+			<spStatus mdField="SP_STATUS_FLG" dataType="lookup" lookup="SP_STATUS_FLG"/>
+			<spSourceStatus mdField="SP_SRC_STATUS_FLG" dataType="lookup" lookup="SP_SRC_STATUS_FLG"/>
+			<disconnectLocation mdField="DISCON_LOC_CD"/>
+			<measurementCycle mdField="MR_CYC_CD"/>
+			<measurementCycleRoute mdField="MR_RTE_CD"/>
+			<lifeSupportSensitiveLoad mdField="LS_SL_FLG" dataType="lookup" lookup="LS_SL_FLG"/>
+			<country mdField="COUNTRY"/>
+			<customElements type="raw"/>
+			<formattedElements type="raw"/>
+		</finalSnapshot>
+	</syncRequestDetails>
+</schema>

@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<serviceTaskId fkRef="F1-STASK" mapField="F1_SVC_TASK_ID"/>
+	<bo required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<boStatus mapField="BO_STATUS_CD"/>
+	<createDateTime dataType="dateTime" default="%CurrentDateTime" mapField="CRE_DTTM"/>
+	<statusDateTime dataType="dateTime" mapField="STATUS_UPD_DTTM"/>
+	<serviceTaskType fkRef="F1-STKTY" mapField="F1_STASK_TYPE_CD"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<faId mdField="FA_ID" fkRef="FA-ID" mapField="PK_VALUE1">
+		<row mapChild="F1_SVC_TASK_REL_OBJ">
+			<MAINT_OBJ_CD is="FA"/>
+			<SEQ_NUM is="1"/>
+		</row>
+	</faId>
+	<spId mdField="SP_ID" fkRef="SP" mapField="PK_VALUE1">
+		<row mapChild="F1_SVC_TASK_REL_OBJ">
+			<MAINT_OBJ_CD is="SP"/>
+			<SEQ_NUM is="1"/>
+		</row>
+	</spId>
+	<accountId mdField="ACCT_ID" fkRef="ACCT" mapField="PK_VALUE1">
+		<row mapChild="F1_SVC_TASK_REL_OBJ">
+			<MAINT_OBJ_CD is="ACCOUNT"/>
+			<SEQ_NUM is="1"/>
+		</row>
+	</accountId>
+	<personId mdField="PER_ID" fkRef="PER" mapField="PK_VALUE1">
+		<row mapChild="F1_SVC_TASK_REL_OBJ">
+			<MAINT_OBJ_CD is="PERSON"/>
+			<SEQ_NUM is="1"/>
+		</row>
+	</personId>
+	<cancelReason mdField="C1_SVC_REQ_CAN_RSN_FLG" dataType="lookup" mapXML="BO_DATA_AREA" lookup="C1_SVC_REQ_CAN_RSN_FLG"/>
+</schema>

@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<input type="group">
+		<option dataType="lookup" private="true" default="C1CB" mapField="RE_HELPER_OPT_FLG" lookup="RE_HELPER_OPT_FLG"/>
+		<startDate required="true" dataType="date" mapField="START_DT"/>
+		<endDate required="true" dataType="date" mapField="END_DT"/>
+		<billFactor type="group">
+			<id required="true" mapField="BF_CD"/>
+		</billFactor>
+	</input>
+	<inputOutput type="group">
+		<billFactorValueDataList type="group">
+			<BillFactorValueData type="list" mapList="BF_VAL_LIST">
+				<gapExists dataType="boolean" mapField="GAP_SW"/>
+				<charValue mapField="CHAR_VAL"/>
+				<startDate dataType="date" mapField="START_DT"/>
+				<endDate dataType="date" mapField="END_DT"/>
+				<effectiveDate dataType="date" mapField="EFFDT"/>
+				<bfValue dataType="number" mapField="VAL"/>
+				<exempt dataType="number" mapField="PCT_EXEMPT"/>
+				<foundOnContract dataType="boolean" mapField="FOUND_ON_CONT_SW"/>
+			</BillFactorValueData>
+		</billFactorValueDataList>
+	</inputOutput>
+	<output type="group">
+		<bfValue dataType="number" mapField="VAL"/>
+	</output>
+</schema>

@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<input type="group">
+		<option dataType="lookup" private="true" default="C1DP" mapField="RE_HELPER_OPT_FLG" lookup="RE_HELPER_OPT_FLG"/>
+		<outerPeriod type="group">
+			<startDate mdField="START_DT" required="true" dataType="date" mapField="OUTER_START_DT"/>
+			<endDate mdField="END_DT" required="true" dataType="date" mapField="OUTER_END_DT"/>
+		</outerPeriod>
+		<innerPeriod type="group">
+			<startDate required="true" dataType="date" mapField="START_DT"/>
+			<endDate required="true" dataType="date" mapField="END_DT"/>
+		</innerPeriod>
+	</input>
+	<output type="group">
+		<seasonalPeriodData type="group">
+			<seasonListData type="group">
+				<seasonStart mapField="SEASON_START_MMDD"/>
+				<seasonEnd mapField="SEASON_END_MMDD"/>
+			</seasonListData>
+			<seasonDays mdField="F1_DAYS" dataType="number" mapField="SEAS_DAYS"/>
+			<startDate mdField="START_DT" dataType="date" mapField="SEAS_PER_START_DT"/>
+			<endDate mdField="END_DT" dataType="date" mapField="SEAS_PER_END_DT"/>
+		</seasonalPeriodData>
+	</output>
+</schema>

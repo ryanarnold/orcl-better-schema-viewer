@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<leadEvent mdField="C1_LEAD_EVT_ID"/>
+	<shouldCompleteEvent dataType="boolean"/>
+	<shouldCancelEvent dataType="boolean"/>
+	<isAccountEligible dataType="boolean"/>
+	<finalDate mdField="C1_FINAL_DT" dataType="date"/>
+	<step type="group">
+		<steps type="list">
+			<seq mdField="LEAD_EVT_STEP_SEQ"/>
+			<stepId mdField="LEAD_EVT_STEP_ID"/>
+			<stepType mdField="LEAD_EVT_STEP_TYPE_CD"/>
+			<descr mdField="DESCR100"/>
+			<intendedWorkDttm mdField="LEAD_EVT_STEP_WORK_DTTM" dataType="dateTime"/>
+			<completionDttm mdField="LEAD_EVT_STEP_COMPLETE_DTTM" dataType="dateTime"/>
+			<comment mdField="DESCRLONG"/>
+		</steps>
+	</step>
+</schema>

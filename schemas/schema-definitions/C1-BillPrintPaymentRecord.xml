@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <printerKey default="0600"/>
+  <sortKey type="group">
+    <billPrintIntercept mapField="USER_ID"/>
+    <billId mapField="BILL_ID"/>
+    <sequence mdField="BILL_PRT_SEQ_NO" dataType="number"/>
+    <copyNbr mdField="NBR_BILL_COPIES" dataType="number"/>
+    <billRecGrpSeq/>
+    <recTypeNbr/>
+    <premiseSeq type="group">
+      <state mapField="STATE"/>
+      <city mapField="CITY"/>
+      <address1 mapField="ADDRESS1"/>
+      <premiseId mapField="PREM_ID"/>
+    </premiseSeq>
+    <nonPremSaSeq type="group">
+      <saPrtPriority dataType="lookup" mapField="BILL_PRT_PRIO_FLG" lookup="BILL_PRT_PRIO_FLG"/>
+      <saId mapField="SA_ID"/>
+      <saRecGrpSeq/>
+      <bsegAdjDetails type="group">
+        <bsegAdjDate mdField="ADJ_DT" dataType="date"/>
+        <bsegAdjId mdField="ADJ_ID"/>
+        <bsegRecGrpSeq/>
+        <calcHdrLineDetails type="group">
+          <hdrSeqBsegMsgsNbr/>
+          <calcHdrRecGrpSeq/>
+          <calcLineSeq/>
+        </calcHdrLineDetails>
+      </bsegAdjDetails>
+    </nonPremSaSeq>
+    <premiseRecordGroup type="group">
+      <premRecGrpSeq/>
+      <saDetails type="group">
+        <saPrtPriority dataType="lookup" mapField="BILL_PRT_PRIO_FLG" lookup="BILL_PRT_PRIO_FLG"/>
+        <saId mdField="SA_ID"/>
+        <saRecGrpSeq/>
+        <bsegAdjDetails type="group">
+          <bsegAdjDateHistNbr/>
+          <bsegAdjId/>
+          <bsegRecGrpSeq/>
+          <calcHdrLineDetails type="group">
+            <hdrSeqBsegNbr/>
+            <calcHdrRecGrpSeq/>
+            <calcLineSeq/>
+          </calcHdrLineDetails>
+        </bsegAdjDetails>
+      </saDetails>
+    </premiseRecordGroup>
+  </sortKey>
+  <mailingKey mapField="POSTAL"/>
+  <ftType mapField="FT_TYPE_FLG "/>
+  <payDate dataType="date" mapField="PAYMENT_DT"/>
+  <cancelRsn mapField="CAN_RSN_CD"/>
+  <cancelRsnDescr mapField="DESCR"/>
+  <currPayAmt mdField="CUR_AMT" dataType="money"/>
+  <totPayAmt mdField="TOT_AMT" dataType="money"/>
+</schema>

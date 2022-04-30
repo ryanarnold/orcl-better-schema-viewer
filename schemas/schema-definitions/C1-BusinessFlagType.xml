@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<businessFlagType required="true" isPrimeKey="true" mapField="BUS_FLG_TYPE_CD"/>
+	<standardName required="true" dataType="lookupBO" mapField="BUS_FLG_STD_NAME" lookupBO="F1-BusinessFlagStandardName"/>
+	<description required="true" mapField="DESCR100"/>
+	<longDescription mapField="DESCRLONG"/>
+	<bo suppress="input" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<transactionalBo required="true" fkRef="F1-BUSOB" mapField="TRANS_BUS_OBJ_CD"/>
+	<boStatus required="true" dataType="lookup" mapField="BUS_FLG_TYPE_STATUS_FLG" lookup="BUS_FLG_TYPE_STATUS_FLG"/>
+	<defaultPriority mdField="DFLT_BUS_FLG_PRIORITY_FLG" dataType="lookup" mapField="BUS_FLG_PRIORITY_FLG" lookup="BUS_FLG_PRIORITY_FLG"/>
+	<createAlert mdField="BUS_FLG_TYPE_CRE_ALRT_FLG" required="true" dataType="lookup" mapXML="BO_XML_DATA_AREA" lookup="BUS_FLG_TYPE_CRE_ALRT_FLG"/>
+	<outboundMessageType mdField="OUTMSG_TYPE_CD" fkRef="F1-OMTYP" mapXML="BO_XML_DATA_AREA"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<additionalProcessing type="group">
+		<algorithms type="list" mapChild="F1_BUS_FLG_TYPE_ALG">
+			<rowFilter>
+				<BUS_FLG_TYPE_SEVT_FLG is="F1AP"/>
+			</rowFilter>
+			<sequence dataType="number" isPrimeKey="true" mapField="SEQ_NUM"/>
+			<algorithm required="true" fkRef="ALG" mapField="ALG_CD"/>
+		</algorithms>
+	</additionalProcessing>
+	<analysisRequired mdField="BUS_FLG_TYPE_ANALYSIS_FLG" required="true" dataType="lookup" mapXML="BO_XML_DATA_AREA" lookup="BUS_FLG_TYPE_ANALYSIS_FLG"/>
+	<analysisToDoType mdField="BUS_FLG_ANALYSIS_TD_TYPE_CD" fkRef="TD_TYPE" mapXML="BO_XML_DATA_AREA"/>
+	<analysisToDoRole mdField="BUS_FLG_ANALYSIS_TD_ROLE_CD" fkRef="F1-ROLE" mapXML="BO_XML_DATA_AREA"/>
+	<notificationType mdField="PARENT_NTF_TYPE_CD" fkRef="C1-NTFTY" mapXML="BO_XML_DATA_AREA"/>
+	<allowedAction type="group" mapXML="BO_XML_DATA_AREA">
+		<allowedActions type="list">
+			<script mdField="BUS_FLG_ACTION" required="true" isPrimeKey="true" fkRef="F1-SCR"/>
+		</allowedActions>
+	</allowedAction>
+	<exceptionHandling type="group" mapXML="BO_XML_DATA_AREA">
+		<toDoType mdField="TD_TYPE_CD" fkRef="TD_TYPE"/>
+		<toDoRole mdField="ROLE_ID" fkRef="F1-ROLE"/>
+		<retryFrequencyInMinutes mdField="C1_RETRY_FREQ" dataType="number"/>
+		<maximumRetries mdField="C1_MAX_RETRIES" dataType="number"/>
+		<discardReason mdField="BUS_FLG_DISCARD_RSN_CD" fkRef="F1-STRSN"/>
+	</exceptionHandling>
+</schema>

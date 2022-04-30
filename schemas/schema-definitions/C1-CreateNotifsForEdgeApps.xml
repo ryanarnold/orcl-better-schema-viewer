@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<notificationType mdField="NTF_TYPE_CD" required="true"/>
+	<accountId mdField="ACCT_ID" required="true"/>
+	<notifications type="group">
+		<notification type="list">
+			<deliveryType mdField="C1_SS_DELIVERY_TYPE" required="true" dataType="lookup" isPrimeKey="true" lookup="C1_SS_DELIVERY_TYPE"/>
+			<language mdField="LANGUAGE_CD" isPrimeKey="true"/>
+			<subjectText mdField="SUBJECT_TEXT"/>
+			<messageBodyText mdField="MSG_BODY_TEXT"/>
+			<messageCategory mdField="MESSAGE_CAT_NBR" dataType="number"/>
+			<subjectMessageNumber mdField="SUBJECT_MSG_NBR" dataType="number"/>
+			<messageParmCollCount mdField="MESSAGE_PARM_CNT" dataType="number" mapField="MESSAGE_PARM_COLL_CNT"/>
+			<messageParms type="group">
+				<messageParm1 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_1"/>
+				<messageParm2 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_2"/>
+				<messageParm3 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_3"/>
+				<messageParm4 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_4"/>
+				<messageParm5 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_5"/>
+				<messageParm6 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_6"/>
+				<messageParm7 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_7"/>
+				<messageParm8 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_8"/>
+				<messageParm9 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_9"/>
+			</messageParms>
+			<messageParmTypes type="group">
+				<messageParmType1 mapField="MSG_PARM_TYP_FLG_1"/>
+				<messageParmType2 mapField="MSG_PARM_TYP_FLG_2"/>
+				<messageParmType3 mapField="MSG_PARM_TYP_FLG_3"/>
+				<messageParmType4 mapField="MSG_PARM_TYP_FLG_4"/>
+				<messageParmType5 mapField="MSG_PARM_TYP_FLG_5"/>
+				<messageParmType6 mapField="MSG_PARM_TYP_FLG_6"/>
+				<messageParmType7 mapField="MSG_PARM_TYP_FLG_7"/>
+				<messageParmType8 mapField="MSG_PARM_TYP_FLG_8"/>
+				<messageParmType9 mapField="MSG_PARM_TYP_FLG_9"/>
+			</messageParmTypes>
+			<notificationTexts type="group">
+				<notificationText type="list" mapList="NOTIF_TEXT_LIST">
+					<sequence mdField="SEQ_NUM" required="true" dataType="number" isPrimeKey="true"/>
+					<messageNumber mdField="MESSAGE_NBR" dataType="number"/>
+					<messageParmCollCount mdField="MESSAGE_PARM_CNT" dataType="number" mapField="MESSAGE_PARM_COLL_CNT"/>
+					<messageParms type="group">
+						<messageParm1 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_1"/>
+						<messageParm2 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_2"/>
+						<messageParm3 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_3"/>
+						<messageParm4 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_4"/>
+						<messageParm5 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_5"/>
+						<messageParm6 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_6"/>
+						<messageParm7 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_7"/>
+						<messageParm8 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_8"/>
+						<messageParm9 mdField="F1_MSG_PARM_VLONG" mapField="MESSAGE_PARM_9"/>
+					</messageParms>
+					<messageParmTypes type="group">
+						<messageParmType1 mapField="MSG_PARM_TYP_FLG_1"/>
+						<messageParmType2 mapField="MSG_PARM_TYP_FLG_2"/>
+						<messageParmType3 mapField="MSG_PARM_TYP_FLG_3"/>
+						<messageParmType4 mapField="MSG_PARM_TYP_FLG_4"/>
+						<messageParmType5 mapField="MSG_PARM_TYP_FLG_5"/>
+						<messageParmType6 mapField="MSG_PARM_TYP_FLG_6"/>
+						<messageParmType7 mapField="MSG_PARM_TYP_FLG_7"/>
+						<messageParmType8 mapField="MSG_PARM_TYP_FLG_8"/>
+						<messageParmType9 mapField="MSG_PARM_TYP_FLG_9"/>
+					</messageParmTypes>
+				</notificationText>
+			</notificationTexts>
+		</notification>
+	</notifications>
+	<customElements type="raw"/>
+	<errorInformation type="group">
+		<isInError mdField="IN_ERROR_SW" dataType="boolean" default="false"/>
+		<errorReference type="group">
+			<category mdField="MESSAGE_CAT_NBR" dataType="number"/>
+			<number mdField="MESSAGE_NBR" dataType="number"/>
+		</errorReference>
+		<errorMessage mdField="MESSAGE_TEXT"/>
+	</errorInformation>
+</schema>

@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<input type="group">
+		<option dataType="lookup" private="true" default="C1EP" mapField="RE_HELPER_OPT_FLG" lookup="RE_HELPER_OPT_FLG"/>
+		<seasonList type="group">
+			<SeasonListData type="list" mapList="SEAS_LIST">
+				<seasonStart mapField="SEASON_START_MMDD"/>
+				<seasonEnd mapField="SEASON_END_MMDD"/>
+			</SeasonListData>
+		</seasonList>
+		<referencePeriod type="group">
+			<startDate mdField="START_DT" required="true" dataType="date" mapField="REF_START_DT"/>
+			<endDate mdField="END_DT" required="true" dataType="date" mapField="REF_END_DT"/>
+		</referencePeriod>
+		<seasonProrateMethod required="true" dataType="lookup" mapField="SEASON_PROR_MTHD_FLG" lookup="SEASON_PROR_MTHD_FLG"/>
+		<accountingDate dataType="date" mapField="ACCOUNTING_DT"/>
+		<consumptionPeriod type="group">
+			<startDate mdField="START_DT" dataType="date" mapField="CONS_START_DT"/>
+			<endDate mdField="END_DT" dataType="date" mapField="CONS_END_DT"/>
+		</consumptionPeriod>
+	</input>
+	<output type="group">
+		<expandSeasonData type="group">
+			<seasonListData type="group">
+				<SeasonListData type="list" mapList="ESD_SEAS_LIST">
+					<seasonStart mapField="SEASON_START_MMDD"/>
+					<seasonEnd mapField="SEASON_END_MMDD"/>
+				</SeasonListData>
+			</seasonListData>
+			<seasonProrateMethod mdField="SEASON_PROR_MTHD_FLG" dataType="lookup" mapField="ESD_SEASON_PROR_MTHD_FLG" lookup="SEASON_PROR_MTHD_FLG"/>
+			<seasonalPeriodList type="group">
+				<SeasonalPeriodData type="list" mapList="ESD_SEAS_PER_LIST">
+					<seasonListData type="group">
+						<seasonStart mapField="SEASON_START_MMDD"/>
+						<seasonEnd mapField="SEASON_END_MMDD"/>
+					</seasonListData>
+					<seasonDays mdField="F1_DAYS" dataType="number" mapField="SEAS_DAYS"/>
+					<startDate mdField="START_DT" dataType="date" mapField="SEAS_PER_START_DT"/>
+					<endDate mdField="END_DT" dataType="date" mapField="SEAS_PER_END_DT"/>
+				</SeasonalPeriodData>
+			</seasonalPeriodList>
+			<totalSeasonDays mdField="F1_DAYS" dataType="number" mapField="ESD_TOTAL_SEAS_DAYS"/>
+			<referencePeriod type="group">
+				<startDate mdField="START_DT" dataType="date" mapField="ESD_REF_START_DT"/>
+				<endDate mdField="END_DT" dataType="date" mapField="ESD_REF_END_DT"/>
+			</referencePeriod>
+			<consumptionPeriod type="group">
+				<startDate mdField="START_DT" dataType="date" mapField="ESD_CONS_START_DT"/>
+				<endDate mdField="END_DT" dataType="date" mapField="ESD_CONS_END_DT"/>
+			</consumptionPeriod>
+			<accountingDate mdField="ACCOUNTING_DT" dataType="date" mapField="ESD_ACCT_DT"/>
+		</expandSeasonData>
+	</output>
+</schema>

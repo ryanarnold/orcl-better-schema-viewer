@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<accountId/>
+	<eligibleForBudget dataType="boolean"/>
+	<reasonMessage/>
+	<monthsForTrueUp/>
+	<saList type="list">
+		<serviceTypeDescription/>
+		<isEligible dataType="boolean"/>
+		<amount dataType="money"/>
+		<currency/>
+	</saList>
+	<totalBudgetAmount dataType="money"/>
+	<currency/>
+	<errorInformation type="group">
+		<isInError mdField="IN_ERROR_SW" dataType="boolean" default="false"/>
+		<errorReference type="group">
+			<category mdField="MESSAGE_CAT_NBR" dataType="number"/>
+			<number mdField="MESSAGE_NBR" dataType="number"/>
+		</errorReference>
+		<errorMessage mdField="MESSAGE_TEXT"/>
+	</errorInformation>
+</schema>

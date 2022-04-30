@@ -1,0 +1,147 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<head type="group">
+		<action/>
+		<key1 type="group">
+			<name default="ACCT_ID"/>
+			<value/>
+		</key1>
+		<key2 type="group">
+			<name default="PER_ID"/>
+			<value/>
+		</key2>
+		<key3 type="group">
+			<name/>
+			<value/>
+		</key3>
+		<key4 type="group">
+			<name/>
+			<value/>
+		</key4>
+		<key5 type="group">
+			<name/>
+			<value/>
+		</key5>
+		<emailAddress/>
+		<webUserId/>
+		<ipAddress/>
+		<cssUser/>
+		<billId/>
+	</head>
+	<mainData type="group">
+		<billId mapField="BILL_ID"/>
+		<billCycle mapField="BILL_CYC_CD"/>
+		<accountId mapField="ACCT_ID"/>
+		<billStatus dataType="lookup" mapField="BILL_STAT_FLG" lookup="BILL_STAT_FLG"/>
+		<billDate dataType="date" mapField="BILL_DT"/>
+		<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+		<completionDateTime dataType="dateTime" mapField="COMPLETE_DTTM"/>
+		<dueDate dataType="date" mapField="DUE_DT"/>
+		<balanceAmount dataType="money" mapField="BAL_AMT"/>
+		<totalAmount dataType="money" mapField="TOTAL_AMT"/>
+		<beginningBalance mapField="BEGINNING_BAL"/>
+		<totalPayments mapField="TOTAL_PAYMENTS"/>
+		<totalAdjustments mapField="TOTAL_ADJUSTMENTS"/>
+		<totalCorrections mapField="TOTAL_CORRECTIONS"/>
+		<totalCurrentCharges mapField="TOTAL_CURR_CHGS"/>
+		<endingBalance mapField="ENDING_BAL"/>
+		<currency mapField="CURRENCY_CD"/>
+		<billRouting type="list" mapList="BILL_RTG">
+			<personId mapField="PER_ID"/>
+			<billFormat dataType="lookup" mapField="BILL_FORMAT_FLG" lookup="BILL_FORMAT_FLG"/>
+			<name mapField="ENTITY_NAME"/>
+			<entityInfo mapField="ENTITY_INFO"/>
+			<name1 mapField="ENTITY_NAME1"/>
+			<country mapField="COUNTRY"/>
+			<addressLine1 mapField="ADDRESS1"/>
+			<addressLine2 mapField="ADDRESS2"/>
+			<addressLine3 mapField="ADDRESS3"/>
+			<addressLine4 mapField="ADDRESS4"/>
+			<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+			<number1 mapField="NUM1"/>
+			<number2 mapField="NUM2"/>
+			<inCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+			<city mapField="CITY"/>
+			<geographic mapField="GEO_CODE"/>
+			<county mapField="COUNTY"/>
+			<state mapField="STATE"/>
+			<postal mapField="POSTAL"/>
+			<billRouteType mapField="BILL_RTE_TYPE_CD"/>
+			<billRoutingMethod dataType="lookup" mapField="BILL_RTG_METH_FLG" lookup="BILL_RTG_METH_FLG"/>
+		</billRouting>
+		<billMessages type="list" mapList="BILL_MSG">
+			<messagePriority dataType="lookup" mapField="MSG_PRIORITY_FLG" lookup="MSG_PRIORITY_FLG"/>
+			<messageOnBill mapField="MSG_ON_BILL"/>
+		</billMessages>
+		<billSegment type="list">
+			<billSegmentId mapField="BSEG_ID"/>
+			<saId mapField="SA_ID"/>
+			<billSegmentInfo mapField="BSEG_INFO"/>
+			<saInfo mapField="SA_INFO"/>
+			<currentAmount dataType="money" mapField="CURRENT_AMT"/>
+			<payoffAmount mapField="PAYOFF_AMT"/>
+			<billSegmentPeriod mapField="BSEG_PERIOD"/>
+			<premiseInfo mapField="PREM_INFO"/>
+			<startDate dataType="date" mapField="START_DT"/>
+			<endDate dataType="date" mapField="END_DT"/>
+			<billSegmentCalcHeader type="list" mapList="BSEG_CALC_HDR">
+				<headerSequence dataType="number" mapField="HEADER_SEQ"/>
+				<rate mapField="RS_CD"/>
+				<rateDesc mapField="RS_DESCR"/>
+				<startDate dataType="date" mapField="START_DT"/>
+				<endDate dataType="date" mapField="END_DT"/>
+				<descriptionOnBill mapField="DESCR_ON_BILL"/>
+				<calcAmount dataType="money" mapField="CALC_AMT"/>
+				<calcLine type="list" mapList="BSEG_CALC_LINE">
+					<sequenceNumber dataType="number" mapField="SEQNO"/>
+					<print dataType="boolean" mapField="PRT_SW"/>
+					<lineDescrOnBill mapField="DESCR_ON_BILL"/>
+					<calcAmount dataType="money" mapField="CALC_AMT"/>
+					<inSummary dataType="boolean" mapField="APP_IN_SUMM_SW"/>
+				</calcLine>
+			</billSegmentCalcHeader>
+		</billSegment>
+	</mainData>
+	<custom type="group">
+		<field1 type="group">
+			<name/>
+			<value/>
+		</field1>
+		<field2 type="group">
+			<name/>
+			<value/>
+		</field2>
+		<field3 type="group">
+			<name/>
+			<value/>
+		</field3>
+		<field4 type="group">
+			<name/>
+			<value/>
+		</field4>
+		<field5 type="group">
+			<name/>
+			<value/>
+		</field5>
+		<field6 type="group">
+			<name/>
+			<value/>
+		</field6>
+		<field7 type="group">
+			<name/>
+			<value/>
+		</field7>
+		<field8 type="group">
+			<name/>
+			<value/>
+		</field8>
+		<field9 type="group">
+			<name/>
+			<value/>
+		</field9>
+		<field10 type="group">
+			<name/>
+			<value/>
+		</field10>
+	</custom>
+</schema>

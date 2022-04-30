@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <input type="group">
+    <notificationType required="true"/>
+    <accountId required="true"/>
+    <useDefaultPreference dataType="boolean"/>
+  </input>
+  <output type="group">
+    <activePreferenceFound dataType="boolean" default="false"/>
+    <defaultPreferenceFound dataType="boolean" default="false"/>
+    <optOutPreferenceFound dataType="boolean" default="false"/>
+    <defaultNotAllowedForSubscription dataType="boolean" default="false"/>
+    <alternateContactGroup type="group">
+      <contactId/>
+      <personId/>
+      <deliveryType/>
+      <value/>
+    </alternateContactGroup>
+    <preferenceList type="list">
+      <notificationPreferenceId/>
+      <accountId/>
+      <notificationType/>
+      <businessObject/>
+      <contactDetail/>
+      <deliveryType/>
+      <activeInactive/>
+      <serviceTask/>
+      <optOutFlag/>
+    </preferenceList>
+  </output>
+</schema>

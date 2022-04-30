@@ -1,0 +1,120 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<billableChargeId mapField="BILLABLE_CHG_ID"/>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<saInformation mapField="SA_INFO"/>
+	<accountId mapField="ACCT_ID"/>
+	<accountName mapField="ACCT_NAME"/>
+	<billDesc mapField="BILL_DESC"/>
+	<billSegmentId mapField="BSEG_ID"/>
+	<totalAmount dataType="money" mapField="TOTAL_AMT"/>
+	<lineAmount dataType="money" mapField="LINE_AMT"/>
+	<isCancel dataType="boolean" mapField="CANCEL_SW"/>
+	<billSegmentInformation mapField="BSEG_INFO"/>
+	<billableChargeTemplate mapField="BILL_CHG_TMPLT_CD"/>
+	<isOneTimeCharge dataType="boolean" mapField="ONE_TIME_CH_SW"/>
+	<canIssueTemplateChangeWarning dataType="boolean" mapField="WARN_TMPL_CHG_SW"/>
+	<currency mapField="CURRENCY_CD"/>
+	<serviceAgreement mapField="SA_ID"/>
+	<startDate dataType="date" mapField="START_DT"/>
+	<endDate dataType="date" mapField="END_DT"/>
+	<descriptionOnBill mapField="DESCR_ON_BILL"/>
+	<billableChargeStatus dataType="lookup" mapField="BILLABLE_CHG_STAT" lookup="BILLABLE_CHG_STAT"/>
+	<isEligibleForArchiving dataType="boolean" mapField="ILM_ARCH_SW"/>
+	<ilmDate dataType="date" mapField="ILM_DT"/>
+	<version dataType="number" mapField="VERSION"/>
+	<bicLine type="list" mapList="BIC_LINE">
+		<billableChargeId2 mapField="BILLABLE_CHG_ID"/>
+		<lineSequence dataType="number" mapField="LINE_SEQ"/>
+		<descriptionOnBill2 mapField="DESCR_ON_BILL"/>
+		<chargeAmount dataType="money" mapField="CHARGE_AMT"/>
+		<currency2 mapField="CURRENCY_CD"/>
+		<shouldShowOnBill dataType="boolean" mapField="SHOW_ON_BILL_SW"/>
+		<shouldAppearInSummary dataType="boolean" mapField="APP_IN_SUMM_SW"/>
+		<distributionCode mapField="DST_ID"/>
+		<version2 dataType="number" mapField="VERSION"/>
+		<isMemoOnly dataType="boolean" mapField="MEMO_SW"/>
+		<distributionDescription mapField="DST_DESCR"/>
+		<bchgLnChar type="list" mapList="BCHG_LN_CHAR">
+			<billableChargeId3 mapField="BILLABLE_CHG_ID"/>
+			<lineSequence2 dataType="number" mapField="LINE_SEQ"/>
+			<characteristicType mapField="CHAR_TYPE_CD"/>
+			<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+			<characteristicValue mapField="CHAR_VAL"/>
+			<version3 dataType="number" mapField="VERSION"/>
+			<characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
+			<characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+			<characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+			<characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
+			<characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+			<searchNavigationKey mapField="SRCH_NAV_KEY"/>
+			<navigationOption mapField="NAV_OPT_CD"/>
+			<table mapField="TBL_NAME"/>
+			<infoProgram mapField="INFO_PRG"/>
+			<characteristicType2 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+			<characteristicValueDescription mapField="CHAR_VAL_DESCR"/>
+			<characteristicValueForeignKeys mapField="CHAR_VAL_FK_STR"/>
+			<characteristicValueForeignKeyInformation mapField="CHAR_VAL_FK_INFO"/>
+			<isCompoundPrimaryKey dataType="boolean" mapField="COMP_PK_SW"/>
+			<charateristicValue mapField="COMP_PK_STR"/>
+			<characteristicType3 mapField="CHAR_TYPE_DESCR"/>
+		</bchgLnChar>
+	</bicLine>
+	<bchgSq type="list" mapList="BCHG_SQ">
+		<billableChargeId4 mapField="BILLABLE_CHG_ID"/>
+		<serviceQuantityIdentifier mapField="SQI_CD"/>
+		<sequence dataType="number" mapField="SEQ_NUM"/>
+		<timeOfUse mapField="TOU_CD"/>
+		<unitOfMeasure mapField="UOM_CD"/>
+		<dailyServiceQuantity dataType="number" mapField="SVC_QTY"/>
+		<version4 dataType="number" mapField="VERSION"/>
+		<uomDesc mapField="UOM_DESC"/>
+		<touDesc mapField="TOU_DESC"/>
+		<sqiDesc mapField="SQI_DESC"/>
+	</bchgSq>
+	<bchgRead type="list" mapList="BCHG_READ">
+		<billableChargeId5 mapField="BILLABLE_CHG_ID"/>
+		<registerQuantity dataType="number" mapField="FINAL_REG_QTY"/>
+		<sequence2 dataType="number" mapField="SEQNO"/>
+		<unitOfMeasure2 mapField="UOM_CD"/>
+		<startRegisterReading dataType="number" mapField="START_REG_READING"/>
+		<endRegisterReading dataType="number" mapField="END_REG_READING"/>
+		<measuredQuantity dataType="number" mapField="MSR_QTY"/>
+		<howToUse dataType="lookup" mapField="HOW_TO_USE_FLG" lookup="HOW_TO_USE_FLG"/>
+		<registerConstant dataType="number" mapField="REG_CONST"/>
+		<usePercent dataType="number" mapField="USE_PCT"/>
+		<measuresPeakQuantity dataType="boolean" mapField="MSR_PEAK_QTY_SW"/>
+		<startReadDateTime dataType="dateTime" mapField="START_READ_DTTM"/>
+		<endReadDateTime dataType="dateTime" mapField="END_READ_DTTM"/>
+		<howToUseRead dataType="lookup" mapField="USAGE_FLG" lookup="USAGE_FLG"/>
+		<servicePointId mapField="SP_ID"/>
+		<timeOfUse2 mapField="TOU_CD"/>
+		<serviceQuantityIdentifier2 mapField="SQI_CD"/>
+		<startRegisterReadId mapField="START_REG_READ_ID"/>
+		<endRegisterReadingId mapField="END_REG_READ_ID"/>
+		<finalUnitOfMeasure mapField="FINAL_UOM_CD"/>
+		<finalTimeOfUse mapField="FINAL_TOU_CD"/>
+		<finalServiceQuantityIdentifier mapField="FINAL_SQI"/>
+		<version5 dataType="number" mapField="VERSION"/>
+		<multiplier dataType="number" mapField="GC_MULTIPLIER"/>
+		<stRegRdTypDesc mapField="ST_REG_RD_TYP_DESC"/>
+		<endRegRdTypDesc mapField="END_REG_RD_TYP_DESC"/>
+		<consumptionType dataType="lookup" mapField="CONSUM_SUB_FLG" lookup="CONSUM_SUB_FLG"/>
+		<naConsumDesc mapField="NA_CONSUM_DESC"/>
+		<startMeterRead mapField="START_MR_ID"/>
+		<endMeterRead mapField="END_MR_ID"/>
+		<meterReadId mapField="MR_ID"/>
+		<unitOfMeasure3 mapField="UOM_DESCR"/>
+		<serviceQuantityIdentifier3 mapField="SQI_DESCR"/>
+		<timeOfUse3 mapField="TOU_DESCR"/>
+		<finUomDescr mapField="FIN_UOM_DESCR"/>
+		<finSqiDescr mapField="FIN_SQI_DESCR"/>
+		<finTouDescr mapField="FIN_TOU_DESCR"/>
+		<meterConfigurationId mapField="MTR_CONFIG_ID"/>
+		<startRegisterReadInformation mapField="ST_REG_READ_INFO"/>
+		<endRegisterReadingInformation mapField="END_REG_READ_INFO"/>
+		<spInformation mapField="SP_INFO"/>
+		<howToUse2 dataType="lookup" mapField="BCHG_USAGE_FLG" lookup="BCHG_USAGE_FLG"/>
+	</bchgRead>
+</schema>

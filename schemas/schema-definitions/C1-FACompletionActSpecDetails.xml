@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <servicePointCompletionDetails type="group">
+    <servicePointDataDetails type="group">
+      <disconnectLocation mdField="DISCON_LOC_CD"/>
+      <serviceInstructions mdField="C1_MR_INSTR_LBL"/>
+      <serviceWarnings mdField="MR_WARN_CD"/>
+      <instructionDetails mdField="MR_INSTR_DETAILS"/>
+    </servicePointDataDetails>
+  </servicePointCompletionDetails>
+  <existingDevice type="group">
+    <meterCompletionDetails type="group">
+      <meterDataDetails type="group">
+        <deviceManufacturer mdField="MFG_CD"/>
+        <deviceModel mdField="MODEL_CD"/>
+        <badgeNumber mdField="BADGE_NBR"/>
+        <meterConfigurationType mdField="MTR_CONFIG_TY_CD"/>
+        <meterLocation mdField="MTR_LOC_CD"/>
+      </meterDataDetails>
+      <readingCompletionDetails type="raw" mdField="C1_READING_CMPL_INFO_LBL"/>
+    </meterCompletionDetails>
+    <itemCompletionDetails type="group">
+      <itemDataDetails type="group">
+        <badgeNumber mdField="BADGE_NBR"/>
+        <deviceManufacturer mdField="MFG_CD"/>
+        <deviceModel mdField="MODEL_CD"/>
+      </itemDataDetails>
+    </itemCompletionDetails>
+  </existingDevice>
+  <newDevice type="group">
+    <meterCompletionDetails type="group">
+      <meterDataDetails type="group">
+        <deviceManufacturer mdField="MFG_CD"/>
+        <deviceModel mdField="MODEL_CD"/>
+        <badgeNumber mdField="BADGE_NBR"/>
+        <meterConfigurationType mdField="MTR_CONFIG_TY_CD"/>
+        <meterLocation mdField="MTR_LOC_CD"/>
+      </meterDataDetails>
+      <readingCompletionDetails type="raw" mdField="C1_READING_CMPL_INFO_LBL"/>
+    </meterCompletionDetails>
+    <itemCompletionDetails type="group">
+      <itemDataDetails type="group">
+        <badgeNumber mdField="BADGE_NBR"/>
+        <deviceManufacturer mdField="MFG_CD"/>
+        <deviceModel mdField="MODEL_CD"/>
+      </itemDataDetails>
+    </itemCompletionDetails>
+  </newDevice>
+</schema>

@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<requesterTransactionId mapField="FA_ID"/>
+	<faType mapField="FA_TYPE_CD"/>
+	<faStatus dataType="lookup" mapField="FA_STATUS_FLG" lookup="FA_STATUS_FLG"/>
+	<faCancelReason mapField="FA_CAN_RSN_CD"/>
+	<servicePointExternalId mapField="SP_ID"/>
+	<startDateTime dataType="dateTime" mapField="SCHED_DTTM"/>
+	<requesterUserId mapField="USER_ID"/>
+	<instructions mapField="INSTRUCTIONS"/>
+	<comments mapField="DESCRLONG"/>
+	<overridePersonName mapField="ADHOC_CHAR_VAL">
+		<row mapChild="CI_FA_CHAR">
+			<CHAR_TYPE_CD is="C1-FAOPN"/>
+			<SEQ_NUM is="%1"/>
+		</row>
+	</overridePersonName>
+	<overrideMainPhone mapField="ADHOC_CHAR_VAL">
+		<row mapChild="CI_FA_CHAR">
+			<CHAR_TYPE_CD is="C1-FAOMP"/>
+			<SEQ_NUM is="%1"/>
+		</row>
+	</overrideMainPhone>
+</schema>

@@ -1,0 +1,241 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <action suppress="true"/>
+  <personId mdField="PER_ID" fkRef="PER"/>
+  <existingPaymentOptions type="group">
+    <zone private="true" default="C1-CSSPOPT" mapField="ZONE_CD"/>
+    <perId mapField="H1_VALUE"/>
+    <rowCount dataType="number" mapField="ROW_CNT"/>
+    <results type="list" mapList="DE">
+      <description mapField="COL_VALUE">
+        <row mapList="DE_VAL">
+          <SEQNO is="1"/>
+        </row>
+      </description>
+      <recentlyUsed mapField="COL_VALUE">
+        <row mapList="DE_VAL">
+          <SEQNO is="2"/>
+        </row>
+      </recentlyUsed>
+    </results>
+  </existingPaymentOptions>
+  <newPaymentOptions type="group">
+    <newPaymentOptionList type="list">
+      <paymentType mdField="EXT_TYPE_FLG"/>
+      <creditCardInfo type="group">
+        <cardType/>
+        <cardNumber/>
+        <expMonth dataType="number"/>
+        <expYear/>
+        <cardholderFName/>
+        <cardholderLName/>
+        <country mapField="COUNTRY"/>
+        <addressLine1 mapField="ADDRESS1"/>
+        <addressLine2 mapField="ADDRESS2"/>
+        <addressLine3 mapField="ADDRESS3"/>
+        <addressLine4 mapField="ADDRESS4"/>
+        <houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+        <number1 mapField="NUM1"/>
+        <number2 mapField="NUM2"/>
+        <inCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+        <city mapField="CITY"/>
+        <geographic mapField="GEO_CODE"/>
+        <county mapField="COUNTY"/>
+        <state mapField="STATE"/>
+        <postal mapField="POSTAL"/>
+      </creditCardInfo>
+      <bankAccounttInfo type="group">
+        <routingNumber/>
+        <accountNumber/>
+        <apaySource mdField="APAY_SRC_CD"/>
+      </bankAccounttInfo>
+    </newPaymentOptionList>
+  </newPaymentOptions>
+  <routingNumberValid type="group">
+    <zone private="true" default="WX-RETAPSRC" mapField="ZONE_CD"/>
+    <bankRoutingNumber mapField="F1_VALUE"/>
+    <tenderType mapField="F2_VALUE"/>
+    <rowCount dataType="number" mapField="ROW_CNT"/>
+    <results type="list" mapList="DE">
+      <autoPaySource mapField="COL_VALUE">
+        <row mapList="DE_VAL">
+          <SEQNO is="1"/>
+        </row>
+      </autoPaySource>
+    </results>
+  </routingNumberValid>
+  <getApaySource type="group">
+    <autoPaySource mapField="APAY_SRC_CD"/>
+    <tenderType mapField="TENDER_TYPE_CD"/>
+    <bankRoutingNumber mapField="EXT_SOURCE_ID"/>
+    <descr mapField="DESCR"/>
+  </getApaySource>
+  <selfServiceMasterConfig type="group">
+    <bo suppress="input" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+    <version suppress="true" dataType="number" mapField="VERSION"/>
+    <alerts type="group" mapXML="MST_CONFIG_DATA">
+      <alert type="list">
+        <alertType mdField="WX_CCB_ALERT_TYPE_FLG" required="true" dataType="lookup" isPrimeKey="true" lookup="WX_CCB_ALERT_TYPE_FLG"/>
+        <priority mdField="PRIORITY" required="true" dataType="number"/>
+        <serviceScript mdField="SCR_CD" required="true" fkRef="F1-SCRCD"/>
+      </alert>
+    </alerts>
+    <paymentTypes type="group" mapXML="MST_CONFIG_DATA">
+      <option type="list">
+        <paymentType mdField="WX_PAYMENT_TYPE_LBL" required="true" dataType="lookup" isPrimeKey="true" lookup="EXT_TYPE_FLG"/>
+        <tenderType mdField="TENDER_TYPE_CD" required="true" fkRef="C1-TNDTY"/>
+      </option>
+    </paymentTypes>
+    <cardTypes type="group" mapXML="MST_CONFIG_DATA">
+      <option type="list">
+        <cardType mdField="CARD_TYPE_FLG" required="true" dataType="lookup" isPrimeKey="true" lookup="CARD_TYPE_FLG"/>
+        <apaySource mdField="APAY_SRC_LBL" required="true" fkRef="APAY SRC"/>
+      </option>
+    </cardTypes>
+    <otPaySrc type="group" mapXML="MST_CONFIG_DATA">
+      <otPaySrcDetails type="list">
+        <otPayTrigger mdField="OTPAY_TRIGGER_FLG" dataType="lookup" isPrimeKey="true" lookup="OTPAY_TRIGGER_FLG"/>
+        <otPaySrcCharType mdField="CHAR_TYPE_CD" fkRef="C1-CHTYE"/>
+        <otPaySrcCharVal mdField="CHAR_VAL"/>
+      </otPaySrcDetails>
+    </otPaySrc>
+    <accountVerification type="group" mapXML="MST_CONFIG_DATA">
+      <businessTypes suppress="true" type="list">
+        <businessLine mdField="WX_BUS_LINE" required="true" isPrimeKey="true"/>
+        <LOBcustomerClasses type="list">
+          <customerClass mdField="CUST_CL_CD" isPrimeKey="true" fkRef="C1-CUSTC"/>
+        </LOBcustomerClasses>
+        <field1 type="group">
+          <fieldType mdField="WX_FIELD_TYPE_FLG" dataType="lookup" lookup="WX_FIELD_TYPE_FLG"/>
+          <idType mdField="ID_TYPE_CD" fkRef="ID TYPE"/>
+          <phoneType mdField="PHONE_TYPE_CD" fkRef="C1-PHTYP"/>
+          <field mdField="FIELD_NAME" fkRef="F1-FLD"/>
+        </field1>
+        <field2 type="group">
+          <fieldType mdField="WX_FIELD_TYPE_FLG" dataType="lookup" lookup="WX_FIELD_TYPE_FLG"/>
+          <idType mdField="ID_TYPE_CD" fkRef="ID TYPE"/>
+          <phoneType mdField="PHONE_TYPE_CD" fkRef="C1-PHTYP"/>
+          <field mdField="FIELD_NAME" fkRef="F1-FLD"/>
+        </field2>
+        <field3 type="group">
+          <fieldType mdField="WX_FIELD_TYPE_FLG" dataType="lookup" lookup="WX_FIELD_TYPE_FLG"/>
+          <idType mdField="ID_TYPE_CD" fkRef="ID TYPE"/>
+          <phoneType mdField="PHONE_TYPE_CD" fkRef="C1-PHTYP"/>
+          <field mdField="FIELD_NAME" fkRef="F1-FLD"/>
+        </field3>
+        <field4 type="group">
+          <fieldType mdField="WX_FIELD_TYPE_FLG" dataType="lookup" lookup="WX_FIELD_TYPE_FLG"/>
+          <idType mdField="ID_TYPE_CD" fkRef="ID TYPE"/>
+          <phoneType mdField="PHONE_TYPE_CD" fkRef="C1-PHTYP"/>
+          <field mdField="FIELD_NAME" fkRef="F1-FLD"/>
+        </field4>
+        <field5 type="group">
+          <fieldType mdField="WX_FIELD_TYPE_FLG" dataType="lookup" lookup="WX_FIELD_TYPE_FLG"/>
+          <idType mdField="ID_TYPE_CD" fkRef="ID TYPE"/>
+          <phoneType mdField="PHONE_TYPE_CD" fkRef="C1-PHTYP"/>
+          <field mdField="FIELD_NAME" fkRef="F1-FLD"/>
+        </field5>
+      </businessTypes>
+    </accountVerification>
+    <accessibleAccountRelationships type="group" mapXML="MST_CONFIG_DATA">
+      <option suppress="true" type="list">
+        <accountRelationshipType mdField="ACCT_REL_TYPE_CD" required="true" isPrimeKey="true" fkRef="ACCT REL"/>
+      </option>
+    </accessibleAccountRelationships>
+    <processingScripts type="group" mapXML="MST_CONFIG_DATA">
+      <option type="list">
+        <processingType mdField="WX_PROC_SCR_FLG" required="true" dataType="lookup" isPrimeKey="true" lookup="WX_PROC_SCR_FLG"/>
+        <serviceScript mdField="SCR_CD" required="true" fkRef="F1-SCRCD"/>
+      </option>
+    </processingScripts>
+    <serviceTaskBOs type="group" mapXML="MST_CONFIG_DATA">
+      <option type="list">
+        <boTaskType mdField="WX_BO_SSTASK_TYPE_FLG" required="true" dataType="lookup" isPrimeKey="true" lookup="WX_BO_SSTASK_TYPE_FLG"/>
+        <serviceTaskType mdField="F1_STASK_TYPE_CD" required="true" fkRef="F1-STKTY"/>
+      </option>
+    </serviceTaskBOs>
+    <notificationServiceTaskBOs type="group" mapXML="MST_CONFIG_DATA">
+      <options type="list">
+        <notificationType mdField="C1_NF_SSTASK_TYPE_FLG" dataType="lookup" isPrimeKey="true" lookup="C1_NF_SSTASK_TYPE_FLG"/>
+        <serviceTaskType mdField="F1_STASK_TYPE_CD" isPrimeKey="true" fkRef="F1-STKTY"/>
+        <suppressionCriteria mdField="C1_SUPP_CRIT" fkRef="F1-SCRCD"/>
+      </options>
+    </notificationServiceTaskBOs>
+    <paServiceTaskBOs type="group" mapXML="MST_CONFIG_DATA">
+      <option type="list">
+        <serviceTaskType mdField="F1_STASK_TYPE_CD" required="true" isPrimeKey="true" fkRef="F1-STKTY"/>
+      </option>
+    </paServiceTaskBOs>
+    <startServiceCampaign type="group" mapXML="MST_CONFIG_DATA">
+      <option type="list">
+        <customerClass mdField="CUST_CL_CD" required="true" isPrimeKey="true" fkRef="C1-CUSTC"/>
+        <campaign mdField="CAMPAIGN_CD" required="true" fkRef="C1-CAMPG"/>
+      </option>
+    </startServiceCampaign>
+    <newCustomerId type="group" mapXML="MST_CONFIG_DATA">
+      <option type="list">
+        <personBusiness mdField="PER_OR_BUS_FLG" required="true" dataType="lookup" isPrimeKey="true" lookup="PER_OR_BUS_FLG"/>
+        <idType mdField="ID_TYPE_CD" required="true" isPrimeKey="true" fkRef="ID TYPE"/>
+        <formatDescr mdField="C1_ID_FORMAT_DESCR"/>
+      </option>
+    </newCustomerId>
+    <defaultAcctListFilter type="group" mapXML="MST_CONFIG_DATA">
+      <acctListFilter mdField="C1_ACCTLIST_FILTER_TYPE_FLG" required="true" dataType="lookup" lookup="C1_ACCTLIST_FILTER_TYPE_FLG"/>
+    </defaultAcctListFilter>
+    <accountDocumentTypes type="group" mapXML="MST_CONFIG_DATA">
+      <option type="list">
+        <characteristicType mdField="CHAR_TYPE_CD" required="true" isPrimeKey="true" fkRef="C1-CHTYE"/>
+      </option>
+    </accountDocumentTypes>
+    <formServiceTaskBOs type="group" mapXML="MST_CONFIG_DATA">
+      <formTypes suppress="true" type="list">
+        <formType mdField="C1_SS_CATEGORY" dataType="lookup" isPrimeKey="true" lookup="C1_SS_CATEGORY"/>
+        <forms type="list">
+          <serviceTaskType mdField="F1_STASK_TYPE_CD" isPrimeKey="true" fkRef="F1-STKTY"/>
+        </forms>
+      </formTypes>
+    </formServiceTaskBOs>
+    <emailSetup type="group" mapXML="MST_CONFIG_DATA">
+      <senderEmailAddress mdField="EMAILID"/>
+    </emailSetup>
+    <externalCalls type="group" mapXML="MST_CONFIG_DATA">
+      <option type="list">
+        <externalCallType mdField="WX_EXT_CALL_TYPE_FLG" required="true" dataType="lookup" isPrimeKey="true" lookup="WX_EXT_CALL_TYPE_FLG"/>
+        <externalSystem mdField="NT_XID_CD" required="true" fkRef="F1-ESTMP"/>
+        <outboundMessageType mdField="OUTMSG_TYPE_CD" required="true" fkRef="F1-OMTYP"/>
+      </option>
+    </externalCalls>
+    <audit type="group" mapXML="MST_CONFIG_DATA">
+      <auditScript mdField="AUDIT_SCR_CD" fkRef="F1-SCR"/>
+      <inboundScripts suppress="true" type="list">
+        <script mdField="SS_SCR_CD" dataType="lookupBO" isPrimeKey="true" lookupBO="C1-CSSInboundServiceScripts"/>
+        <shouldCaptureRequestData mdField="CAPTURE_REQ_DATA_SW" dataType="boolean"/>
+      </inboundScripts>
+    </audit>
+    <serviceChargesToDate type="group" mapXML="MST_CONFIG_DATA">
+      <daysSinceLastBill mdField="C1_DAYS_SINCE_LAST_BILL" required="true" dataType="number" default="0"/>
+    </serviceChargesToDate>
+    <linkCSSUserToCCB type="group" mapXML="MST_CONFIG_DATA">
+      <accountPersonMaintScript mdField="ACCT_PER_MAINT_SCR" fkRef="F1-SCRCD"/>
+      <accountRelationshipType mdField="ACCT_REL_TYPE_CD" fkRef="ACCT REL"/>
+      <personIDType mdField="PER_ID_TYPE" fkRef="ID TYPE"/>
+      <personIDValue mdField="PER_ID_VAL"/>
+      <personContactCSSUser mdField="COMM_RTE_TYPE_CSS_USER" fkRef="C1-PCTTY"/>
+      <personContactTypeEmail mdField="COMM_RTE_TYPE_EMAIL" fkRef="C1-PCTTY"/>
+      <createPersonContactForEmail mdField="ALWAYS_ADD_EMAIL_SW" dataType="boolean"/>
+      <cssUrl mdField="CSS_URL"/>
+      <cssTargetUrl mdField="CSS_TARGET_URL"/>
+      <formatPersonNameScript mdField="FMT_PER_NAME_SCR" fkRef="F1-SCRCD"/>
+      <nameSeparator mdField="NAME_SEPARATOR"/>
+    </linkCSSUserToCCB>
+    <logCSSAccess type="group" mapXML="MST_CONFIG_DATA">
+      <captureCSSAccountAccessSS mdField="LOG_CSS_ACCESS_SCR" fkRef="F1-SCRCD"/>
+      <customerContactClass mdField="CSS_CC_CL" fkRef="CUSCNTCL"/>
+      <customerContactType mdField="CSS_CC_TYPE"/>
+    </logCSSAccess>
+    <toDoTypes type="group" mapXML="MST_CONFIG_DATA">
+      <exceptionToDoType mdField="EXCP_INFO_TD_TYPE" fkRef="TD_TYPE"/>
+      <exceptionToDoRole mdField="EXCP_INFO_TD_ROLE" fkRef="F1-ROLE"/>
+    </toDoTypes>
+  </selfServiceMasterConfig>
+</schema>

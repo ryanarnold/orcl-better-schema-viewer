@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <sequence dataType="number" mapField="SEQNO"/>
+  <calculationRule type="group">
+    <id type="group">
+      <calculationGroupId mapField="CALC_GRP_CD"/>
+      <calculationRule mapField="CALC_RULE_CD"/>
+    </id>
+  </calculationRule>
+  <criteriaSequence dataType="number" mapField="CR_CRT_EXEC_SEQ"/>
+  <duration dataType="number" mapField="DURATION"/>
+  <calcRuleMessageData type="group">
+    <messageCategory type="group">
+      <id dataType="number" mapField="MESSAGE_CAT_NBR"/>
+    </messageCategory>
+    <messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+    <messageParameterList type="group">
+      <MessageParameterData type="list" mapList="MSG_PARM_LIST">
+        <sequence dataType="number" mapField="SEQNO"/>
+        <parameterType dataType="lookup" mapField="MSG_PARM_TYP_FLG" lookup="MSG_PARM_TYP_FLG"/>
+        <rawValue mapField="MSG_PARM_VAL"/>
+      </MessageParameterData>
+    </messageParameterList>
+  </calcRuleMessageData>
+</schema>

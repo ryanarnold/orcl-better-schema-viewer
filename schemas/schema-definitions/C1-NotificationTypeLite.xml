@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<notificationType required="true" isPrimeKey="true" mapField="NTF_TYPE_CD"/>
+	<bo mapField="BUS_OBJ_CD"/>
+	<notificationPushSub dataType="lookup" mapField="NTF_SUBPUSH_FLG" lookup="NTF_SUBPUSH_FLG"/>
+	<parentNotificationType mapField="PARENT_NTF_TYPE_CD"/>
+	<allowOptOut dataType="lookup" mapField="NTF_ALW_OPTOUT_FLG" lookup="NTF_ALW_OPTOUT_FLG"/>
+	<notificationRecipient dataType="lookup" mapField="NTF_RCP_FLG" lookup="NTF_RCP_FLG"/>
+	<selfServiceNotificationType dataType="lookup" mapField="C1_NF_SSTASK_TYPE_FLG" lookup="C1_NF_SSTASK_TYPE_FLG"/>
+	<notificationControl dataType="lookup" mapField="NTF_CTRL_FLG" lookup="NTF_CTRL_FLG"/>
+	<billRouteType mapField="BILL_RTE_TYPE_CD"/>
+	<quoteRouteType mapField="QTE_RTE_TYPE_CD"/>
+	<selfServiceTaskType mapField="F1_STASK_TYPE_CD"/>
+	<customerContactClass mapField="CC_CL_CD"/>
+	<customerContactType mapField="CC_TYPE_CD"/>
+</schema>

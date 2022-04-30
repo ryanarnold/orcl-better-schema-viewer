@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<testSelectionId mapField="TEST_SEL_ID"/>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<description mapField="ALG_DESCR"/>
+	<faTypeDescription mapField="FA_TYPE_DESCR"/>
+	<isComplete dataType="boolean" mapField="COMPLETE_SW"/>
+	<isCancel dataType="boolean" mapField="CANCEL_SW"/>
+	<algorithmEntity dataType="lookup" mapField="ALG_ENTITY_FLG" lookup="ALG_ENTITY_FLG"/>
+	<testSelectionStatus dataType="lookup" mapField="TEST_SEL_STAT_FLG" lookup="TEST_SEL_STAT_FLG"/>
+	<selectionAlgorithm mapField="DV_SEL_METH_ALG_CD"/>
+	<quantityOfDevicesToSelect dataType="number" mapField="QTY_DV_TO_SEL"/>
+	<fieldActivityType mapField="FA_TYPE_CD"/>
+	<scheduledDate dataType="date" mapField="FA_SCHED_DT"/>
+	<creationDateTime dataType="dateTime" default="%CurrentDateTime" mapField="CRE_DTTM"/>
+	<description2 mapField="DESCR"/>
+	<version dataType="number" mapField="VERSION"/>
+	<fa type="list" mapList="FA">
+		<testSelectionId2 mapField="TEST_SEL_ID"/>
+		<fieldActivityId mapField="FA_ID"/>
+		<fieldActivityType2 mapField="FA_TYPE_CD"/>
+		<servicePointId mapField="SP_ID"/>
+		<spDescr mapField="SP_DESCR"/>
+		<fieldOrder mapField="FO_ID"/>
+		<fieldActivityStatus dataType="lookup" mapField="FA_STATUS_FLG" lookup="FA_STATUS_FLG"/>
+		<creationDateTime2 dataType="dateTime" default="%CurrentDateTime" mapField="CRE_DTTM"/>
+	</fa>
+</schema>

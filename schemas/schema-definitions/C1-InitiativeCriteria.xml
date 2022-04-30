@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<initiative suppress="input" required="true" isPrimeKey="true" fkRef="C1-INITV" mapField="C1_INITIATIVE_CD"/>
+	<criteriaType suppress="input" required="true" dataType="lookup" isPrimeKey="true" mapField="C1_INITV_CRITERIA_TYPE_FLG" lookup="C1_INITV_CRITERIA_TYPE_FLG"/>
+	<criteriaSequence required="true" dataType="number" isPrimeKey="true" mapField="CR_CRT_EXEC_SEQ"/>
+	<bo suppress="true" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<description required="true" mapField="DESCR100"/>
+	<longDescription mapField="DESCRLONG"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<criteriaEligibilityControl mdField="INITVCRIT_CRIT_RES_LBL" type="group">
+		<ifTrue required="true" dataType="lookup" mapField="C1_IN_CRT_TRUE_FLG" lookup="C1_IN_CRT_TRUE_FLG"/>
+		<ifFalse required="true" dataType="lookup" mapField="C1_IN_CRT_FALSE_FLG" lookup="C1_IN_CRT_FALSE_FLG"/>
+		<ifInsufficientData required="true" dataType="lookup" mapField="C1_IN_CRT_INSF_FLG" lookup="C1_IN_CRT_INSF_FLG"/>
+	</criteriaEligibilityControl>
+</schema>

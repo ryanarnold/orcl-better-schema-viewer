@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<input type="group">
+		<option dataType="lookup" private="true" default="C1DF" mapField="RE_HELPER_OPT_FLG" lookup="RE_HELPER_OPT_FLG"/>
+		<uomTouSQIData type="group">
+			<unitOfMeasure type="group">
+				<id mapField="UOM_CD"/>
+			</unitOfMeasure>
+			<timeOfUse type="group">
+				<id mapField="TOU_CD"/>
+			</timeOfUse>
+			<serviceQuantityIdentifier type="group">
+				<id mapField="SQI_CD"/>
+			</serviceQuantityIdentifier>
+		</uomTouSQIData>
+	</input>
+	<output type="group">
+		<sqDecimalPosition dataType="number" mapField="DECIMAL_POSITIONS"/>
+	</output>
+</schema>

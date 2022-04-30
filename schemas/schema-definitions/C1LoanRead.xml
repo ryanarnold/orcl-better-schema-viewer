@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<serviceAgreement mapField="SA_ID"/>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<canCalculate dataType="boolean" mapField="ACTION_CALC_SW"/>
+	<saInformation mapField="SA_INFO"/>
+	<entityName mapField="ENTITY_NAME"/>
+	<accountId mapField="ACCT_ID"/>
+	<overrideInterest dataType="lookup" mapField="OVRD_INT_FLG" lookup="OVRD_INT_FLG"/>
+	<isLoanRecalculationDone dataType="boolean" mapField="LOAN_RECALC_SW"/>
+	<recurringChargeAmountLabel mapField="RCR_CHG_AMT_LABEL"/>
+	<totalAmountToBillLabel mapField="TOT_AMT_TOBILL_LBL"/>
+	<status dataType="lookup" mapField="SA_STATUS_FLG" lookup="SA_STATUS_FLG"/>
+	<currency mapField="CURRENCY_CD"/>
+	<origNbrPymntPeriods dataType="number" mapField="ORIG_NBR_PYMNT_PERIODS"/>
+	<loanAmount dataType="money" mapField="SA_LOAN_AMT"/>
+	<saInterestRt dataType="number" mapField="SA_INTEREST_RT"/>
+	<paymentAmount dataType="money" mapField="SA_PAYMENT_AMT"/>
+	<saNbrPymntPeriods dataType="number" mapField="SA_NBR_PYMNT_PERIODS"/>
+	<saTotBal dataType="number" mapField="SA_TOT_BAL"/>
+	<saCurrentBalance dataType="money" mapField="SA_CUR_BAL"/>
+	<saPrincipalBal dataType="number" mapField="SA_PRINCIPAL_BAL"/>
+	<originalLoanAmount dataType="money" mapField="SA_ORIG_LOAN_AMT"/>
+	<saStndrdInterestRt dataType="number" mapField="SA_STNDRD_INTEREST_RT"/>
+	<saNextPaymentAmt dataType="number" mapField="SA_NEXT_PAYMENT_AMT"/>
+	<saNextInterestRt dataType="number" mapField="SA_NEXT_INTEREST_RT"/>
+	<saFreqCd mapField="SA_FREQ_CD"/>
+	<saFreqDescr mapField="SA_FREQ_DESCR"/>
+	<canShowMessage dataType="boolean" mapField="SCHED_SHOW_MSG_SW"/>
+	<schedMessageText mapField="SCHED_MESSAGE_TEXT"/>
+	<schedMessageCatNbr dataType="number" mapField="SCHED_MESSAGE_CAT_NBR"/>
+	<schedMessageNbr dataType="number" mapField="SCHED_MESSAGE_NBR"/>
+	<saContractValue type="list" mapList="SA_CONTRACT_VALUE">
+		<serviceAgreement2 mapField="SA_ID"/>
+		<contractTermType dataType="lookup" mapField="CONTERM_TYPE_FLG" lookup="CONTERM_TYPE_FLG"/>
+		<billFactor mapField="BF_CD"/>
+		<startDate dataType="date" mapField="START_DT"/>
+		<endDate dataType="date" mapField="END_DT"/>
+		<percentExempt dataType="number" mapField="PCT_EXEMPT"/>
+		<taxCertification mapField="TAX_CERT"/>
+		<taxExemptType mapField="TAX_EX_TYPE_CD"/>
+		<touGroup mapField="TOU_GRP_CD"/>
+		<value dataType="number" mapField="VAL"/>
+		<version dataType="number" mapField="VERSION"/>
+		<callOrigFMT dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
+		<contractValue dataType="number" mapField="VAL_CHARGE"/>
+		<contractValue2 dataType="number" mapField="VAL_PERCENTAGE"/>
+		<contractValue3 dataType="number" mapField="VAL_UNIT_RATE"/>
+		<valueType dataType="lookup" mapField="VAL_TYPE_FLG" lookup="VAL_TYPE_FLG"/>
+		<bfCdDescr mapField="BF_CD_DESCR"/>
+	</saContractValue>
+	<saRchg type="list" mapList="SA_RCHG">
+		<serviceAgreement3 mapField="SA_ID"/>
+		<effectiveDate dataType="date" mapField="EFFDT"/>
+		<recurringChargeAmount dataType="money" mapField="RCR_CHG_AMT"/>
+		<currency2 mapField="CURRENCY_CD"/>
+		<version2 dataType="number" mapField="VERSION"/>
+		<callOrigFMT2 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
+	</saRchg>
+	<saFtHist type="list" mapList="SA_FT_HIST">
+		<financialTransactionId mapField="FT_ID"/>
+		<serviceAgreement4 mapField="SA_ID"/>
+		<arrearsDate dataType="date" mapField="ARS_DT"/>
+		<freezeDateTime dataType="dateTime" mapField="FREEZE_DTTM"/>
+		<financialTransactionType dataType="lookup" mapField="FT_TYPE_FLG" lookup="FT_TYPE_FLG"/>
+		<description mapField="DESCR"/>
+		<currentAmount dataType="money" mapField="CUR_AMT"/>
+		<payoffAmount dataType="money" mapField="TOT_AMT"/>
+		<currentBalance dataType="money" mapField="CUR_BAL"/>
+		<payoffBalance dataType="money" mapField="TOT_BAL"/>
+		<currency3 mapField="CURRENCY_CD"/>
+		<siblingId mapField="SIBLING_ID"/>
+		<paymentEventId mapField="PAY_EVENT_ID"/>
+		<parentId mapField="PARENT_ID"/>
+	</saFtHist>
+	<schedule type="list" mapList="SCHEDULE">
+		<sequence dataType="number" mapField="LOAN_PERIOD_SEQ"/>
+		<loanPeriod mapField="LOAN_PERIOD"/>
+		<amount dataType="money" mapField="LOAN_PAYMENT_AMT"/>
+		<interest dataType="money" mapField="LOAN_INTEREST_AMT"/>
+		<principal dataType="money" mapField="LOAN_PRINCIPAL_AMT"/>
+		<cumulativeInterest dataType="money" mapField="LOAN_CUMM_INT_AMT"/>
+		<cumulativePrincipal dataType="money" mapField="LOAN_CUMM_PRIN_AMT"/>
+		<principalBalance dataType="money" mapField="LOAN_PRINCIPAL_BAL"/>
+	</schedule>
+</schema>

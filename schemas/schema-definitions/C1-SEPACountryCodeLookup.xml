@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<lookupValue mdField="C1_SEPA_COUNTRY_VALUE_LBL" required="true" isPrimeKey="true" mapField="F1_EXT_LOOKUP_VALUE"/>
+	<bo suppress="true" isPrimeKey="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<description required="true" mapField="DESCR"/>
+	<overrideDescription mapField="DESCR_OVRD"/>
+	<longDescription mapField="DESCRLONG"/>
+	<lookupUsage required="true" dataType="lookup" default="F1AC" mapField="F1_EXT_LOOKUP_USAGE_FLG" lookup="F1_EXT_LOOKUP_USAGE_FLG"/>
+	<owner suppress="true" dataType="lookup" mapField="OWNER_FLG" lookup="OWNER_FLG"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<countryBankDetails type="group" mapXML="BO_DATA_AREA">
+		<currency mdField="C1_SEPA_CURRENCY_CD" required="true" fkRef="F1-CURCY"/>
+		<intlBankAcctNumCountryCd mdField="C1_SEPA_IBAN_CC" required="true"/>
+		<bankIdentificationCodeCountryCd mdField="C1_SEPA_BIC_CC" required="true"/>
+	</countryBankDetails>
+</schema>

@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<spMeterHistoryId mapField="SP_MTR_HIST_ID"/>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<spMtrHisInfo mapField="SP_MTR_HIS_INFO"/>
+	<spInformation mapField="SP_INFO"/>
+	<spType mapField="SP_TYPE_CD"/>
+	<meter mapField="MTR_ID"/>
+	<meterConfigurationInfo mapField="MTR_CONFIG_INFO"/>
+	<installationDateTime dataType="dateTime" mapField="INSTALL_READ_DTTM"/>
+	<removalDateTime dataType="dateTime" mapField="REMOVAL_READ_DTTM"/>
+	<displayStkLocSw mapField="DISPLAY_STK_LOC_SW"/>
+	<defaultForRow mapField="DEFAULT_FOR_ROW_FLG"/>
+	<installMeterReadId mapField="INSTALL_MR_ID"/>
+	<meterConfigurationId mapField="MTR_CONFIG_ID"/>
+	<servicePointId mapField="SP_ID"/>
+	<removalMeterReadId mapField="REMOVAL_MR_ID"/>
+	<removalDateTime2 dataType="dateTime" mapField="REMOVAL_DTTM"/>
+	<version dataType="number" mapField="VERSION"/>
+	<installationConstant dataType="number" mapField="INSTALL_CONST"/>
+	<defaultForRowT mapField="C1_T_DEFAULT_FOR_ROW_FLG"/>
+	<installMeterReadIdT mapField="C1_T_INSTALL_MR_ID"/>
+	<stockLocation mapField="STK_LOC_CD"/>
+	<slcDescr mapField="SLC_DESCR"/>
+	<mtrConfigId2 mapField="MTR_CONFIG_ID2"/>
+	<spMtrHistId2 mapField="SP_MTR_HIST_ID2"/>
+	<sequence dataType="number" mapField="SEQNO"/>
+	<meterReadId mapField="MR_ID"/>
+	<spMeterEventType dataType="lookup" mapField="SP_MTR_EVT_FLG" lookup="SP_MTR_EVT_FLG"/>
+	<meterOnOffStatus dataType="lookup" mapField="MTR_ON_OFF_FLG" lookup="MTR_ON_OFF_FLG"/>
+	<version2 dataType="number" mapField="VERSION2"/>
+	<meterConfigurationIdT mapField="C1_T_MTR_CONFIG_ID"/>
+	<mtrConfigId3 mapField="MTR_CONFIG_ID3"/>
+	<spMtrHistId3 mapField="SP_MTR_HIST_ID3"/>
+	<seqno2 dataType="number" mapField="SEQNO2"/>
+	<mrId2 mapField="MR_ID2"/>
+	<spMtrEvtFlg2 mapField="SP_MTR_EVT_FLG2"/>
+	<mtrOnOffFlg2 mapField="MTR_ON_OFF_FLG2"/>
+	<version3 dataType="number" mapField="VERSION3"/>
+	<c1TMtrConfigId2 mapField="C1_T_MTR_CONFIG_ID2"/>
+	<spMtrEvt type="list" mapList="SP_MTR_EVT">
+		<spMeterHistoryId2 mapField="SP_MTR_HIST_ID"/>
+		<sequence2 dataType="number" mapField="SEQNO"/>
+		<meterReadId2 mapField="MR_ID"/>
+		<spMeterEventType2 dataType="lookup" mapField="SP_MTR_EVT_FLG" lookup="SP_MTR_EVT_FLG"/>
+		<meterOnOffStatus2 dataType="lookup" mapField="MTR_ON_OFF_FLG" lookup="MTR_ON_OFF_FLG"/>
+		<version2 dataType="number" mapField="VERSION"/>
+		<meterConfigurationIdT2 mapField="C1_T_MTR_CONFIG_ID"/>
+		<readDateTime dataType="dateTime" mapField="READ_DTTM"/>
+	</spMtrEvt>
+	<spHist type="list" mapList="SP_HIST">
+		<servicePointId2 mapField="SP_ID"/>
+		<installationDateTime2 dataType="dateTime" mapField="INSTALL_DTTM"/>
+		<meter2 mapField="MTR_ID"/>
+		<removalDateTime3 dataType="dateTime" mapField="REMOVAL_DTTM"/>
+		<badgeNumber mapField="BADGE_NBR"/>
+		<meterType mapField="MTR_TYPE_CD"/>
+		<description mapField="DESCR"/>
+	</spHist>
+</schema>

@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<head type="group">
+		<action/>
+		<key1 type="group">
+			<name default="ACCT_ID"/>
+			<value/>
+		</key1>
+		<key2 type="group">
+			<name default="PER_ID"/>
+			<value/>
+		</key2>
+		<key3 type="group">
+			<name/>
+			<value/>
+		</key3>
+		<key4 type="group">
+			<name/>
+			<value/>
+		</key4>
+		<key5 type="group">
+			<name/>
+			<value/>
+		</key5>
+		<emailAddress/>
+		<webUserId/>
+		<ipAddress/>
+		<cssUser/>
+		<saId mdField="SA_ID" fkRef="SA"/>
+		<baseRateSchedule mdField="RS_CD" fkRef="C1-RTSCH"/>
+		<rateSchedule mdField="RS_CD" required="true" fkRef="C1-RTSCH"/>
+		<hypotheticalCalculation type="group">
+			<usageAdjustments type="list">
+				<usageAdjustmentFactor mdField="WX_VALUE" isPrimeKey="true"/>
+				<value mdField="WX_VALUE"/>
+			</usageAdjustments>
+		</hypotheticalCalculation>
+		<referenceDateTime mdField="WX_REFERENCE_DATE_TIME" dataType="dateTime" default="%ProcessDateTime"/>
+		<mode mdField="WX_USAGE_CALC_MODE_FLG" dataType="lookup" lookup="WX_USAGE_CALC_MODE_FLG"/>
+	</head>
+	<mainData type="group">
+		<projectedAmounts type="list">
+			<billDate mdField="BILL_DT" dataType="date"/>
+			<originalAmount mdField="WX_ORIG_AMT" dataType="number"/>
+			<projectedAmount mdField="WX_PROJECTED_AMT" dataType="number"/>
+			<differenceAmount mdField="WX_DIFF_AMT" dataType="number"/>
+			<isInError mdField="IN_ERROR_SW" dataType="boolean"/>
+		</projectedAmounts>
+		<currencySymbol mdField="CUR_SYMBOL"/>
+	</mainData>
+	<errorInformation type="group">
+		<isInError mdField="IN_ERROR_SW" dataType="boolean" default="false"/>
+		<errorReference type="group">
+			<category mdField="MESSAGE_CAT_NBR" dataType="number"/>
+			<number mdField="MESSAGE_NBR" dataType="number"/>
+		</errorReference>
+		<errorMessage mdField="MESSAGE_TEXT"/>
+	</errorInformation>
+</schema>

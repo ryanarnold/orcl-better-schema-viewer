@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<accountId mapField="ACCT_ID"/>
+	<address mapField="ADDRESS1"/>
+	<buildStartSASW dataType="boolean" default="true" mapField="BUILD_START_SA_SW"/>
+	<createStartFASW dataType="boolean" default="true" mapField="CREATE_START_FA_SW"/>
+	<premiseFilter dataType="lookup" default="ALL" mapField="PSA_PREM_FILT_FLG" lookup="PSA_PREM_FILT_FLG"/>
+	<premiseId mapField="PREM_ID"/>
+	<spType mapField="STRT_SP_TYPE_CD"/>
+	<startSelectSASW dataType="boolean" default="true" mapField="START_SELECT_SA_SW"/>
+	<startCISDivision mapField="STRT_CIS_DIVISION"/>
+	<startDate dataType="date" mapField="STRT_START_DT"/>
+	<startMethod dataType="lookup" mapField="STRT_TYPE_FLG" lookup="STRT_TYPE_FLG"/>
+	<startPremiseId mapField="STRT_PREM_ID"/>
+	<startSATypeCode mapField="STRT_SA_TYPE_CD"/>
+	<ServiceagreementToStartRow type="list" mapList="SA_TO_STRT">
+		<allowEstimates dataType="boolean" mapField="ALLOW_EST_SW"/>
+		<cisDivision mapField="CIS_DIVISION"/>
+		<characteristicPremiseRequired dataType="boolean" mapField="PREM_REQ_SW"/>
+		<customerRead dataType="lookup" mapField="CUST_READ_FLG" lookup="CUST_READ_FLG"/>
+		<saAllowEstimateSW dataType="boolean" mapField="SA_ALLOW_EST_SW"/>
+		<saType mapField="SA_TYPE_CD"/>
+		<spId mapField="SP_ID"/>
+		<spType mapField="SP_TYPE_1_CD"/>
+		<startOption mapField="START_OPT_CD"/>
+		<startThisSA dataType="boolean" default="true" mapField="START_SW"/>
+	</ServiceagreementToStartRow>
+	<PendingStartStop type="list" mapList="PEND_SS">
+		<accountId mapField="ACCT_ID"/>
+		<saId mapField="SA_ID"/>
+		<startStopDate dataType="date" mapField="START_STOP_DT"/>
+		<cisDivision mapField="CIS_DIVISION"/>
+		<saType mapField="SA_TYPE_CD"/>
+		<startOptionCd mapField="START_OPT_CD"/>
+		<saStatusFlag dataType="lookup" mapField="SA_STATUS_FLG" lookup="SA_STATUS_FLG"/>
+		<startReasonFlag dataType="lookup" mapField="STRT_RSN_FLG" lookup="STRT_RSN_FLG"/>
+		<stopReasonFlag dataType="lookup" mapField="STOP_RSN_FLG" lookup="STOP_RSN_FLG"/>
+		<currencyCd mapField="CURRENCY_CD"/>
+		<saInfo mapField="SA_INFO"/>
+		<premiseId mapField="PREM_ID"/>
+	</PendingStartStop>
+	<PendingFA type="list" mapList="SS_FA">
+		<accountId mapField="ACCT_ID"/>
+		<faId mapField="FA_ID"/>
+		<faInfo mapField="FA_INFO"/>
+		<faTypeFlagStr mapField="FA_TYPE_FLG_STR"/>
+	</PendingFA>
+	<stopDate dataType="date" default="%CurrentDate" mapField="STOP_END_DT"/>
+	<actionStop dataType="boolean" default="true" mapField="ACTION_STOP_SW"/>
+	<stopType dataType="lookup" default="AC" mapField="STOP_TYPE_FLG" lookup="STOP_TYPE_FLG"/>
+	<stopPremiseId mapField="STOP_PREM_ID"/>
+	<stopRequestedBy mapField="STOP_REQED_BY"/>
+	<emailAddress mapField="EMAILID"/>
+	<addressSource dataType="lookup" mapField="BILL_ADDR_SRCE_FLG" lookup="BILL_ADDR_SRCE_FLG"/>
+	<billRouteType mapField="BILL_RTE_TYPE_CD"/>
+	<billRoutingMethod dataType="lookup" mapField="BILL_RTG_METH_FLG" lookup="BILL_RTG_METH_FLG"/>
+	<country mapField="COUNTRY"/>
+	<addressLine1 mapField="ADDRESS12"/>
+	<addressLine2 mapField="ADDRESS2"/>
+	<addressLine3 mapField="ADDRESS3"/>
+	<addressLine4 mapField="ADDRESS4"/>
+	<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+	<number1 mapField="NUM1"/>
+	<number2 mapField="NUM2"/>
+	<inCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+	<city mapField="CITY2"/>
+	<geographic mapField="GEO_CODE"/>
+	<county mapField="COUNTY"/>
+	<state mapField="STATE"/>
+	<postal mapField="POSTAL"/>
+	<overridePhoneDetails type="list" mapList="OVRD_PHONE">
+		<sequence dataType="number" mapField="SEQ_NUM"/>
+		<phoneType mapField="PHONE_TYPE_CD"/>
+		<countryCode mapField="COUNTRY_CODE"/>
+		<phoneNumber mapField="PHONE"/>
+		<extension mapField="EXTENSION"/>
+	</overridePhoneDetails>
+</schema>

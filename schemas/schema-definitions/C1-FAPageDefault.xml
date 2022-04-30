@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <defaultFlag required="true" mapField="DEFAULT_FOR_FLG"/>
+  <faId mapField="FA_ID"/>
+  <faType mapField="FA_TYPE_CD"/>
+  <faStatus dataType="lookup" mapField="FA_STATUS_FLG" lookup="FA_STATUS_FLG"/>
+  <spId fkRef="SP" mapField="SP_ID"/>
+  <faCancelReason mapField="FA_CAN_RSN_CD"/>
+  <faPriority dataType="lookup" mapField="FA_PRIORITY_FLG" lookup="FA_PRIORITY_FLG"/>
+  <createdBy dataType="lookup" mapField="FA_CREATED_BY_FLG" lookup="FA_CREATED_BY_FLG"/>
+  <scheduleDateTime dataType="dateTime" mapField="SCHED_DTTM"/>
+  <isEligibleForDispatch dataType="boolean" mapField="ELIG_DISPATCH_SW"/>
+  <dispatchGroup mapField="DISP_GRP_CD"/>
+  <foId mapField="FO_ID"/>
+  <createDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+  <testSelectionId mapField="TEST_SEL_ID"/>
+  <userId mapField="USER_ID"/>
+  <instructions mapField="INSTRUCTIONS"/>
+  <longDescription mapField="DESCRLONG"/>
+  <appointmentScheduleId mapField="APP_SCHED_ID"/>
+  <externalId mapField="FA_EXT_ID"/>
+  <intermediateStatus mapField="FA_INT_STATUS_FLG"/>
+  <fieldworkRescheduleReason mapField="FA_RESCHED_RSN_CD"/>
+  <steps type="list" mapList="FA_STEP">
+    <fieldActivityId mapField="FA_ID"/>
+    <stepSequence dataType="number" mapField="STEP_SEQ_NBR"/>
+    <faStepTypeAction dataType="lookup" mapField="FA_STEP_TY_ACT_FLG" lookup="FA_STEP_TY_ACT_FLG"/>
+    <spawnedFieldActivityId mapField="SPAWNED_FA_ID"/>
+    <accountId mapField="ACCT_ID"/>
+    <customerContactId mapField="CC_ID"/>
+    <stepUpdateEntity dataType="lookup" mapField="STP_ENTITY_FLG" lookup="STP_ENTITY_FLG"/>
+    <spItemHistoryId mapField="SP_ITEM_HIST_ID"/>
+    <spMeterHistoryId mapField="SP_MTR_HIST_ID"/>
+    <spId mapField="SP_ID"/>
+    <itemId mapField="ITEM_ID"/>
+    <meterReadId mapField="MR_ID"/>
+    <meterConfigurationMeterId mapField="MTR_CFG_MTR_ID"/>
+    <meterId mapField="MTR_ID"/>
+    <deviceTestId mapField="DV_TEST_ID"/>
+    <version dataType="number" mapField="VERSION"/>
+    <stepTypeInfo mapField="FA_STEP_TYPE_INFO"/>
+    <stepIdLabel mapField="STEP_ID_LABEL"/>
+    <stepId mapField="STEP_ID"/>
+    <stepInfo mapField="FA_STEP_INFO"/>
+  </steps>
+  <characteristics type="list" mapList="FA_CHAR">
+    <fieldActivityId mapField="FA_ID"/>
+    <characteristicType mapField="CHAR_TYPE_CD"/>
+    <sequence dataType="number" mapField="SEQ_NUM"/>
+    <searchCharacteristicValue mapField="SRCH_CHAR_VAL"/>
+    <characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+    <characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
+    <characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+    <characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+    <characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
+    <adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+    <characteristicValue mapField="CHAR_VAL"/>
+    <version dataType="number" mapField="VERSION"/>
+    <searchNavigationKey mapField="SRCH_NAV_KEY"/>
+    <navigationOption mapField="NAV_OPT_CD"/>
+    <table mapField="TBL_NAME"/>
+    <infoProgramName mapField="INFO_PRG"/>
+    <typeofCharValue dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+    <charValueDescription mapField="CHAR_VAL_DESCR"/>
+    <charValForeignKeys mapField="CHAR_VAL_FK_STR"/>
+    <charValFKInfo mapField="CHAR_VAL_FK_INFO"/>
+    <compoundPKSwitch dataType="boolean" mapField="COMP_PK_SW"/>
+    <charateristicValue mapField="COMP_PK_STR"/>
+    <characteristicTypeDescription mapField="CHAR_TYPE_DESCR"/>
+  </characteristics>
+</schema>

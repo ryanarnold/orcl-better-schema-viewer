@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<main type="group">
+		<saId fkRef="SA" mapField="SA_ID"/>
+		<rateSchedule fkRef="C1-RSINF" mapField="RS_CD"/>
+		<rsVersion dataType="lookup" mapField="RS_VERSION_FLG" lookup="RS_VERSION_FLG"/>
+		<consumptionPeriod type="group">
+			<startDate mapField="CONSUMPTION_START_DT"/>
+			<endDate mapField="CONSUMPTION_END_DT"/>
+		</consumptionPeriod>
+		<bsegPeriod type="group">
+			<startDate mapField="BSEG_START_DT"/>
+			<endDate mapField="BSEG_END_DT"/>
+		</bsegPeriod>
+		<usageConsumptionPeriod type="group">
+			<startDate mapField="USAGE_CONSUMPTION_START_DT"/>
+			<endDate mapField="USAGE_CONSUMPTION_END_DT"/>
+		</usageConsumptionPeriod>
+		<accountingDate dataType="date" default="%ProcessDate" mapField="ACCOUNTING_DT"/>
+		<cisDivision mapField="CIS_DIVISION"/>
+		<saType mapField="SA_TYPE_CD"/>
+		<revenueClass fkRef="C1-REVCL" mapField="REV_CL_CD"/>
+		<retainReads default="false" mapField="RETAIN_READ_COLL_SW"/>
+		<retainItems default="false" mapField="RETAIN_ITEM_COLL_SW"/>
+		<retainSQs default="false" mapField="RETAIN_SQ_COLL_SW"/>
+		<retainRules default="false" mapField="RETAIN_SQ_RULE_SW"/>
+		<thirdParty mapField="THIRD_PARTY_SW"/>
+		<language mapField="LANGUAGE_CD"/>
+		<calcAmt dataType="money" mapField="CALC_AMT"/>
+		<startDayOption dataType="lookup" mapField="IB_BASE_TM_DAY_FLG" lookup="IB_BASE_TM_DAY_FLG"/>
+		<intervalBillingSAcutoffDttm mapField="IB_SA_CUTOFF_DTTM_TM"/>
+		<saPeriod type="group">
+			<startDate mapField="SA_START_DT"/>
+			<endDate mapField="SA_END_DT"/>
+		</saPeriod>
+		<characteristicSource type="group">
+			<premiseId fkRef="PREM" mapField="PREM_ID"/>
+			<spId fkRef="SP" mapField="SP_ID"/>
+		</characteristicSource>
+		<billId fkRef="BILL" mapField="BILL_ID"/>
+		<masterBsegId fkRef="C1-BSEG" mapField="MASTER_BSEG_ID"/>
+		<masterSaId fkRef="SA" mapField="MASTER_SA_ID"/>
+		<createDateTime dataType="dateTime" default="%ProcessDateTime" mapField="CRE_DTTM"/>
+		<isTraceOn dataType="lookup" default="C1NO" mapField="TRC_ON_FLG" lookup="TRC_ON_FLG"/>
+		<specialRole/>
+		<totalUsageConsumptionPeriod type="group">
+			<startDateTime mdField="START_DTTM" dataType="dateTime"/>
+			<endDateTime mdField="END_DTTM" dataType="dateTime"/>
+		</totalUsageConsumptionPeriod>
+	</main>
+	<custom type="group">
+		<customElements type="raw" mdField="C1_CUSTOM_ELEMENTS"/>
+	</custom>
+</schema>

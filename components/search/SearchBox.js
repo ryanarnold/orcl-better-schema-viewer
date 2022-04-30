@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { SearchResults } from './SearchResults';
-import schemaList from '../../schemas/schema-list';
 
 const KEY_ARROW_UP = 38;
 const KEY_ARROW_DOWN = 40;
@@ -22,6 +21,7 @@ export default class SearchBox extends Component {
   }
 
   handleSearchQueryChange(event) {
+    const { schemaList } = this.props;
     const searchQuery = event.target.value.toLowerCase();
 
     this.setState({
@@ -66,7 +66,12 @@ export default class SearchBox extends Component {
   }
 
   render() {
-    const { filteredSchemaList, selectedSchemaIndex } = this.state;
+    const { filteredSchemaList } = this.state;
+    let { selectedSchemaIndex } = this.state;
+
+    if (selectedSchemaIndex < 0) {
+      selectedSchemaIndex = 0;
+    }
 
     const selectedSchema = filteredSchemaList.length > 0
       ? filteredSchemaList[selectedSchemaIndex].name : [];

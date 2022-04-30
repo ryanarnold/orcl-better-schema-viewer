@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<outboundMsgId mapField="OUTMSG_ID"/>
+	<externalSystem fkRef="F1-ESTMP" mapField="NT_XID_CD"/>
+	<outboundMessageType fkRef="F1-OMTYP" mapField="OUTMSG_TYPE_CD"/>
+	<processingMethod dataType="lookup" mapField="OUTMSG_PROC_METH_FLG" lookup="OUTMSG_PROC_METH_FLG"/>
+	<outboundMessageStatus dataType="lookup" mapField="OUTMSG_STATUS_FLG" lookup="OUTMSG_STATUS_FLG"/>
+	<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+	<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+	<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+	<errorDetail mapField="ERROR_DTL"/>
+	<sendDetails type="group" mapXML="XML_SOURCE">
+		<registerId mdField="REG_ID"/>
+		<readDateTime mdField="READ_DTTM" dataType="dateTime"/>
+	</sendDetails>
+	<responseDetails type="group" mapXML="XML_RESPONSE">
+		<estimatedRegisterReading mdField="EST_REG_READING" dataType="number"/>
+		<lowBoundaryRegisterReading mdField="LOW_REG_READING" dataType="number"/>
+		<highBoundaryRegisterReading mdField="HIGH_REG_READING" dataType="number"/>
+		<exceptionInfo type="group">
+			<seq mdField="SEQ_NUM" dataType="number" isPrimeKey="true"/>
+			<messageCategory mdField="MESSAGE_CAT_NBR" dataType="number"/>
+			<messageNumber mdField="MESSAGE_NBR" dataType="number"/>
+			<comments mdField="COMMENTS"/>
+			<messageParameters type="list">
+				<parameterSequence mdField="PARM_SEQ" dataType="number" isPrimeKey="true"/>
+				<messageParmeterValue mdField="MSG_PARM_VAL"/>
+			</messageParameters>
+		</exceptionInfo>
+	</responseDetails>
+</schema>

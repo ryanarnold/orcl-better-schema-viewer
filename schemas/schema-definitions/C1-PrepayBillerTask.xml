@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<serviceTaskId fkRef="F1-STASK" mapField="F1_SVC_TASK_ID"/>
+	<bo required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<boStatus mapField="BO_STATUS_CD"/>
+	<createDateTime dataType="dateTime" default="%CurrentDateTime" mapField="CRE_DTTM"/>
+	<statusDateTime dataType="dateTime" mapField="STATUS_UPD_DTTM"/>
+	<serviceTaskType fkRef="F1-STKTY" mapField="F1_STASK_TYPE_CD"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<saId mdField="SA_ID" fkRef="SA" mapField="PK_VALUE1">
+		<row mapChild="F1_SVC_TASK_REL_OBJ">
+			<MAINT_OBJ_CD is="SA"/>
+			<SEQ_NUM is="1"/>
+		</row>
+	</saId>
+	<accountId mdField="ACCT_ID" fkRef="ACCT" mapField="PK_VALUE1">
+		<row mapChild="F1_SVC_TASK_REL_OBJ">
+			<MAINT_OBJ_CD is="ACCOUNT"/>
+			<SEQ_NUM is="1"/>
+		</row>
+	</accountId>
+	<prepayBillerDetails type="group" mapXML="BO_DATA_AREA">
+		<notificationPreferences type="group">
+			<minimumBalanceReplenishment mdField="C1_PPB_MIN_BAL_REP_NTF_FLG" required="true" dataType="lookup" lookup="C1_PPB_MIN_BAL_REP_NTF_FLG"/>
+			<usageCalculation mdField="C1_PPB_USAGE_CALC_NTF_FLG" dataType="lookup" default="C1DN" lookup="C1_PPB_USAGE_CALC_NTF_FLG"/>
+		</notificationPreferences>
+		<payoffRelief type="group">
+			<amount mdField="C1_PPB_AMOUNT" dataType="money"/>
+			<startDate mdField="START_DT" dataType="date"/>
+			<numberOfDaysToPayoff mdField="C1_PPB_PAYOFF_PERIOD_DAYS" dataType="number"/>
+		</payoffRelief>
+		<paymentMethod mdField="C1_PPB_PAYMENT_METHOD_FLG" required="true" dataType="lookup" lookup="C1_PPB_PAYMENT_METHOD_FLG"/>
+	</prepayBillerDetails>
+	<latestBillSegmentId mdField="BSEG_ID" fkRef="C1-BSEG" mapField="PK_VALUE1">
+		<row mapChild="F1_SVC_TASK_REL_OBJ">
+			<MAINT_OBJ_CD is="BILL SEG"/>
+			<SEQ_NUM is="1"/>
+		</row>
+	</latestBillSegmentId>
+	<toDoRetry type="group" mapXML="BO_DATA_AREA">
+		<retryDateTime dataType="dateTime"/>
+		<numberOfRetries dataType="number"/>
+		<currentErrorState/>
+	</toDoRetry>
+</schema>

@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<characteristicType fkRef="CHAR_TYP" mapField="CHAR_TYPE_CD"/>
+	<searchCharValue mdField="SRCH_CHAR_VAL"/>
+	<isCharValueSearchAllowed mdField="SEARCH_FLG" dataType="lookup" lookup="SEARCH_FLG"/>
+	<charEntityValue dataType="lookup" mapField="CHAR_ENTITY_FLG" lookup="CHAR_ENTITY_FLG"/>
+	<characteristicValue mapField="CHAR_VAL"/>
+	<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+	<characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
+	<characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+	<characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+	<characteristicValueFK4 mapField="CHAR_VAL_FK4"/>
+	<characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+	<typeOfCharacteristic dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+	<charValInfo mapField="CHAR_VAL_FK_INFO"/>
+	<charTypeInfo type="group">
+		<input type="group">
+			<characteristicType mapField="CHAR_TYPE_CD"/>
+			<characteristicValue mapField="CHAR_VAL"/>
+			<adhocCharValue mapField="ADHOC_CHAR_VAL"/>
+			<fkValue1 mapField="CHAR_VAL_FK1"/>
+			<fkValue2 mapField="CHAR_VAL_FK2"/>
+			<fkValue3 mapField="CHAR_VAL_FK3"/>
+			<fkValue4 mapField="CHAR_VAL_FK4"/>
+			<fkValue5 mapField="CHAR_VAL_FK5"/>
+		</input>
+		<output type="group">
+			<charTypeFlg dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+			<charValInfo mapField="CHAR_VAL_FK_INFO"/>
+			<searchZone mapField="ZONE_CD"/>
+			<navOption mapField="NAV_OPT_CD"/>
+			<pkFieldsList type="list" mapList="PK_FIELD_LIST">
+				<pkField mapField="PK_VAL"/>
+			</pkFieldsList>
+		</output>
+	</charTypeInfo>
+</schema>

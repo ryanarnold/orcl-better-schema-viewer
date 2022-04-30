@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<representative mdField="THRD_PTY_REP_CD" required="true" isPrimeKey="true" mapField="C1_REPRESENTATIVE_CD"/>
+	<bo suppress="true" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<description required="true" mapField="DESCR100"/>
+	<boStatus suppress="input" mapField="BO_STATUS_CD"/>
+	<statusReason suppress="input" mapField="BO_STATUS_REASON_CD"/>
+	<createDateTime suppress="true" dataType="dateTime" default="%CurrentDateTime" mapField="CRE_DTTM"/>
+	<statusDateTime suppress="true" dataType="dateTime" mapField="STATUS_UPD_DTTM"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<representativeType suppress="input" mdField="C1_SALES_REP_TYPE_LBL" required="true" dataType="lookup" default="C1TP" mapField="C1_REPRESENTATIVE_TYPE_FLG" lookup="C1_REPRESENTATIVE_TYPE_FLG"/>
+	<personId suppress="blank" mdField="C1_PER_LBL" required="true" fkRef="PER" mapField="PER_ID"/>
+	<notificationExternalId suppress="blank" required="true" fkRef="F1-ESTMP" mapField="NT_XID_CD"/>
+</schema>

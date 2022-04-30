@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<head type="group">
+		<action/>
+		<key1 type="group">
+			<name default="ACCT_ID"/>
+			<value/>
+		</key1>
+		<key2 type="group">
+			<name default="PER_ID"/>
+			<value/>
+		</key2>
+		<key3 type="group">
+			<name/>
+			<value/>
+		</key3>
+		<key4 type="group">
+			<name/>
+			<value/>
+		</key4>
+		<key5 type="group">
+			<name/>
+			<value/>
+		</key5>
+		<emailAddress/>
+		<webUserId/>
+		<ipAddress/>
+		<cssUser/>
+		<saId mdField="SA_ID" fkRef="SA"/>
+		<usageDays mdField="USAGE_DAYS" dataType="number"/>
+		<referenceDateTime mdField="WX_REFERENCE_DATE_TIME" dataType="dateTime" default="%ProcessDateTime"/>
+	</head>
+	<mainData type="group">
+		<results type="list">
+			<saId mdField="SA_ID" fkRef="SA"/>
+			<saInfo mdField="SA_INFO"/>
+			<cisDivision mdField="CIS_DIVISION"/>
+			<cisDivisionDescription mdField="DESCR"/>
+			<saType mdField="SA_TYPE_CD"/>
+			<saTypeDescription mdField="SA_TYPE_DESCR"/>
+			<serviceType mdField="SVC_TYPE_CD"/>
+			<serviceTypeDescription mdField="SVC_TYPE_DESCR"/>
+			<isSkipped mdField="SKIPPED_SW" dataType="boolean"/>
+			<skipReasonDescription mdField="SKIP_REASON"/>
+			<startDateTime mdField="START_DTTM" dataType="dateTime"/>
+			<endDateTime mdField="END_DTTM" dataType="dateTime"/>
+			<uom mdField="UOM_CD"/>
+			<uomDescription mdField="UOM_DESCR"/>
+			<spi mdField="INTV_SECOND" dataType="number"/>
+			<latestMeasurementDateTime mdField="LTST_MSRMT_DTTM" dataType="dateTime"/>
+			<measurements type="list">
+				<sequence mdField="SEQNO" dataType="number"/>
+				<quantity mdField="SVC_QTY" dataType="number"/>
+			</measurements>
+			<qtyToDateStartDateTime mdField="START_DTTM" dataType="dateTime"/>
+			<qtyToDate mdField="SVC_QTY" dataType="number"/>
+		</results>
+		<isInError mdField="IN_ERROR_SW" dataType="boolean"/>
+	</mainData>
+</schema>

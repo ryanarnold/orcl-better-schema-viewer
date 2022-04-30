@@ -1,0 +1,207 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <C1FACompletionExtSysStruct suppress="true" type="group">
+    <C1FACompletionExtSysStructService type="group">
+      <C1FACompletionExtSysStructDetails type="group">
+        <FACompletionAction dataType="lookup" mapField="FA_ACTION_FLG" lookup="FA_ACTION_FLG"/>
+        <UploadFieldActivityID mapField="COMPLETE_FA_ID"/>
+        <FieldActivityID fkRef="FA-ID" mapField="FA_ID"/>
+        <UploadStatus dataType="lookup" mapField="FA_UP_STATUS_FLG" lookup="FA_UP_STATUS_FLG"/>
+        <Workedby mapField="WORKED_BY"/>
+        <WorkDateTime dataType="dateTime" mapField="WORK_DTTM"/>
+        <Version dataType="number" mapField="VERSION"/>
+        <LongDescription mapField="DESCRLONG"/>
+        <ExtFaTypeCode mapField="EXT_FA_TYPE_CD"/>
+        <ExternalApplicationId mapField="EXT_APP_ID"/>
+        <SPType fkRef="C1-SPTYP" mapField="SP_TYPE_CD"/>
+        <ServicePointStatus dataType="lookup" mapField="SP_STATUS_FLG" lookup="SP_STATUS_FLG"/>
+        <InstallDate dataType="date" mapField="INSTALL_DT"/>
+        <AbolishedDate dataType="date" mapField="ABOLISH_DT"/>
+        <ServicePointSourceStatus dataType="lookup" mapField="SP_SRC_STATUS_FLG" lookup="SP_SRC_STATUS_FLG"/>
+        <DisconnectLocation mapField="DISCON_LOC_CD"/>
+        <ReadCycle fkRef="C1SVCCYC" mapField="MR_CYC_CD"/>
+        <ReadRoute mapField="MR_RTE_CD"/>
+        <ReadCycleRouteSequence dataType="number" mapField="MR_CYC_RTE_SEQ"/>
+        <MeterLocation mapField="MTR_LOC_CD"/>
+        <LocationDetails mapField="MTR_LOC_DETAILS"/>
+        <Descr2542 mapField="DESCRLONG2"/>
+        <ExtMsgRecd mapField="EXT_MSG_RECD"/>
+        <FAUploadCharacteristics type="group">
+          <FAUploadCharacteristicsRow type="list" mapList="FA_STGUP_CHAR">
+            <FieldActivityID mapField="FA_ID"/>
+            <CharacteristicType mapField="CHAR_TYPE_CD"/>
+            <Sequence dataType="number" mapField="SEQ_NUM"/>
+            <CharacteristicValue mapField="CHAR_VAL"/>
+            <AdhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+            <CharacteristicValueFK1 mapField="CHAR_VAL_FK1"/>
+            <CharacteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+            <CharacteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+            <CharacteristicValueFK4 mapField="CHAR_VAL_FK4"/>
+            <CharacteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+            <Version dataType="number" mapField="VERSION"/>
+            <SearchNavigationKey mapField="SRCH_NAV_KEY"/>
+            <NavigationOption mapField="NAV_OPT_CD"/>
+            <Table mapField="TBL_NAME"/>
+            <InfoProgramName mapField="INFO_PRG"/>
+            <TypeofCharValue dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+            <CharValueDescription mapField="CHAR_VAL_DESCR"/>
+            <CharValForeignKeys mapField="CHAR_VAL_FK_STR"/>
+            <CharValFKInfo mapField="CHAR_VAL_FK_INFO"/>
+            <CompoundPKSwitch dataType="boolean" mapField="COMP_PK_SW"/>
+            <CharateristicValue mapField="COMP_PK_STR"/>
+            <CharacteristicTypeDescription mapField="CHAR_TYPE_DESCR"/>
+          </FAUploadCharacteristicsRow>
+        </FAUploadCharacteristics>
+        <FAUploadRemarks type="group">
+          <FAUploadRemarksRow type="list" mapList="FA_STGUP_REM">
+            <FieldActivityID mapField="FA_ID"/>
+            <FieldActivityRemark mapField="FA_REM_CD"/>
+            <Version dataType="number" mapField="VERSION"/>
+          </FAUploadRemarksRow>
+        </FAUploadRemarks>
+        <MeterInfo type="group">
+          <MeterInfoRow type="list" mapList="MTR_INFO">
+            <MeterType mapField="MTR_TYPE_CD"/>
+            <MeterStatus dataType="lookup" mapField="MTR_STATUS_FLG" lookup="MTR_STATUS_FLG"/>
+            <Manufacturer mapField="MFG_CD"/>
+            <Model mapField="MODEL_CD"/>
+            <BadgeNumber mapField="BADGE_NBR"/>
+            <SerialNumber mapField="SERIAL_NBR"/>
+            <OnOffStatus dataType="lookup" mapField="ON_OFF_FLG" lookup="ON_OFF_FLG"/>
+            <DateReceived dataType="date" mapField="RECEIVE_DT"/>
+            <DateRetired dataType="date" mapField="RETIRE_DT"/>
+            <LongDescription mapField="DESCRLONG"/>
+            <RetireReasonCode mapField="RETIRE_RSN_CD"/>
+            <StockLocation mapField="STK_LOC_CD"/>
+            <InstallRemoveMeterorItem dataType="lookup" mapField="C1INST_REM_METER_FLG" lookup="C1INST_REM_METER_FLG"/>
+            <MeterConfigurationEffectiveDateTime dataType="dateTime" mapField="CFG_EFF_DTTM"/>
+            <MeterConfigurationType mapField="MTR_CONFIG_TY_CD"/>
+            <ReadDateTime dataType="dateTime" mapField="READ_DTTM"/>
+            <UseOnBill dataType="boolean" mapField="USE_ON_BILL_SW"/>
+            <MeterReadSource mapField="MR_SOURCE_CD"/>
+            <MeterReader mapField="MTR_READER_ID"/>
+            <Registers type="group">
+              <RegistersRow type="list" mapList="REG">
+                <RegisterID mapField="REG_ID"/>
+                <MeterID fkRef="METER" mapField="MTR_ID"/>
+                <EffectiveDateTime dataType="dateTime" mapField="EFF_DTTM"/>
+                <Seq dataType="number" mapField="READ_SEQ"/>
+                <UnitofMeasure mapField="UOM_CD"/>
+                <TimeofUse mapField="TOU_CD"/>
+                <RegisterConstant dataType="number" mapField="REG_CONST"/>
+                <ConsumptiveSubtractive dataType="lookup" mapField="CONSUM_SUB_FLG" lookup="CONSUM_SUB_FLG"/>
+                <HowToUse dataType="lookup" mapField="HOW_TO_USE_FLG" lookup="HOW_TO_USE_FLG"/>
+                <NumberofDigitsLeft dataType="number" mapField="NBR_OF_DGTS_LFT"/>
+                <NumberofDigitsRight dataType="number" mapField="NBR_OF_DGTS_RGT"/>
+                <FullScale dataType="number" mapField="FULL_SCALE"/>
+                <ReadOutType mapField="READ_OUT_TYPE_CD"/>
+                <Protocol mapField="PROTOCOL_CD"/>
+                <Tolerance dataType="number" mapField="TOLERANCE"/>
+                <Version dataType="number" mapField="VERSION"/>
+                <ChannelID mapField="VIRTUAL_CHAN_ID"/>
+                <IntervalRegisterType mapField="INTV_REG_TYPE_CD"/>
+                <UnitofMeasureDescription mapField="UOM_DESCR"/>
+                <TimeofUseDescription mapField="TOU_DESCR"/>
+                <IntvDescription mapField="INTV_DESCR"/>
+                <Interval dataType="boolean" mapField="INTERVAL_SW"/>
+                <RegistryType mdField="C1_REG_TYPE_LBL" mapField="REG_TYPE"/>
+                <RegisterInformation mapField="REG_INFO"/>
+                <ProtocolDescription mapField="PROTOCOL_DESCR"/>
+                <ReadOutTypeDescription mapField="READ_OUT_TYPE_DESCR"/>
+                <RegistryCharacteristic type="group">
+                  <RegistryCharacteristicRow type="list" mapList="REG_CHAR">
+                    <RegisterID mapField="REG_ID"/>
+                    <CharacteristicType mapField="CHAR_TYPE_CD"/>
+                    <Sequence dataType="number" mapField="SEQ_NUM"/>
+                    <CharacteristicValue mapField="CHAR_VAL"/>
+                    <AdhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+                    <Version dataType="number" mapField="VERSION"/>
+                    <CharacteristicValueFK1 mapField="CHAR_VAL_FK1"/>
+                    <CharacteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+                    <CharacteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+                    <CharacteristicValueFK4 mapField="CHAR_VAL_FK4"/>
+                    <CharacteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+                    <SearchCharacteristicValue mapField="SRCH_CHAR_VAL"/>
+                    <CharacteristicTypeDescription mapField="CHAR_TYPE_DESCR"/>
+                    <SearchNavigationKey mapField="SRCH_NAV_KEY"/>
+                    <NavigationOption mapField="NAV_OPT_CD"/>
+                    <Table mapField="TBL_NAME"/>
+                    <InfoProgramName mapField="INFO_PRG"/>
+                    <TypeofCharValue dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+                    <CharValueDescription mapField="CHAR_VAL_DESCR"/>
+                    <CharValForeignKeys mapField="CHAR_VAL_FK_STR"/>
+                    <CharValFKInfo mapField="CHAR_VAL_FK_INFO"/>
+                    <CompoundPKSwitch dataType="boolean" mapField="COMP_PK_SW"/>
+                    <CharateristicValue mapField="COMP_PK_STR"/>
+                  </RegistryCharacteristicRow>
+                </RegistryCharacteristic>
+              </RegistersRow>
+            </Registers>
+            <RegisterReading type="group">
+              <RegisterReadingRow type="list" mapList="REG_READ">
+                <RegisterReadingID mapField="REG_READ_ID"/>
+                <MeterReadID fkRef="MR-ID" mapField="MR_ID"/>
+                <Seq dataType="number" mapField="READ_SEQ"/>
+                <RegisterID mapField="REG_ID"/>
+                <ReadType dataType="lookup" mapField="READ_TYPE_FLG" lookup="READ_TYPE_FLG"/>
+                <RegisterReading dataType="number" mapField="REG_READING"/>
+                <LowLimit dataType="number" mapField="LO_LIMIT"/>
+                <HighLimit dataType="number" mapField="HI_LIMIT"/>
+                <ReviewHighLow dataType="boolean" mapField="REVIEW_HILO_SW"/>
+                <Trended dataType="boolean" mapField="TRENDED_SW"/>
+                <Version dataType="number" mapField="VERSION"/>
+                <MeterConfigurationID fkRef="C1-MCFG" mapField="C1_T_MTR_CONFIG_ID"/>
+                <RegisterReadingMessage mapField="REG_READ_MSG"/>
+                <RegisterInformation mapField="REG_INFO"/>
+                <PrevRegistryReadInfo mapField="PREV_REG_READ_INFO"/>
+                <PrevMeterreadID fkRef="MR-ID" mapField="PREV_MR_ID"/>
+                <ReadOutsideLimit dataType="boolean" mapField="READ_OUTSIDE_LIMIT"/>
+              </RegisterReadingRow>
+            </RegisterReading>
+          </MeterInfoRow>
+        </MeterInfo>
+        <ItemInfo type="group">
+          <ItemInfoRow type="list" mapList="ITEM_INFO">
+            <ItemType mapField="ITEM_TYPE_CD"/>
+            <Status dataType="lookup" mapField="ITEM_STATUS_FLG" lookup="ITEM_STATUS_FLG"/>
+            <Manufacturer mapField="MFG_CD"/>
+            <Model mapField="MODEL_CD"/>
+            <BadgeNumber mapField="BADGE_NBR"/>
+            <SerialNumber mapField="SERIAL_NBR"/>
+            <OnOffStatus dataType="lookup" mapField="ON_OFF_FLG" lookup="ON_OFF_FLG"/>
+            <DateReceived dataType="date" mapField="RECEIVE_DT"/>
+            <DateRetired dataType="date" mapField="RETIRE_DT"/>
+            <LongDescription mapField="DESCRLONG"/>
+            <RetireReasonCode mapField="RETIRE_RSN_CD"/>
+            <StockLocation mapField="STK_LOC_CD"/>
+            <InstallRemoveMeterorItem dataType="lookup" mapField="C1INST_REM_METER_FLG" lookup="C1INST_REM_METER_FLG"/>
+          </ItemInfoRow>
+        </ItemInfo>
+      </C1FACompletionExtSysStructDetails>
+    </C1FACompletionExtSysStructService>
+  </C1FACompletionExtSysStruct>
+  <serviceRouteDescription suppress="true"/>
+  <characteristicsProcessing suppress="true" type="group">
+    <charTypeInfo type="group">
+      <input type="group">
+        <characteristicType mapField="CHAR_TYPE_CD"/>
+        <characteristicValue mapField="CHAR_VAL"/>
+        <adhocCharValue mapField="ADHOC_CHAR_VAL"/>
+        <fkValue1 mapField="CHAR_VAL_FK1"/>
+        <fkValue2 mapField="CHAR_VAL_FK2"/>
+        <fkValue3 mapField="CHAR_VAL_FK3"/>
+        <fkValue4 mapField="CHAR_VAL_FK4"/>
+        <fkValue5 mapField="CHAR_VAL_FK5"/>
+      </input>
+      <output type="group">
+        <charTypeFlg dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+        <charValInfo mapField="CHAR_VAL_FK_INFO"/>
+        <searchZone mapField="ZONE_CD"/>
+        <navOption mapField="NAV_OPT_CD"/>
+        <pkFieldsList type="list" mapList="PK_FIELD_LIST">
+          <pkField mapField="PK_VAL"/>
+        </pkFieldsList>
+      </output>
+    </charTypeInfo>
+  </characteristicsProcessing>
+</schema>

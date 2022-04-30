@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<input type="group">
+		<personId required="true"/>
+		<accountId/>
+		<accountRelationshipType/>
+	</input>
+	<output type="group">
+		<personInfo/>
+	</output>
+</schema>

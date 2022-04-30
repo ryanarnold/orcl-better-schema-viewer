@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<toDoEntryId mapField="TD_ENTRY_ID"/>
+	<toDoType mapField="TD_TYPE_CD"/>
+	<toDoRole mapField="ROLE_ID"/>
+	<assignedTo mapField="ASSIGNED_TO"/>
+	<sendTo dataType="lookup" mapField="TD_SEND_TO_FLG" lookup="TD_SEND_TO_FLG"/>
+	<entryStatus dataType="lookup" mapField="ENTRY_STATUS_FLG" lookup="ENTRY_STATUS_FLG"/>
+	<createDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+	<assignedDateTime dataType="dateTime" mapField="ASSIGNED_DTTM"/>
+	<assignedUser mapField="ASSIGNED_USER_ID"/>
+	<completeDateTime dataType="dateTime" mapField="COMPLETE_DTTM"/>
+	<completeUser mapField="COMPLETE_USER_ID"/>
+	<completeSW dataType="boolean" default="false" mapField="COMPLETE_SW"/>
+	<comments mapField="COMMENTS"/>
+	<priority dataType="lookup" mapField="TD_PRIORITY_FLG" lookup="TD_PRIORITY_FLG"/>
+	<batch mapField="BATCH_CD"/>
+	<batchNumber dataType="number" mapField="BATCH_NBR"/>
+	<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+	<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+</schema>

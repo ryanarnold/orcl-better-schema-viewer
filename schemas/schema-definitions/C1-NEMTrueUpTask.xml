@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<serviceTaskId fkRef="F1-STASK" mapField="F1_SVC_TASK_ID"/>
+	<bo required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<boStatus mapField="BO_STATUS_CD"/>
+	<createDateTime dataType="dateTime" default="%CurrentDateTime" mapField="CRE_DTTM"/>
+	<statusDateTime dataType="dateTime" mapField="STATUS_UPD_DTTM"/>
+	<serviceTaskType fkRef="F1-STKTY" mapField="F1_STASK_TYPE_CD"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<relatedObjectDetails type="group">
+		<subSAId mdField="SA_ID" fkRef="SA" mapField="PK_VALUE1">
+			<row mapChild="F1_SVC_TASK_REL_OBJ">
+				<MAINT_OBJ_CD is="SA"/>
+			</row>
+		</subSAId>
+		<accountId mdField="ACCT_ID" fkRef="ACCT" mapField="PK_VALUE1">
+			<row mapChild="F1_SVC_TASK_REL_OBJ">
+				<MAINT_OBJ_CD is="ACCOUNT"/>
+			</row>
+		</accountId>
+	</relatedObjectDetails>
+</schema>

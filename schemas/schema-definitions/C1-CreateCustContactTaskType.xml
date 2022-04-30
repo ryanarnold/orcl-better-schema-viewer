@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<serviceTaskType required="true" isPrimeKey="true" mapField="F1_STASK_TYPE_CD"/>
+	<description required="true" mapField="DESCR"/>
+	<bo suppress="input" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<transactionalBo required="true" fkRef="F1-BUSOB" mapField="TRANS_BUS_OBJ_CD"/>
+	<serviceTaskTypeStatus dataType="lookup" default="F1AC" mapField="F1_STASK_TYPE_STATUS_FLG" lookup="F1_STASK_TYPE_STATUS_FLG"/>
+	<longDescription mapField="DESCRLONG"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<serviceTaskClass suppress="true" dataType="lookup" default="C1SR" mapField="F1_SVC_TASK_CL_FLG" lookup="F1_SVC_TASK_CL_FLG"/>
+</schema>

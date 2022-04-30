@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<serviceTaskId mdField="C1_SVC_REQ_TASK_INFO_LBL" isPrimeKey="true" fkRef="F1-STASK" mapField="F1_SVC_TASK_ID"/>
+	<serviceTaskType fkRef="F1-STKTY" mapField="F1_STASK_TYPE_CD"/>
+	<boStatus mapField="BO_STATUS_CD"/>
+	<cancelReason suppress="blank" mdField="C1_SVC_REQ_CAN_RSN_FLG" dataType="lookup" mapXML="BO_DATA_AREA" lookup="C1_SVC_REQ_CAN_RSN_FLG"/>
+	<bo required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<createDateTime dataType="dateTime" default="%CurrentDateTime" mapField="CRE_DTTM"/>
+	<statusDateTime dataType="dateTime" mapField="STATUS_UPD_DTTM"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<unsubscribeNotificationType mdField="UNSUB_NT_TYPE_CD" fkRef="C1-NTFTY" mapXML="BO_DATA_AREA"/>
+	<createdForUnsubscribe mdField="CREATED_FOR_UNSUBSCRIBE_SW" dataType="boolean" mapXML="BO_DATA_AREA"/>
+	<rejectPersonContact mdField="REJECT_PER_CONT_SW" dataType="boolean" mapXML="BO_DATA_AREA"/>
+	<alreadyConfirmed mdField="ALREADY_CONFIRMED_SW" dataType="boolean" mapXML="BO_DATA_AREA"/>
+	<charDetails type="group">
+		<personContactId mdField="C1_CONTACT_ID" fkRef="C1-CNDTL" mapField="CHAR_VAL_FK1">
+			<row mapChild="F1_SVC_TASK_CHAR">
+				<CHAR_TYPE_CD is="C1-PCCNT"/>
+			</row>
+		</personContactId>
+		<deliveryType mdField="DELIVERY_TYPE" dataType="lookup" mapField="ADHOC_CHAR_VAL" lookup="C1_SS_DELIVERY_TYPE">
+			<row mapChild="F1_SVC_TASK_CHAR">
+				<CHAR_TYPE_CD is="C1-DVTYP"/>
+			</row>
+		</deliveryType>
+	</charDetails>
+	<relatedObjectDetails type="group">
+		<accountId mdField="ACCT_ID0" fkRef="ACCT" mapField="PK_VALUE1">
+			<row mapChild="F1_SVC_TASK_REL_OBJ">
+				<MAINT_OBJ_CD is="ACCOUNT"/>
+				<SEQ_NUM is="1"/>
+			</row>
+		</accountId>
+	</relatedObjectDetails>
+</schema>

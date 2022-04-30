@@ -1,0 +1,176 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<calcGroup suppress="input" required="true" isPrimeKey="true" fkRef="C1-CALGR" mapField="CALC_GRP_CD"/>
+	<calcRule required="true" isPrimeKey="true" mapField="CALC_RULE_CD"/>
+	<executionSequence required="true" dataType="number" mapField="CR_EXEC_SEQ"/>
+	<bo suppress="input" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<description required="true" mapField="DESCR100"/>
+	<longDescription mapField="DESCRLONG"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<stepAlgorithm suppress="true" fkRef="ALG" mapField="CALC_RULE_STEP_ALG_CD"/>
+	<valueAlgorithm suppress="true" fkRef="ALG" mapField="CALC_RULE_VAL_ALG_CD"/>
+	<itemType suppress="true" fkRef="C1-ITMTY" mapField="ITEM_TYPE_CD"/>
+	<billFactor suppress="true" fkRef="C1-BFACT" mapField="BF_CD"/>
+	<commonDetails type="group" mapXML="BO_DATA_AREA">
+		<calculationRuleProcessing mdField="CALC_RULE_PROC_FLG" required="true" dataType="lookup" lookup="CALC_RULE_PROC_FLG"/>
+		<shouldRetainCalcSq mdField="RETAIN_CALC_SQ_FLG" required="true" dataType="lookup" lookup="RETAIN_CALC_SQ_FLG"/>
+		<calculationFailAction mdField="CALC_FAIL_ACTION_FLG" required="true" dataType="lookup" lookup="CALC_FAIL_ACTION_FLG"/>
+		<calculationRuleOutput mdField="CALC_RULE_OUTPUT_FLG" required="true" dataType="lookup" lookup="CALC_RULE_OUTPUT_FLG"/>
+	</commonDetails>
+	<vectors type="group" mapXML="BO_DATA_AREA">
+		<vectorsList type="list">
+			<sequence mdField="SEQNO" dataType="number" isPrimeKey="true"/>
+			<vectorType mdField="VECTR_TYPE_FLG" required="true" dataType="lookup" lookup="VECTR_TYPE_FLG"/>
+			<intervalBillFactor mdField="BF_CD" fkRef="C1-BFACT"/>
+			<uom mdField="UOM_CD" fkRef="C1-UOM"/>
+			<tou mdField="TOU_CD" fkRef="C1-TOU"/>
+			<sqi mdField="SQI_CD" fkRef="C1-SQI"/>
+			<missingValueAction mdField="MISSING_INTV_DATA_ACTION_FLG" required="true" dataType="lookup" lookup="MISSING_INTV_DATA_ACTION_FLG"/>
+		</vectorsList>
+	</vectors>
+	<scalars type="group" mapXML="BO_DATA_AREA">
+		<scalarsList type="list">
+			<sequence mdField="SEQNO" dataType="number" isPrimeKey="true"/>
+			<scalarType mdField="SCLR_TYPE_FLG" required="true" dataType="lookup" lookup="SCLR_TYPE_FLG"/>
+			<missingValueAction mdField="MISSING_VAL_ACTION_FLG" required="true" dataType="lookup" lookup="MISSING_VAL_ACTION_FLG"/>
+			<defaultValue mdField="DFLT_VALUE" required="true" dataType="number" default="0"/>
+			<billFactor mdField="BF_CD" fkRef="C1-BFACT"/>
+			<uom mdField="UOM_CD" fkRef="C1-UOM"/>
+			<tou mdField="TOU_CD" fkRef="C1-TOU"/>
+			<sqi mdField="SQI_CD" fkRef="C1-SQI"/>
+			<serviceQuantityToUse mdField="SQ_TO_USE_FLG" dataType="lookup" lookup="SQ_TO_USE_FLG"/>
+			<setFunction mdField="SET_FUNCTION_FLG" dataType="lookup" lookup="SET_FUNCTION_FLG"/>
+			<vector mdField="VECTR_FLG" dataType="lookup" lookup="VECTR_FLG"/>
+		</scalarsList>
+	</scalars>
+	<processing type="group" mapXML="BO_DATA_AREA">
+		<formulaType mdField="FORMULA_TYPE_FLG" dataType="lookup" lookup="FORMULA_TYPE_FLG"/>
+		<simpleFormula mdField="FORMULA_SIMPLE"/>
+		<conditionalFormula type="group">
+			<conditionalFormulaList type="list">
+				<sequence mdField="SEQNO" dataType="number" isPrimeKey="true"/>
+				<leftOperand mdField="LEFT_OPERAND"/>
+				<operator mdField="CONDITIONAL_OPERATOR_FLG" dataType="lookup" lookup="CONDITIONAL_OPERATOR_FLG"/>
+				<rightOperand mdField="RIGHT_OPERAND"/>
+				<trueAction mdField="TRUE_ACT_FLG" dataType="lookup" lookup="TRUE_ACT_FLG"/>
+				<trueFormula mdField="FORMULA_TRUE"/>
+				<falseAction mdField="FALSE_ACT_FLG" dataType="lookup" lookup="FALSE_ACT_FLG"/>
+				<falseFormula mdField="FORMULA_FALSE"/>
+			</conditionalFormulaList>
+		</conditionalFormula>
+	</processing>
+	<results type="group">
+		<resultSource mdField="RESULT_SOURCE_FLG" dataType="lookup" mapXML="BO_DATA_AREA" lookup="RESULT_SOURCE_FLG"/>
+		<scalarFormula mdField="FORMULA_SCALAR" mapXML="BO_DATA_AREA"/>
+		<setFunction mdField="SET_FUNCTION_FLG" dataType="lookup" mapXML="BO_DATA_AREA" lookup="SET_FUNCTION_FLG"/>
+		<uom mapField="UOM_CD"/>
+		<tou mapField="TOU_CD"/>
+		<sqi mapField="SQI_CD"/>
+		<applyTouMap mdField="APPLY_TMAP_TO_DRVD_VCTR_FLG" required="true" dataType="lookup" default="C1NO" mapXML="BO_DATA_AREA" lookup="APPLY_TMAP_TO_DRVD_VCTR_FLG"/>
+		<touMap mdField="C1_TOU_MAP_ID" mapXML="BO_DATA_AREA"/>
+		<touCalculateFunction mdField="TOU_MAP_FUNC_FLG" dataType="lookup" mapXML="BO_DATA_AREA" lookup="TOU_MAP_FUNC_FLG"/>
+	</results>
+	<descriptionOnBillDetails type="group">
+		<descriptionOnBill mapField="DESCR_TMPLT"/>
+		<shouldPrintLine mdField="PRT_FLG" required="true" dataType="lookup" default="C1YE" mapXML="BO_DATA_AREA" lookup="PRT_FLG"/>
+		<shouldPrintLineIfZero mdField="PRT_IF_ZERO_FLG" required="true" dataType="lookup" default="C1NO" mapXML="BO_DATA_AREA" lookup="PRT_IF_ZERO_FLG"/>
+	</descriptionOnBillDetails>
+	<roundingDetails type="group">
+		<roundingMethod mdField="RND_TYPE_FLG" required="true" dataType="lookup" default="RDNR" mapXML="BO_DATA_AREA" lookup="RND_TYPE_FLG"/>
+		<precision mdField="RND_PRECISION_LVL" required="true" dataType="number" default=".01" mapXML="BO_DATA_AREA"/>
+	</roundingDetails>
+	<distributionCodeDetails type="group">
+		<distributionCode fkRef="C1-DSTCD" mapField="DST_ID"/>
+		<distributionCodeSource mdField="DST_CD_SRC_FLG" required="true" dataType="lookup" default="C1SD" mapXML="BO_DATA_AREA" lookup="DST_CD_SRC_FLG"/>
+		<revenueClassDistributionCode type="group" mapXML="BO_DATA_AREA">
+			<revenueClassDistributionList type="list">
+				<revenueClass mdField="REV_CL_CD" required="true" isPrimeKey="true" fkRef="C1-REVCL"/>
+				<distributionCode mdField="DST_ID" required="true" fkRef="C1-DSTCD"/>
+			</revenueClassDistributionList>
+		</revenueClassDistributionCode>
+	</distributionCodeDetails>
+	<fcpoDetails type="group">
+		<isFcpo mdField="CALC_ONLY_FLG" required="true" dataType="lookup" default="C1NO" mapXML="BO_DATA_AREA" lookup="CALC_ONLY_FLG"/>
+		<shouldCreateBillLine mdField="CRE_BILL_LN_FLG" required="true" dataType="lookup" default="C1NO" mapXML="BO_DATA_AREA" lookup="CRE_BILL_LN_FLG"/>
+		<fcpoRetentionRule mdField="FCPO_RETN_RULE_FLG" dataType="lookup" default="C1RT" mapXML="BO_DATA_AREA" lookup="FCPO_RETN_RULE_FLG"/>
+	</fcpoDetails>
+	<memberCategory type="group">
+		<memberCategoryList type="list" mapChild="C1_CALC_RULE_MBR_CAT">
+			<calcLineCategoryType fkRef="C1-CLCAT" mapField="CL_CAT_TYPE_CD"/>
+			<calcLineCategoryValue mapField="CL_CAT_VAL"/>
+		</memberCategoryList>
+	</memberCategory>
+	<characteristics suppress="true" type="group">
+		<characteristicsList type="list" mapChild="C1_CALC_RULE_CHAR">
+			<characteristicType fkRef="CHAR_TYP" mapField="CHAR_TYPE_CD"/>
+			<characteristicValue mapField="CHAR_VAL"/>
+			<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+		</characteristicsList>
+	</characteristics>
+	<shouldExecuteOverrideProration mdField="EXEC_OVR_PROR_FLG" required="true" dataType="lookup" default="C1NO" mapXML="BO_DATA_AREA" lookup="EXEC_OVR_PROR_FLG"/>
+	<mainDisplayInfo type="group">
+		<vectors type="group">
+			<vector1 type="group">
+				<vectorType mdField="VECTR_TYPE_FLG" dataType="lookup" lookup="VECTR_TYPE_FLG"/>
+				<intervalBillFactor mdField="BF_CD" fkRef="C1-BFACT"/>
+				<uom mdField="UOM_CD"/>
+				<tou mdField="TOU_CD"/>
+				<sqi mdField="SQI_CD"/>
+				<missingValueAction mdField="MISSING_INTV_DATA_ACTION_FLG" dataType="lookup" lookup="MISSING_INTV_DATA_ACTION_FLG"/>
+			</vector1>
+			<vector2 type="group">
+				<vectorType mdField="VECTR_TYPE_FLG" dataType="lookup" lookup="VECTR_TYPE_FLG"/>
+				<intervalBillFactor mdField="BF_CD" fkRef="C1-BFACT"/>
+				<uom mdField="UOM_CD"/>
+				<tou mdField="TOU_CD"/>
+				<sqi mdField="SQI_CD"/>
+				<missingValueAction mdField="MISSING_INTV_DATA_ACTION_FLG" dataType="lookup" lookup="MISSING_INTV_DATA_ACTION_FLG"/>
+			</vector2>
+			<vector3 type="group">
+				<vectorType mdField="VECTR_TYPE_FLG" dataType="lookup" lookup="VECTR_TYPE_FLG"/>
+				<intervalBillFactor mdField="BF_CD" fkRef="C1-BFACT"/>
+				<uom mdField="UOM_CD"/>
+				<tou mdField="TOU_CD"/>
+				<sqi mdField="SQI_CD"/>
+				<missingValueAction mdField="MISSING_INTV_DATA_ACTION_FLG" dataType="lookup" lookup="MISSING_INTV_DATA_ACTION_FLG"/>
+			</vector3>
+			<vector4 type="group">
+				<vectorType mdField="VECTR_TYPE_FLG" dataType="lookup" lookup="VECTR_TYPE_FLG"/>
+				<intervalBillFactor mdField="BF_CD" fkRef="C1-BFACT"/>
+				<uom mdField="UOM_CD"/>
+				<tou mdField="TOU_CD"/>
+				<sqi mdField="SQI_CD"/>
+				<missingValueAction mdField="MISSING_INTV_DATA_ACTION_FLG" dataType="lookup" lookup="MISSING_INTV_DATA_ACTION_FLG"/>
+			</vector4>
+			<vector5 type="group">
+				<vectorType mdField="VECTR_TYPE_FLG" dataType="lookup" lookup="VECTR_TYPE_FLG"/>
+				<intervalBillFactor mdField="BF_CD" fkRef="C1-BFACT"/>
+				<uom mdField="UOM_CD"/>
+				<tou mdField="TOU_CD"/>
+				<sqi mdField="SQI_CD"/>
+				<missingValueAction mdField="MISSING_INTV_DATA_ACTION_FLG" dataType="lookup" lookup="MISSING_INTV_DATA_ACTION_FLG"/>
+			</vector5>
+		</vectors>
+		<touMap mdField="C1_TOU_MAP_ID" fkRef="C1-TOUMP"/>
+	</mainDisplayInfo>
+	<inputCalcLine type="group">
+		<zone private="true" default="C1-RETCVDESC" mapField="ZONE_CD"/>
+		<calcLineCategoryType mapField="F1_VALUE"/>
+		<calcLineCategoryValue mapField="F2_VALUE"/>
+		<rowCount dataType="number" mapField="ROW_CNT"/>
+		<results type="list" mapList="DE">
+			<description mapField="COL_VALUE">
+				<row mapList="DE_VAL">
+					<SEQNO is="1"/>
+				</row>
+			</description>
+		</results>
+	</inputCalcLine>
+	<inputCharValue type="group">
+		<characteristicType mapField="CHAR_TYPE_CD"/>
+		<characteristicValue mapField="CHAR_VAL"/>
+		<results type="list">
+			<description mapField="DESCR"/>
+		</results>
+	</inputCharValue>
+</schema>

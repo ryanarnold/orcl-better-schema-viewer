@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<scriptName mapField="SCR_CD"/>
+	<scriptData type="raw" mapXML="XML_REQUEST"/>
+	<trapError dataType="boolean" mapField="F1_TRAP_ERROR_SW"/>
+	<hadError dataType="boolean" mapField="F1_HAD_ERROR_SW"/>
+	<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+	<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+	<messageParameters type="group">
+		<parameters type="list" mapList="MSG_PARMS">
+			<parameterType dataType="lookup" mapField="MSG_PARM_TYP_FLG" lookup="MSG_PARM_TYP_FLG"/>
+			<parameterValue mapField="MSG_PARM_VAL"/>
+		</parameters>
+	</messageParameters>
+</schema>

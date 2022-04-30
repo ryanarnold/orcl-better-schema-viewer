@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<rowGroup type="group">
+		<mapKey suppress="true" mdField="F1_SE_FLATROW_TYPE" dataType="lookupBO" lookupBO="F1-SchemaFlatRowType"/>
+		<mapChild suppress="true" mdField="F1_SE_MAPCHILD_LBL" fkRef="F1-MOTBL"/>
+		<mapList suppress="true" mdField="F1_SE_MAPLIST_LBL"/>
+		<fieldValueList suppress="true" type="list">
+			<fieldName suppress="true" mdField="F1_SE_FLAT_FIELDNAME" fkRef="F1-MOFLD"/>
+			<fieldValueKey suppress="true" mdField="F1_SE_FLATFLD_ROW_VAL" dataType="lookupBO" lookupBO="F1-SchemaFlatFieldRowValues"/>
+			<defValue suppress="true"/>
+			<defSysVar suppress="true" dataType="lookupBO" lookupBO="F1-SchemaDefaultSysVariables"/>
+			<defConstant suppress="true"/>
+			<defContext suppress="true"/>
+			<isValue suppress="true"/>
+			<isEffectDate suppress="true"/>
+			<isEffectDateTime suppress="true"/>
+			<isConstant suppress="true"/>
+			<isContext suppress="true"/>
+			<isNumber suppress="true" dataType="number"/>
+			<fieldValue suppress="true" mdField="F1_SE_FLAT_FIELDVALUE"/>
+		</fieldValueList>
+	</rowGroup>
+</schema>

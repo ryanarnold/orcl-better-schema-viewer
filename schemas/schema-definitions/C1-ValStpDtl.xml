@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<stepDetails type="group">
+		<stepList type="list">
+			<lowLimit mdField="C1_STEP_LOW_VAL" required="true" dataType="number" isPrimeKey="true" default="0"/>
+			<highLimit mdField="C1_STEP_HIGH_VAL" required="true" dataType="number" isPrimeKey="true" default="0"/>
+		</stepList>
+	</stepDetails>
+</schema>

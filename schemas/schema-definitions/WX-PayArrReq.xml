@@ -1,0 +1,134 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<head type="group">
+		<action/>
+		<key1 type="group">
+			<name default="ACCT_ID"/>
+			<value/>
+		</key1>
+		<key2 type="group">
+			<name default="PER_ID"/>
+			<value/>
+		</key2>
+		<key3 type="group">
+			<name/>
+			<value/>
+		</key3>
+		<key4 type="group">
+			<name/>
+			<value/>
+		</key4>
+		<key5 type="group">
+			<name/>
+			<value/>
+		</key5>
+		<emailAddress/>
+		<webUserId/>
+		<ipAddress/>
+		<cssUser/>
+		<custom type="group">
+			<field1 type="group">
+				<name/>
+				<value/>
+			</field1>
+			<field2 type="group">
+				<name/>
+				<value/>
+			</field2>
+			<field3 type="group">
+				<name/>
+				<value/>
+			</field3>
+			<field4 type="group">
+				<name/>
+				<value/>
+			</field4>
+			<field5 type="group">
+				<name/>
+				<value/>
+			</field5>
+			<field6 type="group">
+				<name/>
+				<value/>
+			</field6>
+			<field7 type="group">
+				<name/>
+				<value/>
+			</field7>
+			<field8 type="group">
+				<name/>
+				<value/>
+			</field8>
+			<field9 type="group">
+				<name/>
+				<value/>
+			</field9>
+			<field10 type="group">
+				<name/>
+				<value/>
+			</field10>
+		</custom>
+	</head>
+	<mainData type="group">
+		<referenceId/>
+		<selectedServiceTaskType mdField="F1_STASK_TYPE_CD"/>
+		<isEligible dataType="boolean"/>
+		<reasonMessage/>
+		<serviceTaskTypeList type="list">
+			<serviceTaskType mdField="F1_STASK_TYPE_CD"/>
+			<serviceTaskTypeDescr mdField="DESCR"/>
+			<serviceTaskTypeDetailedDescr mdField="DESCRLONG"/>
+		</serviceTaskTypeList>
+		<outstandingBalance/>
+		<custom type="group">
+			<field1 type="group">
+				<name/>
+				<value/>
+			</field1>
+			<field2 type="group">
+				<name/>
+				<value/>
+			</field2>
+			<field3 type="group">
+				<name/>
+				<value/>
+			</field3>
+			<field4 type="group">
+				<name/>
+				<value/>
+			</field4>
+			<field5 type="group">
+				<name/>
+				<value/>
+			</field5>
+			<field6 type="group">
+				<name/>
+				<value/>
+			</field6>
+			<field7 type="group">
+				<name/>
+				<value/>
+			</field7>
+			<field8 type="group">
+				<name/>
+				<value/>
+			</field8>
+			<field9 type="group">
+				<name/>
+				<value/>
+			</field9>
+			<field10 type="group">
+				<name/>
+				<value/>
+			</field10>
+		</custom>
+	</mainData>
+	<errorInformation type="group">
+		<isInError mdField="IN_ERROR_SW" dataType="boolean" default="false"/>
+		<errorReference type="group">
+			<category mdField="MESSAGE_CAT_NBR" dataType="number"/>
+			<number mdField="MESSAGE_NBR" dataType="number"/>
+		</errorReference>
+		<errorMessage mdField="MESSAGE_TEXT"/>
+	</errorInformation>
+</schema>

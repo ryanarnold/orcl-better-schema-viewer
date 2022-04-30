@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<outboundMsgId mapField="OUTMSG_ID"/>
+	<externalSystem fkRef="F1-ESTMP" mapField="NT_XID_CD"/>
+	<outboundMessageType fkRef="F1-OMTYP" mapField="OUTMSG_TYPE_CD"/>
+	<processingMethod dataType="lookup" mapField="OUTMSG_PROC_METH_FLG" lookup="OUTMSG_PROC_METH_FLG"/>
+	<outboundMessageStatus dataType="lookup" mapField="OUTMSG_STATUS_FLG" lookup="OUTMSG_STATUS_FLG"/>
+	<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+	<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+	<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+	<errorDetail mapField="ERROR_DTL"/>
+	<input type="group" mapXML="XML_SOURCE">
+		<externalId mdField="SP_ID"/>
+		<language mdField="LANGUAGE_CD"/>
+		<userId mdField="USER_ID"/>
+		<sourceSystem mdField="COMP_XID"/>
+	</input>
+	<output type="group" mapXML="XML_RESPONSE">
+		<deviceInfoDescription/>
+		<installEventInfoDescription/>
+		<spInfoDescription/>
+		<spDetails type="group">
+			<sourceStatus/>
+			<disconnectLocation/>
+			<location/>
+			<locationDetails/>
+			<serviceCylce/>
+			<route/>
+			<sequence dataType="number"/>
+		</spDetails>
+		<deviceConfigurationOverview type="group">
+			<deviceDescription mdField="C1_DEVICE_DESCR"/>
+			<deviceInfoDescription mdField="C1_DEVICE_INFO"/>
+			<deviceConfiguration type="group">
+				<deviceConfigurationId mdField="C1_DEVICE_CONFIG_ID" isPrimeKey="true"/>
+				<description mdField="C1_DEVICE_CONFIG_DESCR"/>
+				<infoDescription mdField="C1_DEVICE_CONFIG_INFO_DESCR"/>
+				<measuringComponents type="group">
+					<measuringComponentsList type="list">
+						<measuringComponentId mdField="C1_MEAS_COMP_ID" isPrimeKey="true"/>
+						<description mdField="C1_MEAS_COMP_DESCR"/>
+						<infoDescription mdField="C1_MEAS_COMP_INFO_DESCR"/>
+					</measuringComponentsList>
+				</measuringComponents>
+			</deviceConfiguration>
+		</deviceConfigurationOverview>
+		<effectiveDate dataType="date"/>
+		<multiItems type="group">
+			<multiItemList type="list">
+				<itemTypeDescription isPrimeKey="true"/>
+				<itemCount dataType="number"/>
+			</multiItemList>
+		</multiItems>
+	</output>
+</schema>

@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<annotation suppress="blank" required="true" isPrimeKey="true" mapField="ANN_CD"/>
+	<description mapField="DESCR"/>
+	<longDescription mapField="DESCRLONG"/>
+	<annotationType required="true" fkRef="F1-IWSAT" mapField="ANN_TYPE_CD"/>
+	<bo suppress="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<owner suppress="input" dataType="lookup" mapField="OWNER_FLG" lookup="OWNER_FLG"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<iwsAnnotationParameter suppress="true" type="list" mapChild="F1_IWS_ANN_PARM">
+		<sequence dataType="number" mapField="SEQ_NUM"/>
+		<parameterName mapField="PARM_NAME"/>
+		<parameterValue mapField="PARM_VALUE"/>
+		<owner suppress="input" dataType="lookup" mapField="OWNER_FLG" lookup="OWNER_FLG"/>
+		<version suppress="true" dataType="number" mapField="VERSION"/>
+	</iwsAnnotationParameter>
+</schema>

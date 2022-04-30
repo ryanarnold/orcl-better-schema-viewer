@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<bo mapField="BUS_OBJ_CD"/>
+	<mo mapField="MAINT_OBJ_CD"/>
+	<pkValue1 mapField="PK_VALUE1"/>
+	<pkValue2 mapField="PK_VALUE2"/>
+	<pkValue3 mapField="PK_VALUE3"/>
+	<pkValue4 mapField="PK_VALUE4"/>
+	<pkValue5 mapField="PK_VALUE5"/>
+	<sortKeys type="list">
+		<sortKeyValue/>
+	</sortKeys>
+</schema>

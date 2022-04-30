@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<schema emitEmptyElements="true" name="schema">
+	<externalId mapField="SP_ID"/>
+	<externalPremiseId mapField="PREM_ID"/>
+	<spStatus dataType="lookup" mapField="SP_STATUS_FLG" lookup="SP_STATUS_FLG"/>
+	<spType mapField="SP_TYPE_CD"/>
+	<disconnectLocation mapField="DISCON_LOC_CD"/>
+	<spSourceStatus dataType="lookup" mapField="SP_SRC_STATUS_FLG" lookup="SP_SRC_STATUS_FLG"/>
+	<overridePremiseFieldInformation dataType="lookup" mapField="OVRD_PREM_FLD_INFO_FLG" lookup="OVRD_PREM_FLD_INFO_FLG"/>
+	<deviceLocation mapField="MTR_LOC_CD"/>
+	<deviceLocationDetails mapField="MTR_LOC_DETAILS"/>
+	<spInstruction mapField="MR_INSTR_CD"/>
+	<spInstructionDetails mapField="MR_INSTR_DETAILS"/>
+	<spWarning mapField="MR_WARN_CD"/>
+	<key dataType="boolean" mapField="KEY_SW"/>
+	<keyId mapField="KEY_ID"/>
+	<okToEnter dataType="boolean" mapField="OK_TO_ENTER_SW"/>
+	<measurementCycle mapField="MR_CYC_CD"/>
+	<measurementCycleRoute mapField="MR_RTE_CD"/>
+	<measurementCycleRouteSequence dataType="number" mapField="MR_CYC_RTE_SEQ"/>
+	<timeZone mapField="TIME_ZONE_CD"/>
+	<lifeSupportSensitiveLoad dataType="lookup" mapField="LS_SL_FLG" lookup="LS_SL_FLG"/>
+	<lifeSupportSensitiveLoadDescription mapField="LS_SL_DESCR"/>
+	<country mapField="COUNTRY"/>
+	<address1 mapField="ADDRESS1"/>
+	<address2 mapField="ADDRESS2"/>
+	<address3 mapField="ADDRESS3"/>
+	<address4 mapField="ADDRESS4"/>
+	<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+	<number1 mapField="NUM1"/>
+	<number2 mapField="NUM2"/>
+	<inCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+	<city mapField="CITY"/>
+	<geographic mapField="GEO_CODE"/>
+	<county mapField="COUNTY"/>
+	<state mapField="STATE"/>
+	<postal mapField="POSTAL"/>
+	<geocodeLatitude dataType="number" mapField="C1_LATITUDE"/>
+	<geocodeLongitude dataType="number" mapField="C1_LONGITUDE"/>
+	<customElements type="raw"/>
+</schema>

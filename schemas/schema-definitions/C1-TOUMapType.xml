@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<touMapType required="true" isPrimeKey="true" mapField="C1_TOU_MAP_TYPE_CD"/>
+	<bo suppress="input" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<description required="true" mapField="DESCR100"/>
+	<touMapBO mdField="C1_TOU_MAP_BUS_OBJ_CD" required="true" fkRef="F1-BUSOB" mapField="MASTER_BUS_OBJ_CD"/>
+	<timeZone required="true" fkRef="F1-TZONE" mapField="TIME_ZONE_CD"/>
+	<secondsPerInterval required="true" dataType="duration" mapField="C1_SEC_PER_INTRVL"/>
+	<defaultTouMapTemplate mdField="C1_DFLT_TOU_MAP_TM" required="true" fkRef="C1-TOUTM" mapField="C1_TOU_MAP_TMPLT_CD"/>
+	<overrideTouMapTemplates type="group">
+		<overrideTouMapTemplatesList type="list" mapChild="C1_TOU_MAP_TYPE_TMPLT">
+			<touMapTemplate mdField="C1_OVRD_TOU_MAP_TM" fkRef="C1-TOUTM" mapField="C1_TOU_MAP_TMPLT_CD"/>
+		</overrideTouMapTemplatesList>
+	</overrideTouMapTemplates>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+</schema>

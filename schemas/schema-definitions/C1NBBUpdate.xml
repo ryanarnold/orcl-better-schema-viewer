@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<serviceAgreement mapField="SA_ID"/>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<division mapField="CIS_DIVISION"/>
+	<saType mapField="SA_TYPE_CD"/>
+	<status dataType="lookup" mapField="SA_STATUS_FLG" lookup="SA_STATUS_FLG"/>
+	<accountId mapField="ACCT_ID"/>
+	<startDate dataType="date" mapField="START_DT"/>
+	<endDate dataType="date" mapField="END_DT"/>
+	<oldAccountId mapField="OLD_ACCT_ID"/>
+	<saRelationshipId mapField="SA_REL_ID"/>
+	<areEstimatesAllowed dataType="boolean" mapField="ALLOW_EST_SW"/>
+	<customerRead dataType="lookup" mapField="CUST_READ_FLG" lookup="CUST_READ_FLG"/>
+	<sicCode mapField="SIC_CD"/>
+	<premiseId mapField="CHAR_PREM_ID"/>
+	<startOption mapField="START_OPT_CD"/>
+	<totalAmountToBill dataType="money" mapField="TOT_TO_BILL_AMT"/>
+	<version dataType="number" mapField="VERSION"/>
+	<currency mapField="CURRENCY_CD"/>
+	<maxBillThreshold dataType="money" mapField="HIGH_BILL_AMT"/>
+	<depositInterestCalculated dataType="date" mapField="INT_CALC_DT"/>
+	<ciacReviewDate dataType="date" mapField="CIAC_REVIEW_DT"/>
+	<startReason dataType="lookup" mapField="STRT_RSN_FLG" lookup="STRT_RSN_FLG"/>
+	<stopReason dataType="lookup" mapField="STOP_RSN_FLG" lookup="STOP_RSN_FLG"/>
+	<startRequestedBy mapField="STRT_REQED_BY"/>
+	<stopRequestedBy mapField="STOP_REQED_BY"/>
+	<businessActivityDescription mapField="BUS_ACTIVITY_DESC"/>
+	<orderId mapField="ENRL_ID"/>
+	<ibSACutoffTime dataType="time" mapField="IB_SA_CUTOFF_TM"/>
+	<startDayOption dataType="lookup" mapField="IB_BASE_TM_DAY_FLG" lookup="IB_BASE_TM_DAY_FLG"/>
+	<specialUsage dataType="lookup" mapField="SPECIAL_USAGE_FLG" lookup="SPECIAL_USAGE_FLG"/>
+	<proposalSAStatus dataType="lookup" mapField="PROP_SA_STAT_FLG" lookup="PROP_SA_STAT_FLG"/>
+	<declineReason mapField="PROP_DCL_RSN_CD"/>
+	<proposalSAId mapField="PROP_SA_ID"/>
+	<numberOfPaymentPeriods dataType="number" mapField="NBR_PYMNT_PERIODS"/>
+	<recommendationRule mapField="NB_RULE_CD"/>
+	<expireDate dataType="date" mapField="EXPIRE_DT"/>
+	<renewalDate dataType="date" mapField="RENEWAL_DT"/>
+	<nbbAutopay dataType="lookup" mapField="NB_APAY_FLG" lookup="NB_APAY_FLG"/>
+	<saDataArea mapField="SA_DATA_AREA"/>
+	<ibSaCutoffDttmTm mapField="IB_SA_CUTOFF_DTTM_TM"/>
+	<accountCheckDigit mapField="ACCT_CHECK_DIGIT"/>
+	<nbbServiceAgreementInfo mapField="NBB_SA_INFO"/>
+	<accountInfo mapField="ACCT_INFO"/>
+	<saTypeDescription mapField="SA_TYPE_DESCR"/>
+	<nbRuleDescription mapField="NB_RULE_DESCR"/>
+	<nbbSaCurrentBalance dataType="money" mapField="CUR_NBB_SA_BAL"/>
+	<nonBilledBudgetSAPayoffBalance dataType="money" mapField="TOT_NBB_SA_BAL"/>
+	<totalOfScheduledPayments dataType="money" mapField="TOT_SCH_PAY"/>
+	<saRenewal dataType="lookup" mapField="SA_RENEWAL_FLG" lookup="SA_RENEWAL_FLG"/>
+	<saFtExistSw mapField="SA_FT_EXIST_SW"/>
+	<nbSa type="list" mapList="NB_SA">
+		<serviceAgreement2 mapField="SA_ID"/>
+		<coveredSA mapField="CVRD_SA_ID"/>
+		<version2 dataType="number" mapField="VERSION"/>
+		<saInformation mapField="SA_INFO"/>
+		<currentBalance dataType="money" mapField="CUR_BAL"/>
+		<payoffBalance dataType="money" mapField="TOT_BAL"/>
+	</nbSa>
+	<nbSchedPay type="list" mapList="NB_SCHED_PAY">
+		<scheduledPaymentId mapField="NB_SCHED_PAY_ID"/>
+		<currency2 mapField="CURRENCY_CD"/>
+		<serviceAgreement3 mapField="SA_ID"/>
+		<scheduledPaymentDate dataType="date" mapField="NB_SCHED_PAY_DT"/>
+		<scheduledAmount dataType="money" mapField="NB_SCHED_PAY_AMT"/>
+		<version3 dataType="number" mapField="VERSION"/>
+		<autopayClearingId mapField="APAY_CLR_ID"/>
+	</nbSchedPay>
+	<nbbSaParm type="list" mapList="NBB_SA_PARM">
+		<serviceAgreement4 mapField="SA_ID"/>
+		<sequence dataType="number" mapField="SEQNO"/>
+		<version4 dataType="number" mapField="VERSION"/>
+		<nbbRuleParameterValue mapField="NB_RULE_PARM_VAL"/>
+		<override dataType="lookup" mapField="OVRD_FLG" lookup="OVRD_FLG"/>
+		<parmDescr mapField="PARM_DESCR"/>
+	</nbbSaParm>
+	<saFtHist type="list" mapList="SA_FT_HIST">
+		<financialTransactionId mapField="FT_ID"/>
+		<serviceAgreement5 mapField="SA_ID"/>
+		<arrearsDate dataType="date" mapField="ARS_DT"/>
+		<financialTransactionType dataType="lookup" mapField="FT_TYPE_FLG" lookup="FT_TYPE_FLG"/>
+		<description mapField="DESCR"/>
+		<currentAmount dataType="money" mapField="CUR_AMT"/>
+		<currentBalance2 dataType="money" mapField="CUR_BAL"/>
+		<currency3 mapField="CURRENCY_CD"/>
+		<siblingId mapField="SIBLING_ID"/>
+		<paymentEventId mapField="PAY_EVENT_ID"/>
+		<parentId mapField="PARENT_ID"/>
+	</saFtHist>
+	<scheduledStartDate dataType="date" mapField="SCHED_START_DT"/>
+	<canRenewNonBilledBudgetSA dataType="boolean" mapField="RENEW_NBB_SA_SW"/>
+	<hasRecommendAPaymentSchedule dataType="boolean" mapField="RECOM_PAY_SCH_SW"/>
+	<canStopAnNonBilledBudgetSA dataType="boolean" mapField="STOP_NBB_SA_SW"/>
+	<reloadNbParmList mapField="RELOAD_NB_PARM_LIST"/>
+	<reloadCvrdSaList mapField="RELOAD_CVRD_SA_LIST"/>
+	<reloadSchPayList mapField="RELOAD_SCH_PAY_LIST"/>
+</schema>

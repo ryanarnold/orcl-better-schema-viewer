@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+	<trendArea mapField="TREND_AREA_CD"/>
+	<trendClass mapField="TREND_CL_CD"/>
+	<unitOfMeasure mapField="UOM_CD"/>
+	<timeOfUse mapField="TOU_CD"/>
+	<batchThreadNumber dataType="number" mapField="BATCH_THREAD_NBR"/>
+	<readDate dataType="date" mapField="READ_DT"/>
+	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+	<measuresPeakQuantity dataType="boolean" mapField="MSR_PEAK_QTY_SW"/>
+	<unitOfMeasureDescr mapField="UOM_DESCR"/>
+	<timeOfUseDescr mapField="TOU_DESCR"/>
+	<trend type="list" mapList="TREND">
+		<trendArea mapField="TREND_AREA_CD"/>
+		<trendClass mapField="TREND_CL_CD"/>
+		<unitOfMeasure mapField="UOM_CD"/>
+		<timeOfUse default="$BLANK" mapField="TOU_CD"/>
+		<readDate dataType="date" mapField="READ_DT"/>
+		<batchThreadNumber dataType="number" mapField="BATCH_THREAD_NBR"/>
+		<totalServiceQuantity dataType="number" mapField="TOT_SVC_QTY"/>
+		<numberOfUnits dataType="number" mapField="NBR_OF_UNITS"/>
+		<numberOfReads dataType="number" mapField="NBR_OF_READS"/>
+		<version dataType="number" mapField="VERSION"/>
+		<trendAvgConsum dataType="number" mapField="TREND_AVG_CONSUM"/>
+	</trend>
+</schema>

@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+  <input type="group">
+    <personId required="true" mapField="PER_ID"/>
+    <accountType mapField="CM_ACCT_TYPE_CHV"/>
+  </input>
+  <output type="group">
+    <personId/>
+    <personName/>
+    <personAlternativeName/>
+    <uosAccounts type="group">
+      <uosAccountsList type="list">
+        <accountId/>
+        <premiseId/>
+        <premiseAddress/>
+        <currentBalance/>
+        <serviceFee/>
+        <vatCharges/>
+        <propertyUsage/>
+        <lastBillDate/>
+      </uosAccountsList>
+    </uosAccounts>
+    <defaultAccounts type="group">
+      <defaultAccountsList type="list">
+        <accountId/>
+        <premiseId/>
+        <premiseAddress/>
+        <currentBalance/>
+        <serviceFee/>
+        <vatCharges/>
+        <propertyUsage/>
+        <lastBillDate/>
+      </defaultAccountsList>
+    </defaultAccounts>
+    <connectedAccounts type="group">
+      <connectedAccountsList type="list">
+        <accountId/>
+        <premiseId/>
+        <premiseAddress/>
+        <currentBalance/>
+        <serviceFee/>
+        <vatCharges/>
+        <propertyUsage/>
+        <lastBillDate/>
+      </connectedAccountsList>
+    </connectedAccounts>
+    <notConnectedAccounts type="group">
+      <notConnectedAccountsList type="list">
+        <accountId/>
+        <premiseId/>
+        <premiseAddress/>
+        <currentBalance/>
+        <serviceFee/>
+        <vatCharges/>
+        <propertyUsage/>
+        <lastBillDate/>
+      </notConnectedAccountsList>
+    </notConnectedAccounts>
+    <status/>
+    <errorMessage/>
+  </output>
+</schema>

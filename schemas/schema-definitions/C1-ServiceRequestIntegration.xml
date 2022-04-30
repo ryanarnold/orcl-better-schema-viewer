@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<bo suppress="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<outboundCommunication type="group" mapXML="MST_CONFIG_DATA">
+		<externalSystem mdField="NT_XID_CD" required="true" fkRef="F1-ESTMP"/>
+		<communicationTypes type="list">
+			<externalCallType mdField="EXT_CALL_TYPE_FLG" required="true" dataType="lookup" isPrimeKey="true" lookup="EXT_CALL_TYPE_FLG"/>
+			<outboundMessageType mdField="OUTMSG_TYPE_CD" required="true" fkRef="F1-OMTYP"/>
+		</communicationTypes>
+	</outboundCommunication>
+	<inboundCommunication type="group" mapXML="MST_CONFIG_DATA">
+		<taskTypes type="list">
+			<srUpdateEvent mdField="C1_SVC_REQ_UPD_EVT_FLG" required="true" dataType="lookup" isPrimeKey="true" lookup="C1_SVC_REQ_UPD_EVT_FLG"/>
+			<serviceTaskType mdField="F1_STASK_TYPE_CD" fkRef="F1-STKTY"/>
+		</taskTypes>
+	</inboundCommunication>
+	<contactInformation type="group" mapXML="MST_CONFIG_DATA">
+		<mainPhoneTypePerson mdField="C1_PPHN_TYPE_CD" fkRef="C1-PHTYP"/>
+		<mainPhoneTypeBusiness mdField="C1_BPHN_TYPE_CD" fkRef="C1-PHTYP"/>
+		<cellPhoneType mdField="C1_CPHN_TYPE_CD" fkRef="C1-PHTYP"/>
+	</contactInformation>
+</schema>

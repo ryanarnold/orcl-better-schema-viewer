@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<outboundMsgId mapField="OUTMSG_ID"/>
+	<externalSystem fkRef="F1-ESTMP" mapField="NT_XID_CD"/>
+	<outboundMessageType fkRef="F1-OMTYP" mapField="OUTMSG_TYPE_CD"/>
+	<processingMethod dataType="lookup" mapField="OUTMSG_PROC_METH_FLG" lookup="OUTMSG_PROC_METH_FLG"/>
+	<outboundMessageStatus dataType="lookup" mapField="OUTMSG_STATUS_FLG" lookup="OUTMSG_STATUS_FLG"/>
+	<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+	<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+	<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+	<errorDetail mapField="ERROR_DTL"/>
+	<input type="group" mapXML="XML_SOURCE">
+		<ApplicationNo/>
+		<Authorization/>
+		<EntityIdentityCode/>
+		<LicenseNumber/>
+		<X_IBM_Client_Id/>
+		<X_IBM_Client_Secret/>
+	</input>
+	<GetAccountDetailsResult type="group" mapXML="XML_RESPONSE">
+		<Status/>
+		<accountDetails type="group">
+			<FZ_Authorized_Manager_Arabic__c/>
+			<FZ_Authorized_Manager__c/>
+			<FZ_Authorized_Manager__r type="group">
+				<Id isPrimeKey="true"/>
+				<Name/>
+			</FZ_Authorized_Manager__r>
+			<FZ_Company_Name_Arabic__c/>
+			<FZ_Company_Status__c/>
+			<FZ_Current_License__c/>
+			<FZ_Current_License__r type="group">
+				<FZ_Expiry_Date__c/>
+				<FZ_State_Date__c/>
+				<Id/>
+				<Name/>
+			</FZ_Current_License__r>
+			<FZ_Email__c/>
+			<FZ_Legal_Form_Abbreviation_Arabic__c/>
+			<FZ_Legal_Form_Abbreviation__c/>
+			<FZ_Legal_Form_Arabic__c/>
+			<FZ_Legal_Form__c/>
+			<FZ_License_Expiry_Date__c/>
+			<FZ_License_State_Date__c/>
+			<FZ_Mobile__c/>
+			<Id/>
+			<Name/>
+		</accountDetails>
+		<activeActivities type="group">
+			<ActiveActivity type="list">
+				<FZ_Activity_Arabic_Name__c/>
+				<FZ_Activity_English_Name__c/>
+				<Id isPrimeKey="true"/>
+			</ActiveActivity>
+		</activeActivities>
+		<activeTenancyContract type="group">
+			<ActiveTenancyContract type="list">
+				<FZ_Location_Name__c/>
+				<Id isPrimeKey="true"/>
+			</ActiveTenancyContract>
+		</activeTenancyContract>
+		<shareholders type="group">
+			<Shareholder type="list">
+				<relEmail/>
+				<relName isPrimeKey="true"/>
+				<relNameArabic/>
+				<relPhone/>
+			</Shareholder>
+		</shareholders>
+	</GetAccountDetailsResult>
+</schema>

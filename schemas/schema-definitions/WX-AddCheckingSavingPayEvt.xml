@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<schema name="schema">
+	<payEventId mapField="PAY_EVENT_ID"/>
+	<payorAccountId mapField="PAYOR_ACCT_ID"/>
+	<payorAccountInfo mapField="PAYOR_ACCT_NAME"/>
+	<paymentAmount mdField="PAY_AMT" dataType="money" mapField="PAYMENT_AMT"/>
+	<matchType mapField="MATCH_TYPE_CD"/>
+	<matchValue mapField="MATCH_VAL"/>
+	<paymentDate dataType="date" default="%CurrentDate" mapField="PAYMENT_DT"/>
+	<payEventAction dataType="lookup" default="DSFZ" mapField="PEVT_SPCL_ACTN_FLG" lookup="PEVT_SPCL_ACTN_FLG"/>
+	<shouldDoManualOverrideAuth dataType="boolean" mapField="TENDER_AUTH_OVRD_SW"/>
+	<tenderAuthorizationCode mapField="TENDER_AUTH_CD"/>
+	<shouldPerformAuthorization dataType="boolean" mapField="TENDER_AUTH_SW"/>
+	<tenderAuthorizationDataArea type="raw" mapXML="TENDER_INPUT_DATA_AREA"/>
+	<tenderAuthorizationDataAreaName fkRef="F1-DATAR" mapField="TENDER_INPUT_DATA_AREA_CD"/>
+	<tendersUI type="list" mapList="TNDR_TYPE">
+		<tenderType mapField="TENDER_TYPE_CD"/>
+		<tenderedAmount dataType="money" mapField="TENDERED_AMT"/>
+		<alternateAmount dataType="number" mapField="ALT_TENDER_AMT"/>
+		<alternateCurrency mapField="ALT_CURRENCY_CD"/>
+		<checkNumber mapField="CHECK_NBR"/>
+	</tendersUI>
+	<shouldDistribute dataType="boolean" default="true" mapField="ALL_PAY_DIST_SW"/>
+	<shouldFreeze dataType="boolean" default="true" mapField="ALL_PAY_FREEZE_SW"/>
+	<payTender type="list" mapList="PAY_TNDR">
+		<payorAccountId mapField="PAYOR_ACCT_ID"/>
+		<tenderType mapField="TENDER_TYPE_CD"/>
+		<tenderAmount dataType="money" mapField="TENDER_AMT"/>
+		<currency mapField="CURRENCY_CD"/>
+		<autoPaySource mapField="APAY_SRC_CD"/>
+		<externalAccountId mapField="EXT_ACCT_ID"/>
+		<encrExternalAccountId mapField="ENCR_EXT_ACCT_ID"/>
+		<payTenderChar type="list" mapList="PY_TNDR_CHAR">
+			<characteristicType mapField="CHAR_TYPE_CD"/>
+			<characteristicValue mapField="CHAR_VAL"/>
+		</payTenderChar>
+	</payTender>
+	<payments type="list" mapList="PAY">
+		<payAmount dataType="money" mapField="PAY_AMT"/>
+		<accountId mapField="ACCT_ID"/>
+	</payments>
+	<callerProcess dataType="lookup" mapField="C1_CALLER_PROCESS_FLG" lookup="C1_CALLER_PROCESS_FLG"/>
+</schema>

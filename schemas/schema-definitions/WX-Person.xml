@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<schema name="schema" fwRel="2">
+	<personId mapField="PER_ID"/>
+	<personOrBusiness dataType="lookup" mapField="PER_OR_BUS_FLG" lookup="PER_OR_BUS_FLG"/>
+	<emailAddress mapField="EMAILID"/>
+	<primaryName mapField="ENTITY_NAME">
+		<row mapChild="CI_PER_NAME">
+			<NAME_TYPE_FLG is="PRIM"/>
+			<PRIM_NAME_SW is="true"/>
+		</row>
+	</primaryName>
+	<language mapField="LANGUAGE_CD"/>
+	<timeZone mapField="TIME_ZONE_CD"/>
+	<identifier type="list" mapChild="CI_PER_ID">
+		<idType mapField="ID_TYPE_CD"/>
+		<personIdNumber mapField="PER_ID_NBR"/>
+		<encrPersonIdNumber mapField="ENCR_PER_ID_NBR"/>
+		<hashPersonIdNumber mapField="HASH_PER_ID_NBR"/>
+		<isPrimaryId dataType="boolean" mapField="PRIM_SW"/>
+	</identifier>
+	<personContactList type="list" mapChild="C1_PER_CONTDET">
+		<contactId mapField="C1_CONTACT_ID"/>
+		<contactRouteType mapField="COMM_RTE_TYPE_CD"/>
+		<contactValue mapField="CONTACT_VALUE"/>
+		<contactName mapField="CONTACT_NAME"/>
+		<contactDetailPrimary dataType="lookup" mapField="CND_PRIMARY_FLG" lookup="CND_PRIMARY_FLG"/>
+	</personContactList>
+	<phone type="list" mapChild="CI_PER_PHONE">
+		<sequence dataType="number" mapField="SEQ_NUM"/>
+		<phoneType mapField="PHONE_TYPE_CD"/>
+		<phoneNumber mapField="PHONE"/>
+		<extension mapField="EXTENSION"/>
+	</phone>
+	<country mapField="COUNTRY"/>
+	<addressLine1 mapField="ADDRESS1"/>
+	<addressLine2 mapField="ADDRESS2"/>
+	<addressLine3 mapField="ADDRESS3"/>
+	<addressLine4 mapField="ADDRESS4"/>
+	<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+	<number1 mapField="NUM1"/>
+	<number2 mapField="NUM2"/>
+	<inCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+	<city mapField="CITY"/>
+	<geographic mapField="GEO_CODE"/>
+	<county mapField="COUNTY"/>
+	<state mapField="STATE"/>
+	<postal mapField="POSTAL"/>
+	<version suppress="true" dataType="number" mapField="VERSION"/>
+	<personSeasonalAddress type="list" mapChild="CI_PER_ADDR_SEAS">
+		<personId mapField="PER_ID"/>
+		<sequence dataType="number" mapField="SEQ_NUM"/>
+		<effectiveStatus dataType="lookup" mapField="EFF_STATUS" lookup="EFF_STATUS"/>
+		<endMonthDay mapField="SEASON_END_MMDD"/>
+		<startMonthDay mapField="SEASON_START_MMDD"/>
+		<country mapField="COUNTRY"/>
+		<addressLine1 mapField="ADDRESS1"/>
+		<addressLine2 mapField="ADDRESS2"/>
+		<addressLine3 mapField="ADDRESS3"/>
+		<addressLine4 mapField="ADDRESS4"/>
+		<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+		<number1 mapField="NUM1"/>
+		<number2 mapField="NUM2"/>
+		<inCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+		<city mapField="CITY"/>
+		<geographic mapField="GEO_CODE"/>
+		<county mapField="COUNTY"/>
+		<state mapField="STATE"/>
+		<postal mapField="POSTAL"/>
+	</personSeasonalAddress>
+	<paymentOption type="list" mapChild="C1_PER_SS_PAYOPT">
+		<cssPaymentOptionId mapField="PER_PAY_OPT_ID"/>
+		<paymentType dataType="lookup" mapField="EXT_TYPE_FLG" lookup="EXT_TYPE_FLG"/>
+		<creditCardInfo type="group">
+			<cardType dataType="lookup" mapField="CARD_TYPE_FLG" lookup="CARD_TYPE_FLG"/>
+			<cardNumber mapField="CREDIT_CARD_NBR"/>
+			<encrCardNumber mapField="ENCR_CREDIT_CARD_NBR"/>
+			<hashCardNumber mapField="HASH_CREDIT_CARD_NBR"/>
+			<expiryMonth mapField="EXP_MONTH"/>
+			<expiryYear mapField="EXP_YEAR"/>
+			<cardHolderFName mapField="C1_CARDHOLDER_FNAME"/>
+			<cardHolderLName mapField="C1_CARDHOLDER_LNAME"/>
+			<country mapField="COUNTRY"/>
+			<addressLine1 mapField="ADDRESS1"/>
+			<addressLine2 mapField="ADDRESS2"/>
+			<addressLine3 mapField="ADDRESS3"/>
+			<addressLine4 mapField="ADDRESS4"/>
+			<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+			<number1 mapField="NUM1"/>
+			<number2 mapField="NUM2"/>
+			<inCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+			<city mapField="CITY"/>
+			<geographic mapField="GEO_CODE"/>
+			<county mapField="COUNTY"/>
+			<state mapField="STATE"/>
+			<postal mapField="POSTAL"/>
+		</creditCardInfo>
+		<bankAccountInfo type="group">
+			<routingNumber mapField="EXT_SOURCE_ID"/>
+			<accountNumber mapField="EXT_ACCT_ID"/>
+			<encrAccountNumber mapField="ENCR_EXT_ACCT_ID"/>
+			<hashAccountNumber mapField="HASH_EXT_ACCT_ID"/>
+			<apaySource mapField="APAY_SRC_CD"/>
+		</bankAccountInfo>
+		<version dataType="number" mapField="VERSION"/>
+	</paymentOption>
+</schema>
