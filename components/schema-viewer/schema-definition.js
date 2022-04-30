@@ -17,7 +17,7 @@ function SchemaDefinition({ xml, xmlData, updateXpath }) {
   const [xmlLines, setXmlLines] = useState([]);
 
   const handleClick = (event) => {
-    const xpath = event.target.getAttribute('xpath');
+    const xpath = event.currentTarget.getAttribute('xpath');
     updateXpath(xpath);
   };
 
