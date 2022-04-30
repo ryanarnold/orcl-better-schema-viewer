@@ -1,56 +1,56 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
-	<statementId mapField="STM_ID"/>
-	<filterDescr mapField="FILTER_DESCR"/>
-	<filterAddress1 mapField="FILTER_ADDRESS1"/>
-	<filterCity mapField="FILTER_CITY"/>
-	<filterPostal mapField="FILTER_POSTAL"/>
-	<filterEntityName mapField="FILTER_ENTITY_NAME"/>
-	<detailFilter dataType="lookup" mapField="DTLS_FILTER_FLG" lookup="DTLS_FILTER_FLG"/>
-	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
-	<batchControl mapField="BATCH_CD"/>
-	<batchNumber dataType="number" mapField="BATCH_NBR"/>
-	<statementConstructId mapField="STM_CNST_ID"/>
-	<createDate dataType="date" mapField="STM_DT"/>
-	<statementStatus dataType="lookup" mapField="STM_STAT_FLG" lookup="STM_STAT_FLG"/>
-	<ilmDate dataType="date" mapField="ILM_DT"/>
-	<isEligibleForArchiving dataType="boolean" mapField="ILM_ARCH_SW"/>
-	<version dataType="number" mapField="VERSION"/>
-	<retrieveFilter mapField="RETRIEVE_FILTER"/>
-	<stmDtl type="list" mapList="STM_DTL">
-		<version2 dataType="number" mapField="VERSION"/>
-		<statementDetailId mapField="STM_DTL_ID"/>
-		<constructDetailId mapField="STM_CNST_DTL_ID"/>
-		<statementId2 mapField="STM_ID"/>
-		<billId mapField="BILL_ID"/>
-		<serviceAgreement mapField="SA_ID"/>
-		<stmCnstDtlDescr mapField="STM_CNST_DTL_DESCR"/>
-		<billInformation mapField="BILL_INFO"/>
-		<saInformation mapField="SA_INFO"/>
-		<premiseId mapField="PREM_ID"/>
-		<dtlPremInfo mapField="DTL_PREM_INFO"/>
-		<dueDate dataType="date" mapField="DUE_DT"/>
-		<accountId mapField="ACCT_ID"/>
-		<accountInfo mapField="ACCT_INFO"/>
-	</stmDtl>
-	<stmCnstDescr mapField="STM_CNST_DESCR"/>
-	<description mapField="BATCH_DESCR"/>
-	<stmInfo mapField="STM_INFO"/>
-	<statementAddressSource dataType="lookup" mapField="STM_ADDR_SRC_FLG" lookup="STM_ADDR_SRC_FLG"/>
-	<mailingPremise mapField="MAILING_PREM_ID"/>
-	<premiseInfo mapField="PREM_INFO"/>
-	<personId mapField="PER_ID"/>
-	<entityName mapField="ENTITY_NAME"/>
-	<statementRouteType mapField="STM_RTE_TYPE_CD"/>
-	<extractAlgorithm mapField="EXTRACT_ALG_CD"/>
-	<canGenerate dataType="boolean" mapField="ACTION_GENERATE_SW"/>
-	<canReprint dataType="boolean" mapField="ACTION_REPRINT_SW"/>
-	<canDelete dataType="boolean" mapField="DELETE_SW"/>
-	<canDisplay dataType="boolean" mapField="ACTION_DSP_STM_SW"/>
-	<cutoffDate mapField="CUTOFF_DATE"/>
-	<protDisplaySw mapField="PROT_DISPLAY_SW"/>
-	<onLineDocUrl mapField="ON_LINE_DOC_URL"/>
-	<printPlatform dataType="lookup" mapField="PRINT_PLATFORM_FLG" lookup="PRINT_PLATFORM_FLG"/>
-	<report mapField="REPORT_CD"/>
+  <canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+  <statementId mapField="STM_ID"/>
+  <filterDescr mapField="FILTER_DESCR"/>
+  <filterAddress1 mapField="FILTER_ADDRESS1"/>
+  <filterCity mapField="FILTER_CITY"/>
+  <filterPostal mapField="FILTER_POSTAL"/>
+  <filterEntityName mapField="FILTER_ENTITY_NAME"/>
+  <detailFilter dataType="lookup" mapField="DTLS_FILTER_FLG" lookup="DTLS_FILTER_FLG"/>
+  <defaultFlag mapField="DEFAULT_FOR_FLG"/>
+  <batchControl mapField="BATCH_CD"/>
+  <batchNumber dataType="number" mapField="BATCH_NBR"/>
+  <statementConstructId mapField="STM_CNST_ID"/>
+  <createDate dataType="date" mapField="STM_DT"/>
+  <statementStatus dataType="lookup" mapField="STM_STAT_FLG" lookup="STM_STAT_FLG"/>
+  <ilmDate dataType="date" mapField="ILM_DT"/>
+  <isEligibleForArchiving dataType="boolean" mapField="ILM_ARCH_SW"/>
+  <version dataType="number" mapField="VERSION"/>
+  <retrieveFilter mapField="RETRIEVE_FILTER"/>
+  <stmDtl type="list" mapList="STM_DTL">
+    <version2 dataType="number" mapField="VERSION"/>
+    <statementDetailId mapField="STM_DTL_ID"/>
+    <constructDetailId mapField="STM_CNST_DTL_ID"/>
+    <statementId2 mapField="STM_ID"/>
+    <billId mapField="BILL_ID"/>
+    <serviceAgreement mapField="SA_ID"/>
+    <stmCnstDtlDescr mapField="STM_CNST_DTL_DESCR"/>
+    <billInformation mapField="BILL_INFO"/>
+    <saInformation mapField="SA_INFO"/>
+    <premiseId mapField="PREM_ID"/>
+    <dtlPremInfo mapField="DTL_PREM_INFO"/>
+    <dueDate dataType="date" mapField="DUE_DT"/>
+    <accountId mapField="ACCT_ID"/>
+    <accountInfo mapField="ACCT_INFO"/>
+  </stmDtl>
+  <stmCnstDescr mapField="STM_CNST_DESCR"/>
+  <description mapField="BATCH_DESCR"/>
+  <stmInfo mapField="STM_INFO"/>
+  <statementAddressSource dataType="lookup" mapField="STM_ADDR_SRC_FLG" lookup="STM_ADDR_SRC_FLG"/>
+  <mailingPremise mapField="MAILING_PREM_ID"/>
+  <premiseInfo mapField="PREM_INFO"/>
+  <personId mapField="PER_ID"/>
+  <entityName mapField="ENTITY_NAME"/>
+  <statementRouteType mapField="STM_RTE_TYPE_CD"/>
+  <extractAlgorithm mapField="EXTRACT_ALG_CD"/>
+  <canGenerate dataType="boolean" mapField="ACTION_GENERATE_SW"/>
+  <canReprint dataType="boolean" mapField="ACTION_REPRINT_SW"/>
+  <canDelete dataType="boolean" mapField="DELETE_SW"/>
+  <canDisplay dataType="boolean" mapField="ACTION_DSP_STM_SW"/>
+  <cutoffDate mapField="CUTOFF_DATE"/>
+  <protDisplaySw mapField="PROT_DISPLAY_SW"/>
+  <onLineDocUrl mapField="ON_LINE_DOC_URL"/>
+  <printPlatform dataType="lookup" mapField="PRINT_PLATFORM_FLG" lookup="PRINT_PLATFORM_FLG"/>
+  <report mapField="REPORT_CD"/>
 </schema>

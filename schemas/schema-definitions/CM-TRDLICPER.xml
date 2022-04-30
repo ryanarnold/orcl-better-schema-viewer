@@ -1,29 +1,29 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<personId required="true"/>
-	<PersonDetails type="group">
-		<PersonNumber/>
-		<TradeLicenseNumber/>
-		<TradeLicenseApplicationNumber/>
-		<FreezoneId/>
-		<OrderPrimaryName/>
-		<AlternativeName/>
-		<TradeLicenseType/>
-		<TradeLicenseStartDate/>
-		<TradeLicenseEndDate/>
-		<FreezoneStartDate/>
-		<FreezoneEndDate/>
-		<POBox/>
-		<EmailAddress/>
-		<MobileNumberGroup type="group">
-			<MobileNumbersList type="list">
-				<phoneNumber/>
-			</MobileNumbersList>
-		</MobileNumberGroup>
-		<TelephoneNumberGroup type="group">
-			<TelephoneNumberList type="list">
-				<phoneNumber/>
-			</TelephoneNumberList>
-		</TelephoneNumberGroup>
-	</PersonDetails>
+  <personId required="true"/>
+  <PersonDetails type="group">
+    <PersonNumber/>
+    <TradeLicenseNumber/>
+    <TradeLicenseApplicationNumber/>
+    <FreezoneId/>
+    <OrderPrimaryName/>
+    <AlternativeName/>
+    <TradeLicenseType/>
+    <TradeLicenseStartDate/>
+    <TradeLicenseEndDate/>
+    <FreezoneStartDate/>
+    <FreezoneEndDate/>
+    <POBox/>
+    <EmailAddress/>
+    <MobileNumberGroup type="group">
+      <MobileNumbersList type="list">
+        <phoneNumber/>
+      </MobileNumbersList>
+    </MobileNumberGroup>
+    <TelephoneNumberGroup type="group">
+      <TelephoneNumberList type="list">
+        <phoneNumber/>
+      </TelephoneNumberList>
+    </TelephoneNumberGroup>
+  </PersonDetails>
 </schema>

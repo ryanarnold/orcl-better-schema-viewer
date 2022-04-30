@@ -1,71 +1,71 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
-	<severanceProcessId mapField="SEV_PROC_ID"/>
-	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
-	<hasTemplateChange dataType="boolean" mapField="TMPL_CHG_SW"/>
-	<collectionProcess mapField="COLL_PROC_ID"/>
-	<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
-	<severanceStatus dataType="lookup" mapField="SEV_STATUS_FLG" lookup="SEV_STATUS_FLG"/>
-	<eventSequence dataType="number" mapField="EVT_SEQ"/>
-	<severanceStatusReason dataType="lookup" mapField="SEV_STAT_RSN_FLG" lookup="SEV_STAT_RSN_FLG"/>
-	<serviceAgreement mapField="SA_ID"/>
-	<currency mapField="CURRENCY_CD"/>
-	<priority dataType="lookup" mapField="CRIT_PRIO_FLG" lookup="CRIT_PRIO_FLG"/>
-	<severanceProcessTemplate mapField="SEV_PROC_TMPL_CD"/>
-	<creationDateTime dataType="dateTime" default="%CurrentDateTime" mapField="CRE_DTTM"/>
-	<arrearsDate dataType="date" mapField="SEV_ARS_DT"/>
-	<arrearsAmount dataType="money" mapField="ARS_AMT"/>
-	<triggerBusinessProcess dataType="boolean" mapField="TRIGGER_BP_SW"/>
-	<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
-	<comments mapField="COMMENTS"/>
-	<version dataType="number" mapField="VERSION"/>
-	<amountStillOwing dataType="money" mapField="AMT_STILL_OWING"/>
-	<amountStillOwingT dataType="money" mapField="C1_T_AMT_STILL_OWING"/>
-	<hasTemplateChangeT dataType="boolean" mapField="C1_T_TMPL_CHG_SW"/>
-	<evt type="list" mapList="EVT">
-		<severanceProcessId2 mapField="SEV_PROC_ID"/>
-		<eventSequence2 dataType="number" mapField="EVT_SEQ"/>
-		<severanceEventStatus dataType="lookup" mapField="SEV_EVT_STAT_FLG" lookup="SEV_EVT_STAT_FLG"/>
-		<severanceEventType mapField="SEV_EVT_TYPE_CD"/>
-		<dependOnOtherEvents dataType="boolean" mapField="DEP_EVT_SW"/>
-		<triggerDate dataType="date" mapField="TRIGGER_DT"/>
-		<daysAfterPreviousResponse dataType="number" mapField="DAYS_AFT_PREV_EVT"/>
-		<completionDate dataType="date" mapField="COMPLETION_DT"/>
-		<triggerBusinessProcess2 dataType="boolean" mapField="TRIGGER_BP_SW"/>
-		<version2 dataType="number" mapField="VERSION"/>
-		<severanceEvent mapField="SEV_EVT_INFO"/>
-		<evtDep type="list" mapList="EVT_DEP">
-			<severanceProcessId3 mapField="SEV_PROC_ID"/>
-			<eventSequence3 dataType="number" mapField="EVT_SEQ"/>
-			<sequence dataType="number" mapField="SEQ_NUM"/>
-			<dependentOnSequence dataType="number" mapField="DEP_EVT_SEQ"/>
-			<version3 dataType="number" mapField="VERSION"/>
-		</evtDep>
-		<evtFa type="list" mapList="EVT_FA">
-			<severanceProcessId4 mapField="SEV_PROC_ID"/>
-			<eventSequence4 dataType="number" mapField="EVT_SEQ"/>
-			<fieldActivityId mapField="FA_ID"/>
-			<version4 dataType="number" mapField="VERSION"/>
-			<fieldActivityInformation mapField="FA_INFO"/>
-			<spInformation mapField="SP_INFO"/>
-			<servicePointId mapField="SP_ID"/>
-		</evtFa>
-		<evtCc type="list" mapList="EVT_CC">
-			<severanceProcessId5 mapField="SEV_PROC_ID"/>
-			<eventSequence5 dataType="number" mapField="EVT_SEQ"/>
-			<customerContactId mapField="CC_ID"/>
-			<version5 dataType="number" mapField="VERSION"/>
-			<ccInfo mapField="CC_INFO"/>
-		</evtCc>
-	</evt>
-	<severanceProcess mapField="SEV_PROC_INFO"/>
-	<saInformation mapField="SA_INFO"/>
-	<premiseId mapField="PREM_ID"/>
-	<premiseInfo mapField="PREM_INFO"/>
-	<sevCreInfo mapField="SEV_CRE_INFO"/>
-	<amtStillOwing2 mapField="AMT_STILL_OWING2"/>
-	<nbrOfDaysFrom dataType="number" mapField="NBR_OF_DAYS_FROM"/>
-	<accountId mapField="ACCT_ID"/>
-	<isCancel dataType="boolean" mapField="CANCEL_SW"/>
+  <canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+  <severanceProcessId mapField="SEV_PROC_ID"/>
+  <defaultFlag mapField="DEFAULT_FOR_FLG"/>
+  <hasTemplateChange dataType="boolean" mapField="TMPL_CHG_SW"/>
+  <collectionProcess mapField="COLL_PROC_ID"/>
+  <messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+  <severanceStatus dataType="lookup" mapField="SEV_STATUS_FLG" lookup="SEV_STATUS_FLG"/>
+  <eventSequence dataType="number" mapField="EVT_SEQ"/>
+  <severanceStatusReason dataType="lookup" mapField="SEV_STAT_RSN_FLG" lookup="SEV_STAT_RSN_FLG"/>
+  <serviceAgreement mapField="SA_ID"/>
+  <currency mapField="CURRENCY_CD"/>
+  <priority dataType="lookup" mapField="CRIT_PRIO_FLG" lookup="CRIT_PRIO_FLG"/>
+  <severanceProcessTemplate mapField="SEV_PROC_TMPL_CD"/>
+  <creationDateTime dataType="dateTime" default="%CurrentDateTime" mapField="CRE_DTTM"/>
+  <arrearsDate dataType="date" mapField="SEV_ARS_DT"/>
+  <arrearsAmount dataType="money" mapField="ARS_AMT"/>
+  <triggerBusinessProcess dataType="boolean" mapField="TRIGGER_BP_SW"/>
+  <messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+  <comments mapField="COMMENTS"/>
+  <version dataType="number" mapField="VERSION"/>
+  <amountStillOwing dataType="money" mapField="AMT_STILL_OWING"/>
+  <amountStillOwingT dataType="money" mapField="C1_T_AMT_STILL_OWING"/>
+  <hasTemplateChangeT dataType="boolean" mapField="C1_T_TMPL_CHG_SW"/>
+  <evt type="list" mapList="EVT">
+    <severanceProcessId2 mapField="SEV_PROC_ID"/>
+    <eventSequence2 dataType="number" mapField="EVT_SEQ"/>
+    <severanceEventStatus dataType="lookup" mapField="SEV_EVT_STAT_FLG" lookup="SEV_EVT_STAT_FLG"/>
+    <severanceEventType mapField="SEV_EVT_TYPE_CD"/>
+    <dependOnOtherEvents dataType="boolean" mapField="DEP_EVT_SW"/>
+    <triggerDate dataType="date" mapField="TRIGGER_DT"/>
+    <daysAfterPreviousResponse dataType="number" mapField="DAYS_AFT_PREV_EVT"/>
+    <completionDate dataType="date" mapField="COMPLETION_DT"/>
+    <triggerBusinessProcess2 dataType="boolean" mapField="TRIGGER_BP_SW"/>
+    <version2 dataType="number" mapField="VERSION"/>
+    <severanceEvent mapField="SEV_EVT_INFO"/>
+    <evtDep type="list" mapList="EVT_DEP">
+      <severanceProcessId3 mapField="SEV_PROC_ID"/>
+      <eventSequence3 dataType="number" mapField="EVT_SEQ"/>
+      <sequence dataType="number" mapField="SEQ_NUM"/>
+      <dependentOnSequence dataType="number" mapField="DEP_EVT_SEQ"/>
+      <version3 dataType="number" mapField="VERSION"/>
+    </evtDep>
+    <evtFa type="list" mapList="EVT_FA">
+      <severanceProcessId4 mapField="SEV_PROC_ID"/>
+      <eventSequence4 dataType="number" mapField="EVT_SEQ"/>
+      <fieldActivityId mapField="FA_ID"/>
+      <version4 dataType="number" mapField="VERSION"/>
+      <fieldActivityInformation mapField="FA_INFO"/>
+      <spInformation mapField="SP_INFO"/>
+      <servicePointId mapField="SP_ID"/>
+    </evtFa>
+    <evtCc type="list" mapList="EVT_CC">
+      <severanceProcessId5 mapField="SEV_PROC_ID"/>
+      <eventSequence5 dataType="number" mapField="EVT_SEQ"/>
+      <customerContactId mapField="CC_ID"/>
+      <version5 dataType="number" mapField="VERSION"/>
+      <ccInfo mapField="CC_INFO"/>
+    </evtCc>
+  </evt>
+  <severanceProcess mapField="SEV_PROC_INFO"/>
+  <saInformation mapField="SA_INFO"/>
+  <premiseId mapField="PREM_ID"/>
+  <premiseInfo mapField="PREM_INFO"/>
+  <sevCreInfo mapField="SEV_CRE_INFO"/>
+  <amtStillOwing2 mapField="AMT_STILL_OWING2"/>
+  <nbrOfDaysFrom dataType="number" mapField="NBR_OF_DAYS_FROM"/>
+  <accountId mapField="ACCT_ID"/>
+  <isCancel dataType="boolean" mapField="CANCEL_SW"/>
 </schema>

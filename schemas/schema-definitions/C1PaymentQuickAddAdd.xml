@@ -1,40 +1,40 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
-	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
-	<tenderControl mapField="TNDR_CTL_INFO"/>
-	<tenderControlId mapField="TNDR_CTL_ID"/>
-	<tenderSourceType dataType="lookup" mapField="TNDR_SRCE_TYPE_FLG" lookup="TNDR_SRCE_TYPE_FLG"/>
-	<paymentDate dataType="date" mapField="PAY_DT"/>
-	<maxQuickAddTenders dataType="number" mapField="MAX_QUICK_ADD_TENDERS"/>
-	<user mapField="USER_ID"/>
-	<endorseMessage mapField="ENDORSE_MSG"/>
-	<endorsePrompt mapField="ENDORSE_PROMPT"/>
-	<description mapField="DESCR"/>
-	<accountNumber mapField="ACCOUNT_NBR"/>
-	<encryptedBankAccountNumber mapField="ENCR_ACCOUNT_NBR"/>
-	<printControl mapField="PRINT_CTL"/>
-	<currency mapField="CURRENCY_CD"/>
-	<endorseText type="list" mapList="ENDORSE_TEXT">
-		<endorseLine mapField="ENDORSE_LINE"/>
-	</endorseText>
-	<canDistributeAndFreeze dataType="boolean" mapField="DIS_AND_FRZ_SW"/>
-	<isCancel dataType="boolean" mapField="CANCEL_SW"/>
-	<quickAdd type="list" mapList="QUICK_ADD">
-		<accountId mapField="ACCT_ID"/>
-		<accountCheckDigit dataType="number" mapField="ACCT_CHECK_DIGIT"/>
-		<accountName mapField="ACCT_NAME"/>
-		<matchType mapField="MATCH_TYPE_CD"/>
-		<matchValue mapField="MATCH_VAL"/>
-		<paymentAmount dataType="money" mapField="PAY_AMT"/>
-		<tenderType mapField="TENDER_TYPE_CD"/>
-		<currency2 mapField="CURRENCY_CD"/>
-		<hasCashTendered dataType="boolean" mapField="CASH_TNDR_SW"/>
-		<checkNumber mapField="CHECK_NBR"/>
-		<paymentEventId mapField="PAY_EVENT_ID"/>
-		<statusExpMsg mapField="STATUS_EXP_MSG"/>
-		<errorMsg mapField="ERROR_MSG"/>
-		<paymentStatus dataType="lookup" mapField="PAY_STATUS_FLG" lookup="PAY_STATUS_FLG"/>
-		<hasGoToClicked dataType="boolean" mapField="GOTO_CLICKED_SW"/>
-	</quickAdd>
+  <canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+  <defaultFlag mapField="DEFAULT_FOR_FLG"/>
+  <tenderControl mapField="TNDR_CTL_INFO"/>
+  <tenderControlId mapField="TNDR_CTL_ID"/>
+  <tenderSourceType dataType="lookup" mapField="TNDR_SRCE_TYPE_FLG" lookup="TNDR_SRCE_TYPE_FLG"/>
+  <paymentDate dataType="date" mapField="PAY_DT"/>
+  <maxQuickAddTenders dataType="number" mapField="MAX_QUICK_ADD_TENDERS"/>
+  <user mapField="USER_ID"/>
+  <endorseMessage mapField="ENDORSE_MSG"/>
+  <endorsePrompt mapField="ENDORSE_PROMPT"/>
+  <description mapField="DESCR"/>
+  <accountNumber mapField="ACCOUNT_NBR"/>
+  <encryptedBankAccountNumber mapField="ENCR_ACCOUNT_NBR"/>
+  <printControl mapField="PRINT_CTL"/>
+  <currency mapField="CURRENCY_CD"/>
+  <endorseText type="list" mapList="ENDORSE_TEXT">
+    <endorseLine mapField="ENDORSE_LINE"/>
+  </endorseText>
+  <canDistributeAndFreeze dataType="boolean" mapField="DIS_AND_FRZ_SW"/>
+  <isCancel dataType="boolean" mapField="CANCEL_SW"/>
+  <quickAdd type="list" mapList="QUICK_ADD">
+    <accountId mapField="ACCT_ID"/>
+    <accountCheckDigit dataType="number" mapField="ACCT_CHECK_DIGIT"/>
+    <accountName mapField="ACCT_NAME"/>
+    <matchType mapField="MATCH_TYPE_CD"/>
+    <matchValue mapField="MATCH_VAL"/>
+    <paymentAmount dataType="money" mapField="PAY_AMT"/>
+    <tenderType mapField="TENDER_TYPE_CD"/>
+    <currency2 mapField="CURRENCY_CD"/>
+    <hasCashTendered dataType="boolean" mapField="CASH_TNDR_SW"/>
+    <checkNumber mapField="CHECK_NBR"/>
+    <paymentEventId mapField="PAY_EVENT_ID"/>
+    <statusExpMsg mapField="STATUS_EXP_MSG"/>
+    <errorMsg mapField="ERROR_MSG"/>
+    <paymentStatus dataType="lookup" mapField="PAY_STATUS_FLG" lookup="PAY_STATUS_FLG"/>
+    <hasGoToClicked dataType="boolean" mapField="GOTO_CLICKED_SW"/>
+  </quickAdd>
 </schema>

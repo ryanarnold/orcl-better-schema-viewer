@@ -1,18 +1,18 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<bo mapField="BUS_OBJ_CD"/>
-	<boStatus mapField="BO_STATUS_CD"/>
-	<requiredFields type="list" mapList="FIELDS">
-		<name mapField="NAME"/>
-		<schemaPath mapField="SCHEMA_XPATH"/>
-		<label mapField="LABEL_LONG"/>
-		<dataType mapField="DATA_TYPE"/>
-		<foreignKeyReference mapField="FK_REF_CD"/>
-		<lookupField mapField="LOOKUP_FIELD"/>
-		<mdFieldName mapField="FLD_NAME"/>
-		<requiringBo mapField="BUS_OBJ_CD"/>
-		<defaultValue mapField="DEFAULT_VAL"/>
-		<fieldSuppressType mapField="SUPPRESS_TYPE"/>
-		<elementType mapField="ELEM_TYPE"/>
-	</requiredFields>
+  <bo mapField="BUS_OBJ_CD"/>
+  <boStatus mapField="BO_STATUS_CD"/>
+  <requiredFields type="list" mapList="FIELDS">
+    <name mapField="NAME"/>
+    <schemaPath mapField="SCHEMA_XPATH"/>
+    <label mapField="LABEL_LONG"/>
+    <dataType mapField="DATA_TYPE"/>
+    <foreignKeyReference mapField="FK_REF_CD"/>
+    <lookupField mapField="LOOKUP_FIELD"/>
+    <mdFieldName mapField="FLD_NAME"/>
+    <requiringBo mapField="BUS_OBJ_CD"/>
+    <defaultValue mapField="DEFAULT_VAL"/>
+    <fieldSuppressType mapField="SUPPRESS_TYPE"/>
+    <elementType mapField="ELEM_TYPE"/>
+  </requiredFields>
 </schema>

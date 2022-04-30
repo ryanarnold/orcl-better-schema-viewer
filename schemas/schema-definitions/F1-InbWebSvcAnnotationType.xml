@@ -1,23 +1,23 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<annotationType required="true" isPrimeKey="true" mapField="ANN_TYPE_CD"/>
-	<description mapField="DESCR"/>
-	<longDescription mapField="DESCRLONG"/>
-	<bo suppress="input" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
-	<javaPackage mapField="JAVA_PACKAGE"/>
-	<annotationValue required="true" mapField="ANN_VALUE"/>
-	<parentAnnotationType fkRef="F1-IWSAT" search="F1-ANNTYPEQ1" searchField="PARENT_ANN_TYPE_CD:parentAnnotationType;" searchOut="ANN_TYPE_CD:parentAnnotationType;" mapField="PARENT_ANN_TYPE_CD"/>
-	<owner suppress="true" dataType="lookup" mapField="OWNER_FLG" lookup="OWNER_FLG"/>
-	<version suppress="true" dataType="number" mapField="VERSION"/>
-	<iwsAnnotationTypeParameter mdField="F1_ANN_TYPE_PARMS_LBL" type="list" mapChild="F1_IWS_ANN_TYPE_PARM">
-		<sequence dataType="number" mapField="SEQ_NUM"/>
-		<parameterName mapField="PARM_NAME"/>
-		<parameterValue mapField="PARM_VALUE"/>
-		<isRequired dataType="lookupBO" mapField="REQUIRED_SW" lookupBO="F1-BooleanValues"/>
-		<javaPackage mapField="JAVA_PACKAGE"/>
-		<version suppress="true" dataType="number" mapField="VERSION"/>
-		<description mapField="DESCR"/>
-		<longDescription mapField="DESCRLONG"/>
-		<owner suppress="input" dataType="lookup" mapField="OWNER_FLG" lookup="OWNER_FLG"/>
-	</iwsAnnotationTypeParameter>
+  <annotationType required="true" isPrimeKey="true" mapField="ANN_TYPE_CD"/>
+  <description mapField="DESCR"/>
+  <longDescription mapField="DESCRLONG"/>
+  <bo suppress="input" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+  <javaPackage mapField="JAVA_PACKAGE"/>
+  <annotationValue required="true" mapField="ANN_VALUE"/>
+  <parentAnnotationType fkRef="F1-IWSAT" search="F1-ANNTYPEQ1" searchField="PARENT_ANN_TYPE_CD:parentAnnotationType;" searchOut="ANN_TYPE_CD:parentAnnotationType;" mapField="PARENT_ANN_TYPE_CD"/>
+  <owner suppress="true" dataType="lookup" mapField="OWNER_FLG" lookup="OWNER_FLG"/>
+  <version suppress="true" dataType="number" mapField="VERSION"/>
+  <iwsAnnotationTypeParameter mdField="F1_ANN_TYPE_PARMS_LBL" type="list" mapChild="F1_IWS_ANN_TYPE_PARM">
+    <sequence dataType="number" mapField="SEQ_NUM"/>
+    <parameterName mapField="PARM_NAME"/>
+    <parameterValue mapField="PARM_VALUE"/>
+    <isRequired dataType="lookupBO" mapField="REQUIRED_SW" lookupBO="F1-BooleanValues"/>
+    <javaPackage mapField="JAVA_PACKAGE"/>
+    <version suppress="true" dataType="number" mapField="VERSION"/>
+    <description mapField="DESCR"/>
+    <longDescription mapField="DESCRLONG"/>
+    <owner suppress="input" dataType="lookup" mapField="OWNER_FLG" lookup="OWNER_FLG"/>
+  </iwsAnnotationTypeParameter>
 </schema>

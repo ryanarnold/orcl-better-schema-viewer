@@ -1,128 +1,128 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
-	<matchEventId mapField="MATCH_EVT_ID"/>
-	<saFilter dataType="lookup" mapField="SA_FLTR_FLG" lookup="SA_FLTR_FLG"/>
-	<address1 mapField="ADDRESS1"/>
-	<city mapField="CITY"/>
-	<postal mapField="POSTAL"/>
-	<division mapField="CIS_DIVISION"/>
-	<saType mapField="SA_TYPE_CD"/>
-	<geographicType mapField="GEO_TYPE_CD"/>
-	<geographicValue mapField="GEO_VAL"/>
-	<serviceAgreement mapField="SA_ID"/>
-	<balancedUnbalancedFilter dataType="lookup" mapField="BAL_UNB_FLTR_FLG" lookup="BAL_UNB_FLTR_FLG"/>
-	<transactionTypeFilter dataType="lookup" mapField="TXN_FLTR_TYPE_FLG" lookup="TXN_FLTR_TYPE_FLG"/>
-	<billId mapField="BILL_ID"/>
-	<paymentId2 mapField="PAY_ID2"/>
-	<matchEventLinkageFilter dataType="lookup" mapField="ME_LNKG_FLTR_FLG" lookup="ME_LNKG_FLTR_FLG"/>
-	<debitCreditFilterFlag dataType="lookup" mapField="DB_CR_FLTR_FLG" lookup="DB_CR_FLTR_FLG"/>
-	<saFltrFlg2 mapField="SA_FLTR_FLG2"/>
-	<serviceAgreementId2 mapField="SA_ID2"/>
-	<address12 mapField="ADDRESS12"/>
-	<city2 mapField="CITY2"/>
-	<postal2 mapField="POSTAL2"/>
-	<cisDivision2 mapField="CIS_DIVISION2"/>
-	<saTypeCd2 mapField="SA_TYPE_CD2"/>
-	<geoTypeCd2 mapField="GEO_TYPE_CD2"/>
-	<geoVal2 mapField="GEO_VAL2"/>
-	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
-	<accountId mapField="ACCT_ID"/>
-	<matchEventCancelReason mapField="MEVT_CAN_RSN_CD"/>
-	<paymentId mapField="PAY_ID"/>
-	<matchEventStatus dataType="lookup" mapField="MEVT_STATUS_FLG" lookup="MEVT_STATUS_FLG"/>
-	<isDisputed dataType="boolean" mapField="DISPUTE_SW"/>
-	<createdDate dataType="date" mapField="CREATE_DT"/>
-	<longDescription mapField="DESCRLONG"/>
-	<isArchived dataType="boolean" mapField="ARCHIVE_SW"/>
-	<ilmDate dataType="date" mapField="ILM_DT"/>
-	<isEligibleForArchiving dataType="boolean" mapField="ILM_ARCH_SW"/>
-	<version dataType="number" mapField="VERSION"/>
-	<acctNameInfo mapField="ACCT_NAME_INFO"/>
-	<matchEvtInfo mapField="MATCH_EVT_INFO"/>
-	<archiveMsg mapField="ARCHIVE_MSG"/>
-	<currency mapField="CURRENCY_CD"/>
-	<matchEvt type="list" mapList="MATCH_EVT">
-		<billId2 mapField="BILL_ID"/>
-		<seqBillNumber dataType="number" mapField="ALT_BILL_ID"/>
-		<paymentId2 mapField="PAY_ID"/>
-		<matchedActivityInformation mapField="MATCH_ITEM_INFO"/>
-		<transactionTypeFilter2 dataType="lookup" mapField="TXN_FLTR_TYPE_FLG" lookup="TXN_FLTR_TYPE_FLG"/>
-		<canMatchCredit dataType="boolean" mapField="MATCH_CREDIT_SW"/>
-		<matCrNbr dataType="number" mapField="MAT_CR_NBR"/>
-		<matchedCreditAmount dataType="money" mapField="MAT_CR_AMT"/>
-		<hasMatchDebit dataType="boolean" mapField="MATCH_DEBIT_SW"/>
-		<matDbNbr dataType="number" mapField="MAT_DB_NBR"/>
-		<matchedDebitAmount dataType="money" mapField="MAT_DB_AMT"/>
-		<othCrNbr dataType="number" mapField="OTH_CR_NBR"/>
-		<otherCreditAmount dataType="money" mapField="OTH_CR_AMT"/>
-		<othDbNbr dataType="number" mapField="OTH_DB_NBR"/>
-		<otherDebitAmount dataType="money" mapField="OTH_DB_AMT"/>
-	</matchEvt>
-	<meOpenTxn type="list" mapList="ME_OPEN_TXN">
-		<billId3 mapField="BILL_ID"/>
-		<seqBillNumber2 dataType="number" mapField="ALT_BILL_ID"/>
-		<paymentId3 mapField="PAY_ID"/>
-		<txnInfo mapField="TXN_INFO"/>
-		<transactionTypeFilter3 dataType="lookup" mapField="TXN_FLTR_TYPE_FLG" lookup="TXN_FLTR_TYPE_FLG"/>
-		<hasUnmatchedCredit dataType="boolean" mapField="UMT_CR_SW"/>
-		<isUnmatchedDebit dataType="boolean" mapField="UMT_DB_SW"/>
-		<umtCrNbr dataType="number" mapField="UMT_CR_NBR"/>
-		<unmatchedCreditAmount dataType="money" mapField="UMT_CR_AMT"/>
-		<umtDbNbr dataType="number" mapField="UMT_DB_NBR"/>
-		<unmatchedDebitAmount dataType="money" mapField="UMT_DB_AMT"/>
-		<matCrNbr2 dataType="number" mapField="MAT_CR_NBR"/>
-		<matchedCreditAmount2 dataType="money" mapField="MAT_CR_AMT"/>
-		<matDbNbr2 dataType="number" mapField="MAT_DB_NBR"/>
-		<matchedDebitAmount2 dataType="money" mapField="MAT_DB_AMT"/>
-	</meOpenTxn>
-	<meDebitAmount dataType="money" mapField="ME_DB_AMT"/>
-	<meCreditAmount dataType="money" mapField="ME_CR_AMT"/>
-	<meDifferenceAmount dataType="money" mapField="ME_DIFF"/>
-	<meNbrOfDbFts dataType="number" mapField="ME_NBR_OF_DB_FTS"/>
-	<meNbrOfCrFts dataType="number" mapField="ME_NBR_OF_CR_FTS"/>
-	<matchEventRunningDebitAmount dataType="money" mapField="MER_DB_AMT"/>
-	<matchEventRunningCreditTotal dataType="money" mapField="MER_CR_AMT"/>
-	<matchEventDifference dataType="money" mapField="MER_DIFF"/>
-	<merNbrOfDbFts dataType="number" mapField="MER_NBR_OF_DB_FTS"/>
-	<merNbrOfCrFts dataType="number" mapField="MER_NBR_OF_CR_FTS"/>
-	<financialTransactionDebitAmount dataType="money" mapField="FT_DB_AMT"/>
-	<financialTransactionCreditAmount dataType="money" mapField="FT_CR_AMT"/>
-	<financialTransactionDifferenceAmount dataType="money" mapField="FT_DIFF"/>
-	<ftNbrOfDbFts dataType="number" mapField="FT_NBR_OF_DB_FTS"/>
-	<ftNbrOfCrFts dataType="number" mapField="FT_NBR_OF_CR_FTS"/>
-	<satInfo mapField="SAT_INFO"/>
-	<meSaInfo mapField="ME_SA_INFO"/>
-	<meSa type="list" mapList="ME_SA">
-		<serviceAgreement2 mapField="SA_ID"/>
-		<saInformation mapField="SA_INFO"/>
-		<premiseId mapField="PREM_ID"/>
-		<premiseInfo mapField="PREM_INFO"/>
-		<saMatchedCreditAmount dataType="money" mapField="SAME_CR_AMT"/>
-		<sameCrFts dataType="number" mapField="SAME_CR_FTS"/>
-		<saMatchedDebitAmount dataType="money" mapField="SAME_DB_AMT"/>
-		<sameDbFts dataType="number" mapField="SAME_DB_FTS"/>
-		<debitCreditDifference dataType="money" mapField="DB_CR_DIFF"/>
-	</meSa>
-	<billInformation mapField="BILL_INFO"/>
-	<payInfo mapField="PAY_INFO"/>
-	<saInformation2 mapField="SA_INFO"/>
-	<saTypeInfo mapField="SA_TYPE_INFO"/>
-	<mevtFt type="list" mapList="MEVT_FT">
-		<matchEvtId2 mapField="MATCH_EVT_ID2"/>
-		<financialTransactionId mapField="FT_ID"/>
-		<serviceAgreement3 mapField="SA_ID"/>
-		<saInformation3 mapField="SA_INFO"/>
-		<premiseId2 mapField="CHAR_PREM_ID"/>
-		<premiseInfo2 mapField="PREM_INFO"/>
-		<currentAmount dataType="money" mapField="CUR_AMT"/>
-		<arrearsDate dataType="date" mapField="ARS_DT"/>
-		<financialTransactionType dataType="lookup" mapField="FT_TYPE_FLG" lookup="FT_TYPE_FLG"/>
-		<ftTypeDescr mapField="FT_TYPE_DESCR"/>
-		<remarks mapField="REMARKS"/>
-		<canLinkUnlink dataType="boolean" mapField="LINK_UNLINK_SW"/>
-	</mevtFt>
-	<canLinkUnlink2 dataType="boolean" mapField="ME_LNK_UNL_SW"/>
-	<canLinkUnlink3 dataType="boolean" mapField="ME_FT_LNK_UNL_SW"/>
-	<isCalledFromILM dataType="boolean" mapField="CALLED_FROM_ILM_SW"/>
+  <canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+  <matchEventId mapField="MATCH_EVT_ID"/>
+  <saFilter dataType="lookup" mapField="SA_FLTR_FLG" lookup="SA_FLTR_FLG"/>
+  <address1 mapField="ADDRESS1"/>
+  <city mapField="CITY"/>
+  <postal mapField="POSTAL"/>
+  <division mapField="CIS_DIVISION"/>
+  <saType mapField="SA_TYPE_CD"/>
+  <geographicType mapField="GEO_TYPE_CD"/>
+  <geographicValue mapField="GEO_VAL"/>
+  <serviceAgreement mapField="SA_ID"/>
+  <balancedUnbalancedFilter dataType="lookup" mapField="BAL_UNB_FLTR_FLG" lookup="BAL_UNB_FLTR_FLG"/>
+  <transactionTypeFilter dataType="lookup" mapField="TXN_FLTR_TYPE_FLG" lookup="TXN_FLTR_TYPE_FLG"/>
+  <billId mapField="BILL_ID"/>
+  <paymentId2 mapField="PAY_ID2"/>
+  <matchEventLinkageFilter dataType="lookup" mapField="ME_LNKG_FLTR_FLG" lookup="ME_LNKG_FLTR_FLG"/>
+  <debitCreditFilterFlag dataType="lookup" mapField="DB_CR_FLTR_FLG" lookup="DB_CR_FLTR_FLG"/>
+  <saFltrFlg2 mapField="SA_FLTR_FLG2"/>
+  <serviceAgreementId2 mapField="SA_ID2"/>
+  <address12 mapField="ADDRESS12"/>
+  <city2 mapField="CITY2"/>
+  <postal2 mapField="POSTAL2"/>
+  <cisDivision2 mapField="CIS_DIVISION2"/>
+  <saTypeCd2 mapField="SA_TYPE_CD2"/>
+  <geoTypeCd2 mapField="GEO_TYPE_CD2"/>
+  <geoVal2 mapField="GEO_VAL2"/>
+  <defaultFlag mapField="DEFAULT_FOR_FLG"/>
+  <accountId mapField="ACCT_ID"/>
+  <matchEventCancelReason mapField="MEVT_CAN_RSN_CD"/>
+  <paymentId mapField="PAY_ID"/>
+  <matchEventStatus dataType="lookup" mapField="MEVT_STATUS_FLG" lookup="MEVT_STATUS_FLG"/>
+  <isDisputed dataType="boolean" mapField="DISPUTE_SW"/>
+  <createdDate dataType="date" mapField="CREATE_DT"/>
+  <longDescription mapField="DESCRLONG"/>
+  <isArchived dataType="boolean" mapField="ARCHIVE_SW"/>
+  <ilmDate dataType="date" mapField="ILM_DT"/>
+  <isEligibleForArchiving dataType="boolean" mapField="ILM_ARCH_SW"/>
+  <version dataType="number" mapField="VERSION"/>
+  <acctNameInfo mapField="ACCT_NAME_INFO"/>
+  <matchEvtInfo mapField="MATCH_EVT_INFO"/>
+  <archiveMsg mapField="ARCHIVE_MSG"/>
+  <currency mapField="CURRENCY_CD"/>
+  <matchEvt type="list" mapList="MATCH_EVT">
+    <billId2 mapField="BILL_ID"/>
+    <seqBillNumber dataType="number" mapField="ALT_BILL_ID"/>
+    <paymentId2 mapField="PAY_ID"/>
+    <matchedActivityInformation mapField="MATCH_ITEM_INFO"/>
+    <transactionTypeFilter2 dataType="lookup" mapField="TXN_FLTR_TYPE_FLG" lookup="TXN_FLTR_TYPE_FLG"/>
+    <canMatchCredit dataType="boolean" mapField="MATCH_CREDIT_SW"/>
+    <matCrNbr dataType="number" mapField="MAT_CR_NBR"/>
+    <matchedCreditAmount dataType="money" mapField="MAT_CR_AMT"/>
+    <hasMatchDebit dataType="boolean" mapField="MATCH_DEBIT_SW"/>
+    <matDbNbr dataType="number" mapField="MAT_DB_NBR"/>
+    <matchedDebitAmount dataType="money" mapField="MAT_DB_AMT"/>
+    <othCrNbr dataType="number" mapField="OTH_CR_NBR"/>
+    <otherCreditAmount dataType="money" mapField="OTH_CR_AMT"/>
+    <othDbNbr dataType="number" mapField="OTH_DB_NBR"/>
+    <otherDebitAmount dataType="money" mapField="OTH_DB_AMT"/>
+  </matchEvt>
+  <meOpenTxn type="list" mapList="ME_OPEN_TXN">
+    <billId3 mapField="BILL_ID"/>
+    <seqBillNumber2 dataType="number" mapField="ALT_BILL_ID"/>
+    <paymentId3 mapField="PAY_ID"/>
+    <txnInfo mapField="TXN_INFO"/>
+    <transactionTypeFilter3 dataType="lookup" mapField="TXN_FLTR_TYPE_FLG" lookup="TXN_FLTR_TYPE_FLG"/>
+    <hasUnmatchedCredit dataType="boolean" mapField="UMT_CR_SW"/>
+    <isUnmatchedDebit dataType="boolean" mapField="UMT_DB_SW"/>
+    <umtCrNbr dataType="number" mapField="UMT_CR_NBR"/>
+    <unmatchedCreditAmount dataType="money" mapField="UMT_CR_AMT"/>
+    <umtDbNbr dataType="number" mapField="UMT_DB_NBR"/>
+    <unmatchedDebitAmount dataType="money" mapField="UMT_DB_AMT"/>
+    <matCrNbr2 dataType="number" mapField="MAT_CR_NBR"/>
+    <matchedCreditAmount2 dataType="money" mapField="MAT_CR_AMT"/>
+    <matDbNbr2 dataType="number" mapField="MAT_DB_NBR"/>
+    <matchedDebitAmount2 dataType="money" mapField="MAT_DB_AMT"/>
+  </meOpenTxn>
+  <meDebitAmount dataType="money" mapField="ME_DB_AMT"/>
+  <meCreditAmount dataType="money" mapField="ME_CR_AMT"/>
+  <meDifferenceAmount dataType="money" mapField="ME_DIFF"/>
+  <meNbrOfDbFts dataType="number" mapField="ME_NBR_OF_DB_FTS"/>
+  <meNbrOfCrFts dataType="number" mapField="ME_NBR_OF_CR_FTS"/>
+  <matchEventRunningDebitAmount dataType="money" mapField="MER_DB_AMT"/>
+  <matchEventRunningCreditTotal dataType="money" mapField="MER_CR_AMT"/>
+  <matchEventDifference dataType="money" mapField="MER_DIFF"/>
+  <merNbrOfDbFts dataType="number" mapField="MER_NBR_OF_DB_FTS"/>
+  <merNbrOfCrFts dataType="number" mapField="MER_NBR_OF_CR_FTS"/>
+  <financialTransactionDebitAmount dataType="money" mapField="FT_DB_AMT"/>
+  <financialTransactionCreditAmount dataType="money" mapField="FT_CR_AMT"/>
+  <financialTransactionDifferenceAmount dataType="money" mapField="FT_DIFF"/>
+  <ftNbrOfDbFts dataType="number" mapField="FT_NBR_OF_DB_FTS"/>
+  <ftNbrOfCrFts dataType="number" mapField="FT_NBR_OF_CR_FTS"/>
+  <satInfo mapField="SAT_INFO"/>
+  <meSaInfo mapField="ME_SA_INFO"/>
+  <meSa type="list" mapList="ME_SA">
+    <serviceAgreement2 mapField="SA_ID"/>
+    <saInformation mapField="SA_INFO"/>
+    <premiseId mapField="PREM_ID"/>
+    <premiseInfo mapField="PREM_INFO"/>
+    <saMatchedCreditAmount dataType="money" mapField="SAME_CR_AMT"/>
+    <sameCrFts dataType="number" mapField="SAME_CR_FTS"/>
+    <saMatchedDebitAmount dataType="money" mapField="SAME_DB_AMT"/>
+    <sameDbFts dataType="number" mapField="SAME_DB_FTS"/>
+    <debitCreditDifference dataType="money" mapField="DB_CR_DIFF"/>
+  </meSa>
+  <billInformation mapField="BILL_INFO"/>
+  <payInfo mapField="PAY_INFO"/>
+  <saInformation2 mapField="SA_INFO"/>
+  <saTypeInfo mapField="SA_TYPE_INFO"/>
+  <mevtFt type="list" mapList="MEVT_FT">
+    <matchEvtId2 mapField="MATCH_EVT_ID2"/>
+    <financialTransactionId mapField="FT_ID"/>
+    <serviceAgreement3 mapField="SA_ID"/>
+    <saInformation3 mapField="SA_INFO"/>
+    <premiseId2 mapField="CHAR_PREM_ID"/>
+    <premiseInfo2 mapField="PREM_INFO"/>
+    <currentAmount dataType="money" mapField="CUR_AMT"/>
+    <arrearsDate dataType="date" mapField="ARS_DT"/>
+    <financialTransactionType dataType="lookup" mapField="FT_TYPE_FLG" lookup="FT_TYPE_FLG"/>
+    <ftTypeDescr mapField="FT_TYPE_DESCR"/>
+    <remarks mapField="REMARKS"/>
+    <canLinkUnlink dataType="boolean" mapField="LINK_UNLINK_SW"/>
+  </mevtFt>
+  <canLinkUnlink2 dataType="boolean" mapField="ME_LNK_UNL_SW"/>
+  <canLinkUnlink3 dataType="boolean" mapField="ME_FT_LNK_UNL_SW"/>
+  <isCalledFromILM dataType="boolean" mapField="CALLED_FROM_ILM_SW"/>
 </schema>

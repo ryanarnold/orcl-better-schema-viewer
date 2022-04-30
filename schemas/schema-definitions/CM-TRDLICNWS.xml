@@ -1,44 +1,44 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<tradeLicenseId/>
-	<tradeLicenseApplicationNumber/>
-	<TradeLicenseDataCenter type="group">
-		<TransactionStatus type="group">
-			<LicenseNo/>
-			<ApplicationNo/>
-			<TradeNameAR/>
-			<TradeNameEN/>
-			<LicenseType_Serial/>
-			<LegalForm_Serial/>
-			<LicenseStatus_Serial/>
-			<StartDate/>
-			<EndDate/>
-			<POBoxNo/>
-			<TelNo/>
-			<EmailAddress/>
-			<MobileNumber/>
-		</TransactionStatus>
-		<Activity_List_Info type="group">
-			<ActivityListInfo type="list">
-				<tempSequence/>
-				<NameAR isPrimeKey="true"/>
-				<NameEN isPrimeKey="true"/>
-				<Serial isPrimeKey="true"/>
-			</ActivityListInfo>
-		</Activity_List_Info>
-		<Owners_List_Info type="group">
-			<OwnersListInfo type="list">
-				<tempSequence/>
-				<NameAR isPrimeKey="true"/>
-				<NameEN isPrimeKey="true"/>
-				<OwnerType_Serial isPrimeKey="true"/>
-				<Nationality_Serial/>
-				<Gender_Serial/>
-				<IdentityNumber/>
-				<PassportNumber/>
-				<PhoneNumber/>
-				<MobileNumber/>
-			</OwnersListInfo>
-		</Owners_List_Info>
-	</TradeLicenseDataCenter>
+  <tradeLicenseId/>
+  <tradeLicenseApplicationNumber/>
+  <TradeLicenseDataCenter type="group">
+    <TransactionStatus type="group">
+      <LicenseNo/>
+      <ApplicationNo/>
+      <TradeNameAR/>
+      <TradeNameEN/>
+      <LicenseType_Serial/>
+      <LegalForm_Serial/>
+      <LicenseStatus_Serial/>
+      <StartDate/>
+      <EndDate/>
+      <POBoxNo/>
+      <TelNo/>
+      <EmailAddress/>
+      <MobileNumber/>
+    </TransactionStatus>
+    <Activity_List_Info type="group">
+      <ActivityListInfo type="list">
+        <tempSequence/>
+        <NameAR isPrimeKey="true"/>
+        <NameEN isPrimeKey="true"/>
+        <Serial isPrimeKey="true"/>
+      </ActivityListInfo>
+    </Activity_List_Info>
+    <Owners_List_Info type="group">
+      <OwnersListInfo type="list">
+        <tempSequence/>
+        <NameAR isPrimeKey="true"/>
+        <NameEN isPrimeKey="true"/>
+        <OwnerType_Serial isPrimeKey="true"/>
+        <Nationality_Serial/>
+        <Gender_Serial/>
+        <IdentityNumber/>
+        <PassportNumber/>
+        <PhoneNumber/>
+        <MobileNumber/>
+      </OwnersListInfo>
+    </Owners_List_Info>
+  </TradeLicenseDataCenter>
 </schema>

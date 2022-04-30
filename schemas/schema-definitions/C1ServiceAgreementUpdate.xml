@@ -1,420 +1,420 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
-	<timeMode dataType="lookup" mapField="TIME_MODE_FLG" lookup="TIME_MODE_FLG"/>
-	<logicalSeasonalTimeShift mapField="LOG_STM_SHIFT_CD"/>
-	<phyStmShiftCd mapField="PHY_STM_SHIFT_CD"/>
-	<serviceAgreement mapField="SA_ID"/>
-	<logStmShiftDesc mapField="LOG_STM_SHIFT_DESC"/>
-	<stmShiftRemark mapField="STM_SHIFT_REMARK"/>
-	<saInformation mapField="SA_INFO"/>
-	<acctNameInfo mapField="ACCT_NAME_INFO"/>
-	<premiseInfo mapField="PREMISE_INFO"/>
-	<startOptInfo mapField="START_OPT_INFO"/>
-	<saTypeInfo mapField="SA_TYPE_INFO"/>
-	<debtClassInformation mapField="DEBT_CL_INFO"/>
-	<sicInfo mapField="SIC_INFO"/>
-	<recurCharge dataType="number" mapField="RECUR_CHARGE"/>
-	<currentAmount dataType="money" mapField="CUR_AMT"/>
-	<payoffAmount dataType="money" mapField="TOT_AMT"/>
-	<recurChgLbl mapField="RECUR_CHG_LBL"/>
-	<saRelInfo mapField="SA_REL_INFO"/>
-	<enrlInfo mapField="ENRL_INFO"/>
-	<saRemarks mapField="SA_REMARKS"/>
-	<declineRsn mapField="DECLINE_RSN"/>
-	<nbbRrDescr mapField="NBB_RR_DESCR"/>
-	<totalAmountToBillLabel mapField="TOT_AMT_TOBILL_LBL"/>
-	<isFinancialTransactionExist dataType="boolean" mapField="FT_EXIST_SW"/>
-	<applyStartOptionOnDate dataType="date" mapField="NEW_EFF_DT"/>
-	<effectiveDate dataType="date" mapField="SS_OPT_EFFDT"/>
-	<newStartOptCd mapField="NEW_START_OPT_CD"/>
-	<newStartOptDesc mapField="NEW_START_OPT_DESC"/>
-	<canActivate dataType="boolean" mapField="ACTIVATE_SW"/>
-	<isStop dataType="boolean" mapField="STOP_SW"/>
-	<isCancel dataType="boolean" mapField="CANCEL_SW"/>
-	<isClose dataType="boolean" mapField="CLOSE_SW"/>
-	<shouldApplyNewStartOption dataType="boolean" mapField="APLY_ST_OPT_SW"/>
-	<canProposalSAActivate dataType="boolean" mapField="PSA_ACTIVATE_SW"/>
-	<isProposalSAAccept dataType="boolean" mapField="PSA_ACCEPT_SW"/>
-	<isProposalSADecline dataType="boolean" mapField="PSA_DECLINE_SW"/>
-	<isProposalSACancel dataType="boolean" mapField="PSA_CANCEL_SW"/>
-	<isProposalSAReactivate dataType="boolean" mapField="PSA_REACTIVATE_SW"/>
-	<isReinstateSA dataType="boolean" mapField="REINSTATE_SW"/>
-	<isInitiateStop dataType="boolean" mapField="INITIATE_STOP_SW"/>
-	<bfSrchFlgRdr mapField="BF_SRCH_FLG_RDR"/>
-	<bfSrchFlgVal mapField="BF_SRCH_FLG_VAL"/>
-	<bfSrchFlgTou mapField="BF_SRCH_FLG_TOU"/>
-	<bfSrchFlgTax mapField="BF_SRCH_FLG_TAX"/>
-	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
-	<dfltCopEffDttm mapField="DFLT_COP_EFF_DTTM"/>
-	<dfltCopExpireDttm mapField="DFLT_COP_EXPIRE_DTTM"/>
-	<specialRole dataType="lookup" mapField="SPECIAL_ROLE_FLG" lookup="SPECIAL_ROLE_FLG"/>
-	<allowRecurringCharge dataType="lookup" mapField="ALLOW_RCR_CHG_FLG" lookup="ALLOW_RCR_CHG_FLG"/>
-	<totalBillAmount dataType="lookup" mapField="REQ_AMT_BILL_FLG" lookup="REQ_AMT_BILL_FLG"/>
-	<isCharacteristicPremiseRequired dataType="boolean" mapField="PREM_REQ_SW"/>
-	<isAllowedEstimates dataType="boolean" mapField="SA_ALLOW_EST_SW"/>
-	<isServicePointRequired dataType="boolean" mapField="ALLOW_SP_SW"/>
-	<isRateRequired dataType="boolean" mapField="RT_REQ_SW"/>
-	<isOneTimeCharge dataType="boolean" mapField="ONE_TIME_CH_SW"/>
-	<isSubServiceAgreement dataType="boolean" mapField="SUB_SA_SW"/>
-	<isStartOptionRequired dataType="boolean" mapField="START_OPT_REQ_SW"/>
-	<division mapField="CIS_DIVISION"/>
-	<saType mapField="SA_TYPE_CD"/>
-	<status dataType="lookup" mapField="SA_STATUS_FLG" lookup="SA_STATUS_FLG"/>
-	<accountId mapField="ACCT_ID"/>
-	<startDate dataType="date" mapField="START_DT"/>
-	<endDate dataType="date" mapField="END_DT"/>
-	<oldAccountId mapField="OLD_ACCT_ID"/>
-	<saRelationshipId mapField="SA_REL_ID"/>
-	<areEstimatesAllowed dataType="boolean" mapField="ALLOW_EST_SW"/>
-	<customerRead dataType="lookup" mapField="CUST_READ_FLG" lookup="CUST_READ_FLG"/>
-	<sicCode mapField="SIC_CD"/>
-	<premiseId mapField="CHAR_PREM_ID"/>
-	<startOption mapField="START_OPT_CD"/>
-	<totalAmountToBill dataType="money" mapField="TOT_TO_BILL_AMT"/>
-	<version dataType="number" mapField="VERSION"/>
-	<currency mapField="CURRENCY_CD"/>
-	<maxBillThreshold dataType="money" mapField="HIGH_BILL_AMT"/>
-	<depositInterestCalculated dataType="date" mapField="INT_CALC_DT"/>
-	<ciacReviewDate dataType="date" mapField="CIAC_REVIEW_DT"/>
-	<startReason dataType="lookup" mapField="STRT_RSN_FLG" lookup="STRT_RSN_FLG"/>
-	<stopReason dataType="lookup" mapField="STOP_RSN_FLG" lookup="STOP_RSN_FLG"/>
-	<startRequestedBy mapField="STRT_REQED_BY"/>
-	<stopRequestedBy mapField="STOP_REQED_BY"/>
-	<businessActivityDescription mapField="BUS_ACTIVITY_DESC"/>
-	<orderId mapField="ENRL_ID"/>
-	<ibSACutoffTime dataType="time" mapField="IB_SA_CUTOFF_TM"/>
-	<startDayOption dataType="lookup" mapField="IB_BASE_TM_DAY_FLG" lookup="IB_BASE_TM_DAY_FLG"/>
-	<specialUsage dataType="lookup" mapField="SPECIAL_USAGE_FLG" lookup="SPECIAL_USAGE_FLG"/>
-	<proposalSAStatus dataType="lookup" mapField="PROP_SA_STAT_FLG" lookup="PROP_SA_STAT_FLG"/>
-	<declineReason mapField="PROP_DCL_RSN_CD"/>
-	<proposalSAId mapField="PROP_SA_ID"/>
-	<numberOfPaymentPeriods dataType="number" mapField="NBR_PYMNT_PERIODS"/>
-	<recommendationRule mapField="NB_RULE_CD"/>
-	<expireDate dataType="date" mapField="EXPIRE_DT"/>
-	<renewalDate dataType="date" mapField="RENEWAL_DT"/>
-	<nbbAutopay dataType="lookup" mapField="NB_APAY_FLG" lookup="NB_APAY_FLG"/>
-	<saDataArea mapField="SA_DATA_AREA"/>
-	<ibSaCutoffDttmTm mapField="IB_SA_CUTOFF_DTTM_TM"/>
-	<saSp type="list" mapList="SA_SP">
-		<servicePointId mapField="SP_ID"/>
-		<saSPId mapField="SA_SP_ID"/>
-		<serviceAgreement2 mapField="SA_ID"/>
-		<startDateTime dataType="dateTime" mapField="START_DTTM"/>
-		<startMeterRead mapField="START_MR_ID"/>
-		<stopDateTime dataType="dateTime" mapField="STOP_DTTM"/>
-		<howToUseRead dataType="lookup" mapField="USAGE_FLG" lookup="USAGE_FLG"/>
-		<stopMeterRead mapField="STOP_MR_ID"/>
-		<version2 dataType="number" mapField="VERSION"/>
-		<usePercent dataType="number" mapField="USE_PCT"/>
-		<servicePointSubType dataType="lookup" mapField="SP_SUBTYPE_FLG" lookup="SP_SUBTYPE_FLG"/>
-		<callOrigFMT dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
-		<spInformation mapField="SP_INFO"/>
-		<mtrItemInfo mapField="MTR_ITEM_INFO"/>
-		<startMrInfo mapField="START_MR_INFO"/>
-		<stopMrInfo mapField="STOP_MR_INFO"/>
-		<mtrItemId mapField="MTR_ITEM_ID"/>
-		<saSpFa type="list" mapList="SA_SP_FA">
-			<saSPId2 mapField="SA_SP_ID"/>
-			<fieldActivityId mapField="FA_ID"/>
-			<serviceAgreement3 mapField="SA_ID"/>
-			<servicePointId2 mapField="SP_ID"/>
-			<fieldActivityType dataType="lookup" mapField="SA_SP_FA_TYPE_FLG" lookup="SA_SP_FA_TYPE_FLG"/>
-			<version3 dataType="number" mapField="VERSION"/>
-			<fieldActivityInformation mapField="FA_INFO"/>
-			<scheduleDateTimeStart dataType="dateTime" mapField="SCHED_DTTM"/>
-		</saSpFa>
-		<saSpChar type="list" mapList="SA_SP_CHAR">
-			<saSPId3 mapField="SA_SP_ID"/>
-			<characteristicType mapField="CHAR_TYPE_CD"/>
-			<effectiveDate2 dataType="date" mapField="EFFDT"/>
-			<characteristicValue mapField="CHAR_VAL"/>
-			<version4 dataType="number" mapField="VERSION"/>
-			<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
-			<characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
-			<characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
-			<characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
-			<characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
-			<characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
-			<searchNavigationKey mapField="SRCH_NAV_KEY"/>
-			<navigationOption mapField="NAV_OPT_CD"/>
-			<table mapField="TBL_NAME"/>
-			<infoProgram mapField="INFO_PRG"/>
-			<characteristicType2 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
-			<characteristicValueDescription mapField="CHAR_VAL_DESCR"/>
-			<characteristicValueForeignKeys mapField="CHAR_VAL_FK_STR"/>
-			<characteristicValueForeignKeyInformation mapField="CHAR_VAL_FK_INFO"/>
-			<isCompoundPrimaryKey dataType="boolean" mapField="COMP_PK_SW"/>
-			<charateristicValue mapField="COMP_PK_STR"/>
-		</saSpChar>
-	</saSp>
-	<saRsHist type="list" mapList="SA_RS_HIST">
-		<serviceAgreement4 mapField="SA_ID"/>
-		<effectiveDate3 dataType="date" mapField="EFFDT"/>
-		<rateSchedule mapField="RS_CD"/>
-		<version5 dataType="number" mapField="VERSION"/>
-		<callOrigFMT2 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
-		<rateScheduleVersion dataType="lookup" mapField="RS_VERSION_FLG" lookup="RS_VERSION_FLG"/>
-		<description mapField="DESCR"/>
-	</saRsHist>
-	<saContractRider type="list" mapList="SA_CONTRACT_RIDER">
-		<serviceAgreement5 mapField="SA_ID"/>
-		<contractTermType dataType="lookup" mapField="CONTERM_TYPE_FLG" lookup="CONTERM_TYPE_FLG"/>
-		<billFactor mapField="BF_CD"/>
-		<startDate2 dataType="date" mapField="START_DT"/>
-		<endDate2 dataType="date" mapField="END_DT"/>
-		<percentExempt dataType="number" mapField="PCT_EXEMPT"/>
-		<taxCertification mapField="TAX_CERT"/>
-		<taxExemptType mapField="TAX_EX_TYPE_CD"/>
-		<touGroup mapField="TOU_GRP_CD"/>
-		<value dataType="number" mapField="VAL"/>
-		<version6 dataType="number" mapField="VERSION"/>
-		<callOrigFMT3 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
-		<bfCdDescr mapField="BF_CD_DESCR"/>
-	</saContractRider>
-	<saTaxExemption type="list" mapList="SA_TAX_EXEMPTION">
-		<serviceAgreement6 mapField="SA_ID"/>
-		<contractTermType2 dataType="lookup" mapField="CONTERM_TYPE_FLG" lookup="CONTERM_TYPE_FLG"/>
-		<billFactor2 mapField="BF_CD"/>
-		<startDate3 dataType="date" mapField="START_DT"/>
-		<endDate3 dataType="date" mapField="END_DT"/>
-		<percentExempt2 dataType="number" mapField="PCT_EXEMPT"/>
-		<taxCertification2 mapField="TAX_CERT"/>
-		<taxExemptType2 mapField="TAX_EX_TYPE_CD"/>
-		<touGroup2 mapField="TOU_GRP_CD"/>
-		<value2 dataType="number" mapField="VAL"/>
-		<version7 dataType="number" mapField="VERSION"/>
-		<callOrigFMT4 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
-		<bfCdDescr2 mapField="BF_CD_DESCR"/>
-	</saTaxExemption>
-	<saContractValue type="list" mapList="SA_CONTRACT_VALUE">
-		<serviceAgreement7 mapField="SA_ID"/>
-		<contractTermType3 dataType="lookup" mapField="CONTERM_TYPE_FLG" lookup="CONTERM_TYPE_FLG"/>
-		<billFactor3 mapField="BF_CD"/>
-		<startDate4 dataType="date" mapField="START_DT"/>
-		<endDate4 dataType="date" mapField="END_DT"/>
-		<percentExempt3 dataType="number" mapField="PCT_EXEMPT"/>
-		<taxCertification3 mapField="TAX_CERT"/>
-		<taxExemptType3 mapField="TAX_EX_TYPE_CD"/>
-		<touGroup3 mapField="TOU_GRP_CD"/>
-		<value3 dataType="number" mapField="VAL"/>
-		<version8 dataType="number" mapField="VERSION"/>
-		<callOrigFMT5 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
-		<contractValue dataType="number" mapField="VAL_CHARGE"/>
-		<contractValue2 dataType="number" mapField="VAL_PERCENTAGE"/>
-		<contractValue3 dataType="number" mapField="VAL_UNIT_RATE"/>
-		<valueType dataType="lookup" mapField="VAL_TYPE_FLG" lookup="VAL_TYPE_FLG"/>
-		<bfCdDescr3 mapField="BF_CD_DESCR"/>
-	</saContractValue>
-	<saArrears type="list" mapList="SA_ARREARS">
-		<serviceAgreement8 mapField="SA_ID"/>
-		<daysAge mapField="DAYS_AGE"/>
-		<daysAgeN dataType="number" mapField="DAYS_AGE_N"/>
-		<arrearsAmount dataType="money" mapField="ARS_AMT"/>
-		<isToBeTransferred dataType="boolean" mapField="CHECKED_FOR_PA_SW"/>
-	</saArrears>
-	<saQty type="list" mapList="SA_QTY">
-		<serviceAgreement9 mapField="SA_ID"/>
-		<contractQuantityType mapField="CONT_QTY_TYPE_CD"/>
-		<contractQuantity dataType="number" mapField="CONT_QTY"/>
-		<effectiveDate4 dataType="date" mapField="EFFDT"/>
-		<version9 dataType="number" mapField="VERSION"/>
-		<callOrigFMT6 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
-	</saQty>
-	<saRchg type="list" mapList="SA_RCHG">
-		<serviceAgreement10 mapField="SA_ID"/>
-		<effectiveDate5 dataType="date" mapField="EFFDT"/>
-		<recurringChargeAmount dataType="money" mapField="RCR_CHG_AMT"/>
-		<currency2 mapField="CURRENCY_CD"/>
-		<version10 dataType="number" mapField="VERSION"/>
-		<callOrigFMT7 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
-	</saRchg>
-	<saChar type="list" mapList="SA_CHAR">
-		<serviceAgreement11 mapField="SA_ID"/>
-		<characteristicType3 mapField="CHAR_TYPE_CD"/>
-		<effectiveDate6 dataType="date" mapField="EFFDT"/>
-		<characteristicValue2 mapField="CHAR_VAL"/>
-		<adhocCharacteristicValue2 mapField="ADHOC_CHAR_VAL"/>
-		<version11 dataType="number" mapField="VERSION"/>
-		<characteristicValueForeignKey12 mapField="CHAR_VAL_FK1"/>
-		<characteristicValueFK22 mapField="CHAR_VAL_FK2"/>
-		<characteristicValueFK32 mapField="CHAR_VAL_FK3"/>
-		<characteristicValueFk42 mapField="CHAR_VAL_FK4"/>
-		<characteristicValueFK52 mapField="CHAR_VAL_FK5"/>
-		<searchCharacteristicValue mapField="SRCH_CHAR_VAL"/>
-		<callOrigFM dataType="lookup" mapField="CALL_ORIG_FM_FLG" lookup="CALL_ORIG_FM_FLG"/>
-		<searchNavigationKey2 mapField="SRCH_NAV_KEY"/>
-		<navigationOption2 mapField="NAV_OPT_CD"/>
-		<table2 mapField="TBL_NAME"/>
-		<infoProgram2 mapField="INFO_PRG"/>
-		<characteristicType4 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
-		<characteristicValueDescription2 mapField="CHAR_VAL_DESCR"/>
-		<characteristicValueForeignKeys2 mapField="CHAR_VAL_FK_STR"/>
-		<characteristicValueForeignKeyInformation2 mapField="CHAR_VAL_FK_INFO"/>
-		<isCompoundPrimaryKey2 dataType="boolean" mapField="COMP_PK_SW"/>
-		<charateristicValue2 mapField="COMP_PK_STR"/>
-	</saChar>
-	<msgs type="list" mapList="MSGS">
-		<billMessage mapField="BILL_MSG_CD"/>
-		<billMessageType dataType="lookup" mapField="BILL_MSG_TYPE_FLG" lookup="BILL_MSG_TYPE_FLG"/>
-		<serviceAgreement12 mapField="SA_ID"/>
-		<version12 dataType="number" mapField="VERSION"/>
-		<bmsgDescr mapField="BMSG_DESCR"/>
-	</msgs>
-	<saCop type="list" mapList="SA_COP">
-		<saContractOptionId mapField="SA_CONT_OPT_ID"/>
-		<contractOptionId mapField="CONT_OPT_ID"/>
-		<serviceAgreement13 mapField="SA_ID"/>
-		<effectiveDateTime dataType="dateTime" mapField="EFF_DTTM"/>
-		<expirationDateTime dataType="dateTime" mapField="EXPIRE_DTTM"/>
-		<version13 dataType="number" mapField="VERSION"/>
-		<callOrigFMT8 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
-		<defaultForCSCROT mapField="C1_T_DEFAULT_FOR_CSCOR"/>
-		<contOptInfo mapField="CONT_OPT_INFO"/>
-		<saCopOvrd type="list" mapList="SA_COP_OVRD">
-			<saContractOptionId2 mapField="SA_CONT_OPT_ID"/>
-			<contractOptionEventId mapField="CONT_OPT_EVT_ID"/>
-			<overrideDateTime dataType="dateTime" mapField="OVRD_DTTM" stdTime="true"/>
-			<version14 dataType="number" mapField="VERSION"/>
-			<effectiveStatus dataType="lookup" mapField="EFF_STATUS" lookup="EFF_STATUS"/>
-			<serviceAgreementT mapField="C1_T_SA_ID"/>
-			<callOrigFMT9 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
-			<contOptEvtDescr mapField="CONT_OPT_EVT_DESCR"/>
-		</saCopOvrd>
-	</saCop>
-	<isDerived dataType="boolean" mapField="DERIVE_SW"/>
-	<canDerive dataType="boolean" mapField="TM_DERIVE_SW"/>
-	<billSegmentEndDate dataType="date" mapField="CUTOFF_DT"/>
-	<isForceDerivation dataType="boolean" mapField="FORCE_DERIVE_SW"/>
-	<forceDerivationStartDate dataType="date" mapField="FORCE_DRV_START_DT"/>
-	<saIntv type="list" mapList="SA_INTV">
-		<serviceAgreement14 mapField="SA_ID"/>
-		<intvPfRelTypCd mapField="INTV_PF_REL_TYP_CD"/>
-		<intervalProfileId mapField="INTV_PF_ID"/>
-		<startDateTime2 dataType="dateTime" mapField="START_DTTM"/>
-		<endDateTime dataType="dateTime" mapField="END_DTTM"/>
-		<version15 dataType="number" mapField="VERSION"/>
-		<effectiveStatus2 dataType="lookup" mapField="EFF_STATUS" lookup="EFF_STATUS"/>
-		<callOrigFMT10 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
-		<defaultForIsiprT dataType="lookup" mapField="C1_T_DEFAULT_FOR_ISIPR" lookup="C1_T_DEFAULT_FOR_ISIPR"/>
-		<intvPfInfo mapField="INTV_PF_INFO"/>
-		<pfreltyDescr mapField="PFRELTY_DESCR"/>
-		<algorithm mapField="ALG_CD"/>
-		<description2 mapField="ALG_DESCR"/>
-		<creationPriority dataType="lookup" mapField="CRE_PRIO_FLG" lookup="CRE_PRIO_FLG"/>
-		<crePfSw mapField="CRE_PF_SW"/>
-	</saIntv>
-	<saTou type="list" mapList="SA_TOU">
-		<serviceAgreement15 mapField="SA_ID"/>
-		<touMapRelationshipType mapField="TMAP_REL_TYPE_CD"/>
-		<touMapId mapField="TOU_MAP_ID"/>
-		<startDateTime3 dataType="dateTime" mapField="START_DTTM"/>
-		<endDateTime2 dataType="dateTime" mapField="END_DTTM"/>
-		<version16 dataType="number" mapField="VERSION"/>
-		<effectiveStatus3 dataType="lookup" mapField="EFF_STATUS" lookup="EFF_STATUS"/>
-		<callOrigFMT11 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
-		<defaultForIstmrT dataType="lookup" mapField="C1_T_DEFAULT_FOR_ISTMR" lookup="C1_T_DEFAULT_FOR_ISTMR"/>
-		<touMapInfo mapField="TOU_MAP_INFO"/>
-		<tmreltyDescr mapField="TMRELTY_DESCR"/>
-		<algorithm2 mapField="ALG_CD"/>
-		<description3 mapField="ALG_DESCR"/>
-		<creationPriority2 dataType="lookup" mapField="CRE_PRIO_FLG" lookup="CRE_PRIO_FLG"/>
-	</saTou>
-	<touCont type="list" mapList="TOU_CONT">
-		<serviceAgreement16 mapField="SA_ID"/>
-		<contractTermType4 dataType="lookup" mapField="CONTERM_TYPE_FLG" lookup="CONTERM_TYPE_FLG"/>
-		<billFactor4 mapField="BF_CD"/>
-		<startDate5 dataType="date" mapField="START_DT"/>
-		<endDate5 dataType="date" mapField="END_DT"/>
-		<percentExempt4 dataType="number" mapField="PCT_EXEMPT"/>
-		<taxCertification4 mapField="TAX_CERT"/>
-		<taxExemptType4 mapField="TAX_EX_TYPE_CD"/>
-		<touGroup4 mapField="TOU_GRP_CD"/>
-		<value4 dataType="number" mapField="VAL"/>
-		<version17 dataType="number" mapField="VERSION"/>
-		<callOrigFMT12 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
-		<bfCdDescr4 mapField="BF_CD_DESCR"/>
-		<touGrpDesc mapField="TOU_GRP_DESC"/>
-		<touContVal type="list" mapList="TOU_CONT_VAL">
-			<serviceAgreement17 mapField="SA_ID"/>
-			<contractTermType5 dataType="lookup" mapField="CONTERM_TYPE_FLG" lookup="CONTERM_TYPE_FLG"/>
-			<startDate6 dataType="date" mapField="START_DT"/>
-			<billFactor5 mapField="BF_CD"/>
-			<touGroup5 mapField="TOU_GRP_CD"/>
-			<timeOfUse mapField="TOU_CD"/>
-			<value5 dataType="number" mapField="VAL"/>
-			<version18 dataType="number" mapField="VERSION"/>
-			<callOrigFMT13 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
-			<touCdDescr mapField="TOU_CD_DESCR"/>
-		</touContVal>
-	</touCont>
-	<bsc type="list" mapList="BSC">
-		<billScenarioId mapField="BILL_SCNR_ID"/>
-		<serviceAgreement18 mapField="SA_ID"/>
-		<startDate7 dataType="date" mapField="START_DT"/>
-		<endDate6 dataType="date" mapField="END_DT"/>
-		<version19 dataType="number" mapField="VERSION"/>
-		<callOrigFMT14 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
-		<bss type="list" mapList="BSS">
-			<billScenarioId2 mapField="BILL_SCNR_ID"/>
-			<sequence dataType="number" mapField="SEQNO"/>
-			<serviceQuantityIdentifier mapField="SQI_CD"/>
-			<timeOfUse2 mapField="TOU_CD"/>
-			<unitOfMeasure mapField="UOM_CD"/>
-			<proposalServiceQuantity dataType="number" mapField="PROP_SQ"/>
-			<servicePointId3 mapField="SP_ID"/>
-			<version20 dataType="number" mapField="VERSION"/>
-			<serviceAgreementT2 mapField="C1_T_SA_ID"/>
-			<callOrigFMT15 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
-			<spInformation2 mapField="SP_INFO"/>
-			<unitOfMeasure2 mapField="UOM_DESCR"/>
-			<timeOfUse3 mapField="TOU_DESCR"/>
-			<serviceQuantityIdentifier2 mapField="SQI_DESCR"/>
-		</bss>
-	</bsc>
-	<saTc type="list" mapList="SA_TC">
-		<serviceAgreement19 mapField="SA_ID"/>
-		<termsAndCondition mapField="TC_TYPE_CD"/>
-		<startDate8 dataType="date" mapField="START_DT"/>
-		<endDate7 dataType="date" mapField="END_DT"/>
-		<version21 dataType="number" mapField="VERSION"/>
-		<callOrigFMT16 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
-		<tcDescr mapField="TC_DESCR"/>
-	</saTc>
-	<saContractTerms type="list" mapList="SA_CONTRACT_TERMS">
-		<serviceAgreement20 mapField="SA_ID"/>
-		<contractTermType6 dataType="lookup" mapField="CONTERM_TYPE_FLG" lookup="CONTERM_TYPE_FLG"/>
-		<billFactor6 mapField="BF_CD"/>
-		<startDate9 dataType="date" mapField="START_DT"/>
-		<endDate8 dataType="date" mapField="END_DT"/>
-		<percentExempt5 dataType="number" mapField="PCT_EXEMPT"/>
-		<taxCertification5 mapField="TAX_CERT"/>
-		<taxExemptType5 mapField="TAX_EX_TYPE_CD"/>
-		<touGroup6 mapField="TOU_GRP_CD"/>
-		<value6 dataType="number" mapField="VAL"/>
-		<version22 dataType="number" mapField="VERSION"/>
-		<callOrigFMT17 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
-		<touContVal2 type="list" mapList="TOU_CONT_VAL2">
-			<serviceAgreement21 mapField="SA_ID"/>
-			<contractTermType7 dataType="lookup" mapField="CONTERM_TYPE_FLG" lookup="CONTERM_TYPE_FLG"/>
-			<startDate10 dataType="date" mapField="START_DT"/>
-			<billFactor7 mapField="BF_CD"/>
-			<touGroup7 mapField="TOU_GRP_CD"/>
-			<timeOfUse4 mapField="TOU_CD"/>
-			<value7 dataType="number" mapField="VAL"/>
-			<version23 dataType="number" mapField="VERSION"/>
-			<callOrigFMT18 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
-			<touCdDescr2 mapField="TOU_CD_DESCR"/>
-		</touContVal2>
-	</saContractTerms>
-	<searchType dataType="lookup" mapField="BF_SRCH_FLG" lookup="BF_SRCH_FLG"/>
-	<termsAndCondition2 mapField="TC_TYPE_CD"/>
-	<termsAndConditionsTypeText mapField="TC_TYPE_TXT"/>
-	<saTypeRnwlFlg mapField="SA_TYPE_RNWL_FLG"/>
-	<canDeleteSA dataType="boolean" mapField="DELETE_SA_SW"/>
-	<realSAStartDate dataType="date" mapField="RSA_START_DT"/>
-	<realSAId mapField="REAL_SA_ID"/>
-	<realSaInfo mapField="REAL_SA_INFO"/>
-	<propSaInfo mapField="PROP_SA_INFO"/>
-	<customArea mapField="CUSTOM_AREA"/>
+  <canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+  <timeMode dataType="lookup" mapField="TIME_MODE_FLG" lookup="TIME_MODE_FLG"/>
+  <logicalSeasonalTimeShift mapField="LOG_STM_SHIFT_CD"/>
+  <phyStmShiftCd mapField="PHY_STM_SHIFT_CD"/>
+  <serviceAgreement mapField="SA_ID"/>
+  <logStmShiftDesc mapField="LOG_STM_SHIFT_DESC"/>
+  <stmShiftRemark mapField="STM_SHIFT_REMARK"/>
+  <saInformation mapField="SA_INFO"/>
+  <acctNameInfo mapField="ACCT_NAME_INFO"/>
+  <premiseInfo mapField="PREMISE_INFO"/>
+  <startOptInfo mapField="START_OPT_INFO"/>
+  <saTypeInfo mapField="SA_TYPE_INFO"/>
+  <debtClassInformation mapField="DEBT_CL_INFO"/>
+  <sicInfo mapField="SIC_INFO"/>
+  <recurCharge dataType="number" mapField="RECUR_CHARGE"/>
+  <currentAmount dataType="money" mapField="CUR_AMT"/>
+  <payoffAmount dataType="money" mapField="TOT_AMT"/>
+  <recurChgLbl mapField="RECUR_CHG_LBL"/>
+  <saRelInfo mapField="SA_REL_INFO"/>
+  <enrlInfo mapField="ENRL_INFO"/>
+  <saRemarks mapField="SA_REMARKS"/>
+  <declineRsn mapField="DECLINE_RSN"/>
+  <nbbRrDescr mapField="NBB_RR_DESCR"/>
+  <totalAmountToBillLabel mapField="TOT_AMT_TOBILL_LBL"/>
+  <isFinancialTransactionExist dataType="boolean" mapField="FT_EXIST_SW"/>
+  <applyStartOptionOnDate dataType="date" mapField="NEW_EFF_DT"/>
+  <effectiveDate dataType="date" mapField="SS_OPT_EFFDT"/>
+  <newStartOptCd mapField="NEW_START_OPT_CD"/>
+  <newStartOptDesc mapField="NEW_START_OPT_DESC"/>
+  <canActivate dataType="boolean" mapField="ACTIVATE_SW"/>
+  <isStop dataType="boolean" mapField="STOP_SW"/>
+  <isCancel dataType="boolean" mapField="CANCEL_SW"/>
+  <isClose dataType="boolean" mapField="CLOSE_SW"/>
+  <shouldApplyNewStartOption dataType="boolean" mapField="APLY_ST_OPT_SW"/>
+  <canProposalSAActivate dataType="boolean" mapField="PSA_ACTIVATE_SW"/>
+  <isProposalSAAccept dataType="boolean" mapField="PSA_ACCEPT_SW"/>
+  <isProposalSADecline dataType="boolean" mapField="PSA_DECLINE_SW"/>
+  <isProposalSACancel dataType="boolean" mapField="PSA_CANCEL_SW"/>
+  <isProposalSAReactivate dataType="boolean" mapField="PSA_REACTIVATE_SW"/>
+  <isReinstateSA dataType="boolean" mapField="REINSTATE_SW"/>
+  <isInitiateStop dataType="boolean" mapField="INITIATE_STOP_SW"/>
+  <bfSrchFlgRdr mapField="BF_SRCH_FLG_RDR"/>
+  <bfSrchFlgVal mapField="BF_SRCH_FLG_VAL"/>
+  <bfSrchFlgTou mapField="BF_SRCH_FLG_TOU"/>
+  <bfSrchFlgTax mapField="BF_SRCH_FLG_TAX"/>
+  <defaultFlag mapField="DEFAULT_FOR_FLG"/>
+  <dfltCopEffDttm mapField="DFLT_COP_EFF_DTTM"/>
+  <dfltCopExpireDttm mapField="DFLT_COP_EXPIRE_DTTM"/>
+  <specialRole dataType="lookup" mapField="SPECIAL_ROLE_FLG" lookup="SPECIAL_ROLE_FLG"/>
+  <allowRecurringCharge dataType="lookup" mapField="ALLOW_RCR_CHG_FLG" lookup="ALLOW_RCR_CHG_FLG"/>
+  <totalBillAmount dataType="lookup" mapField="REQ_AMT_BILL_FLG" lookup="REQ_AMT_BILL_FLG"/>
+  <isCharacteristicPremiseRequired dataType="boolean" mapField="PREM_REQ_SW"/>
+  <isAllowedEstimates dataType="boolean" mapField="SA_ALLOW_EST_SW"/>
+  <isServicePointRequired dataType="boolean" mapField="ALLOW_SP_SW"/>
+  <isRateRequired dataType="boolean" mapField="RT_REQ_SW"/>
+  <isOneTimeCharge dataType="boolean" mapField="ONE_TIME_CH_SW"/>
+  <isSubServiceAgreement dataType="boolean" mapField="SUB_SA_SW"/>
+  <isStartOptionRequired dataType="boolean" mapField="START_OPT_REQ_SW"/>
+  <division mapField="CIS_DIVISION"/>
+  <saType mapField="SA_TYPE_CD"/>
+  <status dataType="lookup" mapField="SA_STATUS_FLG" lookup="SA_STATUS_FLG"/>
+  <accountId mapField="ACCT_ID"/>
+  <startDate dataType="date" mapField="START_DT"/>
+  <endDate dataType="date" mapField="END_DT"/>
+  <oldAccountId mapField="OLD_ACCT_ID"/>
+  <saRelationshipId mapField="SA_REL_ID"/>
+  <areEstimatesAllowed dataType="boolean" mapField="ALLOW_EST_SW"/>
+  <customerRead dataType="lookup" mapField="CUST_READ_FLG" lookup="CUST_READ_FLG"/>
+  <sicCode mapField="SIC_CD"/>
+  <premiseId mapField="CHAR_PREM_ID"/>
+  <startOption mapField="START_OPT_CD"/>
+  <totalAmountToBill dataType="money" mapField="TOT_TO_BILL_AMT"/>
+  <version dataType="number" mapField="VERSION"/>
+  <currency mapField="CURRENCY_CD"/>
+  <maxBillThreshold dataType="money" mapField="HIGH_BILL_AMT"/>
+  <depositInterestCalculated dataType="date" mapField="INT_CALC_DT"/>
+  <ciacReviewDate dataType="date" mapField="CIAC_REVIEW_DT"/>
+  <startReason dataType="lookup" mapField="STRT_RSN_FLG" lookup="STRT_RSN_FLG"/>
+  <stopReason dataType="lookup" mapField="STOP_RSN_FLG" lookup="STOP_RSN_FLG"/>
+  <startRequestedBy mapField="STRT_REQED_BY"/>
+  <stopRequestedBy mapField="STOP_REQED_BY"/>
+  <businessActivityDescription mapField="BUS_ACTIVITY_DESC"/>
+  <orderId mapField="ENRL_ID"/>
+  <ibSACutoffTime dataType="time" mapField="IB_SA_CUTOFF_TM"/>
+  <startDayOption dataType="lookup" mapField="IB_BASE_TM_DAY_FLG" lookup="IB_BASE_TM_DAY_FLG"/>
+  <specialUsage dataType="lookup" mapField="SPECIAL_USAGE_FLG" lookup="SPECIAL_USAGE_FLG"/>
+  <proposalSAStatus dataType="lookup" mapField="PROP_SA_STAT_FLG" lookup="PROP_SA_STAT_FLG"/>
+  <declineReason mapField="PROP_DCL_RSN_CD"/>
+  <proposalSAId mapField="PROP_SA_ID"/>
+  <numberOfPaymentPeriods dataType="number" mapField="NBR_PYMNT_PERIODS"/>
+  <recommendationRule mapField="NB_RULE_CD"/>
+  <expireDate dataType="date" mapField="EXPIRE_DT"/>
+  <renewalDate dataType="date" mapField="RENEWAL_DT"/>
+  <nbbAutopay dataType="lookup" mapField="NB_APAY_FLG" lookup="NB_APAY_FLG"/>
+  <saDataArea mapField="SA_DATA_AREA"/>
+  <ibSaCutoffDttmTm mapField="IB_SA_CUTOFF_DTTM_TM"/>
+  <saSp type="list" mapList="SA_SP">
+    <servicePointId mapField="SP_ID"/>
+    <saSPId mapField="SA_SP_ID"/>
+    <serviceAgreement2 mapField="SA_ID"/>
+    <startDateTime dataType="dateTime" mapField="START_DTTM"/>
+    <startMeterRead mapField="START_MR_ID"/>
+    <stopDateTime dataType="dateTime" mapField="STOP_DTTM"/>
+    <howToUseRead dataType="lookup" mapField="USAGE_FLG" lookup="USAGE_FLG"/>
+    <stopMeterRead mapField="STOP_MR_ID"/>
+    <version2 dataType="number" mapField="VERSION"/>
+    <usePercent dataType="number" mapField="USE_PCT"/>
+    <servicePointSubType dataType="lookup" mapField="SP_SUBTYPE_FLG" lookup="SP_SUBTYPE_FLG"/>
+    <callOrigFMT dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
+    <spInformation mapField="SP_INFO"/>
+    <mtrItemInfo mapField="MTR_ITEM_INFO"/>
+    <startMrInfo mapField="START_MR_INFO"/>
+    <stopMrInfo mapField="STOP_MR_INFO"/>
+    <mtrItemId mapField="MTR_ITEM_ID"/>
+    <saSpFa type="list" mapList="SA_SP_FA">
+      <saSPId2 mapField="SA_SP_ID"/>
+      <fieldActivityId mapField="FA_ID"/>
+      <serviceAgreement3 mapField="SA_ID"/>
+      <servicePointId2 mapField="SP_ID"/>
+      <fieldActivityType dataType="lookup" mapField="SA_SP_FA_TYPE_FLG" lookup="SA_SP_FA_TYPE_FLG"/>
+      <version3 dataType="number" mapField="VERSION"/>
+      <fieldActivityInformation mapField="FA_INFO"/>
+      <scheduleDateTimeStart dataType="dateTime" mapField="SCHED_DTTM"/>
+    </saSpFa>
+    <saSpChar type="list" mapList="SA_SP_CHAR">
+      <saSPId3 mapField="SA_SP_ID"/>
+      <characteristicType mapField="CHAR_TYPE_CD"/>
+      <effectiveDate2 dataType="date" mapField="EFFDT"/>
+      <characteristicValue mapField="CHAR_VAL"/>
+      <version4 dataType="number" mapField="VERSION"/>
+      <adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+      <characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
+      <characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+      <characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+      <characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
+      <characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+      <searchNavigationKey mapField="SRCH_NAV_KEY"/>
+      <navigationOption mapField="NAV_OPT_CD"/>
+      <table mapField="TBL_NAME"/>
+      <infoProgram mapField="INFO_PRG"/>
+      <characteristicType2 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+      <characteristicValueDescription mapField="CHAR_VAL_DESCR"/>
+      <characteristicValueForeignKeys mapField="CHAR_VAL_FK_STR"/>
+      <characteristicValueForeignKeyInformation mapField="CHAR_VAL_FK_INFO"/>
+      <isCompoundPrimaryKey dataType="boolean" mapField="COMP_PK_SW"/>
+      <charateristicValue mapField="COMP_PK_STR"/>
+    </saSpChar>
+  </saSp>
+  <saRsHist type="list" mapList="SA_RS_HIST">
+    <serviceAgreement4 mapField="SA_ID"/>
+    <effectiveDate3 dataType="date" mapField="EFFDT"/>
+    <rateSchedule mapField="RS_CD"/>
+    <version5 dataType="number" mapField="VERSION"/>
+    <callOrigFMT2 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
+    <rateScheduleVersion dataType="lookup" mapField="RS_VERSION_FLG" lookup="RS_VERSION_FLG"/>
+    <description mapField="DESCR"/>
+  </saRsHist>
+  <saContractRider type="list" mapList="SA_CONTRACT_RIDER">
+    <serviceAgreement5 mapField="SA_ID"/>
+    <contractTermType dataType="lookup" mapField="CONTERM_TYPE_FLG" lookup="CONTERM_TYPE_FLG"/>
+    <billFactor mapField="BF_CD"/>
+    <startDate2 dataType="date" mapField="START_DT"/>
+    <endDate2 dataType="date" mapField="END_DT"/>
+    <percentExempt dataType="number" mapField="PCT_EXEMPT"/>
+    <taxCertification mapField="TAX_CERT"/>
+    <taxExemptType mapField="TAX_EX_TYPE_CD"/>
+    <touGroup mapField="TOU_GRP_CD"/>
+    <value dataType="number" mapField="VAL"/>
+    <version6 dataType="number" mapField="VERSION"/>
+    <callOrigFMT3 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
+    <bfCdDescr mapField="BF_CD_DESCR"/>
+  </saContractRider>
+  <saTaxExemption type="list" mapList="SA_TAX_EXEMPTION">
+    <serviceAgreement6 mapField="SA_ID"/>
+    <contractTermType2 dataType="lookup" mapField="CONTERM_TYPE_FLG" lookup="CONTERM_TYPE_FLG"/>
+    <billFactor2 mapField="BF_CD"/>
+    <startDate3 dataType="date" mapField="START_DT"/>
+    <endDate3 dataType="date" mapField="END_DT"/>
+    <percentExempt2 dataType="number" mapField="PCT_EXEMPT"/>
+    <taxCertification2 mapField="TAX_CERT"/>
+    <taxExemptType2 mapField="TAX_EX_TYPE_CD"/>
+    <touGroup2 mapField="TOU_GRP_CD"/>
+    <value2 dataType="number" mapField="VAL"/>
+    <version7 dataType="number" mapField="VERSION"/>
+    <callOrigFMT4 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
+    <bfCdDescr2 mapField="BF_CD_DESCR"/>
+  </saTaxExemption>
+  <saContractValue type="list" mapList="SA_CONTRACT_VALUE">
+    <serviceAgreement7 mapField="SA_ID"/>
+    <contractTermType3 dataType="lookup" mapField="CONTERM_TYPE_FLG" lookup="CONTERM_TYPE_FLG"/>
+    <billFactor3 mapField="BF_CD"/>
+    <startDate4 dataType="date" mapField="START_DT"/>
+    <endDate4 dataType="date" mapField="END_DT"/>
+    <percentExempt3 dataType="number" mapField="PCT_EXEMPT"/>
+    <taxCertification3 mapField="TAX_CERT"/>
+    <taxExemptType3 mapField="TAX_EX_TYPE_CD"/>
+    <touGroup3 mapField="TOU_GRP_CD"/>
+    <value3 dataType="number" mapField="VAL"/>
+    <version8 dataType="number" mapField="VERSION"/>
+    <callOrigFMT5 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
+    <contractValue dataType="number" mapField="VAL_CHARGE"/>
+    <contractValue2 dataType="number" mapField="VAL_PERCENTAGE"/>
+    <contractValue3 dataType="number" mapField="VAL_UNIT_RATE"/>
+    <valueType dataType="lookup" mapField="VAL_TYPE_FLG" lookup="VAL_TYPE_FLG"/>
+    <bfCdDescr3 mapField="BF_CD_DESCR"/>
+  </saContractValue>
+  <saArrears type="list" mapList="SA_ARREARS">
+    <serviceAgreement8 mapField="SA_ID"/>
+    <daysAge mapField="DAYS_AGE"/>
+    <daysAgeN dataType="number" mapField="DAYS_AGE_N"/>
+    <arrearsAmount dataType="money" mapField="ARS_AMT"/>
+    <isToBeTransferred dataType="boolean" mapField="CHECKED_FOR_PA_SW"/>
+  </saArrears>
+  <saQty type="list" mapList="SA_QTY">
+    <serviceAgreement9 mapField="SA_ID"/>
+    <contractQuantityType mapField="CONT_QTY_TYPE_CD"/>
+    <contractQuantity dataType="number" mapField="CONT_QTY"/>
+    <effectiveDate4 dataType="date" mapField="EFFDT"/>
+    <version9 dataType="number" mapField="VERSION"/>
+    <callOrigFMT6 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
+  </saQty>
+  <saRchg type="list" mapList="SA_RCHG">
+    <serviceAgreement10 mapField="SA_ID"/>
+    <effectiveDate5 dataType="date" mapField="EFFDT"/>
+    <recurringChargeAmount dataType="money" mapField="RCR_CHG_AMT"/>
+    <currency2 mapField="CURRENCY_CD"/>
+    <version10 dataType="number" mapField="VERSION"/>
+    <callOrigFMT7 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
+  </saRchg>
+  <saChar type="list" mapList="SA_CHAR">
+    <serviceAgreement11 mapField="SA_ID"/>
+    <characteristicType3 mapField="CHAR_TYPE_CD"/>
+    <effectiveDate6 dataType="date" mapField="EFFDT"/>
+    <characteristicValue2 mapField="CHAR_VAL"/>
+    <adhocCharacteristicValue2 mapField="ADHOC_CHAR_VAL"/>
+    <version11 dataType="number" mapField="VERSION"/>
+    <characteristicValueForeignKey12 mapField="CHAR_VAL_FK1"/>
+    <characteristicValueFK22 mapField="CHAR_VAL_FK2"/>
+    <characteristicValueFK32 mapField="CHAR_VAL_FK3"/>
+    <characteristicValueFk42 mapField="CHAR_VAL_FK4"/>
+    <characteristicValueFK52 mapField="CHAR_VAL_FK5"/>
+    <searchCharacteristicValue mapField="SRCH_CHAR_VAL"/>
+    <callOrigFM dataType="lookup" mapField="CALL_ORIG_FM_FLG" lookup="CALL_ORIG_FM_FLG"/>
+    <searchNavigationKey2 mapField="SRCH_NAV_KEY"/>
+    <navigationOption2 mapField="NAV_OPT_CD"/>
+    <table2 mapField="TBL_NAME"/>
+    <infoProgram2 mapField="INFO_PRG"/>
+    <characteristicType4 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+    <characteristicValueDescription2 mapField="CHAR_VAL_DESCR"/>
+    <characteristicValueForeignKeys2 mapField="CHAR_VAL_FK_STR"/>
+    <characteristicValueForeignKeyInformation2 mapField="CHAR_VAL_FK_INFO"/>
+    <isCompoundPrimaryKey2 dataType="boolean" mapField="COMP_PK_SW"/>
+    <charateristicValue2 mapField="COMP_PK_STR"/>
+  </saChar>
+  <msgs type="list" mapList="MSGS">
+    <billMessage mapField="BILL_MSG_CD"/>
+    <billMessageType dataType="lookup" mapField="BILL_MSG_TYPE_FLG" lookup="BILL_MSG_TYPE_FLG"/>
+    <serviceAgreement12 mapField="SA_ID"/>
+    <version12 dataType="number" mapField="VERSION"/>
+    <bmsgDescr mapField="BMSG_DESCR"/>
+  </msgs>
+  <saCop type="list" mapList="SA_COP">
+    <saContractOptionId mapField="SA_CONT_OPT_ID"/>
+    <contractOptionId mapField="CONT_OPT_ID"/>
+    <serviceAgreement13 mapField="SA_ID"/>
+    <effectiveDateTime dataType="dateTime" mapField="EFF_DTTM"/>
+    <expirationDateTime dataType="dateTime" mapField="EXPIRE_DTTM"/>
+    <version13 dataType="number" mapField="VERSION"/>
+    <callOrigFMT8 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
+    <defaultForCSCROT mapField="C1_T_DEFAULT_FOR_CSCOR"/>
+    <contOptInfo mapField="CONT_OPT_INFO"/>
+    <saCopOvrd type="list" mapList="SA_COP_OVRD">
+      <saContractOptionId2 mapField="SA_CONT_OPT_ID"/>
+      <contractOptionEventId mapField="CONT_OPT_EVT_ID"/>
+      <overrideDateTime dataType="dateTime" mapField="OVRD_DTTM" stdTime="true"/>
+      <version14 dataType="number" mapField="VERSION"/>
+      <effectiveStatus dataType="lookup" mapField="EFF_STATUS" lookup="EFF_STATUS"/>
+      <serviceAgreementT mapField="C1_T_SA_ID"/>
+      <callOrigFMT9 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
+      <contOptEvtDescr mapField="CONT_OPT_EVT_DESCR"/>
+    </saCopOvrd>
+  </saCop>
+  <isDerived dataType="boolean" mapField="DERIVE_SW"/>
+  <canDerive dataType="boolean" mapField="TM_DERIVE_SW"/>
+  <billSegmentEndDate dataType="date" mapField="CUTOFF_DT"/>
+  <isForceDerivation dataType="boolean" mapField="FORCE_DERIVE_SW"/>
+  <forceDerivationStartDate dataType="date" mapField="FORCE_DRV_START_DT"/>
+  <saIntv type="list" mapList="SA_INTV">
+    <serviceAgreement14 mapField="SA_ID"/>
+    <intvPfRelTypCd mapField="INTV_PF_REL_TYP_CD"/>
+    <intervalProfileId mapField="INTV_PF_ID"/>
+    <startDateTime2 dataType="dateTime" mapField="START_DTTM"/>
+    <endDateTime dataType="dateTime" mapField="END_DTTM"/>
+    <version15 dataType="number" mapField="VERSION"/>
+    <effectiveStatus2 dataType="lookup" mapField="EFF_STATUS" lookup="EFF_STATUS"/>
+    <callOrigFMT10 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
+    <defaultForIsiprT dataType="lookup" mapField="C1_T_DEFAULT_FOR_ISIPR" lookup="C1_T_DEFAULT_FOR_ISIPR"/>
+    <intvPfInfo mapField="INTV_PF_INFO"/>
+    <pfreltyDescr mapField="PFRELTY_DESCR"/>
+    <algorithm mapField="ALG_CD"/>
+    <description2 mapField="ALG_DESCR"/>
+    <creationPriority dataType="lookup" mapField="CRE_PRIO_FLG" lookup="CRE_PRIO_FLG"/>
+    <crePfSw mapField="CRE_PF_SW"/>
+  </saIntv>
+  <saTou type="list" mapList="SA_TOU">
+    <serviceAgreement15 mapField="SA_ID"/>
+    <touMapRelationshipType mapField="TMAP_REL_TYPE_CD"/>
+    <touMapId mapField="TOU_MAP_ID"/>
+    <startDateTime3 dataType="dateTime" mapField="START_DTTM"/>
+    <endDateTime2 dataType="dateTime" mapField="END_DTTM"/>
+    <version16 dataType="number" mapField="VERSION"/>
+    <effectiveStatus3 dataType="lookup" mapField="EFF_STATUS" lookup="EFF_STATUS"/>
+    <callOrigFMT11 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
+    <defaultForIstmrT dataType="lookup" mapField="C1_T_DEFAULT_FOR_ISTMR" lookup="C1_T_DEFAULT_FOR_ISTMR"/>
+    <touMapInfo mapField="TOU_MAP_INFO"/>
+    <tmreltyDescr mapField="TMRELTY_DESCR"/>
+    <algorithm2 mapField="ALG_CD"/>
+    <description3 mapField="ALG_DESCR"/>
+    <creationPriority2 dataType="lookup" mapField="CRE_PRIO_FLG" lookup="CRE_PRIO_FLG"/>
+  </saTou>
+  <touCont type="list" mapList="TOU_CONT">
+    <serviceAgreement16 mapField="SA_ID"/>
+    <contractTermType4 dataType="lookup" mapField="CONTERM_TYPE_FLG" lookup="CONTERM_TYPE_FLG"/>
+    <billFactor4 mapField="BF_CD"/>
+    <startDate5 dataType="date" mapField="START_DT"/>
+    <endDate5 dataType="date" mapField="END_DT"/>
+    <percentExempt4 dataType="number" mapField="PCT_EXEMPT"/>
+    <taxCertification4 mapField="TAX_CERT"/>
+    <taxExemptType4 mapField="TAX_EX_TYPE_CD"/>
+    <touGroup4 mapField="TOU_GRP_CD"/>
+    <value4 dataType="number" mapField="VAL"/>
+    <version17 dataType="number" mapField="VERSION"/>
+    <callOrigFMT12 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
+    <bfCdDescr4 mapField="BF_CD_DESCR"/>
+    <touGrpDesc mapField="TOU_GRP_DESC"/>
+    <touContVal type="list" mapList="TOU_CONT_VAL">
+      <serviceAgreement17 mapField="SA_ID"/>
+      <contractTermType5 dataType="lookup" mapField="CONTERM_TYPE_FLG" lookup="CONTERM_TYPE_FLG"/>
+      <startDate6 dataType="date" mapField="START_DT"/>
+      <billFactor5 mapField="BF_CD"/>
+      <touGroup5 mapField="TOU_GRP_CD"/>
+      <timeOfUse mapField="TOU_CD"/>
+      <value5 dataType="number" mapField="VAL"/>
+      <version18 dataType="number" mapField="VERSION"/>
+      <callOrigFMT13 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
+      <touCdDescr mapField="TOU_CD_DESCR"/>
+    </touContVal>
+  </touCont>
+  <bsc type="list" mapList="BSC">
+    <billScenarioId mapField="BILL_SCNR_ID"/>
+    <serviceAgreement18 mapField="SA_ID"/>
+    <startDate7 dataType="date" mapField="START_DT"/>
+    <endDate6 dataType="date" mapField="END_DT"/>
+    <version19 dataType="number" mapField="VERSION"/>
+    <callOrigFMT14 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
+    <bss type="list" mapList="BSS">
+      <billScenarioId2 mapField="BILL_SCNR_ID"/>
+      <sequence dataType="number" mapField="SEQNO"/>
+      <serviceQuantityIdentifier mapField="SQI_CD"/>
+      <timeOfUse2 mapField="TOU_CD"/>
+      <unitOfMeasure mapField="UOM_CD"/>
+      <proposalServiceQuantity dataType="number" mapField="PROP_SQ"/>
+      <servicePointId3 mapField="SP_ID"/>
+      <version20 dataType="number" mapField="VERSION"/>
+      <serviceAgreementT2 mapField="C1_T_SA_ID"/>
+      <callOrigFMT15 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
+      <spInformation2 mapField="SP_INFO"/>
+      <unitOfMeasure2 mapField="UOM_DESCR"/>
+      <timeOfUse3 mapField="TOU_DESCR"/>
+      <serviceQuantityIdentifier2 mapField="SQI_DESCR"/>
+    </bss>
+  </bsc>
+  <saTc type="list" mapList="SA_TC">
+    <serviceAgreement19 mapField="SA_ID"/>
+    <termsAndCondition mapField="TC_TYPE_CD"/>
+    <startDate8 dataType="date" mapField="START_DT"/>
+    <endDate7 dataType="date" mapField="END_DT"/>
+    <version21 dataType="number" mapField="VERSION"/>
+    <callOrigFMT16 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
+    <tcDescr mapField="TC_DESCR"/>
+  </saTc>
+  <saContractTerms type="list" mapList="SA_CONTRACT_TERMS">
+    <serviceAgreement20 mapField="SA_ID"/>
+    <contractTermType6 dataType="lookup" mapField="CONTERM_TYPE_FLG" lookup="CONTERM_TYPE_FLG"/>
+    <billFactor6 mapField="BF_CD"/>
+    <startDate9 dataType="date" mapField="START_DT"/>
+    <endDate8 dataType="date" mapField="END_DT"/>
+    <percentExempt5 dataType="number" mapField="PCT_EXEMPT"/>
+    <taxCertification5 mapField="TAX_CERT"/>
+    <taxExemptType5 mapField="TAX_EX_TYPE_CD"/>
+    <touGroup6 mapField="TOU_GRP_CD"/>
+    <value6 dataType="number" mapField="VAL"/>
+    <version22 dataType="number" mapField="VERSION"/>
+    <callOrigFMT17 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
+    <touContVal2 type="list" mapList="TOU_CONT_VAL2">
+      <serviceAgreement21 mapField="SA_ID"/>
+      <contractTermType7 dataType="lookup" mapField="CONTERM_TYPE_FLG" lookup="CONTERM_TYPE_FLG"/>
+      <startDate10 dataType="date" mapField="START_DT"/>
+      <billFactor7 mapField="BF_CD"/>
+      <touGroup7 mapField="TOU_GRP_CD"/>
+      <timeOfUse4 mapField="TOU_CD"/>
+      <value7 dataType="number" mapField="VAL"/>
+      <version23 dataType="number" mapField="VERSION"/>
+      <callOrigFMT18 dataType="lookup" mapField="C1_T_CALL_ORIG_FM_FLG" lookup="C1_T_CALL_ORIG_FM_FLG"/>
+      <touCdDescr2 mapField="TOU_CD_DESCR"/>
+    </touContVal2>
+  </saContractTerms>
+  <searchType dataType="lookup" mapField="BF_SRCH_FLG" lookup="BF_SRCH_FLG"/>
+  <termsAndCondition2 mapField="TC_TYPE_CD"/>
+  <termsAndConditionsTypeText mapField="TC_TYPE_TXT"/>
+  <saTypeRnwlFlg mapField="SA_TYPE_RNWL_FLG"/>
+  <canDeleteSA dataType="boolean" mapField="DELETE_SA_SW"/>
+  <realSAStartDate dataType="date" mapField="RSA_START_DT"/>
+  <realSAId mapField="REAL_SA_ID"/>
+  <realSaInfo mapField="REAL_SA_INFO"/>
+  <propSaInfo mapField="PROP_SA_INFO"/>
+  <customArea mapField="CUSTOM_AREA"/>
 </schema>

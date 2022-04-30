@@ -1,80 +1,80 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
-	<serviceAgreement mapField="SA_ID"/>
-	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
-	<saInformation mapField="SA_INFO"/>
-	<accountId mapField="ACCT_ID"/>
-	<accountInfo mapField="ACCT_INFO"/>
-	<currentAmount dataType="money" mapField="CURRENT_AMT"/>
-	<payOffAmount dataType="money" mapField="PAY_OFF_AMT"/>
-	<premiseId mapField="PREM_ID"/>
-	<premiseInfo mapField="PREM_INFO"/>
-	<canCancelRebillRreeze dataType="boolean" mapField="CAN_RBL_FRZ_SW"/>
-	<isSATypeRequiresBillDeterminants dataType="boolean" mapField="SATY_REQ_BD_SW"/>
-	<countRowsSelected dataType="number" mapField="ROWS_SELECTED_CNT"/>
-	<cancelReason mapField="CAN_RSN_CD"/>
-	<accountingDate dataType="date" default="%CurrentDate" mapField="ACCOUNTING_DT"/>
-	<areEstimatesAllowed dataType="boolean" mapField="ALLOW_EST_SW"/>
-	<hasBillingOption dataType="boolean" mapField="BILLING_OPT_SW"/>
-	<canUseOldReadsItemsServiceQuantity dataType="boolean" mapField="USE_OLD_INFO_SW"/>
-	<showResults dataType="boolean" mapField="SHOW_MCR_RESULT_SW"/>
-	<bsegRebilledCnt dataType="number" mapField="BSEG_REBILLED_CNT"/>
-	<bsegCancelledCnt dataType="number" mapField="BSEG_CANCELLED_CNT"/>
-	<rebillErrorBsegId mapField="REBILL_ERROR_BSEG_ID"/>
-	<rebillErrorStartDt mapField="REBILL_ERROR_START_DT"/>
-	<rebillErrorEndDt mapField="REBILL_ERROR_END_DT"/>
-	<bsegRebilledInfo mapField="BSEG_REBILLED_INFO"/>
-	<bsegCancelledInfo mapField="BSEG_CANCELLED_INFO"/>
-	<rebillErrorInfo mapField="REBILL_ERROR_INFO"/>
-	<currency mapField="CURRENCY_CD"/>
-	<mcr type="list" mapList="MCR">
-		<billSegmentId mapField="BSEG_ID"/>
-		<billCycle mapField="BILL_CYC_CD"/>
-		<windowStartDate dataType="date" mapField="WIN_START_DT"/>
-		<cancelReason2 mapField="CAN_RSN_CD"/>
-		<cancelBillSegmentId mapField="CAN_BSEG_ID"/>
-		<serviceAgreement2 mapField="SA_ID"/>
-		<billId mapField="BILL_ID"/>
-		<startDate dataType="date" mapField="START_DT"/>
-		<endDate dataType="date" mapField="END_DT"/>
-		<isEstimate dataType="boolean" mapField="EST_SW"/>
-		<isClosingBillSegment dataType="boolean" mapField="CLOSING_BSEG_SW"/>
-		<hasServiceQuantityOverride dataType="boolean" mapField="SQ_OVERRIDE_SW"/>
-		<isItemOverride dataType="boolean" mapField="ITEM_OVERRIDE_SW"/>
-		<premiseId2 mapField="PREM_ID"/>
-		<billSegmentStatus dataType="lookup" mapField="BSEG_STAT_FLG" lookup="BSEG_STAT_FLG"/>
-		<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
-		<statusChangeDateTime dataType="dateTime" mapField="STAT_CHG_DTTM"/>
-		<readSequence mapField="REBILL_SEG_ID"/>
-		<masterBillSegmentId mapField="MASTER_BSEG_ID"/>
-		<quoteDetailId mapField="QUOTE_DTL_ID"/>
-		<billSegmentDataArea mapField="BSEG_DATA_AREA"/>
-		<usageStartDateTime dataType="dateTime" mapField="MDM_START_DTTM"/>
-		<usageEndDateTime dataType="dateTime" mapField="MDM_END_DTTM"/>
-		<billScenarioId mapField="BILL_SCNR_ID"/>
-		<ilmDate dataType="date" mapField="ILM_DT"/>
-		<isEligibleForArchiving dataType="boolean" mapField="ILM_ARCH_SW"/>
-		<version dataType="number" mapField="VERSION"/>
-		<chgBsegStatFlgT mapField="C1_T_CHG_BSEG_STAT_FLG"/>
-		<canChangeServiceQuantityOverrideT dataType="boolean" mapField="C1_T_CHG_SQ_OVERRIDE_SW"/>
-		<chgItemOverrideSwitchT dataType="boolean" mapField="C1_T_CHG_ITEM_OVERRIDE_SW"/>
-		<hasProcess dataType="boolean" mapField="PROCESS_SW"/>
-		<billIsWoSw mapField="BILL_IS_WO_SW"/>
-		<currentAmount2 dataType="money" mapField="CUR_AMT"/>
-		<originalAmount dataType="money" mapField="ORIGINAL_AMT"/>
-		<billSegmentInformation mapField="BSEG_INFO"/>
-		<msgNoChange mapField="MSG_NO_CHANGE"/>
-	</mcr>
-	<cancelReason2 mapField="CAN_RSN_CD2"/>
-	<accountingDt2 dataType="date" mapField="ACCOUNTING_DT2"/>
-	<allowEstSw2 dataType="boolean" mapField="ALLOW_EST_SW2"/>
-	<billingOptSw2 dataType="boolean" mapField="BILLING_OPT_SW2"/>
-	<useOldInfoSw2 dataType="boolean" mapField="USE_OLD_INFO_SW2"/>
-	<showMcrResultSw2 dataType="boolean" mapField="SHOW_MCR_RESULT_SW2"/>
-	<bsegRebilledCnt2 dataType="number" mapField="BSEG_REBILLED_CNT2"/>
-	<bsegCancelledCnt2 dataType="number" mapField="BSEG_CANCELLED_CNT2"/>
-	<rebillErrorBsegId2 mapField="REBILL_ERROR_BSEG_ID2"/>
-	<rebillErrorStartDt2 mapField="REBILL_ERROR_START_DT2"/>
-	<rebillErrorEndDt2 mapField="REBILL_ERROR_END_DT2"/>
+  <canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+  <serviceAgreement mapField="SA_ID"/>
+  <defaultFlag mapField="DEFAULT_FOR_FLG"/>
+  <saInformation mapField="SA_INFO"/>
+  <accountId mapField="ACCT_ID"/>
+  <accountInfo mapField="ACCT_INFO"/>
+  <currentAmount dataType="money" mapField="CURRENT_AMT"/>
+  <payOffAmount dataType="money" mapField="PAY_OFF_AMT"/>
+  <premiseId mapField="PREM_ID"/>
+  <premiseInfo mapField="PREM_INFO"/>
+  <canCancelRebillRreeze dataType="boolean" mapField="CAN_RBL_FRZ_SW"/>
+  <isSATypeRequiresBillDeterminants dataType="boolean" mapField="SATY_REQ_BD_SW"/>
+  <countRowsSelected dataType="number" mapField="ROWS_SELECTED_CNT"/>
+  <cancelReason mapField="CAN_RSN_CD"/>
+  <accountingDate dataType="date" default="%CurrentDate" mapField="ACCOUNTING_DT"/>
+  <areEstimatesAllowed dataType="boolean" mapField="ALLOW_EST_SW"/>
+  <hasBillingOption dataType="boolean" mapField="BILLING_OPT_SW"/>
+  <canUseOldReadsItemsServiceQuantity dataType="boolean" mapField="USE_OLD_INFO_SW"/>
+  <showResults dataType="boolean" mapField="SHOW_MCR_RESULT_SW"/>
+  <bsegRebilledCnt dataType="number" mapField="BSEG_REBILLED_CNT"/>
+  <bsegCancelledCnt dataType="number" mapField="BSEG_CANCELLED_CNT"/>
+  <rebillErrorBsegId mapField="REBILL_ERROR_BSEG_ID"/>
+  <rebillErrorStartDt mapField="REBILL_ERROR_START_DT"/>
+  <rebillErrorEndDt mapField="REBILL_ERROR_END_DT"/>
+  <bsegRebilledInfo mapField="BSEG_REBILLED_INFO"/>
+  <bsegCancelledInfo mapField="BSEG_CANCELLED_INFO"/>
+  <rebillErrorInfo mapField="REBILL_ERROR_INFO"/>
+  <currency mapField="CURRENCY_CD"/>
+  <mcr type="list" mapList="MCR">
+    <billSegmentId mapField="BSEG_ID"/>
+    <billCycle mapField="BILL_CYC_CD"/>
+    <windowStartDate dataType="date" mapField="WIN_START_DT"/>
+    <cancelReason2 mapField="CAN_RSN_CD"/>
+    <cancelBillSegmentId mapField="CAN_BSEG_ID"/>
+    <serviceAgreement2 mapField="SA_ID"/>
+    <billId mapField="BILL_ID"/>
+    <startDate dataType="date" mapField="START_DT"/>
+    <endDate dataType="date" mapField="END_DT"/>
+    <isEstimate dataType="boolean" mapField="EST_SW"/>
+    <isClosingBillSegment dataType="boolean" mapField="CLOSING_BSEG_SW"/>
+    <hasServiceQuantityOverride dataType="boolean" mapField="SQ_OVERRIDE_SW"/>
+    <isItemOverride dataType="boolean" mapField="ITEM_OVERRIDE_SW"/>
+    <premiseId2 mapField="PREM_ID"/>
+    <billSegmentStatus dataType="lookup" mapField="BSEG_STAT_FLG" lookup="BSEG_STAT_FLG"/>
+    <creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+    <statusChangeDateTime dataType="dateTime" mapField="STAT_CHG_DTTM"/>
+    <readSequence mapField="REBILL_SEG_ID"/>
+    <masterBillSegmentId mapField="MASTER_BSEG_ID"/>
+    <quoteDetailId mapField="QUOTE_DTL_ID"/>
+    <billSegmentDataArea mapField="BSEG_DATA_AREA"/>
+    <usageStartDateTime dataType="dateTime" mapField="MDM_START_DTTM"/>
+    <usageEndDateTime dataType="dateTime" mapField="MDM_END_DTTM"/>
+    <billScenarioId mapField="BILL_SCNR_ID"/>
+    <ilmDate dataType="date" mapField="ILM_DT"/>
+    <isEligibleForArchiving dataType="boolean" mapField="ILM_ARCH_SW"/>
+    <version dataType="number" mapField="VERSION"/>
+    <chgBsegStatFlgT mapField="C1_T_CHG_BSEG_STAT_FLG"/>
+    <canChangeServiceQuantityOverrideT dataType="boolean" mapField="C1_T_CHG_SQ_OVERRIDE_SW"/>
+    <chgItemOverrideSwitchT dataType="boolean" mapField="C1_T_CHG_ITEM_OVERRIDE_SW"/>
+    <hasProcess dataType="boolean" mapField="PROCESS_SW"/>
+    <billIsWoSw mapField="BILL_IS_WO_SW"/>
+    <currentAmount2 dataType="money" mapField="CUR_AMT"/>
+    <originalAmount dataType="money" mapField="ORIGINAL_AMT"/>
+    <billSegmentInformation mapField="BSEG_INFO"/>
+    <msgNoChange mapField="MSG_NO_CHANGE"/>
+  </mcr>
+  <cancelReason2 mapField="CAN_RSN_CD2"/>
+  <accountingDt2 dataType="date" mapField="ACCOUNTING_DT2"/>
+  <allowEstSw2 dataType="boolean" mapField="ALLOW_EST_SW2"/>
+  <billingOptSw2 dataType="boolean" mapField="BILLING_OPT_SW2"/>
+  <useOldInfoSw2 dataType="boolean" mapField="USE_OLD_INFO_SW2"/>
+  <showMcrResultSw2 dataType="boolean" mapField="SHOW_MCR_RESULT_SW2"/>
+  <bsegRebilledCnt2 dataType="number" mapField="BSEG_REBILLED_CNT2"/>
+  <bsegCancelledCnt2 dataType="number" mapField="BSEG_CANCELLED_CNT2"/>
+  <rebillErrorBsegId2 mapField="REBILL_ERROR_BSEG_ID2"/>
+  <rebillErrorStartDt2 mapField="REBILL_ERROR_START_DT2"/>
+  <rebillErrorEndDt2 mapField="REBILL_ERROR_END_DT2"/>
 </schema>

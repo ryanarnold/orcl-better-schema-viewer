@@ -1,79 +1,79 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<mo mapField="MAINT_OBJ_CD"/>
-	<pkValue1 mapField="PK_VALUE1"/>
-	<pkValue2 mapField="PK_VALUE2"/>
-	<pkValue3 mapField="PK_VALUE3"/>
-	<pkValue4 mapField="PK_VALUE4"/>
-	<pkValue5 mapField="PK_VALUE5"/>
-	<logEntryType dataType="lookup" mapField="LOG_ENTRY_TYPE_FLG" lookup="LOG_ENTRY_TYPE_FLG"/>
-	<logDateTime dataType="dateTime" default="%CurrentDateTime" mapField="LOG_DTTM"/>
-	<boStatus mapField="BO_STATUS_CD"/>
-	<description mapField="DESCRLONG"/>
-	<user default="%CurrentUser" mapField="USER_ID"/>
-	<logMessage default=" " mapField="LOG_MSG_TXT"/>
-	<characteristicType mapField="CHAR_TYPE_CD"/>
-	<characteristicValue mapField="CHAR_VAL"/>
-	<adhocValue mapField="ADHOC_CHAR_VAL"/>
-	<fkValue1 mapField="CHAR_VAL_FK1"/>
-	<fkValue2 mapField="CHAR_VAL_FK2"/>
-	<fkValue3 mapField="CHAR_VAL_FK3"/>
-	<fkValue4 mapField="CHAR_VAL_FK4"/>
-	<fkValue5 mapField="CHAR_VAL_FK5"/>
-	<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
-	<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
-	<messageParm1 mdField="F1_MSG_PARM_VLONG" mapField="MSG_PARM_VAL">
-		<row mapList="MSG_PARMS">
-			<SEQNO is="1"/>
-		</row>
-	</messageParm1>
-	<messageParmType1 dataType="lookup" mapField="MSG_PARM_TYP_FLG" rowRef="messageParm1" lookup="MSG_PARM_TYP_FLG"/>
-	<messageParm2 mdField="F1_MSG_PARM_VLONG" mapField="MSG_PARM_VAL">
-		<row mapList="MSG_PARMS">
-			<SEQNO is="2"/>
-		</row>
-	</messageParm2>
-	<messageParmType2 dataType="lookup" mapField="MSG_PARM_TYP_FLG" rowRef="messageParm2" lookup="MSG_PARM_TYP_FLG"/>
-	<messageParm3 mdField="F1_MSG_PARM_VLONG" mapField="MSG_PARM_VAL">
-		<row mapList="MSG_PARMS">
-			<SEQNO is="3"/>
-		</row>
-	</messageParm3>
-	<messageParmType3 dataType="lookup" mapField="MSG_PARM_TYP_FLG" rowRef="messageParm3" lookup="MSG_PARM_TYP_FLG"/>
-	<messageParm4 mdField="F1_MSG_PARM_VLONG" mapField="MSG_PARM_VAL">
-		<row mapList="MSG_PARMS">
-			<SEQNO is="4"/>
-		</row>
-	</messageParm4>
-	<messageParmType4 dataType="lookup" mapField="MSG_PARM_TYP_FLG" rowRef="messageParm4" lookup="MSG_PARM_TYP_FLG"/>
-	<messageParm5 mdField="F1_MSG_PARM_VLONG" mapField="MSG_PARM_VAL">
-		<row mapList="MSG_PARMS">
-			<SEQNO is="5"/>
-		</row>
-	</messageParm5>
-	<messageParmType5 dataType="lookup" mapField="MSG_PARM_TYP_FLG" rowRef="messageParm5" lookup="MSG_PARM_TYP_FLG"/>
-	<messageParm6 mdField="F1_MSG_PARM_VLONG" mapField="MSG_PARM_VAL">
-		<row mapList="MSG_PARMS">
-			<SEQNO is="6"/>
-		</row>
-	</messageParm6>
-	<messageParmType6 dataType="lookup" mapField="MSG_PARM_TYP_FLG" rowRef="messageParm6" lookup="MSG_PARM_TYP_FLG"/>
-	<messageParm7 mdField="F1_MSG_PARM_VLONG" mapField="MSG_PARM_VAL">
-		<row mapList="MSG_PARMS">
-			<SEQNO is="7"/>
-		</row>
-	</messageParm7>
-	<messageParmType7 dataType="lookup" mapField="MSG_PARM_TYP_FLG" rowRef="messageParm7" lookup="MSG_PARM_TYP_FLG"/>
-	<messageParm8 mdField="F1_MSG_PARM_VLONG" mapField="MSG_PARM_VAL">
-		<row mapList="MSG_PARMS">
-			<SEQNO is="8"/>
-		</row>
-	</messageParm8>
-	<messageParmType8 dataType="lookup" mapField="MSG_PARM_TYP_FLG" rowRef="messageParm8" lookup="MSG_PARM_TYP_FLG"/>
-	<messageParm9 mdField="F1_MSG_PARM_VLONG" mapField="MSG_PARM_VAL">
-		<row mapList="MSG_PARMS">
-			<SEQNO is="9"/>
-		</row>
-	</messageParm9>
-	<messageParmType9 dataType="lookup" mapField="MSG_PARM_TYP_FLG" rowRef="messageParm9" lookup="MSG_PARM_TYP_FLG"/>
+  <mo mapField="MAINT_OBJ_CD"/>
+  <pkValue1 mapField="PK_VALUE1"/>
+  <pkValue2 mapField="PK_VALUE2"/>
+  <pkValue3 mapField="PK_VALUE3"/>
+  <pkValue4 mapField="PK_VALUE4"/>
+  <pkValue5 mapField="PK_VALUE5"/>
+  <logEntryType dataType="lookup" mapField="LOG_ENTRY_TYPE_FLG" lookup="LOG_ENTRY_TYPE_FLG"/>
+  <logDateTime dataType="dateTime" default="%CurrentDateTime" mapField="LOG_DTTM"/>
+  <boStatus mapField="BO_STATUS_CD"/>
+  <description mapField="DESCRLONG"/>
+  <user default="%CurrentUser" mapField="USER_ID"/>
+  <logMessage default=" " mapField="LOG_MSG_TXT"/>
+  <characteristicType mapField="CHAR_TYPE_CD"/>
+  <characteristicValue mapField="CHAR_VAL"/>
+  <adhocValue mapField="ADHOC_CHAR_VAL"/>
+  <fkValue1 mapField="CHAR_VAL_FK1"/>
+  <fkValue2 mapField="CHAR_VAL_FK2"/>
+  <fkValue3 mapField="CHAR_VAL_FK3"/>
+  <fkValue4 mapField="CHAR_VAL_FK4"/>
+  <fkValue5 mapField="CHAR_VAL_FK5"/>
+  <messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+  <messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+  <messageParm1 mdField="F1_MSG_PARM_VLONG" mapField="MSG_PARM_VAL">
+    <row mapList="MSG_PARMS">
+      <SEQNO is="1"/>
+    </row>
+  </messageParm1>
+  <messageParmType1 dataType="lookup" mapField="MSG_PARM_TYP_FLG" rowRef="messageParm1" lookup="MSG_PARM_TYP_FLG"/>
+  <messageParm2 mdField="F1_MSG_PARM_VLONG" mapField="MSG_PARM_VAL">
+    <row mapList="MSG_PARMS">
+      <SEQNO is="2"/>
+    </row>
+  </messageParm2>
+  <messageParmType2 dataType="lookup" mapField="MSG_PARM_TYP_FLG" rowRef="messageParm2" lookup="MSG_PARM_TYP_FLG"/>
+  <messageParm3 mdField="F1_MSG_PARM_VLONG" mapField="MSG_PARM_VAL">
+    <row mapList="MSG_PARMS">
+      <SEQNO is="3"/>
+    </row>
+  </messageParm3>
+  <messageParmType3 dataType="lookup" mapField="MSG_PARM_TYP_FLG" rowRef="messageParm3" lookup="MSG_PARM_TYP_FLG"/>
+  <messageParm4 mdField="F1_MSG_PARM_VLONG" mapField="MSG_PARM_VAL">
+    <row mapList="MSG_PARMS">
+      <SEQNO is="4"/>
+    </row>
+  </messageParm4>
+  <messageParmType4 dataType="lookup" mapField="MSG_PARM_TYP_FLG" rowRef="messageParm4" lookup="MSG_PARM_TYP_FLG"/>
+  <messageParm5 mdField="F1_MSG_PARM_VLONG" mapField="MSG_PARM_VAL">
+    <row mapList="MSG_PARMS">
+      <SEQNO is="5"/>
+    </row>
+  </messageParm5>
+  <messageParmType5 dataType="lookup" mapField="MSG_PARM_TYP_FLG" rowRef="messageParm5" lookup="MSG_PARM_TYP_FLG"/>
+  <messageParm6 mdField="F1_MSG_PARM_VLONG" mapField="MSG_PARM_VAL">
+    <row mapList="MSG_PARMS">
+      <SEQNO is="6"/>
+    </row>
+  </messageParm6>
+  <messageParmType6 dataType="lookup" mapField="MSG_PARM_TYP_FLG" rowRef="messageParm6" lookup="MSG_PARM_TYP_FLG"/>
+  <messageParm7 mdField="F1_MSG_PARM_VLONG" mapField="MSG_PARM_VAL">
+    <row mapList="MSG_PARMS">
+      <SEQNO is="7"/>
+    </row>
+  </messageParm7>
+  <messageParmType7 dataType="lookup" mapField="MSG_PARM_TYP_FLG" rowRef="messageParm7" lookup="MSG_PARM_TYP_FLG"/>
+  <messageParm8 mdField="F1_MSG_PARM_VLONG" mapField="MSG_PARM_VAL">
+    <row mapList="MSG_PARMS">
+      <SEQNO is="8"/>
+    </row>
+  </messageParm8>
+  <messageParmType8 dataType="lookup" mapField="MSG_PARM_TYP_FLG" rowRef="messageParm8" lookup="MSG_PARM_TYP_FLG"/>
+  <messageParm9 mdField="F1_MSG_PARM_VLONG" mapField="MSG_PARM_VAL">
+    <row mapList="MSG_PARMS">
+      <SEQNO is="9"/>
+    </row>
+  </messageParm9>
+  <messageParmType9 dataType="lookup" mapField="MSG_PARM_TYP_FLG" rowRef="messageParm9" lookup="MSG_PARM_TYP_FLG"/>
 </schema>

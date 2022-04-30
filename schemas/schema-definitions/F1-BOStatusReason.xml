@@ -1,16 +1,16 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<bo suppress="true" mapField="BUS_OBJ_CD"/>
-	<boStatusBO suppress="input" mdField="BUS_OBJ_CD" fkRef="F1-BUSOB" mapField="BO_STATUS_BO_CD"/>
-	<boStatus mapField="BO_STATUS_CD"/>
-	<boStatusReason isPrimeKey="true" mapField="BO_STATUS_REASON_CD"/>
-	<description mapField="DESCR"/>
-	<selection required="true" dataType="lookup" mapField="STATUS_REASON_SELECT_FLG" lookup="STATUS_REASON_SELECT_FLG"/>
-	<version suppress="true" dataType="number" default="1" mapField="VERSION"/>
-	<usage mdField="STATUS_RSN_USAGE" mapField="CHAR_VAL">
-		<row mapChild="F1_BUS_OBJ_STATUS_RSN_CHAR">
-			<CHAR_TYPE_CD is="F1-SRUSG"/>
-			<SEQ_NUM is="1"/>
-		</row>
-	</usage>
+  <bo suppress="true" mapField="BUS_OBJ_CD"/>
+  <boStatusBO suppress="input" mdField="BUS_OBJ_CD" fkRef="F1-BUSOB" mapField="BO_STATUS_BO_CD"/>
+  <boStatus mapField="BO_STATUS_CD"/>
+  <boStatusReason isPrimeKey="true" mapField="BO_STATUS_REASON_CD"/>
+  <description mapField="DESCR"/>
+  <selection required="true" dataType="lookup" mapField="STATUS_REASON_SELECT_FLG" lookup="STATUS_REASON_SELECT_FLG"/>
+  <version suppress="true" dataType="number" default="1" mapField="VERSION"/>
+  <usage mdField="STATUS_RSN_USAGE" mapField="CHAR_VAL">
+    <row mapChild="F1_BUS_OBJ_STATUS_RSN_CHAR">
+      <CHAR_TYPE_CD is="F1-SRUSG"/>
+      <SEQ_NUM is="1"/>
+    </row>
+  </usage>
 </schema>

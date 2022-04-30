@@ -1,77 +1,77 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<outboundMsgId mapField="OUTMSG_ID"/>
-	<externalSystem fkRef="F1-ESTMP" mapField="NT_XID_CD"/>
-	<outboundMessageType fkRef="F1-OMTYP" mapField="OUTMSG_TYPE_CD"/>
-	<processingMethod dataType="lookup" mapField="OUTMSG_PROC_METH_FLG" lookup="OUTMSG_PROC_METH_FLG"/>
-	<outboundMessageStatus dataType="lookup" mapField="OUTMSG_STATUS_FLG" lookup="OUTMSG_STATUS_FLG"/>
-	<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
-	<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
-	<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
-	<errorDetail mapField="ERROR_DTL"/>
-	<input type="group" mapXML="XML_SOURCE">
-		<Password/>
-		<Username/>
-		<CaseId/>
-		<CustomerContactId/>
-		<NocDate/>
-		<NocType/>
-		<MoveOutNoc type="group">
-			<AccountId/>
-			<BuildingName/>
-			<CustomerName/>
-			<Flat/>
-			<Floor/>
-			<PremiseId/>
-			<PropertyNumber/>
-		</MoveOutNoc>
-		<OwnerNoc type="group">
-			<BuildingName/>
-			<CustomerName/>
-			<FlatOrShopNumber/>
-			<SewerageNumber/>
-		</OwnerNoc>
-		<ParcelNoc type="group">
-			<CustomerName/>
-			<PersonId/>
-			<PlotId/>
-		</ParcelNoc>
-		<PersonId/>
-		<TenantNocModel type="group">
-			<FlatOrShopNumber/>
-			<PlotNumber/>
-			<SewerageNumber/>
-			<TenantName/>
-		</TenantNocModel>
-		<OutsideTenantNocModel type="group">
-			<EmailAddress/>
-			<EmirateID/>
-			<FlatShopNumber/>
-			<MobileNumber/>
-			<PropertyType/>
-			<SearchId/>
-			<TenantName/>
-		</OutsideTenantNocModel>
-		<OutsideArraNocModel type="group">
-			<EmailAddress/>
-			<EmirateID/>
-			<FlatShopNumber/>
-			<MobileNumber/>
-			<Name/>
-			<ProjectName/>
-			<PropertyType/>
-			<SearchId/>
-		</OutsideArraNocModel>
-		<OutsideParcelNoc type="group">
-			<CustomerName/>
-			<EmailAddress/>
-			<EmirateID/>
-			<MobileNumber/>
-			<SearchId/>
-		</OutsideParcelNoc>
-	</input>
-	<CreateDigitalNocResult type="group" mapXML="XML_RESPONSE">
-		<Data/>
-		<Filename/>
-	</CreateDigitalNocResult>
+  <outboundMsgId mapField="OUTMSG_ID"/>
+  <externalSystem fkRef="F1-ESTMP" mapField="NT_XID_CD"/>
+  <outboundMessageType fkRef="F1-OMTYP" mapField="OUTMSG_TYPE_CD"/>
+  <processingMethod dataType="lookup" mapField="OUTMSG_PROC_METH_FLG" lookup="OUTMSG_PROC_METH_FLG"/>
+  <outboundMessageStatus dataType="lookup" mapField="OUTMSG_STATUS_FLG" lookup="OUTMSG_STATUS_FLG"/>
+  <creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+  <messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+  <messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+  <errorDetail mapField="ERROR_DTL"/>
+  <input type="group" mapXML="XML_SOURCE">
+    <Password/>
+    <Username/>
+    <CaseId/>
+    <CustomerContactId/>
+    <NocDate/>
+    <NocType/>
+    <MoveOutNoc type="group">
+      <AccountId/>
+      <BuildingName/>
+      <CustomerName/>
+      <Flat/>
+      <Floor/>
+      <PremiseId/>
+      <PropertyNumber/>
+    </MoveOutNoc>
+    <OwnerNoc type="group">
+      <BuildingName/>
+      <CustomerName/>
+      <FlatOrShopNumber/>
+      <SewerageNumber/>
+    </OwnerNoc>
+    <ParcelNoc type="group">
+      <CustomerName/>
+      <PersonId/>
+      <PlotId/>
+    </ParcelNoc>
+    <PersonId/>
+    <TenantNocModel type="group">
+      <FlatOrShopNumber/>
+      <PlotNumber/>
+      <SewerageNumber/>
+      <TenantName/>
+    </TenantNocModel>
+    <OutsideTenantNocModel type="group">
+      <EmailAddress/>
+      <EmirateID/>
+      <FlatShopNumber/>
+      <MobileNumber/>
+      <PropertyType/>
+      <SearchId/>
+      <TenantName/>
+    </OutsideTenantNocModel>
+    <OutsideArraNocModel type="group">
+      <EmailAddress/>
+      <EmirateID/>
+      <FlatShopNumber/>
+      <MobileNumber/>
+      <Name/>
+      <ProjectName/>
+      <PropertyType/>
+      <SearchId/>
+    </OutsideArraNocModel>
+    <OutsideParcelNoc type="group">
+      <CustomerName/>
+      <EmailAddress/>
+      <EmirateID/>
+      <MobileNumber/>
+      <SearchId/>
+    </OutsideParcelNoc>
+  </input>
+  <CreateDigitalNocResult type="group" mapXML="XML_RESPONSE">
+    <Data/>
+    <Filename/>
+  </CreateDigitalNocResult>
 </schema>

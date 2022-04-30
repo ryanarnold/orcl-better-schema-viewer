@@ -1,14 +1,14 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<caseId/>
-	<payCancelReason/>
-	<totalAmount/>
-	<userId/>
-	<payments type="list">
-		<paymentDate mdField="PAY_DT" dataType="date"/>
-		<accountId mdField="ACCT_ID"/>
-		<paymentId mdField="PAY_ID" fkRef="C1-PAY"/>
-		<paymentAmount/>
-	</payments>
-	<transactionRefId/>
+  <caseId/>
+  <payCancelReason/>
+  <totalAmount/>
+  <userId/>
+  <payments type="list">
+    <paymentDate mdField="PAY_DT" dataType="date"/>
+    <accountId mdField="ACCT_ID"/>
+    <paymentId mdField="PAY_ID" fkRef="C1-PAY"/>
+    <paymentAmount/>
+  </payments>
+  <transactionRefId/>
 </schema>

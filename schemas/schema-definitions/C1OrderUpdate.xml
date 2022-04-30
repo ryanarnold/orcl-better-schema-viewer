@@ -1,295 +1,295 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
-	<orderId mapField="ENRL_ID"/>
-	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
-	<allowAddressValidation dataType="boolean" mapField="C1_ALLOW_VAL_SW"/>
-	<addressValidationScript mapField="C1_VAL_SCR_CD"/>
-	<campaign mapField="CAMPAIGN_CD"/>
-	<salesPackageId mapField="PACKAGE_ID"/>
-	<startDate dataType="date" mapField="START_DT"/>
-	<orderStatus dataType="lookup" mapField="ENRL_STATUS_FLG" lookup="ENRL_STATUS_FLG"/>
-	<orderHoldReason mapField="ENRL_CALLBK_RSN_CD"/>
-	<reminderDateTime dataType="dateTime" mapField="ENRL_CALLBK_DTTM"/>
-	<holdToDoRole mapField="ENRL_CBK_ROLE_ID"/>
-	<holdUserId mapField="ENRL_CBK_USER_ID"/>
-	<orderCancelReason mapField="ENRL_CAN_RSN_CD"/>
-	<personId mapField="PER_ID"/>
-	<personVersion dataType="number" mapField="PER_VERSION"/>
-	<personOrBusiness dataType="lookup" mapField="PER_OR_BUS_FLG" lookup="PER_OR_BUS_FLG"/>
-	<emailAddress mapField="EMAILID"/>
-	<lifeSupportSensitiveLoad dataType="lookup" mapField="LS_SL_FLG" lookup="LS_SL_FLG"/>
-	<lifeSupportSensitiveLoadDescription mapField="LS_SL_DESCR"/>
-	<accountId mapField="ACCT_ID"/>
-	<accountVersion dataType="number" mapField="ACCT_VERSION"/>
-	<customerClass mapField="CUST_CL_CD"/>
-	<accountManagementGroup mapField="ACCT_MGMT_GRP_CD"/>
-	<billRouteType mapField="BILL_RTE_TYPE_CD"/>
-	<billAddressSource dataType="lookup" mapField="BILL_ADDR_SRCE_FLG" lookup="BILL_ADDR_SRCE_FLG"/>
-	<premiseId mapField="PREM_ID"/>
-	<premiseVersion dataType="number" mapField="PREM_VERSION"/>
-	<division mapField="CIS_DIVISION"/>
-	<premiseType mapField="PREM_TYPE_CD"/>
-	<geographicType mapField="GEO_TYPE_CD"/>
-	<geographicValue mapField="GEO_VAL"/>
-	<isEligibleForArchiving dataType="boolean" mapField="ILM_ARCH_SW"/>
-	<ilmDate dataType="date" mapField="ILM_DT"/>
-	<language mapField="LANGUAGE_CD"/>
-	<orderPersonInformationFlag dataType="lookup" mapField="ENRL_PER_INFO_FLG" lookup="ENRL_PER_INFO_FLG"/>
-	<orderAccountInformationFlag dataType="lookup" mapField="ENRL_ACCT_INFO_FLG" lookup="ENRL_ACCT_INFO_FLG"/>
-	<orderPremiseInformationFlag dataType="lookup" mapField="ENRL_PREM_INFO_FLG" lookup="ENRL_PREM_INFO_FLG"/>
-	<version dataType="number" mapField="VERSION"/>
-	<enrlNm type="list" mapList="ENRL_NM">
-		<orderId2 mapField="ENRL_ID"/>
-		<sequence dataType="number" mapField="SEQ_NUM"/>
-		<nameType dataType="lookup" mapField="NAME_TYPE_FLG" lookup="NAME_TYPE_FLG"/>
-		<entityName mapField="ENTITY_NAME"/>
-		<uppercaseEntityName mapField="ENTITY_NAME_UPR"/>
-		<isPrimaryName dataType="boolean" mapField="PRIM_NAME_SW"/>
-		<version2 dataType="number" mapField="VERSION"/>
-	</enrlNm>
-	<enrlPhn type="list" mapList="ENRL_PHN">
-		<orderId3 mapField="ENRL_ID"/>
-		<sequence2 dataType="number" mapField="SEQ_NUM"/>
-		<phoneType mapField="PHONE_TYPE_CD"/>
-		<phone mapField="PHONE"/>
-		<extension mapField="EXTENSION"/>
-		<version3 dataType="number" mapField="VERSION"/>
-		<phoneTypeFormat mapField="PHONE_TYPE_FORMAT"/>
-	</enrlPhn>
-	<enrlFld type="list" mapList="ENRL_FLD">
-		<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
-		<characteristicValue mapField="CHAR_VAL"/>
-		<columnReferenceValue mapField="COL_REF_VAL"/>
-		<orderId4 mapField="ENRL_ID"/>
-		<sequence3 dataType="number" mapField="SEQ_NUM"/>
-		<foreignKeyCharValue mapField="VAL_FK1"/>
-		<foreignKeyValue2 mapField="VAL_FK2"/>
-		<foreignKeyValue3 mapField="VAL_FK3"/>
-		<foreignKeyValue4 mapField="VAL_FK4"/>
-		<foreignKeyValue5 mapField="VAL_FK5"/>
-		<version4 dataType="number" mapField="VERSION"/>
-		<hashedColumnReferenceValue mapField="HASH_COL_REF_VAL"/>
-		<encryptedColumnReferenceValue mapField="ENCR_COL_REF_VAL"/>
-		<typeOfResponse dataType="lookup" mapField="CAMP_FLD_TYPE_FLG" lookup="CAMP_FLD_TYPE_FLG"/>
-		<campaignFieldPrompt mapField="CAMP_FLD_PROMPT"/>
-		<campaignFieldtypeUsage dataType="lookup" mapField="CAMP_FLDTY_USG_FLG" lookup="CAMP_FLDTY_USG_FLG"/>
-		<campaignFieldtypeDependency dataType="lookup" mapField="CAMP_FLDTY_DPN_FLG" lookup="CAMP_FLDTY_DPN_FLG"/>
-		<campaignCharacteristicEntity dataType="lookup" mapField="CAMP_CHAR_ENT_FLG" lookup="CAMP_CHAR_ENT_FLG"/>
-		<packageFieldOverrideUsage dataType="lookup" mapField="PKG_FLD_USG_FLG" lookup="PKG_FLD_USG_FLG"/>
-		<characteristicType mapField="CHAR_TYPE_CD"/>
-		<columnReference mapField="COL_REF_CD"/>
-		<foreignKeyReference mapField="FK_REF_CD"/>
-		<sortSequence dataType="number" mapField="SORT_SEQ5"/>
-		<searchNavigationKey mapField="SRCH_NAV_KEY"/>
-		<navigationOption mapField="NAV_OPT_CD"/>
-		<table mapField="TBL_NAME"/>
-		<infoProgram mapField="INFO_PRG"/>
-		<characteristicType2 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
-		<characteristicValueDescription mapField="CHAR_VAL_DESCR"/>
-		<foreignKeyCharacteristicValue mapField="VAL_FK_STR"/>
-		<foreignKeyInformation mapField="VAL_FK_INFO"/>
-		<isCompoundPrimaryKey dataType="boolean" mapField="COMP_PK_SW"/>
-		<charateristicValue mapField="COMP_PK_STR"/>
-		<isColumnReferenceForeignKey dataType="boolean" mapField="COL_REF_FK_SW"/>
-	</enrlFld>
-	<enrlLog type="list" mapList="ENRL_LOG">
-		<orderId5 mapField="ENRL_ID"/>
-		<sequence4 dataType="number" mapField="SEQ_NUM"/>
-		<version5 dataType="number" mapField="VERSION"/>
-		<orderLogDateTime dataType="dateTime" mapField="ENRL_LOG_DTTM"/>
-		<orderLogType dataType="lookup" mapField="ENRL_LOG_TYPE_FLG" lookup="ENRL_LOG_TYPE_FLG"/>
-		<longDescription mapField="DESCRLONG"/>
-		<user mapField="USER_ID"/>
-		<shouldAllowDeleteT dataType="boolean" mapField="C1_T_ALLOW_DELETE_SW"/>
-		<user2 mapField="USER_INFO"/>
-	</enrlLog>
-	<enrlInfo mapField="ENRL_INFO"/>
-	<statusDescr mapField="STATUS_DESCR"/>
-	<statusInfo mapField="STATUS_INFO"/>
-	<campaignInfo mapField="CAMPAIGN_INFO"/>
-	<accountUsage dataType="lookup" mapField="ACCT_OPT_FLG" lookup="ACCT_OPT_FLG"/>
-	<premiseUsage dataType="lookup" mapField="PREM_OPT_FLG" lookup="PREM_OPT_FLG"/>
-	<packageInfo mapField="PACKAGE_INFO"/>
-	<wPackageId mapField="W_PACKAGE_ID"/>
-	<entityName2 mapField="ENTITY_NAME"/>
-	<previousCampaignCode mapField="PREV_CAMPAIGN_CD"/>
-	<oldPersonId mapField="PREV_PER_ID"/>
-	<oldAcctId mapField="PREV_ACCT_ID"/>
-	<oldPremiseId mapField="PREV_PREM_ID"/>
-	<orderCompletionNavigationOption mapField="COMPL_NAV_OPT_CD"/>
-	<isOrderCompletionWithoutPackageAllowed dataType="boolean" mapField="ALW_COMPL_NOPKG_SW"/>
-	<orderCompletionWithoutPackageLabel mapField="COMPL_NOPKG_LABEL"/>
-	<wCallbackRsnCd mapField="W_CALLBACK_RSN_CD"/>
-	<callbackDatetime dataType="dateTime" mapField="W_CALLBACK_DTTM"/>
-	<wCallbackRoleId mapField="W_CALLBACK_ROLE_ID"/>
-	<wCallbackUserId mapField="W_CALLBACK_USER_ID"/>
-	<todoRoleDescr mapField="TODO_ROLE_DESCR"/>
-	<cbkUserInfo mapField="CBK_USER_INFO"/>
-	<wCallbackLogNote mapField="W_CALLBACK_LOG_NOTE"/>
-	<wCanRsnCd mapField="W_CAN_RSN_CD"/>
-	<wCancelLogNote mapField="W_CANCEL_LOG_NOTE"/>
-	<personInfo mapField="PER_INFO"/>
-	<entityName3 mapField="ENTITY_NAME_SRCH"/>
-	<address1Search mapField="ADDRESS1_SRCH"/>
-	<citySearch mapField="CITY_SRCH"/>
-	<premiseInfo mapField="PREM_INFO"/>
-	<accountId2 mapField="ACCT_ID_SRCH"/>
-	<accountInfo mapField="ACCT_INFO"/>
-	<perInfoPopup mapField="PER_INFO_POPUP"/>
-	<acctInfoPopup mapField="ACCT_INFO_POPUP"/>
-	<premInfoPopup mapField="PREM_INFO_POPUP"/>
-	<dfltRoleId mapField="DFLT_ROLE_ID"/>
-	<currentUserId mapField="CURRENT_USER_ID"/>
-	<currentUserInfo mapField="CURRENT_USER_INFO"/>
-	<quoteRouteType mapField="QTE_RTE_TYPE_CD"/>
-	<quoteRoutingMethod dataType="lookup" mapField="QTE_RTG_METH_FLG" lookup="QTE_RTG_METH_FLG"/>
-	<billRoutingMethod dataType="lookup" mapField="BILL_RTG_METH_FLG" lookup="BILL_RTG_METH_FLG"/>
-	<addrSrceMsg mapField="ADDR_SRCE_MSG"/>
-	<canShowPackageClicked dataType="boolean" mapField="SHW_PKG_CLICKED_SW"/>
-	<isCompleteButtonClicked dataType="boolean" mapField="CMPLT_CLICKED_SW"/>
-	<hasCampaignChanged dataType="boolean" mapField="CAMP_CD_CHANGED_SW"/>
-	<hasEnrollmentNameChanged dataType="boolean" mapField="ENRL_NM_CHANGED_SW"/>
-	<hasEnrollmentPhoneChanged dataType="boolean" mapField="ENRL_PH_CHANGED_SW"/>
-	<isDefaultForAdd dataType="boolean" mapField="DFLT_FOR_ADD_SW"/>
-	<enrlTodoMsg mapField="ENRL_TODO_MSG"/>
-	<identifierFormat mapField="IDENTIFIER_FORMAT"/>
-	<enrlId2 mapField="ENRL_ID2"/>
-	<idType mapField="ID_TYPE_CD"/>
-	<personIdNumber mapField="PER_ID_NBR"/>
-	<isPrimaryId dataType="boolean" mapField="PRIM_SW"/>
-	<version2 dataType="number" mapField="VERSION2"/>
-	<encryptedIdNumber mapField="ENCR_PER_ID_NBR"/>
-	<hashIdNumber mapField="HASH_PER_ID_NBR"/>
-	<country mapField="COUNTRY"/>
-	<address1 mapField="ADDRESS1"/>
-	<address2 mapField="ADDRESS2"/>
-	<address3 mapField="ADDRESS3"/>
-	<address4 mapField="ADDRESS4"/>
-	<city mapField="CITY"/>
-	<streetNumber1 mapField="NUM1"/>
-	<streetNumber2 mapField="NUM2"/>
-	<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
-	<county mapField="COUNTY"/>
-	<state mapField="STATE"/>
-	<postal mapField="POSTAL"/>
-	<taxVendorGeographicalCode mapField="GEO_CODE"/>
-	<isInCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
-	<trendArea mapField="TREND_AREA_CD"/>
-	<premStateDescr mapField="PREM_STATE_DESCR"/>
-	<geoValFormat mapField="GEO_VAL_FORMAT"/>
-	<premPostal mapField="PREM_POSTAL"/>
-	<country2 mapField="COUNTRY2"/>
-	<address1Available dataType="boolean" mapField="ADDR1_AVAIL"/>
-	<address2Available dataType="boolean" mapField="ADDR2_AVAIL"/>
-	<address3Available dataType="boolean" mapField="ADDR3_AVAIL"/>
-	<address4Available dataType="boolean" mapField="ADDR4_AVAIL"/>
-	<cityAvailable dataType="boolean" mapField="CITY_AVAIL"/>
-	<version3 dataType="number" mapField="VERSION3"/>
-	<number1Available dataType="boolean" mapField="NUM1_AVAIL"/>
-	<number2Available dataType="boolean" mapField="NUM2_AVAIL"/>
-	<houseTypeAvailable dataType="boolean" mapField="HOUSE_TYPE_AVAIL"/>
-	<countyAvailable dataType="boolean" mapField="COUNTY_AVAIL"/>
-	<stateAvailable dataType="boolean" mapField="STATE_AVAIL"/>
-	<postalAvailable dataType="boolean" mapField="POSTAL_AVAIL"/>
-	<inCityLimitAvailable dataType="boolean" mapField="IN_CITY_LIM_AVAIL"/>
-	<geoCodeAvailable dataType="boolean" mapField="GEO_CODE_AVAIL"/>
-	<language2 mapField="LANGUAGE_CD2"/>
-	<description mapField="DESCR"/>
-	<acctMgmtDescr mapField="ACCT_MGMT_DESCR"/>
-	<country3 mapField="COUNTRY3"/>
-	<address12 mapField="ADDRESS12"/>
-	<address22 mapField="ADDRESS22"/>
-	<address32 mapField="ADDRESS32"/>
-	<address42 mapField="ADDRESS42"/>
-	<city2 mapField="CITY2"/>
-	<num12 mapField="NUM12"/>
-	<num22 mapField="NUM22"/>
-	<houseType2 dataType="lookup" mapField="HOUSE_TYPE2" lookup="HOUSE_TYPE2"/>
-	<county2 mapField="COUNTY2"/>
-	<state2 mapField="STATE2"/>
-	<postal2 mapField="POSTAL2"/>
-	<geoCode2 mapField="GEO_CODE2"/>
-	<inCityLimit2 dataType="boolean" mapField="IN_CITY_LIMIT2"/>
-	<mailStateDescr mapField="MAIL_STATE_DESCR"/>
-	<mailPostal mapField="MAIL_POSTAL"/>
-	<country4 mapField="COUNTRY4"/>
-	<addr1Avail2 dataType="boolean" mapField="ADDR1_AVAIL2"/>
-	<addr2Avail2 dataType="boolean" mapField="ADDR2_AVAIL2"/>
-	<addr3Avail2 dataType="boolean" mapField="ADDR3_AVAIL2"/>
-	<addr4Avail2 dataType="boolean" mapField="ADDR4_AVAIL2"/>
-	<cityAvail2 dataType="boolean" mapField="CITY_AVAIL2"/>
-	<version4 dataType="number" mapField="VERSION4"/>
-	<num1Avail2 dataType="boolean" mapField="NUM1_AVAIL2"/>
-	<num2Avail2 dataType="boolean" mapField="NUM2_AVAIL2"/>
-	<houseTypeAvail2 dataType="boolean" mapField="HOUSE_TYPE_AVAIL2"/>
-	<countyAvail2 dataType="boolean" mapField="COUNTY_AVAIL2"/>
-	<stateAvail2 dataType="boolean" mapField="STATE_AVAIL2"/>
-	<postalAvail2 dataType="boolean" mapField="POSTAL_AVAIL2"/>
-	<inCityLimAvail2 dataType="boolean" mapField="IN_CITY_LIM_AVAIL2"/>
-	<geoCodeAvail2 dataType="boolean" mapField="GEO_CODE_AVAIL2"/>
-	<languageCd3 mapField="LANGUAGE_CD3"/>
-	<descr2 mapField="DESCR2"/>
-	<addr1Lbl2 mapField="ADDR1_LBL2"/>
-	<addr2Lbl2 mapField="ADDR2_LBL2"/>
-	<addr3Lbl2 mapField="ADDR3_LBL2"/>
-	<addr4Lbl2 mapField="ADDR4_LBL2"/>
-	<cityLbl2 mapField="CITY_LBL2"/>
-	<num1Lbl2 mapField="NUM1_LBL2"/>
-	<num2Lbl2 mapField="NUM2_LBL2"/>
-	<houseTypeLbl2 mapField="HOUSE_TYPE_LBL2"/>
-	<countyLbl2 mapField="COUNTY_LBL2"/>
-	<stateLbl2 mapField="STATE_LBL2"/>
-	<postalLabel2 mapField="POSTAL_LBL2"/>
-	<inCityLimLbl2 mapField="IN_CITY_LIM_LBL2"/>
-	<geoCodeLbl2 mapField="GEO_CODE_LBL2"/>
-	<isPersonOutOfSynchronization dataType="boolean" mapField="PER_OUT_OF_SYNC_SW"/>
-	<isAccountOutOfSync dataType="boolean" mapField="ACT_OUT_OF_SYNC_SW"/>
-	<isPremiseOutOfSynchronization dataType="boolean" mapField="PRM_OUT_OF_SYNC_SW"/>
-	<shouldProtectSynchronizeButton dataType="boolean" mapField="PROT_SYNC_BTN_SW"/>
-	<shouldProtectBillAddressSource dataType="boolean" mapField="PROT_ADR_SRC_SW"/>
-	<hasProtectCancelButton dataType="boolean" mapField="PROT_CANCEL_BTN_SW"/>
-	<shouldProtectCallbackButton dataType="boolean" mapField="PROT_CALLBK_BTN_SW"/>
-	<shouldProtectShowEligiblity dataType="boolean" mapField="PROT_SHOW_ELIG_SW"/>
-	<canSaveAndShowPackage dataType="boolean" mapField="ACTION_SHOW_PKG_SW"/>
-	<canComplete dataType="boolean" mapField="ACTION_COMPLETE_SW"/>
-	<canCallback dataType="boolean" mapField="ACTION_CALLBACK_SW"/>
-	<canCancelDeviceTest dataType="boolean" mapField="ACTION_CANCEL_SW"/>
-	<canSynchronize dataType="boolean" mapField="ACTION_SYNC_SW"/>
-	<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
-	<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
-	<messageText mapField="MSG_TEXT"/>
-	<pki type="list" mapList="PKI">
-		<salesPackageId2 mapField="PACKAGE_ID"/>
-		<sequence5 dataType="number" mapField="SEQ_NUM"/>
-		<displayIcon mapField="DISP_ICON_CD"/>
-		<sortSequence2 dataType="number" mapField="SORT_SEQ5"/>
-		<version6 dataType="number" mapField="VERSION"/>
-		<language2 mapField="LANGUAGE_CD"/>
-		<longDescription2 mapField="DESCRLONG"/>
-		<iconType dataType="lookup" mapField="ICON_TYPE_FLG" lookup="ICON_TYPE_FLG"/>
-		<url mapField="URL"/>
-	</pki>
-	<enrlMsg type="list" mapList="ENRL_MSG">
-		<messageText2 mapField="MSG_TEXT"/>
-		<messageCategory2 dataType="number" mapField="MESSAGE_CAT_NBR"/>
-		<messageNumber2 dataType="number" mapField="MESSAGE_NBR"/>
-	</enrlMsg>
-	<ciCreation type="list" mapList="CI_CREATION">
-		<customerInformationCreationAction dataType="lookup" mapField="CI_CREATE_ACT_FLG" lookup="CI_CREATE_ACT_FLG"/>
-		<division2 mapField="CIS_DIVISION"/>
-		<saType mapField="SA_TYPE_CD"/>
-		<startOption mapField="START_OPT_CD"/>
-		<spType mapField="SP_TYPE_CD"/>
-		<billableChargeTemplate mapField="BILL_CHG_TMPLT_CD"/>
-		<serviceType mapField="SVC_TYPE_CD"/>
-		<isServicePointRequired dataType="boolean" mapField="ALLOW_SP_SW"/>
-		<serviceAgreement mapField="SA_ID"/>
-		<servicePointId mapField="SP_ID"/>
-		<premiseId2 mapField="PREM_ID"/>
-		<billableChargeId mapField="BILLABLE_CHG_ID"/>
-		<reuseSaSequenceNumber dataType="number" mapField="REUSE_SA_SEQ_NUM"/>
-		<reuseSpSequenceNumber dataType="number" mapField="REUSE_SP_SEQ_NUM"/>
-	</ciCreation>
-	<enableAddrSrceFlg mapField="ENABLE_ADDR_SRCE_FLG"/>
+  <canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+  <orderId mapField="ENRL_ID"/>
+  <defaultFlag mapField="DEFAULT_FOR_FLG"/>
+  <allowAddressValidation dataType="boolean" mapField="C1_ALLOW_VAL_SW"/>
+  <addressValidationScript mapField="C1_VAL_SCR_CD"/>
+  <campaign mapField="CAMPAIGN_CD"/>
+  <salesPackageId mapField="PACKAGE_ID"/>
+  <startDate dataType="date" mapField="START_DT"/>
+  <orderStatus dataType="lookup" mapField="ENRL_STATUS_FLG" lookup="ENRL_STATUS_FLG"/>
+  <orderHoldReason mapField="ENRL_CALLBK_RSN_CD"/>
+  <reminderDateTime dataType="dateTime" mapField="ENRL_CALLBK_DTTM"/>
+  <holdToDoRole mapField="ENRL_CBK_ROLE_ID"/>
+  <holdUserId mapField="ENRL_CBK_USER_ID"/>
+  <orderCancelReason mapField="ENRL_CAN_RSN_CD"/>
+  <personId mapField="PER_ID"/>
+  <personVersion dataType="number" mapField="PER_VERSION"/>
+  <personOrBusiness dataType="lookup" mapField="PER_OR_BUS_FLG" lookup="PER_OR_BUS_FLG"/>
+  <emailAddress mapField="EMAILID"/>
+  <lifeSupportSensitiveLoad dataType="lookup" mapField="LS_SL_FLG" lookup="LS_SL_FLG"/>
+  <lifeSupportSensitiveLoadDescription mapField="LS_SL_DESCR"/>
+  <accountId mapField="ACCT_ID"/>
+  <accountVersion dataType="number" mapField="ACCT_VERSION"/>
+  <customerClass mapField="CUST_CL_CD"/>
+  <accountManagementGroup mapField="ACCT_MGMT_GRP_CD"/>
+  <billRouteType mapField="BILL_RTE_TYPE_CD"/>
+  <billAddressSource dataType="lookup" mapField="BILL_ADDR_SRCE_FLG" lookup="BILL_ADDR_SRCE_FLG"/>
+  <premiseId mapField="PREM_ID"/>
+  <premiseVersion dataType="number" mapField="PREM_VERSION"/>
+  <division mapField="CIS_DIVISION"/>
+  <premiseType mapField="PREM_TYPE_CD"/>
+  <geographicType mapField="GEO_TYPE_CD"/>
+  <geographicValue mapField="GEO_VAL"/>
+  <isEligibleForArchiving dataType="boolean" mapField="ILM_ARCH_SW"/>
+  <ilmDate dataType="date" mapField="ILM_DT"/>
+  <language mapField="LANGUAGE_CD"/>
+  <orderPersonInformationFlag dataType="lookup" mapField="ENRL_PER_INFO_FLG" lookup="ENRL_PER_INFO_FLG"/>
+  <orderAccountInformationFlag dataType="lookup" mapField="ENRL_ACCT_INFO_FLG" lookup="ENRL_ACCT_INFO_FLG"/>
+  <orderPremiseInformationFlag dataType="lookup" mapField="ENRL_PREM_INFO_FLG" lookup="ENRL_PREM_INFO_FLG"/>
+  <version dataType="number" mapField="VERSION"/>
+  <enrlNm type="list" mapList="ENRL_NM">
+    <orderId2 mapField="ENRL_ID"/>
+    <sequence dataType="number" mapField="SEQ_NUM"/>
+    <nameType dataType="lookup" mapField="NAME_TYPE_FLG" lookup="NAME_TYPE_FLG"/>
+    <entityName mapField="ENTITY_NAME"/>
+    <uppercaseEntityName mapField="ENTITY_NAME_UPR"/>
+    <isPrimaryName dataType="boolean" mapField="PRIM_NAME_SW"/>
+    <version2 dataType="number" mapField="VERSION"/>
+  </enrlNm>
+  <enrlPhn type="list" mapList="ENRL_PHN">
+    <orderId3 mapField="ENRL_ID"/>
+    <sequence2 dataType="number" mapField="SEQ_NUM"/>
+    <phoneType mapField="PHONE_TYPE_CD"/>
+    <phone mapField="PHONE"/>
+    <extension mapField="EXTENSION"/>
+    <version3 dataType="number" mapField="VERSION"/>
+    <phoneTypeFormat mapField="PHONE_TYPE_FORMAT"/>
+  </enrlPhn>
+  <enrlFld type="list" mapList="ENRL_FLD">
+    <adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+    <characteristicValue mapField="CHAR_VAL"/>
+    <columnReferenceValue mapField="COL_REF_VAL"/>
+    <orderId4 mapField="ENRL_ID"/>
+    <sequence3 dataType="number" mapField="SEQ_NUM"/>
+    <foreignKeyCharValue mapField="VAL_FK1"/>
+    <foreignKeyValue2 mapField="VAL_FK2"/>
+    <foreignKeyValue3 mapField="VAL_FK3"/>
+    <foreignKeyValue4 mapField="VAL_FK4"/>
+    <foreignKeyValue5 mapField="VAL_FK5"/>
+    <version4 dataType="number" mapField="VERSION"/>
+    <hashedColumnReferenceValue mapField="HASH_COL_REF_VAL"/>
+    <encryptedColumnReferenceValue mapField="ENCR_COL_REF_VAL"/>
+    <typeOfResponse dataType="lookup" mapField="CAMP_FLD_TYPE_FLG" lookup="CAMP_FLD_TYPE_FLG"/>
+    <campaignFieldPrompt mapField="CAMP_FLD_PROMPT"/>
+    <campaignFieldtypeUsage dataType="lookup" mapField="CAMP_FLDTY_USG_FLG" lookup="CAMP_FLDTY_USG_FLG"/>
+    <campaignFieldtypeDependency dataType="lookup" mapField="CAMP_FLDTY_DPN_FLG" lookup="CAMP_FLDTY_DPN_FLG"/>
+    <campaignCharacteristicEntity dataType="lookup" mapField="CAMP_CHAR_ENT_FLG" lookup="CAMP_CHAR_ENT_FLG"/>
+    <packageFieldOverrideUsage dataType="lookup" mapField="PKG_FLD_USG_FLG" lookup="PKG_FLD_USG_FLG"/>
+    <characteristicType mapField="CHAR_TYPE_CD"/>
+    <columnReference mapField="COL_REF_CD"/>
+    <foreignKeyReference mapField="FK_REF_CD"/>
+    <sortSequence dataType="number" mapField="SORT_SEQ5"/>
+    <searchNavigationKey mapField="SRCH_NAV_KEY"/>
+    <navigationOption mapField="NAV_OPT_CD"/>
+    <table mapField="TBL_NAME"/>
+    <infoProgram mapField="INFO_PRG"/>
+    <characteristicType2 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+    <characteristicValueDescription mapField="CHAR_VAL_DESCR"/>
+    <foreignKeyCharacteristicValue mapField="VAL_FK_STR"/>
+    <foreignKeyInformation mapField="VAL_FK_INFO"/>
+    <isCompoundPrimaryKey dataType="boolean" mapField="COMP_PK_SW"/>
+    <charateristicValue mapField="COMP_PK_STR"/>
+    <isColumnReferenceForeignKey dataType="boolean" mapField="COL_REF_FK_SW"/>
+  </enrlFld>
+  <enrlLog type="list" mapList="ENRL_LOG">
+    <orderId5 mapField="ENRL_ID"/>
+    <sequence4 dataType="number" mapField="SEQ_NUM"/>
+    <version5 dataType="number" mapField="VERSION"/>
+    <orderLogDateTime dataType="dateTime" mapField="ENRL_LOG_DTTM"/>
+    <orderLogType dataType="lookup" mapField="ENRL_LOG_TYPE_FLG" lookup="ENRL_LOG_TYPE_FLG"/>
+    <longDescription mapField="DESCRLONG"/>
+    <user mapField="USER_ID"/>
+    <shouldAllowDeleteT dataType="boolean" mapField="C1_T_ALLOW_DELETE_SW"/>
+    <user2 mapField="USER_INFO"/>
+  </enrlLog>
+  <enrlInfo mapField="ENRL_INFO"/>
+  <statusDescr mapField="STATUS_DESCR"/>
+  <statusInfo mapField="STATUS_INFO"/>
+  <campaignInfo mapField="CAMPAIGN_INFO"/>
+  <accountUsage dataType="lookup" mapField="ACCT_OPT_FLG" lookup="ACCT_OPT_FLG"/>
+  <premiseUsage dataType="lookup" mapField="PREM_OPT_FLG" lookup="PREM_OPT_FLG"/>
+  <packageInfo mapField="PACKAGE_INFO"/>
+  <wPackageId mapField="W_PACKAGE_ID"/>
+  <entityName2 mapField="ENTITY_NAME"/>
+  <previousCampaignCode mapField="PREV_CAMPAIGN_CD"/>
+  <oldPersonId mapField="PREV_PER_ID"/>
+  <oldAcctId mapField="PREV_ACCT_ID"/>
+  <oldPremiseId mapField="PREV_PREM_ID"/>
+  <orderCompletionNavigationOption mapField="COMPL_NAV_OPT_CD"/>
+  <isOrderCompletionWithoutPackageAllowed dataType="boolean" mapField="ALW_COMPL_NOPKG_SW"/>
+  <orderCompletionWithoutPackageLabel mapField="COMPL_NOPKG_LABEL"/>
+  <wCallbackRsnCd mapField="W_CALLBACK_RSN_CD"/>
+  <callbackDatetime dataType="dateTime" mapField="W_CALLBACK_DTTM"/>
+  <wCallbackRoleId mapField="W_CALLBACK_ROLE_ID"/>
+  <wCallbackUserId mapField="W_CALLBACK_USER_ID"/>
+  <todoRoleDescr mapField="TODO_ROLE_DESCR"/>
+  <cbkUserInfo mapField="CBK_USER_INFO"/>
+  <wCallbackLogNote mapField="W_CALLBACK_LOG_NOTE"/>
+  <wCanRsnCd mapField="W_CAN_RSN_CD"/>
+  <wCancelLogNote mapField="W_CANCEL_LOG_NOTE"/>
+  <personInfo mapField="PER_INFO"/>
+  <entityName3 mapField="ENTITY_NAME_SRCH"/>
+  <address1Search mapField="ADDRESS1_SRCH"/>
+  <citySearch mapField="CITY_SRCH"/>
+  <premiseInfo mapField="PREM_INFO"/>
+  <accountId2 mapField="ACCT_ID_SRCH"/>
+  <accountInfo mapField="ACCT_INFO"/>
+  <perInfoPopup mapField="PER_INFO_POPUP"/>
+  <acctInfoPopup mapField="ACCT_INFO_POPUP"/>
+  <premInfoPopup mapField="PREM_INFO_POPUP"/>
+  <dfltRoleId mapField="DFLT_ROLE_ID"/>
+  <currentUserId mapField="CURRENT_USER_ID"/>
+  <currentUserInfo mapField="CURRENT_USER_INFO"/>
+  <quoteRouteType mapField="QTE_RTE_TYPE_CD"/>
+  <quoteRoutingMethod dataType="lookup" mapField="QTE_RTG_METH_FLG" lookup="QTE_RTG_METH_FLG"/>
+  <billRoutingMethod dataType="lookup" mapField="BILL_RTG_METH_FLG" lookup="BILL_RTG_METH_FLG"/>
+  <addrSrceMsg mapField="ADDR_SRCE_MSG"/>
+  <canShowPackageClicked dataType="boolean" mapField="SHW_PKG_CLICKED_SW"/>
+  <isCompleteButtonClicked dataType="boolean" mapField="CMPLT_CLICKED_SW"/>
+  <hasCampaignChanged dataType="boolean" mapField="CAMP_CD_CHANGED_SW"/>
+  <hasEnrollmentNameChanged dataType="boolean" mapField="ENRL_NM_CHANGED_SW"/>
+  <hasEnrollmentPhoneChanged dataType="boolean" mapField="ENRL_PH_CHANGED_SW"/>
+  <isDefaultForAdd dataType="boolean" mapField="DFLT_FOR_ADD_SW"/>
+  <enrlTodoMsg mapField="ENRL_TODO_MSG"/>
+  <identifierFormat mapField="IDENTIFIER_FORMAT"/>
+  <enrlId2 mapField="ENRL_ID2"/>
+  <idType mapField="ID_TYPE_CD"/>
+  <personIdNumber mapField="PER_ID_NBR"/>
+  <isPrimaryId dataType="boolean" mapField="PRIM_SW"/>
+  <version2 dataType="number" mapField="VERSION2"/>
+  <encryptedIdNumber mapField="ENCR_PER_ID_NBR"/>
+  <hashIdNumber mapField="HASH_PER_ID_NBR"/>
+  <country mapField="COUNTRY"/>
+  <address1 mapField="ADDRESS1"/>
+  <address2 mapField="ADDRESS2"/>
+  <address3 mapField="ADDRESS3"/>
+  <address4 mapField="ADDRESS4"/>
+  <city mapField="CITY"/>
+  <streetNumber1 mapField="NUM1"/>
+  <streetNumber2 mapField="NUM2"/>
+  <houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+  <county mapField="COUNTY"/>
+  <state mapField="STATE"/>
+  <postal mapField="POSTAL"/>
+  <taxVendorGeographicalCode mapField="GEO_CODE"/>
+  <isInCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+  <trendArea mapField="TREND_AREA_CD"/>
+  <premStateDescr mapField="PREM_STATE_DESCR"/>
+  <geoValFormat mapField="GEO_VAL_FORMAT"/>
+  <premPostal mapField="PREM_POSTAL"/>
+  <country2 mapField="COUNTRY2"/>
+  <address1Available dataType="boolean" mapField="ADDR1_AVAIL"/>
+  <address2Available dataType="boolean" mapField="ADDR2_AVAIL"/>
+  <address3Available dataType="boolean" mapField="ADDR3_AVAIL"/>
+  <address4Available dataType="boolean" mapField="ADDR4_AVAIL"/>
+  <cityAvailable dataType="boolean" mapField="CITY_AVAIL"/>
+  <version3 dataType="number" mapField="VERSION3"/>
+  <number1Available dataType="boolean" mapField="NUM1_AVAIL"/>
+  <number2Available dataType="boolean" mapField="NUM2_AVAIL"/>
+  <houseTypeAvailable dataType="boolean" mapField="HOUSE_TYPE_AVAIL"/>
+  <countyAvailable dataType="boolean" mapField="COUNTY_AVAIL"/>
+  <stateAvailable dataType="boolean" mapField="STATE_AVAIL"/>
+  <postalAvailable dataType="boolean" mapField="POSTAL_AVAIL"/>
+  <inCityLimitAvailable dataType="boolean" mapField="IN_CITY_LIM_AVAIL"/>
+  <geoCodeAvailable dataType="boolean" mapField="GEO_CODE_AVAIL"/>
+  <language2 mapField="LANGUAGE_CD2"/>
+  <description mapField="DESCR"/>
+  <acctMgmtDescr mapField="ACCT_MGMT_DESCR"/>
+  <country3 mapField="COUNTRY3"/>
+  <address12 mapField="ADDRESS12"/>
+  <address22 mapField="ADDRESS22"/>
+  <address32 mapField="ADDRESS32"/>
+  <address42 mapField="ADDRESS42"/>
+  <city2 mapField="CITY2"/>
+  <num12 mapField="NUM12"/>
+  <num22 mapField="NUM22"/>
+  <houseType2 dataType="lookup" mapField="HOUSE_TYPE2" lookup="HOUSE_TYPE2"/>
+  <county2 mapField="COUNTY2"/>
+  <state2 mapField="STATE2"/>
+  <postal2 mapField="POSTAL2"/>
+  <geoCode2 mapField="GEO_CODE2"/>
+  <inCityLimit2 dataType="boolean" mapField="IN_CITY_LIMIT2"/>
+  <mailStateDescr mapField="MAIL_STATE_DESCR"/>
+  <mailPostal mapField="MAIL_POSTAL"/>
+  <country4 mapField="COUNTRY4"/>
+  <addr1Avail2 dataType="boolean" mapField="ADDR1_AVAIL2"/>
+  <addr2Avail2 dataType="boolean" mapField="ADDR2_AVAIL2"/>
+  <addr3Avail2 dataType="boolean" mapField="ADDR3_AVAIL2"/>
+  <addr4Avail2 dataType="boolean" mapField="ADDR4_AVAIL2"/>
+  <cityAvail2 dataType="boolean" mapField="CITY_AVAIL2"/>
+  <version4 dataType="number" mapField="VERSION4"/>
+  <num1Avail2 dataType="boolean" mapField="NUM1_AVAIL2"/>
+  <num2Avail2 dataType="boolean" mapField="NUM2_AVAIL2"/>
+  <houseTypeAvail2 dataType="boolean" mapField="HOUSE_TYPE_AVAIL2"/>
+  <countyAvail2 dataType="boolean" mapField="COUNTY_AVAIL2"/>
+  <stateAvail2 dataType="boolean" mapField="STATE_AVAIL2"/>
+  <postalAvail2 dataType="boolean" mapField="POSTAL_AVAIL2"/>
+  <inCityLimAvail2 dataType="boolean" mapField="IN_CITY_LIM_AVAIL2"/>
+  <geoCodeAvail2 dataType="boolean" mapField="GEO_CODE_AVAIL2"/>
+  <languageCd3 mapField="LANGUAGE_CD3"/>
+  <descr2 mapField="DESCR2"/>
+  <addr1Lbl2 mapField="ADDR1_LBL2"/>
+  <addr2Lbl2 mapField="ADDR2_LBL2"/>
+  <addr3Lbl2 mapField="ADDR3_LBL2"/>
+  <addr4Lbl2 mapField="ADDR4_LBL2"/>
+  <cityLbl2 mapField="CITY_LBL2"/>
+  <num1Lbl2 mapField="NUM1_LBL2"/>
+  <num2Lbl2 mapField="NUM2_LBL2"/>
+  <houseTypeLbl2 mapField="HOUSE_TYPE_LBL2"/>
+  <countyLbl2 mapField="COUNTY_LBL2"/>
+  <stateLbl2 mapField="STATE_LBL2"/>
+  <postalLabel2 mapField="POSTAL_LBL2"/>
+  <inCityLimLbl2 mapField="IN_CITY_LIM_LBL2"/>
+  <geoCodeLbl2 mapField="GEO_CODE_LBL2"/>
+  <isPersonOutOfSynchronization dataType="boolean" mapField="PER_OUT_OF_SYNC_SW"/>
+  <isAccountOutOfSync dataType="boolean" mapField="ACT_OUT_OF_SYNC_SW"/>
+  <isPremiseOutOfSynchronization dataType="boolean" mapField="PRM_OUT_OF_SYNC_SW"/>
+  <shouldProtectSynchronizeButton dataType="boolean" mapField="PROT_SYNC_BTN_SW"/>
+  <shouldProtectBillAddressSource dataType="boolean" mapField="PROT_ADR_SRC_SW"/>
+  <hasProtectCancelButton dataType="boolean" mapField="PROT_CANCEL_BTN_SW"/>
+  <shouldProtectCallbackButton dataType="boolean" mapField="PROT_CALLBK_BTN_SW"/>
+  <shouldProtectShowEligiblity dataType="boolean" mapField="PROT_SHOW_ELIG_SW"/>
+  <canSaveAndShowPackage dataType="boolean" mapField="ACTION_SHOW_PKG_SW"/>
+  <canComplete dataType="boolean" mapField="ACTION_COMPLETE_SW"/>
+  <canCallback dataType="boolean" mapField="ACTION_CALLBACK_SW"/>
+  <canCancelDeviceTest dataType="boolean" mapField="ACTION_CANCEL_SW"/>
+  <canSynchronize dataType="boolean" mapField="ACTION_SYNC_SW"/>
+  <messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+  <messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+  <messageText mapField="MSG_TEXT"/>
+  <pki type="list" mapList="PKI">
+    <salesPackageId2 mapField="PACKAGE_ID"/>
+    <sequence5 dataType="number" mapField="SEQ_NUM"/>
+    <displayIcon mapField="DISP_ICON_CD"/>
+    <sortSequence2 dataType="number" mapField="SORT_SEQ5"/>
+    <version6 dataType="number" mapField="VERSION"/>
+    <language2 mapField="LANGUAGE_CD"/>
+    <longDescription2 mapField="DESCRLONG"/>
+    <iconType dataType="lookup" mapField="ICON_TYPE_FLG" lookup="ICON_TYPE_FLG"/>
+    <url mapField="URL"/>
+  </pki>
+  <enrlMsg type="list" mapList="ENRL_MSG">
+    <messageText2 mapField="MSG_TEXT"/>
+    <messageCategory2 dataType="number" mapField="MESSAGE_CAT_NBR"/>
+    <messageNumber2 dataType="number" mapField="MESSAGE_NBR"/>
+  </enrlMsg>
+  <ciCreation type="list" mapList="CI_CREATION">
+    <customerInformationCreationAction dataType="lookup" mapField="CI_CREATE_ACT_FLG" lookup="CI_CREATE_ACT_FLG"/>
+    <division2 mapField="CIS_DIVISION"/>
+    <saType mapField="SA_TYPE_CD"/>
+    <startOption mapField="START_OPT_CD"/>
+    <spType mapField="SP_TYPE_CD"/>
+    <billableChargeTemplate mapField="BILL_CHG_TMPLT_CD"/>
+    <serviceType mapField="SVC_TYPE_CD"/>
+    <isServicePointRequired dataType="boolean" mapField="ALLOW_SP_SW"/>
+    <serviceAgreement mapField="SA_ID"/>
+    <servicePointId mapField="SP_ID"/>
+    <premiseId2 mapField="PREM_ID"/>
+    <billableChargeId mapField="BILLABLE_CHG_ID"/>
+    <reuseSaSequenceNumber dataType="number" mapField="REUSE_SA_SEQ_NUM"/>
+    <reuseSpSequenceNumber dataType="number" mapField="REUSE_SP_SEQ_NUM"/>
+  </ciCreation>
+  <enableAddrSrceFlg mapField="ENABLE_ADDR_SRCE_FLG"/>
 </schema>
