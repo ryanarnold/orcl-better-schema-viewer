@@ -24,7 +24,7 @@ function SchemaDefinition({ xml, xmlData, updateXpath }) {
   const codeStyle = {
     marginBottom: '0',
     padding: '0',
-    fontSize: '1.25rem',
+    fontSize: '1rem',
   };
 
   useEffect(() => setXmlLines(xml.split('\n')));
