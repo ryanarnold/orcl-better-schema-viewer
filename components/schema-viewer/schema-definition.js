@@ -27,7 +27,7 @@ function SchemaDefinition({ xml, xmlData, updateXpath }) {
     fontSize: '1rem',
   };
 
-  useEffect(() => setXmlLines(xml.split('\n').map((line, index) => ({ line, index }))));
+  useEffect(() => setXmlLines(xml.split('\n').map((line, index) => ({ line, index }))), []);
 
   return (
     xmlLines.map((line) => (
