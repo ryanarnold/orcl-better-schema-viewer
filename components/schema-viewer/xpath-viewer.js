@@ -11,7 +11,7 @@ function XpathViewer({ xpath }) {
         <div className="col" />
         <div className="col-12">
           <div className="input-group mb-3">
-            <input type="text" className="form-control" id="searchBox" placeholder="Click on a node to get the xpath" value={xpath} />
+            <input type="text" className="form-control" id="searchBox" placeholder="Click on a node to get the xpath" value={xpath} readOnly />
             <div className="input-group-append">
               <button className="btn btn-primary" type="button" onClick={copyXpathToClipboard}>Copy</button>
             </div>
