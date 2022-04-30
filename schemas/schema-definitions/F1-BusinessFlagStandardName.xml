@@ -1,24 +1,24 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<lookupValue mdField="BUS_FLG_STD_NAME" required="true" isPrimeKey="true" mapField="F1_EXT_LOOKUP_VALUE"/>
-	<bo suppress="true" isPrimeKey="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
-	<description required="true" mapField="DESCR"/>
-	<overrideDescription mapField="DESCR_OVRD"/>
-	<longDescription mapField="DESCRLONG"/>
-	<lookupUsage required="true" dataType="lookup" default="F1AC" mapField="F1_EXT_LOOKUP_USAGE_FLG" lookup="F1_EXT_LOOKUP_USAGE_FLG"/>
-	<owner suppress="input" dataType="lookup" mapField="OWNER_FLG" lookup="OWNER_FLG"/>
-	<version suppress="true" dataType="number" mapField="VERSION"/>
-	<category mdField="BUS_FLG_STD_NAME_CAT" required="true" mapField="CHAR_VAL">
-		<row mapChild="F1_EXT_LOOKUP_VAL_CHAR">
-			<CHAR_TYPE_CD is="F1-BUSFC"/>
-			<SEQ_NUM is="1"/>
-		</row>
-	</category>
-	<externalNames type="list" mapChild="F1_EXT_LOOKUP_VAL_CHAR">
-		<rowFilter>
-			<CHAR_TYPE_CD is="F1-BFEXN"/>
-		</rowFilter>
-		<sequence required="true" dataType="number" isPrimeKey="true" mapField="SEQ_NUM"/>
-		<externalName mdField="BUS_FLG_EXT_NAME" required="true" mapField="ADHOC_CHAR_VAL"/>
-	</externalNames>
+  <lookupValue mdField="BUS_FLG_STD_NAME" required="true" isPrimeKey="true" mapField="F1_EXT_LOOKUP_VALUE"/>
+  <bo suppress="true" isPrimeKey="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+  <description required="true" mapField="DESCR"/>
+  <overrideDescription mapField="DESCR_OVRD"/>
+  <longDescription mapField="DESCRLONG"/>
+  <lookupUsage required="true" dataType="lookup" default="F1AC" mapField="F1_EXT_LOOKUP_USAGE_FLG" lookup="F1_EXT_LOOKUP_USAGE_FLG"/>
+  <owner suppress="input" dataType="lookup" mapField="OWNER_FLG" lookup="OWNER_FLG"/>
+  <version suppress="true" dataType="number" mapField="VERSION"/>
+  <category mdField="BUS_FLG_STD_NAME_CAT" required="true" mapField="CHAR_VAL">
+    <row mapChild="F1_EXT_LOOKUP_VAL_CHAR">
+      <CHAR_TYPE_CD is="F1-BUSFC"/>
+      <SEQ_NUM is="1"/>
+    </row>
+  </category>
+  <externalNames type="list" mapChild="F1_EXT_LOOKUP_VAL_CHAR">
+    <rowFilter>
+      <CHAR_TYPE_CD is="F1-BFEXN"/>
+    </rowFilter>
+    <sequence required="true" dataType="number" isPrimeKey="true" mapField="SEQ_NUM"/>
+    <externalName mdField="BUS_FLG_EXT_NAME" required="true" mapField="ADHOC_CHAR_VAL"/>
+  </externalNames>
 </schema>

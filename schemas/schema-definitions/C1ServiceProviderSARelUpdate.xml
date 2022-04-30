@@ -1,44 +1,44 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
-	<serviceProvider mapField="SPR_CD"/>
-	<canRunRetrieve dataType="boolean" mapField="RETRIEVE_SW"/>
-	<saFilter dataType="lookup" mapField="SA_FILTER_FLG" lookup="SA_FILTER_FLG"/>
-	<saRelationshipType mapField="SA_REL_TYPE_CD"/>
-	<effectiveDate dataType="date" mapField="EFFDT"/>
-	<address1 mapField="ADDRESS1"/>
-	<city mapField="CITY"/>
-	<postal mapField="POSTAL"/>
-	<division mapField="CIS_DIVISION"/>
-	<saType mapField="SA_TYPE_CD"/>
-	<geographicType mapField="GEO_TYPE_CD"/>
-	<geographicValue mapField="GEO_VAL"/>
-	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
-	<serviceAgreement mapField="SA_ID"/>
-	<saStatus mapField="SA_STATUS"/>
-	<sprDescr mapField="SPR_DESCR"/>
-	<saRelDescr mapField="SA_REL_DESCR"/>
-	<saTypeDescription mapField="SA_TYPE_DESCR"/>
-	<expireDate dataType="date" mapField="EXPIRE_DT"/>
-	<addEffDt mapField="ADD_EFF_DT"/>
-	<canAddSARelationship dataType="boolean" mapField="ACTION_ADD_SAR_SW"/>
-	<canExpireSARelationship dataType="boolean" mapField="ACTION_EXP_SAR_SW"/>
-	<sarel type="list" mapList="SAREL">
-		<premiseId mapField="PREM_ID"/>
-		<premiseInfo mapField="PREM_INFO"/>
-		<accountId mapField="ACCT_ID"/>
-		<accountInfo mapField="ACCT_INFO"/>
-		<saInformation mapField="SA_INFO"/>
-		<subSaInfo mapField="SUB_SA_INFO"/>
-		<saRelInfo mapField="SA_REL_INFO"/>
-		<saRelationshipId mapField="SA_REL_ID"/>
-		<saRelationshipStatus dataType="lookup" mapField="SA_REL_STATUS_FLG" lookup="SA_REL_STATUS_FLG"/>
-		<effectiveDate2 dataType="date" mapField="EFFDT"/>
-		<serviceAgreement2 mapField="SA_ID"/>
-		<startDate dataType="date" mapField="START_DT"/>
-		<endDate dataType="date" mapField="END_DT"/>
-		<subSAId mapField="SUB_SA_ID"/>
-		<status dataType="lookup" mapField="SA_STATUS_FLG" lookup="SA_STATUS_FLG"/>
-		<hasProcess dataType="boolean" mapField="PROCESS_SW"/>
-	</sarel>
+  <canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+  <serviceProvider mapField="SPR_CD"/>
+  <canRunRetrieve dataType="boolean" mapField="RETRIEVE_SW"/>
+  <saFilter dataType="lookup" mapField="SA_FILTER_FLG" lookup="SA_FILTER_FLG"/>
+  <saRelationshipType mapField="SA_REL_TYPE_CD"/>
+  <effectiveDate dataType="date" mapField="EFFDT"/>
+  <address1 mapField="ADDRESS1"/>
+  <city mapField="CITY"/>
+  <postal mapField="POSTAL"/>
+  <division mapField="CIS_DIVISION"/>
+  <saType mapField="SA_TYPE_CD"/>
+  <geographicType mapField="GEO_TYPE_CD"/>
+  <geographicValue mapField="GEO_VAL"/>
+  <defaultFlag mapField="DEFAULT_FOR_FLG"/>
+  <serviceAgreement mapField="SA_ID"/>
+  <saStatus mapField="SA_STATUS"/>
+  <sprDescr mapField="SPR_DESCR"/>
+  <saRelDescr mapField="SA_REL_DESCR"/>
+  <saTypeDescription mapField="SA_TYPE_DESCR"/>
+  <expireDate dataType="date" mapField="EXPIRE_DT"/>
+  <addEffDt mapField="ADD_EFF_DT"/>
+  <canAddSARelationship dataType="boolean" mapField="ACTION_ADD_SAR_SW"/>
+  <canExpireSARelationship dataType="boolean" mapField="ACTION_EXP_SAR_SW"/>
+  <sarel type="list" mapList="SAREL">
+    <premiseId mapField="PREM_ID"/>
+    <premiseInfo mapField="PREM_INFO"/>
+    <accountId mapField="ACCT_ID"/>
+    <accountInfo mapField="ACCT_INFO"/>
+    <saInformation mapField="SA_INFO"/>
+    <subSaInfo mapField="SUB_SA_INFO"/>
+    <saRelInfo mapField="SA_REL_INFO"/>
+    <saRelationshipId mapField="SA_REL_ID"/>
+    <saRelationshipStatus dataType="lookup" mapField="SA_REL_STATUS_FLG" lookup="SA_REL_STATUS_FLG"/>
+    <effectiveDate2 dataType="date" mapField="EFFDT"/>
+    <serviceAgreement2 mapField="SA_ID"/>
+    <startDate dataType="date" mapField="START_DT"/>
+    <endDate dataType="date" mapField="END_DT"/>
+    <subSAId mapField="SUB_SA_ID"/>
+    <status dataType="lookup" mapField="SA_STATUS_FLG" lookup="SA_STATUS_FLG"/>
+    <hasProcess dataType="boolean" mapField="PROCESS_SW"/>
+  </sarel>
 </schema>

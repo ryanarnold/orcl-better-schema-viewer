@@ -1,154 +1,154 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<personId mapField="PER_ID"/>
-	<personOrBusiness dataType="lookup" mapField="PER_OR_BUS_FLG" lookup="PER_OR_BUS_FLG"/>
-	<lifeSupportSensitiveLoad dataType="lookup" mapField="LS_SL_FLG" lookup="LS_SL_FLG"/>
-	<lifeSupportSensitiveLoadDescription mapField="LS_SL_DESCR"/>
-	<emailAddress mapField="EMAILID"/>
-	<overrideMailingName1 mapField="OVRD_MAIL_NAME1"/>
-	<address1 mapField="ADDRESS1"/>
-	<address2 mapField="ADDRESS2"/>
-	<address3 mapField="ADDRESS3"/>
-	<address4 mapField="ADDRESS4"/>
-	<city mapField="CITY"/>
-	<streetNumber1 mapField="NUM1"/>
-	<streetNumber2 mapField="NUM2"/>
-	<county mapField="COUNTY"/>
-	<postal mapField="POSTAL"/>
-	<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
-	<taxVendorGeographicalCode mapField="GEO_CODE"/>
-	<isInCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
-	<state mapField="STATE"/>
-	<country mapField="COUNTRY"/>
-	<version dataType="number" mapField="VERSION"/>
-	<language mapField="LANGUAGE_CD"/>
-	<overrideMailingName2 mapField="OVRD_MAIL_NAME2"/>
-	<overrideMailingName3 mapField="OVRD_MAIL_NAME3"/>
-	<webSelfServicePassword mapField="WEB_PASSWD"/>
-	<webMarketingInfo dataType="lookup" mapField="RECV_MKTG_INFO_FLG" lookup="RECV_MKTG_INFO_FLG"/>
-	<webSelfServicePasswordHintAnswer mapField="WEB_PASSWD_ANS"/>
-	<webPasswordHint dataType="lookup" mapField="WEB_PWD_HINT_FLG" lookup="WEB_PWD_HINT_FLG"/>
-	<personDataArea mapField="PER_DATA_AREA"/>
-	<timeZone mapField="TIME_ZONE_CD"/>
-	<personContactDetail type="list" mapChild="C1_PER_CONTDET">
-		<contactDetail mapField="C1_CONTACT_ID"/>
-		<version dataType="number" mapField="VERSION"/>
-		<contactDetailValue mapField="CONTACT_VALUE"/>
-		<contactDetailValueExtension mapField="CONTACT_VALUE_EXT"/>
-		<personContactType mapField="COMM_RTE_TYPE_CD"/>
-		<contactDetailStatus dataType="lookup" mapField="CND_VERIF_STATUS_FLG" lookup="CND_VERIF_STATUS_FLG"/>
-		<dndEnd dataType="time" mapField="DND_END_TM"/>
-		<contactDetailPrimary dataType="lookup" mapField="CND_PRIMARY_FLG" lookup="CND_PRIMARY_FLG"/>
-		<dndStart dataType="time" mapField="DND_START_TM"/>
-		<personId mapField="PER_ID"/>
-		<contactDetailActiveInactive dataType="lookup" mapField="CND_ACTINACT_FLG" lookup="CND_ACTINACT_FLG"/>
-		<contactNickname mapField="CONTACT_NAME"/>
-	</personContactDetail>
-	<paymentOption type="list" mapChild="C1_PER_SS_PAYOPT">
-		<cssPaymentOptionId mapField="PER_PAY_OPT_ID"/>
-		<paymentType dataType="lookup" mapField="EXT_TYPE_FLG" lookup="EXT_TYPE_FLG"/>
-		<creditCardInfo type="group">
-			<cardType dataType="lookup" mapField="CARD_TYPE_FLG" lookup="CARD_TYPE_FLG"/>
-			<cardNumber mapField="CREDIT_CARD_NBR"/>
-			<encrCardNumber mapField="ENCR_CREDIT_CARD_NBR"/>
-			<hashCardNumber mapField="HASH_CREDIT_CARD_NBR"/>
-			<expiryMonth mapField="EXP_MONTH"/>
-			<expiryYear mapField="EXP_YEAR"/>
-			<cardHolderFName mapField="C1_CARDHOLDER_FNAME"/>
-			<cardHolderLName mapField="C1_CARDHOLDER_LNAME"/>
-			<country mapField="COUNTRY"/>
-			<addressLine1 mapField="ADDRESS1"/>
-			<addressLine2 mapField="ADDRESS2"/>
-			<addressLine3 mapField="ADDRESS3"/>
-			<addressLine4 mapField="ADDRESS4"/>
-			<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
-			<number1 mapField="NUM1"/>
-			<number2 mapField="NUM2"/>
-			<inCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
-			<city mapField="CITY"/>
-			<geographic mapField="GEO_CODE"/>
-			<county mapField="COUNTY"/>
-			<state mapField="STATE"/>
-			<postal mapField="POSTAL"/>
-		</creditCardInfo>
-		<bankAccountInfo type="group">
-			<routingNumber mapField="EXT_SOURCE_ID"/>
-			<accountNumber mapField="EXT_ACCT_ID"/>
-			<encrAccountNumber mapField="ENCR_EXT_ACCT_ID"/>
-			<hashAccountNumber mapField="HASH_EXT_ACCT_ID"/>
-			<apaySource mapField="APAY_SRC_CD"/>
-		</bankAccountInfo>
-	</paymentOption>
-	<personSeasonalAddress type="list" mapChild="CI_PER_ADDR_SEAS">
-		<personId mapField="PER_ID"/>
-		<sequence dataType="number" mapField="SEQ_NUM"/>
-		<effectiveStatus dataType="lookup" mapField="EFF_STATUS" lookup="EFF_STATUS"/>
-		<endMonthDay mapField="SEASON_END_MMDD"/>
-		<startMonthDay mapField="SEASON_START_MMDD"/>
-		<version dataType="number" mapField="VERSION"/>
-		<country mapField="COUNTRY"/>
-		<state mapField="STATE"/>
-		<isInCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
-		<taxVendorGeographicalCode mapField="GEO_CODE"/>
-		<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
-		<postal mapField="POSTAL"/>
-		<county mapField="COUNTY"/>
-		<streetNumber2 mapField="NUM2"/>
-		<streetNumber1 mapField="NUM1"/>
-		<city mapField="CITY"/>
-		<address4 mapField="ADDRESS4"/>
-		<address3 mapField="ADDRESS3"/>
-		<address2 mapField="ADDRESS2"/>
-		<address1 mapField="ADDRESS1"/>
-	</personSeasonalAddress>
-	<personCharacteristic type="list" mapChild="CI_PER_CHAR">
-		<personId mapField="PER_ID"/>
-		<characteristicType mapField="CHAR_TYPE_CD"/>
-		<characteristicValue mapField="CHAR_VAL"/>
-		<effectiveDate dataType="date" mapField="EFFDT"/>
-		<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
-		<version dataType="number" mapField="VERSION"/>
-		<characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
-		<characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
-		<characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
-		<characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
-		<characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
-		<searchCharacteristicValue mapField="SRCH_CHAR_VAL"/>
-	</personCharacteristic>
-	<personId2 type="list" mapChild="CI_PER_ID">
-		<personId mapField="PER_ID"/>
-		<idType mapField="ID_TYPE_CD"/>
-		<personIdNumber mapField="PER_ID_NBR"/>
-		<isPrimaryId dataType="boolean" mapField="PRIM_SW"/>
-		<version dataType="number" mapField="VERSION"/>
-		<encryptedIdNumber mapField="ENCR_PER_ID_NBR"/>
-		<hashIdNumber mapField="HASH_PER_ID_NBR"/>
-	</personId2>
-	<personName type="list" mapChild="CI_PER_NAME">
-		<uppercaseEntityName mapField="ENTITY_NAME_UPR"/>
-		<personId mapField="PER_ID"/>
-		<sequence dataType="number" mapField="SEQ_NUM"/>
-		<entityName mapField="ENTITY_NAME"/>
-		<nameType dataType="lookup" mapField="NAME_TYPE_FLG" lookup="NAME_TYPE_FLG"/>
-		<version dataType="number" mapField="VERSION"/>
-		<isPrimaryName dataType="boolean" mapField="PRIM_NAME_SW"/>
-	</personName>
-	<personPerson type="list" mapChild="CI_PER_PER">
-		<personId1 mapField="PER_ID1"/>
-		<personId2 mapField="PER_ID2"/>
-		<personRelationshipType mapField="PER_REL_TYPE_CD"/>
-		<startDate dataType="date" mapField="START_DT"/>
-		<endDate dataType="date" mapField="END_DT"/>
-		<hasFinancialRelationship dataType="boolean" mapField="FINAN_REL_SW"/>
-		<version dataType="number" mapField="VERSION"/>
-	</personPerson>
-	<personPhone type="list" mapChild="CI_PER_PHONE">
-		<personId mapField="PER_ID"/>
-		<sequence dataType="number" mapField="SEQ_NUM"/>
-		<phoneType mapField="PHONE_TYPE_CD"/>
-		<internationalPrefix mapField="COUNTRY_CODE"/>
-		<phone mapField="PHONE"/>
-		<extension mapField="EXTENSION"/>
-		<version dataType="number" mapField="VERSION"/>
-	</personPhone>
+  <personId mapField="PER_ID"/>
+  <personOrBusiness dataType="lookup" mapField="PER_OR_BUS_FLG" lookup="PER_OR_BUS_FLG"/>
+  <lifeSupportSensitiveLoad dataType="lookup" mapField="LS_SL_FLG" lookup="LS_SL_FLG"/>
+  <lifeSupportSensitiveLoadDescription mapField="LS_SL_DESCR"/>
+  <emailAddress mapField="EMAILID"/>
+  <overrideMailingName1 mapField="OVRD_MAIL_NAME1"/>
+  <address1 mapField="ADDRESS1"/>
+  <address2 mapField="ADDRESS2"/>
+  <address3 mapField="ADDRESS3"/>
+  <address4 mapField="ADDRESS4"/>
+  <city mapField="CITY"/>
+  <streetNumber1 mapField="NUM1"/>
+  <streetNumber2 mapField="NUM2"/>
+  <county mapField="COUNTY"/>
+  <postal mapField="POSTAL"/>
+  <houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+  <taxVendorGeographicalCode mapField="GEO_CODE"/>
+  <isInCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+  <state mapField="STATE"/>
+  <country mapField="COUNTRY"/>
+  <version dataType="number" mapField="VERSION"/>
+  <language mapField="LANGUAGE_CD"/>
+  <overrideMailingName2 mapField="OVRD_MAIL_NAME2"/>
+  <overrideMailingName3 mapField="OVRD_MAIL_NAME3"/>
+  <webSelfServicePassword mapField="WEB_PASSWD"/>
+  <webMarketingInfo dataType="lookup" mapField="RECV_MKTG_INFO_FLG" lookup="RECV_MKTG_INFO_FLG"/>
+  <webSelfServicePasswordHintAnswer mapField="WEB_PASSWD_ANS"/>
+  <webPasswordHint dataType="lookup" mapField="WEB_PWD_HINT_FLG" lookup="WEB_PWD_HINT_FLG"/>
+  <personDataArea mapField="PER_DATA_AREA"/>
+  <timeZone mapField="TIME_ZONE_CD"/>
+  <personContactDetail type="list" mapChild="C1_PER_CONTDET">
+    <contactDetail mapField="C1_CONTACT_ID"/>
+    <version dataType="number" mapField="VERSION"/>
+    <contactDetailValue mapField="CONTACT_VALUE"/>
+    <contactDetailValueExtension mapField="CONTACT_VALUE_EXT"/>
+    <personContactType mapField="COMM_RTE_TYPE_CD"/>
+    <contactDetailStatus dataType="lookup" mapField="CND_VERIF_STATUS_FLG" lookup="CND_VERIF_STATUS_FLG"/>
+    <dndEnd dataType="time" mapField="DND_END_TM"/>
+    <contactDetailPrimary dataType="lookup" mapField="CND_PRIMARY_FLG" lookup="CND_PRIMARY_FLG"/>
+    <dndStart dataType="time" mapField="DND_START_TM"/>
+    <personId mapField="PER_ID"/>
+    <contactDetailActiveInactive dataType="lookup" mapField="CND_ACTINACT_FLG" lookup="CND_ACTINACT_FLG"/>
+    <contactNickname mapField="CONTACT_NAME"/>
+  </personContactDetail>
+  <paymentOption type="list" mapChild="C1_PER_SS_PAYOPT">
+    <cssPaymentOptionId mapField="PER_PAY_OPT_ID"/>
+    <paymentType dataType="lookup" mapField="EXT_TYPE_FLG" lookup="EXT_TYPE_FLG"/>
+    <creditCardInfo type="group">
+      <cardType dataType="lookup" mapField="CARD_TYPE_FLG" lookup="CARD_TYPE_FLG"/>
+      <cardNumber mapField="CREDIT_CARD_NBR"/>
+      <encrCardNumber mapField="ENCR_CREDIT_CARD_NBR"/>
+      <hashCardNumber mapField="HASH_CREDIT_CARD_NBR"/>
+      <expiryMonth mapField="EXP_MONTH"/>
+      <expiryYear mapField="EXP_YEAR"/>
+      <cardHolderFName mapField="C1_CARDHOLDER_FNAME"/>
+      <cardHolderLName mapField="C1_CARDHOLDER_LNAME"/>
+      <country mapField="COUNTRY"/>
+      <addressLine1 mapField="ADDRESS1"/>
+      <addressLine2 mapField="ADDRESS2"/>
+      <addressLine3 mapField="ADDRESS3"/>
+      <addressLine4 mapField="ADDRESS4"/>
+      <houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+      <number1 mapField="NUM1"/>
+      <number2 mapField="NUM2"/>
+      <inCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+      <city mapField="CITY"/>
+      <geographic mapField="GEO_CODE"/>
+      <county mapField="COUNTY"/>
+      <state mapField="STATE"/>
+      <postal mapField="POSTAL"/>
+    </creditCardInfo>
+    <bankAccountInfo type="group">
+      <routingNumber mapField="EXT_SOURCE_ID"/>
+      <accountNumber mapField="EXT_ACCT_ID"/>
+      <encrAccountNumber mapField="ENCR_EXT_ACCT_ID"/>
+      <hashAccountNumber mapField="HASH_EXT_ACCT_ID"/>
+      <apaySource mapField="APAY_SRC_CD"/>
+    </bankAccountInfo>
+  </paymentOption>
+  <personSeasonalAddress type="list" mapChild="CI_PER_ADDR_SEAS">
+    <personId mapField="PER_ID"/>
+    <sequence dataType="number" mapField="SEQ_NUM"/>
+    <effectiveStatus dataType="lookup" mapField="EFF_STATUS" lookup="EFF_STATUS"/>
+    <endMonthDay mapField="SEASON_END_MMDD"/>
+    <startMonthDay mapField="SEASON_START_MMDD"/>
+    <version dataType="number" mapField="VERSION"/>
+    <country mapField="COUNTRY"/>
+    <state mapField="STATE"/>
+    <isInCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+    <taxVendorGeographicalCode mapField="GEO_CODE"/>
+    <houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+    <postal mapField="POSTAL"/>
+    <county mapField="COUNTY"/>
+    <streetNumber2 mapField="NUM2"/>
+    <streetNumber1 mapField="NUM1"/>
+    <city mapField="CITY"/>
+    <address4 mapField="ADDRESS4"/>
+    <address3 mapField="ADDRESS3"/>
+    <address2 mapField="ADDRESS2"/>
+    <address1 mapField="ADDRESS1"/>
+  </personSeasonalAddress>
+  <personCharacteristic type="list" mapChild="CI_PER_CHAR">
+    <personId mapField="PER_ID"/>
+    <characteristicType mapField="CHAR_TYPE_CD"/>
+    <characteristicValue mapField="CHAR_VAL"/>
+    <effectiveDate dataType="date" mapField="EFFDT"/>
+    <adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+    <version dataType="number" mapField="VERSION"/>
+    <characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
+    <characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+    <characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+    <characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
+    <characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+    <searchCharacteristicValue mapField="SRCH_CHAR_VAL"/>
+  </personCharacteristic>
+  <personId2 type="list" mapChild="CI_PER_ID">
+    <personId mapField="PER_ID"/>
+    <idType mapField="ID_TYPE_CD"/>
+    <personIdNumber mapField="PER_ID_NBR"/>
+    <isPrimaryId dataType="boolean" mapField="PRIM_SW"/>
+    <version dataType="number" mapField="VERSION"/>
+    <encryptedIdNumber mapField="ENCR_PER_ID_NBR"/>
+    <hashIdNumber mapField="HASH_PER_ID_NBR"/>
+  </personId2>
+  <personName type="list" mapChild="CI_PER_NAME">
+    <uppercaseEntityName mapField="ENTITY_NAME_UPR"/>
+    <personId mapField="PER_ID"/>
+    <sequence dataType="number" mapField="SEQ_NUM"/>
+    <entityName mapField="ENTITY_NAME"/>
+    <nameType dataType="lookup" mapField="NAME_TYPE_FLG" lookup="NAME_TYPE_FLG"/>
+    <version dataType="number" mapField="VERSION"/>
+    <isPrimaryName dataType="boolean" mapField="PRIM_NAME_SW"/>
+  </personName>
+  <personPerson type="list" mapChild="CI_PER_PER">
+    <personId1 mapField="PER_ID1"/>
+    <personId2 mapField="PER_ID2"/>
+    <personRelationshipType mapField="PER_REL_TYPE_CD"/>
+    <startDate dataType="date" mapField="START_DT"/>
+    <endDate dataType="date" mapField="END_DT"/>
+    <hasFinancialRelationship dataType="boolean" mapField="FINAN_REL_SW"/>
+    <version dataType="number" mapField="VERSION"/>
+  </personPerson>
+  <personPhone type="list" mapChild="CI_PER_PHONE">
+    <personId mapField="PER_ID"/>
+    <sequence dataType="number" mapField="SEQ_NUM"/>
+    <phoneType mapField="PHONE_TYPE_CD"/>
+    <internationalPrefix mapField="COUNTRY_CODE"/>
+    <phone mapField="PHONE"/>
+    <extension mapField="EXTENSION"/>
+    <version dataType="number" mapField="VERSION"/>
+  </personPhone>
 </schema>

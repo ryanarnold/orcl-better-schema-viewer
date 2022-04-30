@@ -1,32 +1,32 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
-	<fromMrCycCd mapField="FROM_MR_CYC_CD"/>
-	<fromMrRteCd mapField="FROM_MR_RTE_CD"/>
-	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
-	<spSeq type="list" mapList="SP_SEQ">
-		<meterReadCycle mapField="MR_CYC_CD"/>
-		<meterReadRoute mapField="MR_RTE_CD"/>
-		<meterReadCycleRouteSequence dataType="number" mapField="MR_CYC_RTE_SEQ"/>
-		<spType mapField="SP_TYPE_CD"/>
-		<spInformation mapField="SP_INFO"/>
-		<servicePointId mapField="SP_ID"/>
-	</spSeq>
-	<spSeq2 type="list" mapList="SP_SEQ2">
-		<meterReadCycle2 mapField="MR_CYC_CD"/>
-		<meterReadRoute2 mapField="MR_RTE_CD"/>
-		<meterReadCycleRouteSequence2 dataType="number" mapField="MR_CYC_RTE_SEQ"/>
-		<spType2 mapField="SP_TYPE_CD"/>
-		<spInformation2 mapField="SP_INFO"/>
-		<servicePointId2 mapField="SP_ID"/>
-	</spSeq2>
-	<sequenceFrom dataType="number" mapField="SEQ_FROM"/>
-	<sequenceTo dataType="number" mapField="SEQ_TO"/>
-	<fromMrRteDescr mapField="FROM_MR_RTE_DESCR"/>
-	<fromMrCycDescr mapField="FROM_MR_CYC_DESCR"/>
-	<toMrCycCd mapField="TO_MR_CYC_CD"/>
-	<toMrRteCd mapField="TO_MR_RTE_CD"/>
-	<startSequenceFrom dataType="number" mapField="START_SEQ_FROM"/>
-	<incrementBy dataType="number" mapField="INCREMENT_BY"/>
-	<toMrRteDescr mapField="TO_MR_RTE_DESCR"/>
+  <canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+  <fromMrCycCd mapField="FROM_MR_CYC_CD"/>
+  <fromMrRteCd mapField="FROM_MR_RTE_CD"/>
+  <defaultFlag mapField="DEFAULT_FOR_FLG"/>
+  <spSeq type="list" mapList="SP_SEQ">
+    <meterReadCycle mapField="MR_CYC_CD"/>
+    <meterReadRoute mapField="MR_RTE_CD"/>
+    <meterReadCycleRouteSequence dataType="number" mapField="MR_CYC_RTE_SEQ"/>
+    <spType mapField="SP_TYPE_CD"/>
+    <spInformation mapField="SP_INFO"/>
+    <servicePointId mapField="SP_ID"/>
+  </spSeq>
+  <spSeq2 type="list" mapList="SP_SEQ2">
+    <meterReadCycle2 mapField="MR_CYC_CD"/>
+    <meterReadRoute2 mapField="MR_RTE_CD"/>
+    <meterReadCycleRouteSequence2 dataType="number" mapField="MR_CYC_RTE_SEQ"/>
+    <spType2 mapField="SP_TYPE_CD"/>
+    <spInformation2 mapField="SP_INFO"/>
+    <servicePointId2 mapField="SP_ID"/>
+  </spSeq2>
+  <sequenceFrom dataType="number" mapField="SEQ_FROM"/>
+  <sequenceTo dataType="number" mapField="SEQ_TO"/>
+  <fromMrRteDescr mapField="FROM_MR_RTE_DESCR"/>
+  <fromMrCycDescr mapField="FROM_MR_CYC_DESCR"/>
+  <toMrCycCd mapField="TO_MR_CYC_CD"/>
+  <toMrRteCd mapField="TO_MR_RTE_CD"/>
+  <startSequenceFrom dataType="number" mapField="START_SEQ_FROM"/>
+  <incrementBy dataType="number" mapField="INCREMENT_BY"/>
+  <toMrRteDescr mapField="TO_MR_RTE_DESCR"/>
 </schema>

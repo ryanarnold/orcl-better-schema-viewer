@@ -1,18 +1,18 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<bo mapField="BUS_OBJ_CD"/>
-	<inputXML type="raw" mapXML="INPUT_XML"/>
-	<validateSchema dataType="boolean" mapField="F1_VLD_SCHEMA_SW"/>
-	<boAction dataType="lookup" mapField="BO_ACTION_FLG" lookup="BO_ACTION_FLG"/>
-	<executeValidationAlgorithm dataType="boolean" mapField="F1_EXEC_VLD_ALG_SW"/>
-	<resultErrors type="list" mapList="ERRORS">
-		<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
-		<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
-		<messageParameters type="group">
-			<parameters type="list" mapList="MSG_PARMS">
-				<parameterType dataType="lookup" mapField="MSG_PARM_TYP_FLG" lookup="MSG_PARM_TYP_FLG"/>
-				<parameterValue mapField="MSG_PARM_VAL"/>
-			</parameters>
-		</messageParameters>
-	</resultErrors>
+  <bo mapField="BUS_OBJ_CD"/>
+  <inputXML type="raw" mapXML="INPUT_XML"/>
+  <validateSchema dataType="boolean" mapField="F1_VLD_SCHEMA_SW"/>
+  <boAction dataType="lookup" mapField="BO_ACTION_FLG" lookup="BO_ACTION_FLG"/>
+  <executeValidationAlgorithm dataType="boolean" mapField="F1_EXEC_VLD_ALG_SW"/>
+  <resultErrors type="list" mapList="ERRORS">
+    <messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+    <messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+    <messageParameters type="group">
+      <parameters type="list" mapList="MSG_PARMS">
+        <parameterType dataType="lookup" mapField="MSG_PARM_TYP_FLG" lookup="MSG_PARM_TYP_FLG"/>
+        <parameterValue mapField="MSG_PARM_VAL"/>
+      </parameters>
+    </messageParameters>
+  </resultErrors>
 </schema>

@@ -1,145 +1,145 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
-	<quoteId mapField="QUOTE_ID"/>
-	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
-	<allowAddressValidation dataType="boolean" mapField="C1_ALLOW_VAL_SW"/>
-	<addressValidationScript mapField="C1_VAL_SCR_CD"/>
-	<quoteInfo mapField="QUOTE_INFO"/>
-	<accountInfo mapField="ACCT_INFO"/>
-	<isGenerateQuote dataType="boolean" mapField="QTE_GENERATE_SW"/>
-	<CompleteQuote dataType="boolean" mapField="QTE_COMPLETE_SW"/>
-	<isCloseQuote dataType="boolean" mapField="QTE_CLOSE_SW"/>
-	<canReopenQuote dataType="boolean" mapField="QTE_REOPEN_SW"/>
-	<isQuoteCancel dataType="boolean" mapField="QTE_CANCEL_SW"/>
-	<canDisplayQuote dataType="boolean" mapField="QTE_DISPLAY_SW"/>
-	<canGenerateQuoteDetail dataType="boolean" mapField="QD_GENERATE_SW"/>
-	<canDeleteQuoteDetail dataType="boolean" mapField="QD_DELETE_SW"/>
-	<isProposalSAAccept dataType="boolean" mapField="PSA_ACCEPT_SW"/>
-	<isProposalSADecline dataType="boolean" mapField="PSA_DECLINE_SW"/>
-	<isProposalSACancel dataType="boolean" mapField="PSA_CANCEL_SW"/>
-	<realSAStartDate dataType="date" mapField="RSA_START_DT"/>
-	<specialUsage dataType="lookup" mapField="SPECIAL_USAGE_FLG" lookup="SPECIAL_USAGE_FLG"/>
-	<generateQuoteOption dataType="lookup" mapField="GEN_QTE_OPT_FLG" lookup="GEN_QTE_OPT_FLG"/>
-	<proposalSAId mapField="PROP_SA_ID"/>
-	<proposalSAAction dataType="lookup" mapField="PROP_SA_ACTION" lookup="PROP_SA_ACTION"/>
-	<declineReason mapField="PROP_DCL_RSN_CD"/>
-	<emailLbl mapField="EMAIL_LBL"/>
-	<faxTelephone mapField="FAX_LBL"/>
-	<currency mapField="CURRENCY_CD"/>
-	<shouldProtectGenerate dataType="boolean" mapField="PROT_GEN_SW"/>
-	<canProtectDelete dataType="boolean" mapField="PROT_DEL_SW"/>
-	<canProtectComplete dataType="boolean" mapField="PROT_CMP_SW"/>
-	<canProtectClose dataType="boolean" mapField="PROT_CLS_SW"/>
-	<shouldProtectReopen dataType="boolean" mapField="PROT_REO_SW"/>
-	<shouldProtectCancel dataType="boolean" mapField="PROT_CNC_SW"/>
-	<canProtectDisplayButton dataType="boolean" mapField="PROT_DSP_SW"/>
-	<onLineDocUrl mapField="ON_LINE_DOC_URL"/>
-	<accountId mapField="ACCT_ID"/>
-	<quoteStatus dataType="lookup" mapField="QUOTE_STAT_FLG" lookup="QUOTE_STAT_FLG"/>
-	<expirationDateTime dataType="dateTime" mapField="EXPIRE_DTTM"/>
-	<version dataType="number" mapField="VERSION"/>
-	<isReopenAllowed dataType="boolean" mapField="ALLOW_REOPEN_SW"/>
-	<quoteDtl type="list" mapList="QUOTE_DTL">
-		<quoteDetailId mapField="QUOTE_DTL_ID"/>
-		<quoteId2 mapField="QUOTE_ID"/>
-		<serviceAgreement mapField="SA_ID"/>
-		<quoteDetailStatus dataType="lookup" mapField="QUOTE_DTL_STAT_FLG" lookup="QUOTE_DTL_STAT_FLG"/>
-		<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
-		<user mapField="USER_ID"/>
-		<saVersion dataType="number" mapField="SA_VERSION"/>
-		<version2 dataType="number" mapField="VERSION"/>
-		<saInformation mapField="SA_INFO"/>
-		<premiseId mapField="PREM_ID"/>
-		<premiseInfo mapField="PREM_INFO"/>
-		<totalAmount dataType="money" mapField="TOTAL_AMT"/>
-		<quoteDtlRemarks mapField="QUOTE_DTL_REMARKS"/>
-		<message mapField="QUOTE_DTL_MSG"/>
-		<quoteDetailInfo mapField="QUOTE_DTL_INFO"/>
-		<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
-		<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
-		<proposalSAStatus dataType="lookup" mapField="PROP_SA_STAT_FLG" lookup="PROP_SA_STAT_FLG"/>
-		<status dataType="lookup" mapField="SA_STATUS_FLG" lookup="SA_STATUS_FLG"/>
-		<hasProcess dataType="boolean" mapField="PROCESS_SW"/>
-		<specialUsage2 dataType="lookup" mapField="SPECIAL_USAGE_FLG" lookup="SPECIAL_USAGE_FLG"/>
-		<qdtlBseg type="list" mapList="QDTL_BSEG">
-			<quoteDetailId2 mapField="QUOTE_DTL_ID"/>
-			<billScenarioId mapField="BILL_SCNR_ID"/>
-			<billSegmentId mapField="BSEG_ID"/>
-			<billId mapField="BILL_ID"/>
-			<serviceAgreement2 mapField="SA_ID"/>
-			<startDate dataType="date" mapField="START_DT"/>
-			<endDate dataType="date" mapField="END_DT"/>
-			<billSegmentPeriod mapField="BSEG_PERIOD"/>
-			<amount dataType="money" mapField="BSEG_AMT"/>
-			<bsegRemarks mapField="BSEG_REMARKS"/>
-		</qdtlBseg>
-	</quoteDtl>
-	<qteRtg type="list" mapList="QTE_RTG">
-		<quoteId3 mapField="QUOTE_ID"/>
-		<sequence dataType="number" mapField="SEQNO"/>
-		<personId mapField="PER_ID"/>
-		<quoteRouteType mapField="QTE_RTE_TYPE_CD"/>
-		<batchControl mapField="BATCH_CD"/>
-		<batchNumber dataType="number" mapField="BATCH_NBR"/>
-		<extractDateTime dataType="dateTime" mapField="EXTRACT_DTTM"/>
-		<entityName1 mapField="ENTITY_NAME1"/>
-		<entityName2 mapField="ENTITY_NAME2"/>
-		<entityName3 mapField="ENTITY_NAME3"/>
-		<address1 mapField="ADDRESS1"/>
-		<address2 mapField="ADDRESS2"/>
-		<address3 mapField="ADDRESS3"/>
-		<address4 mapField="ADDRESS4"/>
-		<county mapField="COUNTY"/>
-		<city mapField="CITY"/>
-		<state mapField="STATE"/>
-		<country mapField="COUNTRY"/>
-		<streetNumber1 mapField="NUM1"/>
-		<streetNumber2 mapField="NUM2"/>
-		<taxVendorGeographicalCode mapField="GEO_CODE"/>
-		<houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
-		<isInCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
-		<postal mapField="POSTAL"/>
-		<version3 dataType="number" mapField="VERSION"/>
-		<shouldReprint dataType="boolean" mapField="REPRINT_SW"/>
-		<doNotExtract dataType="boolean" mapField="NO_BATCH_PRT_SW"/>
-		<emailAddress mapField="EMAILID"/>
-		<phoneFax mapField="PHONE_FAX"/>
-		<quoteRoutingMethod dataType="lookup" mapField="QTE_RTG_METH_FLG" lookup="QTE_RTG_METH_FLG"/>
-		<countryDescription mapField="COUNTRY_DESCR"/>
-		<stateDescription mapField="STATE_DESCR"/>
-		<statePostal mapField="STATE_POSTAL"/>
-		<primaryName mapField="PRIMARY_NAME"/>
-		<entityInfo mapField="ENTITY_INFO"/>
-		<country2 mapField="COUNTRY2"/>
-		<address1Available dataType="boolean" mapField="ADDR1_AVAIL"/>
-		<address2Available dataType="boolean" mapField="ADDR2_AVAIL"/>
-		<address3Available dataType="boolean" mapField="ADDR3_AVAIL"/>
-		<address4Available dataType="boolean" mapField="ADDR4_AVAIL"/>
-		<cityAvailable dataType="boolean" mapField="CITY_AVAIL"/>
-		<version2 dataType="number" mapField="VERSION2"/>
-		<number1Available dataType="boolean" mapField="NUM1_AVAIL"/>
-		<number2Available dataType="boolean" mapField="NUM2_AVAIL"/>
-		<houseTypeAvailable dataType="boolean" mapField="HOUSE_TYPE_AVAIL"/>
-		<countyAvailable dataType="boolean" mapField="COUNTY_AVAIL"/>
-		<stateAvailable dataType="boolean" mapField="STATE_AVAIL"/>
-		<postalAvailable dataType="boolean" mapField="POSTAL_AVAIL"/>
-		<inCityLimitAvailable dataType="boolean" mapField="IN_CITY_LIM_AVAIL"/>
-		<geoCodeAvailable dataType="boolean" mapField="GEO_CODE_AVAIL"/>
-		<language mapField="LANGUAGE_CD"/>
-		<description mapField="DESCR"/>
-		<address12 mapField="ADDR1_LBL"/>
-		<address22 mapField="ADDR2_LBL"/>
-		<address32 mapField="ADDR3_LBL"/>
-		<address42 mapField="ADDR4_LBL"/>
-		<city2 mapField="CITY_LBL"/>
-		<number1 mapField="NUM1_LBL"/>
-		<number2 mapField="NUM2_LBL"/>
-		<houseType2 mapField="HOUSE_TYPE_LBL"/>
-		<county2 mapField="COUNTY_LBL"/>
-		<state2 mapField="STATE_LBL"/>
-		<postal2 mapField="POSTAL_LBL"/>
-		<inCityLimit mapField="IN_CITY_LIM_LBL"/>
-		<geographicCode mapField="GEO_CODE_LBL"/>
-	</qteRtg>
+  <canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+  <quoteId mapField="QUOTE_ID"/>
+  <defaultFlag mapField="DEFAULT_FOR_FLG"/>
+  <allowAddressValidation dataType="boolean" mapField="C1_ALLOW_VAL_SW"/>
+  <addressValidationScript mapField="C1_VAL_SCR_CD"/>
+  <quoteInfo mapField="QUOTE_INFO"/>
+  <accountInfo mapField="ACCT_INFO"/>
+  <isGenerateQuote dataType="boolean" mapField="QTE_GENERATE_SW"/>
+  <CompleteQuote dataType="boolean" mapField="QTE_COMPLETE_SW"/>
+  <isCloseQuote dataType="boolean" mapField="QTE_CLOSE_SW"/>
+  <canReopenQuote dataType="boolean" mapField="QTE_REOPEN_SW"/>
+  <isQuoteCancel dataType="boolean" mapField="QTE_CANCEL_SW"/>
+  <canDisplayQuote dataType="boolean" mapField="QTE_DISPLAY_SW"/>
+  <canGenerateQuoteDetail dataType="boolean" mapField="QD_GENERATE_SW"/>
+  <canDeleteQuoteDetail dataType="boolean" mapField="QD_DELETE_SW"/>
+  <isProposalSAAccept dataType="boolean" mapField="PSA_ACCEPT_SW"/>
+  <isProposalSADecline dataType="boolean" mapField="PSA_DECLINE_SW"/>
+  <isProposalSACancel dataType="boolean" mapField="PSA_CANCEL_SW"/>
+  <realSAStartDate dataType="date" mapField="RSA_START_DT"/>
+  <specialUsage dataType="lookup" mapField="SPECIAL_USAGE_FLG" lookup="SPECIAL_USAGE_FLG"/>
+  <generateQuoteOption dataType="lookup" mapField="GEN_QTE_OPT_FLG" lookup="GEN_QTE_OPT_FLG"/>
+  <proposalSAId mapField="PROP_SA_ID"/>
+  <proposalSAAction dataType="lookup" mapField="PROP_SA_ACTION" lookup="PROP_SA_ACTION"/>
+  <declineReason mapField="PROP_DCL_RSN_CD"/>
+  <emailLbl mapField="EMAIL_LBL"/>
+  <faxTelephone mapField="FAX_LBL"/>
+  <currency mapField="CURRENCY_CD"/>
+  <shouldProtectGenerate dataType="boolean" mapField="PROT_GEN_SW"/>
+  <canProtectDelete dataType="boolean" mapField="PROT_DEL_SW"/>
+  <canProtectComplete dataType="boolean" mapField="PROT_CMP_SW"/>
+  <canProtectClose dataType="boolean" mapField="PROT_CLS_SW"/>
+  <shouldProtectReopen dataType="boolean" mapField="PROT_REO_SW"/>
+  <shouldProtectCancel dataType="boolean" mapField="PROT_CNC_SW"/>
+  <canProtectDisplayButton dataType="boolean" mapField="PROT_DSP_SW"/>
+  <onLineDocUrl mapField="ON_LINE_DOC_URL"/>
+  <accountId mapField="ACCT_ID"/>
+  <quoteStatus dataType="lookup" mapField="QUOTE_STAT_FLG" lookup="QUOTE_STAT_FLG"/>
+  <expirationDateTime dataType="dateTime" mapField="EXPIRE_DTTM"/>
+  <version dataType="number" mapField="VERSION"/>
+  <isReopenAllowed dataType="boolean" mapField="ALLOW_REOPEN_SW"/>
+  <quoteDtl type="list" mapList="QUOTE_DTL">
+    <quoteDetailId mapField="QUOTE_DTL_ID"/>
+    <quoteId2 mapField="QUOTE_ID"/>
+    <serviceAgreement mapField="SA_ID"/>
+    <quoteDetailStatus dataType="lookup" mapField="QUOTE_DTL_STAT_FLG" lookup="QUOTE_DTL_STAT_FLG"/>
+    <creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+    <user mapField="USER_ID"/>
+    <saVersion dataType="number" mapField="SA_VERSION"/>
+    <version2 dataType="number" mapField="VERSION"/>
+    <saInformation mapField="SA_INFO"/>
+    <premiseId mapField="PREM_ID"/>
+    <premiseInfo mapField="PREM_INFO"/>
+    <totalAmount dataType="money" mapField="TOTAL_AMT"/>
+    <quoteDtlRemarks mapField="QUOTE_DTL_REMARKS"/>
+    <message mapField="QUOTE_DTL_MSG"/>
+    <quoteDetailInfo mapField="QUOTE_DTL_INFO"/>
+    <messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+    <messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+    <proposalSAStatus dataType="lookup" mapField="PROP_SA_STAT_FLG" lookup="PROP_SA_STAT_FLG"/>
+    <status dataType="lookup" mapField="SA_STATUS_FLG" lookup="SA_STATUS_FLG"/>
+    <hasProcess dataType="boolean" mapField="PROCESS_SW"/>
+    <specialUsage2 dataType="lookup" mapField="SPECIAL_USAGE_FLG" lookup="SPECIAL_USAGE_FLG"/>
+    <qdtlBseg type="list" mapList="QDTL_BSEG">
+      <quoteDetailId2 mapField="QUOTE_DTL_ID"/>
+      <billScenarioId mapField="BILL_SCNR_ID"/>
+      <billSegmentId mapField="BSEG_ID"/>
+      <billId mapField="BILL_ID"/>
+      <serviceAgreement2 mapField="SA_ID"/>
+      <startDate dataType="date" mapField="START_DT"/>
+      <endDate dataType="date" mapField="END_DT"/>
+      <billSegmentPeriod mapField="BSEG_PERIOD"/>
+      <amount dataType="money" mapField="BSEG_AMT"/>
+      <bsegRemarks mapField="BSEG_REMARKS"/>
+    </qdtlBseg>
+  </quoteDtl>
+  <qteRtg type="list" mapList="QTE_RTG">
+    <quoteId3 mapField="QUOTE_ID"/>
+    <sequence dataType="number" mapField="SEQNO"/>
+    <personId mapField="PER_ID"/>
+    <quoteRouteType mapField="QTE_RTE_TYPE_CD"/>
+    <batchControl mapField="BATCH_CD"/>
+    <batchNumber dataType="number" mapField="BATCH_NBR"/>
+    <extractDateTime dataType="dateTime" mapField="EXTRACT_DTTM"/>
+    <entityName1 mapField="ENTITY_NAME1"/>
+    <entityName2 mapField="ENTITY_NAME2"/>
+    <entityName3 mapField="ENTITY_NAME3"/>
+    <address1 mapField="ADDRESS1"/>
+    <address2 mapField="ADDRESS2"/>
+    <address3 mapField="ADDRESS3"/>
+    <address4 mapField="ADDRESS4"/>
+    <county mapField="COUNTY"/>
+    <city mapField="CITY"/>
+    <state mapField="STATE"/>
+    <country mapField="COUNTRY"/>
+    <streetNumber1 mapField="NUM1"/>
+    <streetNumber2 mapField="NUM2"/>
+    <taxVendorGeographicalCode mapField="GEO_CODE"/>
+    <houseType dataType="lookup" mapField="HOUSE_TYPE" lookup="HOUSE_TYPE"/>
+    <isInCityLimit dataType="boolean" mapField="IN_CITY_LIMIT"/>
+    <postal mapField="POSTAL"/>
+    <version3 dataType="number" mapField="VERSION"/>
+    <shouldReprint dataType="boolean" mapField="REPRINT_SW"/>
+    <doNotExtract dataType="boolean" mapField="NO_BATCH_PRT_SW"/>
+    <emailAddress mapField="EMAILID"/>
+    <phoneFax mapField="PHONE_FAX"/>
+    <quoteRoutingMethod dataType="lookup" mapField="QTE_RTG_METH_FLG" lookup="QTE_RTG_METH_FLG"/>
+    <countryDescription mapField="COUNTRY_DESCR"/>
+    <stateDescription mapField="STATE_DESCR"/>
+    <statePostal mapField="STATE_POSTAL"/>
+    <primaryName mapField="PRIMARY_NAME"/>
+    <entityInfo mapField="ENTITY_INFO"/>
+    <country2 mapField="COUNTRY2"/>
+    <address1Available dataType="boolean" mapField="ADDR1_AVAIL"/>
+    <address2Available dataType="boolean" mapField="ADDR2_AVAIL"/>
+    <address3Available dataType="boolean" mapField="ADDR3_AVAIL"/>
+    <address4Available dataType="boolean" mapField="ADDR4_AVAIL"/>
+    <cityAvailable dataType="boolean" mapField="CITY_AVAIL"/>
+    <version2 dataType="number" mapField="VERSION2"/>
+    <number1Available dataType="boolean" mapField="NUM1_AVAIL"/>
+    <number2Available dataType="boolean" mapField="NUM2_AVAIL"/>
+    <houseTypeAvailable dataType="boolean" mapField="HOUSE_TYPE_AVAIL"/>
+    <countyAvailable dataType="boolean" mapField="COUNTY_AVAIL"/>
+    <stateAvailable dataType="boolean" mapField="STATE_AVAIL"/>
+    <postalAvailable dataType="boolean" mapField="POSTAL_AVAIL"/>
+    <inCityLimitAvailable dataType="boolean" mapField="IN_CITY_LIM_AVAIL"/>
+    <geoCodeAvailable dataType="boolean" mapField="GEO_CODE_AVAIL"/>
+    <language mapField="LANGUAGE_CD"/>
+    <description mapField="DESCR"/>
+    <address12 mapField="ADDR1_LBL"/>
+    <address22 mapField="ADDR2_LBL"/>
+    <address32 mapField="ADDR3_LBL"/>
+    <address42 mapField="ADDR4_LBL"/>
+    <city2 mapField="CITY_LBL"/>
+    <number1 mapField="NUM1_LBL"/>
+    <number2 mapField="NUM2_LBL"/>
+    <houseType2 mapField="HOUSE_TYPE_LBL"/>
+    <county2 mapField="COUNTY_LBL"/>
+    <state2 mapField="STATE_LBL"/>
+    <postal2 mapField="POSTAL_LBL"/>
+    <inCityLimit mapField="IN_CITY_LIM_LBL"/>
+    <geographicCode mapField="GEO_CODE_LBL"/>
+  </qteRtg>
 </schema>

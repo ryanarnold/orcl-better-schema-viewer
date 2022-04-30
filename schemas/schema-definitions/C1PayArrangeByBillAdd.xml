@@ -1,71 +1,71 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
-	<serviceAgreement mapField="SA_ID"/>
-	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
-	<division mapField="CIS_DIVISION"/>
-	<saType mapField="SA_TYPE_CD"/>
-	<status dataType="lookup" mapField="SA_STATUS_FLG" lookup="SA_STATUS_FLG"/>
-	<accountId mapField="ACCT_ID"/>
-	<startDate dataType="date" mapField="START_DT"/>
-	<endDate dataType="date" mapField="END_DT"/>
-	<oldAccountId mapField="OLD_ACCT_ID"/>
-	<saRelationshipId mapField="SA_REL_ID"/>
-	<areEstimatesAllowed dataType="boolean" mapField="ALLOW_EST_SW"/>
-	<customerRead dataType="lookup" mapField="CUST_READ_FLG" lookup="CUST_READ_FLG"/>
-	<sicCode mapField="SIC_CD"/>
-	<premiseId mapField="CHAR_PREM_ID"/>
-	<startOption mapField="START_OPT_CD"/>
-	<totalAmountToBill dataType="money" mapField="TOT_TO_BILL_AMT"/>
-	<version dataType="number" mapField="VERSION"/>
-	<currency mapField="CURRENCY_CD"/>
-	<maxBillThreshold dataType="money" mapField="HIGH_BILL_AMT"/>
-	<depositInterestCalculated dataType="date" mapField="INT_CALC_DT"/>
-	<ciacReviewDate dataType="date" mapField="CIAC_REVIEW_DT"/>
-	<startReason dataType="lookup" mapField="STRT_RSN_FLG" lookup="STRT_RSN_FLG"/>
-	<stopReason dataType="lookup" mapField="STOP_RSN_FLG" lookup="STOP_RSN_FLG"/>
-	<startRequestedBy mapField="STRT_REQED_BY"/>
-	<stopRequestedBy mapField="STOP_REQED_BY"/>
-	<businessActivityDescription mapField="BUS_ACTIVITY_DESC"/>
-	<orderId mapField="ENRL_ID"/>
-	<ibSACutoffTime dataType="time" mapField="IB_SA_CUTOFF_TM"/>
-	<startDayOption dataType="lookup" mapField="IB_BASE_TM_DAY_FLG" lookup="IB_BASE_TM_DAY_FLG"/>
-	<specialUsage dataType="lookup" mapField="SPECIAL_USAGE_FLG" lookup="SPECIAL_USAGE_FLG"/>
-	<proposalSAStatus dataType="lookup" mapField="PROP_SA_STAT_FLG" lookup="PROP_SA_STAT_FLG"/>
-	<declineReason mapField="PROP_DCL_RSN_CD"/>
-	<proposalSAId mapField="PROP_SA_ID"/>
-	<numberOfPaymentPeriods dataType="number" mapField="NBR_PYMNT_PERIODS"/>
-	<recommendationRule mapField="NB_RULE_CD"/>
-	<expireDate dataType="date" mapField="EXPIRE_DT"/>
-	<renewalDate dataType="date" mapField="RENEWAL_DT"/>
-	<nbbAutopay dataType="lookup" mapField="NB_APAY_FLG" lookup="NB_APAY_FLG"/>
-	<saDataArea mapField="SA_DATA_AREA"/>
-	<ibSaCutoffDttmTm mapField="IB_SA_CUTOFF_DTTM_TM"/>
-	<saInformation mapField="SA_INFO"/>
-	<paCurAmt dataType="money" mapField="PA_CUR_AMT"/>
-	<paTotAmt dataType="money" mapField="PA_TOT_AMT"/>
-	<accountName mapField="ACCT_NAME"/>
-	<acctCurAmt dataType="money" mapField="ACCT_CUR_AMT"/>
-	<acctTotAmt dataType="money" mapField="ACCT_TOT_AMT"/>
-	<billTotAmt dataType="money" mapField="BILL_TOT_AMT"/>
-	<newPayoffBal dataType="money" mapField="NEW_PAYOFF_BAL"/>
-	<totBillsSelected dataType="number" mapField="TOT_BILLS_SELECTED"/>
-	<installment dataType="number" mapField="INSTALLMENT"/>
-	<recurringChargeAmount dataType="money" mapField="RCR_CHG_AMT"/>
-	<saTypeInfo mapField="SA_TYPE_INFO"/>
-	<allowPaSw dataType="boolean" mapField="ALLOW_PA_SW"/>
-	<newChargesMessage mapField="NEW_CHG_MSG"/>
-	<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
-	<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
-	<bills type="list" mapList="BILL">
-		<billId mapField="BILL_ID"/>
-		<billInformation mapField="BILL_INFO"/>
-		<unpaidAmt dataType="money" mapField="UNPAID_AMT"/>
-		<isUnpaidAmountProtected dataType="boolean" mapField="PROT_UNPD_SW"/>
-		<isDefaultSelected dataType="boolean" mapField="DEFAULT_SELECT"/>
-		<includeBillSw dataType="boolean" mapField="INCLUDE_BILL_SW"/>
-	</bills>
-	<canCreate dataType="boolean" mapField="CREATE_SW"/>
-	<isBreakAllowed dataType="boolean" mapField="BREAK_SW"/>
-	<isCancel dataType="boolean" mapField="CANCEL_SW"/>
+  <canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+  <serviceAgreement mapField="SA_ID"/>
+  <defaultFlag mapField="DEFAULT_FOR_FLG"/>
+  <division mapField="CIS_DIVISION"/>
+  <saType mapField="SA_TYPE_CD"/>
+  <status dataType="lookup" mapField="SA_STATUS_FLG" lookup="SA_STATUS_FLG"/>
+  <accountId mapField="ACCT_ID"/>
+  <startDate dataType="date" mapField="START_DT"/>
+  <endDate dataType="date" mapField="END_DT"/>
+  <oldAccountId mapField="OLD_ACCT_ID"/>
+  <saRelationshipId mapField="SA_REL_ID"/>
+  <areEstimatesAllowed dataType="boolean" mapField="ALLOW_EST_SW"/>
+  <customerRead dataType="lookup" mapField="CUST_READ_FLG" lookup="CUST_READ_FLG"/>
+  <sicCode mapField="SIC_CD"/>
+  <premiseId mapField="CHAR_PREM_ID"/>
+  <startOption mapField="START_OPT_CD"/>
+  <totalAmountToBill dataType="money" mapField="TOT_TO_BILL_AMT"/>
+  <version dataType="number" mapField="VERSION"/>
+  <currency mapField="CURRENCY_CD"/>
+  <maxBillThreshold dataType="money" mapField="HIGH_BILL_AMT"/>
+  <depositInterestCalculated dataType="date" mapField="INT_CALC_DT"/>
+  <ciacReviewDate dataType="date" mapField="CIAC_REVIEW_DT"/>
+  <startReason dataType="lookup" mapField="STRT_RSN_FLG" lookup="STRT_RSN_FLG"/>
+  <stopReason dataType="lookup" mapField="STOP_RSN_FLG" lookup="STOP_RSN_FLG"/>
+  <startRequestedBy mapField="STRT_REQED_BY"/>
+  <stopRequestedBy mapField="STOP_REQED_BY"/>
+  <businessActivityDescription mapField="BUS_ACTIVITY_DESC"/>
+  <orderId mapField="ENRL_ID"/>
+  <ibSACutoffTime dataType="time" mapField="IB_SA_CUTOFF_TM"/>
+  <startDayOption dataType="lookup" mapField="IB_BASE_TM_DAY_FLG" lookup="IB_BASE_TM_DAY_FLG"/>
+  <specialUsage dataType="lookup" mapField="SPECIAL_USAGE_FLG" lookup="SPECIAL_USAGE_FLG"/>
+  <proposalSAStatus dataType="lookup" mapField="PROP_SA_STAT_FLG" lookup="PROP_SA_STAT_FLG"/>
+  <declineReason mapField="PROP_DCL_RSN_CD"/>
+  <proposalSAId mapField="PROP_SA_ID"/>
+  <numberOfPaymentPeriods dataType="number" mapField="NBR_PYMNT_PERIODS"/>
+  <recommendationRule mapField="NB_RULE_CD"/>
+  <expireDate dataType="date" mapField="EXPIRE_DT"/>
+  <renewalDate dataType="date" mapField="RENEWAL_DT"/>
+  <nbbAutopay dataType="lookup" mapField="NB_APAY_FLG" lookup="NB_APAY_FLG"/>
+  <saDataArea mapField="SA_DATA_AREA"/>
+  <ibSaCutoffDttmTm mapField="IB_SA_CUTOFF_DTTM_TM"/>
+  <saInformation mapField="SA_INFO"/>
+  <paCurAmt dataType="money" mapField="PA_CUR_AMT"/>
+  <paTotAmt dataType="money" mapField="PA_TOT_AMT"/>
+  <accountName mapField="ACCT_NAME"/>
+  <acctCurAmt dataType="money" mapField="ACCT_CUR_AMT"/>
+  <acctTotAmt dataType="money" mapField="ACCT_TOT_AMT"/>
+  <billTotAmt dataType="money" mapField="BILL_TOT_AMT"/>
+  <newPayoffBal dataType="money" mapField="NEW_PAYOFF_BAL"/>
+  <totBillsSelected dataType="number" mapField="TOT_BILLS_SELECTED"/>
+  <installment dataType="number" mapField="INSTALLMENT"/>
+  <recurringChargeAmount dataType="money" mapField="RCR_CHG_AMT"/>
+  <saTypeInfo mapField="SA_TYPE_INFO"/>
+  <allowPaSw dataType="boolean" mapField="ALLOW_PA_SW"/>
+  <newChargesMessage mapField="NEW_CHG_MSG"/>
+  <messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+  <messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+  <bills type="list" mapList="BILL">
+    <billId mapField="BILL_ID"/>
+    <billInformation mapField="BILL_INFO"/>
+    <unpaidAmt dataType="money" mapField="UNPAID_AMT"/>
+    <isUnpaidAmountProtected dataType="boolean" mapField="PROT_UNPD_SW"/>
+    <isDefaultSelected dataType="boolean" mapField="DEFAULT_SELECT"/>
+    <includeBillSw dataType="boolean" mapField="INCLUDE_BILL_SW"/>
+  </bills>
+  <canCreate dataType="boolean" mapField="CREATE_SW"/>
+  <isBreakAllowed dataType="boolean" mapField="BREAK_SW"/>
+  <isCancel dataType="boolean" mapField="CANCEL_SW"/>
 </schema>

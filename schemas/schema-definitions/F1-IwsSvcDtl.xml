@@ -1,34 +1,34 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<input suppress="true" type="group">
-		<pkValue1/>
-	</input>
-	<iwsName required="true" isPrimeKey="true" mapField="IN_SVC_NAME"/>
-	<description mapField="DESCR"/>
-	<longDescription mapField="DESCRLONG"/>
-	<iwsStatusDesc mapField="F1_IWS_STATUS_FLG"/>
-	<bo suppress="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
-	<version suppress="true" dataType="number" mapField="VERSION"/>
-	<owner suppress="input" dataType="lookup" mapField="OWNER_FLG" lookup="OWNER_FLG"/>
-	<defaultOperation suppress="true" mapField="DFLT_OPER_NAME"/>
-	<isTracing dataType="lookupBO" mapField="TRACE_SW" lookupBO="F1-BooleanValues"/>
-	<shouldDebug dataType="lookupBO" mapField="DEBUG_SW" lookupBO="F1-BooleanValues"/>
-	<isActive dataType="lookupBO" mapField="ACTIVE_SW" lookupBO="F1-BooleanValues"/>
-	<serviceVersion suppress="true" dataType="number" mapField="SERVICE_REVISION"/>
-	<iwsServiceAnnotation mdField="F1_IWSANNOTATIONS_LBL" type="list" mapChild="F1_IWS_SVC_ANN">
-		<annotation required="true" fkRef="F1-IWSAN" mapField="ANN_CD"/>
-		<version suppress="true" dataType="number" mapField="VERSION"/>
-	</iwsServiceAnnotation>
-	<iwsServiceOperation suppress="true" mdField="F1_IWSOPERATIONS_LBL" type="list" mapChild="F1_IWS_SVC_OPER">
-		<operationName mapField="OPERATION_NAME"/>
-		<schemaType suppress="input" dataType="lookup" mapField="SCHEMA_TYPE_FLG" lookup="SCHEMA_TYPE_FLG"/>
-		<schemaName search="F1-IWSSCHS" searchOut="SCHEMA_TYPE_FLG:schemaType;SCHEMA_NAME:schemaName;" mapField="SCHEMA_NAME"/>
-		<requestSchema mapField="REQUEST_SCHEMA"/>
-		<responseSchema mapField="RESPONSE_SCHEMA"/>
-		<requestXSL mapField="REQUEST_XSL"/>
-		<responseXSL mapField="RESPONSE_XSL"/>
-		<transactionType dataType="lookup" mapField="TRANS_TYPE_FLG" lookup="TRANS_TYPE_FLG"/>
-		<owner suppress="true" dataType="lookup" mapField="OWNER_FLG" lookup="OWNER_FLG"/>
-		<version suppress="true" dataType="number" mapField="VERSION"/>
-	</iwsServiceOperation>
+  <input suppress="true" type="group">
+    <pkValue1/>
+  </input>
+  <iwsName required="true" isPrimeKey="true" mapField="IN_SVC_NAME"/>
+  <description mapField="DESCR"/>
+  <longDescription mapField="DESCRLONG"/>
+  <iwsStatusDesc mapField="F1_IWS_STATUS_FLG"/>
+  <bo suppress="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+  <version suppress="true" dataType="number" mapField="VERSION"/>
+  <owner suppress="input" dataType="lookup" mapField="OWNER_FLG" lookup="OWNER_FLG"/>
+  <defaultOperation suppress="true" mapField="DFLT_OPER_NAME"/>
+  <isTracing dataType="lookupBO" mapField="TRACE_SW" lookupBO="F1-BooleanValues"/>
+  <shouldDebug dataType="lookupBO" mapField="DEBUG_SW" lookupBO="F1-BooleanValues"/>
+  <isActive dataType="lookupBO" mapField="ACTIVE_SW" lookupBO="F1-BooleanValues"/>
+  <serviceVersion suppress="true" dataType="number" mapField="SERVICE_REVISION"/>
+  <iwsServiceAnnotation mdField="F1_IWSANNOTATIONS_LBL" type="list" mapChild="F1_IWS_SVC_ANN">
+    <annotation required="true" fkRef="F1-IWSAN" mapField="ANN_CD"/>
+    <version suppress="true" dataType="number" mapField="VERSION"/>
+  </iwsServiceAnnotation>
+  <iwsServiceOperation suppress="true" mdField="F1_IWSOPERATIONS_LBL" type="list" mapChild="F1_IWS_SVC_OPER">
+    <operationName mapField="OPERATION_NAME"/>
+    <schemaType suppress="input" dataType="lookup" mapField="SCHEMA_TYPE_FLG" lookup="SCHEMA_TYPE_FLG"/>
+    <schemaName search="F1-IWSSCHS" searchOut="SCHEMA_TYPE_FLG:schemaType;SCHEMA_NAME:schemaName;" mapField="SCHEMA_NAME"/>
+    <requestSchema mapField="REQUEST_SCHEMA"/>
+    <responseSchema mapField="RESPONSE_SCHEMA"/>
+    <requestXSL mapField="REQUEST_XSL"/>
+    <responseXSL mapField="RESPONSE_XSL"/>
+    <transactionType dataType="lookup" mapField="TRANS_TYPE_FLG" lookup="TRANS_TYPE_FLG"/>
+    <owner suppress="true" dataType="lookup" mapField="OWNER_FLG" lookup="OWNER_FLG"/>
+    <version suppress="true" dataType="number" mapField="VERSION"/>
+  </iwsServiceOperation>
 </schema>

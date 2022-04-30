@@ -1,23 +1,23 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<incSequenceBy dataType="number" mapField="INCR_SEQ_BY"/>
-	<startSequenceFrom dataType="number" mapField="START_SEQ_FROM"/>
-	<seqRangeFrom dataType="number" mapField="SEQ_RANGE_TO"/>
-	<seqRangeTo dataType="number" mapField="SEQ_RANGE_FROM"/>
-	<meterReadRoute mapField="MR_RTE_CD"/>
-	<meterReadCycle mapField="MR_CYC_CD"/>
-	<servicePointId mapField="SP_ID"/>
-	<description mapField="DESCR"/>
-	<description2 mapField="CYC_DESCR"/>
-	<renumber dataType="boolean" mapField="RNBR_SW"/>
-	<mrrouteSp type="list" mapList="MRROUTE_SP">
-		<servicePointId2 mapField="SP_ID"/>
-		<spType mapField="SP_TYPE_CD"/>
-		<meterReadCycle2 mapField="MR_CYC_CD"/>
-		<meterReadRoute2 mapField="MR_RTE_CD"/>
-		<meterReadCycleRouteSequence dataType="number" mapField="MR_CYC_RTE_SEQ"/>
-		<remarks mapField="REMARKS"/>
-		<spInformation mapField="SP_INFO"/>
-	</mrrouteSp>
-	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
+  <incSequenceBy dataType="number" mapField="INCR_SEQ_BY"/>
+  <startSequenceFrom dataType="number" mapField="START_SEQ_FROM"/>
+  <seqRangeFrom dataType="number" mapField="SEQ_RANGE_TO"/>
+  <seqRangeTo dataType="number" mapField="SEQ_RANGE_FROM"/>
+  <meterReadRoute mapField="MR_RTE_CD"/>
+  <meterReadCycle mapField="MR_CYC_CD"/>
+  <servicePointId mapField="SP_ID"/>
+  <description mapField="DESCR"/>
+  <description2 mapField="CYC_DESCR"/>
+  <renumber dataType="boolean" mapField="RNBR_SW"/>
+  <mrrouteSp type="list" mapList="MRROUTE_SP">
+    <servicePointId2 mapField="SP_ID"/>
+    <spType mapField="SP_TYPE_CD"/>
+    <meterReadCycle2 mapField="MR_CYC_CD"/>
+    <meterReadRoute2 mapField="MR_RTE_CD"/>
+    <meterReadCycleRouteSequence dataType="number" mapField="MR_CYC_RTE_SEQ"/>
+    <remarks mapField="REMARKS"/>
+    <spInformation mapField="SP_INFO"/>
+  </mrrouteSp>
+  <defaultFlag mapField="DEFAULT_FOR_FLG"/>
 </schema>

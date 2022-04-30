@@ -1,26 +1,26 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<attachmentId mdField="F1-ATTACHIDLBL" isPrimeKey="true" fkRef="F1ATTACH" mapField="ATTACHMENT_ID"/>
-	<bo suppress="true" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
-	<creationDateTime suppress="true" dataType="dateTime" mapField="CRE_DTTM"/>
-	<creationUser suppress="true" mdField="CREATE_USER_LBL" required="true" default="%CurrentUser" fkRef="CI_USER" mapField="USER_ID"/>
-	<mo suppress="true" fkRef="F1-MO" mapField="MAINT_OBJ_CD"/>
-	<pkValue1 suppress="true" mapField="PK_VAL1"/>
-	<pkValue2 suppress="true" mapField="PK_VAL2"/>
-	<pkValue3 suppress="true" mapField="PK_VAL3"/>
-	<pkValue4 suppress="true" mapField="PK_VAL4"/>
-	<pkValue5 suppress="true" mapField="PK_VAL5"/>
-	<attachmentFileName mdField="F1_ATTACHMENT_RECORD" required="true" mapField="ATTACHMENT_FILE_NAME"/>
-	<attachmentData suppress="true" mapField="ATTACHMENT_DATA"/>
-	<version suppress="true" dataType="number" mapField="VERSION"/>
-	<fileSize suppress="blank" mdField="F1_ATTACHMENT_FILE_SIZE" dataType="number" mapField="ADHOC_CHAR_VAL">
-		<row mapChild="F1_ATTACHMENT_CHAR">
-			<CHAR_TYPE_CD is="F1FILSZE"/>
-		</row>
-	</fileSize>
-	<uploadDTTM suppress="blank" mdField="F1_FILE_UPLOAD_DTTM" dataType="dateTime" mapField="ADHOC_CHAR_VAL">
-		<row mapChild="F1_ATTACHMENT_CHAR">
-			<CHAR_TYPE_CD is="F1UPLDT"/>
-		</row>
-	</uploadDTTM>
+  <attachmentId mdField="F1-ATTACHIDLBL" isPrimeKey="true" fkRef="F1ATTACH" mapField="ATTACHMENT_ID"/>
+  <bo suppress="true" required="true" fkRef="F1-BUSOB" mapField="BUS_OBJ_CD"/>
+  <creationDateTime suppress="true" dataType="dateTime" mapField="CRE_DTTM"/>
+  <creationUser suppress="true" mdField="CREATE_USER_LBL" required="true" default="%CurrentUser" fkRef="CI_USER" mapField="USER_ID"/>
+  <mo suppress="true" fkRef="F1-MO" mapField="MAINT_OBJ_CD"/>
+  <pkValue1 suppress="true" mapField="PK_VAL1"/>
+  <pkValue2 suppress="true" mapField="PK_VAL2"/>
+  <pkValue3 suppress="true" mapField="PK_VAL3"/>
+  <pkValue4 suppress="true" mapField="PK_VAL4"/>
+  <pkValue5 suppress="true" mapField="PK_VAL5"/>
+  <attachmentFileName mdField="F1_ATTACHMENT_RECORD" required="true" mapField="ATTACHMENT_FILE_NAME"/>
+  <attachmentData suppress="true" mapField="ATTACHMENT_DATA"/>
+  <version suppress="true" dataType="number" mapField="VERSION"/>
+  <fileSize suppress="blank" mdField="F1_ATTACHMENT_FILE_SIZE" dataType="number" mapField="ADHOC_CHAR_VAL">
+    <row mapChild="F1_ATTACHMENT_CHAR">
+      <CHAR_TYPE_CD is="F1FILSZE"/>
+    </row>
+  </fileSize>
+  <uploadDTTM suppress="blank" mdField="F1_FILE_UPLOAD_DTTM" dataType="dateTime" mapField="ADHOC_CHAR_VAL">
+    <row mapChild="F1_ATTACHMENT_CHAR">
+      <CHAR_TYPE_CD is="F1UPLDT"/>
+    </row>
+  </uploadDTTM>
 </schema>

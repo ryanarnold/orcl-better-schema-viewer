@@ -1,248 +1,248 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
-	<meter mapField="MTR_ID"/>
-	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
-	<numberMtrs dataType="number" mapField="NUMBER_MTRS"/>
-	<hasNoCommit dataType="boolean" mapField="NO_COMMIT_SW"/>
-	<isReviewed dataType="boolean" mapField="REVIEWED_SW"/>
-	<badgePrefix mapField="BADGE_PREFIX"/>
-	<badgeStart dataType="number" mapField="BADGE_START"/>
-	<badgeInc dataType="number" mapField="BADGE_INC"/>
-	<serialPrefix mapField="SERIAL_PREFIX"/>
-	<serialStart dataType="number" mapField="SERIAL_START"/>
-	<serialInc dataType="number" mapField="SERIAL_INC"/>
-	<isController dataType="boolean" mapField="CONTROLLER_SW"/>
-	<stockLocation mapField="STK_LOC_CD"/>
-	<slcDescr mapField="SLC_DESCR"/>
-	<displayStkLocSw mapField="DISPLAY_STK_LOC_SW"/>
-	<startBadgeNbr mapField="START_BADGE_NBR"/>
-	<endBadgeNbr mapField="END_BADGE_NBR"/>
-	<startSerialNbr mapField="START_SERIAL_NBR"/>
-	<endSerialNbr mapField="END_SERIAL_NBR"/>
-	<meterConfigurationId mapField="MTR_CONFIG_ID"/>
-	<effectiveDateTime dataType="dateTime" mapField="EFF_DTTM"/>
-	<meterConfigurationType mapField="MTR_CONFIG_TY_CD"/>
-	<version dataType="number" mapField="VERSION"/>
-	<meterConfigDataArea mapField="MTR_CFG_DATA_AREA"/>
-	<registers type="list" mapList="REG">
-		<registerId mapField="REG_ID"/>
-		<meter2 mapField="MTR_ID"/>
-		<effectiveDateTime2 dataType="dateTime" mapField="EFF_DTTM"/>
-		<seq dataType="number" mapField="READ_SEQ"/>
-		<unitOfMeasure mapField="UOM_CD"/>
-		<timeOfUse mapField="TOU_CD"/>
-		<registerConstant dataType="number" mapField="REG_CONST"/>
-		<consumptionType dataType="lookup" mapField="CONSUM_SUB_FLG" lookup="CONSUM_SUB_FLG"/>
-		<howToUse dataType="lookup" mapField="HOW_TO_USE_FLG" lookup="HOW_TO_USE_FLG"/>
-		<numberOfDigitsLeft dataType="number" mapField="NBR_OF_DGTS_LFT"/>
-		<numberOfDigitsRight dataType="number" mapField="NBR_OF_DGTS_RGT"/>
-		<fullScale dataType="number" mapField="FULL_SCALE"/>
-		<readOutType mapField="READ_OUT_TYPE_CD"/>
-		<protocol mapField="PROTOCOL_CD"/>
-		<tolerance dataType="number" mapField="TOLERANCE"/>
-		<version2 dataType="number" mapField="VERSION"/>
-		<channelId mapField="VIRTUAL_CHAN_ID"/>
-		<intervalRegisterType mapField="INTV_REG_TYPE_CD"/>
-		<unitOfMeasure2 mapField="UOM_DESCR"/>
-		<timeOfUse2 mapField="TOU_DESCR"/>
-		<protocolDescr mapField="PROTOCOL_DESCR"/>
-		<readOutTypeDescr mapField="READ_OUT_TYPE_DESCR"/>
-		<intvDescr mapField="INTV_DESCR"/>
-		<isInterval dataType="boolean" mapField="INTERVAL_SW"/>
-		<regType mapField="REG_TYPE"/>
-		<registerInformation mapField="REG_INFO"/>
-		<registryCharacteristics type="list" mapList="REG_CHAR">
-			<registerId2 mapField="REG_ID"/>
-			<characteristicType mapField="CHAR_TYPE_CD"/>
-			<sequence dataType="number" mapField="SEQ_NUM"/>
-			<characteristicValue mapField="CHAR_VAL"/>
-			<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
-			<version3 dataType="number" mapField="VERSION"/>
-			<characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
-			<characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
-			<characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
-			<characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
-			<characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
-			<searchCharacteristicValue mapField="SRCH_CHAR_VAL"/>
-			<characteristicType2 mapField="CHAR_TYPE_DESCR"/>
-			<searchNavigationKey mapField="SRCH_NAV_KEY"/>
-			<navigationOption mapField="NAV_OPT_CD"/>
-			<table mapField="TBL_NAME"/>
-			<infoProgram mapField="INFO_PRG"/>
-			<characteristicType3 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
-			<characteristicValueDescription mapField="CHAR_VAL_DESCR"/>
-			<characteristicValueForeignKeys mapField="CHAR_VAL_FK_STR"/>
-			<characteristicValueForeignKeyInformation mapField="CHAR_VAL_FK_INFO"/>
-			<isCompoundPrimaryKey dataType="boolean" mapField="COMP_PK_SW"/>
-			<charateristicValue mapField="COMP_PK_STR"/>
-		</registryCharacteristics>
-	</registers>
-	<meterInformation mapField="MTR_INFO"/>
-	<trackLocation dataType="lookup" mapField="TRACK_LOC_FLG" lookup="TRACK_LOC_FLG"/>
-	<installationDateTime dataType="dateTime" mapField="INSTALL_DTTM"/>
-	<removalDateTime dataType="dateTime" mapField="REMOVAL_DTTM"/>
-	<busDt dataType="date" mapField="BUS_DT"/>
-	<busDttm dataType="dateTime" mapField="BUS_DTTM"/>
-	<servicePointId mapField="SP_ID"/>
-	<premiseId mapField="PREM_ID"/>
-	<spInformation mapField="SP_INFO"/>
-	<mtrId2 mapField="MTR_ID2"/>
-	<badgeNumber mapField="BADGE_NBR"/>
-	<meterType mapField="MTR_TYPE_CD"/>
-	<meterStatus dataType="lookup" mapField="MTR_STATUS_FLG" lookup="MTR_STATUS_FLG"/>
-	<manufacturer mapField="MFG_CD"/>
-	<model mapField="MODEL_CD"/>
-	<serialNumber mapField="SERIAL_NBR"/>
-	<receivedDate dataType="date" mapField="RECEIVE_DT"/>
-	<retiredDate dataType="date" mapField="RETIRE_DT"/>
-	<longDescription mapField="DESCRLONG"/>
-	<version2 dataType="number" mapField="VERSION2"/>
-	<meterDataArea mapField="MTR_DATA_AREA"/>
-	<retireReason mapField="RETIRE_RSN_CD"/>
-	<serviceType mapField="SVC_TYPE_CD"/>
-	<modelCdDescr mapField="MODEL_CD_DESCR"/>
-	<meterCharacteristics type="list" mapList="MTC">
-		<meter3 mapField="MTR_ID"/>
-		<characteristicType4 mapField="CHAR_TYPE_CD"/>
-		<characteristicValue2 mapField="CHAR_VAL"/>
-		<effectiveDate dataType="date" mapField="EFFDT"/>
-		<adhocCharacteristicValue2 mapField="ADHOC_CHAR_VAL"/>
-		<version4 dataType="number" mapField="VERSION"/>
-		<characteristicValueForeignKey12 mapField="CHAR_VAL_FK1"/>
-		<characteristicValueFK22 mapField="CHAR_VAL_FK2"/>
-		<characteristicValueFK32 mapField="CHAR_VAL_FK3"/>
-		<characteristicValueFk42 mapField="CHAR_VAL_FK4"/>
-		<characteristicValueFK52 mapField="CHAR_VAL_FK5"/>
-		<searchCharacteristicValue2 mapField="SRCH_CHAR_VAL"/>
-		<sortSequence dataType="number" mapField="SORT_SEQ"/>
-		<searchNavigationKey2 mapField="SRCH_NAV_KEY"/>
-		<navigationOption2 mapField="NAV_OPT_CD"/>
-		<table2 mapField="TBL_NAME"/>
-		<infoProgram2 mapField="INFO_PRG"/>
-		<characteristicType5 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
-		<characteristicValueDescription2 mapField="CHAR_VAL_DESCR"/>
-		<characteristicValueForeignKeys2 mapField="CHAR_VAL_FK_STR"/>
-		<characteristicValueForeignKeyInformation2 mapField="CHAR_VAL_FK_INFO"/>
-		<isCompoundPrimaryKey2 dataType="boolean" mapField="COMP_PK_SW"/>
-		<charateristicValue2 mapField="COMP_PK_STR"/>
-		<characteristicType6 mapField="CHAR_TYPE_DESCR"/>
-	</meterCharacteristics>
-	<mtg type="list" mapList="MTG">
-		<meterConfigurationId2 mapField="MTR_CONFIG_ID"/>
-		<meter4 mapField="MTR_ID"/>
-		<effectiveDateTime3 dataType="dateTime" mapField="EFF_DTTM"/>
-		<meterConfigurationType2 mapField="MTR_CONFIG_TY_CD"/>
-		<version5 dataType="number" mapField="VERSION"/>
-		<meterConfigDataArea2 mapField="MTR_CFG_DATA_AREA"/>
-		<meterConfigurationInfo mapField="MTR_CONFIG_INFO"/>
-		<description mapField="DESCR"/>
-		<oldDelete mapField="OLD_DELETE"/>
-		<hasMeterRead dataType="boolean" mapField="MR_EXIST_SW"/>
-		<reg2 type="list" mapList="REG2">
-			<registerId3 mapField="REG_ID"/>
-			<meter5 mapField="MTR_ID"/>
-			<effectiveDateTime4 dataType="dateTime" mapField="EFF_DTTM"/>
-			<seq2 dataType="number" mapField="READ_SEQ"/>
-			<unitOfMeasure3 mapField="UOM_CD"/>
-			<timeOfUse3 mapField="TOU_CD"/>
-			<registerConstant2 dataType="number" mapField="REG_CONST"/>
-			<consumptionType2 dataType="lookup" mapField="CONSUM_SUB_FLG" lookup="CONSUM_SUB_FLG"/>
-			<howToUse2 dataType="lookup" mapField="HOW_TO_USE_FLG" lookup="HOW_TO_USE_FLG"/>
-			<numberOfDigitsLeft2 dataType="number" mapField="NBR_OF_DGTS_LFT"/>
-			<numberOfDigitsRight2 dataType="number" mapField="NBR_OF_DGTS_RGT"/>
-			<fullScale2 dataType="number" mapField="FULL_SCALE"/>
-			<readOutType2 mapField="READ_OUT_TYPE_CD"/>
-			<protocol2 mapField="PROTOCOL_CD"/>
-			<tolerance2 dataType="number" mapField="TOLERANCE"/>
-			<version6 dataType="number" mapField="VERSION"/>
-			<channelId2 mapField="VIRTUAL_CHAN_ID"/>
-			<intervalRegisterType2 mapField="INTV_REG_TYPE_CD"/>
-			<unitOfMeasure4 mapField="UOM_DESCR"/>
-			<timeOfUse4 mapField="TOU_DESCR"/>
-			<protocolDescr2 mapField="PROTOCOL_DESCR"/>
-			<readOutTypeDescr2 mapField="READ_OUT_TYPE_DESCR"/>
-			<intvDescr2 mapField="INTV_DESCR"/>
-			<isInterval2 dataType="boolean" mapField="INTERVAL_SW"/>
-			<regType2 mapField="REG_TYPE"/>
-			<registerInformation2 mapField="REG_INFO"/>
-			<regChar2 type="list" mapList="REG_CHAR2">
-				<registerId4 mapField="REG_ID"/>
-				<characteristicType7 mapField="CHAR_TYPE_CD"/>
-				<sequence2 dataType="number" mapField="SEQ_NUM"/>
-				<characteristicValue3 mapField="CHAR_VAL"/>
-				<adhocCharacteristicValue3 mapField="ADHOC_CHAR_VAL"/>
-				<version7 dataType="number" mapField="VERSION"/>
-				<characteristicValueForeignKey13 mapField="CHAR_VAL_FK1"/>
-				<characteristicValueFK23 mapField="CHAR_VAL_FK2"/>
-				<characteristicValueFK33 mapField="CHAR_VAL_FK3"/>
-				<characteristicValueFk43 mapField="CHAR_VAL_FK4"/>
-				<characteristicValueFK53 mapField="CHAR_VAL_FK5"/>
-				<searchCharacteristicValue3 mapField="SRCH_CHAR_VAL"/>
-				<characteristicType8 mapField="CHAR_TYPE_DESCR"/>
-				<searchNavigationKey3 mapField="SRCH_NAV_KEY"/>
-				<navigationOption3 mapField="NAV_OPT_CD"/>
-				<table3 mapField="TBL_NAME"/>
-				<infoProgram3 mapField="INFO_PRG"/>
-				<characteristicType9 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
-				<characteristicValueDescription3 mapField="CHAR_VAL_DESCR"/>
-				<characteristicValueForeignKeys3 mapField="CHAR_VAL_FK_STR"/>
-				<characteristicValueForeignKeyInformation3 mapField="CHAR_VAL_FK_INFO"/>
-				<isCompoundPrimaryKey3 dataType="boolean" mapField="COMP_PK_SW"/>
-				<charateristicValue3 mapField="COMP_PK_STR"/>
-			</regChar2>
-		</reg2>
-	</mtg>
-	<mih type="list" mapList="MIH">
-		<meter6 mapField="MTR_ID"/>
-		<meterConfigurationId3 mapField="MTR_CONFIG_ID"/>
-		<installationDateTime2 dataType="dateTime" mapField="INSTALL_DTTM"/>
-		<removalDateTime2 dataType="dateTime" mapField="REMOVAL_DTTM"/>
-		<spMeterHistoryId mapField="SP_MTR_HIST_ID"/>
-		<servicePointId2 mapField="SP_ID"/>
-		<spInformation2 mapField="SP_INFO"/>
-	</mih>
-	<meterIds type="list" mapList="MID">
-		<meter7 mapField="MTR_ID"/>
-		<meterIdType mapField="MTR_ID_TYPE_CD"/>
-		<meterIdNumber mapField="MTR_ID_NBR"/>
-		<version8 dataType="number" mapField="VERSION"/>
-	</meterIds>
-	<mtrEq type="list" mapList="MTR_EQ">
-		<meter8 mapField="MTR_ID"/>
-		<equipmentId mapField="ITEM_ID_EQ"/>
-		<installationDate dataType="date" mapField="INSTALL_DT"/>
-		<removalDate dataType="date" mapField="REMOVAL_DT"/>
-		<equipmentCount dataType="number" mapField="EQ_CNT"/>
-		<comment mapField="COMMENTSMED"/>
-		<version9 dataType="number" mapField="VERSION"/>
-		<badgeNumber2 mapField="BADGE_NBR"/>
-		<description2 mapField="DESCR"/>
-	</mtrEq>
-	<stkLocHist type="list" mapList="STK_LOC_HIST">
-		<meterLocationHistoryId mapField="MTR_LOC_HIST_ID"/>
-		<meter9 mapField="MTR_ID"/>
-		<locationDateTime dataType="dateTime" mapField="LOC_DTTM"/>
-		<locationHistoryType dataType="lookup" mapField="LOC_HIST_TYP_FLG" lookup="LOC_HIST_TYP_FLG"/>
-		<spMeterHistoryId2 mapField="SP_MTR_HIST_ID"/>
-		<stockLocation2 mapField="STK_LOC_CD"/>
-		<version10 dataType="number" mapField="VERSION"/>
-		<workFieldForStructuredQueryLanguageBindVariable mapField="SLO_DESCR"/>
-		<servicePointId3 mapField="SP_ID"/>
-		<spInformation3 mapField="SP_INFO"/>
-	</stkLocHist>
-	<firstGrp type="list" mapList="FIRST_GRP">
-		<badgeNumber3 mapField="BADGE_NBR"/>
-		<serialNumber2 mapField="SERIAL_NBR"/>
-		<meterType2 mapField="MTR_TYPE_CD"/>
-		<meterStatus2 dataType="lookup" mapField="MTR_STATUS_FLG" lookup="MTR_STATUS_FLG"/>
-		<receivedDate2 dataType="date" mapField="RECEIVE_DT"/>
-	</firstGrp>
-	<secondGrp type="list" mapList="SECOND_GRP">
-		<badgeNumber4 mapField="BADGE_NBR"/>
-		<serialNumber3 mapField="SERIAL_NBR"/>
-		<meterType3 mapField="MTR_TYPE_CD"/>
-		<meterStatus3 dataType="lookup" mapField="MTR_STATUS_FLG" lookup="MTR_STATUS_FLG"/>
-		<receivedDate3 dataType="date" mapField="RECEIVE_DT"/>
-	</secondGrp>
+  <canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+  <meter mapField="MTR_ID"/>
+  <defaultFlag mapField="DEFAULT_FOR_FLG"/>
+  <numberMtrs dataType="number" mapField="NUMBER_MTRS"/>
+  <hasNoCommit dataType="boolean" mapField="NO_COMMIT_SW"/>
+  <isReviewed dataType="boolean" mapField="REVIEWED_SW"/>
+  <badgePrefix mapField="BADGE_PREFIX"/>
+  <badgeStart dataType="number" mapField="BADGE_START"/>
+  <badgeInc dataType="number" mapField="BADGE_INC"/>
+  <serialPrefix mapField="SERIAL_PREFIX"/>
+  <serialStart dataType="number" mapField="SERIAL_START"/>
+  <serialInc dataType="number" mapField="SERIAL_INC"/>
+  <isController dataType="boolean" mapField="CONTROLLER_SW"/>
+  <stockLocation mapField="STK_LOC_CD"/>
+  <slcDescr mapField="SLC_DESCR"/>
+  <displayStkLocSw mapField="DISPLAY_STK_LOC_SW"/>
+  <startBadgeNbr mapField="START_BADGE_NBR"/>
+  <endBadgeNbr mapField="END_BADGE_NBR"/>
+  <startSerialNbr mapField="START_SERIAL_NBR"/>
+  <endSerialNbr mapField="END_SERIAL_NBR"/>
+  <meterConfigurationId mapField="MTR_CONFIG_ID"/>
+  <effectiveDateTime dataType="dateTime" mapField="EFF_DTTM"/>
+  <meterConfigurationType mapField="MTR_CONFIG_TY_CD"/>
+  <version dataType="number" mapField="VERSION"/>
+  <meterConfigDataArea mapField="MTR_CFG_DATA_AREA"/>
+  <registers type="list" mapList="REG">
+    <registerId mapField="REG_ID"/>
+    <meter2 mapField="MTR_ID"/>
+    <effectiveDateTime2 dataType="dateTime" mapField="EFF_DTTM"/>
+    <seq dataType="number" mapField="READ_SEQ"/>
+    <unitOfMeasure mapField="UOM_CD"/>
+    <timeOfUse mapField="TOU_CD"/>
+    <registerConstant dataType="number" mapField="REG_CONST"/>
+    <consumptionType dataType="lookup" mapField="CONSUM_SUB_FLG" lookup="CONSUM_SUB_FLG"/>
+    <howToUse dataType="lookup" mapField="HOW_TO_USE_FLG" lookup="HOW_TO_USE_FLG"/>
+    <numberOfDigitsLeft dataType="number" mapField="NBR_OF_DGTS_LFT"/>
+    <numberOfDigitsRight dataType="number" mapField="NBR_OF_DGTS_RGT"/>
+    <fullScale dataType="number" mapField="FULL_SCALE"/>
+    <readOutType mapField="READ_OUT_TYPE_CD"/>
+    <protocol mapField="PROTOCOL_CD"/>
+    <tolerance dataType="number" mapField="TOLERANCE"/>
+    <version2 dataType="number" mapField="VERSION"/>
+    <channelId mapField="VIRTUAL_CHAN_ID"/>
+    <intervalRegisterType mapField="INTV_REG_TYPE_CD"/>
+    <unitOfMeasure2 mapField="UOM_DESCR"/>
+    <timeOfUse2 mapField="TOU_DESCR"/>
+    <protocolDescr mapField="PROTOCOL_DESCR"/>
+    <readOutTypeDescr mapField="READ_OUT_TYPE_DESCR"/>
+    <intvDescr mapField="INTV_DESCR"/>
+    <isInterval dataType="boolean" mapField="INTERVAL_SW"/>
+    <regType mapField="REG_TYPE"/>
+    <registerInformation mapField="REG_INFO"/>
+    <registryCharacteristics type="list" mapList="REG_CHAR">
+      <registerId2 mapField="REG_ID"/>
+      <characteristicType mapField="CHAR_TYPE_CD"/>
+      <sequence dataType="number" mapField="SEQ_NUM"/>
+      <characteristicValue mapField="CHAR_VAL"/>
+      <adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+      <version3 dataType="number" mapField="VERSION"/>
+      <characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
+      <characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+      <characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+      <characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
+      <characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+      <searchCharacteristicValue mapField="SRCH_CHAR_VAL"/>
+      <characteristicType2 mapField="CHAR_TYPE_DESCR"/>
+      <searchNavigationKey mapField="SRCH_NAV_KEY"/>
+      <navigationOption mapField="NAV_OPT_CD"/>
+      <table mapField="TBL_NAME"/>
+      <infoProgram mapField="INFO_PRG"/>
+      <characteristicType3 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+      <characteristicValueDescription mapField="CHAR_VAL_DESCR"/>
+      <characteristicValueForeignKeys mapField="CHAR_VAL_FK_STR"/>
+      <characteristicValueForeignKeyInformation mapField="CHAR_VAL_FK_INFO"/>
+      <isCompoundPrimaryKey dataType="boolean" mapField="COMP_PK_SW"/>
+      <charateristicValue mapField="COMP_PK_STR"/>
+    </registryCharacteristics>
+  </registers>
+  <meterInformation mapField="MTR_INFO"/>
+  <trackLocation dataType="lookup" mapField="TRACK_LOC_FLG" lookup="TRACK_LOC_FLG"/>
+  <installationDateTime dataType="dateTime" mapField="INSTALL_DTTM"/>
+  <removalDateTime dataType="dateTime" mapField="REMOVAL_DTTM"/>
+  <busDt dataType="date" mapField="BUS_DT"/>
+  <busDttm dataType="dateTime" mapField="BUS_DTTM"/>
+  <servicePointId mapField="SP_ID"/>
+  <premiseId mapField="PREM_ID"/>
+  <spInformation mapField="SP_INFO"/>
+  <mtrId2 mapField="MTR_ID2"/>
+  <badgeNumber mapField="BADGE_NBR"/>
+  <meterType mapField="MTR_TYPE_CD"/>
+  <meterStatus dataType="lookup" mapField="MTR_STATUS_FLG" lookup="MTR_STATUS_FLG"/>
+  <manufacturer mapField="MFG_CD"/>
+  <model mapField="MODEL_CD"/>
+  <serialNumber mapField="SERIAL_NBR"/>
+  <receivedDate dataType="date" mapField="RECEIVE_DT"/>
+  <retiredDate dataType="date" mapField="RETIRE_DT"/>
+  <longDescription mapField="DESCRLONG"/>
+  <version2 dataType="number" mapField="VERSION2"/>
+  <meterDataArea mapField="MTR_DATA_AREA"/>
+  <retireReason mapField="RETIRE_RSN_CD"/>
+  <serviceType mapField="SVC_TYPE_CD"/>
+  <modelCdDescr mapField="MODEL_CD_DESCR"/>
+  <meterCharacteristics type="list" mapList="MTC">
+    <meter3 mapField="MTR_ID"/>
+    <characteristicType4 mapField="CHAR_TYPE_CD"/>
+    <characteristicValue2 mapField="CHAR_VAL"/>
+    <effectiveDate dataType="date" mapField="EFFDT"/>
+    <adhocCharacteristicValue2 mapField="ADHOC_CHAR_VAL"/>
+    <version4 dataType="number" mapField="VERSION"/>
+    <characteristicValueForeignKey12 mapField="CHAR_VAL_FK1"/>
+    <characteristicValueFK22 mapField="CHAR_VAL_FK2"/>
+    <characteristicValueFK32 mapField="CHAR_VAL_FK3"/>
+    <characteristicValueFk42 mapField="CHAR_VAL_FK4"/>
+    <characteristicValueFK52 mapField="CHAR_VAL_FK5"/>
+    <searchCharacteristicValue2 mapField="SRCH_CHAR_VAL"/>
+    <sortSequence dataType="number" mapField="SORT_SEQ"/>
+    <searchNavigationKey2 mapField="SRCH_NAV_KEY"/>
+    <navigationOption2 mapField="NAV_OPT_CD"/>
+    <table2 mapField="TBL_NAME"/>
+    <infoProgram2 mapField="INFO_PRG"/>
+    <characteristicType5 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+    <characteristicValueDescription2 mapField="CHAR_VAL_DESCR"/>
+    <characteristicValueForeignKeys2 mapField="CHAR_VAL_FK_STR"/>
+    <characteristicValueForeignKeyInformation2 mapField="CHAR_VAL_FK_INFO"/>
+    <isCompoundPrimaryKey2 dataType="boolean" mapField="COMP_PK_SW"/>
+    <charateristicValue2 mapField="COMP_PK_STR"/>
+    <characteristicType6 mapField="CHAR_TYPE_DESCR"/>
+  </meterCharacteristics>
+  <mtg type="list" mapList="MTG">
+    <meterConfigurationId2 mapField="MTR_CONFIG_ID"/>
+    <meter4 mapField="MTR_ID"/>
+    <effectiveDateTime3 dataType="dateTime" mapField="EFF_DTTM"/>
+    <meterConfigurationType2 mapField="MTR_CONFIG_TY_CD"/>
+    <version5 dataType="number" mapField="VERSION"/>
+    <meterConfigDataArea2 mapField="MTR_CFG_DATA_AREA"/>
+    <meterConfigurationInfo mapField="MTR_CONFIG_INFO"/>
+    <description mapField="DESCR"/>
+    <oldDelete mapField="OLD_DELETE"/>
+    <hasMeterRead dataType="boolean" mapField="MR_EXIST_SW"/>
+    <reg2 type="list" mapList="REG2">
+      <registerId3 mapField="REG_ID"/>
+      <meter5 mapField="MTR_ID"/>
+      <effectiveDateTime4 dataType="dateTime" mapField="EFF_DTTM"/>
+      <seq2 dataType="number" mapField="READ_SEQ"/>
+      <unitOfMeasure3 mapField="UOM_CD"/>
+      <timeOfUse3 mapField="TOU_CD"/>
+      <registerConstant2 dataType="number" mapField="REG_CONST"/>
+      <consumptionType2 dataType="lookup" mapField="CONSUM_SUB_FLG" lookup="CONSUM_SUB_FLG"/>
+      <howToUse2 dataType="lookup" mapField="HOW_TO_USE_FLG" lookup="HOW_TO_USE_FLG"/>
+      <numberOfDigitsLeft2 dataType="number" mapField="NBR_OF_DGTS_LFT"/>
+      <numberOfDigitsRight2 dataType="number" mapField="NBR_OF_DGTS_RGT"/>
+      <fullScale2 dataType="number" mapField="FULL_SCALE"/>
+      <readOutType2 mapField="READ_OUT_TYPE_CD"/>
+      <protocol2 mapField="PROTOCOL_CD"/>
+      <tolerance2 dataType="number" mapField="TOLERANCE"/>
+      <version6 dataType="number" mapField="VERSION"/>
+      <channelId2 mapField="VIRTUAL_CHAN_ID"/>
+      <intervalRegisterType2 mapField="INTV_REG_TYPE_CD"/>
+      <unitOfMeasure4 mapField="UOM_DESCR"/>
+      <timeOfUse4 mapField="TOU_DESCR"/>
+      <protocolDescr2 mapField="PROTOCOL_DESCR"/>
+      <readOutTypeDescr2 mapField="READ_OUT_TYPE_DESCR"/>
+      <intvDescr2 mapField="INTV_DESCR"/>
+      <isInterval2 dataType="boolean" mapField="INTERVAL_SW"/>
+      <regType2 mapField="REG_TYPE"/>
+      <registerInformation2 mapField="REG_INFO"/>
+      <regChar2 type="list" mapList="REG_CHAR2">
+        <registerId4 mapField="REG_ID"/>
+        <characteristicType7 mapField="CHAR_TYPE_CD"/>
+        <sequence2 dataType="number" mapField="SEQ_NUM"/>
+        <characteristicValue3 mapField="CHAR_VAL"/>
+        <adhocCharacteristicValue3 mapField="ADHOC_CHAR_VAL"/>
+        <version7 dataType="number" mapField="VERSION"/>
+        <characteristicValueForeignKey13 mapField="CHAR_VAL_FK1"/>
+        <characteristicValueFK23 mapField="CHAR_VAL_FK2"/>
+        <characteristicValueFK33 mapField="CHAR_VAL_FK3"/>
+        <characteristicValueFk43 mapField="CHAR_VAL_FK4"/>
+        <characteristicValueFK53 mapField="CHAR_VAL_FK5"/>
+        <searchCharacteristicValue3 mapField="SRCH_CHAR_VAL"/>
+        <characteristicType8 mapField="CHAR_TYPE_DESCR"/>
+        <searchNavigationKey3 mapField="SRCH_NAV_KEY"/>
+        <navigationOption3 mapField="NAV_OPT_CD"/>
+        <table3 mapField="TBL_NAME"/>
+        <infoProgram3 mapField="INFO_PRG"/>
+        <characteristicType9 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+        <characteristicValueDescription3 mapField="CHAR_VAL_DESCR"/>
+        <characteristicValueForeignKeys3 mapField="CHAR_VAL_FK_STR"/>
+        <characteristicValueForeignKeyInformation3 mapField="CHAR_VAL_FK_INFO"/>
+        <isCompoundPrimaryKey3 dataType="boolean" mapField="COMP_PK_SW"/>
+        <charateristicValue3 mapField="COMP_PK_STR"/>
+      </regChar2>
+    </reg2>
+  </mtg>
+  <mih type="list" mapList="MIH">
+    <meter6 mapField="MTR_ID"/>
+    <meterConfigurationId3 mapField="MTR_CONFIG_ID"/>
+    <installationDateTime2 dataType="dateTime" mapField="INSTALL_DTTM"/>
+    <removalDateTime2 dataType="dateTime" mapField="REMOVAL_DTTM"/>
+    <spMeterHistoryId mapField="SP_MTR_HIST_ID"/>
+    <servicePointId2 mapField="SP_ID"/>
+    <spInformation2 mapField="SP_INFO"/>
+  </mih>
+  <meterIds type="list" mapList="MID">
+    <meter7 mapField="MTR_ID"/>
+    <meterIdType mapField="MTR_ID_TYPE_CD"/>
+    <meterIdNumber mapField="MTR_ID_NBR"/>
+    <version8 dataType="number" mapField="VERSION"/>
+  </meterIds>
+  <mtrEq type="list" mapList="MTR_EQ">
+    <meter8 mapField="MTR_ID"/>
+    <equipmentId mapField="ITEM_ID_EQ"/>
+    <installationDate dataType="date" mapField="INSTALL_DT"/>
+    <removalDate dataType="date" mapField="REMOVAL_DT"/>
+    <equipmentCount dataType="number" mapField="EQ_CNT"/>
+    <comment mapField="COMMENTSMED"/>
+    <version9 dataType="number" mapField="VERSION"/>
+    <badgeNumber2 mapField="BADGE_NBR"/>
+    <description2 mapField="DESCR"/>
+  </mtrEq>
+  <stkLocHist type="list" mapList="STK_LOC_HIST">
+    <meterLocationHistoryId mapField="MTR_LOC_HIST_ID"/>
+    <meter9 mapField="MTR_ID"/>
+    <locationDateTime dataType="dateTime" mapField="LOC_DTTM"/>
+    <locationHistoryType dataType="lookup" mapField="LOC_HIST_TYP_FLG" lookup="LOC_HIST_TYP_FLG"/>
+    <spMeterHistoryId2 mapField="SP_MTR_HIST_ID"/>
+    <stockLocation2 mapField="STK_LOC_CD"/>
+    <version10 dataType="number" mapField="VERSION"/>
+    <workFieldForStructuredQueryLanguageBindVariable mapField="SLO_DESCR"/>
+    <servicePointId3 mapField="SP_ID"/>
+    <spInformation3 mapField="SP_INFO"/>
+  </stkLocHist>
+  <firstGrp type="list" mapList="FIRST_GRP">
+    <badgeNumber3 mapField="BADGE_NBR"/>
+    <serialNumber2 mapField="SERIAL_NBR"/>
+    <meterType2 mapField="MTR_TYPE_CD"/>
+    <meterStatus2 dataType="lookup" mapField="MTR_STATUS_FLG" lookup="MTR_STATUS_FLG"/>
+    <receivedDate2 dataType="date" mapField="RECEIVE_DT"/>
+  </firstGrp>
+  <secondGrp type="list" mapList="SECOND_GRP">
+    <badgeNumber4 mapField="BADGE_NBR"/>
+    <serialNumber3 mapField="SERIAL_NBR"/>
+    <meterType3 mapField="MTR_TYPE_CD"/>
+    <meterStatus3 dataType="lookup" mapField="MTR_STATUS_FLG" lookup="MTR_STATUS_FLG"/>
+    <receivedDate3 dataType="date" mapField="RECEIVE_DT"/>
+  </secondGrp>
 </schema>

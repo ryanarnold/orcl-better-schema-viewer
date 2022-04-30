@@ -1,130 +1,130 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
-	<tenderControlId mapField="TNDR_CTL_ID"/>
-	<defaultFlag mapField="DEFAULT_FOR_FLG"/>
-	<isBalance dataType="boolean" mapField="BALANCE_SW"/>
-	<tndrOverUnderAmt dataType="money" mapField="TNDR_OVER_UNDER_AMT"/>
-	<currency mapField="CURRENCY_CD"/>
-	<tenderSource mapField="TNDR_SOURCE_CD"/>
-	<tenderControlStagingStatus dataType="lookup" mapField="TNDR_CTL_ST_FLG" lookup="TNDR_CTL_ST_FLG"/>
-	<user mapField="USER_ID"/>
-	<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
-	<depositControlId mapField="DEP_CTL_ID"/>
-	<balancedUserId mapField="BALANCED_USER_ID"/>
-	<balancedDateTime dataType="dateTime" mapField="BALANCED_DTTM"/>
-	<startingBalance dataType="money" mapField="START_BALANCE"/>
-	<endingBalance dataType="money" mapField="END_BALANCE"/>
-	<isAllUsers dataType="boolean" mapField="ALL_OPERATORS_SW"/>
-	<comments mapField="COMMENTS"/>
-	<version dataType="number" mapField="VERSION"/>
-	<isArchived dataType="boolean" mapField="ARCHIVE_SW"/>
-	<batchControl mapField="BATCH_CD"/>
-	<batchNumber dataType="number" mapField="BATCH_NBR"/>
-	<externalTransmissionId mapField="EXT_TRANSMIT_ID"/>
-	<tndrOverUnderAmtT dataType="money" mapField="C1_T_TNDR_OVER_UNDER_AMT"/>
-	<tndrCtl type="list" mapList="TNDR_CTL">
-		<cancelReason mapField="CAN_RSN_CD"/>
-		<checkNumber mapField="CHECK_NBR"/>
-		<currency2 mapField="CURRENCY_CD"/>
-		<isIncludedInTenderControlBalance dataType="boolean" mapField="IN_TNDR_CTL_BAL_SW"/>
-		<payorAccountId mapField="PAYOR_ACCT_ID"/>
-		<paymentEventId mapField="PAY_EVENT_ID"/>
-		<paymentTenderId mapField="PAY_TENDER_ID"/>
-		<tenderAmount dataType="money" mapField="TENDER_AMT"/>
-		<tenderType mapField="TENDER_TYPE_CD"/>
-		<tenderControlId2 mapField="TNDR_CTL_ID"/>
-		<tenderStatus dataType="lookup" mapField="TNDR_STATUS_FLG" lookup="TNDR_STATUS_FLG"/>
-		<payorAccounInformation mapField="PAYOR_ACCT_INFO"/>
-		<canRsnDescr mapField="CAN_RSN_DESCR"/>
-		<tenderTypeDesc mapField="TENDER_TYPE_DESC"/>
-		<tenderStatusDesc mapField="TENDER_STATUS_DESC"/>
-		<creationDateTime2 dataType="dateTime" mapField="CRE_DTTM"/>
-	</tndrCtl>
-	<turnIn type="list" mapList="TURN_IN">
-		<turnInId mapField="TURN_IN_ID"/>
-		<tenderType2 mapField="TENDER_TYPE_CD"/>
-		<tenderControlId3 mapField="TNDR_CTL_ID"/>
-		<turnInStatus dataType="lookup" mapField="TURN_IN_STATUS_FLG" lookup="TURN_IN_STATUS_FLG"/>
-		<turnInAmount dataType="money" mapField="TURN_IN_AMT"/>
-		<creationDateTime3 dataType="dateTime" mapField="CRE_DTTM"/>
-		<receiptNumber mapField="RECEIPT_NUM"/>
-		<version2 dataType="number" mapField="VERSION"/>
-		<depositControlId2 mapField="DEP_CTL_ID"/>
-	</turnIn>
-	<endBal type="list" mapList="END_BAL">
-		<tenderControlId4 mapField="TNDR_CTL_ID"/>
-		<tenderType3 mapField="TENDER_TYPE_CD"/>
-		<endingAmount dataType="money" mapField="ENDING_AMT"/>
-		<version3 dataType="number" mapField="VERSION"/>
-		<description mapField="DESCR"/>
-		<startingBalance2 dataType="money" mapField="START_BLNC"/>
-		<tenderNumber dataType="number" mapField="TENDER_NUMBER"/>
-		<tenderTotalAmount dataType="money" mapField="TNDR_TOTAL_AMT"/>
-		<turnInAmount2 dataType="money" mapField="TURN_IN_AMT"/>
-		<expectedEndingBalance dataType="money" mapField="EXPECTED_END_BLNC"/>
-		<outstandingOverUnderAmount dataType="money" mapField="OVER_UNDER_AMT"/>
-	</endBal>
-	<tendersNotLoadedMsg mapField="TENDERS_NOT_LOADED_MSG"/>
-	<excptnsNotLoadedMsg mapField="EXCPTNS_NOT_LOADED_MSG"/>
-	<depositControlInformation mapField="DEP_CTL_INFO"/>
-	<tenderControl mapField="TNDR_CTL_INFO"/>
-	<description2 mapField="DESCR"/>
-	<tenderControlTotalAmount dataType="money" mapField="TNDR_CTL_TOTAL_AMT"/>
-	<expectedEndingBalanceAmount dataType="money" mapField="EXP_END_BLNC_AMT"/>
-	<tndrOverUnderAmt2 dataType="money" mapField="TNDR_OVER_UNDER_AMT2"/>
-	<tndrPayExcp type="list" mapList="TNDR_PAY_EXCP">
-		<paymentId mapField="PAY_ID"/>
-		<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
-		<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
-		<paymentExceptionType dataType="lookup" mapField="PAY_EXCP_FLG" lookup="PAY_EXCP_FLG"/>
-		<expandedMessage mapField="EXP_MSG"/>
-		<messageParameter1 mapField="MESSAGE_PARM1"/>
-		<messageParameter2 mapField="MESSAGE_PARM2"/>
-		<messageParameter3 mapField="MESSAGE_PARM3"/>
-		<messageParameter4 mapField="MESSAGE_PARM4"/>
-		<messageParameter5 mapField="MESSAGE_PARM5"/>
-		<messageParameter6 mapField="MESSAGE_PARM6"/>
-		<messageParameter7 mapField="MESSAGE_PARM7"/>
-		<messageParameter8 mapField="MESSAGE_PARM8"/>
-		<messageParameter9 mapField="MESSAGE_PARM9"/>
-		<callingProgramSequence mapField="CALL_SEQ"/>
-		<user2 mapField="USER_ID"/>
-		<isReviewed dataType="boolean" mapField="REVIEW_COMP"/>
-		<reviewUser mapField="REVIEW_USER_ID"/>
-		<reviewedDate dataType="date" mapField="REVIEW_DT"/>
-		<comments2 mapField="COMMENTS"/>
-		<creationDateTime4 dataType="dateTime" mapField="CRE_DTTM"/>
-		<version4 dataType="number" mapField="VERSION"/>
-		<payDescr mapField="PAY_DESCR"/>
-		<paymentEventId2 mapField="PAY_EVENT_ID"/>
-	</tndrPayExcp>
-	<tndrCtlChar type="list" mapList="TNDR_CTL_CHAR">
-		<tenderControlId5 mapField="TNDR_CTL_ID"/>
-		<characteristicType mapField="CHAR_TYPE_CD"/>
-		<sequence dataType="number" mapField="SEQ_NUM"/>
-		<characteristicValue mapField="CHAR_VAL"/>
-		<adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
-		<version5 dataType="number" mapField="VERSION"/>
-		<characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
-		<characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
-		<characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
-		<characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
-		<characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
-		<searchCharacteristicValue mapField="SRCH_CHAR_VAL"/>
-		<searchNavigationKey mapField="SRCH_NAV_KEY"/>
-		<navigationOption mapField="NAV_OPT_CD"/>
-		<table mapField="TBL_NAME"/>
-		<infoProgram mapField="INFO_PRG"/>
-		<characteristicType2 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
-		<characteristicValueDescription mapField="CHAR_VAL_DESCR"/>
-		<characteristicValueForeignKeys mapField="CHAR_VAL_FK_STR"/>
-		<characteristicValueForeignKeyInformation mapField="CHAR_VAL_FK_INFO"/>
-		<isCompoundPrimaryKey dataType="boolean" mapField="COMP_PK_SW"/>
-		<charateristicValue mapField="COMP_PK_STR"/>
-		<characteristicType3 mapField="CHAR_TYPE_DESCR"/>
-		<characteristicEntity dataType="lookup" mapField="CHAR_ENTITY_FLG" lookup="CHAR_ENTITY_FLG"/>
-	</tndrCtlChar>
-	<archiveMsg mapField="ARCHIVE_MSG"/>
-	<isCalledFromILM dataType="boolean" mapField="CALLED_FROM_ILM_SW"/>
+  <canPageRead dataType="boolean" mapField="PAGE_READ_SW"/>
+  <tenderControlId mapField="TNDR_CTL_ID"/>
+  <defaultFlag mapField="DEFAULT_FOR_FLG"/>
+  <isBalance dataType="boolean" mapField="BALANCE_SW"/>
+  <tndrOverUnderAmt dataType="money" mapField="TNDR_OVER_UNDER_AMT"/>
+  <currency mapField="CURRENCY_CD"/>
+  <tenderSource mapField="TNDR_SOURCE_CD"/>
+  <tenderControlStagingStatus dataType="lookup" mapField="TNDR_CTL_ST_FLG" lookup="TNDR_CTL_ST_FLG"/>
+  <user mapField="USER_ID"/>
+  <creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+  <depositControlId mapField="DEP_CTL_ID"/>
+  <balancedUserId mapField="BALANCED_USER_ID"/>
+  <balancedDateTime dataType="dateTime" mapField="BALANCED_DTTM"/>
+  <startingBalance dataType="money" mapField="START_BALANCE"/>
+  <endingBalance dataType="money" mapField="END_BALANCE"/>
+  <isAllUsers dataType="boolean" mapField="ALL_OPERATORS_SW"/>
+  <comments mapField="COMMENTS"/>
+  <version dataType="number" mapField="VERSION"/>
+  <isArchived dataType="boolean" mapField="ARCHIVE_SW"/>
+  <batchControl mapField="BATCH_CD"/>
+  <batchNumber dataType="number" mapField="BATCH_NBR"/>
+  <externalTransmissionId mapField="EXT_TRANSMIT_ID"/>
+  <tndrOverUnderAmtT dataType="money" mapField="C1_T_TNDR_OVER_UNDER_AMT"/>
+  <tndrCtl type="list" mapList="TNDR_CTL">
+    <cancelReason mapField="CAN_RSN_CD"/>
+    <checkNumber mapField="CHECK_NBR"/>
+    <currency2 mapField="CURRENCY_CD"/>
+    <isIncludedInTenderControlBalance dataType="boolean" mapField="IN_TNDR_CTL_BAL_SW"/>
+    <payorAccountId mapField="PAYOR_ACCT_ID"/>
+    <paymentEventId mapField="PAY_EVENT_ID"/>
+    <paymentTenderId mapField="PAY_TENDER_ID"/>
+    <tenderAmount dataType="money" mapField="TENDER_AMT"/>
+    <tenderType mapField="TENDER_TYPE_CD"/>
+    <tenderControlId2 mapField="TNDR_CTL_ID"/>
+    <tenderStatus dataType="lookup" mapField="TNDR_STATUS_FLG" lookup="TNDR_STATUS_FLG"/>
+    <payorAccounInformation mapField="PAYOR_ACCT_INFO"/>
+    <canRsnDescr mapField="CAN_RSN_DESCR"/>
+    <tenderTypeDesc mapField="TENDER_TYPE_DESC"/>
+    <tenderStatusDesc mapField="TENDER_STATUS_DESC"/>
+    <creationDateTime2 dataType="dateTime" mapField="CRE_DTTM"/>
+  </tndrCtl>
+  <turnIn type="list" mapList="TURN_IN">
+    <turnInId mapField="TURN_IN_ID"/>
+    <tenderType2 mapField="TENDER_TYPE_CD"/>
+    <tenderControlId3 mapField="TNDR_CTL_ID"/>
+    <turnInStatus dataType="lookup" mapField="TURN_IN_STATUS_FLG" lookup="TURN_IN_STATUS_FLG"/>
+    <turnInAmount dataType="money" mapField="TURN_IN_AMT"/>
+    <creationDateTime3 dataType="dateTime" mapField="CRE_DTTM"/>
+    <receiptNumber mapField="RECEIPT_NUM"/>
+    <version2 dataType="number" mapField="VERSION"/>
+    <depositControlId2 mapField="DEP_CTL_ID"/>
+  </turnIn>
+  <endBal type="list" mapList="END_BAL">
+    <tenderControlId4 mapField="TNDR_CTL_ID"/>
+    <tenderType3 mapField="TENDER_TYPE_CD"/>
+    <endingAmount dataType="money" mapField="ENDING_AMT"/>
+    <version3 dataType="number" mapField="VERSION"/>
+    <description mapField="DESCR"/>
+    <startingBalance2 dataType="money" mapField="START_BLNC"/>
+    <tenderNumber dataType="number" mapField="TENDER_NUMBER"/>
+    <tenderTotalAmount dataType="money" mapField="TNDR_TOTAL_AMT"/>
+    <turnInAmount2 dataType="money" mapField="TURN_IN_AMT"/>
+    <expectedEndingBalance dataType="money" mapField="EXPECTED_END_BLNC"/>
+    <outstandingOverUnderAmount dataType="money" mapField="OVER_UNDER_AMT"/>
+  </endBal>
+  <tendersNotLoadedMsg mapField="TENDERS_NOT_LOADED_MSG"/>
+  <excptnsNotLoadedMsg mapField="EXCPTNS_NOT_LOADED_MSG"/>
+  <depositControlInformation mapField="DEP_CTL_INFO"/>
+  <tenderControl mapField="TNDR_CTL_INFO"/>
+  <description2 mapField="DESCR"/>
+  <tenderControlTotalAmount dataType="money" mapField="TNDR_CTL_TOTAL_AMT"/>
+  <expectedEndingBalanceAmount dataType="money" mapField="EXP_END_BLNC_AMT"/>
+  <tndrOverUnderAmt2 dataType="money" mapField="TNDR_OVER_UNDER_AMT2"/>
+  <tndrPayExcp type="list" mapList="TNDR_PAY_EXCP">
+    <paymentId mapField="PAY_ID"/>
+    <messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+    <messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+    <paymentExceptionType dataType="lookup" mapField="PAY_EXCP_FLG" lookup="PAY_EXCP_FLG"/>
+    <expandedMessage mapField="EXP_MSG"/>
+    <messageParameter1 mapField="MESSAGE_PARM1"/>
+    <messageParameter2 mapField="MESSAGE_PARM2"/>
+    <messageParameter3 mapField="MESSAGE_PARM3"/>
+    <messageParameter4 mapField="MESSAGE_PARM4"/>
+    <messageParameter5 mapField="MESSAGE_PARM5"/>
+    <messageParameter6 mapField="MESSAGE_PARM6"/>
+    <messageParameter7 mapField="MESSAGE_PARM7"/>
+    <messageParameter8 mapField="MESSAGE_PARM8"/>
+    <messageParameter9 mapField="MESSAGE_PARM9"/>
+    <callingProgramSequence mapField="CALL_SEQ"/>
+    <user2 mapField="USER_ID"/>
+    <isReviewed dataType="boolean" mapField="REVIEW_COMP"/>
+    <reviewUser mapField="REVIEW_USER_ID"/>
+    <reviewedDate dataType="date" mapField="REVIEW_DT"/>
+    <comments2 mapField="COMMENTS"/>
+    <creationDateTime4 dataType="dateTime" mapField="CRE_DTTM"/>
+    <version4 dataType="number" mapField="VERSION"/>
+    <payDescr mapField="PAY_DESCR"/>
+    <paymentEventId2 mapField="PAY_EVENT_ID"/>
+  </tndrPayExcp>
+  <tndrCtlChar type="list" mapList="TNDR_CTL_CHAR">
+    <tenderControlId5 mapField="TNDR_CTL_ID"/>
+    <characteristicType mapField="CHAR_TYPE_CD"/>
+    <sequence dataType="number" mapField="SEQ_NUM"/>
+    <characteristicValue mapField="CHAR_VAL"/>
+    <adhocCharacteristicValue mapField="ADHOC_CHAR_VAL"/>
+    <version5 dataType="number" mapField="VERSION"/>
+    <characteristicValueForeignKey1 mapField="CHAR_VAL_FK1"/>
+    <characteristicValueFK2 mapField="CHAR_VAL_FK2"/>
+    <characteristicValueFK3 mapField="CHAR_VAL_FK3"/>
+    <characteristicValueFk4 mapField="CHAR_VAL_FK4"/>
+    <characteristicValueFK5 mapField="CHAR_VAL_FK5"/>
+    <searchCharacteristicValue mapField="SRCH_CHAR_VAL"/>
+    <searchNavigationKey mapField="SRCH_NAV_KEY"/>
+    <navigationOption mapField="NAV_OPT_CD"/>
+    <table mapField="TBL_NAME"/>
+    <infoProgram mapField="INFO_PRG"/>
+    <characteristicType2 dataType="lookup" mapField="CHAR_TYPE_FLG" lookup="CHAR_TYPE_FLG"/>
+    <characteristicValueDescription mapField="CHAR_VAL_DESCR"/>
+    <characteristicValueForeignKeys mapField="CHAR_VAL_FK_STR"/>
+    <characteristicValueForeignKeyInformation mapField="CHAR_VAL_FK_INFO"/>
+    <isCompoundPrimaryKey dataType="boolean" mapField="COMP_PK_SW"/>
+    <charateristicValue mapField="COMP_PK_STR"/>
+    <characteristicType3 mapField="CHAR_TYPE_DESCR"/>
+    <characteristicEntity dataType="lookup" mapField="CHAR_ENTITY_FLG" lookup="CHAR_ENTITY_FLG"/>
+  </tndrCtlChar>
+  <archiveMsg mapField="ARCHIVE_MSG"/>
+  <isCalledFromILM dataType="boolean" mapField="CALLED_FROM_ILM_SW"/>
 </schema>

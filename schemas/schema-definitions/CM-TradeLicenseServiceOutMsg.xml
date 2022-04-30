@@ -1,65 +1,65 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<outboundMsgId mapField="OUTMSG_ID"/>
-	<externalSystem fkRef="F1-ESTMP" mapField="NT_XID_CD"/>
-	<outboundMessageType fkRef="F1-OMTYP" mapField="OUTMSG_TYPE_CD"/>
-	<processingMethod dataType="lookup" mapField="OUTMSG_PROC_METH_FLG" lookup="OUTMSG_PROC_METH_FLG"/>
-	<outboundMessageStatus dataType="lookup" mapField="OUTMSG_STATUS_FLG" lookup="OUTMSG_STATUS_FLG"/>
-	<creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
-	<messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
-	<messageNumber dataType="number" mapField="MESSAGE_NBR"/>
-	<errorDetail mapField="ERROR_DTL"/>
-	<input type="group" mapXML="XML_SOURCE">
-		<ApplicationNo/>
-		<Authorization/>
-		<EntityIdentityCode/>
-		<LicenseNumber/>
-		<X_IBM_Client_Id/>
-		<X_IBM_Client_Secret/>
-	</input>
-	<GetLicenseInfoResult type="group" mapXML="XML_RESPONSE">
-		<GetTransactionInfoResponse type="group">
-			<GetTransactionInfoResult type="group">
-				<NewDataSet type="group">
-					<TransactionStatus type="group">
-						<LicenseNo/>
-						<ApplicationNo/>
-						<TradeNameAR/>
-						<TradeNameEN/>
-						<LicenseType_Serial/>
-						<LegalForm_Serial/>
-						<LicenseStatus_Serial/>
-						<StartDate/>
-						<EndDate/>
-						<POBoxNo/>
-						<TelNo/>
-						<EmailAddress/>
-						<MobileNumber/>
-					</TransactionStatus>
-					<Activity_List_Info type="group">
-						<ActivityListInfo type="list">
-							<tempSequence/>
-							<NameAR isPrimeKey="true"/>
-							<NameEN isPrimeKey="true"/>
-							<Serial isPrimeKey="true"/>
-						</ActivityListInfo>
-					</Activity_List_Info>
-					<Owners_List_Info type="group">
-						<OwnersListInfo type="list">
-							<tempSequence/>
-							<NameAR isPrimeKey="true"/>
-							<NameEN isPrimeKey="true"/>
-							<OwnerType_Serial isPrimeKey="true"/>
-							<Nationality_Serial/>
-							<Gender_Serial/>
-							<IdentityNumber/>
-							<PassportNumber/>
-							<PhoneNumber/>
-							<MobileNumber/>
-						</OwnersListInfo>
-					</Owners_List_Info>
-				</NewDataSet>
-			</GetTransactionInfoResult>
-		</GetTransactionInfoResponse>
-	</GetLicenseInfoResult>
+  <outboundMsgId mapField="OUTMSG_ID"/>
+  <externalSystem fkRef="F1-ESTMP" mapField="NT_XID_CD"/>
+  <outboundMessageType fkRef="F1-OMTYP" mapField="OUTMSG_TYPE_CD"/>
+  <processingMethod dataType="lookup" mapField="OUTMSG_PROC_METH_FLG" lookup="OUTMSG_PROC_METH_FLG"/>
+  <outboundMessageStatus dataType="lookup" mapField="OUTMSG_STATUS_FLG" lookup="OUTMSG_STATUS_FLG"/>
+  <creationDateTime dataType="dateTime" mapField="CRE_DTTM"/>
+  <messageCategory dataType="number" mapField="MESSAGE_CAT_NBR"/>
+  <messageNumber dataType="number" mapField="MESSAGE_NBR"/>
+  <errorDetail mapField="ERROR_DTL"/>
+  <input type="group" mapXML="XML_SOURCE">
+    <ApplicationNo/>
+    <Authorization/>
+    <EntityIdentityCode/>
+    <LicenseNumber/>
+    <X_IBM_Client_Id/>
+    <X_IBM_Client_Secret/>
+  </input>
+  <GetLicenseInfoResult type="group" mapXML="XML_RESPONSE">
+    <GetTransactionInfoResponse type="group">
+      <GetTransactionInfoResult type="group">
+        <NewDataSet type="group">
+          <TransactionStatus type="group">
+            <LicenseNo/>
+            <ApplicationNo/>
+            <TradeNameAR/>
+            <TradeNameEN/>
+            <LicenseType_Serial/>
+            <LegalForm_Serial/>
+            <LicenseStatus_Serial/>
+            <StartDate/>
+            <EndDate/>
+            <POBoxNo/>
+            <TelNo/>
+            <EmailAddress/>
+            <MobileNumber/>
+          </TransactionStatus>
+          <Activity_List_Info type="group">
+            <ActivityListInfo type="list">
+              <tempSequence/>
+              <NameAR isPrimeKey="true"/>
+              <NameEN isPrimeKey="true"/>
+              <Serial isPrimeKey="true"/>
+            </ActivityListInfo>
+          </Activity_List_Info>
+          <Owners_List_Info type="group">
+            <OwnersListInfo type="list">
+              <tempSequence/>
+              <NameAR isPrimeKey="true"/>
+              <NameEN isPrimeKey="true"/>
+              <OwnerType_Serial isPrimeKey="true"/>
+              <Nationality_Serial/>
+              <Gender_Serial/>
+              <IdentityNumber/>
+              <PassportNumber/>
+              <PhoneNumber/>
+              <MobileNumber/>
+            </OwnersListInfo>
+          </Owners_List_Info>
+        </NewDataSet>
+      </GetTransactionInfoResult>
+    </GetTransactionInfoResponse>
+  </GetLicenseInfoResult>
 </schema>

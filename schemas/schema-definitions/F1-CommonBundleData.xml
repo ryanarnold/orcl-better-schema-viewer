@@ -1,17 +1,17 @@
 <?xml version="1.0" ?>
 <schema name="schema">
-	<bundle type="group" mapXML="BNDL_DETAIL">
-		<entities type="list">
-			<processingSequence mdField="PROC_SEQ" dataType="number"/>
-			<sequence mdField="SEQNO" dataType="number"/>
-			<mo mdField="MAINT_OBJ_CD" isPrimeKey="true" fkRef="F1-MO"/>
-			<pk1 mdField="PK_VAL1" isPrimeKey="true"/>
-			<pk2 mdField="PK_VAL2" isPrimeKey="true"/>
-			<pk3 mdField="PK_VAL3" isPrimeKey="true"/>
-			<pk4 mdField="PK_VAL4" isPrimeKey="true"/>
-			<pk5 mdField="PK_VAL5" isPrimeKey="true"/>
-			<bo mdField="BUS_OBJ_CD" fkRef="F1-BUSOB"/>
-			<boData type="raw"/>
-		</entities>
-	</bundle>
+  <bundle type="group" mapXML="BNDL_DETAIL">
+    <entities type="list">
+      <processingSequence mdField="PROC_SEQ" dataType="number"/>
+      <sequence mdField="SEQNO" dataType="number"/>
+      <mo mdField="MAINT_OBJ_CD" isPrimeKey="true" fkRef="F1-MO"/>
+      <pk1 mdField="PK_VAL1" isPrimeKey="true"/>
+      <pk2 mdField="PK_VAL2" isPrimeKey="true"/>
+      <pk3 mdField="PK_VAL3" isPrimeKey="true"/>
+      <pk4 mdField="PK_VAL4" isPrimeKey="true"/>
+      <pk5 mdField="PK_VAL5" isPrimeKey="true"/>
+      <bo mdField="BUS_OBJ_CD" fkRef="F1-BUSOB"/>
+      <boData type="raw"/>
+    </entities>
+  </bundle>
 </schema>
