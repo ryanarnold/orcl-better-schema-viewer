@@ -47,7 +47,7 @@ function SchemaPage({ schema, schemaList, xmlData }) {
       <div className="container mt-5">
         <div className="row mt-5">
           <div className="col" />
-          <div className="col-8">
+          <div className="col-12">
             <SearchBox schemaList={schemaList} />
             <SchemaViewer schema={schema} xmlData={xmlData} />
           </div>
