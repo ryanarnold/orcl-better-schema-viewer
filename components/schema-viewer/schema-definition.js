@@ -17,7 +17,7 @@ function SchemaDefinition({ xml, xmlData, updateXpath }) {
   const [xmlLines, setXmlLines] = useState([]);
 
   const handleClick = (event) => {
-    const xpath = event.target.getAttribute('xpath');
+    const xpath = event.currentTarget.getAttribute('xpath');
     updateXpath(xpath);
   };
 
@@ -27,13 +27,13 @@ function SchemaDefinition({ xml, xmlData, updateXpath }) {
     fontSize: '1rem',
   };
 
-  useEffect(() => setXmlLines(xml.split('\n')));
+  useEffect(() => setXmlLines(xml.split('\n').map((line, index) => ({ line, index }))), []);
 
   return (
     xmlLines.map((line) => (
       // <pre className="m-0" >
-      <SyntaxHighlighter language="xml" style={xcode} customStyle={codeStyle} xpath={findXpath(line, xmlData)} onClick={handleClick}>
-        {line}
+      <SyntaxHighlighter language="xml" style={xcode} customStyle={codeStyle} xpath={findXpath(line.line, xmlData)} onClick={handleClick} key={line.index}>
+        {line.line}
       </SyntaxHighlighter>
       // </pre>
     ))
