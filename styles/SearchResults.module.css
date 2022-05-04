@@ -1,6 +1,6 @@
 .resultsBox {
   border: 1px solid #ced4da;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   margin-top: 10px;
 }
 
@@ -17,6 +17,8 @@
 }
 
 .selected {
+  /* background-color: #dfdfdf; */
+  /* background-color: #dfdfdf; */
   background-color: #dfdfdf;
 }
 

@@ -1,9 +1,9 @@
 import React from 'react';
 
 function XpathViewer({ xpath }) {
-  const copyXpathToClipboard = () => {
+  function copyXpathToClipboard() {
     navigator.clipboard.writeText(xpath);
-  };
+  }
 
   return (
     <div className="container fixed-bottom">
