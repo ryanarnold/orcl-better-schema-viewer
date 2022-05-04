@@ -31,11 +31,9 @@ function SchemaDefinition({ xml, xmlData, updateXpath }) {
 
   return (
     xmlLines.map((line) => (
-      // <pre className="m-0" >
       <SyntaxHighlighter language="xml" style={xcode} customStyle={codeStyle} xpath={findXpath(line.line, xmlData)} onClick={handleClick} key={line.index}>
         {line.line}
       </SyntaxHighlighter>
-      // </pre>
     ))
   );
 }
